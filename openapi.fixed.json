@@ -3,7 +3,7 @@
   "info": {
     "title": "Slack Web API \u0026 Events API (Strict SDK Generation)",
     "description": "\u0022Generated 100% offline directly from the TypeScript AST of the official Node SDK. See the generator repo for details: https://github.com/connectstrata/slack-openapi-generator\u0022",
-    "version": "2026-06-08"
+    "version": "2026-06-15"
   },
   "servers": [
     {
