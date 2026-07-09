@@ -3,7 +3,7 @@
   "info": {
     "title": "Slack Web API \u0026 Events API (Strict SDK Generation)",
     "description": "\u0022Generated 100% offline directly from the TypeScript AST of the official Node SDK. See the generator repo for details: https://github.com/connectstrata/slack-openapi-generator\u0022",
-    "version": "2026-06-29"
+    "version": "2026-07-06"
   },
   "servers": [
     {
@@ -16808,8 +16808,7 @@
       "AssistantThreadsSetSuggestedPromptsArguments": {
         "required": [
           "channel_id",
-          "prompts",
-          "thread_ts"
+          "prompts"
         ],
         "type": "object",
         "properties": {
@@ -65005,6 +65004,9 @@
           "view": {
             "$ref": "#/components/schemas/AppHomeOpenedEventView"
           },
+          "context": {
+            "$ref": "#/components/schemas/AppHomeOpenedEventContext"
+          },
           "event_ts": {
             "type": "string"
           }
@@ -65268,6 +65270,33 @@
             "type": "number"
           },
           "api_app_id": {
+            "type": "string"
+          }
+        }
+      },
+      "AppContextChangedEvent": {
+        "required": [
+          "type",
+          "channel",
+          "user",
+          "context",
+          "event_ts"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/AppContextChangedEventType"
+          },
+          "channel": {
+            "type": "string"
+          },
+          "user": {
+            "type": "string"
+          },
+          "context": {
+            "$ref": "#/components/schemas/AppContextChangedEventContext"
+          },
+          "event_ts": {
             "type": "string"
           }
         }
@@ -66620,6 +66649,9 @@
           },
           "assistant_thread": {
             "$ref": "#/components/schemas/GenericMessageEventAssistantThread"
+          },
+          "app_context": {
+            "$ref": "#/components/schemas/GenericMessageEventAppContext"
           }
         }
       },
@@ -98868,6 +98900,36 @@
           }
         }
       },
+      "AppHomeOpenedEventContextEntitiesItem": {
+        "type": "object",
+        "allOf": [
+          {
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/AppHomeOpenedEventContextEntitiesItemAllOf2AnyOf1"
+              },
+              {
+                "$ref": "#/components/schemas/AppHomeOpenedEventContextEntitiesItemAllOf2AnyOf2"
+              },
+              {
+                "$ref": "#/components/schemas/AppHomeOpenedEventContextEntitiesItemAllOf2AnyOf3"
+              },
+              {
+                "$ref": "#/components/schemas/AppHomeOpenedEventContextEntitiesItemAllOf2AnyOf4"
+              }
+            ]
+          }
+        ],
+        "properties": {
+          "team_id": {
+            "type": "string"
+          },
+          "enterprise_id": {
+            "type": "string"
+          }
+        }
+      },
       "AppMentionEventUserProfileIsRestricted": {
         "type": "object",
         "anyOf": [
@@ -99009,6 +99071,36 @@
           }
         ]
       },
+      "AppContextChangedEventContextEntitiesItem": {
+        "type": "object",
+        "allOf": [
+          {
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/AppContextChangedEventContextEntitiesItemAllOf2AnyOf1"
+              },
+              {
+                "$ref": "#/components/schemas/AppContextChangedEventContextEntitiesItemAllOf2AnyOf2"
+              },
+              {
+                "$ref": "#/components/schemas/AppContextChangedEventContextEntitiesItemAllOf2AnyOf3"
+              },
+              {
+                "$ref": "#/components/schemas/AppContextChangedEventContextEntitiesItemAllOf2AnyOf4"
+              }
+            ]
+          }
+        ],
+        "properties": {
+          "team_id": {
+            "type": "string"
+          },
+          "enterprise_id": {
+            "type": "string"
+          }
+        }
+      },
       "GenericMessageEventBlocksItem": {
         "required": [
           "type"
@@ -99116,6 +99208,36 @@
             "$ref": "#/components/schemas/GenericMessageEventIsStarredWrapper2"
           }
         ]
+      },
+      "GenericMessageEventAppContextEntitiesItem": {
+        "type": "object",
+        "allOf": [
+          {
+            "type": "object",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GenericMessageEventAppContextEntitiesItemAllOf2AnyOf1"
+              },
+              {
+                "$ref": "#/components/schemas/GenericMessageEventAppContextEntitiesItemAllOf2AnyOf2"
+              },
+              {
+                "$ref": "#/components/schemas/GenericMessageEventAppContextEntitiesItemAllOf2AnyOf3"
+              },
+              {
+                "$ref": "#/components/schemas/GenericMessageEventAppContextEntitiesItemAllOf2AnyOf4"
+              }
+            ]
+          }
+        ],
+        "properties": {
+          "team_id": {
+            "type": "string"
+          },
+          "enterprise_id": {
+            "type": "string"
+          }
+        }
       },
       "File6PreviewIsTruncated": {
         "type": "object",
@@ -105065,6 +105187,77 @@
           }
         }
       },
+      "AppHomeOpenedEventContextEntitiesItemAllOf1": {
+        "type": "object",
+        "properties": {
+          "team_id": {
+            "type": "string"
+          },
+          "enterprise_id": {
+            "type": "string"
+          }
+        }
+      },
+      "AppHomeOpenedEventContextEntitiesItemAllOf2AnyOf1": {
+        "required": [
+          "type",
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/AppHomeOpenedEventContextEntitiesItemAllOf2AnyOf1Type"
+          },
+          "value": {
+            "type": "string"
+          }
+        }
+      },
+      "AppHomeOpenedEventContextEntitiesItemAllOf2AnyOf2": {
+        "required": [
+          "type",
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/AppHomeOpenedEventContextEntitiesItemAllOf2AnyOf2Type"
+          },
+          "value": {
+            "type": "string"
+          }
+        }
+      },
+      "AppHomeOpenedEventContextEntitiesItemAllOf2AnyOf3": {
+        "required": [
+          "type",
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/AppHomeOpenedEventContextEntitiesItemAllOf2AnyOf3Type"
+          },
+          "value": {
+            "type": "string"
+          }
+        }
+      },
+      "AppHomeOpenedEventContextEntitiesItemAllOf2AnyOf4": {
+        "required": [
+          "type",
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/AppHomeOpenedEventContextEntitiesItemAllOf2AnyOf4Type"
+          },
+          "value": {
+            "$ref": "#/components/schemas/AppHomeOpenedEventContextEntitiesItemAllOf2AnyOf4Value"
+          }
+        }
+      },
       "AppMentionEventBlocksItemAnyOf11AllOf1": {
         "required": [
           "type",
@@ -105103,6 +105296,77 @@
           }
         }
       },
+      "AppContextChangedEventContextEntitiesItemAllOf1": {
+        "type": "object",
+        "properties": {
+          "team_id": {
+            "type": "string"
+          },
+          "enterprise_id": {
+            "type": "string"
+          }
+        }
+      },
+      "AppContextChangedEventContextEntitiesItemAllOf2AnyOf1": {
+        "required": [
+          "type",
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/AppContextChangedEventContextEntitiesItemAllOf2AnyOf1Type"
+          },
+          "value": {
+            "type": "string"
+          }
+        }
+      },
+      "AppContextChangedEventContextEntitiesItemAllOf2AnyOf2": {
+        "required": [
+          "type",
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/AppContextChangedEventContextEntitiesItemAllOf2AnyOf2Type"
+          },
+          "value": {
+            "type": "string"
+          }
+        }
+      },
+      "AppContextChangedEventContextEntitiesItemAllOf2AnyOf3": {
+        "required": [
+          "type",
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/AppContextChangedEventContextEntitiesItemAllOf2AnyOf3Type"
+          },
+          "value": {
+            "type": "string"
+          }
+        }
+      },
+      "AppContextChangedEventContextEntitiesItemAllOf2AnyOf4": {
+        "required": [
+          "type",
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/AppContextChangedEventContextEntitiesItemAllOf2AnyOf4Type"
+          },
+          "value": {
+            "$ref": "#/components/schemas/AppContextChangedEventContextEntitiesItemAllOf2AnyOf4Value"
+          }
+        }
+      },
       "GenericMessageEventBlocksItemAnyOf11AllOf1": {
         "required": [
           "type",
@@ -105138,6 +105402,77 @@
           },
           "title": {
             "$ref": "#/components/schemas/PlainTextElement"
+          }
+        }
+      },
+      "GenericMessageEventAppContextEntitiesItemAllOf1": {
+        "type": "object",
+        "properties": {
+          "team_id": {
+            "type": "string"
+          },
+          "enterprise_id": {
+            "type": "string"
+          }
+        }
+      },
+      "GenericMessageEventAppContextEntitiesItemAllOf2AnyOf1": {
+        "required": [
+          "type",
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/GenericMessageEventAppContextEntitiesItemAllOf2AnyOf1Type"
+          },
+          "value": {
+            "type": "string"
+          }
+        }
+      },
+      "GenericMessageEventAppContextEntitiesItemAllOf2AnyOf2": {
+        "required": [
+          "type",
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/GenericMessageEventAppContextEntitiesItemAllOf2AnyOf2Type"
+          },
+          "value": {
+            "type": "string"
+          }
+        }
+      },
+      "GenericMessageEventAppContextEntitiesItemAllOf2AnyOf3": {
+        "required": [
+          "type",
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/GenericMessageEventAppContextEntitiesItemAllOf2AnyOf3Type"
+          },
+          "value": {
+            "type": "string"
+          }
+        }
+      },
+      "GenericMessageEventAppContextEntitiesItemAllOf2AnyOf4": {
+        "required": [
+          "type",
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/GenericMessageEventAppContextEntitiesItemAllOf2AnyOf4Type"
+          },
+          "value": {
+            "$ref": "#/components/schemas/GenericMessageEventAppContextEntitiesItemAllOf2AnyOf4Value"
           }
         }
       },
@@ -106628,6 +106963,17 @@
           }
         }
       },
+      "AppHomeOpenedEventContext": {
+        "type": "object",
+        "properties": {
+          "entities": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AppHomeOpenedEventContextEntitiesItem"
+            }
+          }
+        }
+      },
       "AppMentionEventUserProfile": {
         "required": [
           "name",
@@ -106882,6 +107228,17 @@
         "type": "object",
         "additionalProperties": {
           "type": "string"
+        }
+      },
+      "AppContextChangedEventContext": {
+        "type": "object",
+        "properties": {
+          "entities": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AppContextChangedEventContextEntitiesItem"
+            }
+          }
         }
       },
       "AssistantThreadStartedEventAssistantThread": {
@@ -107384,6 +107741,17 @@
             "type": "array",
             "items": {
               "type": "string"
+            }
+          }
+        }
+      },
+      "GenericMessageEventAppContext": {
+        "type": "object",
+        "properties": {
+          "entities": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GenericMessageEventAppContextEntitiesItem"
             }
           }
         }
@@ -108968,6 +109336,51 @@
           },
           "token_type": {
             "$ref": "#/components/schemas/AppRequestedEventPreviousResolutionAnyOf2ScopesTokenType"
+          }
+        }
+      },
+      "AppHomeOpenedEventContextEntitiesItemAllOf2AnyOf4Value": {
+        "required": [
+          "message_ts",
+          "channel_id"
+        ],
+        "type": "object",
+        "properties": {
+          "message_ts": {
+            "type": "string"
+          },
+          "channel_id": {
+            "type": "string"
+          }
+        }
+      },
+      "AppContextChangedEventContextEntitiesItemAllOf2AnyOf4Value": {
+        "required": [
+          "message_ts",
+          "channel_id"
+        ],
+        "type": "object",
+        "properties": {
+          "message_ts": {
+            "type": "string"
+          },
+          "channel_id": {
+            "type": "string"
+          }
+        }
+      },
+      "GenericMessageEventAppContextEntitiesItemAllOf2AnyOf4Value": {
+        "required": [
+          "message_ts",
+          "channel_id"
+        ],
+        "type": "object",
+        "properties": {
+          "message_ts": {
+            "type": "string"
+          },
+          "channel_id": {
+            "type": "string"
           }
         }
       },
@@ -172138,6 +172551,23 @@
           ]
         }
       },
+      "AppContextChangedEventType": {
+        "enum": [
+          "app_context_changed"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "AppContextChangedEventType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "app_context_changed",
+              "name": "AppContextChanged"
+            }
+          ]
+        }
+      },
       "AppUninstalledEventType": {
         "enum": [
           "app_uninstalled"
@@ -175058,6 +175488,74 @@
           ]
         }
       },
+      "AppHomeOpenedEventContextEntitiesItemAllOf2AnyOf1Type": {
+        "enum": [
+          "slack#/types/channel_id"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "AppHomeOpenedEventContextEntitiesItemAllOf2AnyOf1Type",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "slack#/types/channel_id",
+              "name": "SlackHashSlashTypesChannelId"
+            }
+          ]
+        }
+      },
+      "AppHomeOpenedEventContextEntitiesItemAllOf2AnyOf2Type": {
+        "enum": [
+          "slack#/types/canvas_id"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "AppHomeOpenedEventContextEntitiesItemAllOf2AnyOf2Type",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "slack#/types/canvas_id",
+              "name": "SlackHashSlashTypesCanvasId"
+            }
+          ]
+        }
+      },
+      "AppHomeOpenedEventContextEntitiesItemAllOf2AnyOf3Type": {
+        "enum": [
+          "slack#/types/list_id"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "AppHomeOpenedEventContextEntitiesItemAllOf2AnyOf3Type",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "slack#/types/list_id",
+              "name": "SlackHashSlashTypesListId"
+            }
+          ]
+        }
+      },
+      "AppHomeOpenedEventContextEntitiesItemAllOf2AnyOf4Type": {
+        "enum": [
+          "slack#/types/message_context"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "AppHomeOpenedEventContextEntitiesItemAllOf2AnyOf4Type",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "slack#/types/message_context",
+              "name": "SlackHashSlashTypesMessageContext"
+            }
+          ]
+        }
+      },
       "AppMentionEventBlocksItemAnyOf11AllOf1Type": {
         "enum": [
           "image"
@@ -175094,6 +175592,74 @@
           ]
         }
       },
+      "AppContextChangedEventContextEntitiesItemAllOf2AnyOf1Type": {
+        "enum": [
+          "slack#/types/channel_id"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "AppContextChangedEventContextEntitiesItemAllOf2AnyOf1Type",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "slack#/types/channel_id",
+              "name": "SlackHashSlashTypesChannelId"
+            }
+          ]
+        }
+      },
+      "AppContextChangedEventContextEntitiesItemAllOf2AnyOf2Type": {
+        "enum": [
+          "slack#/types/canvas_id"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "AppContextChangedEventContextEntitiesItemAllOf2AnyOf2Type",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "slack#/types/canvas_id",
+              "name": "SlackHashSlashTypesCanvasId"
+            }
+          ]
+        }
+      },
+      "AppContextChangedEventContextEntitiesItemAllOf2AnyOf3Type": {
+        "enum": [
+          "slack#/types/list_id"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "AppContextChangedEventContextEntitiesItemAllOf2AnyOf3Type",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "slack#/types/list_id",
+              "name": "SlackHashSlashTypesListId"
+            }
+          ]
+        }
+      },
+      "AppContextChangedEventContextEntitiesItemAllOf2AnyOf4Type": {
+        "enum": [
+          "slack#/types/message_context"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "AppContextChangedEventContextEntitiesItemAllOf2AnyOf4Type",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "slack#/types/message_context",
+              "name": "SlackHashSlashTypesMessageContext"
+            }
+          ]
+        }
+      },
       "GenericMessageEventBlocksItemAnyOf11AllOf1Type": {
         "enum": [
           "image"
@@ -175126,6 +175692,74 @@
             {
               "value": "image",
               "name": "Image"
+            }
+          ]
+        }
+      },
+      "GenericMessageEventAppContextEntitiesItemAllOf2AnyOf1Type": {
+        "enum": [
+          "slack#/types/channel_id"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "GenericMessageEventAppContextEntitiesItemAllOf2AnyOf1Type",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "slack#/types/channel_id",
+              "name": "SlackHashSlashTypesChannelId"
+            }
+          ]
+        }
+      },
+      "GenericMessageEventAppContextEntitiesItemAllOf2AnyOf2Type": {
+        "enum": [
+          "slack#/types/canvas_id"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "GenericMessageEventAppContextEntitiesItemAllOf2AnyOf2Type",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "slack#/types/canvas_id",
+              "name": "SlackHashSlashTypesCanvasId"
+            }
+          ]
+        }
+      },
+      "GenericMessageEventAppContextEntitiesItemAllOf2AnyOf3Type": {
+        "enum": [
+          "slack#/types/list_id"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "GenericMessageEventAppContextEntitiesItemAllOf2AnyOf3Type",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "slack#/types/list_id",
+              "name": "SlackHashSlashTypesListId"
+            }
+          ]
+        }
+      },
+      "GenericMessageEventAppContextEntitiesItemAllOf2AnyOf4Type": {
+        "enum": [
+          "slack#/types/message_context"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "GenericMessageEventAppContextEntitiesItemAllOf2AnyOf4Type",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "slack#/types/message_context",
+              "name": "SlackHashSlashTypesMessageContext"
             }
           ]
         }
