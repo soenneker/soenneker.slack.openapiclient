@@ -3,7 +3,7 @@
   "info": {
     "title": "Slack Web API \u0026 Events API (Strict SDK Generation)",
     "description": "\u0022Generated 100% offline directly from the TypeScript AST of the official Node SDK. See the generator repo for details: https://github.com/connectstrata/slack-openapi-generator\u0022",
-    "version": "2026-07-06"
+    "version": "2026-07-13"
   },
   "servers": [
     {
@@ -17117,8 +17117,14 @@
       "ManifestFeatures": {
         "type": "object",
         "properties": {
+          "agent_view": {
+            "$ref": "#/components/schemas/ManifestAgentView"
+          },
           "app_home": {
             "$ref": "#/components/schemas/ManifestAppHome"
+          },
+          "assistant_view": {
+            "$ref": "#/components/schemas/ManifestAssistantView"
           },
           "bot_user": {
             "$ref": "#/components/schemas/ManifestBotUser"
@@ -17146,6 +17152,63 @@
           }
         }
       },
+      "ManifestAgentView": {
+        "type": "object",
+        "properties": {
+          "agent_description": {
+            "type": "string",
+            "description": "A description specific to the agent, used to communicate to end users what agent functionality the\napp provides. Maximum length is 300 characters."
+          },
+          "suggested_prompts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ManifestSuggestedPrompt"
+            },
+            "description": "An array of pre-written prompts designed to guide users when interacting with the agent. A maximum of\n4 suggested prompts can be included in this array."
+          },
+          "actions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ManifestAgentAction"
+            },
+            "description": "Quick actions surfaced in the agent UI."
+          }
+        }
+      },
+      "ManifestSuggestedPrompt": {
+        "required": [
+          "title",
+          "message"
+        ],
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "The prompt title."
+          },
+          "message": {
+            "type": "string",
+            "description": "The prompt content."
+          }
+        }
+      },
+      "ManifestAgentAction": {
+        "required": [
+          "name",
+          "description"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The action name."
+          },
+          "description": {
+            "type": "string",
+            "description": "A short description of what the action does."
+          }
+        }
+      },
       "ManifestAppHome": {
         "type": "object",
         "properties": {
@@ -17157,6 +17220,25 @@
           },
           "messages_tab_read_only_enabled": {
             "$ref": "#/components/schemas/ManifestAppHomeMessagesTabReadOnlyEnabled"
+          }
+        }
+      },
+      "ManifestAssistantView": {
+        "required": [
+          "assistant_description"
+        ],
+        "type": "object",
+        "properties": {
+          "assistant_description": {
+            "type": "string",
+            "description": "A string that describes the app assistant."
+          },
+          "suggested_prompts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ManifestSuggestedPrompt"
+            },
+            "description": "An array of pre-written prompts designed to guide users when interacting with the app assistant."
           }
         }
       },
@@ -17263,6 +17345,20 @@
               "$ref": "#/components/schemas/UserScope"
             },
             "description": "An array of strings containing [user scopes](https://docs.slack.dev/reference/scopes?token_types=User)\nto request upon app installation. A maximum of 255 scopes can included in this array."
+          },
+          "bot_optional": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BotScope"
+            },
+            "description": "An array of strings containing optional [granular bot scopes](https://docs.slack.dev/reference/scopes?token_types=Bot)\nto request upon app installation. A maximum of 255 scopes can included in this array."
+          },
+          "user_optional": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserScope"
+            },
+            "description": "An array of strings containing optional [user scopes](https://docs.slack.dev/reference/scopes?token_types=User)\nto request upon app installation. A maximum of 255 scopes can included in this array."
           }
         }
       },
@@ -18103,17 +18199,27 @@
           "request_url": {
             "type": "string",
             "description": "A string containing the full \u0060https\u0060 URL that acts as the\n[Events API request URL](https://docs.slack.dev/apis/events-api/using-http-request-urls).\nIf set, you\u0027ll need to manually verify the Request URL in the App Manifest section of App Management."
+          },
+          "metadata_subscriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ManifestMetadataSubscription"
+            },
+            "description": "An array describing [message metadata](https://docs.slack.dev/messaging/message-metadata) event\ntypes the app subscribes to. Between 1 and 20 subscriptions can be included in this array."
           }
         }
       },
       "ManifestEvent": {
         "enum": [
           "message",
+          "app_context_changed",
           "app_home_opened",
           "app_mention",
           "app_rate_limited",
           "app_requested",
           "app_uninstalled",
+          "assistant_thread_context_changed",
+          "assistant_thread_started",
           "call_rejected",
           "channel_archive",
           "channel_created",
@@ -18215,6 +18321,10 @@
               "name": "Message"
             },
             {
+              "value": "app_context_changed",
+              "name": "AppContextChanged"
+            },
+            {
               "value": "app_home_opened",
               "name": "AppHomeOpened"
             },
@@ -18233,6 +18343,14 @@
             {
               "value": "app_uninstalled",
               "name": "AppUninstalled"
+            },
+            {
+              "value": "assistant_thread_context_changed",
+              "name": "AssistantThreadContextChanged"
+            },
+            {
+              "value": "assistant_thread_started",
+              "name": "AssistantThreadStarted"
             },
             {
               "value": "call_rejected",
@@ -18591,6 +18709,23 @@
               "name": "WorkflowUnpublished"
             }
           ]
+        }
+      },
+      "ManifestMetadataSubscription": {
+        "required": [
+          "app_id",
+          "event_type"
+        ],
+        "type": "object",
+        "properties": {
+          "app_id": {
+            "type": "string",
+            "description": "The ID of the app publishing the message metadata event."
+          },
+          "event_type": {
+            "type": "string",
+            "description": "The event type of the message metadata to subscribe to."
+          }
         }
       },
       "ManifestIncomingWebhooks": {

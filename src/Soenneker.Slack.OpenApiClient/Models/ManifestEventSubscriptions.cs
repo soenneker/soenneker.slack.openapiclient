@@ -22,6 +22,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public List<global::Soenneker.Slack.OpenApiClient.Models.ManifestEvent?> BotEvents { get; set; }
 #endif
+        /// <summary>An array describing [message metadata](https://docs.slack.dev/messaging/message-metadata) eventtypes the app subscribes to. Between 1 and 20 subscriptions can be included in this array.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Slack.OpenApiClient.Models.ManifestMetadataSubscription>? MetadataSubscriptions { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Slack.OpenApiClient.Models.ManifestMetadataSubscription> MetadataSubscriptions { get; set; }
+#endif
         /// <summary>A string containing the full `https` URL that acts as the[Events API request URL](https://docs.slack.dev/apis/events-api/using-http-request-urls).If set, you&apos;ll need to manually verify the Request URL in the App Manifest section of App Management.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -64,6 +72,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "bot_events", n => { BotEvents = n.GetCollectionOfEnumValues<global::Soenneker.Slack.OpenApiClient.Models.ManifestEvent>()?.AsList(); } },
+                { "metadata_subscriptions", n => { MetadataSubscriptions = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ManifestMetadataSubscription>(global::Soenneker.Slack.OpenApiClient.Models.ManifestMetadataSubscription.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "request_url", n => { RequestUrl = n.GetStringValue(); } },
                 { "user_events", n => { UserEvents = n.GetCollectionOfEnumValues<global::Soenneker.Slack.OpenApiClient.Models.ManifestEvent>()?.AsList(); } },
             };
@@ -76,6 +85,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfEnumValues<global::Soenneker.Slack.OpenApiClient.Models.ManifestEvent>("bot_events", BotEvents);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ManifestMetadataSubscription>("metadata_subscriptions", MetadataSubscriptions);
             writer.WriteStringValue("request_url", RequestUrl);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Slack.OpenApiClient.Models.ManifestEvent>("user_events", UserEvents);
             writer.WriteAdditionalData(AdditionalData);

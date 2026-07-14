@@ -12,6 +12,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         #pragma warning disable CS1591
         Message,
         #pragma warning restore CS1591
+        [EnumMember(Value = "app_context_changed")]
+        #pragma warning disable CS1591
+        AppContextChanged,
+        #pragma warning restore CS1591
         [EnumMember(Value = "app_home_opened")]
         #pragma warning disable CS1591
         AppHomeOpened,
@@ -31,6 +35,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
         [EnumMember(Value = "app_uninstalled")]
         #pragma warning disable CS1591
         AppUninstalled,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "assistant_thread_context_changed")]
+        #pragma warning disable CS1591
+        AssistantThreadContextChanged,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "assistant_thread_started")]
+        #pragma warning disable CS1591
+        AssistantThreadStarted,
         #pragma warning restore CS1591
         [EnumMember(Value = "call_rejected")]
         #pragma warning disable CS1591

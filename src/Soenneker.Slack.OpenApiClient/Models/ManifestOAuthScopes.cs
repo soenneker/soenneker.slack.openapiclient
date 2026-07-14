@@ -22,6 +22,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public List<global::Soenneker.Slack.OpenApiClient.Models.BotScope?> Bot { get; set; }
 #endif
+        /// <summary>An array of strings containing optional [granular bot scopes](https://docs.slack.dev/reference/scopes?token_types=Bot)to request upon app installation. A maximum of 255 scopes can included in this array.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Slack.OpenApiClient.Models.BotScope?>? BotOptional { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Slack.OpenApiClient.Models.BotScope?> BotOptional { get; set; }
+#endif
         /// <summary>An array of strings containing [user scopes](https://docs.slack.dev/reference/scopes?token_types=User)to request upon app installation. A maximum of 255 scopes can included in this array.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -29,6 +37,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #nullable restore
 #else
         public List<global::Soenneker.Slack.OpenApiClient.Models.UserScope?> User { get; set; }
+#endif
+        /// <summary>An array of strings containing optional [user scopes](https://docs.slack.dev/reference/scopes?token_types=User)to request upon app installation. A maximum of 255 scopes can included in this array.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Slack.OpenApiClient.Models.UserScope?>? UserOptional { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Slack.OpenApiClient.Models.UserScope?> UserOptional { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ManifestOAuthScopes"/> and sets the default values.
@@ -56,7 +72,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "bot", n => { Bot = n.GetCollectionOfEnumValues<global::Soenneker.Slack.OpenApiClient.Models.BotScope>()?.AsList(); } },
+                { "bot_optional", n => { BotOptional = n.GetCollectionOfEnumValues<global::Soenneker.Slack.OpenApiClient.Models.BotScope>()?.AsList(); } },
                 { "user", n => { User = n.GetCollectionOfEnumValues<global::Soenneker.Slack.OpenApiClient.Models.UserScope>()?.AsList(); } },
+                { "user_optional", n => { UserOptional = n.GetCollectionOfEnumValues<global::Soenneker.Slack.OpenApiClient.Models.UserScope>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -67,7 +85,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfEnumValues<global::Soenneker.Slack.OpenApiClient.Models.BotScope>("bot", Bot);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Slack.OpenApiClient.Models.BotScope>("bot_optional", BotOptional);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Slack.OpenApiClient.Models.UserScope>("user", User);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Slack.OpenApiClient.Models.UserScope>("user_optional", UserOptional);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

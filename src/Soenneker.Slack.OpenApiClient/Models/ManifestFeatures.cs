@@ -14,6 +14,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The agent_view property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ManifestAgentView? AgentView { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ManifestAgentView AgentView { get; set; }
+#endif
         /// <summary>The app_home property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -21,6 +29,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.ManifestAppHome AppHome { get; set; }
+#endif
+        /// <summary>The assistant_view property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ManifestAssistantView? AssistantView { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ManifestAssistantView AssistantView { get; set; }
 #endif
         /// <summary>The bot_user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -79,7 +95,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "agent_view", n => { AgentView = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestAgentView>(global::Soenneker.Slack.OpenApiClient.Models.ManifestAgentView.CreateFromDiscriminatorValue); } },
                 { "app_home", n => { AppHome = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestAppHome>(global::Soenneker.Slack.OpenApiClient.Models.ManifestAppHome.CreateFromDiscriminatorValue); } },
+                { "assistant_view", n => { AssistantView = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestAssistantView>(global::Soenneker.Slack.OpenApiClient.Models.ManifestAssistantView.CreateFromDiscriminatorValue); } },
                 { "bot_user", n => { BotUser = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestBotUser>(global::Soenneker.Slack.OpenApiClient.Models.ManifestBotUser.CreateFromDiscriminatorValue); } },
                 { "shortcuts", n => { Shortcuts = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ManifestShortcut>(global::Soenneker.Slack.OpenApiClient.Models.ManifestShortcut.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "slash_commands", n => { SlashCommands = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ManifestSlashCommand>(global::Soenneker.Slack.OpenApiClient.Models.ManifestSlashCommand.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -93,7 +111,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestAgentView>("agent_view", AgentView);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestAppHome>("app_home", AppHome);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestAssistantView>("assistant_view", AssistantView);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestBotUser>("bot_user", BotUser);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ManifestShortcut>("shortcuts", Shortcuts);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ManifestSlashCommand>("slash_commands", SlashCommands);
