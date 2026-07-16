@@ -98972,6 +98972,11 @@
         "type": "object",
         "anyOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/AppRequestedEventPreviousResolutionAnyOf2"
           }
         ],
@@ -98981,7 +98986,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -98993,6 +98997,11 @@
         "type": "object",
         "anyOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/AppRequestedEventScopesTokenTypeWrapper"
           },
           {
@@ -99001,8 +99010,7 @@
           {
             "$ref": "#/components/schemas/AppRequestedEventScopesTokenTypeWrapper3"
           }
-        ],
-        "nullable": true
+        ]
       },
       "AppHomeOpenedEventView": {
         "required": [
@@ -99400,25 +99408,33 @@
         "type": "object",
         "anyOf": [
           {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          }
-        ],
-        "nullable": true
-      },
-      "File6Groups": {
-        "type": "object",
-        "anyOf": [
+            "enum": [
+              null
+            ]
+          },
           {
             "type": "array",
             "items": {
               "type": "string"
             }
           }
-        ],
-        "nullable": true
+        ]
+      },
+      "File6Groups": {
+        "type": "object",
+        "anyOf": [
+          {
+            "enum": [
+              null
+            ]
+          },
+          {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        ]
       },
       "File6IsStarred": {
         "type": "object",
@@ -99982,6 +99998,11 @@
         "type": "object",
         "anyOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "type": "object",
             "additionalProperties": {
               "required": [
@@ -100009,7 +100030,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -100090,6 +100110,11 @@
         "type": "object",
         "anyOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/UserChangeEventUserProfileFieldsBranch2"
           },
           {
@@ -100117,7 +100142,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -100198,6 +100222,11 @@
         "type": "object",
         "anyOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/UserHuddleChangedEventUserProfileFieldsBranch2"
           },
           {
@@ -100225,7 +100254,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -100306,6 +100334,11 @@
         "type": "object",
         "anyOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/UserProfileChangedEventUserProfileFieldsBranch2"
           },
           {
@@ -100333,7 +100366,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -100414,6 +100446,11 @@
         "type": "object",
         "anyOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/UserStatusChangedEventUserProfileFieldsBranch2"
           },
           {
@@ -100441,7 +100478,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -100592,6 +100628,11 @@
         "type": "object",
         "anyOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/MrkdwnOption"
           },
           {
@@ -100604,7 +100645,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -100647,6 +100687,11 @@
         "type": "object",
         "anyOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/BlockActionTeamAnyOf2"
           }
         ],
@@ -100656,7 +100701,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -100779,6 +100823,11 @@
         "type": "object",
         "anyOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/PlainTextElementOutput"
           }
         ],
@@ -100788,7 +100837,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -100803,6 +100851,11 @@
         "type": "object",
         "anyOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/PlainTextElementOutput"
           }
         ],
@@ -100812,7 +100865,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -100838,6 +100890,11 @@
         "type": "object",
         "anyOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ViewStateSelectedOption"
           }
         ],
@@ -100847,7 +100904,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -100994,6 +101050,11 @@
         "type": "object",
         "anyOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/DialogSubmitActionTeamAnyOf2"
           }
         ],
@@ -101003,7 +101064,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -101051,6 +101111,11 @@
         "type": "object",
         "anyOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/GlobalShortcutTeamAnyOf2"
           }
         ],
@@ -101060,7 +101125,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -101086,6 +101150,11 @@
         "type": "object",
         "anyOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/MessageShortcutTeamAnyOf2"
           }
         ],
@@ -101095,7 +101164,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -101121,6 +101189,11 @@
         "type": "object",
         "anyOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ViewSubmitActionTeamAnyOf2"
           }
         ],
@@ -101130,7 +101203,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -101156,6 +101228,11 @@
         "type": "object",
         "anyOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ViewClosedActionTeamAnyOf2"
           }
         ],
@@ -101165,7 +101242,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -101191,6 +101267,11 @@
         "type": "object",
         "anyOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ViewWorkflowStepSubmitActionTeamAnyOf2"
           }
         ],
@@ -101200,7 +101281,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -101226,6 +101306,11 @@
         "type": "object",
         "anyOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/ViewWorkflowStepClosedActionTeamAnyOf2"
           }
         ],
@@ -101235,7 +101320,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -106139,6 +106223,11 @@
         "type": "object",
         "anyOf": [
           {
+            "enum": [
+              null
+            ]
+          },
+          {
             "$ref": "#/components/schemas/AppRequestedEventPreviousResolutionAnyOf2ScopesTokenTypeWrapper"
           },
           {
@@ -106147,8 +106236,7 @@
           {
             "$ref": "#/components/schemas/AppRequestedEventPreviousResolutionAnyOf2ScopesTokenTypeWrapper3"
           }
-        ],
-        "nullable": true
+        ]
       },
       "WebApiCallResultResponseMetadata": {
         "type": "object",
