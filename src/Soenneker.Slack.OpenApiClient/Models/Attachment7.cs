@@ -15,10 +15,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The actions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Action2>? Actions { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.ActionObject>? Actions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Action2> Actions { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.ActionObject> Actions { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -81,10 +81,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The blocks property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Block3>? Blocks { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.TitleBlockElement>? Blocks { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Block3> Blocks { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.TitleBlockElement> Blocks { get; set; }
 #endif
         /// <summary>The bot_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -529,7 +529,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "actions", n => { Actions = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Action2>(global::Soenneker.Slack.OpenApiClient.Models.Action2.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "actions", n => { Actions = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ActionObject>(global::Soenneker.Slack.OpenApiClient.Models.ActionObject.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "app_id", n => { AppId = n.GetStringValue(); } },
                 { "app_unfurl_url", n => { AppUnfurlUrl = n.GetStringValue(); } },
                 { "author_icon", n => { AuthorIcon = n.GetStringValue(); } },
@@ -537,7 +537,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "author_link", n => { AuthorLink = n.GetStringValue(); } },
                 { "author_name", n => { AuthorName = n.GetStringValue(); } },
                 { "author_subname", n => { AuthorSubname = n.GetStringValue(); } },
-                { "blocks", n => { Blocks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Block3>(global::Soenneker.Slack.OpenApiClient.Models.Block3.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "blocks", n => { Blocks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.TitleBlockElement>(global::Soenneker.Slack.OpenApiClient.Models.TitleBlockElement.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "bot_id", n => { BotId = n.GetStringValue(); } },
                 { "bot_team_id", n => { BotTeamId = n.GetStringValue(); } },
                 { "callback_id", n => { CallbackId = n.GetStringValue(); } },
@@ -606,7 +606,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Action2>("actions", Actions);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ActionObject>("actions", Actions);
             writer.WriteStringValue("app_id", AppId);
             writer.WriteStringValue("app_unfurl_url", AppUnfurlUrl);
             writer.WriteStringValue("author_icon", AuthorIcon);
@@ -614,7 +614,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("author_link", AuthorLink);
             writer.WriteStringValue("author_name", AuthorName);
             writer.WriteStringValue("author_subname", AuthorSubname);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Block3>("blocks", Blocks);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.TitleBlockElement>("blocks", Blocks);
             writer.WriteStringValue("bot_id", BotId);
             writer.WriteStringValue("bot_team_id", BotTeamId);
             writer.WriteStringValue("callback_id", CallbackId);

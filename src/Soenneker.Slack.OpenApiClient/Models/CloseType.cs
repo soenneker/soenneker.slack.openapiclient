@@ -8,18 +8,18 @@ using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.EmptyWrapper18"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.MrkdwnWrapper3"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.PlainTextWrapper3"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.EmptyWrapper16"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.MrkdwnWrapper3"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.PlainTextWrapper3"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CloseType : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.EmptyWrapper18"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.EmptyWrapper16"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.EmptyWrapper18? EmptyWrapper18 { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.EmptyWrapper16? EmptyWrapper16 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.EmptyWrapper18 EmptyWrapper18 { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.EmptyWrapper16 EmptyWrapper16 { get; set; }
 #endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.MrkdwnWrapper3"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -46,7 +46,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Slack.OpenApiClient.Models.CloseType();
-            result.EmptyWrapper18 = new global::Soenneker.Slack.OpenApiClient.Models.EmptyWrapper18();
+            result.EmptyWrapper16 = new global::Soenneker.Slack.OpenApiClient.Models.EmptyWrapper16();
             result.MrkdwnWrapper3 = new global::Soenneker.Slack.OpenApiClient.Models.MrkdwnWrapper3();
             result.PlainTextWrapper3 = new global::Soenneker.Slack.OpenApiClient.Models.PlainTextWrapper3();
             return result;
@@ -57,9 +57,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(EmptyWrapper18 != null || MrkdwnWrapper3 != null || PlainTextWrapper3 != null)
+            if(EmptyWrapper16 != null || MrkdwnWrapper3 != null || PlainTextWrapper3 != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(EmptyWrapper18, MrkdwnWrapper3, PlainTextWrapper3);
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(EmptyWrapper16, MrkdwnWrapper3, PlainTextWrapper3);
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -70,7 +70,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EmptyWrapper18>(null, EmptyWrapper18, MrkdwnWrapper3, PlainTextWrapper3);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EmptyWrapper16>(null, EmptyWrapper16, MrkdwnWrapper3, PlainTextWrapper3);
         }
     }
 }

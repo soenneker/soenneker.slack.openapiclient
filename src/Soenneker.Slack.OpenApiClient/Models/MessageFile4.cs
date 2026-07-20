@@ -291,10 +291,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The headers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.FileHeaders? Headers { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Headers? Headers { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.FileHeaders Headers { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Headers Headers { get; set; }
 #endif
         /// <summary>The hls property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -1237,7 +1237,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "has_more", n => { HasMore = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFile4HasMore>(global::Soenneker.Slack.OpenApiClient.Models.MessageFile4HasMore.CreateFromDiscriminatorValue); } },
                 { "has_more_shares", n => { HasMoreShares = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFile4HasMoreShares>(global::Soenneker.Slack.OpenApiClient.Models.MessageFile4HasMoreShares.CreateFromDiscriminatorValue); } },
                 { "has_rich_preview", n => { HasRichPreview = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFile4HasRichPreview>(global::Soenneker.Slack.OpenApiClient.Models.MessageFile4HasRichPreview.CreateFromDiscriminatorValue); } },
-                { "headers", n => { Headers = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FileHeaders>(global::Soenneker.Slack.OpenApiClient.Models.FileHeaders.CreateFromDiscriminatorValue); } },
+                { "headers", n => { Headers = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Headers>(global::Soenneker.Slack.OpenApiClient.Models.Headers.CreateFromDiscriminatorValue); } },
                 { "hls", n => { Hls = n.GetStringValue(); } },
                 { "hls_embed", n => { HlsEmbed = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
@@ -1406,7 +1406,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFile4HasMore>("has_more", HasMore);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFile4HasMoreShares>("has_more_shares", HasMoreShares);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFile4HasRichPreview>("has_rich_preview", HasRichPreview);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FileHeaders>("headers", Headers);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Headers>("headers", Headers);
             writer.WriteStringValue("hls", Hls);
             writer.WriteStringValue("hls_embed", HlsEmbed);
             writer.WriteStringValue("id", Id);

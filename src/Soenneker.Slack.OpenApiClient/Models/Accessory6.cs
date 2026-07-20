@@ -12,22 +12,6 @@ namespace Soenneker.Slack.OpenApiClient.Models
     public partial class Accessory6 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The accessibility_label property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? AccessibilityLabel { get; set; }
-#nullable restore
-#else
-        public string AccessibilityLabel { get; set; }
-#endif
-        /// <summary>The action_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ActionId { get; set; }
-#nullable restore
-#else
-        public string ActionId { get; set; }
-#endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The alt_text property</summary>
@@ -38,32 +22,6 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string AltText { get; set; }
 #endif
-        /// <summary>The border property</summary>
-        public double? Border { get; set; }
-        /// <summary>The confirm property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AccessoryConfirm? Confirm { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AccessoryConfirm Confirm { get; set; }
-#endif
-        /// <summary>The default_to_current_conversation property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Accessory6DefaultToCurrentConversation? DefaultToCurrentConversation { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Accessory6DefaultToCurrentConversation DefaultToCurrentConversation { get; set; }
-#endif
-        /// <summary>The elements property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.AccessoryElement2>? Elements { get; set; }
-#nullable restore
-#else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.AccessoryElement2> Elements { get; set; }
-#endif
         /// <summary>The fallback property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -71,22 +29,6 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #nullable restore
 #else
         public string Fallback { get; set; }
-#endif
-        /// <summary>The filter property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AccessoryFilter? Filter { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AccessoryFilter Filter { get; set; }
-#endif
-        /// <summary>The focus_on_load property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Accessory6FocusOnLoad? FocusOnLoad { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Accessory6FocusOnLoad FocusOnLoad { get; set; }
 #endif
         /// <summary>The image_bytes property</summary>
         public double? ImageBytes { get; set; }
@@ -102,128 +44,6 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #endif
         /// <summary>The image_width property</summary>
         public double? ImageWidth { get; set; }
-        /// <summary>The indent property</summary>
-        public double? Indent { get; set; }
-        /// <summary>The initial_channel property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? InitialChannel { get; set; }
-#nullable restore
-#else
-        public string InitialChannel { get; set; }
-#endif
-        /// <summary>The initial_channels property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<string>? InitialChannels { get; set; }
-#nullable restore
-#else
-        public List<string> InitialChannels { get; set; }
-#endif
-        /// <summary>The initial_conversation property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? InitialConversation { get; set; }
-#nullable restore
-#else
-        public string InitialConversation { get; set; }
-#endif
-        /// <summary>The initial_conversations property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<string>? InitialConversations { get; set; }
-#nullable restore
-#else
-        public List<string> InitialConversations { get; set; }
-#endif
-        /// <summary>The initial_date property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? InitialDate { get; set; }
-#nullable restore
-#else
-        public string InitialDate { get; set; }
-#endif
-        /// <summary>The initial_date_time property</summary>
-        public double? InitialDateTime { get; set; }
-        /// <summary>The initial_option property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.InitialOptionElement? InitialOption { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.InitialOptionElement InitialOption { get; set; }
-#endif
-        /// <summary>The initial_options property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.InitialOptionElement>? InitialOptions { get; set; }
-#nullable restore
-#else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.InitialOptionElement> InitialOptions { get; set; }
-#endif
-        /// <summary>The initial_time property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? InitialTime { get; set; }
-#nullable restore
-#else
-        public string InitialTime { get; set; }
-#endif
-        /// <summary>The initial_user property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? InitialUser { get; set; }
-#nullable restore
-#else
-        public string InitialUser { get; set; }
-#endif
-        /// <summary>The initial_users property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<string>? InitialUsers { get; set; }
-#nullable restore
-#else
-        public List<string> InitialUsers { get; set; }
-#endif
-        /// <summary>The max_selected_items property</summary>
-        public double? MaxSelectedItems { get; set; }
-        /// <summary>The min_query_length property</summary>
-        public double? MinQueryLength { get; set; }
-        /// <summary>The offset property</summary>
-        public double? Offset { get; set; }
-        /// <summary>The option_groups property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.AccessoryOptionGroup>? OptionGroups { get; set; }
-#nullable restore
-#else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.AccessoryOptionGroup> OptionGroups { get; set; }
-#endif
-        /// <summary>The options property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.InitialOptionElement>? Options { get; set; }
-#nullable restore
-#else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.InitialOptionElement> Options { get; set; }
-#endif
-        /// <summary>The placeholder property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement? Placeholder { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement Placeholder { get; set; }
-#endif
-        /// <summary>The response_url_enabled property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Accessory6ResponseUrlEnabled? ResponseUrlEnabled { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Accessory6ResponseUrlEnabled ResponseUrlEnabled { get; set; }
-#endif
         /// <summary>The slack_file property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -232,30 +52,6 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.SlackFile2 SlackFile { get; set; }
 #endif
-        /// <summary>The style property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Style { get; set; }
-#nullable restore
-#else
-        public string Style { get; set; }
-#endif
-        /// <summary>The text property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement? Text { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement Text { get; set; }
-#endif
-        /// <summary>The timezone property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Timezone { get; set; }
-#nullable restore
-#else
-        public string Timezone { get; set; }
-#endif
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -263,30 +59,6 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #nullable restore
 #else
         public string Type { get; set; }
-#endif
-        /// <summary>The url property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Url { get; set; }
-#nullable restore
-#else
-        public string Url { get; set; }
-#endif
-        /// <summary>The value property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Value { get; set; }
-#nullable restore
-#else
-        public string Value { get; set; }
-#endif
-        /// <summary>The workflow property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Workflow2? Workflow { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Workflow2 Workflow { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Accessory6"/> and sets the default values.
@@ -313,47 +85,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "accessibility_label", n => { AccessibilityLabel = n.GetStringValue(); } },
-                { "action_id", n => { ActionId = n.GetStringValue(); } },
                 { "alt_text", n => { AltText = n.GetStringValue(); } },
-                { "border", n => { Border = n.GetDoubleValue(); } },
-                { "confirm", n => { Confirm = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AccessoryConfirm>(global::Soenneker.Slack.OpenApiClient.Models.AccessoryConfirm.CreateFromDiscriminatorValue); } },
-                { "default_to_current_conversation", n => { DefaultToCurrentConversation = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Accessory6DefaultToCurrentConversation>(global::Soenneker.Slack.OpenApiClient.Models.Accessory6DefaultToCurrentConversation.CreateFromDiscriminatorValue); } },
-                { "elements", n => { Elements = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AccessoryElement2>(global::Soenneker.Slack.OpenApiClient.Models.AccessoryElement2.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "fallback", n => { Fallback = n.GetStringValue(); } },
-                { "filter", n => { Filter = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AccessoryFilter>(global::Soenneker.Slack.OpenApiClient.Models.AccessoryFilter.CreateFromDiscriminatorValue); } },
-                { "focus_on_load", n => { FocusOnLoad = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Accessory6FocusOnLoad>(global::Soenneker.Slack.OpenApiClient.Models.Accessory6FocusOnLoad.CreateFromDiscriminatorValue); } },
                 { "image_bytes", n => { ImageBytes = n.GetDoubleValue(); } },
                 { "image_height", n => { ImageHeight = n.GetDoubleValue(); } },
                 { "image_url", n => { ImageUrl = n.GetStringValue(); } },
                 { "image_width", n => { ImageWidth = n.GetDoubleValue(); } },
-                { "indent", n => { Indent = n.GetDoubleValue(); } },
-                { "initial_channel", n => { InitialChannel = n.GetStringValue(); } },
-                { "initial_channels", n => { InitialChannels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "initial_conversation", n => { InitialConversation = n.GetStringValue(); } },
-                { "initial_conversations", n => { InitialConversations = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "initial_date", n => { InitialDate = n.GetStringValue(); } },
-                { "initial_date_time", n => { InitialDateTime = n.GetDoubleValue(); } },
-                { "initial_option", n => { InitialOption = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InitialOptionElement>(global::Soenneker.Slack.OpenApiClient.Models.InitialOptionElement.CreateFromDiscriminatorValue); } },
-                { "initial_options", n => { InitialOptions = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.InitialOptionElement>(global::Soenneker.Slack.OpenApiClient.Models.InitialOptionElement.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "initial_time", n => { InitialTime = n.GetStringValue(); } },
-                { "initial_user", n => { InitialUser = n.GetStringValue(); } },
-                { "initial_users", n => { InitialUsers = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "max_selected_items", n => { MaxSelectedItems = n.GetDoubleValue(); } },
-                { "min_query_length", n => { MinQueryLength = n.GetDoubleValue(); } },
-                { "offset", n => { Offset = n.GetDoubleValue(); } },
-                { "option_groups", n => { OptionGroups = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AccessoryOptionGroup>(global::Soenneker.Slack.OpenApiClient.Models.AccessoryOptionGroup.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.InitialOptionElement>(global::Soenneker.Slack.OpenApiClient.Models.InitialOptionElement.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "placeholder", n => { Placeholder = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement>(global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement.CreateFromDiscriminatorValue); } },
-                { "response_url_enabled", n => { ResponseUrlEnabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Accessory6ResponseUrlEnabled>(global::Soenneker.Slack.OpenApiClient.Models.Accessory6ResponseUrlEnabled.CreateFromDiscriminatorValue); } },
                 { "slack_file", n => { SlackFile = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackFile2>(global::Soenneker.Slack.OpenApiClient.Models.SlackFile2.CreateFromDiscriminatorValue); } },
-                { "style", n => { Style = n.GetStringValue(); } },
-                { "text", n => { Text = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement>(global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement.CreateFromDiscriminatorValue); } },
-                { "timezone", n => { Timezone = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
-                { "url", n => { Url = n.GetStringValue(); } },
-                { "value", n => { Value = n.GetStringValue(); } },
-                { "workflow", n => { Workflow = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Workflow2>(global::Soenneker.Slack.OpenApiClient.Models.Workflow2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -363,47 +102,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("accessibility_label", AccessibilityLabel);
-            writer.WriteStringValue("action_id", ActionId);
             writer.WriteStringValue("alt_text", AltText);
-            writer.WriteDoubleValue("border", Border);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AccessoryConfirm>("confirm", Confirm);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Accessory6DefaultToCurrentConversation>("default_to_current_conversation", DefaultToCurrentConversation);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AccessoryElement2>("elements", Elements);
             writer.WriteStringValue("fallback", Fallback);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AccessoryFilter>("filter", Filter);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Accessory6FocusOnLoad>("focus_on_load", FocusOnLoad);
             writer.WriteDoubleValue("image_bytes", ImageBytes);
             writer.WriteDoubleValue("image_height", ImageHeight);
             writer.WriteStringValue("image_url", ImageUrl);
             writer.WriteDoubleValue("image_width", ImageWidth);
-            writer.WriteDoubleValue("indent", Indent);
-            writer.WriteStringValue("initial_channel", InitialChannel);
-            writer.WriteCollectionOfPrimitiveValues<string>("initial_channels", InitialChannels);
-            writer.WriteStringValue("initial_conversation", InitialConversation);
-            writer.WriteCollectionOfPrimitiveValues<string>("initial_conversations", InitialConversations);
-            writer.WriteStringValue("initial_date", InitialDate);
-            writer.WriteDoubleValue("initial_date_time", InitialDateTime);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InitialOptionElement>("initial_option", InitialOption);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.InitialOptionElement>("initial_options", InitialOptions);
-            writer.WriteStringValue("initial_time", InitialTime);
-            writer.WriteStringValue("initial_user", InitialUser);
-            writer.WriteCollectionOfPrimitiveValues<string>("initial_users", InitialUsers);
-            writer.WriteDoubleValue("max_selected_items", MaxSelectedItems);
-            writer.WriteDoubleValue("min_query_length", MinQueryLength);
-            writer.WriteDoubleValue("offset", Offset);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AccessoryOptionGroup>("option_groups", OptionGroups);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.InitialOptionElement>("options", Options);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement>("placeholder", Placeholder);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Accessory6ResponseUrlEnabled>("response_url_enabled", ResponseUrlEnabled);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackFile2>("slack_file", SlackFile);
-            writer.WriteStringValue("style", Style);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement>("text", Text);
-            writer.WriteStringValue("timezone", Timezone);
             writer.WriteStringValue("type", Type);
-            writer.WriteStringValue("url", Url);
-            writer.WriteStringValue("value", Value);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Workflow2>("workflow", Workflow);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
