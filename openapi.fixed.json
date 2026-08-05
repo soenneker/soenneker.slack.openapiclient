@@ -88860,10 +88860,7 @@
           }
         }
       },
-      "AppRequestedEventPreviousResolution": {
-        "required": [
-          "type"
-        ],
+      "AppRequestedEventPreviousResolutionScopesTokenType": {
         "type": "object",
         "anyOf": [
           {
@@ -88872,21 +88869,15 @@
             ]
           },
           {
-            "$ref": "#/components/schemas/AppRequestedEventPreviousResolutionAnyOf2"
+            "$ref": "#/components/schemas/AppRequestedEventPreviousResolutionScopesTokenTypeWrapper"
+          },
+          {
+            "$ref": "#/components/schemas/AppRequestedEventPreviousResolutionScopesTokenTypeWrapper2"
+          },
+          {
+            "$ref": "#/components/schemas/AppRequestedEventPreviousResolutionScopesTokenTypeWrapper3"
           }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "AppRequestedEventPreviousResolutionAnyOf2": "#/components/schemas/AppRequestedEventPreviousResolutionAnyOf2"
-          }
-        }
+        ]
       },
       "AppRequestedEventScopesTokenType": {
         "type": "object",
@@ -90575,34 +90566,6 @@
           }
         }
       },
-      "BlockActionTeam": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "enum": [
-              null
-            ]
-          },
-          {
-            "$ref": "#/components/schemas/BlockActionTeamAnyOf2"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "BlockActionTeamAnyOf2": "#/components/schemas/BlockActionTeamAnyOf2"
-          }
-        }
-      },
       "BlockActionIsEnterpriseInstall": {
         "type": "object",
         "anyOf": [
@@ -90938,34 +90901,6 @@
           }
         ]
       },
-      "DialogSubmitActionTeam": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "enum": [
-              null
-            ]
-          },
-          {
-            "$ref": "#/components/schemas/DialogSubmitActionTeamAnyOf2"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "DialogSubmitActionTeamAnyOf2": "#/components/schemas/DialogSubmitActionTeamAnyOf2"
-          }
-        }
-      },
       "DialogSubmitActionIsEnterpriseInstall": {
         "type": "object",
         "anyOf": [
@@ -90999,34 +90934,6 @@
           }
         ]
       },
-      "GlobalShortcutTeam": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "enum": [
-              null
-            ]
-          },
-          {
-            "$ref": "#/components/schemas/GlobalShortcutTeamAnyOf2"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "GlobalShortcutTeamAnyOf2": "#/components/schemas/GlobalShortcutTeamAnyOf2"
-          }
-        }
-      },
       "GlobalShortcutIsEnterpriseInstall": {
         "type": "object",
         "anyOf": [
@@ -91037,34 +90944,6 @@
             "$ref": "#/components/schemas/GlobalShortcutIsEnterpriseInstallWrapper2"
           }
         ]
-      },
-      "MessageShortcutTeam": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "enum": [
-              null
-            ]
-          },
-          {
-            "$ref": "#/components/schemas/MessageShortcutTeamAnyOf2"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "MessageShortcutTeamAnyOf2": "#/components/schemas/MessageShortcutTeamAnyOf2"
-          }
-        }
       },
       "MessageShortcutIsEnterpriseInstall": {
         "type": "object",
@@ -91077,34 +90956,6 @@
           }
         ]
       },
-      "ViewSubmitActionTeam": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "enum": [
-              null
-            ]
-          },
-          {
-            "$ref": "#/components/schemas/ViewSubmitActionTeamAnyOf2"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "ViewSubmitActionTeamAnyOf2": "#/components/schemas/ViewSubmitActionTeamAnyOf2"
-          }
-        }
-      },
       "ViewSubmitActionIsEnterpriseInstall": {
         "type": "object",
         "anyOf": [
@@ -91115,34 +90966,6 @@
             "$ref": "#/components/schemas/ViewSubmitActionIsEnterpriseInstallWrapper2"
           }
         ]
-      },
-      "ViewClosedActionTeam": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "enum": [
-              null
-            ]
-          },
-          {
-            "$ref": "#/components/schemas/ViewClosedActionTeamAnyOf2"
-          }
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "Union discriminator"
-          }
-        },
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "ViewClosedActionTeamAnyOf2": "#/components/schemas/ViewClosedActionTeamAnyOf2"
-          }
-        }
       },
       "ViewClosedActionIsEnterpriseInstall": {
         "type": "object",
@@ -95048,21 +94871,6 @@
           }
         ]
       },
-      "AppRequestedEventPreviousResolutionAnyOf2": {
-        "required": [
-          "status",
-          "scopes"
-        ],
-        "type": "object",
-        "properties": {
-          "status": {
-            "$ref": "#/components/schemas/AppRequestedEventPreviousResolutionAnyOf2Status"
-          },
-          "scopes": {
-            "$ref": "#/components/schemas/AppRequestedEventPreviousResolutionAnyOf2Scopes"
-          }
-        }
-      },
       "AppHomeOpenedEventContextEntitiesItemAllOf1": {
         "type": "object",
         "properties": {
@@ -95556,27 +95364,6 @@
           }
         }
       },
-      "BlockActionTeamAnyOf2": {
-        "required": [
-          "id",
-          "domain"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "domain": {
-            "type": "string"
-          },
-          "enterprise_id": {
-            "type": "string"
-          },
-          "enterprise_name": {
-            "type": "string"
-          }
-        }
-      },
       "ViewOutputBlocksItemAnyOf11AllOf1": {
         "required": [
           "type",
@@ -95612,111 +95399,6 @@
           },
           "title": {
             "$ref": "#/components/schemas/PlainTextElement"
-          }
-        }
-      },
-      "DialogSubmitActionTeamAnyOf2": {
-        "required": [
-          "id",
-          "domain"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "domain": {
-            "type": "string"
-          },
-          "enterprise_id": {
-            "type": "string"
-          },
-          "enterprise_name": {
-            "type": "string"
-          }
-        }
-      },
-      "GlobalShortcutTeamAnyOf2": {
-        "required": [
-          "id",
-          "domain"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "domain": {
-            "type": "string"
-          },
-          "enterprise_id": {
-            "type": "string"
-          },
-          "enterprise_name": {
-            "type": "string"
-          }
-        }
-      },
-      "MessageShortcutTeamAnyOf2": {
-        "required": [
-          "id",
-          "domain"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "domain": {
-            "type": "string"
-          },
-          "enterprise_id": {
-            "type": "string"
-          },
-          "enterprise_name": {
-            "type": "string"
-          }
-        }
-      },
-      "ViewSubmitActionTeamAnyOf2": {
-        "required": [
-          "id",
-          "domain"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "domain": {
-            "type": "string"
-          },
-          "enterprise_id": {
-            "type": "string"
-          },
-          "enterprise_name": {
-            "type": "string"
-          }
-        }
-      },
-      "ViewClosedActionTeamAnyOf2": {
-        "required": [
-          "id",
-          "domain"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "domain": {
-            "type": "string"
-          },
-          "enterprise_id": {
-            "type": "string"
-          },
-          "enterprise_name": {
-            "type": "string"
           }
         }
       },
@@ -95833,25 +95515,6 @@
             "$ref": "#/components/schemas/PlainTextElement"
           }
         }
-      },
-      "AppRequestedEventPreviousResolutionAnyOf2ScopesTokenType": {
-        "type": "object",
-        "anyOf": [
-          {
-            "enum": [
-              null
-            ]
-          },
-          {
-            "$ref": "#/components/schemas/AppRequestedEventPreviousResolutionAnyOf2ScopesTokenTypeWrapper"
-          },
-          {
-            "$ref": "#/components/schemas/AppRequestedEventPreviousResolutionAnyOf2ScopesTokenTypeWrapper2"
-          },
-          {
-            "$ref": "#/components/schemas/AppRequestedEventPreviousResolutionAnyOf2ScopesTokenTypeWrapper3"
-          }
-        ]
       },
       "WebApiCallResultResponseMetadata": {
         "type": "object",
@@ -96703,6 +96366,22 @@
             "$ref": "#/components/schemas/AppRequestedEventAppRequestApp"
           }
         }
+      },
+      "AppRequestedEventPreviousResolution": {
+        "required": [
+          "status",
+          "scopes"
+        ],
+        "type": "object",
+        "properties": {
+          "status": {
+            "$ref": "#/components/schemas/AppRequestedEventPreviousResolutionStatus"
+          },
+          "scopes": {
+            "$ref": "#/components/schemas/AppRequestedEventPreviousResolutionScopes"
+          }
+        },
+        "nullable": true
       },
       "AppRequestedEventUser": {
         "required": [
@@ -98555,6 +98234,28 @@
           }
         }
       },
+      "BlockActionTeam": {
+        "required": [
+          "id",
+          "domain"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "domain": {
+            "type": "string"
+          },
+          "enterprise_id": {
+            "type": "string"
+          },
+          "enterprise_name": {
+            "type": "string"
+          }
+        },
+        "nullable": true
+      },
       "BlockActionUser": {
         "required": [
           "id",
@@ -98694,6 +98395,28 @@
           "type": "string"
         }
       },
+      "DialogSubmitActionTeam": {
+        "required": [
+          "id",
+          "domain"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "domain": {
+            "type": "string"
+          },
+          "enterprise_id": {
+            "type": "string"
+          },
+          "enterprise_name": {
+            "type": "string"
+          }
+        },
+        "nullable": true
+      },
       "DialogSubmitActionUser": {
         "required": [
           "id",
@@ -98760,6 +98483,28 @@
             "type": "string"
           }
         }
+      },
+      "GlobalShortcutTeam": {
+        "required": [
+          "id",
+          "domain"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "domain": {
+            "type": "string"
+          },
+          "enterprise_id": {
+            "type": "string"
+          },
+          "enterprise_name": {
+            "type": "string"
+          }
+        },
+        "nullable": true
       },
       "GlobalShortcutEnterprise": {
         "required": [
@@ -98836,6 +98581,28 @@
           }
         }
       },
+      "MessageShortcutTeam": {
+        "required": [
+          "id",
+          "domain"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "domain": {
+            "type": "string"
+          },
+          "enterprise_id": {
+            "type": "string"
+          },
+          "enterprise_name": {
+            "type": "string"
+          }
+        },
+        "nullable": true
+      },
       "MessageShortcutEnterprise": {
         "required": [
           "id",
@@ -98850,6 +98617,28 @@
             "type": "string"
           }
         }
+      },
+      "ViewSubmitActionTeam": {
+        "required": [
+          "id",
+          "domain"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "domain": {
+            "type": "string"
+          },
+          "enterprise_id": {
+            "type": "string"
+          },
+          "enterprise_name": {
+            "type": "string"
+          }
+        },
+        "nullable": true
       },
       "ViewSubmitActionUser": {
         "required": [
@@ -98883,6 +98672,28 @@
             "type": "string"
           }
         }
+      },
+      "ViewClosedActionTeam": {
+        "required": [
+          "id",
+          "domain"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "domain": {
+            "type": "string"
+          },
+          "enterprise_id": {
+            "type": "string"
+          },
+          "enterprise_name": {
+            "type": "string"
+          }
+        },
+        "nullable": true
       },
       "ViewClosedActionUser": {
         "required": [
@@ -99011,29 +98822,6 @@
             "items": {
               "$ref": "#/components/schemas/WorkflowsFeaturedListResponseAllOf2FeaturedWorkflowsItemTriggersItem"
             }
-          }
-        }
-      },
-      "AppRequestedEventPreviousResolutionAnyOf2Scopes": {
-        "required": [
-          "name",
-          "description",
-          "is_dangerous",
-          "token_type"
-        ],
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "is_dangerous": {
-            "type": "boolean"
-          },
-          "token_type": {
-            "$ref": "#/components/schemas/AppRequestedEventPreviousResolutionAnyOf2ScopesTokenType"
           }
         }
       },
@@ -99199,6 +98987,29 @@
           },
           "icons": {
             "$ref": "#/components/schemas/AppRequestedEventAppRequestAppIcons"
+          }
+        }
+      },
+      "AppRequestedEventPreviousResolutionScopes": {
+        "required": [
+          "name",
+          "description",
+          "is_dangerous",
+          "token_type"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "is_dangerous": {
+            "type": "boolean"
+          },
+          "token_type": {
+            "$ref": "#/components/schemas/AppRequestedEventPreviousResolutionScopesTokenType"
           }
         }
       },
@@ -134603,6 +134414,39 @@
           }
         }
       },
+      "AppRequestedEventPreviousResolutionScopesTokenTypeWrapper": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/AppRequestedEventPreviousResolutionScopesTokenTypeWrapperValue"
+          }
+        }
+      },
+      "AppRequestedEventPreviousResolutionScopesTokenTypeWrapper2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/AppRequestedEventPreviousResolutionScopesTokenTypeWrapper2Value"
+          }
+        }
+      },
+      "AppRequestedEventPreviousResolutionScopesTokenTypeWrapper3": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/AppRequestedEventPreviousResolutionScopesTokenTypeWrapper3Value"
+          }
+        }
+      },
       "AppRequestedEventScopesTokenTypeWrapper": {
         "required": [
           "value"
@@ -144230,39 +144074,6 @@
           }
         }
       },
-      "AppRequestedEventPreviousResolutionAnyOf2ScopesTokenTypeWrapper": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "$ref": "#/components/schemas/AppRequestedEventPreviousResolutionAnyOf2ScopesTokenTypeWrapperValue"
-          }
-        }
-      },
-      "AppRequestedEventPreviousResolutionAnyOf2ScopesTokenTypeWrapper2": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "$ref": "#/components/schemas/AppRequestedEventPreviousResolutionAnyOf2ScopesTokenTypeWrapper2Value"
-          }
-        }
-      },
-      "AppRequestedEventPreviousResolutionAnyOf2ScopesTokenTypeWrapper3": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "$ref": "#/components/schemas/AppRequestedEventPreviousResolutionAnyOf2ScopesTokenTypeWrapper3Value"
-          }
-        }
-      },
       "PartialMessageMetadataEventPayloadAdditionalPropertiesBranch1": {
         "required": [
           "value"
@@ -152756,28 +152567,6 @@
           ]
         }
       },
-      "AppRequestedEventPreviousResolutionAnyOf2Status": {
-        "enum": [
-          "approved",
-          "restricted"
-        ],
-        "type": "string",
-        "additionalProperties": false,
-        "x-ms-enum": {
-          "name": "AppRequestedEventPreviousResolutionAnyOf2Status",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "approved",
-              "name": "Approved"
-            },
-            {
-              "value": "restricted",
-              "name": "Restricted"
-            }
-          ]
-        }
-      },
       "AppHomeOpenedEventContextEntitiesItemAllOf2AnyOf1Type": {
         "enum": [
           "slack#/types/channel_id"
@@ -153497,6 +153286,28 @@
           ]
         }
       },
+      "AppRequestedEventPreviousResolutionStatus": {
+        "enum": [
+          "approved",
+          "restricted"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "AppRequestedEventPreviousResolutionStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "approved",
+              "name": "Approved"
+            },
+            {
+              "value": "restricted",
+              "name": "Restricted"
+            }
+          ]
+        }
+      },
       "InviteRequestedEventInviteRequestInviteType": {
         "enum": [
           "restricted",
@@ -153660,6 +153471,57 @@
           ]
         }
       },
+      "AppRequestedEventPreviousResolutionScopesTokenTypeWrapperValue": {
+        "enum": [
+          "user"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "AppRequestedEventPreviousResolutionScopesTokenTypeWrapperValue",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "user",
+              "name": "User"
+            }
+          ]
+        }
+      },
+      "AppRequestedEventPreviousResolutionScopesTokenTypeWrapper2Value": {
+        "enum": [
+          "bot"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "AppRequestedEventPreviousResolutionScopesTokenTypeWrapper2Value",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "bot",
+              "name": "Bot"
+            }
+          ]
+        }
+      },
+      "AppRequestedEventPreviousResolutionScopesTokenTypeWrapper3Value": {
+        "enum": [
+          "app"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "AppRequestedEventPreviousResolutionScopesTokenTypeWrapper3Value",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "app",
+              "name": "App"
+            }
+          ]
+        }
+      },
       "AppRequestedEventScopesTokenTypeWrapperValue": {
         "enum": [
           "user"
@@ -153702,57 +153564,6 @@
         "additionalProperties": false,
         "x-ms-enum": {
           "name": "AppRequestedEventScopesTokenTypeWrapper3Value",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "app",
-              "name": "App"
-            }
-          ]
-        }
-      },
-      "AppRequestedEventPreviousResolutionAnyOf2ScopesTokenTypeWrapperValue": {
-        "enum": [
-          "user"
-        ],
-        "type": "string",
-        "additionalProperties": false,
-        "x-ms-enum": {
-          "name": "AppRequestedEventPreviousResolutionAnyOf2ScopesTokenTypeWrapperValue",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "user",
-              "name": "User"
-            }
-          ]
-        }
-      },
-      "AppRequestedEventPreviousResolutionAnyOf2ScopesTokenTypeWrapper2Value": {
-        "enum": [
-          "bot"
-        ],
-        "type": "string",
-        "additionalProperties": false,
-        "x-ms-enum": {
-          "name": "AppRequestedEventPreviousResolutionAnyOf2ScopesTokenTypeWrapper2Value",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "bot",
-              "name": "Bot"
-            }
-          ]
-        }
-      },
-      "AppRequestedEventPreviousResolutionAnyOf2ScopesTokenTypeWrapper3Value": {
-        "enum": [
-          "app"
-        ],
-        "type": "string",
-        "additionalProperties": false,
-        "x-ms-enum": {
-          "name": "AppRequestedEventPreviousResolutionAnyOf2ScopesTokenTypeWrapper3Value",
           "modelAsString": false,
           "values": [
             {
