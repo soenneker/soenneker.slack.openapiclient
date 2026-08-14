@@ -14,7 +14,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The display_information property</summary>
+        /// <summary>A group of settings that describe parts of an app&apos;s appearance within Slack. If you&apos;re distributingthe app via the Slack Marketplace, read our [listing guidelines](https://docs.slack.dev/slack-marketplace/distributing-your-app-in-the-slack-marketplace) to pick the best values for these settings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.ManifestDisplayInformation? DisplayInformation { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.ManifestDisplayInformation DisplayInformation { get; set; }
 #endif
-        /// <summary>The features property</summary>
+        /// <summary>A group of settings corresponding to the Features section of the app config pages.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.ManifestFeatures? Features { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.ManifestFunctions Functions { get; set; }
 #endif
-        /// <summary>The metadata property</summary>
+        /// <summary>A group of settings that describe the manifest.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.ManifestMetadata? Metadata { get; set; }
@@ -46,7 +46,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.ManifestMetadata Metadata { get; set; }
 #endif
-        /// <summary>The oauth_config property</summary>
+        /// <summary>A group of settings describing OAuth configuration for the app.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.ManifestOAuthConfig? OauthConfig { get; set; }
@@ -54,7 +54,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.ManifestOAuthConfig OauthConfig { get; set; }
 #endif
-        /// <summary>The settings property</summary>
+        /// <summary>A group of settings corresponding to the Settings section of the app config pages.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.ManifestSettings? Settings { get; set; }

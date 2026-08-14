@@ -24,7 +24,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #endif
         /// <summary>The severity level of the alert. Defaults to `&quot;default&quot;` if omitted.</summary>
         public global::Soenneker.Slack.OpenApiClient.Models.AlertBlockLevel? Level { get; set; }
-        /// <summary>The text property</summary>
+        /// <summary>The alert message content in the form of a [TextObject](TextObject).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.TextObject? Text { get; set; }

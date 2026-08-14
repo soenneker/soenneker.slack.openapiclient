@@ -14,7 +14,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The discoverability property</summary>
+        /// <summary>This workspace&apos;s discovery setting.</summary>
         public global::Soenneker.Slack.OpenApiClient.Models.TeamDiscoverability? Discoverability { get; set; }
         /// <summary>The encoded team ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

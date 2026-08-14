@@ -22,7 +22,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.EntityPresentDetailsArgumentsError Error { get; set; }
 #endif
-        /// <summary>The metadata property</summary>
+        /// <summary>Entity metadata to be presented in the flexpane.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.EntityMetadata? Metadata { get; set; }

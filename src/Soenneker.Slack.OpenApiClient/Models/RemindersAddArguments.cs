@@ -41,10 +41,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>When this reminder should happen, one of:- the Unix timestamp (up to five years from now),- the number of seconds until the reminder (if within 24 hours), or- a natural language description (Ex. &quot;in 15 minutes,&quot; or &quot;every Thursday&quot;).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Time { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.RemindersAddArguments.RemindersAddArguments_time? Time { get; set; }
 #nullable restore
 #else
-        public UntypedNode Time { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.RemindersAddArguments.RemindersAddArguments_time Time { get; set; }
 #endif
         /// <summary>Overridable authentication token bearing required scopes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -91,7 +91,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "recurrence", n => { Recurrence = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RemindersAddArgumentsRecurrence>(global::Soenneker.Slack.OpenApiClient.Models.RemindersAddArgumentsRecurrence.CreateFromDiscriminatorValue); } },
                 { "team_id", n => { TeamId = n.GetStringValue(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
-                { "time", n => { Time = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "time", n => { Time = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RemindersAddArguments.RemindersAddArguments_time>(global::Soenneker.Slack.OpenApiClient.Models.RemindersAddArguments.RemindersAddArguments_time.CreateFromDiscriminatorValue); } },
                 { "token", n => { Token = n.GetStringValue(); } },
                 { "user", n => { User = n.GetStringValue(); } },
             };
@@ -106,10 +106,71 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RemindersAddArgumentsRecurrence>("recurrence", Recurrence);
             writer.WriteStringValue("team_id", TeamId);
             writer.WriteStringValue("text", Text);
-            writer.WriteObjectValue<UntypedNode>("time", Time);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RemindersAddArguments.RemindersAddArguments_time>("time", Time);
             writer.WriteStringValue("token", Token);
             writer.WriteStringValue("user", User);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class RemindersAddArguments_time : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double { get; set; }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Slack.OpenApiClient.Models.RemindersAddArguments.RemindersAddArguments_time"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Slack.OpenApiClient.Models.RemindersAddArguments.RemindersAddArguments_time CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Soenneker.Slack.OpenApiClient.Models.RemindersAddArguments.RemindersAddArguments_time();
+                if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
         }
     }
 }

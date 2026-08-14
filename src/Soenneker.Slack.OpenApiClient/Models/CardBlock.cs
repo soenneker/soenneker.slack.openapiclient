@@ -30,7 +30,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string BlockId { get; set; }
 #endif
-        /// <summary>The body property</summary>
+        /// <summary>The body text of the card in the form of a [MrkdwnElement](MrkdwnElement).Maximum length for the text in this field is 200 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement? Body { get; set; }
@@ -54,7 +54,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.CardBlockIcon Icon { get; set; }
 #endif
-        /// <summary>The subtitle property</summary>
+        /// <summary>The subtitle of the card in the form of a [MrkdwnElement](MrkdwnElement).Maximum length for the text in this field is 150 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement? Subtitle { get; set; }
@@ -62,7 +62,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement Subtitle { get; set; }
 #endif
-        /// <summary>The title property</summary>
+        /// <summary>The title of the card in the form of a [MrkdwnElement](MrkdwnElement).Maximum length for the text in this field is 150 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement? Title { get; set; }

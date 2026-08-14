@@ -38,7 +38,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string BlockId { get; set; }
 #endif
-        /// <summary>The description property</summary>
+        /// <summary>Description for video using a [PlainTextElement](PlainTextElement) object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Description { get; set; }
@@ -70,7 +70,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string ThumbnailUrl { get; set; }
 #endif
-        /// <summary>The title property</summary>
+        /// <summary>Video title as a [PlainTextElement](PlainTextElement) object. `text` within must be less than 200 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Title { get; set; }

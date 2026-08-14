@@ -7,14 +7,15 @@ using System.IO;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
+    /// <summary>
+    /// A group of settings corresponding to the Features section of the app config pages.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class ManifestFeatures : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The agent_view property</summary>
+        /// <summary>A subgroup of settings that describe [agent](https://docs.slack.dev/ai/developing-ai-apps) configuration.[Developing AI apps](https://docs.slack.dev/ai/developing-ai-apps).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.ManifestAgentView? AgentView { get; set; }
@@ -22,7 +23,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.ManifestAgentView AgentView { get; set; }
 #endif
-        /// <summary>The app_home property</summary>
+        /// <summary>A subgroup of settings that describe [App Home](https://docs.slack.dev/surfaces/app-home) configuration.[App Home](https://docs.slack.dev/surfaces/app-home).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.ManifestAppHome? AppHome { get; set; }
@@ -30,7 +31,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.ManifestAppHome AppHome { get; set; }
 #endif
-        /// <summary>The assistant_view property</summary>
+        /// <summary>A subgroup of settings that describe [assistant](https://docs.slack.dev/ai/developing-ai-apps) configuration.[Developing AI apps](https://docs.slack.dev/ai/developing-ai-apps).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.ManifestAssistantView? AssistantView { get; set; }
@@ -38,7 +39,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.ManifestAssistantView AssistantView { get; set; }
 #endif
-        /// <summary>The bot_user property</summary>
+        /// <summary>A subgroup of settings that describe [bot user](https://docs.slack.dev/legacy/legacy-bot-users) configuration.[Legacy bots](https://docs.slack.dev/legacy/legacy-bot-users).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.ManifestBotUser? BotUser { get; set; }

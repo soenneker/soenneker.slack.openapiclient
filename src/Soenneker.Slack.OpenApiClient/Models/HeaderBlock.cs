@@ -22,7 +22,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string BlockId { get; set; }
 #endif
-        /// <summary>The text property</summary>
+        /// <summary>The text for the block, in the form of a [PlainTextElement](PlainTextElement).Maximum length for the text in this field is 150 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Text { get; set; }

@@ -22,7 +22,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string CanvasId { get; set; }
 #endif
-        /// <summary>The criteria property</summary>
+        /// <summary>Filtering criteria.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.Criteria? Criteria { get; set; }

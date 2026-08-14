@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
+    /// <summary>This workspace&apos;s discovery setting.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum TeamDiscoverability
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "open")]
         #pragma warning disable CS1591

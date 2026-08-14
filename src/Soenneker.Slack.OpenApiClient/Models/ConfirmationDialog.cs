@@ -7,14 +7,15 @@ using System.IO;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
+    /// <summary>
+    /// A [Confirm](Confirm) object that defines an optional confirmation dialog after the element is interactedwith.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class ConfirmationDialog : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The confirm property</summary>
+        /// <summary>A [PlainTextElement](PlainTextElement) text object to define the text of the button that confirms the action.Maximum length for the `text` in this field is 30 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Confirm { get; set; }
@@ -22,7 +23,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement Confirm { get; set; }
 #endif
-        /// <summary>The deny property</summary>
+        /// <summary>A [PlainTextElement](PlainTextElement) text object to define the text of the button that cancels the action.Maximum length for the `text` in this field is 30 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Deny { get; set; }
@@ -40,7 +41,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialogText Text { get; set; }
 #endif
-        /// <summary>The title property</summary>
+        /// <summary>A [PlainTextElement](PlainTextElement) text object that defines the dialog&apos;s title.Maximum length for this field is 100 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Title { get; set; }

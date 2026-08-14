@@ -7,10 +7,11 @@ using System.IO;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
+    /// <summary>
+    /// A group of settings corresponding to the Settings section of the app config pages.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class ManifestSettings : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -22,7 +23,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public List<string> AllowedIpAddressRanges { get; set; }
 #endif
-        /// <summary>The event_subscriptions property</summary>
+        /// <summary>A subgroup of settings that describe [Events API](https://docs.slack.dev/apis/web-api/using-the-conversations-api) configuration for the app.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.ManifestEventSubscriptions? EventSubscriptions { get; set; }
@@ -38,7 +39,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string FunctionRuntime { get; set; }
 #endif
-        /// <summary>The incoming_webhooks property</summary>
+        /// <summary>A subgroup of settings that describe [Incoming Webhooks](https://docs.slack.dev/messaging/sending-messages-using-incoming-webhooks) configuration for the app.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.ManifestIncomingWebhooks? IncomingWebhooks { get; set; }
@@ -46,7 +47,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.ManifestIncomingWebhooks IncomingWebhooks { get; set; }
 #endif
-        /// <summary>The interactivity property</summary>
+        /// <summary>A subgroup of settings that describe [https://docs.slack.dev/interactivityinteractivity](https://docs.slack.dev/interactivityinteractivity) configuration for the app.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.ManifestInteractivity? Interactivity { get; set; }

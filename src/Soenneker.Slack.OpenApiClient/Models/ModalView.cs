@@ -38,7 +38,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.ModalViewClearOnClose ClearOnClose { get; set; }
 #endif
-        /// <summary>The close property</summary>
+        /// <summary>An optional [PlainTextElement](PlainTextElement) that defines the text displayed in the close button at thebottom-right of the view. Maximum length of 24 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Close { get; set; }
@@ -70,7 +70,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string PrivateMetadata { get; set; }
 #endif
-        /// <summary>The submit property</summary>
+        /// <summary>An optional [PlainTextElement](PlainTextElement) that defines the text displayed in the submit button at thebottom-right of the view. `submit` is required when an input block is within the `blocks` array. Max length of 24characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Submit { get; set; }
@@ -78,7 +78,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement Submit { get; set; }
 #endif
-        /// <summary>The title property</summary>
+        /// <summary>The title that appears in the top-left of the modal. Must be a [PlainTextElement](PlainTextElement) with amaximum length of 24 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Title { get; set; }

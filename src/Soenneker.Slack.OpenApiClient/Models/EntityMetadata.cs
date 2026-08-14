@@ -38,7 +38,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string EntityType { get; set; }
 #endif
-        /// <summary>The external_ref property</summary>
+        /// <summary>Reference (and optional type) used to identify an entity within the developer&apos;s system.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.ExternalRef? ExternalRef { get; set; }

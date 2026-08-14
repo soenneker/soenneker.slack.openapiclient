@@ -14,7 +14,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The description property</summary>
+        /// <summary>A [PlainTextElement](PlainTextElement) that defines a line of descriptive text shown below the `text` field.Maximum length for the `text` within this field is 75 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Description { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement Description { get; set; }
 #endif
-        /// <summary>The text property</summary>
+        /// <summary>A [MrkdwnElement](MrkdwnElement) that defines the text shown in the option on the menu. To be used withradio buttons and checkboxes. Maximum length for the `text` in this field is 75 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement? Text { get; set; }

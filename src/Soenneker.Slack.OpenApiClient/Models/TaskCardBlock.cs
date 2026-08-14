@@ -22,7 +22,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string BlockId { get; set; }
 #endif
-        /// <summary>The details property</summary>
+        /// <summary>Details of the task in the form of a single &quot;rich_text&quot; entity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock? Details { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock Details { get; set; }
 #endif
-        /// <summary>The output property</summary>
+        /// <summary>Output of the task in the form of a single &quot;rich_text&quot; entity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock? Output { get; set; }

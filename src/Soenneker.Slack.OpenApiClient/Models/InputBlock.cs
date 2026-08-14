@@ -30,7 +30,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.InputBlockDispatchAction DispatchAction { get; set; }
 #endif
-        /// <summary>The element property</summary>
+        /// <summary>A block element.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.InputBlockElement? Element { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.InputBlockElement Element { get; set; }
 #endif
-        /// <summary>The hint property</summary>
+        /// <summary>An optional hint that appears below an input element in a lighter grey. It must be a[object](PlainTextElement). Maximum length for the `text` in this field is 2000 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Hint { get; set; }
@@ -46,7 +46,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement Hint { get; set; }
 #endif
-        /// <summary>The label property</summary>
+        /// <summary>A label that appears above an input element in the form of a [PlainTextElement](PlainTextElement) object.Maximum length for the text in this field is 2000 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Label { get; set; }

@@ -46,7 +46,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The options property</summary>
+        /// <summary>Column options.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.SlackListsSchemaColumnOptions? Options { get; set; }

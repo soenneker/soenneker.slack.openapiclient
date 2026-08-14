@@ -22,7 +22,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The dispatch_action_config property</summary>
+        /// <summary>A [DispatchActionConfig](DispatchActionConfig) object that determines when during text input the element returns a[`block_actions` payload](https://docs.slack.dev/reference/interaction-payloads/block_actions-payload).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.DispatchActionConfig? DispatchActionConfig { get; set; }
@@ -64,7 +64,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string MinValue { get; set; }
 #endif
-        /// <summary>The placeholder property</summary>
+        /// <summary>A [PlainTextElement](PlainTextElement) object that defines the placeholder text shown on the element. Maximumlength for the `text` field in this object is 150 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Placeholder { get; set; }

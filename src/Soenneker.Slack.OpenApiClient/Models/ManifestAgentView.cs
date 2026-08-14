@@ -7,10 +7,11 @@ using System.IO;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
+    /// <summary>
+    /// A subgroup of settings that describe [agent](https://docs.slack.dev/ai/developing-ai-apps) configuration.[Developing AI apps](https://docs.slack.dev/ai/developing-ai-apps).
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class ManifestAgentView : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     {
         /// <summary>Quick actions surfaced in the agent UI.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

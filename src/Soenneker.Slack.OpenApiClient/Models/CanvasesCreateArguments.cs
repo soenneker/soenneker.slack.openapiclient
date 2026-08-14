@@ -22,7 +22,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string ChannelId { get; set; }
 #endif
-        /// <summary>The document_content property</summary>
+        /// <summary>Structure describing the type and contents of the Canvas being created.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.DocumentContent? DocumentContent { get; set; }

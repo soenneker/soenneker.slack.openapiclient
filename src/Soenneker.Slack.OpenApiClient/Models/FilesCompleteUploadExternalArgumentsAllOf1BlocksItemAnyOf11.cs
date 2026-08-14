@@ -38,7 +38,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string ImageUrl { get; set; }
 #endif
-        /// <summary>The title property</summary>
+        /// <summary>An optional title for the image in the form of a [PlainTextElement](PlainTextElement) object.Maximum length for the text in this field is 2000 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Title { get; set; }

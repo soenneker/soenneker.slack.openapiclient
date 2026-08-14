@@ -88,7 +88,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string ListCsvDownloadUrl { get; set; }
 #endif
-        /// <summary>The list_limits property</summary>
+        /// <summary>Limits and counts for the list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.SlackListsLimits? ListLimits { get; set; }
@@ -96,7 +96,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.SlackListsLimits ListLimits { get; set; }
 #endif
-        /// <summary>The list_metadata property</summary>
+        /// <summary>List metadata including schema and views.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.SlackListsMetadata? ListMetadata { get; set; }

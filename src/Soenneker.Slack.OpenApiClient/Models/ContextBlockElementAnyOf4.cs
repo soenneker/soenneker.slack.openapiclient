@@ -22,7 +22,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string AltText { get; set; }
 #endif
-        /// <summary>The slack_file property</summary>
+        /// <summary>The slack file of the image to be displayed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.SlackFile? SlackFile { get; set; }

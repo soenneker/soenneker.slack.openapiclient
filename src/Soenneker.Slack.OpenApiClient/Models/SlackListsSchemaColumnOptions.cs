@@ -7,10 +7,11 @@ using System.IO;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
+    /// <summary>
+    /// Column options.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class SlackListsSchemaColumnOptions : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -30,7 +31,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string DateFormat { get; set; }
 #endif
-        /// <summary>The default_value_typed property</summary>
+        /// <summary>Default value for some columns.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.SlackListsSchemaColumnDefaultValue? DefaultValueTyped { get; set; }

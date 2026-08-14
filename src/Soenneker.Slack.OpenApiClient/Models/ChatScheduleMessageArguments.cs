@@ -30,7 +30,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.LinkNamesLinkNames LinkNames { get; set; }
 #endif
-        /// <summary>The metadata property</summary>
+        /// <summary>Object representing message metadata, which will be made accessible to any user or app.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.MessageMetadata? Metadata { get; set; }
@@ -43,10 +43,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Unix EPOCH timestamp of time in future to send the message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? PostAt { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArguments.ChatScheduleMessageArguments_post_at? PostAt { get; set; }
 #nullable restore
 #else
-        public UntypedNode PostAt { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArguments.ChatScheduleMessageArguments_post_at PostAt { get; set; }
 #endif
         /// <summary>Pass `true` to enable unfurling of primarily text-based content.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -93,7 +93,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "link_names", n => { LinkNames = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.LinkNamesLinkNames>(global::Soenneker.Slack.OpenApiClient.Models.LinkNamesLinkNames.CreateFromDiscriminatorValue); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageMetadata>(global::Soenneker.Slack.OpenApiClient.Models.MessageMetadata.CreateFromDiscriminatorValue); } },
                 { "parse", n => { Parse = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ChatPostEphemeralArgumentsParse>(); } },
-                { "post_at", n => { PostAt = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "post_at", n => { PostAt = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArguments.ChatScheduleMessageArguments_post_at>(global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArguments.ChatScheduleMessageArguments_post_at.CreateFromDiscriminatorValue); } },
                 { "unfurl_links", n => { UnfurlLinks = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UnfurlsUnfurlLinks>(global::Soenneker.Slack.OpenApiClient.Models.UnfurlsUnfurlLinks.CreateFromDiscriminatorValue); } },
                 { "unfurl_media", n => { UnfurlMedia = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UnfurlsUnfurlMedia>(global::Soenneker.Slack.OpenApiClient.Models.UnfurlsUnfurlMedia.CreateFromDiscriminatorValue); } },
             };
@@ -109,10 +109,71 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.LinkNamesLinkNames>("link_names", LinkNames);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageMetadata>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ChatPostEphemeralArgumentsParse>("parse", Parse);
-            writer.WriteObjectValue<UntypedNode>("post_at", PostAt);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArguments.ChatScheduleMessageArguments_post_at>("post_at", PostAt);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UnfurlsUnfurlLinks>("unfurl_links", UnfurlLinks);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UnfurlsUnfurlMedia>("unfurl_media", UnfurlMedia);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class ChatScheduleMessageArguments_post_at : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double { get; set; }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArguments.ChatScheduleMessageArguments_post_at"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArguments.ChatScheduleMessageArguments_post_at CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArguments.ChatScheduleMessageArguments_post_at();
+                if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
         }
     }
 }

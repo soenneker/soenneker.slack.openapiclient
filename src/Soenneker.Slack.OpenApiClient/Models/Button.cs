@@ -30,7 +30,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The confirm property</summary>
+        /// <summary>A [Confirm](Confirm) object that defines an optional confirmation dialog after the element is interactedwith.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog? Confirm { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #endif
         /// <summary>Decorates buttons with alternative visual color schemes. Use this option with restraint.`primary` gives buttons a green outline and text, ideal for affirmation or confirmation actions. `primary` shouldonly be used for one button within a set.`danger` gives buttons a red outline and text, and should be used when the action is destructive. Use `danger` evenmore sparingly than primary.If you don&apos;t include this field, the default button style will be used.</summary>
         public global::Soenneker.Slack.OpenApiClient.Models.ButtonStyle? Style { get; set; }
-        /// <summary>The text property</summary>
+        /// <summary>A [PlainTextElement](PlainTextElement) that defines the button&apos;s text. `text` may truncate with ~30 characters.Maximum length for the text in this field is 75 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Text { get; set; }
