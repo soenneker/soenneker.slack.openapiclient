@@ -24820,9 +24820,13 @@
             "type": "string"
           },
           "value": {
-            "type": [
-              "number",
-              "string"
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "string"
+              }
             ]
           },
           "link": {
@@ -25117,9 +25121,13 @@
             "type": "string"
           },
           "value": {
-            "type": [
-              "number",
-              "string"
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "string"
+              }
             ]
           },
           "icon": {
@@ -29956,11 +29964,15 @@
             "$ref": "#/components/schemas/UnfurlsUnfurlMedia"
           },
           "post_at": {
-            "type": [
-              "number",
-              "string"
-            ],
-            "description": "Unix EPOCH timestamp of time in future to send the message."
+            "description": "Unix EPOCH timestamp of time in future to send the message.",
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "string"
+              }
+            ]
           }
         }
       },
@@ -44025,11 +44037,15 @@
             "description": "The content of the reminder."
           },
           "time": {
-            "type": [
-              "number",
-              "string"
-            ],
-            "description": "When this reminder should happen, one of:\n- the Unix timestamp (up to five years from now),\n- the number of seconds until the reminder (if within 24 hours), or\n- a natural language description (Ex. \u0022in 15 minutes,\u0022 or \u0022every Thursday\u0022)."
+            "description": "When this reminder should happen, one of:\n- the Unix timestamp (up to five years from now),\n- the number of seconds until the reminder (if within 24 hours), or\n- a natural language description (Ex. \u0022in 15 minutes,\u0022 or \u0022every Thursday\u0022).",
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "string"
+              }
+            ]
           },
           "user": {
             "type": "string",
@@ -74943,11 +74959,15 @@
         "type": "object",
         "properties": {
           "post_at": {
-            "type": [
-              "number",
-              "string"
-            ],
-            "description": "Unix EPOCH timestamp of time in future to send the message."
+            "description": "Unix EPOCH timestamp of time in future to send the message.",
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "string"
+              }
+            ]
           }
         }
       },

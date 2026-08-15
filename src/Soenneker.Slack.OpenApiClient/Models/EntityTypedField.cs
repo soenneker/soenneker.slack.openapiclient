@@ -214,7 +214,6 @@ namespace Soenneker.Slack.OpenApiClient.Models
             public static global::Soenneker.Slack.OpenApiClient.Models.EntityTypedField.EntityTypedField_value CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
                 var result = new global::Soenneker.Slack.OpenApiClient.Models.EntityTypedField.EntityTypedField_value();
                 if(parseNode.GetDoubleValue() is double doubleValue)
                 {
