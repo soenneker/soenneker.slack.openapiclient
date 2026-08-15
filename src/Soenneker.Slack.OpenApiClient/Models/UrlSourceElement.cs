@@ -23,7 +23,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Text { get; set; }
 #endif
         /// <summary>The type of element. In this case `type` is always `url`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.UrlSourceElementType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.UrlType? Type { get; set; }
         /// <summary>The URL type source.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -58,7 +58,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "text", n => { Text = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.UrlSourceElementType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.UrlType>(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -70,7 +70,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("text", Text);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.UrlSourceElementType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.UrlType>("type", Type);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }

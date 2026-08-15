@@ -31,7 +31,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public List<global::Soenneker.Slack.OpenApiClient.Models.CardBlock> Elements { get; set; }
 #endif
         /// <summary>The type of block. For a carousel block, `type` is always `carousel`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.CarouselBlockType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.CarouselType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.CarouselBlock"/> and sets the default values.
         /// </summary>
@@ -59,7 +59,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "block_id", n => { BlockId = n.GetStringValue(); } },
                 { "elements", n => { Elements = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.CardBlock>(global::Soenneker.Slack.OpenApiClient.Models.CardBlock.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.CarouselBlockType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.CarouselType>(); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("block_id", BlockId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.CardBlock>("elements", Elements);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.CarouselBlockType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.CarouselType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

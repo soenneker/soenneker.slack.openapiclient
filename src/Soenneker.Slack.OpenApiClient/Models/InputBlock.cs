@@ -63,7 +63,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.InputBlockOptional Optional { get; set; }
 #endif
         /// <summary>The type of block. For an input block, `type` is always `input`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.InputBlockType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.InputType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.InputBlock"/> and sets the default values.
         /// </summary>
@@ -95,7 +95,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "hint", n => { Hint = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>(global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement.CreateFromDiscriminatorValue); } },
                 { "label", n => { Label = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>(global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement.CreateFromDiscriminatorValue); } },
                 { "optional", n => { Optional = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InputBlockOptional>(global::Soenneker.Slack.OpenApiClient.Models.InputBlockOptional.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.InputBlockType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.InputType>(); } },
             };
         }
         /// <summary>
@@ -111,7 +111,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>("hint", Hint);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>("label", Label);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InputBlockOptional>("optional", Optional);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.InputBlockType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.InputType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

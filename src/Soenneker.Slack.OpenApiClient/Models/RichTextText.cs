@@ -31,7 +31,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Text { get; set; }
 #endif
         /// <summary>The type of element. In this case `type` is always `text`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextTextType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.TextType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.RichTextText"/> and sets the default values.
         /// </summary>
@@ -59,7 +59,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "style", n => { Style = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextTextStyle>(global::Soenneker.Slack.OpenApiClient.Models.RichTextTextStyle.CreateFromDiscriminatorValue); } },
                 { "text", n => { Text = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextTextType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.TextType>(); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextTextStyle>("style", Style);
             writer.WriteStringValue("text", Text);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextTextType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.TextType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

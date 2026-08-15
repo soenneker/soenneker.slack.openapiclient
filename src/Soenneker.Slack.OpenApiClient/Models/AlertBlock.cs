@@ -33,7 +33,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.TextObject Text { get; set; }
 #endif
         /// <summary>The type of block. For an alert block, `type` is always `alert`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.AlertBlockType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AlertType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.AlertBlock"/> and sets the default values.
         /// </summary>
@@ -62,7 +62,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "block_id", n => { BlockId = n.GetStringValue(); } },
                 { "level", n => { Level = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AlertBlockLevel>(); } },
                 { "text", n => { Text = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.TextObject>(global::Soenneker.Slack.OpenApiClient.Models.TextObject.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AlertBlockType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AlertType>(); } },
             };
         }
         /// <summary>
@@ -75,7 +75,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("block_id", BlockId);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AlertBlockLevel>("level", Level);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.TextObject>("text", Text);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AlertBlockType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AlertType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

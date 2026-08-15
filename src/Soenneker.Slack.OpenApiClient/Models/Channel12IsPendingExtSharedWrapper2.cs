@@ -22,7 +22,6 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public Channel12IsPendingExtSharedWrapper2()
         {
             AdditionalData = new Dictionary<string, object>();
-            Value = true;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

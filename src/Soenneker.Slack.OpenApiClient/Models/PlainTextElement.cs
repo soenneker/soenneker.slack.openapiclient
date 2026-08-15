@@ -32,7 +32,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Text { get; set; }
 #endif
         /// <summary>The formatting to use for this text object.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElementType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement"/> and sets the default values.
         /// </summary>
@@ -60,7 +60,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "emoji", n => { Emoji = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElementEmoji>(global::Soenneker.Slack.OpenApiClient.Models.PlainTextElementEmoji.CreateFromDiscriminatorValue); } },
                 { "text", n => { Text = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElementType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextType>(); } },
             };
         }
         /// <summary>
@@ -72,7 +72,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElementEmoji>("emoji", Emoji);
             writer.WriteStringValue("text", Text);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElementType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

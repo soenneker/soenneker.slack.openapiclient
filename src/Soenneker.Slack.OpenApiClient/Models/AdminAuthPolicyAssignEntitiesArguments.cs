@@ -23,9 +23,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public List<string> EntityIds { get; set; }
 #endif
         /// <summary>The type of entity interacting with the policy.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminAuthPolicyAssignEntitiesArgumentsEntityType? EntityType { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.UserEntityType? EntityType { get; set; }
         /// <summary>The name of the policy.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminAuthPolicyAssignEntitiesArgumentsPolicyName? PolicyName { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.EmailPasswordPolicyName? PolicyName { get; set; }
         /// <summary>Overridable authentication token bearing required scopes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -60,8 +60,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "entity_ids", n => { EntityIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "entity_type", n => { EntityType = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminAuthPolicyAssignEntitiesArgumentsEntityType>(); } },
-                { "policy_name", n => { PolicyName = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminAuthPolicyAssignEntitiesArgumentsPolicyName>(); } },
+                { "entity_type", n => { EntityType = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.UserEntityType>(); } },
+                { "policy_name", n => { PolicyName = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.EmailPasswordPolicyName>(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
             };
         }
@@ -73,8 +73,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("entity_ids", EntityIds);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminAuthPolicyAssignEntitiesArgumentsEntityType>("entity_type", EntityType);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminAuthPolicyAssignEntitiesArgumentsPolicyName>("policy_name", PolicyName);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.UserEntityType>("entity_type", EntityType);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.EmailPasswordPolicyName>("policy_name", PolicyName);
             writer.WriteStringValue("token", Token);
             writer.WriteAdditionalData(AdditionalData);
         }

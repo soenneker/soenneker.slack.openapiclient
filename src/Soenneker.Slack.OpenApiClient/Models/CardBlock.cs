@@ -71,7 +71,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement Title { get; set; }
 #endif
         /// <summary>The type of block. For a card block, `type` is always `card`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.CardBlockType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.CardType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.CardBlock"/> and sets the default values.
         /// </summary>
@@ -104,7 +104,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "icon", n => { Icon = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.CardBlockIcon>(global::Soenneker.Slack.OpenApiClient.Models.CardBlockIcon.CreateFromDiscriminatorValue); } },
                 { "subtitle", n => { Subtitle = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement>(global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement>(global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.CardBlockType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.CardType>(); } },
             };
         }
         /// <summary>
@@ -121,7 +121,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.CardBlockIcon>("icon", Icon);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement>("subtitle", Subtitle);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement>("title", Title);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.CardBlockType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.CardType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

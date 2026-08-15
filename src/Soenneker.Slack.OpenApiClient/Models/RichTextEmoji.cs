@@ -31,7 +31,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.RichTextEmojiStyle Style { get; set; }
 #endif
         /// <summary>The type of element. In this case `type` is always `emoji`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextEmojiType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.EmojiType? Type { get; set; }
         /// <summary>Lowercase hexadecimal Unicode representation of a standard emoji (not for use with custom emoji).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -75,7 +75,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "style", n => { Style = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextEmojiStyle>(global::Soenneker.Slack.OpenApiClient.Models.RichTextEmojiStyle.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextEmojiType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.EmojiType>(); } },
                 { "unicode", n => { Unicode = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
@@ -89,7 +89,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextEmojiStyle>("style", Style);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextEmojiType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.EmojiType>("type", Type);
             writer.WriteStringValue("unicode", Unicode);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);

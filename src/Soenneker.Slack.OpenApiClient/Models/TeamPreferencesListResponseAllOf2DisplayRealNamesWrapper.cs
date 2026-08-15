@@ -22,7 +22,6 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public TeamPreferencesListResponseAllOf2DisplayRealNamesWrapper()
         {
             AdditionalData = new Dictionary<string, object>();
-            Value = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

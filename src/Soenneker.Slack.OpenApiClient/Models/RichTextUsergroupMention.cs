@@ -23,7 +23,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.RichTextUsergroupMentionStyle Style { get; set; }
 #endif
         /// <summary>The type of element. In this case `type` is always `usergroup`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextUsergroupMentionType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.UsergroupType? Type { get; set; }
         /// <summary>The encoded usergroup ID, e.g. S1234ABCD.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -58,7 +58,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "style", n => { Style = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextUsergroupMentionStyle>(global::Soenneker.Slack.OpenApiClient.Models.RichTextUsergroupMentionStyle.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextUsergroupMentionType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.UsergroupType>(); } },
                 { "usergroup_id", n => { UsergroupId = n.GetStringValue(); } },
             };
         }
@@ -70,7 +70,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextUsergroupMentionStyle>("style", Style);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextUsergroupMentionType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.UsergroupType>("type", Type);
             writer.WriteStringValue("usergroup_id", UsergroupId);
             writer.WriteAdditionalData(AdditionalData);
         }

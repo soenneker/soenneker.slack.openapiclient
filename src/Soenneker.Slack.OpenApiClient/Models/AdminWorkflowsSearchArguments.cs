@@ -59,7 +59,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Query { get; set; }
 #endif
         /// <summary>The field used to sort the returned workflows. Currently only `premium_runs` is supported.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminWorkflowsSearchArgumentsSort? Sort { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.PremiumRunsSort? Sort { get; set; }
         /// <summary>Change sort direction to ascending (`asc`) or descending (`desc`). Defaults to `desc`.</summary>
         public global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSearchArgumentsSortDir? SortDir { get; set; }
         /// <summary>Source of workflow creation, either from `code` or `workflow_builder`.</summary>
@@ -96,7 +96,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "no_collaborators", n => { NoCollaborators = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminWorkflowsSearchArgumentsAllOf5NoCollaborators>(global::Soenneker.Slack.OpenApiClient.Models.AdminWorkflowsSearchArgumentsAllOf5NoCollaborators.CreateFromDiscriminatorValue); } },
                 { "num_trigger_ids", n => { NumTriggerIds = n.GetDoubleValue(); } },
                 { "query", n => { Query = n.GetStringValue(); } },
-                { "sort", n => { Sort = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminWorkflowsSearchArgumentsSort>(); } },
+                { "sort", n => { Sort = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.PremiumRunsSort>(); } },
                 { "sort_dir", n => { SortDir = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSearchArgumentsSortDir>(); } },
                 { "source", n => { Source = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminWorkflowsSearchArgumentsSource>(); } },
             };
@@ -115,7 +115,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminWorkflowsSearchArgumentsAllOf5NoCollaborators>("no_collaborators", NoCollaborators);
             writer.WriteDoubleValue("num_trigger_ids", NumTriggerIds);
             writer.WriteStringValue("query", Query);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminWorkflowsSearchArgumentsSort>("sort", Sort);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.PremiumRunsSort>("sort", Sort);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSearchArgumentsSortDir>("sort_dir", SortDir);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminWorkflowsSearchArgumentsSource>("source", Source);
             writer.WriteAdditionalData(AdditionalData);

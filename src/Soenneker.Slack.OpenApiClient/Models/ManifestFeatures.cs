@@ -63,7 +63,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public List<global::Soenneker.Slack.OpenApiClient.Models.ManifestSlashCommand> SlashCommands { get; set; }
 #endif
-        /// <summary>&quot;An array of strings containing valid unfurl domains to register. A maximum of 5 unfurl domains can beincluded in this array.[Link unfurling: configuring domains](https://docs.slack.dev/messaging/unfurling-links-in-messages).&quot;</summary>
+        /// <summary>An array of strings containing valid unfurl domains to register. A maximum of 5 unfurl domains can beincluded in this array.[Link unfurling: configuring domains](https://docs.slack.dev/messaging/unfurling-links-in-messages).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? UnfurlDomains { get; set; }

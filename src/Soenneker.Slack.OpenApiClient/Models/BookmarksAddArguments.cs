@@ -71,7 +71,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Token { get; set; }
 #endif
         /// <summary>Type of the bookmark. Only `link` is supported at the moment.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.BookmarksAddArgumentsType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.LinkType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.BookmarksAddArguments"/> and sets the default values.
         /// </summary>
@@ -104,7 +104,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "parent_id", n => { ParentId = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.BookmarksAddArgumentsType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.LinkType>(); } },
             };
         }
         /// <summary>
@@ -121,7 +121,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("parent_id", ParentId);
             writer.WriteStringValue("title", Title);
             writer.WriteStringValue("token", Token);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.BookmarksAddArgumentsType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.LinkType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

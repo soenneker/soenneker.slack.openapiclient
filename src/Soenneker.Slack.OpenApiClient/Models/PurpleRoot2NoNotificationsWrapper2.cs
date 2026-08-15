@@ -22,7 +22,6 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public PurpleRoot2NoNotificationsWrapper2()
         {
             AdditionalData = new Dictionary<string, object>();
-            Value = true;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

@@ -23,8 +23,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string AltText { get; set; }
 #endif
-        /// <summary>The type of element. In this case `type` is always `image`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.CardBlockIconType? Type { get; set; }
+        /// <summary>The type of block. For an image block, `type` is always `image`.</summary>
+        public global::Soenneker.Slack.OpenApiClient.Models.ImageType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.CardBlockIcon"/> and sets the default values.
         /// </summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "alt_text", n => { AltText = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.CardBlockIconType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ImageType>(); } },
             };
         }
         /// <summary>
@@ -62,7 +62,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("alt_text", AltText);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.CardBlockIconType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ImageType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

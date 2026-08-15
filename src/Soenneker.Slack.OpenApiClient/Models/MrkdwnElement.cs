@@ -23,7 +23,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Text { get; set; }
 #endif
         /// <summary>The formatting to use for this text object.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElementType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.MrkdwnType? Type { get; set; }
         /// <summary>When set to `false` (as is default) URLs will be auto-converted into links, conversation names willbe link-ified, and certain mentions will be [automatically parsed](https://docs.slack.dev/messaging/formatting-message-text).Using a value of `true` will skip any preprocessing of this nature, although you can still include[manual parsing strings](https://docs.slack.dev/messaging/formatting-message-text).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -58,7 +58,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "text", n => { Text = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElementType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.MrkdwnType>(); } },
                 { "verbatim", n => { Verbatim = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElementVerbatim>(global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElementVerbatim.CreateFromDiscriminatorValue); } },
             };
         }
@@ -70,7 +70,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("text", Text);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElementType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.MrkdwnType>("type", Type);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElementVerbatim>("verbatim", Verbatim);
             writer.WriteAdditionalData(AdditionalData);
         }

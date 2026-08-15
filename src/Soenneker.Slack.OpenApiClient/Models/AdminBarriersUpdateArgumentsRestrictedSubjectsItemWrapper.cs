@@ -15,7 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The value property</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminBarriersUpdateArgumentsRestrictedSubjectsItemWrapperValue? Value { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ImValue? Value { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminBarriersUpdateArgumentsRestrictedSubjectsItemWrapper"/> and sets the default values.
         /// </summary>
@@ -41,7 +41,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "value", n => { Value = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminBarriersUpdateArgumentsRestrictedSubjectsItemWrapperValue>(); } },
+                { "value", n => { Value = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ImValue>(); } },
             };
         }
         /// <summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminBarriersUpdateArgumentsRestrictedSubjectsItemWrapperValue>("value", Value);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ImValue>("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

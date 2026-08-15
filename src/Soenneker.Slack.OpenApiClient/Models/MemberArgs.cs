@@ -23,7 +23,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Date { get; set; }
 #endif
         /// <summary>The type of analytics to retrieve. The options are currently limited to`member` (for grid member analytics) and `public_channel` (for public channel analytics).</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.MemberArgsType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.MemberType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.MemberArgs"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "date", n => { Date = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.MemberArgsType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.MemberType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("date", Date);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.MemberArgsType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.MemberType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -17,14 +17,13 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Retrieve metadata for the `type` of analytics indicated. Can be used only with `type` set to`public_channel` analytics. Omit the date parameter when using this argument. Defaults to `false`.[Public channel metadata](https://docs.slack.dev/reference/methods/admin.analytics.getFile#metadata_only).</summary>
         public bool? MetadataOnly { get; set; }
         /// <summary>The type of analytics to retrieve. The options are currently limited to`member` (for grid member analytics) and `public_channel` (for public channel analytics).</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.PublicChannelWithMetadataType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.PublicChannelType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.PublicChannelWithMetadata"/> and sets the default values.
         /// </summary>
         public PublicChannelWithMetadata()
         {
             AdditionalData = new Dictionary<string, object>();
-            MetadataOnly = true;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +44,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "metadata_only", n => { MetadataOnly = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.PublicChannelWithMetadataType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.PublicChannelType>(); } },
             };
         }
         /// <summary>
@@ -56,7 +55,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("metadata_only", MetadataOnly);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.PublicChannelWithMetadataType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.PublicChannelType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

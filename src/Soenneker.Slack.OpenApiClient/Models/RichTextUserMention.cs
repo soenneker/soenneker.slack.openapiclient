@@ -23,7 +23,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyle Style { get; set; }
 #endif
         /// <summary>The type of element. In this case `type` is always `user`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.UserType? Type { get; set; }
         /// <summary>The encoded user ID, e.g. U1234ABCD.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -58,7 +58,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "style", n => { Style = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyle>(global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyle.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.UserType>(); } },
                 { "user_id", n => { UserId = n.GetStringValue(); } },
             };
         }
@@ -70,7 +70,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyle>("style", Style);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.UserType>("type", Type);
             writer.WriteStringValue("user_id", UserId);
             writer.WriteAdditionalData(AdditionalData);
         }

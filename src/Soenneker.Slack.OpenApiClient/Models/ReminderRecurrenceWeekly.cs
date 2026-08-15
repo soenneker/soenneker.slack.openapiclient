@@ -15,7 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Specifies the repeating behavior of a reminder.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.ReminderRecurrenceWeeklyFrequency? Frequency { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.WeeklyFrequency? Frequency { get; set; }
         /// <summary>Specifies the day-of-the-week repeating behaviour when `frequency` is set to `weekly`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,7 +49,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "frequency", n => { Frequency = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ReminderRecurrenceWeeklyFrequency>(); } },
+                { "frequency", n => { Frequency = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.WeeklyFrequency>(); } },
                 { "weekdays", n => { Weekdays = n.GetCollectionOfEnumValues<global::Soenneker.Slack.OpenApiClient.Models.DaysOfTheWeek>()?.AsList(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ReminderRecurrenceWeeklyFrequency>("frequency", Frequency);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.WeeklyFrequency>("frequency", Frequency);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Slack.OpenApiClient.Models.DaysOfTheWeek>("weekdays", Weekdays);
             writer.WriteAdditionalData(AdditionalData);
         }

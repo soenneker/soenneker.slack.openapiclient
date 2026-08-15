@@ -12,7 +12,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
     public partial class EmailInput : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>&quot;: An identifier for this action. You can use this when you receive an interaction payload to[identify the source of the action](https://docs.slack.dev/interactivity/handling-user-interaction#payloads). Should be uniqueamong all other `action_id`s in the containing block. Maximum length for this field is 255 characters.&quot;</summary>
+        /// <summary>: An identifier for this action. You can use this when you receive an interaction payload to[identify the source of the action](https://docs.slack.dev/interactivity/handling-user-interaction#payloads). Should be uniqueamong all other `action_id`s in the containing block. Maximum length for this field is 255 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ActionId { get; set; }
@@ -55,7 +55,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement Placeholder { get; set; }
 #endif
         /// <summary>The type of element. In this case `type` is always `email_text_input`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.EmailInputType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.EmailTextInputType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.EmailInput"/> and sets the default values.
         /// </summary>
@@ -86,7 +86,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "focus_on_load", n => { FocusOnLoad = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EmailInputFocusOnLoad>(global::Soenneker.Slack.OpenApiClient.Models.EmailInputFocusOnLoad.CreateFromDiscriminatorValue); } },
                 { "initial_value", n => { InitialValue = n.GetStringValue(); } },
                 { "placeholder", n => { Placeholder = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>(global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.EmailInputType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.EmailTextInputType>(); } },
             };
         }
         /// <summary>
@@ -101,7 +101,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EmailInputFocusOnLoad>("focus_on_load", FocusOnLoad);
             writer.WriteStringValue("initial_value", InitialValue);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>("placeholder", Placeholder);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.EmailInputType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.EmailTextInputType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -23,7 +23,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string BlockId { get; set; }
 #endif
         /// <summary>The type of block. For a divider block, `type` is always `divider`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.DividerBlockType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.DividerType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.DividerBlock"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "block_id", n => { BlockId = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.DividerBlockType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.DividerType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("block_id", BlockId);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.DividerBlockType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.DividerType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

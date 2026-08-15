@@ -23,11 +23,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Cursor { get; set; }
 #endif
         /// <summary>The type of entity interacting with the policy.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminAuthPolicyGetEntitiesArgumentsEntityType? EntityType { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.UserEntityType? EntityType { get; set; }
         /// <summary>The maximum number of items to return. Fewer than the requested number of items may be returned,even if the end of the list hasn&apos;t been reached. Must be an integer with a max value of `999`. Default is `100`.</summary>
         public double? Limit { get; set; }
         /// <summary>The name of the policy.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminAuthPolicyGetEntitiesArgumentsPolicyName? PolicyName { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.EmailPasswordPolicyName? PolicyName { get; set; }
         /// <summary>Overridable authentication token bearing required scopes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -62,9 +62,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "cursor", n => { Cursor = n.GetStringValue(); } },
-                { "entity_type", n => { EntityType = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminAuthPolicyGetEntitiesArgumentsEntityType>(); } },
+                { "entity_type", n => { EntityType = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.UserEntityType>(); } },
                 { "limit", n => { Limit = n.GetDoubleValue(); } },
-                { "policy_name", n => { PolicyName = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminAuthPolicyGetEntitiesArgumentsPolicyName>(); } },
+                { "policy_name", n => { PolicyName = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.EmailPasswordPolicyName>(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
             };
         }
@@ -76,9 +76,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("cursor", Cursor);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminAuthPolicyGetEntitiesArgumentsEntityType>("entity_type", EntityType);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.UserEntityType>("entity_type", EntityType);
             writer.WriteDoubleValue("limit", Limit);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminAuthPolicyGetEntitiesArgumentsPolicyName>("policy_name", PolicyName);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.EmailPasswordPolicyName>("policy_name", PolicyName);
             writer.WriteStringValue("token", Token);
             writer.WriteAdditionalData(AdditionalData);
         }

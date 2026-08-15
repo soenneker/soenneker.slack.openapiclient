@@ -30,7 +30,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string PrimaryUsergroupId { get; set; }
 #endif
-        /// <summary>&quot;What kind of interactions are blocked by this barrier?Currently you must provide all three: `im`, `mpim`, `call`.&quot;</summary>
+        /// <summary>What kind of interactions are blocked by this barrier?Currently you must provide all three: `im`, `mpim`, `call`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Slack.OpenApiClient.Models.AdminBarriersCreateArgumentsRestrictedSubjectsItem>? RestrictedSubjects { get; set; }

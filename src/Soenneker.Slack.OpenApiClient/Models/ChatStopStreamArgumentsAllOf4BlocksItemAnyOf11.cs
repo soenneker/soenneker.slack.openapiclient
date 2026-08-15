@@ -47,7 +47,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement Title { get; set; }
 #endif
         /// <summary>The type of block. For an image block, `type` is always `image`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.ChatStopStreamArgumentsAllOf4BlocksItemAnyOf11AllOf1Type? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ImageType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatStopStreamArgumentsAllOf4BlocksItemAnyOf11"/> and sets the default values.
         /// </summary>
@@ -77,7 +77,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "block_id", n => { BlockId = n.GetStringValue(); } },
                 { "image_url", n => { ImageUrl = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>(global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ChatStopStreamArgumentsAllOf4BlocksItemAnyOf11AllOf1Type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ImageType>(); } },
             };
         }
         /// <summary>
@@ -91,7 +91,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("block_id", BlockId);
             writer.WriteStringValue("image_url", ImageUrl);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>("title", Title);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ChatStopStreamArgumentsAllOf4BlocksItemAnyOf11AllOf1Type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ImageType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

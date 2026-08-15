@@ -23,7 +23,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.ManifestBotUserAlwaysOnline AlwaysOnline { get; set; }
 #endif
-        /// <summary>&quot;A string containing the display name of the bot user. Maximum length is 80 characters.Allowed characters: `a-z`, `0-9`, `-`, `_`, and `.`.&quot;</summary>
+        /// <summary>A string containing the display name of the bot user. Maximum length is 80 characters.Allowed characters: `a-z`, `0-9`, `-`, `_`, and `.`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DisplayName { get; set; }

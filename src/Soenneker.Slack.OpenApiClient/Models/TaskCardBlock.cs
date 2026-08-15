@@ -65,7 +65,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Title { get; set; }
 #endif
         /// <summary>The type of block. For this block, type will always be `task_card`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.TaskCardBlockType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.TaskCardType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.TaskCardBlock"/> and sets the default values.
         /// </summary>
@@ -98,7 +98,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.TaskCardBlockStatus>(); } },
                 { "task_id", n => { TaskId = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.TaskCardBlockType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.TaskCardType>(); } },
             };
         }
         /// <summary>
@@ -115,7 +115,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.TaskCardBlockStatus>("status", Status);
             writer.WriteStringValue("task_id", TaskId);
             writer.WriteStringValue("title", Title);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.TaskCardBlockType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.TaskCardType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -15,7 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The operation to perform on the canvas.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.ChangeWithSectionOperation? Operation { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.DeleteOperation? Operation { get; set; }
         /// <summary>The section of the canvas to target the operation on.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,7 +49,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "operation", n => { Operation = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ChangeWithSectionOperation>(); } },
+                { "operation", n => { Operation = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.DeleteOperation>(); } },
                 { "section_id", n => { SectionId = n.GetStringValue(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ChangeWithSectionOperation>("operation", Operation);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.DeleteOperation>("operation", Operation);
             writer.WriteStringValue("section_id", SectionId);
             writer.WriteAdditionalData(AdditionalData);
         }

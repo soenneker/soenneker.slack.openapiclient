@@ -22,7 +22,6 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public ConversationsListArgumentsAllOf3ExcludeArchivedWrapper()
         {
             AdditionalData = new Dictionary<string, object>();
-            Value = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

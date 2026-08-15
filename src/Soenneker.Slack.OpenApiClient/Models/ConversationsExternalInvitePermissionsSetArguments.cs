@@ -12,7 +12,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
     public partial class ConversationsExternalInvitePermissionsSetArguments : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>&quot;The type of action be taken: `upgrade` or `downgrade`.&quot;</summary>
+        /// <summary>The type of action be taken: `upgrade` or `downgrade`.</summary>
         public global::Soenneker.Slack.OpenApiClient.Models.ConversationsExternalInvitePermissionsSetArgumentsAction? Action { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }

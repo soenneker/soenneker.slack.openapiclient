@@ -47,7 +47,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string PrivateMetadata { get; set; }
 #endif
         /// <summary>The type of view. Set to `home` for Home tabs.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.HomeViewType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.HomeType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.HomeView"/> and sets the default values.
         /// </summary>
@@ -77,7 +77,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "callback_id", n => { CallbackId = n.GetStringValue(); } },
                 { "external_id", n => { ExternalId = n.GetStringValue(); } },
                 { "private_metadata", n => { PrivateMetadata = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.HomeViewType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.HomeType>(); } },
             };
         }
         /// <summary>
@@ -91,7 +91,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("callback_id", CallbackId);
             writer.WriteStringValue("external_id", ExternalId);
             writer.WriteStringValue("private_metadata", PrivateMetadata);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.HomeViewType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.HomeType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

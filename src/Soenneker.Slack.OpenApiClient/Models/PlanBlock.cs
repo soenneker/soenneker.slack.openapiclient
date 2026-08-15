@@ -39,7 +39,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Title { get; set; }
 #endif
         /// <summary>The type of block. In this case `type` is always `plan`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.PlanBlockType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.PlanType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.PlanBlock"/> and sets the default values.
         /// </summary>
@@ -68,7 +68,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "block_id", n => { BlockId = n.GetStringValue(); } },
                 { "tasks", n => { Tasks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.PlanBlockTasksItem>(global::Soenneker.Slack.OpenApiClient.Models.PlanBlockTasksItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.PlanBlockType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.PlanType>(); } },
             };
         }
         /// <summary>
@@ -81,7 +81,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("block_id", BlockId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.PlanBlockTasksItem>("tasks", Tasks);
             writer.WriteStringValue("title", Title);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.PlanBlockType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.PlanType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -46,7 +46,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.EntityPresentDetailsArgumentsUserAuthRequired UserAuthRequired { get; set; }
 #endif
-        /// <summary>&quot;A custom URL to which users are directed for authentication if required.Example: \&quot;https://example.com/onboarding?user_id=xxx\&quot;&quot;</summary>
+        /// <summary>A custom URL to which users are directed for authentication if required.Example: &quot;https://example.com/onboarding?user_id=xxx&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UserAuthUrl { get; set; }

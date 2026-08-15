@@ -14,7 +14,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;An array of structured rich text blocks. If the `initial_comment` field is provided, the `blocks` field is ignored.e.g. `[{\&quot;type\&quot;: \&quot;section\&quot;, \&quot;text\&quot;: {\&quot;type\&quot;: \&quot;plain_text\&quot;, \&quot;text\&quot;: \&quot;Hello world\&quot;}}]`[https://docs.slack.dev/reference/block-kit/blocks](https://docs.slack.dev/reference/block-kit/blocks)&quot;</summary>
+        /// <summary>An array of structured rich text blocks. If the `initial_comment` field is provided, the `blocks` field is ignored.e.g. `[{&quot;type&quot;: &quot;section&quot;, &quot;text&quot;: {&quot;type&quot;: &quot;plain_text&quot;, &quot;text&quot;: &quot;Hello world&quot;}}]`[https://docs.slack.dev/reference/block-kit/blocks](https://docs.slack.dev/reference/block-kit/blocks)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Slack.OpenApiClient.Models.FilesCompleteUploadExternalArgumentsAllOf1BlocksItem>? Blocks { get; set; }

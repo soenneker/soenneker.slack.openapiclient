@@ -39,7 +39,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public UntypedNode Rows { get; set; }
 #endif
         /// <summary>The type of block. For a table block, `type` is always `table`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.TableBlockType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.TableType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.TableBlock"/> and sets the default values.
         /// </summary>
@@ -68,7 +68,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "block_id", n => { BlockId = n.GetStringValue(); } },
                 { "column_settings", n => { ColumnSettings = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettings>(global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettings.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "rows", n => { Rows = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.TableBlockType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.TableType>(); } },
             };
         }
         /// <summary>
@@ -81,7 +81,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("block_id", BlockId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettings>("column_settings", ColumnSettings);
             writer.WriteObjectValue<UntypedNode>("rows", Rows);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.TableBlockType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.TableType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

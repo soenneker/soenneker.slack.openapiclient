@@ -55,7 +55,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepViewSubmitDisabled SubmitDisabled { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepViewType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepView"/> and sets the default values.
         /// </summary>
@@ -86,7 +86,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "external_id", n => { ExternalId = n.GetStringValue(); } },
                 { "private_metadata", n => { PrivateMetadata = n.GetStringValue(); } },
                 { "submit_disabled", n => { SubmitDisabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepViewSubmitDisabled>(global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepViewSubmitDisabled.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepViewType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepType>(); } },
             };
         }
         /// <summary>
@@ -101,7 +101,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("external_id", ExternalId);
             writer.WriteStringValue("private_metadata", PrivateMetadata);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepViewSubmitDisabled>("submit_disabled", SubmitDisabled);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepViewType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

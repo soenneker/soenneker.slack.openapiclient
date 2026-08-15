@@ -23,7 +23,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.RichTextColorStyle Style { get; set; }
 #endif
         /// <summary>The type of element. In this case `type` is always `color`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextColorType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ColorType? Type { get; set; }
         /// <summary>The hex value for the color.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -58,7 +58,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "style", n => { Style = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextColorStyle>(global::Soenneker.Slack.OpenApiClient.Models.RichTextColorStyle.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextColorType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ColorType>(); } },
                 { "value", n => { Value = n.GetStringValue(); } },
             };
         }
@@ -70,7 +70,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextColorStyle>("style", Style);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextColorType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ColorType>("type", Type);
             writer.WriteStringValue("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }

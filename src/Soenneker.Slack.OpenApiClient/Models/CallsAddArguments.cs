@@ -72,7 +72,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string Token { get; set; }
 #endif
-        /// <summary>&quot;The list of users to add/remove to/from the Call.[Using the Calls API: a note on Users](https://docs.slack.dev/apis/web-api/using-the-calls-api).&quot;</summary>
+        /// <summary>The list of users to add/remove to/from the Call.[Using the Calls API: a note on Users](https://docs.slack.dev/apis/web-api/using-the-calls-api).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Slack.OpenApiClient.Models.CallUser>? Users { get; set; }

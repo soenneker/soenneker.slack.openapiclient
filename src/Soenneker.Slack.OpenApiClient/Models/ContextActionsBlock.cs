@@ -31,7 +31,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public List<global::Soenneker.Slack.OpenApiClient.Models.ContextActionsBlockElement> Elements { get; set; }
 #endif
         /// <summary>The type of block. For a context actions block, `type` is always `context_actions`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.ContextActionsBlockType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ContextActionsType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ContextActionsBlock"/> and sets the default values.
         /// </summary>
@@ -59,7 +59,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "block_id", n => { BlockId = n.GetStringValue(); } },
                 { "elements", n => { Elements = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ContextActionsBlockElement>(global::Soenneker.Slack.OpenApiClient.Models.ContextActionsBlockElement.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ContextActionsBlockType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ContextActionsType>(); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("block_id", BlockId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ContextActionsBlockElement>("elements", Elements);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ContextActionsBlockType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ContextActionsType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

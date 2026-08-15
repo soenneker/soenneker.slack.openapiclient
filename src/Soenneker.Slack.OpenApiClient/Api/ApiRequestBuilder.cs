@@ -196,6 +196,7 @@ using Soenneker.Slack.OpenApiClient.Api.FilesSharedPublicURL;
 using Soenneker.Slack.OpenApiClient.Api.FunctionsCompleteError;
 using Soenneker.Slack.OpenApiClient.Api.FunctionsCompleteSuccess;
 using Soenneker.Slack.OpenApiClient.Api.MigrationExchange;
+using Soenneker.Slack.OpenApiClient.Api.OauthAccess;
 using Soenneker.Slack.OpenApiClient.Api.OauthV2Access;
 using Soenneker.Slack.OpenApiClient.Api.OauthV2Exchange;
 using Soenneker.Slack.OpenApiClient.Api.OpenidConnectToken;
@@ -228,6 +229,9 @@ using Soenneker.Slack.OpenApiClient.Api.SlackListsItemsInfo;
 using Soenneker.Slack.OpenApiClient.Api.SlackListsItemsList;
 using Soenneker.Slack.OpenApiClient.Api.SlackListsItemsUpdate;
 using Soenneker.Slack.OpenApiClient.Api.SlackListsUpdate;
+using Soenneker.Slack.OpenApiClient.Api.StarsAdd;
+using Soenneker.Slack.OpenApiClient.Api.StarsList;
+using Soenneker.Slack.OpenApiClient.Api.StarsRemove;
 using Soenneker.Slack.OpenApiClient.Api.TeamAccessLogs;
 using Soenneker.Slack.OpenApiClient.Api.TeamBillableInfo;
 using Soenneker.Slack.OpenApiClient.Api.TeamBillingInfo;
@@ -1247,6 +1251,11 @@ namespace Soenneker.Slack.OpenApiClient.Api
         {
             get => new global::Soenneker.Slack.OpenApiClient.Api.MigrationExchange.MigrationExchangeRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The oauthAccess property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.OauthAccess.OauthAccessRequestBuilder OauthAccess
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.OauthAccess.OauthAccessRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The oauthV2Access property</summary>
         public global::Soenneker.Slack.OpenApiClient.Api.OauthV2Access.OauthV2AccessRequestBuilder OauthV2Access
         {
@@ -1406,6 +1415,21 @@ namespace Soenneker.Slack.OpenApiClient.Api
         public global::Soenneker.Slack.OpenApiClient.Api.SlackListsUpdate.SlackListsUpdateRequestBuilder SlackListsUpdate
         {
             get => new global::Soenneker.Slack.OpenApiClient.Api.SlackListsUpdate.SlackListsUpdateRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The starsAdd property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.StarsAdd.StarsAddRequestBuilder StarsAdd
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.StarsAdd.StarsAddRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The starsList property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.StarsList.StarsListRequestBuilder StarsList
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.StarsList.StarsListRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The starsRemove property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.StarsRemove.StarsRemoveRequestBuilder StarsRemove
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.StarsRemove.StarsRemoveRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The teamAccessLogs property</summary>
         public global::Soenneker.Slack.OpenApiClient.Api.TeamAccessLogs.TeamAccessLogsRequestBuilder TeamAccessLogs

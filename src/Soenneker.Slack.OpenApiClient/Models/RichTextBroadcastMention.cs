@@ -25,7 +25,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.RichTextBroadcastMentionStyle Style { get; set; }
 #endif
         /// <summary>The type of element. In this case `type` is always `broadcast`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextBroadcastMentionType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.BroadcastType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.RichTextBroadcastMention"/> and sets the default values.
         /// </summary>
@@ -53,7 +53,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "range", n => { Range = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextBroadcastMentionRange>(); } },
                 { "style", n => { Style = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextBroadcastMentionStyle>(global::Soenneker.Slack.OpenApiClient.Models.RichTextBroadcastMentionStyle.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextBroadcastMentionType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.BroadcastType>(); } },
             };
         }
         /// <summary>
@@ -65,7 +65,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextBroadcastMentionRange>("range", Range);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextBroadcastMentionStyle>("style", Style);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextBroadcastMentionType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.BroadcastType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

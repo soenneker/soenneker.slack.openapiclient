@@ -31,7 +31,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string TeamId { get; set; }
 #endif
         /// <summary>The type of element. In this case `type` is always `team`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextTeamMentionType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.TeamType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.RichTextTeamMention"/> and sets the default values.
         /// </summary>
@@ -59,7 +59,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "style", n => { Style = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextTeamMentionStyle>(global::Soenneker.Slack.OpenApiClient.Models.RichTextTeamMentionStyle.CreateFromDiscriminatorValue); } },
                 { "team_id", n => { TeamId = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextTeamMentionType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.TeamType>(); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextTeamMentionStyle>("style", Style);
             writer.WriteStringValue("team_id", TeamId);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextTeamMentionType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.TeamType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

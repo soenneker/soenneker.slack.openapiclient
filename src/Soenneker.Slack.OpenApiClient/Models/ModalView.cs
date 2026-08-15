@@ -87,7 +87,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement Title { get; set; }
 #endif
         /// <summary>The type of view. Set to `modal` for modals.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.ModalViewType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ModalType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ModalView"/> and sets the default values.
         /// </summary>
@@ -122,7 +122,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "private_metadata", n => { PrivateMetadata = n.GetStringValue(); } },
                 { "submit", n => { Submit = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>(global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>(global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ModalViewType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ModalType>(); } },
             };
         }
         /// <summary>
@@ -141,7 +141,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("private_metadata", PrivateMetadata);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>("submit", Submit);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>("title", Title);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ModalViewType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ModalType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

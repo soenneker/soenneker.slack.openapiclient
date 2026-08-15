@@ -30,8 +30,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string ImageUrl { get; set; }
 #endif
-        /// <summary>The type of element. In this case `type` is always `image`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.SectionBlockAccessoryAnyOf18AllOf1Type? Type { get; set; }
+        /// <summary>The type of block. For an image block, `type` is always `image`.</summary>
+        public global::Soenneker.Slack.OpenApiClient.Models.ImageType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.SectionBlockAccessoryAnyOf18"/> and sets the default values.
         /// </summary>
@@ -59,7 +59,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "alt_text", n => { AltText = n.GetStringValue(); } },
                 { "image_url", n => { ImageUrl = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.SectionBlockAccessoryAnyOf18AllOf1Type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ImageType>(); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("alt_text", AltText);
             writer.WriteStringValue("image_url", ImageUrl);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.SectionBlockAccessoryAnyOf18AllOf1Type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ImageType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

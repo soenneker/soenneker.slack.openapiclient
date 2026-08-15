@@ -22,7 +22,6 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public FileElement3SentToSelfWrapper()
         {
             AdditionalData = new Dictionary<string, object>();
-            Value = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

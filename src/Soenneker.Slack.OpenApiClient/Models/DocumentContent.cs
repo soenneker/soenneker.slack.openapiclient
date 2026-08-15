@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
     /// <summary>
-    /// Structure describing the type and contents of the Canvas being created.
+    /// Structure describing the type and contents.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DocumentContent : IAdditionalDataHolder, IParsable
@@ -24,7 +24,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Markdown { get; set; }
 #endif
         /// <summary>The type of content used to describe Canvas content. Always is `markdown`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.DocumentContentType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.MarkdownType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.DocumentContent"/> and sets the default values.
         /// </summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "markdown", n => { Markdown = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.DocumentContentType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.MarkdownType>(); } },
             };
         }
         /// <summary>
@@ -62,7 +62,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("markdown", Markdown);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.DocumentContentType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.MarkdownType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

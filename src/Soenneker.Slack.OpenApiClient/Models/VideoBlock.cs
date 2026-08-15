@@ -87,7 +87,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string TitleUrl { get; set; }
 #endif
         /// <summary>The type of block. For a video block, `type` is always `video`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.VideoBlockType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.VideoType? Type { get; set; }
         /// <summary>The URL to be embedded. Must match any existing[unfurl domains](https://docs.slack.dev/messaging/unfurling-links-in-messages) within the appand point to a HTTPS URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -130,7 +130,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "thumbnail_url", n => { ThumbnailUrl = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>(global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement.CreateFromDiscriminatorValue); } },
                 { "title_url", n => { TitleUrl = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.VideoBlockType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.VideoType>(); } },
                 { "video_url", n => { VideoUrl = n.GetStringValue(); } },
             };
         }
@@ -150,7 +150,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("thumbnail_url", ThumbnailUrl);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>("title", Title);
             writer.WriteStringValue("title_url", TitleUrl);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.VideoBlockType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.VideoType>("type", Type);
             writer.WriteStringValue("video_url", VideoUrl);
             writer.WriteAdditionalData(AdditionalData);
         }

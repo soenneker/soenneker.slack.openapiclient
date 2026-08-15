@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
-    /// <summary>&quot;The type of action be taken: `upgrade` or `downgrade`.&quot;</summary>
+    /// <summary>The type of action be taken: `upgrade` or `downgrade`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ConversationsExternalInvitePermissionsSetArgumentsAction
     {

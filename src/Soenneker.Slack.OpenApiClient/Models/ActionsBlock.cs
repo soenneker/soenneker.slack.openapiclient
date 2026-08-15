@@ -31,7 +31,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public List<global::Soenneker.Slack.OpenApiClient.Models.ActionsBlockElement> Elements { get; set; }
 #endif
         /// <summary>The type of block. For an actions block, `type` is always `actions`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.ActionsBlockType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ActionsType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ActionsBlock"/> and sets the default values.
         /// </summary>
@@ -59,7 +59,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "block_id", n => { BlockId = n.GetStringValue(); } },
                 { "elements", n => { Elements = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ActionsBlockElement>(global::Soenneker.Slack.OpenApiClient.Models.ActionsBlockElement.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ActionsBlockType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ActionsType>(); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("block_id", BlockId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ActionsBlockElement>("elements", Elements);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ActionsBlockType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ActionsType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

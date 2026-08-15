@@ -57,7 +57,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Title { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.TaskUpdateChunkType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.TaskUpdateType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.TaskUpdateChunk"/> and sets the default values.
         /// </summary>
@@ -89,7 +89,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "sources", n => { Sources = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.UrlSourceElement>(global::Soenneker.Slack.OpenApiClient.Models.UrlSourceElement.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.TaskUpdateChunkStatus>(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.TaskUpdateChunkType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.TaskUpdateType>(); } },
             };
         }
         /// <summary>
@@ -105,7 +105,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.UrlSourceElement>("sources", Sources);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.TaskUpdateChunkStatus>("status", Status);
             writer.WriteStringValue("title", Title);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.TaskUpdateChunkType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.TaskUpdateType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

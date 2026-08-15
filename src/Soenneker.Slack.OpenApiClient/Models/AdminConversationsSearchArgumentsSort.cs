@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
-    /// <summary>&quot;Possible values are:- `relevant`: search ranking based on what we think is closest,- `name`: alphabetical,- `member_count`: number of users in the channel,- `created`: date channel was created.Defaults to `member_count`.You can optionally pair this with the `sort_dir` argument to change how it is sorted.&quot;</summary>
+    /// <summary>Possible values are:- `relevant`: search ranking based on what we think is closest,- `name`: alphabetical,- `member_count`: number of users in the channel,- `created`: date channel was created.Defaults to `member_count`.You can optionally pair this with the `sort_dir` argument to change how it is sorted.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum AdminConversationsSearchArgumentsSort
     {

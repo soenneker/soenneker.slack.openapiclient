@@ -30,8 +30,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string Text { get; set; }
 #endif
-        /// <summary>The type of block. For a markdown block, `type` is always `markdown`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.MarkdownBlockType? Type { get; set; }
+        /// <summary>The type of content used to describe Canvas content. Always is `markdown`.</summary>
+        public global::Soenneker.Slack.OpenApiClient.Models.MarkdownType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.MarkdownBlock"/> and sets the default values.
         /// </summary>
@@ -59,7 +59,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "block_id", n => { BlockId = n.GetStringValue(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.MarkdownBlockType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.MarkdownType>(); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("block_id", BlockId);
             writer.WriteStringValue("text", Text);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.MarkdownBlockType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.MarkdownType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -48,7 +48,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public List<global::Soenneker.Slack.OpenApiClient.Models.ChannelType?> SearchChannelTypes { get; set; }
 #endif
-        /// <summary>&quot;Possible values are:- `relevant`: search ranking based on what we think is closest,- `name`: alphabetical,- `member_count`: number of users in the channel,- `created`: date channel was created.Defaults to `member_count`.You can optionally pair this with the `sort_dir` argument to change how it is sorted.&quot;</summary>
+        /// <summary>Possible values are:- `relevant`: search ranking based on what we think is closest,- `name`: alphabetical,- `member_count`: number of users in the channel,- `created`: date channel was created.Defaults to `member_count`.You can optionally pair this with the `sort_dir` argument to change how it is sorted.</summary>
         public global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSearchArgumentsSort? Sort { get; set; }
         /// <summary>Change sort direction to ascending (`asc`) or descending (`desc`). Defaults to `desc`.</summary>
         public global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSearchArgumentsSortDir? SortDir { get; set; }
