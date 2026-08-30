@@ -63155,10 +63155,22 @@
             "$ref": "#/components/schemas/File6SharesProperty"
           },
           "channels": {
-            "$ref": "#/components/schemas/File6Channels"
+            "type": [
+              "null",
+              "array"
+            ],
+            "items": {
+              "type": "string"
+            }
           },
           "groups": {
-            "$ref": "#/components/schemas/File6Groups"
+            "type": [
+              "null",
+              "array"
+            ],
+            "items": {
+              "type": "string"
+            }
           },
           "users": {
             "type": "array",
@@ -91079,34 +91091,6 @@
           },
           {
             "$ref": "#/components/schemas/File6HasRichPreviewWrapper2"
-          }
-        ]
-      },
-      "File6Channels": {
-        "type": "object",
-        "anyOf": [
-          {
-            "type": "null"
-          },
-          {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          }
-        ]
-      },
-      "File6Groups": {
-        "type": "object",
-        "anyOf": [
-          {
-            "type": "null"
-          },
-          {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           }
         ]
       },
