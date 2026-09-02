@@ -33,10 +33,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The list_metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsCreateResponseAllOf2ListMetadata? ListMetadata { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ListMetadata10? ListMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsCreateResponseAllOf2ListMetadata ListMetadata { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ListMetadata10 ListMetadata { get; set; }
 #endif
         /// <summary>The needed property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,6 +63,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata ResponseMetadata { get; set; }
+#endif
+        /// <summary>The warning property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Warning { get; set; }
+#nullable restore
+#else
+        public string Warning { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsCreateResponse"/> and sets the default values.
@@ -91,11 +99,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "error", n => { Error = n.GetStringValue(); } },
                 { "list_id", n => { ListId = n.GetStringValue(); } },
-                { "list_metadata", n => { ListMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackListsCreateResponseAllOf2ListMetadata>(global::Soenneker.Slack.OpenApiClient.Models.SlackListsCreateResponseAllOf2ListMetadata.CreateFromDiscriminatorValue); } },
+                { "list_metadata", n => { ListMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata10>(global::Soenneker.Slack.OpenApiClient.Models.ListMetadata10.CreateFromDiscriminatorValue); } },
                 { "needed", n => { Needed = n.GetStringValue(); } },
                 { "ok", n => { Ok = n.GetBoolValue(); } },
                 { "provided", n => { Provided = n.GetStringValue(); } },
                 { "response_metadata", n => { ResponseMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>(global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata.CreateFromDiscriminatorValue); } },
+                { "warning", n => { Warning = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -107,11 +116,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("error", Error);
             writer.WriteStringValue("list_id", ListId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackListsCreateResponseAllOf2ListMetadata>("list_metadata", ListMetadata);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata10>("list_metadata", ListMetadata);
             writer.WriteStringValue("needed", Needed);
             writer.WriteBoolValue("ok", Ok);
             writer.WriteStringValue("provided", Provided);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>("response_metadata", ResponseMetadata);
+            writer.WriteStringValue("warning", Warning);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

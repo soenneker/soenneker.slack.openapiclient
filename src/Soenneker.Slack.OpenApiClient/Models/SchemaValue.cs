@@ -49,10 +49,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Options? Options { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ListSchemaOptions? Options { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Options Options { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ListSchemaOptions Options { get; set; }
 #endif
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -91,7 +91,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "is_primary_column", n => { IsPrimaryColumn = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SchemaValueIsPrimaryColumn>(global::Soenneker.Slack.OpenApiClient.Models.SchemaValueIsPrimaryColumn.CreateFromDiscriminatorValue); } },
                 { "key", n => { Key = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "options", n => { Options = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Options>(global::Soenneker.Slack.OpenApiClient.Models.Options.CreateFromDiscriminatorValue); } },
+                { "options", n => { Options = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListSchemaOptions>(global::Soenneker.Slack.OpenApiClient.Models.ListSchemaOptions.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
         }
@@ -106,7 +106,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SchemaValueIsPrimaryColumn>("is_primary_column", IsPrimaryColumn);
             writer.WriteStringValue("key", Key);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Options>("options", Options);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListSchemaOptions>("options", Options);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

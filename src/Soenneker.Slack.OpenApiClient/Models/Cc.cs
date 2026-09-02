@@ -38,6 +38,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string Original { get; set; }
 #endif
+        /// <summary>The slack_user_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SlackUserId { get; set; }
+#nullable restore
+#else
+        public string SlackUserId { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Cc"/> and sets the default values.
         /// </summary>
@@ -66,6 +74,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "address", n => { Address = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "original", n => { Original = n.GetStringValue(); } },
+                { "slack_user_id", n => { SlackUserId = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -78,6 +87,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("address", Address);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("original", Original);
+            writer.WriteStringValue("slack_user_id", SlackUserId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

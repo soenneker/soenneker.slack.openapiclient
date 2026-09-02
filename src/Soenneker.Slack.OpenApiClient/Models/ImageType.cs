@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
-    /// <summary>The type of block. For an image block, `type` is always `image`.</summary>
+    /// <summary>The type of element. In this case `type` is always `image`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ImageType
     {

@@ -14,16 +14,48 @@ namespace Soenneker.Slack.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The error property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Error { get; set; }
+#nullable restore
+#else
+        public string Error { get; set; }
+#endif
         /// <summary>The featured_workflows property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.WorkflowsFeaturedListResponseAllOf2FeaturedWorkflowsItem>? FeaturedWorkflows { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.FeaturedWorkflow>? FeaturedWorkflows { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.WorkflowsFeaturedListResponseAllOf2FeaturedWorkflowsItem> FeaturedWorkflows { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.FeaturedWorkflow> FeaturedWorkflows { get; set; }
+#endif
+        /// <summary>The invalid_channel_ids property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? InvalidChannelIds { get; set; }
+#nullable restore
+#else
+        public List<string> InvalidChannelIds { get; set; }
+#endif
+        /// <summary>The needed property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Needed { get; set; }
+#nullable restore
+#else
+        public string Needed { get; set; }
 #endif
         /// <summary>The ok property</summary>
         public bool? Ok { get; set; }
+        /// <summary>The provided property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Provided { get; set; }
+#nullable restore
+#else
+        public string Provided { get; set; }
+#endif
         /// <summary>The response_metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -31,6 +63,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata ResponseMetadata { get; set; }
+#endif
+        /// <summary>The warning property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Warning { get; set; }
+#nullable restore
+#else
+        public string Warning { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.WorkflowsFeaturedListResponse"/> and sets the default values.
@@ -57,9 +97,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "featured_workflows", n => { FeaturedWorkflows = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.WorkflowsFeaturedListResponseAllOf2FeaturedWorkflowsItem>(global::Soenneker.Slack.OpenApiClient.Models.WorkflowsFeaturedListResponseAllOf2FeaturedWorkflowsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "error", n => { Error = n.GetStringValue(); } },
+                { "featured_workflows", n => { FeaturedWorkflows = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.FeaturedWorkflow>(global::Soenneker.Slack.OpenApiClient.Models.FeaturedWorkflow.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "invalid_channel_ids", n => { InvalidChannelIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "needed", n => { Needed = n.GetStringValue(); } },
                 { "ok", n => { Ok = n.GetBoolValue(); } },
+                { "provided", n => { Provided = n.GetStringValue(); } },
                 { "response_metadata", n => { ResponseMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>(global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata.CreateFromDiscriminatorValue); } },
+                { "warning", n => { Warning = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -69,9 +114,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.WorkflowsFeaturedListResponseAllOf2FeaturedWorkflowsItem>("featured_workflows", FeaturedWorkflows);
+            writer.WriteStringValue("error", Error);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.FeaturedWorkflow>("featured_workflows", FeaturedWorkflows);
+            writer.WriteCollectionOfPrimitiveValues<string>("invalid_channel_ids", InvalidChannelIds);
+            writer.WriteStringValue("needed", Needed);
             writer.WriteBoolValue("ok", Ok);
+            writer.WriteStringValue("provided", Provided);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>("response_metadata", ResponseMetadata);
+            writer.WriteStringValue("warning", Warning);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

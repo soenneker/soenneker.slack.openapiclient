@@ -64,6 +64,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #endif
         /// <summary>The updated property</summary>
         public double? Updated { get; set; }
+        /// <summary>The user_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UserId { get; set; }
+#nullable restore
+#else
+        public string UserId { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.BotProfile"/> and sets the default values.
         /// </summary>
@@ -96,6 +104,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "team_id", n => { TeamId = n.GetStringValue(); } },
                 { "updated", n => { Updated = n.GetDoubleValue(); } },
+                { "user_id", n => { UserId = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -112,6 +121,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("team_id", TeamId);
             writer.WriteDoubleValue("updated", Updated);
+            writer.WriteStringValue("user_id", UserId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

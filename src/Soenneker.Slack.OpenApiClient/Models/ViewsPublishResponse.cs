@@ -51,10 +51,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The view property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.View3? View { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.View7? View { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.View3 View { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.View7 View { get; set; }
 #endif
         /// <summary>The warning property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -94,7 +94,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "ok", n => { Ok = n.GetBoolValue(); } },
                 { "provided", n => { Provided = n.GetStringValue(); } },
                 { "response_metadata", n => { ResponseMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>(global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata.CreateFromDiscriminatorValue); } },
-                { "view", n => { View = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View3>(global::Soenneker.Slack.OpenApiClient.Models.View3.CreateFromDiscriminatorValue); } },
+                { "view", n => { View = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View7>(global::Soenneker.Slack.OpenApiClient.Models.View7.CreateFromDiscriminatorValue); } },
                 { "warning", n => { Warning = n.GetStringValue(); } },
             };
         }
@@ -110,7 +110,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteBoolValue("ok", Ok);
             writer.WriteStringValue("provided", Provided);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>("response_metadata", ResponseMetadata);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View3>("view", View);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View7>("view", View);
             writer.WriteStringValue("warning", Warning);
             writer.WriteAdditionalData(AdditionalData);
         }

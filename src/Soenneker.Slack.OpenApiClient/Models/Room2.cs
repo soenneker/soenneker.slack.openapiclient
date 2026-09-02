@@ -25,10 +25,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The attached_file_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Room2AttachedFileIdsItem>? AttachedFileIds { get; set; }
+        public List<string>? AttachedFileIds { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Room2AttachedFileIdsItem> AttachedFileIds { get; set; }
+        public List<string> AttachedFileIds { get; set; }
 #endif
         /// <summary>The background_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -65,10 +65,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The channels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Room2ChannelsItem>? Channels { get; set; }
+        public List<string>? Channels { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Room2ChannelsItem> Channels { get; set; }
+        public List<string> Channels { get; set; }
 #endif
         /// <summary>The created_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -146,6 +146,22 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.Room2IsScheduled IsScheduled { get; set; }
 #endif
+        /// <summary>The knocks property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.Room2Knocks? Knocks { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.Room2Knocks Knocks { get; set; }
+#endif
+        /// <summary>The last_invite_status_by_user property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.Room2LastInviteStatusByUser? LastInviteStatusByUser { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.Room2LastInviteStatusByUser LastInviteStatusByUser { get; set; }
+#endif
         /// <summary>The media_backend_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -173,50 +189,58 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The participant_history property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Room2ParticipantHistoryItem>? ParticipantHistory { get; set; }
+        public List<string>? ParticipantHistory { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Room2ParticipantHistoryItem> ParticipantHistory { get; set; }
+        public List<string> ParticipantHistory { get; set; }
 #endif
         /// <summary>The participants property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Room2ParticipantsItem>? Participants { get; set; }
+        public List<string>? Participants { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Room2ParticipantsItem> Participants { get; set; }
+        public List<string> Participants { get; set; }
 #endif
         /// <summary>The participants_camera_off property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Room2ParticipantsCameraOffItem>? ParticipantsCameraOff { get; set; }
+        public List<string>? ParticipantsCameraOff { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Room2ParticipantsCameraOffItem> ParticipantsCameraOff { get; set; }
+        public List<string> ParticipantsCameraOff { get; set; }
 #endif
         /// <summary>The participants_camera_on property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Room2ParticipantsCameraOnItem>? ParticipantsCameraOn { get; set; }
+        public List<string>? ParticipantsCameraOn { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Room2ParticipantsCameraOnItem> ParticipantsCameraOn { get; set; }
+        public List<string> ParticipantsCameraOn { get; set; }
 #endif
         /// <summary>The participants_screenshare_off property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Room2ParticipantsScreenshareOffItem>? ParticipantsScreenshareOff { get; set; }
+        public List<string>? ParticipantsScreenshareOff { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Room2ParticipantsScreenshareOffItem> ParticipantsScreenshareOff { get; set; }
+        public List<string> ParticipantsScreenshareOff { get; set; }
 #endif
         /// <summary>The participants_screenshare_on property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Room2ParticipantsScreenshareOnItem>? ParticipantsScreenshareOn { get; set; }
+        public List<string>? ParticipantsScreenshareOn { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Room2ParticipantsScreenshareOnItem> ParticipantsScreenshareOn { get; set; }
+        public List<string> ParticipantsScreenshareOn { get; set; }
+#endif
+        /// <summary>The pending_invitees property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.Room2PendingInvitees? PendingInvitees { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.Room2PendingInvitees PendingInvitees { get; set; }
 #endif
         /// <summary>The recording property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -284,12 +308,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "app_id", n => { AppId = n.GetStringValue(); } },
-                { "attached_file_ids", n => { AttachedFileIds = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Room2AttachedFileIdsItem>(global::Soenneker.Slack.OpenApiClient.Models.Room2AttachedFileIdsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "attached_file_ids", n => { AttachedFileIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "background_id", n => { BackgroundId = n.GetStringValue(); } },
                 { "call_family", n => { CallFamily = n.GetStringValue(); } },
                 { "canvas_background", n => { CanvasBackground = n.GetStringValue(); } },
                 { "canvas_thread_ts", n => { CanvasThreadTs = n.GetStringValue(); } },
-                { "channels", n => { Channels = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Room2ChannelsItem>(global::Soenneker.Slack.OpenApiClient.Models.Room2ChannelsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "channels", n => { Channels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "created_by", n => { CreatedBy = n.GetStringValue(); } },
                 { "date_end", n => { DateEnd = n.GetDoubleValue(); } },
                 { "date_start", n => { DateStart = n.GetDoubleValue(); } },
@@ -301,15 +325,18 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "is_dm_call", n => { IsDmCall = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Room2IsDmCall>(global::Soenneker.Slack.OpenApiClient.Models.Room2IsDmCall.CreateFromDiscriminatorValue); } },
                 { "is_prewarmed", n => { IsPrewarmed = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Room2IsPrewarmed>(global::Soenneker.Slack.OpenApiClient.Models.Room2IsPrewarmed.CreateFromDiscriminatorValue); } },
                 { "is_scheduled", n => { IsScheduled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Room2IsScheduled>(global::Soenneker.Slack.OpenApiClient.Models.Room2IsScheduled.CreateFromDiscriminatorValue); } },
+                { "knocks", n => { Knocks = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Room2Knocks>(global::Soenneker.Slack.OpenApiClient.Models.Room2Knocks.CreateFromDiscriminatorValue); } },
+                { "last_invite_status_by_user", n => { LastInviteStatusByUser = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Room2LastInviteStatusByUser>(global::Soenneker.Slack.OpenApiClient.Models.Room2LastInviteStatusByUser.CreateFromDiscriminatorValue); } },
                 { "media_backend_type", n => { MediaBackendType = n.GetStringValue(); } },
                 { "media_server", n => { MediaServer = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "participant_history", n => { ParticipantHistory = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Room2ParticipantHistoryItem>(global::Soenneker.Slack.OpenApiClient.Models.Room2ParticipantHistoryItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "participants", n => { Participants = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Room2ParticipantsItem>(global::Soenneker.Slack.OpenApiClient.Models.Room2ParticipantsItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "participants_camera_off", n => { ParticipantsCameraOff = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Room2ParticipantsCameraOffItem>(global::Soenneker.Slack.OpenApiClient.Models.Room2ParticipantsCameraOffItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "participants_camera_on", n => { ParticipantsCameraOn = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Room2ParticipantsCameraOnItem>(global::Soenneker.Slack.OpenApiClient.Models.Room2ParticipantsCameraOnItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "participants_screenshare_off", n => { ParticipantsScreenshareOff = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Room2ParticipantsScreenshareOffItem>(global::Soenneker.Slack.OpenApiClient.Models.Room2ParticipantsScreenshareOffItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "participants_screenshare_on", n => { ParticipantsScreenshareOn = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Room2ParticipantsScreenshareOnItem>(global::Soenneker.Slack.OpenApiClient.Models.Room2ParticipantsScreenshareOnItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "participant_history", n => { ParticipantHistory = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "participants", n => { Participants = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "participants_camera_off", n => { ParticipantsCameraOff = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "participants_camera_on", n => { ParticipantsCameraOn = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "participants_screenshare_off", n => { ParticipantsScreenshareOff = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "participants_screenshare_on", n => { ParticipantsScreenshareOn = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "pending_invitees", n => { PendingInvitees = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Room2PendingInvitees>(global::Soenneker.Slack.OpenApiClient.Models.Room2PendingInvitees.CreateFromDiscriminatorValue); } },
                 { "recording", n => { Recording = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Recording>(global::Soenneker.Slack.OpenApiClient.Models.Recording.CreateFromDiscriminatorValue); } },
                 { "thread_root_ts", n => { ThreadRootTs = n.GetStringValue(); } },
                 { "was_accepted", n => { WasAccepted = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Room2WasAccepted>(global::Soenneker.Slack.OpenApiClient.Models.Room2WasAccepted.CreateFromDiscriminatorValue); } },
@@ -325,12 +352,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("app_id", AppId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Room2AttachedFileIdsItem>("attached_file_ids", AttachedFileIds);
+            writer.WriteCollectionOfPrimitiveValues<string>("attached_file_ids", AttachedFileIds);
             writer.WriteStringValue("background_id", BackgroundId);
             writer.WriteStringValue("call_family", CallFamily);
             writer.WriteStringValue("canvas_background", CanvasBackground);
             writer.WriteStringValue("canvas_thread_ts", CanvasThreadTs);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Room2ChannelsItem>("channels", Channels);
+            writer.WriteCollectionOfPrimitiveValues<string>("channels", Channels);
             writer.WriteStringValue("created_by", CreatedBy);
             writer.WriteDoubleValue("date_end", DateEnd);
             writer.WriteDoubleValue("date_start", DateStart);
@@ -342,15 +369,18 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Room2IsDmCall>("is_dm_call", IsDmCall);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Room2IsPrewarmed>("is_prewarmed", IsPrewarmed);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Room2IsScheduled>("is_scheduled", IsScheduled);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Room2Knocks>("knocks", Knocks);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Room2LastInviteStatusByUser>("last_invite_status_by_user", LastInviteStatusByUser);
             writer.WriteStringValue("media_backend_type", MediaBackendType);
             writer.WriteStringValue("media_server", MediaServer);
             writer.WriteStringValue("name", Name);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Room2ParticipantHistoryItem>("participant_history", ParticipantHistory);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Room2ParticipantsItem>("participants", Participants);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Room2ParticipantsCameraOffItem>("participants_camera_off", ParticipantsCameraOff);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Room2ParticipantsCameraOnItem>("participants_camera_on", ParticipantsCameraOn);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Room2ParticipantsScreenshareOffItem>("participants_screenshare_off", ParticipantsScreenshareOff);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Room2ParticipantsScreenshareOnItem>("participants_screenshare_on", ParticipantsScreenshareOn);
+            writer.WriteCollectionOfPrimitiveValues<string>("participant_history", ParticipantHistory);
+            writer.WriteCollectionOfPrimitiveValues<string>("participants", Participants);
+            writer.WriteCollectionOfPrimitiveValues<string>("participants_camera_off", ParticipantsCameraOff);
+            writer.WriteCollectionOfPrimitiveValues<string>("participants_camera_on", ParticipantsCameraOn);
+            writer.WriteCollectionOfPrimitiveValues<string>("participants_screenshare_off", ParticipantsScreenshareOff);
+            writer.WriteCollectionOfPrimitiveValues<string>("participants_screenshare_on", ParticipantsScreenshareOn);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Room2PendingInvitees>("pending_invitees", PendingInvitees);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Recording>("recording", Recording);
             writer.WriteStringValue("thread_root_ts", ThreadRootTs);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Room2WasAccepted>("was_accepted", WasAccepted);

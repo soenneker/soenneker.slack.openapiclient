@@ -276,6 +276,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public List<string> PreviousNames { get; set; }
 #endif
+        /// <summary>The properties property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.Properties3? Properties { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.Properties3 Properties { get; set; }
+#endif
         /// <summary>The purpose property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -364,6 +372,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "pending_connected_team_ids", n => { PendingConnectedTeamIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "pending_shared", n => { PendingShared = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "previous_names", n => { PreviousNames = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Properties3>(global::Soenneker.Slack.OpenApiClient.Models.Properties3.CreateFromDiscriminatorValue); } },
                 { "purpose", n => { Purpose = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Purpose>(global::Soenneker.Slack.OpenApiClient.Models.Purpose.CreateFromDiscriminatorValue); } },
                 { "shared_team_ids", n => { SharedTeamIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "topic", n => { Topic = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Purpose>(global::Soenneker.Slack.OpenApiClient.Models.Purpose.CreateFromDiscriminatorValue); } },
@@ -413,6 +422,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("pending_connected_team_ids", PendingConnectedTeamIds);
             writer.WriteCollectionOfPrimitiveValues<string>("pending_shared", PendingShared);
             writer.WriteCollectionOfPrimitiveValues<string>("previous_names", PreviousNames);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Properties3>("properties", Properties);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Purpose>("purpose", Purpose);
             writer.WriteCollectionOfPrimitiveValues<string>("shared_team_ids", SharedTeamIds);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Purpose>("topic", Topic);

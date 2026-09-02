@@ -25,10 +25,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The list property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.SlackList? List { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.List7? List { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.SlackList List { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.List7 List { get; set; }
 #endif
         /// <summary>The needed property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -51,10 +51,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The record property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemWithSubscription? Record { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Record9? Record { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemWithSubscription Record { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Record9 Record { get; set; }
 #endif
         /// <summary>The response_metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -67,10 +67,18 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The subtasks property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.SlackListsItem>? Subtasks { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Subtask>? Subtasks { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.SlackListsItem> Subtasks { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Subtask> Subtasks { get; set; }
+#endif
+        /// <summary>The warning property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Warning { get; set; }
+#nullable restore
+#else
+        public string Warning { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemsInfoResponse"/> and sets the default values.
@@ -98,13 +106,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "error", n => { Error = n.GetStringValue(); } },
-                { "list", n => { List = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackList>(global::Soenneker.Slack.OpenApiClient.Models.SlackList.CreateFromDiscriminatorValue); } },
+                { "list", n => { List = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.List7>(global::Soenneker.Slack.OpenApiClient.Models.List7.CreateFromDiscriminatorValue); } },
                 { "needed", n => { Needed = n.GetStringValue(); } },
                 { "ok", n => { Ok = n.GetBoolValue(); } },
                 { "provided", n => { Provided = n.GetStringValue(); } },
-                { "record", n => { Record = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemWithSubscription>(global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemWithSubscription.CreateFromDiscriminatorValue); } },
+                { "record", n => { Record = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Record9>(global::Soenneker.Slack.OpenApiClient.Models.Record9.CreateFromDiscriminatorValue); } },
                 { "response_metadata", n => { ResponseMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>(global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata.CreateFromDiscriminatorValue); } },
-                { "subtasks", n => { Subtasks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SlackListsItem>(global::Soenneker.Slack.OpenApiClient.Models.SlackListsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "subtasks", n => { Subtasks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Subtask>(global::Soenneker.Slack.OpenApiClient.Models.Subtask.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "warning", n => { Warning = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -115,13 +124,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("error", Error);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackList>("list", List);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.List7>("list", List);
             writer.WriteStringValue("needed", Needed);
             writer.WriteBoolValue("ok", Ok);
             writer.WriteStringValue("provided", Provided);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemWithSubscription>("record", Record);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Record9>("record", Record);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>("response_metadata", ResponseMetadata);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SlackListsItem>("subtasks", Subtasks);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Subtask>("subtasks", Subtasks);
+            writer.WriteStringValue("warning", Warning);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

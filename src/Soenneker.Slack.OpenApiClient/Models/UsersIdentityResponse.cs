@@ -59,10 +59,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.User7? User { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.User8? User { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.User7 User { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.User8 User { get; set; }
 #endif
         /// <summary>The warning property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -103,7 +103,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "provided", n => { Provided = n.GetStringValue(); } },
                 { "response_metadata", n => { ResponseMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>(global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata.CreateFromDiscriminatorValue); } },
                 { "team", n => { Team = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Team8>(global::Soenneker.Slack.OpenApiClient.Models.Team8.CreateFromDiscriminatorValue); } },
-                { "user", n => { User = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User7>(global::Soenneker.Slack.OpenApiClient.Models.User7.CreateFromDiscriminatorValue); } },
+                { "user", n => { User = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8>(global::Soenneker.Slack.OpenApiClient.Models.User8.CreateFromDiscriminatorValue); } },
                 { "warning", n => { Warning = n.GetStringValue(); } },
             };
         }
@@ -120,7 +120,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("provided", Provided);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>("response_metadata", ResponseMetadata);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Team8>("team", Team);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User7>("user", User);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8>("user", User);
             writer.WriteStringValue("warning", Warning);
             writer.WriteAdditionalData(AdditionalData);
         }

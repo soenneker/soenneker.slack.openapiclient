@@ -68,6 +68,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #endif
         /// <summary>The snooze_remaining property</summary>
         public double? SnoozeRemaining { get; set; }
+        /// <summary>The warning property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Warning { get; set; }
+#nullable restore
+#else
+        public string Warning { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.DndSetSnoozeResponse"/> and sets the default values.
         /// </summary>
@@ -102,6 +110,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "snooze_endtime", n => { SnoozeEndtime = n.GetDoubleValue(); } },
                 { "snooze_is_indefinite", n => { SnoozeIsIndefinite = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DndSetSnoozeResponseAllOf2SnoozeIsIndefinite>(global::Soenneker.Slack.OpenApiClient.Models.DndSetSnoozeResponseAllOf2SnoozeIsIndefinite.CreateFromDiscriminatorValue); } },
                 { "snooze_remaining", n => { SnoozeRemaining = n.GetDoubleValue(); } },
+                { "warning", n => { Warning = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -120,6 +129,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("snooze_endtime", SnoozeEndtime);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DndSetSnoozeResponseAllOf2SnoozeIsIndefinite>("snooze_is_indefinite", SnoozeIsIndefinite);
             writer.WriteDoubleValue("snooze_remaining", SnoozeRemaining);
+            writer.WriteStringValue("warning", Warning);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

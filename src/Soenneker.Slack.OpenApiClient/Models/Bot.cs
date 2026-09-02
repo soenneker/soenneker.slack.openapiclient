@@ -46,6 +46,30 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
+        /// <summary>The is_connector_bot property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.BotIsConnectorBot? IsConnectorBot { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.BotIsConnectorBot IsConnectorBot { get; set; }
+#endif
+        /// <summary>The is_legacy_workflow_bot property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.BotIsLegacyWorkflowBot? IsLegacyWorkflowBot { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.BotIsLegacyWorkflowBot IsLegacyWorkflowBot { get; set; }
+#endif
+        /// <summary>The is_workflow_bot property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.BotIsWorkflowBot? IsWorkflowBot { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.BotIsWorkflowBot IsWorkflowBot { get; set; }
+#endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -93,6 +117,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "deleted", n => { Deleted = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotDeleted>(global::Soenneker.Slack.OpenApiClient.Models.BotDeleted.CreateFromDiscriminatorValue); } },
                 { "icons", n => { Icons = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Icons2>(global::Soenneker.Slack.OpenApiClient.Models.Icons2.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
+                { "is_connector_bot", n => { IsConnectorBot = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotIsConnectorBot>(global::Soenneker.Slack.OpenApiClient.Models.BotIsConnectorBot.CreateFromDiscriminatorValue); } },
+                { "is_legacy_workflow_bot", n => { IsLegacyWorkflowBot = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotIsLegacyWorkflowBot>(global::Soenneker.Slack.OpenApiClient.Models.BotIsLegacyWorkflowBot.CreateFromDiscriminatorValue); } },
+                { "is_workflow_bot", n => { IsWorkflowBot = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotIsWorkflowBot>(global::Soenneker.Slack.OpenApiClient.Models.BotIsWorkflowBot.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "updated", n => { Updated = n.GetDoubleValue(); } },
                 { "user_id", n => { UserId = n.GetStringValue(); } },
@@ -109,6 +136,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotDeleted>("deleted", Deleted);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Icons2>("icons", Icons);
             writer.WriteStringValue("id", Id);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotIsConnectorBot>("is_connector_bot", IsConnectorBot);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotIsLegacyWorkflowBot>("is_legacy_workflow_bot", IsLegacyWorkflowBot);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotIsWorkflowBot>("is_workflow_bot", IsWorkflowBot);
             writer.WriteStringValue("name", Name);
             writer.WriteDoubleValue("updated", Updated);
             writer.WriteStringValue("user_id", UserId);

@@ -49,10 +49,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The bot_profile property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.BotProfile2? BotProfile { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.BotProfile3? BotProfile { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.BotProfile2 BotProfile { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.BotProfile3 BotProfile { get; set; }
 #endif
         /// <summary>The client_msg_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -139,7 +139,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "assistant_app_thread", n => { AssistantAppThread = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThread3>(global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThread3.CreateFromDiscriminatorValue); } },
                 { "blocks", n => { Blocks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3>(global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "bot_id", n => { BotId = n.GetStringValue(); } },
-                { "bot_profile", n => { BotProfile = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotProfile2>(global::Soenneker.Slack.OpenApiClient.Models.BotProfile2.CreateFromDiscriminatorValue); } },
+                { "bot_profile", n => { BotProfile = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotProfile3>(global::Soenneker.Slack.OpenApiClient.Models.BotProfile3.CreateFromDiscriminatorValue); } },
                 { "client_msg_id", n => { ClientMsgId = n.GetStringValue(); } },
                 { "subtype", n => { Subtype = n.GetStringValue(); } },
                 { "team", n => { Team = n.GetStringValue(); } },
@@ -160,7 +160,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThread3>("assistant_app_thread", AssistantAppThread);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3>("blocks", Blocks);
             writer.WriteStringValue("bot_id", BotId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotProfile2>("bot_profile", BotProfile);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotProfile3>("bot_profile", BotProfile);
             writer.WriteStringValue("client_msg_id", ClientMsgId);
             writer.WriteStringValue("subtype", Subtype);
             writer.WriteStringValue("team", Team);

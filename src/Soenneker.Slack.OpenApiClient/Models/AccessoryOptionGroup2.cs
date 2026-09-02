@@ -17,10 +17,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The label property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Description? Label { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Text2? Label { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Description Label { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Text2 Label { get; set; }
 #endif
         /// <summary>The options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "label", n => { Label = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Description>(global::Soenneker.Slack.OpenApiClient.Models.Description.CreateFromDiscriminatorValue); } },
+                { "label", n => { Label = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Text2>(global::Soenneker.Slack.OpenApiClient.Models.Text2.CreateFromDiscriminatorValue); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.InitialOptionElement2>(global::Soenneker.Slack.OpenApiClient.Models.InitialOptionElement2.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Description>("label", Label);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Text2>("label", Label);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.InitialOptionElement2>("options", Options);
             writer.WriteAdditionalData(AdditionalData);
         }

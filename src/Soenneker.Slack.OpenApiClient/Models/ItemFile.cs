@@ -49,10 +49,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The cc property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Cc>? Cc { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Cc2>? Cc { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Cc> Cc { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Cc2> Cc { get; set; }
 #endif
         /// <summary>The channel_actions_count property</summary>
         public double? ChannelActionsCount { get; set; }
@@ -177,10 +177,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The from property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Cc>? From { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Cc2>? From { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Cc> From { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Cc2> From { get; set; }
 #endif
         /// <summary>The groups property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -499,10 +499,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The shares property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Shares3? Shares { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Shares4? Shares { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Shares3 Shares { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Shares4 Shares { get; set; }
 #endif
         /// <summary>The simplified_html property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -891,10 +891,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The to property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Cc>? To { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Cc2>? To { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Cc> To { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Cc2> To { get; set; }
 #endif
         /// <summary>The transcription property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -983,7 +983,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "app_id", n => { AppId = n.GetStringValue(); } },
                 { "app_name", n => { AppName = n.GetStringValue(); } },
                 { "bot_id", n => { BotId = n.GetStringValue(); } },
-                { "cc", n => { Cc = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Cc>(global::Soenneker.Slack.OpenApiClient.Models.Cc.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "cc", n => { Cc = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Cc2>(global::Soenneker.Slack.OpenApiClient.Models.Cc2.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "channel_actions_count", n => { ChannelActionsCount = n.GetDoubleValue(); } },
                 { "channel_actions_ts", n => { ChannelActionsTs = n.GetStringValue(); } },
                 { "channels", n => { Channels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -1002,7 +1002,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "external_url", n => { ExternalUrl = n.GetStringValue(); } },
                 { "file_access", n => { FileAccess = n.GetStringValue(); } },
                 { "filetype", n => { Filetype = n.GetStringValue(); } },
-                { "from", n => { From = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Cc>(global::Soenneker.Slack.OpenApiClient.Models.Cc.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "from", n => { From = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Cc2>(global::Soenneker.Slack.OpenApiClient.Models.Cc2.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "groups", n => { Groups = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "has_more", n => { HasMore = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ItemFileHasMore>(global::Soenneker.Slack.OpenApiClient.Models.ItemFileHasMore.CreateFromDiscriminatorValue); } },
                 { "has_more_shares", n => { HasMoreShares = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ItemFileHasMoreShares>(global::Soenneker.Slack.OpenApiClient.Models.ItemFileHasMoreShares.CreateFromDiscriminatorValue); } },
@@ -1046,7 +1046,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "reactions", n => { Reactions = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Reaction>(global::Soenneker.Slack.OpenApiClient.Models.Reaction.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "saved", n => { Saved = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Saved>(global::Soenneker.Slack.OpenApiClient.Models.Saved.CreateFromDiscriminatorValue); } },
                 { "sent_to_self", n => { SentToSelf = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ItemFileSentToSelf>(global::Soenneker.Slack.OpenApiClient.Models.ItemFileSentToSelf.CreateFromDiscriminatorValue); } },
-                { "shares", n => { Shares = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Shares3>(global::Soenneker.Slack.OpenApiClient.Models.Shares3.CreateFromDiscriminatorValue); } },
+                { "shares", n => { Shares = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Shares4>(global::Soenneker.Slack.OpenApiClient.Models.Shares4.CreateFromDiscriminatorValue); } },
                 { "simplified_html", n => { SimplifiedHtml = n.GetStringValue(); } },
                 { "size", n => { Size = n.GetDoubleValue(); } },
                 { "source_team", n => { SourceTeam = n.GetStringValue(); } },
@@ -1098,7 +1098,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "thumb_video_w", n => { ThumbVideoW = n.GetDoubleValue(); } },
                 { "timestamp", n => { Timestamp = n.GetDoubleValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
-                { "to", n => { To = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Cc>(global::Soenneker.Slack.OpenApiClient.Models.Cc.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "to", n => { To = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Cc2>(global::Soenneker.Slack.OpenApiClient.Models.Cc2.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "transcription", n => { Transcription = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Transcription3>(global::Soenneker.Slack.OpenApiClient.Models.Transcription3.CreateFromDiscriminatorValue); } },
                 { "updated", n => { Updated = n.GetDoubleValue(); } },
                 { "url_private", n => { UrlPrivate = n.GetStringValue(); } },
@@ -1120,7 +1120,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("app_id", AppId);
             writer.WriteStringValue("app_name", AppName);
             writer.WriteStringValue("bot_id", BotId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Cc>("cc", Cc);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Cc2>("cc", Cc);
             writer.WriteDoubleValue("channel_actions_count", ChannelActionsCount);
             writer.WriteStringValue("channel_actions_ts", ChannelActionsTs);
             writer.WriteCollectionOfPrimitiveValues<string>("channels", Channels);
@@ -1139,7 +1139,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("external_url", ExternalUrl);
             writer.WriteStringValue("file_access", FileAccess);
             writer.WriteStringValue("filetype", Filetype);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Cc>("from", From);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Cc2>("from", From);
             writer.WriteCollectionOfPrimitiveValues<string>("groups", Groups);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ItemFileHasMore>("has_more", HasMore);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ItemFileHasMoreShares>("has_more_shares", HasMoreShares);
@@ -1183,7 +1183,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Reaction>("reactions", Reactions);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Saved>("saved", Saved);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ItemFileSentToSelf>("sent_to_self", SentToSelf);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Shares3>("shares", Shares);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Shares4>("shares", Shares);
             writer.WriteStringValue("simplified_html", SimplifiedHtml);
             writer.WriteDoubleValue("size", Size);
             writer.WriteStringValue("source_team", SourceTeam);
@@ -1235,7 +1235,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("thumb_video_w", ThumbVideoW);
             writer.WriteDoubleValue("timestamp", Timestamp);
             writer.WriteStringValue("title", Title);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Cc>("to", To);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Cc2>("to", To);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Transcription3>("transcription", Transcription);
             writer.WriteDoubleValue("updated", Updated);
             writer.WriteStringValue("url_private", UrlPrivate);

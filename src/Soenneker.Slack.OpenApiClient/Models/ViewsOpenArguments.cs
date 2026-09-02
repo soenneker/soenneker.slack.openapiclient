@@ -17,10 +17,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>A [view payload](https://docs.slack.dev/surfaces/modals).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.View2? View { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.View6? View { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.View2 View { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.View6 View { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ViewsOpenArguments"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "view", n => { View = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View2>(global::Soenneker.Slack.OpenApiClient.Models.View2.CreateFromDiscriminatorValue); } },
+                { "view", n => { View = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View6>(global::Soenneker.Slack.OpenApiClient.Models.View6.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View2>("view", View);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View6>("view", View);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

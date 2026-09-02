@@ -14,6 +14,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The channel property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Channel { get; set; }
+#nullable restore
+#else
+        public string Channel { get; set; }
+#endif
         /// <summary>The comment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -35,10 +43,18 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The file property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.File5? File { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.FileElement2? File { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.File5 File { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.FileElement2 File { get; set; }
+#endif
+        /// <summary>The message property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ItemMessage? Message { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ItemMessage Message { get; set; }
 #endif
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -73,10 +89,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "channel", n => { Channel = n.GetStringValue(); } },
                 { "comment", n => { Comment = n.GetStringValue(); } },
                 { "created", n => { Created = n.GetDoubleValue(); } },
                 { "created_by", n => { CreatedBy = n.GetStringValue(); } },
-                { "file", n => { File = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.File5>(global::Soenneker.Slack.OpenApiClient.Models.File5.CreateFromDiscriminatorValue); } },
+                { "file", n => { File = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FileElement2>(global::Soenneker.Slack.OpenApiClient.Models.FileElement2.CreateFromDiscriminatorValue); } },
+                { "message", n => { Message = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ItemMessage>(global::Soenneker.Slack.OpenApiClient.Models.ItemMessage.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
         }
@@ -87,10 +105,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("channel", Channel);
             writer.WriteStringValue("comment", Comment);
             writer.WriteDoubleValue("created", Created);
             writer.WriteStringValue("created_by", CreatedBy);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.File5>("file", File);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FileElement2>("file", File);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ItemMessage>("message", Message);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

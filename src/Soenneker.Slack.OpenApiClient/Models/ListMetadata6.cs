@@ -33,10 +33,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The description_blocks property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.TitleBlockElement>? DescriptionBlocks { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Block3>? DescriptionBlocks { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.TitleBlockElement> DescriptionBlocks { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Block3> DescriptionBlocks { get; set; }
 #endif
         /// <summary>The icon property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -81,18 +81,18 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The schema property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.SchemaValue>? Schema { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Schema3>? Schema { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.SchemaValue> Schema { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Schema3> Schema { get; set; }
 #endif
         /// <summary>The views property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.View>? Views { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.View3>? Views { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.View> Views { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.View3> Views { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ListMetadata6"/> and sets the default values.
@@ -121,14 +121,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "creation_source", n => { CreationSource = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.CreationSource>(global::Soenneker.Slack.OpenApiClient.Models.CreationSource.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "description_blocks", n => { DescriptionBlocks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.TitleBlockElement>(global::Soenneker.Slack.OpenApiClient.Models.TitleBlockElement.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "description_blocks", n => { DescriptionBlocks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Block3>(global::Soenneker.Slack.OpenApiClient.Models.Block3.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "icon", n => { Icon = n.GetStringValue(); } },
                 { "icon_team_id", n => { IconTeamId = n.GetStringValue(); } },
                 { "icon_url", n => { IconUrl = n.GetStringValue(); } },
                 { "integrations", n => { Integrations = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "is_trial", n => { IsTrial = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata6IsTrial>(global::Soenneker.Slack.OpenApiClient.Models.ListMetadata6IsTrial.CreateFromDiscriminatorValue); } },
-                { "schema", n => { Schema = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SchemaValue>(global::Soenneker.Slack.OpenApiClient.Models.SchemaValue.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "views", n => { Views = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.View>(global::Soenneker.Slack.OpenApiClient.Models.View.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "schema", n => { Schema = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Schema3>(global::Soenneker.Slack.OpenApiClient.Models.Schema3.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "views", n => { Views = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.View3>(global::Soenneker.Slack.OpenApiClient.Models.View3.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -140,14 +140,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.CreationSource>("creation_source", CreationSource);
             writer.WriteStringValue("description", Description);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.TitleBlockElement>("description_blocks", DescriptionBlocks);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Block3>("description_blocks", DescriptionBlocks);
             writer.WriteStringValue("icon", Icon);
             writer.WriteStringValue("icon_team_id", IconTeamId);
             writer.WriteStringValue("icon_url", IconUrl);
             writer.WriteCollectionOfPrimitiveValues<string>("integrations", Integrations);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata6IsTrial>("is_trial", IsTrial);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SchemaValue>("schema", Schema);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.View>("views", Views);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Schema3>("schema", Schema);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.View3>("views", Views);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -54,29 +54,53 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.BotProfile2 BotProfile { get; set; }
 #endif
-        /// <summary>The permalink property</summary>
+        /// <summary>The display_as_bot property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Permalink { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Message3DisplayAsBot? DisplayAsBot { get; set; }
 #nullable restore
 #else
-        public string Permalink { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Message3DisplayAsBot DisplayAsBot { get; set; }
 #endif
-        /// <summary>The reactions property</summary>
+        /// <summary>The edited property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Reaction>? Reactions { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Edited? Edited { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Reaction> Reactions { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Edited Edited { get; set; }
+#endif
+        /// <summary>The files property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Slack.OpenApiClient.Models.FileObject>? Files { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Slack.OpenApiClient.Models.FileObject> Files { get; set; }
+#endif
+        /// <summary>The language property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.Language? Language { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.Language Language { get; set; }
+#endif
+        /// <summary>The metadata property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.Metadata3? Metadata { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.Metadata3 Metadata { get; set; }
 #endif
         /// <summary>The room property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Room3? Room { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Room? Room { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Room3 Room { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Room Room { get; set; }
 #endif
         /// <summary>The team property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -94,14 +118,6 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string Text { get; set; }
 #endif
-        /// <summary>The ts property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Ts { get; set; }
-#nullable restore
-#else
-        public string Ts { get; set; }
-#endif
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -110,6 +126,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string Type { get; set; }
 #endif
+        /// <summary>The upload property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.Message3Upload? Upload { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.Message3Upload Upload { get; set; }
+#endif
         /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -117,6 +141,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #nullable restore
 #else
         public string User { get; set; }
+#endif
+        /// <summary>The x_files property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? XFiles { get; set; }
+#nullable restore
+#else
+        public List<string> XFiles { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Message3"/> and sets the default values.
@@ -148,14 +180,18 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "blocks", n => { Blocks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock2>(global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock2.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "bot_id", n => { BotId = n.GetStringValue(); } },
                 { "bot_profile", n => { BotProfile = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotProfile2>(global::Soenneker.Slack.OpenApiClient.Models.BotProfile2.CreateFromDiscriminatorValue); } },
-                { "permalink", n => { Permalink = n.GetStringValue(); } },
-                { "reactions", n => { Reactions = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Reaction>(global::Soenneker.Slack.OpenApiClient.Models.Reaction.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "room", n => { Room = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Room3>(global::Soenneker.Slack.OpenApiClient.Models.Room3.CreateFromDiscriminatorValue); } },
+                { "display_as_bot", n => { DisplayAsBot = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Message3DisplayAsBot>(global::Soenneker.Slack.OpenApiClient.Models.Message3DisplayAsBot.CreateFromDiscriminatorValue); } },
+                { "edited", n => { Edited = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Edited>(global::Soenneker.Slack.OpenApiClient.Models.Edited.CreateFromDiscriminatorValue); } },
+                { "files", n => { Files = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.FileObject>(global::Soenneker.Slack.OpenApiClient.Models.FileObject.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "language", n => { Language = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Language>(global::Soenneker.Slack.OpenApiClient.Models.Language.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Metadata3>(global::Soenneker.Slack.OpenApiClient.Models.Metadata3.CreateFromDiscriminatorValue); } },
+                { "room", n => { Room = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Room>(global::Soenneker.Slack.OpenApiClient.Models.Room.CreateFromDiscriminatorValue); } },
                 { "team", n => { Team = n.GetStringValue(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
-                { "ts", n => { Ts = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
+                { "upload", n => { Upload = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Message3Upload>(global::Soenneker.Slack.OpenApiClient.Models.Message3Upload.CreateFromDiscriminatorValue); } },
                 { "user", n => { User = n.GetStringValue(); } },
+                { "x_files", n => { XFiles = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -170,14 +206,18 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock2>("blocks", Blocks);
             writer.WriteStringValue("bot_id", BotId);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotProfile2>("bot_profile", BotProfile);
-            writer.WriteStringValue("permalink", Permalink);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Reaction>("reactions", Reactions);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Room3>("room", Room);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Message3DisplayAsBot>("display_as_bot", DisplayAsBot);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Edited>("edited", Edited);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.FileObject>("files", Files);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Language>("language", Language);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Metadata3>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Room>("room", Room);
             writer.WriteStringValue("team", Team);
             writer.WriteStringValue("text", Text);
-            writer.WriteStringValue("ts", Ts);
             writer.WriteStringValue("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Message3Upload>("upload", Upload);
             writer.WriteStringValue("user", User);
+            writer.WriteCollectionOfPrimitiveValues<string>("x_files", XFiles);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

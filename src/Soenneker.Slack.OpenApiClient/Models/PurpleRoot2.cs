@@ -109,10 +109,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The room property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Room2? Room { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Room3? Room { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Room2 Room { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Room3 Room { get; set; }
 #endif
         /// <summary>The subscribed property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -226,7 +226,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "reply_count", n => { ReplyCount = n.GetDoubleValue(); } },
                 { "reply_users", n => { ReplyUsers = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.PurpleRoot2ReplyUsersItem>(global::Soenneker.Slack.OpenApiClient.Models.PurpleRoot2ReplyUsersItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "reply_users_count", n => { ReplyUsersCount = n.GetDoubleValue(); } },
-                { "room", n => { Room = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Room2>(global::Soenneker.Slack.OpenApiClient.Models.Room2.CreateFromDiscriminatorValue); } },
+                { "room", n => { Room = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Room3>(global::Soenneker.Slack.OpenApiClient.Models.Room3.CreateFromDiscriminatorValue); } },
                 { "subscribed", n => { Subscribed = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PurpleRoot2Subscribed>(global::Soenneker.Slack.OpenApiClient.Models.PurpleRoot2Subscribed.CreateFromDiscriminatorValue); } },
                 { "subtype", n => { Subtype = n.GetStringValue(); } },
                 { "team", n => { Team = n.GetStringValue(); } },
@@ -259,7 +259,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("reply_count", ReplyCount);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.PurpleRoot2ReplyUsersItem>("reply_users", ReplyUsers);
             writer.WriteDoubleValue("reply_users_count", ReplyUsersCount);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Room2>("room", Room);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Room3>("room", Room);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PurpleRoot2Subscribed>("subscribed", Subscribed);
             writer.WriteStringValue("subtype", Subtype);
             writer.WriteStringValue("team", Team);

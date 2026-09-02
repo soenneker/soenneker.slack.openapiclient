@@ -14,29 +14,37 @@ namespace Soenneker.Slack.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The canvas property</summary>
+        /// <summary>The has_slack_connect_invite_created property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Canvas? Canvas { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Properties3HasSlackConnectInviteCreated? HasSlackConnectInviteCreated { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Canvas Canvas { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Properties3HasSlackConnectInviteCreated HasSlackConnectInviteCreated { get; set; }
+#endif
+        /// <summary>The is_dormant property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.Properties3IsDormant? IsDormant { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.Properties3IsDormant IsDormant { get; set; }
 #endif
         /// <summary>The tabs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Tab>? Tabs { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Tab2>? Tabs { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Tab> Tabs { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Tab2> Tabs { get; set; }
 #endif
         /// <summary>The tabz property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Tab>? Tabz { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Tabz>? Tabz { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Tab> Tabz { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Tabz> Tabz { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Properties3"/> and sets the default values.
@@ -63,9 +71,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "canvas", n => { Canvas = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Canvas>(global::Soenneker.Slack.OpenApiClient.Models.Canvas.CreateFromDiscriminatorValue); } },
-                { "tabs", n => { Tabs = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Tab>(global::Soenneker.Slack.OpenApiClient.Models.Tab.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "tabz", n => { Tabz = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Tab>(global::Soenneker.Slack.OpenApiClient.Models.Tab.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "has_slack_connect_invite_created", n => { HasSlackConnectInviteCreated = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Properties3HasSlackConnectInviteCreated>(global::Soenneker.Slack.OpenApiClient.Models.Properties3HasSlackConnectInviteCreated.CreateFromDiscriminatorValue); } },
+                { "is_dormant", n => { IsDormant = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Properties3IsDormant>(global::Soenneker.Slack.OpenApiClient.Models.Properties3IsDormant.CreateFromDiscriminatorValue); } },
+                { "tabs", n => { Tabs = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Tab2>(global::Soenneker.Slack.OpenApiClient.Models.Tab2.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "tabz", n => { Tabz = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Tabz>(global::Soenneker.Slack.OpenApiClient.Models.Tabz.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -75,9 +84,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Canvas>("canvas", Canvas);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Tab>("tabs", Tabs);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Tab>("tabz", Tabz);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Properties3HasSlackConnectInviteCreated>("has_slack_connect_invite_created", HasSlackConnectInviteCreated);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Properties3IsDormant>("is_dormant", IsDormant);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Tab2>("tabs", Tabs);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Tabz>("tabz", Tabz);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

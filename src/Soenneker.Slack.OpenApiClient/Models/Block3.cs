@@ -121,10 +121,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The fields property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement>? Fields { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Text2>? Fields { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement> Fields { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Text2> Fields { get; set; }
 #endif
         /// <summary>The function_trigger_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -209,10 +209,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The text property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement? Text { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Text2? Text { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement Text { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Text2 Text { get; set; }
 #endif
         /// <summary>The thumbnail_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -257,10 +257,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Block3Type? Type { get; set; }
+        public string? Type { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Block3Type Type { get; set; }
+        public string Type { get; set; }
 #endif
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -324,7 +324,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "elements", n => { Elements = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Accessory5>(global::Soenneker.Slack.OpenApiClient.Models.Accessory5.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "expand", n => { Expand = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Block3Expand>(global::Soenneker.Slack.OpenApiClient.Models.Block3Expand.CreateFromDiscriminatorValue); } },
                 { "fallback", n => { Fallback = n.GetStringValue(); } },
-                { "fields", n => { Fields = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement>(global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "fields", n => { Fields = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Text2>(global::Soenneker.Slack.OpenApiClient.Models.Text2.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "function_trigger_id", n => { FunctionTriggerId = n.GetStringValue(); } },
                 { "image_bytes", n => { ImageBytes = n.GetDoubleValue(); } },
                 { "image_height", n => { ImageHeight = n.GetDoubleValue(); } },
@@ -338,13 +338,13 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "sales_home_workflow_app_type", n => { SalesHomeWorkflowAppType = n.GetDoubleValue(); } },
                 { "share_url", n => { ShareUrl = n.GetStringValue(); } },
                 { "slack_file", n => { SlackFile = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackFile2>(global::Soenneker.Slack.OpenApiClient.Models.SlackFile2.CreateFromDiscriminatorValue); } },
-                { "text", n => { Text = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement>(global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement.CreateFromDiscriminatorValue); } },
+                { "text", n => { Text = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Text2>(global::Soenneker.Slack.OpenApiClient.Models.Text2.CreateFromDiscriminatorValue); } },
                 { "thumbnail_url", n => { ThumbnailUrl = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Block3Title>(global::Soenneker.Slack.OpenApiClient.Models.Block3Title.CreateFromDiscriminatorValue); } },
                 { "title_url", n => { TitleUrl = n.GetStringValue(); } },
                 { "trigger_subtype", n => { TriggerSubtype = n.GetStringValue(); } },
                 { "trigger_type", n => { TriggerType = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Block3Type>(global::Soenneker.Slack.OpenApiClient.Models.Block3Type.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "video_url", n => { VideoUrl = n.GetStringValue(); } },
                 { "workflow_id", n => { WorkflowId = n.GetStringValue(); } },
@@ -370,7 +370,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Accessory5>("elements", Elements);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Block3Expand>("expand", Expand);
             writer.WriteStringValue("fallback", Fallback);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement>("fields", Fields);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Text2>("fields", Fields);
             writer.WriteStringValue("function_trigger_id", FunctionTriggerId);
             writer.WriteDoubleValue("image_bytes", ImageBytes);
             writer.WriteDoubleValue("image_height", ImageHeight);
@@ -384,13 +384,13 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("sales_home_workflow_app_type", SalesHomeWorkflowAppType);
             writer.WriteStringValue("share_url", ShareUrl);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackFile2>("slack_file", SlackFile);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement>("text", Text);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Text2>("text", Text);
             writer.WriteStringValue("thumbnail_url", ThumbnailUrl);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Block3Title>("title", Title);
             writer.WriteStringValue("title_url", TitleUrl);
             writer.WriteStringValue("trigger_subtype", TriggerSubtype);
             writer.WriteStringValue("trigger_type", TriggerType);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Block3Type>("type", Type);
+            writer.WriteStringValue("type", Type);
             writer.WriteStringValue("url", Url);
             writer.WriteStringValue("video_url", VideoUrl);
             writer.WriteStringValue("workflow_id", WorkflowId);

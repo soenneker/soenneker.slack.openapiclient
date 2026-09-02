@@ -94,6 +94,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public List<global::Soenneker.Slack.OpenApiClient.Models.PutParameter> OutputParameters { get; set; }
 #endif
+        /// <summary>The product_level_availability property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ProductLevelAvailability? ProductLevelAvailability { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ProductLevelAvailability ProductLevelAvailability { get; set; }
+#endif
         /// <summary>The title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -148,6 +156,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "input_parameters", n => { InputParameters = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.PutParameter>(global::Soenneker.Slack.OpenApiClient.Models.PutParameter.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "output_parameters", n => { OutputParameters = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.PutParameter>(global::Soenneker.Slack.OpenApiClient.Models.PutParameter.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "product_level_availability", n => { ProductLevelAvailability = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ProductLevelAvailability>(global::Soenneker.Slack.OpenApiClient.Models.ProductLevelAvailability.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
@@ -172,6 +181,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.PutParameter>("input_parameters", InputParameters);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.PutParameter>("output_parameters", OutputParameters);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ProductLevelAvailability>("product_level_availability", ProductLevelAvailability);
             writer.WriteStringValue("title", Title);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);

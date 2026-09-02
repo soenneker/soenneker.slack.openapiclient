@@ -14,6 +14,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The data property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.DataValue? Data { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.DataValue Data { get; set; }
+#endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -21,6 +29,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #nullable restore
 #else
         public string Id { get; set; }
+#endif
+        /// <summary>The is_disabled property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.TabIsDisabled? IsDisabled { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.TabIsDisabled IsDisabled { get; set; }
 #endif
         /// <summary>The label property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,7 +79,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DataValue>(global::Soenneker.Slack.OpenApiClient.Models.DataValue.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
+                { "is_disabled", n => { IsDisabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.TabIsDisabled>(global::Soenneker.Slack.OpenApiClient.Models.TabIsDisabled.CreateFromDiscriminatorValue); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
@@ -75,7 +93,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DataValue>("data", Data);
             writer.WriteStringValue("id", Id);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.TabIsDisabled>("is_disabled", IsDisabled);
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);

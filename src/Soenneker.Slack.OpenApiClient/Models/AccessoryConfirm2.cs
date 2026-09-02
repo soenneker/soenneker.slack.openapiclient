@@ -17,18 +17,18 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The confirm property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Description? Confirm { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Text2? Confirm { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Description Confirm { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Text2 Confirm { get; set; }
 #endif
         /// <summary>The deny property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Description? Deny { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Text2? Deny { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Description Deny { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Text2 Deny { get; set; }
 #endif
         /// <summary>The style property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -41,18 +41,18 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The text property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Description? Text { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Text2? Text { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Description Text { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Text2 Text { get; set; }
 #endif
         /// <summary>The title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Description? Title { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Text2? Title { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Description Title { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Text2 Title { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.AccessoryConfirm2"/> and sets the default values.
@@ -79,11 +79,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "confirm", n => { Confirm = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Description>(global::Soenneker.Slack.OpenApiClient.Models.Description.CreateFromDiscriminatorValue); } },
-                { "deny", n => { Deny = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Description>(global::Soenneker.Slack.OpenApiClient.Models.Description.CreateFromDiscriminatorValue); } },
+                { "confirm", n => { Confirm = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Text2>(global::Soenneker.Slack.OpenApiClient.Models.Text2.CreateFromDiscriminatorValue); } },
+                { "deny", n => { Deny = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Text2>(global::Soenneker.Slack.OpenApiClient.Models.Text2.CreateFromDiscriminatorValue); } },
                 { "style", n => { Style = n.GetStringValue(); } },
-                { "text", n => { Text = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Description>(global::Soenneker.Slack.OpenApiClient.Models.Description.CreateFromDiscriminatorValue); } },
-                { "title", n => { Title = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Description>(global::Soenneker.Slack.OpenApiClient.Models.Description.CreateFromDiscriminatorValue); } },
+                { "text", n => { Text = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Text2>(global::Soenneker.Slack.OpenApiClient.Models.Text2.CreateFromDiscriminatorValue); } },
+                { "title", n => { Title = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Text2>(global::Soenneker.Slack.OpenApiClient.Models.Text2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -93,11 +93,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Description>("confirm", Confirm);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Description>("deny", Deny);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Text2>("confirm", Confirm);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Text2>("deny", Deny);
             writer.WriteStringValue("style", Style);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Description>("text", Text);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Description>("title", Title);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Text2>("text", Text);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Text2>("title", Title);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

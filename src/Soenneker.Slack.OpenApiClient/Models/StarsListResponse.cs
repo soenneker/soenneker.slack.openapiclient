@@ -25,10 +25,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The items property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Item3>? Items { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Item5>? Items { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Item3> Items { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Item5> Items { get; set; }
 #endif
         /// <summary>The needed property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -43,10 +43,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The paging property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Paging2? Paging { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Paging3? Paging { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Paging2 Paging { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Paging3 Paging { get; set; }
 #endif
         /// <summary>The provided property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -90,10 +90,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "error", n => { Error = n.GetStringValue(); } },
-                { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Item3>(global::Soenneker.Slack.OpenApiClient.Models.Item3.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Item5>(global::Soenneker.Slack.OpenApiClient.Models.Item5.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "needed", n => { Needed = n.GetStringValue(); } },
                 { "ok", n => { Ok = n.GetBoolValue(); } },
-                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Paging2>(global::Soenneker.Slack.OpenApiClient.Models.Paging2.CreateFromDiscriminatorValue); } },
+                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Paging3>(global::Soenneker.Slack.OpenApiClient.Models.Paging3.CreateFromDiscriminatorValue); } },
                 { "provided", n => { Provided = n.GetStringValue(); } },
                 { "response_metadata", n => { ResponseMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>(global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata.CreateFromDiscriminatorValue); } },
             };
@@ -106,10 +106,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("error", Error);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Item3>("items", Items);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Item5>("items", Items);
             writer.WriteStringValue("needed", Needed);
             writer.WriteBoolValue("ok", Ok);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Paging2>("paging", Paging);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Paging3>("paging", Paging);
             writer.WriteStringValue("provided", Provided);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>("response_metadata", ResponseMetadata);
             writer.WriteAdditionalData(AdditionalData);

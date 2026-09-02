@@ -14,16 +14,22 @@ namespace Soenneker.Slack.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The count property</summary>
+        public double? Count { get; set; }
         /// <summary>The page property</summary>
         public double? Page { get; set; }
         /// <summary>The pages property</summary>
         public double? Pages { get; set; }
-        /// <summary>The per_page property</summary>
-        public double? PerPage { get; set; }
-        /// <summary>The spill property</summary>
-        public double? Spill { get; set; }
         /// <summary>The total property</summary>
         public double? Total { get; set; }
+        /// <summary>The warnings property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? Warnings { get; set; }
+#nullable restore
+#else
+        public List<string> Warnings { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Paging2"/> and sets the default values.
         /// </summary>
@@ -49,11 +55,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "count", n => { Count = n.GetDoubleValue(); } },
                 { "page", n => { Page = n.GetDoubleValue(); } },
                 { "pages", n => { Pages = n.GetDoubleValue(); } },
-                { "per_page", n => { PerPage = n.GetDoubleValue(); } },
-                { "spill", n => { Spill = n.GetDoubleValue(); } },
                 { "total", n => { Total = n.GetDoubleValue(); } },
+                { "warnings", n => { Warnings = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -63,11 +69,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteDoubleValue("count", Count);
             writer.WriteDoubleValue("page", Page);
             writer.WriteDoubleValue("pages", Pages);
-            writer.WriteDoubleValue("per_page", PerPage);
-            writer.WriteDoubleValue("spill", Spill);
             writer.WriteDoubleValue("total", Total);
+            writer.WriteCollectionOfPrimitiveValues<string>("warnings", Warnings);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

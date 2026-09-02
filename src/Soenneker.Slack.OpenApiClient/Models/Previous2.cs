@@ -17,10 +17,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The attachments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Attachment7>? Attachments { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Attachment8>? Attachments { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Attachment7> Attachments { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Attachment8> Attachments { get; set; }
 #endif
         /// <summary>The blocks property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -111,7 +111,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Attachment7>(global::Soenneker.Slack.OpenApiClient.Models.Attachment7.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Attachment8>(global::Soenneker.Slack.OpenApiClient.Models.Attachment8.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "blocks", n => { Blocks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MatchBlock>(global::Soenneker.Slack.OpenApiClient.Models.MatchBlock.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "iid", n => { Iid = n.GetStringValue(); } },
                 { "permalink", n => { Permalink = n.GetStringValue(); } },
@@ -129,7 +129,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Attachment7>("attachments", Attachments);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Attachment8>("attachments", Attachments);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MatchBlock>("blocks", Blocks);
             writer.WriteStringValue("iid", Iid);
             writer.WriteStringValue("permalink", Permalink);

@@ -19,10 +19,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The elements property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement5>? Elements { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement4>? Elements { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement5> Elements { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement4> Elements { get; set; }
 #endif
         /// <summary>The indent property</summary>
         public double? Indent { get; set; }
@@ -39,10 +39,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AccessoryElement5Type? Type { get; set; }
 #nullable restore
 #else
-        public string Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AccessoryElement5Type Type { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.AccessoryElement5"/> and sets the default values.
@@ -70,11 +70,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "border", n => { Border = n.GetDoubleValue(); } },
-                { "elements", n => { Elements = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement5>(global::Soenneker.Slack.OpenApiClient.Models.PurpleElement5.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "elements", n => { Elements = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement4>(global::Soenneker.Slack.OpenApiClient.Models.PurpleElement4.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "indent", n => { Indent = n.GetDoubleValue(); } },
                 { "offset", n => { Offset = n.GetDoubleValue(); } },
                 { "style", n => { Style = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AccessoryElement5Type>(global::Soenneker.Slack.OpenApiClient.Models.AccessoryElement5Type.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -85,11 +85,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("border", Border);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement5>("elements", Elements);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement4>("elements", Elements);
             writer.WriteDoubleValue("indent", Indent);
             writer.WriteDoubleValue("offset", Offset);
             writer.WriteStringValue("style", Style);
-            writer.WriteStringValue("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AccessoryElement5Type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

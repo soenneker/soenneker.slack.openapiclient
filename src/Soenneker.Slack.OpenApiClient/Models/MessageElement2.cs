@@ -94,6 +94,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.MessageElement2IsLocked IsLocked { get; set; }
 #endif
+        /// <summary>The language property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.Language? Language { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.Language Language { get; set; }
+#endif
         /// <summary>The last_read property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -253,6 +261,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "edited", n => { Edited = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Edited>(global::Soenneker.Slack.OpenApiClient.Models.Edited.CreateFromDiscriminatorValue); } },
                 { "files", n => { Files = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.FileElement>(global::Soenneker.Slack.OpenApiClient.Models.FileElement.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "is_locked", n => { IsLocked = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageElement2IsLocked>(global::Soenneker.Slack.OpenApiClient.Models.MessageElement2IsLocked.CreateFromDiscriminatorValue); } },
+                { "language", n => { Language = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Language>(global::Soenneker.Slack.OpenApiClient.Models.Language.CreateFromDiscriminatorValue); } },
                 { "last_read", n => { LastRead = n.GetStringValue(); } },
                 { "latest_reply", n => { LatestReply = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FluffyMetadata>(global::Soenneker.Slack.OpenApiClient.Models.FluffyMetadata.CreateFromDiscriminatorValue); } },
@@ -289,6 +298,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Edited>("edited", Edited);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.FileElement>("files", Files);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageElement2IsLocked>("is_locked", IsLocked);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Language>("language", Language);
             writer.WriteStringValue("last_read", LastRead);
             writer.WriteStringValue("latest_reply", LatestReply);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FluffyMetadata>("metadata", Metadata);

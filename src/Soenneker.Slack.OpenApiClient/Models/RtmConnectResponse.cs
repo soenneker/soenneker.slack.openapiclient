@@ -14,6 +14,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The context property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Context { get; set; }
+#nullable restore
+#else
+        public string Context { get; set; }
+#endif
         /// <summary>The error property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -72,6 +80,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string Url { get; set; }
 #endif
+        /// <summary>The warning property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Warning { get; set; }
+#nullable restore
+#else
+        public string Warning { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.RtmConnectResponse"/> and sets the default values.
         /// </summary>
@@ -97,6 +113,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "context", n => { Context = n.GetStringValue(); } },
                 { "error", n => { Error = n.GetStringValue(); } },
                 { "needed", n => { Needed = n.GetStringValue(); } },
                 { "ok", n => { Ok = n.GetBoolValue(); } },
@@ -105,6 +122,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "self", n => { Self = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Self>(global::Soenneker.Slack.OpenApiClient.Models.Self.CreateFromDiscriminatorValue); } },
                 { "team", n => { Team = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Team>(global::Soenneker.Slack.OpenApiClient.Models.Team.CreateFromDiscriminatorValue); } },
                 { "url", n => { Url = n.GetStringValue(); } },
+                { "warning", n => { Warning = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -114,6 +132,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("context", Context);
             writer.WriteStringValue("error", Error);
             writer.WriteStringValue("needed", Needed);
             writer.WriteBoolValue("ok", Ok);
@@ -122,6 +141,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Self>("self", Self);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Team>("team", Team);
             writer.WriteStringValue("url", Url);
+            writer.WriteStringValue("warning", Warning);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

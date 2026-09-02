@@ -77,6 +77,7 @@ using Soenneker.Slack.OpenApiClient.Api.AdminUsergroupsAddTeams;
 using Soenneker.Slack.OpenApiClient.Api.AdminUsergroupsListChannels;
 using Soenneker.Slack.OpenApiClient.Api.AdminUsergroupsRemoveChannels;
 using Soenneker.Slack.OpenApiClient.Api.AdminUsersAssign;
+using Soenneker.Slack.OpenApiClient.Api.AdminUsersGetExpiration;
 using Soenneker.Slack.OpenApiClient.Api.AdminUsersInvite;
 using Soenneker.Slack.OpenApiClient.Api.AdminUsersList;
 using Soenneker.Slack.OpenApiClient.Api.AdminUsersRemove;
@@ -97,6 +98,8 @@ using Soenneker.Slack.OpenApiClient.Api.AdminWorkflowsCollaboratorsRemove;
 using Soenneker.Slack.OpenApiClient.Api.AdminWorkflowsPermissionsLookup;
 using Soenneker.Slack.OpenApiClient.Api.AdminWorkflowsSearch;
 using Soenneker.Slack.OpenApiClient.Api.AdminWorkflowsUnpublish;
+using Soenneker.Slack.OpenApiClient.Api.AgentsSessionsRename;
+using Soenneker.Slack.OpenApiClient.Api.AgentsSessionsSetStatus;
 using Soenneker.Slack.OpenApiClient.Api.ApiTest;
 using Soenneker.Slack.OpenApiClient.Api.AppsConnectionsOpen;
 using Soenneker.Slack.OpenApiClient.Api.AppsEventAuthorizationsList;
@@ -113,6 +116,7 @@ using Soenneker.Slack.OpenApiClient.Api.AssistantThreadsSetTitle;
 using Soenneker.Slack.OpenApiClient.Api.AuthRevoke;
 using Soenneker.Slack.OpenApiClient.Api.AuthTeamsList;
 using Soenneker.Slack.OpenApiClient.Api.AuthTest;
+using Soenneker.Slack.OpenApiClient.Api.BlocksValidate;
 using Soenneker.Slack.OpenApiClient.Api.BookmarksAdd;
 using Soenneker.Slack.OpenApiClient.Api.BookmarksEdit;
 using Soenneker.Slack.OpenApiClient.Api.BookmarksList;
@@ -656,6 +660,11 @@ namespace Soenneker.Slack.OpenApiClient.Api
         {
             get => new global::Soenneker.Slack.OpenApiClient.Api.AdminUsersAssign.AdminUsersAssignRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The adminUsersGetExpiration property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.AdminUsersGetExpiration.AdminUsersGetExpirationRequestBuilder AdminUsersGetExpiration
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.AdminUsersGetExpiration.AdminUsersGetExpirationRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The adminUsersInvite property</summary>
         public global::Soenneker.Slack.OpenApiClient.Api.AdminUsersInvite.AdminUsersInviteRequestBuilder AdminUsersInvite
         {
@@ -756,6 +765,16 @@ namespace Soenneker.Slack.OpenApiClient.Api
         {
             get => new global::Soenneker.Slack.OpenApiClient.Api.AdminWorkflowsUnpublish.AdminWorkflowsUnpublishRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The agentsSessionsRename property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.AgentsSessionsRename.AgentsSessionsRenameRequestBuilder AgentsSessionsRename
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.AgentsSessionsRename.AgentsSessionsRenameRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The agentsSessionsSetStatus property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.AgentsSessionsSetStatus.AgentsSessionsSetStatusRequestBuilder AgentsSessionsSetStatus
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.AgentsSessionsSetStatus.AgentsSessionsSetStatusRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The apiTest property</summary>
         public global::Soenneker.Slack.OpenApiClient.Api.ApiTest.ApiTestRequestBuilder ApiTest
         {
@@ -835,6 +854,11 @@ namespace Soenneker.Slack.OpenApiClient.Api
         public global::Soenneker.Slack.OpenApiClient.Api.AuthTest.AuthTestRequestBuilder AuthTest
         {
             get => new global::Soenneker.Slack.OpenApiClient.Api.AuthTest.AuthTestRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The blocksValidate property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.BlocksValidate.BlocksValidateRequestBuilder BlocksValidate
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.BlocksValidate.BlocksValidateRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The bookmarksAdd property</summary>
         public global::Soenneker.Slack.OpenApiClient.Api.BookmarksAdd.BookmarksAddRequestBuilder BookmarksAdd

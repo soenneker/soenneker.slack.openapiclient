@@ -14,6 +14,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The always_active property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.Profile8AlwaysActive? AlwaysActive { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.Profile8AlwaysActive AlwaysActive { get; set; }
+#endif
         /// <summary>The avatar_hash property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -192,6 +200,22 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string Skype { get; set; }
 #endif
+        /// <summary>The start_date property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? StartDate { get; set; }
+#nullable restore
+#else
+        public string StartDate { get; set; }
+#endif
+        /// <summary>The status_clear_on_focus_end property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.Profile8StatusClearOnFocusEnd? StatusClearOnFocusEnd { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.Profile8StatusClearOnFocusEnd StatusClearOnFocusEnd { get; set; }
+#endif
         /// <summary>The status_emoji property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -267,6 +291,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "always_active", n => { AlwaysActive = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Profile8AlwaysActive>(global::Soenneker.Slack.OpenApiClient.Models.Profile8AlwaysActive.CreateFromDiscriminatorValue); } },
                 { "avatar_hash", n => { AvatarHash = n.GetStringValue(); } },
                 { "display_name", n => { DisplayName = n.GetStringValue(); } },
                 { "display_name_normalized", n => { DisplayNameNormalized = n.GetStringValue(); } },
@@ -290,6 +315,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "real_name", n => { RealName = n.GetStringValue(); } },
                 { "real_name_normalized", n => { RealNameNormalized = n.GetStringValue(); } },
                 { "skype", n => { Skype = n.GetStringValue(); } },
+                { "start_date", n => { StartDate = n.GetStringValue(); } },
+                { "status_clear_on_focus_end", n => { StatusClearOnFocusEnd = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Profile8StatusClearOnFocusEnd>(global::Soenneker.Slack.OpenApiClient.Models.Profile8StatusClearOnFocusEnd.CreateFromDiscriminatorValue); } },
                 { "status_emoji", n => { StatusEmoji = n.GetStringValue(); } },
                 { "status_emoji_display_info", n => { StatusEmojiDisplayInfo = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.StatusEmojiDisplayInfo>(global::Soenneker.Slack.OpenApiClient.Models.StatusEmojiDisplayInfo.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "status_emoji_url", n => { StatusEmojiUrl = n.GetStringValue(); } },
@@ -306,6 +333,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Profile8AlwaysActive>("always_active", AlwaysActive);
             writer.WriteStringValue("avatar_hash", AvatarHash);
             writer.WriteStringValue("display_name", DisplayName);
             writer.WriteStringValue("display_name_normalized", DisplayNameNormalized);
@@ -329,6 +357,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("real_name", RealName);
             writer.WriteStringValue("real_name_normalized", RealNameNormalized);
             writer.WriteStringValue("skype", Skype);
+            writer.WriteStringValue("start_date", StartDate);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Profile8StatusClearOnFocusEnd>("status_clear_on_focus_end", StatusClearOnFocusEnd);
             writer.WriteStringValue("status_emoji", StatusEmoji);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.StatusEmojiDisplayInfo>("status_emoji_display_info", StatusEmojiDisplayInfo);
             writer.WriteStringValue("status_emoji_url", StatusEmojiUrl);

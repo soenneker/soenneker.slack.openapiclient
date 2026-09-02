@@ -14,29 +14,37 @@ namespace Soenneker.Slack.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The error property</summary>
+        /// <summary>The code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Error { get; set; }
+        public string? Code { get; set; }
 #nullable restore
 #else
-        public string Error { get; set; }
+        public string Code { get; set; }
 #endif
-        /// <summary>The ok property</summary>
+        /// <summary>The constraint property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Error3Ok? Ok { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Constraint? Constraint { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Error3Ok Ok { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Constraint Constraint { get; set; }
 #endif
-        /// <summary>The user property</summary>
+        /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? User { get; set; }
+        public string? Message { get; set; }
 #nullable restore
 #else
-        public string User { get; set; }
+        public string Message { get; set; }
+#endif
+        /// <summary>The pointer property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Pointer { get; set; }
+#nullable restore
+#else
+        public string Pointer { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Error3"/> and sets the default values.
@@ -63,9 +71,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "error", n => { Error = n.GetStringValue(); } },
-                { "ok", n => { Ok = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Error3Ok>(global::Soenneker.Slack.OpenApiClient.Models.Error3Ok.CreateFromDiscriminatorValue); } },
-                { "user", n => { User = n.GetStringValue(); } },
+                { "code", n => { Code = n.GetStringValue(); } },
+                { "constraint", n => { Constraint = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Constraint>(global::Soenneker.Slack.OpenApiClient.Models.Constraint.CreateFromDiscriminatorValue); } },
+                { "message", n => { Message = n.GetStringValue(); } },
+                { "pointer", n => { Pointer = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -75,9 +84,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("error", Error);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Error3Ok>("ok", Ok);
-            writer.WriteStringValue("user", User);
+            writer.WriteStringValue("code", Code);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Constraint>("constraint", Constraint);
+            writer.WriteStringValue("message", Message);
+            writer.WriteStringValue("pointer", Pointer);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -14,37 +14,13 @@ namespace Soenneker.Slack.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The color property</summary>
+        /// <summary>The email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Color { get; set; }
+        public string? Email { get; set; }
 #nullable restore
 #else
-        public string Color { get; set; }
-#endif
-        /// <summary>The deleted property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.User8Deleted? Deleted { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.User8Deleted Deleted { get; set; }
-#endif
-        /// <summary>The enterprise_user property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.EnterpriseUser? EnterpriseUser { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.EnterpriseUser EnterpriseUser { get; set; }
-#endif
-        /// <summary>The has_2fa property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.User8Has2Fa? Has2fa { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.User8Has2Fa Has2fa { get; set; }
+        public string Email { get; set; }
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -54,109 +30,53 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>The is_admin property</summary>
+        /// <summary>The image_192 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.User8IsAdmin? IsAdmin { get; set; }
+        public string? Image192 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.User8IsAdmin IsAdmin { get; set; }
+        public string Image192 { get; set; }
 #endif
-        /// <summary>The is_app_user property</summary>
+        /// <summary>The image_24 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.User8IsAppUser? IsAppUser { get; set; }
+        public string? Image24 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.User8IsAppUser IsAppUser { get; set; }
+        public string Image24 { get; set; }
 #endif
-        /// <summary>The is_bot property</summary>
+        /// <summary>The image_32 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.User8IsBot? IsBot { get; set; }
+        public string? Image32 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.User8IsBot IsBot { get; set; }
+        public string Image32 { get; set; }
 #endif
-        /// <summary>The is_connector_bot property</summary>
+        /// <summary>The image_48 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.User8IsConnectorBot? IsConnectorBot { get; set; }
+        public string? Image48 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.User8IsConnectorBot IsConnectorBot { get; set; }
+        public string Image48 { get; set; }
 #endif
-        /// <summary>The is_email_confirmed property</summary>
+        /// <summary>The image_512 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.User8IsEmailConfirmed? IsEmailConfirmed { get; set; }
+        public string? Image512 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.User8IsEmailConfirmed IsEmailConfirmed { get; set; }
+        public string Image512 { get; set; }
 #endif
-        /// <summary>The is_invited_user property</summary>
+        /// <summary>The image_72 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.User8IsInvitedUser? IsInvitedUser { get; set; }
+        public string? Image72 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.User8IsInvitedUser IsInvitedUser { get; set; }
-#endif
-        /// <summary>The is_owner property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.User8IsOwner? IsOwner { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.User8IsOwner IsOwner { get; set; }
-#endif
-        /// <summary>The is_primary_owner property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.User8IsPrimaryOwner? IsPrimaryOwner { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.User8IsPrimaryOwner IsPrimaryOwner { get; set; }
-#endif
-        /// <summary>The is_restricted property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.User8IsRestricted? IsRestricted { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.User8IsRestricted IsRestricted { get; set; }
-#endif
-        /// <summary>The is_stranger property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.User8IsStranger? IsStranger { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.User8IsStranger IsStranger { get; set; }
-#endif
-        /// <summary>The is_ultra_restricted property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.User8IsUltraRestricted? IsUltraRestricted { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.User8IsUltraRestricted IsUltraRestricted { get; set; }
-#endif
-        /// <summary>The is_workflow_bot property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.User8IsWorkflowBot? IsWorkflowBot { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.User8IsWorkflowBot IsWorkflowBot { get; set; }
-#endif
-        /// <summary>The locale property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Locale { get; set; }
-#nullable restore
-#else
-        public string Locale { get; set; }
+        public string Image72 { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -165,58 +85,6 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #nullable restore
 #else
         public string Name { get; set; }
-#endif
-        /// <summary>The profile property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Profile4? Profile { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Profile4 Profile { get; set; }
-#endif
-        /// <summary>The real_name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? RealName { get; set; }
-#nullable restore
-#else
-        public string RealName { get; set; }
-#endif
-        /// <summary>The team_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? TeamId { get; set; }
-#nullable restore
-#else
-        public string TeamId { get; set; }
-#endif
-        /// <summary>The tz property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Tz { get; set; }
-#nullable restore
-#else
-        public string Tz { get; set; }
-#endif
-        /// <summary>The tz_label property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? TzLabel { get; set; }
-#nullable restore
-#else
-        public string TzLabel { get; set; }
-#endif
-        /// <summary>The tz_offset property</summary>
-        public double? TzOffset { get; set; }
-        /// <summary>The updated property</summary>
-        public double? Updated { get; set; }
-        /// <summary>The who_can_share_contact_card property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? WhoCanShareContactCard { get; set; }
-#nullable restore
-#else
-        public string WhoCanShareContactCard { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.User8"/> and sets the default values.
@@ -243,33 +111,15 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "color", n => { Color = n.GetStringValue(); } },
-                { "deleted", n => { Deleted = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8Deleted>(global::Soenneker.Slack.OpenApiClient.Models.User8Deleted.CreateFromDiscriminatorValue); } },
-                { "enterprise_user", n => { EnterpriseUser = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EnterpriseUser>(global::Soenneker.Slack.OpenApiClient.Models.EnterpriseUser.CreateFromDiscriminatorValue); } },
-                { "has_2fa", n => { Has2fa = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8Has2Fa>(global::Soenneker.Slack.OpenApiClient.Models.User8Has2Fa.CreateFromDiscriminatorValue); } },
+                { "email", n => { Email = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "is_admin", n => { IsAdmin = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8IsAdmin>(global::Soenneker.Slack.OpenApiClient.Models.User8IsAdmin.CreateFromDiscriminatorValue); } },
-                { "is_app_user", n => { IsAppUser = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8IsAppUser>(global::Soenneker.Slack.OpenApiClient.Models.User8IsAppUser.CreateFromDiscriminatorValue); } },
-                { "is_bot", n => { IsBot = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8IsBot>(global::Soenneker.Slack.OpenApiClient.Models.User8IsBot.CreateFromDiscriminatorValue); } },
-                { "is_connector_bot", n => { IsConnectorBot = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8IsConnectorBot>(global::Soenneker.Slack.OpenApiClient.Models.User8IsConnectorBot.CreateFromDiscriminatorValue); } },
-                { "is_email_confirmed", n => { IsEmailConfirmed = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8IsEmailConfirmed>(global::Soenneker.Slack.OpenApiClient.Models.User8IsEmailConfirmed.CreateFromDiscriminatorValue); } },
-                { "is_invited_user", n => { IsInvitedUser = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8IsInvitedUser>(global::Soenneker.Slack.OpenApiClient.Models.User8IsInvitedUser.CreateFromDiscriminatorValue); } },
-                { "is_owner", n => { IsOwner = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8IsOwner>(global::Soenneker.Slack.OpenApiClient.Models.User8IsOwner.CreateFromDiscriminatorValue); } },
-                { "is_primary_owner", n => { IsPrimaryOwner = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8IsPrimaryOwner>(global::Soenneker.Slack.OpenApiClient.Models.User8IsPrimaryOwner.CreateFromDiscriminatorValue); } },
-                { "is_restricted", n => { IsRestricted = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8IsRestricted>(global::Soenneker.Slack.OpenApiClient.Models.User8IsRestricted.CreateFromDiscriminatorValue); } },
-                { "is_stranger", n => { IsStranger = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8IsStranger>(global::Soenneker.Slack.OpenApiClient.Models.User8IsStranger.CreateFromDiscriminatorValue); } },
-                { "is_ultra_restricted", n => { IsUltraRestricted = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8IsUltraRestricted>(global::Soenneker.Slack.OpenApiClient.Models.User8IsUltraRestricted.CreateFromDiscriminatorValue); } },
-                { "is_workflow_bot", n => { IsWorkflowBot = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8IsWorkflowBot>(global::Soenneker.Slack.OpenApiClient.Models.User8IsWorkflowBot.CreateFromDiscriminatorValue); } },
-                { "locale", n => { Locale = n.GetStringValue(); } },
+                { "image_192", n => { Image192 = n.GetStringValue(); } },
+                { "image_24", n => { Image24 = n.GetStringValue(); } },
+                { "image_32", n => { Image32 = n.GetStringValue(); } },
+                { "image_48", n => { Image48 = n.GetStringValue(); } },
+                { "image_512", n => { Image512 = n.GetStringValue(); } },
+                { "image_72", n => { Image72 = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "profile", n => { Profile = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Profile4>(global::Soenneker.Slack.OpenApiClient.Models.Profile4.CreateFromDiscriminatorValue); } },
-                { "real_name", n => { RealName = n.GetStringValue(); } },
-                { "team_id", n => { TeamId = n.GetStringValue(); } },
-                { "tz", n => { Tz = n.GetStringValue(); } },
-                { "tz_label", n => { TzLabel = n.GetStringValue(); } },
-                { "tz_offset", n => { TzOffset = n.GetDoubleValue(); } },
-                { "updated", n => { Updated = n.GetDoubleValue(); } },
-                { "who_can_share_contact_card", n => { WhoCanShareContactCard = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -279,33 +129,15 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("color", Color);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8Deleted>("deleted", Deleted);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EnterpriseUser>("enterprise_user", EnterpriseUser);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8Has2Fa>("has_2fa", Has2fa);
+            writer.WriteStringValue("email", Email);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8IsAdmin>("is_admin", IsAdmin);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8IsAppUser>("is_app_user", IsAppUser);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8IsBot>("is_bot", IsBot);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8IsConnectorBot>("is_connector_bot", IsConnectorBot);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8IsEmailConfirmed>("is_email_confirmed", IsEmailConfirmed);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8IsInvitedUser>("is_invited_user", IsInvitedUser);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8IsOwner>("is_owner", IsOwner);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8IsPrimaryOwner>("is_primary_owner", IsPrimaryOwner);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8IsRestricted>("is_restricted", IsRestricted);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8IsStranger>("is_stranger", IsStranger);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8IsUltraRestricted>("is_ultra_restricted", IsUltraRestricted);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8IsWorkflowBot>("is_workflow_bot", IsWorkflowBot);
-            writer.WriteStringValue("locale", Locale);
+            writer.WriteStringValue("image_192", Image192);
+            writer.WriteStringValue("image_24", Image24);
+            writer.WriteStringValue("image_32", Image32);
+            writer.WriteStringValue("image_48", Image48);
+            writer.WriteStringValue("image_512", Image512);
+            writer.WriteStringValue("image_72", Image72);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Profile4>("profile", Profile);
-            writer.WriteStringValue("real_name", RealName);
-            writer.WriteStringValue("team_id", TeamId);
-            writer.WriteStringValue("tz", Tz);
-            writer.WriteStringValue("tz_label", TzLabel);
-            writer.WriteDoubleValue("tz_offset", TzOffset);
-            writer.WriteDoubleValue("updated", Updated);
-            writer.WriteStringValue("who_can_share_contact_card", WhoCanShareContactCard);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

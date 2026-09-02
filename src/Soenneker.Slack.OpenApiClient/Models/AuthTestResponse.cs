@@ -130,6 +130,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string UserId { get; set; }
 #endif
+        /// <summary>The warning property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Warning { get; set; }
+#nullable restore
+#else
+        public string Warning { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.AuthTestResponse"/> and sets the default values.
         /// </summary>
@@ -171,6 +179,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "user", n => { User = n.GetStringValue(); } },
                 { "user_id", n => { UserId = n.GetStringValue(); } },
+                { "warning", n => { Warning = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -196,6 +205,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("url", Url);
             writer.WriteStringValue("user", User);
             writer.WriteStringValue("user_id", UserId);
+            writer.WriteStringValue("warning", Warning);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

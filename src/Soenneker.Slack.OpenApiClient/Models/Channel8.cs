@@ -233,10 +233,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The properties property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Properties4? Properties { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Properties5? Properties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Properties4 Properties { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Properties5 Properties { get; set; }
 #endif
         /// <summary>The purpose property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -329,7 +329,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "pending_shared", n => { PendingShared = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "previous_names", n => { PreviousNames = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "priority", n => { Priority = n.GetDoubleValue(); } },
-                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Properties4>(global::Soenneker.Slack.OpenApiClient.Models.Properties4.CreateFromDiscriminatorValue); } },
+                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Properties5>(global::Soenneker.Slack.OpenApiClient.Models.Properties5.CreateFromDiscriminatorValue); } },
                 { "purpose", n => { Purpose = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Purpose>(global::Soenneker.Slack.OpenApiClient.Models.Purpose.CreateFromDiscriminatorValue); } },
                 { "shared_team_ids", n => { SharedTeamIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "topic", n => { Topic = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Purpose>(global::Soenneker.Slack.OpenApiClient.Models.Purpose.CreateFromDiscriminatorValue); } },
@@ -375,7 +375,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("pending_shared", PendingShared);
             writer.WriteCollectionOfPrimitiveValues<string>("previous_names", PreviousNames);
             writer.WriteDoubleValue("priority", Priority);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Properties4>("properties", Properties);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Properties5>("properties", Properties);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Purpose>("purpose", Purpose);
             writer.WriteCollectionOfPrimitiveValues<string>("shared_team_ids", SharedTeamIds);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Purpose>("topic", Topic);

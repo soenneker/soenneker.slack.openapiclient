@@ -38,6 +38,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string Position { get; set; }
 #endif
+        /// <summary>The should_wrap_text property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ColumnShouldWrapText? ShouldWrapText { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ColumnShouldWrapText ShouldWrapText { get; set; }
+#endif
         /// <summary>The visible property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -76,6 +84,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "key", n => { Key = n.GetStringValue(); } },
                 { "position", n => { Position = n.GetStringValue(); } },
+                { "should_wrap_text", n => { ShouldWrapText = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ColumnShouldWrapText>(global::Soenneker.Slack.OpenApiClient.Models.ColumnShouldWrapText.CreateFromDiscriminatorValue); } },
                 { "visible", n => { Visible = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ColumnVisible>(global::Soenneker.Slack.OpenApiClient.Models.ColumnVisible.CreateFromDiscriminatorValue); } },
                 { "width", n => { Width = n.GetDoubleValue(); } },
             };
@@ -90,6 +99,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("key", Key);
             writer.WriteStringValue("position", Position);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ColumnShouldWrapText>("should_wrap_text", ShouldWrapText);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ColumnVisible>("visible", Visible);
             writer.WriteDoubleValue("width", Width);
             writer.WriteAdditionalData(AdditionalData);

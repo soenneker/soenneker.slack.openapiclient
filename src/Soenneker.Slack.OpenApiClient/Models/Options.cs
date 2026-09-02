@@ -73,10 +73,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The default_value_typed property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.DefaultValueTyped? DefaultValueTyped { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.DefaultValueTyped2? DefaultValueTyped { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.DefaultValueTyped DefaultValueTyped { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.DefaultValueTyped2 DefaultValueTyped { get; set; }
 #endif
         /// <summary>The emoji property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -194,7 +194,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "currency_format", n => { CurrencyFormat = n.GetStringValue(); } },
                 { "date_format", n => { DateFormat = n.GetStringValue(); } },
                 { "default_value", n => { DefaultValue = n.GetStringValue(); } },
-                { "default_value_typed", n => { DefaultValueTyped = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DefaultValueTyped>(global::Soenneker.Slack.OpenApiClient.Models.DefaultValueTyped.CreateFromDiscriminatorValue); } },
+                { "default_value_typed", n => { DefaultValueTyped = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DefaultValueTyped2>(global::Soenneker.Slack.OpenApiClient.Models.DefaultValueTyped2.CreateFromDiscriminatorValue); } },
                 { "emoji", n => { Emoji = n.GetStringValue(); } },
                 { "emoji_team_id", n => { EmojiTeamId = n.GetStringValue(); } },
                 { "for_assignment", n => { ForAssignment = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.OptionsForAssignment>(global::Soenneker.Slack.OpenApiClient.Models.OptionsForAssignment.CreateFromDiscriminatorValue); } },
@@ -223,7 +223,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("currency_format", CurrencyFormat);
             writer.WriteStringValue("date_format", DateFormat);
             writer.WriteStringValue("default_value", DefaultValue);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DefaultValueTyped>("default_value_typed", DefaultValueTyped);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DefaultValueTyped2>("default_value_typed", DefaultValueTyped);
             writer.WriteStringValue("emoji", Emoji);
             writer.WriteStringValue("emoji_team_id", EmojiTeamId);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.OptionsForAssignment>("for_assignment", ForAssignment);

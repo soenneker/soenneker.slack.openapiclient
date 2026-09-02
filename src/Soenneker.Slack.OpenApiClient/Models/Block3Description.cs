@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.Block3DescriptionBranch1"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.Block3DescriptionBranch1"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.Text2"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Block3Description : IComposedTypeWrapper, IParsable
@@ -21,13 +21,13 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.Block3DescriptionBranch1 Block3DescriptionBranch1 { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.Text2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement? DescriptionElement { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Text2? Text2 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement DescriptionElement { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Text2 Text2 { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -39,7 +39,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Slack.OpenApiClient.Models.Block3Description();
             result.Block3DescriptionBranch1 = new global::Soenneker.Slack.OpenApiClient.Models.Block3DescriptionBranch1();
-            result.DescriptionElement = new global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement();
+            result.Text2 = new global::Soenneker.Slack.OpenApiClient.Models.Text2();
             return result;
         }
         /// <summary>
@@ -48,9 +48,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(Block3DescriptionBranch1 != null || DescriptionElement != null)
+            if(Block3DescriptionBranch1 != null || Text2 != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Block3DescriptionBranch1, DescriptionElement);
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Block3DescriptionBranch1, Text2);
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -61,7 +61,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Block3DescriptionBranch1>(null, Block3DescriptionBranch1, DescriptionElement);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Block3DescriptionBranch1>(null, Block3DescriptionBranch1, Text2);
         }
     }
 }

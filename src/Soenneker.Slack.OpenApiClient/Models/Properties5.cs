@@ -22,45 +22,77 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.Canvas Canvas { get; set; }
 #endif
-        /// <summary>The huddles_restricted property</summary>
+        /// <summary>The channel_workflows property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Properties5HuddlesRestricted? HuddlesRestricted { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.ChannelWorkflow>? ChannelWorkflows { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Properties5HuddlesRestricted HuddlesRestricted { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.ChannelWorkflow> ChannelWorkflows { get; set; }
+#endif
+        /// <summary>The has_slack_connect_invite_created property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.Properties5HasSlackConnectInviteCreated? HasSlackConnectInviteCreated { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.Properties5HasSlackConnectInviteCreated HasSlackConnectInviteCreated { get; set; }
+#endif
+        /// <summary>The is_dormant property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.Properties5IsDormant? IsDormant { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.Properties5IsDormant IsDormant { get; set; }
+#endif
+        /// <summary>The meeting_notes property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.MeetingNotes? MeetingNotes { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.MeetingNotes MeetingNotes { get; set; }
 #endif
         /// <summary>The posting_restricted_to property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.PostingRestrictedTo? PostingRestrictedTo { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.RestrictedTo2? PostingRestrictedTo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.PostingRestrictedTo PostingRestrictedTo { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.RestrictedTo2 PostingRestrictedTo { get; set; }
 #endif
         /// <summary>The tabs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Tab>? Tabs { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Tab4>? Tabs { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Tab> Tabs { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Tab4> Tabs { get; set; }
 #endif
         /// <summary>The tabz property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Tab>? Tabz { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Tab4>? Tabz { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Tab> Tabz { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Tab4> Tabz { get; set; }
 #endif
         /// <summary>The threads_restricted_to property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ThreadsRestrictedTo? ThreadsRestrictedTo { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.RestrictedTo2? ThreadsRestrictedTo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ThreadsRestrictedTo ThreadsRestrictedTo { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.RestrictedTo2 ThreadsRestrictedTo { get; set; }
+#endif
+        /// <summary>The use_case property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UseCase { get; set; }
+#nullable restore
+#else
+        public string UseCase { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Properties5"/> and sets the default values.
@@ -88,11 +120,15 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "canvas", n => { Canvas = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Canvas>(global::Soenneker.Slack.OpenApiClient.Models.Canvas.CreateFromDiscriminatorValue); } },
-                { "huddles_restricted", n => { HuddlesRestricted = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Properties5HuddlesRestricted>(global::Soenneker.Slack.OpenApiClient.Models.Properties5HuddlesRestricted.CreateFromDiscriminatorValue); } },
-                { "posting_restricted_to", n => { PostingRestrictedTo = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PostingRestrictedTo>(global::Soenneker.Slack.OpenApiClient.Models.PostingRestrictedTo.CreateFromDiscriminatorValue); } },
-                { "tabs", n => { Tabs = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Tab>(global::Soenneker.Slack.OpenApiClient.Models.Tab.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "tabz", n => { Tabz = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Tab>(global::Soenneker.Slack.OpenApiClient.Models.Tab.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "threads_restricted_to", n => { ThreadsRestrictedTo = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ThreadsRestrictedTo>(global::Soenneker.Slack.OpenApiClient.Models.ThreadsRestrictedTo.CreateFromDiscriminatorValue); } },
+                { "channel_workflows", n => { ChannelWorkflows = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ChannelWorkflow>(global::Soenneker.Slack.OpenApiClient.Models.ChannelWorkflow.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "has_slack_connect_invite_created", n => { HasSlackConnectInviteCreated = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Properties5HasSlackConnectInviteCreated>(global::Soenneker.Slack.OpenApiClient.Models.Properties5HasSlackConnectInviteCreated.CreateFromDiscriminatorValue); } },
+                { "is_dormant", n => { IsDormant = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Properties5IsDormant>(global::Soenneker.Slack.OpenApiClient.Models.Properties5IsDormant.CreateFromDiscriminatorValue); } },
+                { "meeting_notes", n => { MeetingNotes = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MeetingNotes>(global::Soenneker.Slack.OpenApiClient.Models.MeetingNotes.CreateFromDiscriminatorValue); } },
+                { "posting_restricted_to", n => { PostingRestrictedTo = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RestrictedTo2>(global::Soenneker.Slack.OpenApiClient.Models.RestrictedTo2.CreateFromDiscriminatorValue); } },
+                { "tabs", n => { Tabs = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Tab4>(global::Soenneker.Slack.OpenApiClient.Models.Tab4.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "tabz", n => { Tabz = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Tab4>(global::Soenneker.Slack.OpenApiClient.Models.Tab4.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "threads_restricted_to", n => { ThreadsRestrictedTo = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RestrictedTo2>(global::Soenneker.Slack.OpenApiClient.Models.RestrictedTo2.CreateFromDiscriminatorValue); } },
+                { "use_case", n => { UseCase = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -103,11 +139,15 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Canvas>("canvas", Canvas);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Properties5HuddlesRestricted>("huddles_restricted", HuddlesRestricted);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PostingRestrictedTo>("posting_restricted_to", PostingRestrictedTo);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Tab>("tabs", Tabs);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Tab>("tabz", Tabz);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ThreadsRestrictedTo>("threads_restricted_to", ThreadsRestrictedTo);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ChannelWorkflow>("channel_workflows", ChannelWorkflows);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Properties5HasSlackConnectInviteCreated>("has_slack_connect_invite_created", HasSlackConnectInviteCreated);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Properties5IsDormant>("is_dormant", IsDormant);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MeetingNotes>("meeting_notes", MeetingNotes);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RestrictedTo2>("posting_restricted_to", PostingRestrictedTo);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Tab4>("tabs", Tabs);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Tab4>("tabz", Tabz);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RestrictedTo2>("threads_restricted_to", ThreadsRestrictedTo);
+            writer.WriteStringValue("use_case", UseCase);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

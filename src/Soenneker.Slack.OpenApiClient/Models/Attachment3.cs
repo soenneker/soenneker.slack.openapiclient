@@ -345,10 +345,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The message_blocks property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageBlock3>? MessageBlocks { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageBlock4>? MessageBlocks { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageBlock3> MessageBlocks { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageBlock4> MessageBlocks { get; set; }
 #endif
         /// <summary>The metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -432,6 +432,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #endif
         /// <summary>The size property</summary>
         public double? Size { get; set; }
+        /// <summary>The slack_file_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SlackFileId { get; set; }
+#nullable restore
+#else
+        public string SlackFileId { get; set; }
+#endif
         /// <summary>The text property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -573,7 +581,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "list_schema", n => { ListSchema = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SchemaValue>(global::Soenneker.Slack.OpenApiClient.Models.SchemaValue.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "list_view", n => { ListView = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View>(global::Soenneker.Slack.OpenApiClient.Models.View.CreateFromDiscriminatorValue); } },
                 { "list_view_id", n => { ListViewId = n.GetStringValue(); } },
-                { "message_blocks", n => { MessageBlocks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageBlock3>(global::Soenneker.Slack.OpenApiClient.Models.MessageBlock3.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "message_blocks", n => { MessageBlocks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageBlock4>(global::Soenneker.Slack.OpenApiClient.Models.MessageBlock4.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AttachmentMetadata>(global::Soenneker.Slack.OpenApiClient.Models.AttachmentMetadata.CreateFromDiscriminatorValue); } },
                 { "mimetype", n => { Mimetype = n.GetStringValue(); } },
                 { "mrkdwn_in", n => { MrkdwnIn = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -585,6 +593,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "service_name", n => { ServiceName = n.GetStringValue(); } },
                 { "service_url", n => { ServiceUrl = n.GetStringValue(); } },
                 { "size", n => { Size = n.GetDoubleValue(); } },
+                { "slack_file_id", n => { SlackFileId = n.GetStringValue(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
                 { "thumb_height", n => { ThumbHeight = n.GetDoubleValue(); } },
                 { "thumb_url", n => { ThumbUrl = n.GetStringValue(); } },
@@ -650,7 +659,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SchemaValue>("list_schema", ListSchema);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View>("list_view", ListView);
             writer.WriteStringValue("list_view_id", ListViewId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageBlock3>("message_blocks", MessageBlocks);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageBlock4>("message_blocks", MessageBlocks);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AttachmentMetadata>("metadata", Metadata);
             writer.WriteStringValue("mimetype", Mimetype);
             writer.WriteCollectionOfPrimitiveValues<string>("mrkdwn_in", MrkdwnIn);
@@ -662,6 +671,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("service_name", ServiceName);
             writer.WriteStringValue("service_url", ServiceUrl);
             writer.WriteDoubleValue("size", Size);
+            writer.WriteStringValue("slack_file_id", SlackFileId);
             writer.WriteStringValue("text", Text);
             writer.WriteDoubleValue("thumb_height", ThumbHeight);
             writer.WriteStringValue("thumb_url", ThumbUrl);

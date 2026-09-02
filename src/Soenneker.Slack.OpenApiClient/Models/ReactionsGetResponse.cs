@@ -33,10 +33,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Message3? Message { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Message4? Message { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Message3 Message { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Message4 Message { get; set; }
 #endif
         /// <summary>The needed property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -72,6 +72,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string Type { get; set; }
 #endif
+        /// <summary>The warning property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Warning { get; set; }
+#nullable restore
+#else
+        public string Warning { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ReactionsGetResponse"/> and sets the default values.
         /// </summary>
@@ -99,12 +107,13 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "channel", n => { Channel = n.GetStringValue(); } },
                 { "error", n => { Error = n.GetStringValue(); } },
-                { "message", n => { Message = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Message3>(global::Soenneker.Slack.OpenApiClient.Models.Message3.CreateFromDiscriminatorValue); } },
+                { "message", n => { Message = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Message4>(global::Soenneker.Slack.OpenApiClient.Models.Message4.CreateFromDiscriminatorValue); } },
                 { "needed", n => { Needed = n.GetStringValue(); } },
                 { "ok", n => { Ok = n.GetBoolValue(); } },
                 { "provided", n => { Provided = n.GetStringValue(); } },
                 { "response_metadata", n => { ResponseMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>(global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
+                { "warning", n => { Warning = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -116,12 +125,13 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("channel", Channel);
             writer.WriteStringValue("error", Error);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Message3>("message", Message);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Message4>("message", Message);
             writer.WriteStringValue("needed", Needed);
             writer.WriteBoolValue("ok", Ok);
             writer.WriteStringValue("provided", Provided);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>("response_metadata", ResponseMetadata);
             writer.WriteStringValue("type", Type);
+            writer.WriteStringValue("warning", Warning);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

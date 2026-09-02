@@ -25,10 +25,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The file property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.File5? File { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.File7? File { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.File5 File { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.File7 File { get; set; }
 #endif
         /// <summary>The needed property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,7 +82,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "error", n => { Error = n.GetStringValue(); } },
-                { "file", n => { File = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.File5>(global::Soenneker.Slack.OpenApiClient.Models.File5.CreateFromDiscriminatorValue); } },
+                { "file", n => { File = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.File7>(global::Soenneker.Slack.OpenApiClient.Models.File7.CreateFromDiscriminatorValue); } },
                 { "needed", n => { Needed = n.GetStringValue(); } },
                 { "ok", n => { Ok = n.GetBoolValue(); } },
                 { "provided", n => { Provided = n.GetStringValue(); } },
@@ -97,7 +97,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("error", Error);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.File5>("file", File);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.File7>("file", File);
             writer.WriteStringValue("needed", Needed);
             writer.WriteBoolValue("ok", Ok);
             writer.WriteStringValue("provided", Provided);

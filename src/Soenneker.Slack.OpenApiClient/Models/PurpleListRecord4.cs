@@ -25,10 +25,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The schema property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.SchemaValue>? Schema { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Schema2>? Schema { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.SchemaValue> Schema { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Schema2> Schema { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.PurpleListRecord4"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "record", n => { Record = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Record4>(global::Soenneker.Slack.OpenApiClient.Models.Record4.CreateFromDiscriminatorValue); } },
-                { "schema", n => { Schema = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SchemaValue>(global::Soenneker.Slack.OpenApiClient.Models.SchemaValue.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "schema", n => { Schema = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Schema2>(global::Soenneker.Slack.OpenApiClient.Models.Schema2.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Record4>("record", Record);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SchemaValue>("schema", Schema);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Schema2>("schema", Schema);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

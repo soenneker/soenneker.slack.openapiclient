@@ -14,95 +14,61 @@ namespace Soenneker.Slack.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The field_name property</summary>
+        /// <summary>The checkbox property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FieldName { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.FieldCheckbox? Checkbox { get; set; }
 #nullable restore
 #else
-        public string FieldName { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.FieldCheckbox Checkbox { get; set; }
 #endif
-        /// <summary>The hint property</summary>
+        /// <summary>The column_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Hint { get; set; }
+        public string? ColumnId { get; set; }
 #nullable restore
 #else
-        public string Hint { get; set; }
+        public string ColumnId { get; set; }
 #endif
-        /// <summary>The id property</summary>
+        /// <summary>The key property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Key { get; set; }
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Key { get; set; }
 #endif
-        /// <summary>The is_hidden property</summary>
+        /// <summary>The rich_text property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.FieldIsHidden? IsHidden { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.RichText2>? RichText { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.FieldIsHidden IsHidden { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.RichText2> RichText { get; set; }
 #endif
-        /// <summary>The is_inverse property</summary>
+        /// <summary>The text property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.FieldIsInverse? IsInverse { get; set; }
+        public string? Text { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.FieldIsInverse IsInverse { get; set; }
+        public string Text { get; set; }
 #endif
-        /// <summary>The label property</summary>
+        /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Label { get; set; }
+        public List<string>? User { get; set; }
 #nullable restore
 #else
-        public string Label { get; set; }
+        public List<string> User { get; set; }
 #endif
-        /// <summary>The options property</summary>
+        /// <summary>The value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Options2? Options { get; set; }
+        public string? Value { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Options2 Options { get; set; }
-#endif
-        /// <summary>The ordering property</summary>
-        public double? Ordering { get; set; }
-        /// <summary>The permissions property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Permissions? Permissions { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Permissions Permissions { get; set; }
-#endif
-        /// <summary>The possible_values property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<string>? PossibleValues { get; set; }
-#nullable restore
-#else
-        public List<string> PossibleValues { get; set; }
-#endif
-        /// <summary>The section_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? SectionId { get; set; }
-#nullable restore
-#else
-        public string SectionId { get; set; }
-#endif
-        /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
+        public string Value { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Field"/> and sets the default values.
@@ -129,18 +95,13 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "field_name", n => { FieldName = n.GetStringValue(); } },
-                { "hint", n => { Hint = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
-                { "is_hidden", n => { IsHidden = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FieldIsHidden>(global::Soenneker.Slack.OpenApiClient.Models.FieldIsHidden.CreateFromDiscriminatorValue); } },
-                { "is_inverse", n => { IsInverse = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FieldIsInverse>(global::Soenneker.Slack.OpenApiClient.Models.FieldIsInverse.CreateFromDiscriminatorValue); } },
-                { "label", n => { Label = n.GetStringValue(); } },
-                { "options", n => { Options = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Options2>(global::Soenneker.Slack.OpenApiClient.Models.Options2.CreateFromDiscriminatorValue); } },
-                { "ordering", n => { Ordering = n.GetDoubleValue(); } },
-                { "permissions", n => { Permissions = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Permissions>(global::Soenneker.Slack.OpenApiClient.Models.Permissions.CreateFromDiscriminatorValue); } },
-                { "possible_values", n => { PossibleValues = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "section_id", n => { SectionId = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "checkbox", n => { Checkbox = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FieldCheckbox>(global::Soenneker.Slack.OpenApiClient.Models.FieldCheckbox.CreateFromDiscriminatorValue); } },
+                { "column_id", n => { ColumnId = n.GetStringValue(); } },
+                { "key", n => { Key = n.GetStringValue(); } },
+                { "rich_text", n => { RichText = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RichText2>(global::Soenneker.Slack.OpenApiClient.Models.RichText2.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "text", n => { Text = n.GetStringValue(); } },
+                { "user", n => { User = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "value", n => { Value = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -150,18 +111,13 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("field_name", FieldName);
-            writer.WriteStringValue("hint", Hint);
-            writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FieldIsHidden>("is_hidden", IsHidden);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FieldIsInverse>("is_inverse", IsInverse);
-            writer.WriteStringValue("label", Label);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Options2>("options", Options);
-            writer.WriteDoubleValue("ordering", Ordering);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Permissions>("permissions", Permissions);
-            writer.WriteCollectionOfPrimitiveValues<string>("possible_values", PossibleValues);
-            writer.WriteStringValue("section_id", SectionId);
-            writer.WriteStringValue("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FieldCheckbox>("checkbox", Checkbox);
+            writer.WriteStringValue("column_id", ColumnId);
+            writer.WriteStringValue("key", Key);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RichText2>("rich_text", RichText);
+            writer.WriteStringValue("text", Text);
+            writer.WriteCollectionOfPrimitiveValues<string>("user", User);
+            writer.WriteStringValue("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

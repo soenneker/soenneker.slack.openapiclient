@@ -17,10 +17,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The fields property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Field>? Fields { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Field3>? Fields { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Field> Fields { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Field3> Fields { get; set; }
 #endif
         /// <summary>The sections property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "fields", n => { Fields = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Field>(global::Soenneker.Slack.OpenApiClient.Models.Field.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "fields", n => { Fields = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Field3>(global::Soenneker.Slack.OpenApiClient.Models.Field3.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "sections", n => { Sections = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Section3>(global::Soenneker.Slack.OpenApiClient.Models.Section3.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Field>("fields", Fields);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Field3>("fields", Fields);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Section3>("sections", Sections);
             writer.WriteAdditionalData(AdditionalData);
         }

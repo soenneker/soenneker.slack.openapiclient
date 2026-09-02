@@ -7,36 +7,168 @@ using System.IO;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
-    /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.HomeView"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ModalView"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepView"/>
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class View2 : IComposedTypeWrapper, IParsable
+    #pragma warning disable CS1591
+    public partial class View2 : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.HomeView"/></summary>
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The calculations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.HomeView? HomeView { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.View2CalculationsItem>? Calculations { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.HomeView HomeView { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.View2CalculationsItem> Calculations { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ModalView"/></summary>
+        /// <summary>The columns property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ModalView? ModalView { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Column>? Columns { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ModalView ModalView { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Column> Columns { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepView"/></summary>
+        /// <summary>The created_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepView? WorkflowStepView { get; set; }
+        public string? CreatedBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepView WorkflowStepView { get; set; }
+        public string CreatedBy { get; set; }
 #endif
+        /// <summary>The date_created property</summary>
+        public double? DateCreated { get; set; }
+        /// <summary>The default_view_key property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DefaultViewKey { get; set; }
+#nullable restore
+#else
+        public string DefaultViewKey { get; set; }
+#endif
+        /// <summary>The filters property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Slack.OpenApiClient.Models.FilterElement>? Filters { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Slack.OpenApiClient.Models.FilterElement> Filters { get; set; }
+#endif
+        /// <summary>The grouping property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.Grouping? Grouping { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.Grouping Grouping { get; set; }
+#endif
+        /// <summary>The id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Id { get; set; }
+#nullable restore
+#else
+        public string Id { get; set; }
+#endif
+        /// <summary>The info_column_filters property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Slack.OpenApiClient.Models.View2InfoColumnFiltersItem>? InfoColumnFilters { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Slack.OpenApiClient.Models.View2InfoColumnFiltersItem> InfoColumnFilters { get; set; }
+#endif
+        /// <summary>The is_all_items_view property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.View2IsAllItemsView? IsAllItemsView { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.View2IsAllItemsView IsAllItemsView { get; set; }
+#endif
+        /// <summary>The is_locked property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.View2IsLocked? IsLocked { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.View2IsLocked IsLocked { get; set; }
+#endif
+        /// <summary>The is_template_initial_view property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.View2IsTemplateInitialView? IsTemplateInitialView { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.View2IsTemplateInitialView IsTemplateInitialView { get; set; }
+#endif
+        /// <summary>The name property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Name { get; set; }
+#nullable restore
+#else
+        public string Name { get; set; }
+#endif
+        /// <summary>The options property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ViewOptions? Options { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ViewOptions Options { get; set; }
+#endif
+        /// <summary>The position property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Position { get; set; }
+#nullable restore
+#else
+        public string Position { get; set; }
+#endif
+        /// <summary>The row_height property</summary>
+        public double? RowHeight { get; set; }
+        /// <summary>The show_completed_items property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.View2ShowCompletedItems? ShowCompletedItems { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.View2ShowCompletedItems ShowCompletedItems { get; set; }
+#endif
+        /// <summary>The sorts property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Slack.OpenApiClient.Models.View2SortsItem>? Sorts { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Slack.OpenApiClient.Models.View2SortsItem> Sorts { get; set; }
+#endif
+        /// <summary>The stick_column_left property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.View2StickColumnLeft? StickColumnLeft { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.View2StickColumnLeft StickColumnLeft { get; set; }
+#endif
+        /// <summary>The type property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Type { get; set; }
+#nullable restore
+#else
+        public string Type { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.View2"/> and sets the default values.
+        /// </summary>
+        public View2()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -45,11 +177,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.View2 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var result = new global::Soenneker.Slack.OpenApiClient.Models.View2();
-            result.HomeView = new global::Soenneker.Slack.OpenApiClient.Models.HomeView();
-            result.ModalView = new global::Soenneker.Slack.OpenApiClient.Models.ModalView();
-            result.WorkflowStepView = new global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepView();
-            return result;
+            return new global::Soenneker.Slack.OpenApiClient.Models.View2();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -57,11 +185,29 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(HomeView != null || ModalView != null || WorkflowStepView != null)
+            return new Dictionary<string, Action<IParseNode>>
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(HomeView, ModalView, WorkflowStepView);
-            }
-            return new Dictionary<string, Action<IParseNode>>();
+                { "calculations", n => { Calculations = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.View2CalculationsItem>(global::Soenneker.Slack.OpenApiClient.Models.View2CalculationsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "columns", n => { Columns = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Column>(global::Soenneker.Slack.OpenApiClient.Models.Column.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "created_by", n => { CreatedBy = n.GetStringValue(); } },
+                { "date_created", n => { DateCreated = n.GetDoubleValue(); } },
+                { "default_view_key", n => { DefaultViewKey = n.GetStringValue(); } },
+                { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.FilterElement>(global::Soenneker.Slack.OpenApiClient.Models.FilterElement.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "grouping", n => { Grouping = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Grouping>(global::Soenneker.Slack.OpenApiClient.Models.Grouping.CreateFromDiscriminatorValue); } },
+                { "id", n => { Id = n.GetStringValue(); } },
+                { "info_column_filters", n => { InfoColumnFilters = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.View2InfoColumnFiltersItem>(global::Soenneker.Slack.OpenApiClient.Models.View2InfoColumnFiltersItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "is_all_items_view", n => { IsAllItemsView = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View2IsAllItemsView>(global::Soenneker.Slack.OpenApiClient.Models.View2IsAllItemsView.CreateFromDiscriminatorValue); } },
+                { "is_locked", n => { IsLocked = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View2IsLocked>(global::Soenneker.Slack.OpenApiClient.Models.View2IsLocked.CreateFromDiscriminatorValue); } },
+                { "is_template_initial_view", n => { IsTemplateInitialView = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View2IsTemplateInitialView>(global::Soenneker.Slack.OpenApiClient.Models.View2IsTemplateInitialView.CreateFromDiscriminatorValue); } },
+                { "name", n => { Name = n.GetStringValue(); } },
+                { "options", n => { Options = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ViewOptions>(global::Soenneker.Slack.OpenApiClient.Models.ViewOptions.CreateFromDiscriminatorValue); } },
+                { "position", n => { Position = n.GetStringValue(); } },
+                { "row_height", n => { RowHeight = n.GetDoubleValue(); } },
+                { "show_completed_items", n => { ShowCompletedItems = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View2ShowCompletedItems>(global::Soenneker.Slack.OpenApiClient.Models.View2ShowCompletedItems.CreateFromDiscriminatorValue); } },
+                { "sorts", n => { Sorts = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.View2SortsItem>(global::Soenneker.Slack.OpenApiClient.Models.View2SortsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "stick_column_left", n => { StickColumnLeft = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View2StickColumnLeft>(global::Soenneker.Slack.OpenApiClient.Models.View2StickColumnLeft.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetStringValue(); } },
+            };
         }
         /// <summary>
         /// Serializes information the current object
@@ -70,7 +216,27 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.HomeView>(null, HomeView, ModalView, WorkflowStepView);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.View2CalculationsItem>("calculations", Calculations);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Column>("columns", Columns);
+            writer.WriteStringValue("created_by", CreatedBy);
+            writer.WriteDoubleValue("date_created", DateCreated);
+            writer.WriteStringValue("default_view_key", DefaultViewKey);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.FilterElement>("filters", Filters);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Grouping>("grouping", Grouping);
+            writer.WriteStringValue("id", Id);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.View2InfoColumnFiltersItem>("info_column_filters", InfoColumnFilters);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View2IsAllItemsView>("is_all_items_view", IsAllItemsView);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View2IsLocked>("is_locked", IsLocked);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View2IsTemplateInitialView>("is_template_initial_view", IsTemplateInitialView);
+            writer.WriteStringValue("name", Name);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ViewOptions>("options", Options);
+            writer.WriteStringValue("position", Position);
+            writer.WriteDoubleValue("row_height", RowHeight);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View2ShowCompletedItems>("show_completed_items", ShowCompletedItems);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.View2SortsItem>("sorts", Sorts);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View2StickColumnLeft>("stick_column_left", StickColumnLeft);
+            writer.WriteStringValue("type", Type);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

@@ -30,6 +30,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.PropertiesCanvasIsEmpty IsEmpty { get; set; }
 #endif
+        /// <summary>The is_migrated property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.PropertiesCanvasIsMigrated? IsMigrated { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.PropertiesCanvasIsMigrated IsMigrated { get; set; }
+#endif
         /// <summary>The quip_thread_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,6 +73,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "file_id", n => { FileId = n.GetStringValue(); } },
                 { "is_empty", n => { IsEmpty = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PropertiesCanvasIsEmpty>(global::Soenneker.Slack.OpenApiClient.Models.PropertiesCanvasIsEmpty.CreateFromDiscriminatorValue); } },
+                { "is_migrated", n => { IsMigrated = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PropertiesCanvasIsMigrated>(global::Soenneker.Slack.OpenApiClient.Models.PropertiesCanvasIsMigrated.CreateFromDiscriminatorValue); } },
                 { "quip_thread_id", n => { QuipThreadId = n.GetStringValue(); } },
             };
         }
@@ -77,6 +86,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("file_id", FileId);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PropertiesCanvasIsEmpty>("is_empty", IsEmpty);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PropertiesCanvasIsMigrated>("is_migrated", IsMigrated);
             writer.WriteStringValue("quip_thread_id", QuipThreadId);
             writer.WriteAdditionalData(AdditionalData);
         }

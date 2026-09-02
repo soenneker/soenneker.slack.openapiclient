@@ -25,10 +25,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The authorizing_user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.User6? AuthorizingUser { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.User7? AuthorizingUser { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.User6 AuthorizingUser { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.User7 AuthorizingUser { get; set; }
 #endif
         /// <summary>The bot property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -65,10 +65,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The installer_user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.User6? InstallerUser { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.User7? InstallerUser { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.User6 InstallerUser { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.User7 InstallerUser { get; set; }
 #endif
         /// <summary>The needed property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -178,12 +178,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "access_token", n => { AccessToken = n.GetStringValue(); } },
-                { "authorizing_user", n => { AuthorizingUser = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User6>(global::Soenneker.Slack.OpenApiClient.Models.User6.CreateFromDiscriminatorValue); } },
+                { "authorizing_user", n => { AuthorizingUser = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User7>(global::Soenneker.Slack.OpenApiClient.Models.User7.CreateFromDiscriminatorValue); } },
                 { "bot", n => { Bot = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Bot2>(global::Soenneker.Slack.OpenApiClient.Models.Bot2.CreateFromDiscriminatorValue); } },
                 { "enterprise_id", n => { EnterpriseId = n.GetStringValue(); } },
                 { "error", n => { Error = n.GetStringValue(); } },
                 { "incoming_webhook", n => { IncomingWebhook = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.IncomingWebhook>(global::Soenneker.Slack.OpenApiClient.Models.IncomingWebhook.CreateFromDiscriminatorValue); } },
-                { "installer_user", n => { InstallerUser = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User6>(global::Soenneker.Slack.OpenApiClient.Models.User6.CreateFromDiscriminatorValue); } },
+                { "installer_user", n => { InstallerUser = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User7>(global::Soenneker.Slack.OpenApiClient.Models.User7.CreateFromDiscriminatorValue); } },
                 { "needed", n => { Needed = n.GetStringValue(); } },
                 { "ok", n => { Ok = n.GetBoolValue(); } },
                 { "provided", n => { Provided = n.GetStringValue(); } },
@@ -205,12 +205,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("access_token", AccessToken);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User6>("authorizing_user", AuthorizingUser);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User7>("authorizing_user", AuthorizingUser);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Bot2>("bot", Bot);
             writer.WriteStringValue("enterprise_id", EnterpriseId);
             writer.WriteStringValue("error", Error);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.IncomingWebhook>("incoming_webhook", IncomingWebhook);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User6>("installer_user", InstallerUser);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User7>("installer_user", InstallerUser);
             writer.WriteStringValue("needed", Needed);
             writer.WriteBoolValue("ok", Ok);
             writer.WriteStringValue("provided", Provided);

@@ -22,6 +22,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.CreationSource CreationSource { get; set; }
 #endif
+        /// <summary>The default_view property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DefaultView { get; set; }
+#nullable restore
+#else
+        public string DefaultView { get; set; }
+#endif
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -86,6 +94,22 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public List<global::Soenneker.Slack.OpenApiClient.Models.SchemaValue> Schema { get; set; }
 #endif
+        /// <summary>The subtask_schema property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Slack.OpenApiClient.Models.ListMetadataSubtaskSchemaItem>? SubtaskSchema { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Slack.OpenApiClient.Models.ListMetadataSubtaskSchemaItem> SubtaskSchema { get; set; }
+#endif
+        /// <summary>The todo_mode property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ListMetadataTodoMode? TodoMode { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ListMetadataTodoMode TodoMode { get; set; }
+#endif
         /// <summary>The views property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -120,6 +144,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "creation_source", n => { CreationSource = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.CreationSource>(global::Soenneker.Slack.OpenApiClient.Models.CreationSource.CreateFromDiscriminatorValue); } },
+                { "default_view", n => { DefaultView = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "description_blocks", n => { DescriptionBlocks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.DescriptionBlockElement>(global::Soenneker.Slack.OpenApiClient.Models.DescriptionBlockElement.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "icon", n => { Icon = n.GetStringValue(); } },
@@ -128,6 +153,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "integrations", n => { Integrations = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "is_trial", n => { IsTrial = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadataIsTrial>(global::Soenneker.Slack.OpenApiClient.Models.ListMetadataIsTrial.CreateFromDiscriminatorValue); } },
                 { "schema", n => { Schema = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SchemaValue>(global::Soenneker.Slack.OpenApiClient.Models.SchemaValue.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "subtask_schema", n => { SubtaskSchema = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ListMetadataSubtaskSchemaItem>(global::Soenneker.Slack.OpenApiClient.Models.ListMetadataSubtaskSchemaItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "todo_mode", n => { TodoMode = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadataTodoMode>(global::Soenneker.Slack.OpenApiClient.Models.ListMetadataTodoMode.CreateFromDiscriminatorValue); } },
                 { "views", n => { Views = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.View>(global::Soenneker.Slack.OpenApiClient.Models.View.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -139,6 +166,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.CreationSource>("creation_source", CreationSource);
+            writer.WriteStringValue("default_view", DefaultView);
             writer.WriteStringValue("description", Description);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.DescriptionBlockElement>("description_blocks", DescriptionBlocks);
             writer.WriteStringValue("icon", Icon);
@@ -147,6 +175,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("integrations", Integrations);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadataIsTrial>("is_trial", IsTrial);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SchemaValue>("schema", Schema);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ListMetadataSubtaskSchemaItem>("subtask_schema", SubtaskSchema);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadataTodoMode>("todo_mode", TodoMode);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.View>("views", Views);
             writer.WriteAdditionalData(AdditionalData);
         }

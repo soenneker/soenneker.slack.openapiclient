@@ -54,6 +54,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.MessageMetadata Metadata { get; set; }
 #endif
+        /// <summary>The session status to set after stopping the stream.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SessionStatus { get; set; }
+#nullable restore
+#else
+        public string SessionStatus { get; set; }
+#endif
         /// <summary>Timestamp of the message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -92,6 +100,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "chunks", n => { Chunks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AnyChunk>(global::Soenneker.Slack.OpenApiClient.Models.AnyChunk.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "markdown_text", n => { MarkdownText = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageMetadata>(global::Soenneker.Slack.OpenApiClient.Models.MessageMetadata.CreateFromDiscriminatorValue); } },
+                { "session_status", n => { SessionStatus = n.GetStringValue(); } },
                 { "ts", n => { Ts = n.GetStringValue(); } },
             };
         }
@@ -107,6 +116,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AnyChunk>("chunks", Chunks);
             writer.WriteStringValue("markdown_text", MarkdownText);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageMetadata>("metadata", Metadata);
+            writer.WriteStringValue("session_status", SessionStatus);
             writer.WriteStringValue("ts", Ts);
             writer.WriteAdditionalData(AdditionalData);
         }

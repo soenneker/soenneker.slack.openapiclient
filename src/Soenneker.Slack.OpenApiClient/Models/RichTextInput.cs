@@ -46,6 +46,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock InitialValue { get; set; }
 #endif
+        /// <summary>The maximum number of lines of text shown in the input before it scrolls. Must be between 1 and 100.Defaults to `8` when not specified.</summary>
+        public double? MaxLines { get; set; }
+        /// <summary>The minimum number of lines of text shown in the input. Must be between 1 and 100.</summary>
+        public double? MinLines { get; set; }
         /// <summary>A [PlainTextElement](PlainTextElement) object that defines the placeholder text shown on the element. Maximumlength for the `text` field in this object is 150 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -85,6 +89,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "dispatch_action_config", n => { DispatchActionConfig = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DispatchActionConfig>(global::Soenneker.Slack.OpenApiClient.Models.DispatchActionConfig.CreateFromDiscriminatorValue); } },
                 { "focus_on_load", n => { FocusOnLoad = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextInputFocusOnLoad>(global::Soenneker.Slack.OpenApiClient.Models.RichTextInputFocusOnLoad.CreateFromDiscriminatorValue); } },
                 { "initial_value", n => { InitialValue = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock>(global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock.CreateFromDiscriminatorValue); } },
+                { "max_lines", n => { MaxLines = n.GetDoubleValue(); } },
+                { "min_lines", n => { MinLines = n.GetDoubleValue(); } },
                 { "placeholder", n => { Placeholder = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>(global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextInputType>(); } },
             };
@@ -100,6 +106,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DispatchActionConfig>("dispatch_action_config", DispatchActionConfig);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextInputFocusOnLoad>("focus_on_load", FocusOnLoad);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock>("initial_value", InitialValue);
+            writer.WriteDoubleValue("max_lines", MaxLines);
+            writer.WriteDoubleValue("min_lines", MinLines);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>("placeholder", Placeholder);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextInputType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);

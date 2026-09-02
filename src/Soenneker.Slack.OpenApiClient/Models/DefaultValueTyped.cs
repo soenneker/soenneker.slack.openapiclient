@@ -14,6 +14,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The channel property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Slack.OpenApiClient.Models.DefaultValueTypedChannelItem>? Channel { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Slack.OpenApiClient.Models.DefaultValueTypedChannelItem> Channel { get; set; }
+#endif
         /// <summary>The select property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -21,6 +29,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #nullable restore
 #else
         public List<string> Select { get; set; }
+#endif
+        /// <summary>The user property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Slack.OpenApiClient.Models.DefaultValueTypedUserItem>? User { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Slack.OpenApiClient.Models.DefaultValueTypedUserItem> User { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.DefaultValueTyped"/> and sets the default values.
@@ -47,7 +63,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "channel", n => { Channel = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.DefaultValueTypedChannelItem>(global::Soenneker.Slack.OpenApiClient.Models.DefaultValueTypedChannelItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "select", n => { Select = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "user", n => { User = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.DefaultValueTypedUserItem>(global::Soenneker.Slack.OpenApiClient.Models.DefaultValueTypedUserItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -57,7 +75,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.DefaultValueTypedChannelItem>("channel", Channel);
             writer.WriteCollectionOfPrimitiveValues<string>("select", Select);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.DefaultValueTypedUserItem>("user", User);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

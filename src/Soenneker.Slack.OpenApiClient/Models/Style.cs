@@ -62,6 +62,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.StyleStrike Strike { get; set; }
 #endif
+        /// <summary>The underline property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.StyleUnderline? Underline { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.StyleUnderline Underline { get; set; }
+#endif
         /// <summary>The unlink property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -101,6 +109,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "highlight", n => { Highlight = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.StyleHighlight>(global::Soenneker.Slack.OpenApiClient.Models.StyleHighlight.CreateFromDiscriminatorValue); } },
                 { "italic", n => { Italic = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.StyleItalic>(global::Soenneker.Slack.OpenApiClient.Models.StyleItalic.CreateFromDiscriminatorValue); } },
                 { "strike", n => { Strike = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.StyleStrike>(global::Soenneker.Slack.OpenApiClient.Models.StyleStrike.CreateFromDiscriminatorValue); } },
+                { "underline", n => { Underline = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.StyleUnderline>(global::Soenneker.Slack.OpenApiClient.Models.StyleUnderline.CreateFromDiscriminatorValue); } },
                 { "unlink", n => { Unlink = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.StyleUnlink>(global::Soenneker.Slack.OpenApiClient.Models.StyleUnlink.CreateFromDiscriminatorValue); } },
             };
         }
@@ -117,6 +126,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.StyleHighlight>("highlight", Highlight);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.StyleItalic>("italic", Italic);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.StyleStrike>("strike", Strike);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.StyleUnderline>("underline", Underline);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.StyleUnlink>("unlink", Unlink);
             writer.WriteAdditionalData(AdditionalData);
         }

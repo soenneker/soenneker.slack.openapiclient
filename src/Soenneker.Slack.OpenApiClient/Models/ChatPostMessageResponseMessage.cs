@@ -70,6 +70,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.FluffyIcons Icons { get; set; }
 #endif
+        /// <summary>The language property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.Language? Language { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.Language Language { get; set; }
+#endif
         /// <summary>The metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -198,6 +206,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "bot_id", n => { BotId = n.GetStringValue(); } },
                 { "bot_profile", n => { BotProfile = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotProfile>(global::Soenneker.Slack.OpenApiClient.Models.BotProfile.CreateFromDiscriminatorValue); } },
                 { "icons", n => { Icons = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FluffyIcons>(global::Soenneker.Slack.OpenApiClient.Models.FluffyIcons.CreateFromDiscriminatorValue); } },
+                { "language", n => { Language = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Language>(global::Soenneker.Slack.OpenApiClient.Models.Language.CreateFromDiscriminatorValue); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FluffyMetadata>(global::Soenneker.Slack.OpenApiClient.Models.FluffyMetadata.CreateFromDiscriminatorValue); } },
                 { "parent_user_id", n => { ParentUserId = n.GetStringValue(); } },
                 { "room", n => { Room = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Room>(global::Soenneker.Slack.OpenApiClient.Models.Room.CreateFromDiscriminatorValue); } },
@@ -226,6 +235,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("bot_id", BotId);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotProfile>("bot_profile", BotProfile);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FluffyIcons>("icons", Icons);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Language>("language", Language);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FluffyMetadata>("metadata", Metadata);
             writer.WriteStringValue("parent_user_id", ParentUserId);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Room>("room", Room);

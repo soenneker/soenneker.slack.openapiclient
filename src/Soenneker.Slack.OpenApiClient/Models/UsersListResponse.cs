@@ -14,14 +14,6 @@ namespace Soenneker.Slack.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The arg property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Arg { get; set; }
-#nullable restore
-#else
-        public string Arg { get; set; }
-#endif
         /// <summary>The cache_ts property</summary>
         public double? CacheTs { get; set; }
         /// <summary>The error property</summary>
@@ -74,6 +66,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata ResponseMetadata { get; set; }
 #endif
+        /// <summary>The warning property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Warning { get; set; }
+#nullable restore
+#else
+        public string Warning { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.UsersListResponse"/> and sets the default values.
         /// </summary>
@@ -99,7 +99,6 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "arg", n => { Arg = n.GetStringValue(); } },
                 { "cache_ts", n => { CacheTs = n.GetDoubleValue(); } },
                 { "error", n => { Error = n.GetStringValue(); } },
                 { "members", n => { Members = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Member>(global::Soenneker.Slack.OpenApiClient.Models.Member.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -108,6 +107,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "ok", n => { Ok = n.GetBoolValue(); } },
                 { "provided", n => { Provided = n.GetStringValue(); } },
                 { "response_metadata", n => { ResponseMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>(global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata.CreateFromDiscriminatorValue); } },
+                { "warning", n => { Warning = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -117,7 +117,6 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("arg", Arg);
             writer.WriteDoubleValue("cache_ts", CacheTs);
             writer.WriteStringValue("error", Error);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Member>("members", Members);
@@ -126,6 +125,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteBoolValue("ok", Ok);
             writer.WriteStringValue("provided", Provided);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>("response_metadata", ResponseMetadata);
+            writer.WriteStringValue("warning", Warning);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

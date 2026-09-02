@@ -23,7 +23,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string Markdown { get; set; }
 #endif
-        /// <summary>The type of content used to describe Canvas content. Always is `markdown`.</summary>
+        /// <summary>The type of block. For a markdown block, `type` is always `markdown`.</summary>
         public global::Soenneker.Slack.OpenApiClient.Models.MarkdownType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.DocumentContent"/> and sets the default values.

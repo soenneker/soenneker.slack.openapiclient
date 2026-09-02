@@ -30,6 +30,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string GroupByColumnId { get; set; }
 #endif
+        /// <summary>The order property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Slack.OpenApiClient.Models.GroupingOrderItem>? Order { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Slack.OpenApiClient.Models.GroupingOrderItem> Order { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Grouping"/> and sets the default values.
         /// </summary>
@@ -57,6 +65,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "group_by", n => { GroupBy = n.GetStringValue(); } },
                 { "group_by_column_id", n => { GroupByColumnId = n.GetStringValue(); } },
+                { "order", n => { Order = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.GroupingOrderItem>(global::Soenneker.Slack.OpenApiClient.Models.GroupingOrderItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -68,6 +77,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("group_by", GroupBy);
             writer.WriteStringValue("group_by_column_id", GroupByColumnId);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.GroupingOrderItem>("order", Order);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

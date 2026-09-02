@@ -432,6 +432,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #endif
         /// <summary>The size property</summary>
         public double? Size { get; set; }
+        /// <summary>The slack_file_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SlackFileId { get; set; }
+#nullable restore
+#else
+        public string SlackFileId { get; set; }
+#endif
         /// <summary>The text property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -585,6 +593,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "service_name", n => { ServiceName = n.GetStringValue(); } },
                 { "service_url", n => { ServiceUrl = n.GetStringValue(); } },
                 { "size", n => { Size = n.GetDoubleValue(); } },
+                { "slack_file_id", n => { SlackFileId = n.GetStringValue(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
                 { "thumb_height", n => { ThumbHeight = n.GetDoubleValue(); } },
                 { "thumb_url", n => { ThumbUrl = n.GetStringValue(); } },
@@ -662,6 +671,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("service_name", ServiceName);
             writer.WriteStringValue("service_url", ServiceUrl);
             writer.WriteDoubleValue("size", Size);
+            writer.WriteStringValue("slack_file_id", SlackFileId);
             writer.WriteStringValue("text", Text);
             writer.WriteDoubleValue("thumb_height", ThumbHeight);
             writer.WriteStringValue("thumb_url", ThumbUrl);

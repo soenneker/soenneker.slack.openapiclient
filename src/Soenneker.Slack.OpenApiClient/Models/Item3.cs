@@ -14,47 +14,55 @@ namespace Soenneker.Slack.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The channel property</summary>
+        /// <summary>The created_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Channel { get; set; }
+        public string? CreatedBy { get; set; }
 #nullable restore
 #else
-        public string Channel { get; set; }
+        public string CreatedBy { get; set; }
 #endif
-        /// <summary>The comment property</summary>
+        /// <summary>The date_created property</summary>
+        public double? DateCreated { get; set; }
+        /// <summary>The fields property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Comment3? Comment { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Field>? Fields { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Comment3 Comment { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Field> Fields { get; set; }
 #endif
-        /// <summary>The date_create property</summary>
-        public double? DateCreate { get; set; }
-        /// <summary>The file property</summary>
+        /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ItemFile? File { get; set; }
+        public string? Id { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ItemFile File { get; set; }
+        public string Id { get; set; }
 #endif
-        /// <summary>The message property</summary>
+        /// <summary>The list_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Message7? Message { get; set; }
+        public string? ListId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Message7 Message { get; set; }
+        public string ListId { get; set; }
 #endif
-        /// <summary>The type property</summary>
+        /// <summary>The updated_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public string? UpdatedBy { get; set; }
 #nullable restore
 #else
-        public string Type { get; set; }
+        public string UpdatedBy { get; set; }
+#endif
+        /// <summary>The updated_timestamp property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UpdatedTimestamp { get; set; }
+#nullable restore
+#else
+        public string UpdatedTimestamp { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Item3"/> and sets the default values.
@@ -81,12 +89,13 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "channel", n => { Channel = n.GetStringValue(); } },
-                { "comment", n => { Comment = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment3>(global::Soenneker.Slack.OpenApiClient.Models.Comment3.CreateFromDiscriminatorValue); } },
-                { "date_create", n => { DateCreate = n.GetDoubleValue(); } },
-                { "file", n => { File = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ItemFile>(global::Soenneker.Slack.OpenApiClient.Models.ItemFile.CreateFromDiscriminatorValue); } },
-                { "message", n => { Message = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Message7>(global::Soenneker.Slack.OpenApiClient.Models.Message7.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "created_by", n => { CreatedBy = n.GetStringValue(); } },
+                { "date_created", n => { DateCreated = n.GetDoubleValue(); } },
+                { "fields", n => { Fields = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Field>(global::Soenneker.Slack.OpenApiClient.Models.Field.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "id", n => { Id = n.GetStringValue(); } },
+                { "list_id", n => { ListId = n.GetStringValue(); } },
+                { "updated_by", n => { UpdatedBy = n.GetStringValue(); } },
+                { "updated_timestamp", n => { UpdatedTimestamp = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -96,12 +105,13 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("channel", Channel);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment3>("comment", Comment);
-            writer.WriteDoubleValue("date_create", DateCreate);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ItemFile>("file", File);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Message7>("message", Message);
-            writer.WriteStringValue("type", Type);
+            writer.WriteStringValue("created_by", CreatedBy);
+            writer.WriteDoubleValue("date_created", DateCreated);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Field>("fields", Fields);
+            writer.WriteStringValue("id", Id);
+            writer.WriteStringValue("list_id", ListId);
+            writer.WriteStringValue("updated_by", UpdatedBy);
+            writer.WriteStringValue("updated_timestamp", UpdatedTimestamp);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

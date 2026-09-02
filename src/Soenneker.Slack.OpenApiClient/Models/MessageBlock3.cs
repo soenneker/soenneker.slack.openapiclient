@@ -25,10 +25,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.FieldMessage3? Message { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.FieldMessage2? Message { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.FieldMessage3 Message { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.FieldMessage2 Message { get; set; }
 #endif
         /// <summary>The team property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -72,7 +72,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "channel", n => { Channel = n.GetStringValue(); } },
-                { "message", n => { Message = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FieldMessage3>(global::Soenneker.Slack.OpenApiClient.Models.FieldMessage3.CreateFromDiscriminatorValue); } },
+                { "message", n => { Message = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FieldMessage2>(global::Soenneker.Slack.OpenApiClient.Models.FieldMessage2.CreateFromDiscriminatorValue); } },
                 { "team", n => { Team = n.GetStringValue(); } },
                 { "ts", n => { Ts = n.GetStringValue(); } },
             };
@@ -85,7 +85,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("channel", Channel);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FieldMessage3>("message", Message);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FieldMessage2>("message", Message);
             writer.WriteStringValue("team", Team);
             writer.WriteStringValue("ts", Ts);
             writer.WriteAdditionalData(AdditionalData);

@@ -43,10 +43,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The paging property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Paging? Paging { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Paging2? Paging { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Paging Paging { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Paging2 Paging { get; set; }
 #endif
         /// <summary>The provided property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,6 +63,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata ResponseMetadata { get; set; }
+#endif
+        /// <summary>The warning property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Warning { get; set; }
+#nullable restore
+#else
+        public string Warning { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.TeamAccessLogsResponse"/> and sets the default values.
@@ -93,9 +101,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "logins", n => { Logins = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Login>(global::Soenneker.Slack.OpenApiClient.Models.Login.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "needed", n => { Needed = n.GetStringValue(); } },
                 { "ok", n => { Ok = n.GetBoolValue(); } },
-                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Paging>(global::Soenneker.Slack.OpenApiClient.Models.Paging.CreateFromDiscriminatorValue); } },
+                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Paging2>(global::Soenneker.Slack.OpenApiClient.Models.Paging2.CreateFromDiscriminatorValue); } },
                 { "provided", n => { Provided = n.GetStringValue(); } },
                 { "response_metadata", n => { ResponseMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>(global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata.CreateFromDiscriminatorValue); } },
+                { "warning", n => { Warning = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -109,9 +118,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Login>("logins", Logins);
             writer.WriteStringValue("needed", Needed);
             writer.WriteBoolValue("ok", Ok);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Paging>("paging", Paging);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Paging2>("paging", Paging);
             writer.WriteStringValue("provided", Provided);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>("response_metadata", ResponseMetadata);
+            writer.WriteStringValue("warning", Warning);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

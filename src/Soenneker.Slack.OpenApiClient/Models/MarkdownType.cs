@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
-    /// <summary>The type of content used to describe Canvas content. Always is `markdown`.</summary>
+    /// <summary>The type of block. For a markdown block, `type` is always `markdown`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum MarkdownType
     {

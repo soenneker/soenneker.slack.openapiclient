@@ -41,10 +41,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>A [view payload](https://docs.slack.dev/surfaces/modals).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.View2? View { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.View6? View { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.View2 View { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.View6 View { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ViewsPublishArguments"/> and sets the default values.
@@ -74,7 +74,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "hash", n => { Hash = n.GetStringValue(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
                 { "user_id", n => { UserId = n.GetStringValue(); } },
-                { "view", n => { View = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View2>(global::Soenneker.Slack.OpenApiClient.Models.View2.CreateFromDiscriminatorValue); } },
+                { "view", n => { View = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View6>(global::Soenneker.Slack.OpenApiClient.Models.View6.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -87,7 +87,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("hash", Hash);
             writer.WriteStringValue("token", Token);
             writer.WriteStringValue("user_id", UserId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View2>("view", View);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View6>("view", View);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -54,6 +54,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string FirstName { get; set; }
 #endif
+        /// <summary>The guest_expiration_ts property</summary>
+        public double? GuestExpirationTs { get; set; }
         /// <summary>The guest_invited_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -192,6 +194,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string Skype { get; set; }
 #endif
+        /// <summary>The start_date property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? StartDate { get; set; }
+#nullable restore
+#else
+        public string StartDate { get; set; }
+#endif
         /// <summary>The status_emoji property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -280,6 +290,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "display_name_normalized", n => { DisplayNameNormalized = n.GetStringValue(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "first_name", n => { FirstName = n.GetStringValue(); } },
+                { "guest_expiration_ts", n => { GuestExpirationTs = n.GetDoubleValue(); } },
                 { "guest_invited_by", n => { GuestInvitedBy = n.GetStringValue(); } },
                 { "huddle_state", n => { HuddleState = n.GetStringValue(); } },
                 { "huddle_state_expiration_ts", n => { HuddleStateExpirationTs = n.GetDoubleValue(); } },
@@ -298,6 +309,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "real_name", n => { RealName = n.GetStringValue(); } },
                 { "real_name_normalized", n => { RealNameNormalized = n.GetStringValue(); } },
                 { "skype", n => { Skype = n.GetStringValue(); } },
+                { "start_date", n => { StartDate = n.GetStringValue(); } },
                 { "status_emoji", n => { StatusEmoji = n.GetStringValue(); } },
                 { "status_emoji_display_info", n => { StatusEmojiDisplayInfo = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.StatusEmojiDisplayInfo>(global::Soenneker.Slack.OpenApiClient.Models.StatusEmojiDisplayInfo.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "status_emoji_url", n => { StatusEmojiUrl = n.GetStringValue(); } },
@@ -320,6 +332,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("display_name_normalized", DisplayNameNormalized);
             writer.WriteStringValue("email", Email);
             writer.WriteStringValue("first_name", FirstName);
+            writer.WriteDoubleValue("guest_expiration_ts", GuestExpirationTs);
             writer.WriteStringValue("guest_invited_by", GuestInvitedBy);
             writer.WriteStringValue("huddle_state", HuddleState);
             writer.WriteDoubleValue("huddle_state_expiration_ts", HuddleStateExpirationTs);
@@ -338,6 +351,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("real_name", RealName);
             writer.WriteStringValue("real_name_normalized", RealNameNormalized);
             writer.WriteStringValue("skype", Skype);
+            writer.WriteStringValue("start_date", StartDate);
             writer.WriteStringValue("status_emoji", StatusEmoji);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.StatusEmojiDisplayInfo>("status_emoji_display_info", StatusEmojiDisplayInfo);
             writer.WriteStringValue("status_emoji_url", StatusEmojiUrl);

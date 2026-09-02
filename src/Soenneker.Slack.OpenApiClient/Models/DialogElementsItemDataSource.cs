@@ -8,10 +8,6 @@ namespace Soenneker.Slack.OpenApiClient.Models
     public enum DialogElementsItemDataSource
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "users")]
-        #pragma warning disable CS1591
-        Users,
-        #pragma warning restore CS1591
         [EnumMember(Value = "channels")]
         #pragma warning disable CS1591
         Channels,
@@ -19,6 +15,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         [EnumMember(Value = "conversations")]
         #pragma warning disable CS1591
         Conversations,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "users")]
+        #pragma warning disable CS1591
+        Users,
         #pragma warning restore CS1591
         [EnumMember(Value = "external")]
         #pragma warning disable CS1591

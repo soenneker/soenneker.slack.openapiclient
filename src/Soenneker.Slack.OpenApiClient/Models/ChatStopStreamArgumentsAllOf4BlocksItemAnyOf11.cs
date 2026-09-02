@@ -46,7 +46,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement Title { get; set; }
 #endif
-        /// <summary>The type of block. For an image block, `type` is always `image`.</summary>
+        /// <summary>The type of element. In this case `type` is always `image`.</summary>
         public global::Soenneker.Slack.OpenApiClient.Models.ImageType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatStopStreamArgumentsAllOf4BlocksItemAnyOf11"/> and sets the default values.

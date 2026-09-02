@@ -14,6 +14,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The archived_row_count property</summary>
+        public double? ArchivedRowCount { get; set; }
         /// <summary>The column_count property</summary>
         public double? ColumnCount { get; set; }
         /// <summary>The column_count_limit property</summary>
@@ -77,6 +79,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "archived_row_count", n => { ArchivedRowCount = n.GetDoubleValue(); } },
                 { "column_count", n => { ColumnCount = n.GetDoubleValue(); } },
                 { "column_count_limit", n => { ColumnCountLimit = n.GetDoubleValue(); } },
                 { "max_attachments_per_cell", n => { MaxAttachmentsPerCell = n.GetDoubleValue(); } },
@@ -96,6 +99,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteDoubleValue("archived_row_count", ArchivedRowCount);
             writer.WriteDoubleValue("column_count", ColumnCount);
             writer.WriteDoubleValue("column_count_limit", ColumnCountLimit);
             writer.WriteDoubleValue("max_attachments_per_cell", MaxAttachmentsPerCell);

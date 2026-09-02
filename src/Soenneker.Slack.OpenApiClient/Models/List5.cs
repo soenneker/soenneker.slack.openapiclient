@@ -149,10 +149,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The list_metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ListMetadata6? ListMetadata { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ListMetadata8? ListMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ListMetadata6 ListMetadata { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ListMetadata8 ListMetadata { get; set; }
 #endif
         /// <summary>The mimetype property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -319,7 +319,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "is_public", n => { IsPublic = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.List5IsPublic>(global::Soenneker.Slack.OpenApiClient.Models.List5IsPublic.CreateFromDiscriminatorValue); } },
                 { "last_editor", n => { LastEditor = n.GetStringValue(); } },
                 { "list_limits", n => { ListLimits = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListLimits>(global::Soenneker.Slack.OpenApiClient.Models.ListLimits.CreateFromDiscriminatorValue); } },
-                { "list_metadata", n => { ListMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata6>(global::Soenneker.Slack.OpenApiClient.Models.ListMetadata6.CreateFromDiscriminatorValue); } },
+                { "list_metadata", n => { ListMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata8>(global::Soenneker.Slack.OpenApiClient.Models.ListMetadata8.CreateFromDiscriminatorValue); } },
                 { "mimetype", n => { Mimetype = n.GetStringValue(); } },
                 { "mode", n => { Mode = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -366,7 +366,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.List5IsPublic>("is_public", IsPublic);
             writer.WriteStringValue("last_editor", LastEditor);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListLimits>("list_limits", ListLimits);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata6>("list_metadata", ListMetadata);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata8>("list_metadata", ListMetadata);
             writer.WriteStringValue("mimetype", Mimetype);
             writer.WriteStringValue("mode", Mode);
             writer.WriteStringValue("name", Name);

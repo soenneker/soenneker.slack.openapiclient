@@ -70,6 +70,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.Interactivity Interactivity { get; set; }
 #endif
+        /// <summary>The is_mcp_enabled property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.SettingsIsMcpEnabled? IsMcpEnabled { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.SettingsIsMcpEnabled IsMcpEnabled { get; set; }
+#endif
         /// <summary>The long_description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -134,6 +142,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "function_runtime", n => { FunctionRuntime = n.GetStringValue(); } },
                 { "hermes_app_type", n => { HermesAppType = n.GetStringValue(); } },
                 { "interactivity", n => { Interactivity = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Interactivity>(global::Soenneker.Slack.OpenApiClient.Models.Interactivity.CreateFromDiscriminatorValue); } },
+                { "is_mcp_enabled", n => { IsMcpEnabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SettingsIsMcpEnabled>(global::Soenneker.Slack.OpenApiClient.Models.SettingsIsMcpEnabled.CreateFromDiscriminatorValue); } },
                 { "long_description", n => { LongDescription = n.GetStringValue(); } },
                 { "org_deploy_enabled", n => { OrgDeployEnabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SettingsOrgDeployEnabled>(global::Soenneker.Slack.OpenApiClient.Models.SettingsOrgDeployEnabled.CreateFromDiscriminatorValue); } },
                 { "socket_mode_enabled", n => { SocketModeEnabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SettingsSocketModeEnabled>(global::Soenneker.Slack.OpenApiClient.Models.SettingsSocketModeEnabled.CreateFromDiscriminatorValue); } },
@@ -154,6 +163,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("function_runtime", FunctionRuntime);
             writer.WriteStringValue("hermes_app_type", HermesAppType);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Interactivity>("interactivity", Interactivity);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SettingsIsMcpEnabled>("is_mcp_enabled", IsMcpEnabled);
             writer.WriteStringValue("long_description", LongDescription);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SettingsOrgDeployEnabled>("org_deploy_enabled", OrgDeployEnabled);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SettingsSocketModeEnabled>("socket_mode_enabled", SocketModeEnabled);

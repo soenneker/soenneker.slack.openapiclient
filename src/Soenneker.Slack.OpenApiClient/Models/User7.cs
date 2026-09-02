@@ -14,77 +14,21 @@ namespace Soenneker.Slack.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The email property</summary>
+        /// <summary>The app_home property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Email { get; set; }
+        public string? AppHome { get; set; }
 #nullable restore
 #else
-        public string Email { get; set; }
+        public string AppHome { get; set; }
 #endif
-        /// <summary>The id property</summary>
+        /// <summary>The user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? UserId { get; set; }
 #nullable restore
 #else
-        public string Id { get; set; }
-#endif
-        /// <summary>The image_192 property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Image192 { get; set; }
-#nullable restore
-#else
-        public string Image192 { get; set; }
-#endif
-        /// <summary>The image_24 property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Image24 { get; set; }
-#nullable restore
-#else
-        public string Image24 { get; set; }
-#endif
-        /// <summary>The image_32 property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Image32 { get; set; }
-#nullable restore
-#else
-        public string Image32 { get; set; }
-#endif
-        /// <summary>The image_48 property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Image48 { get; set; }
-#nullable restore
-#else
-        public string Image48 { get; set; }
-#endif
-        /// <summary>The image_512 property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Image512 { get; set; }
-#nullable restore
-#else
-        public string Image512 { get; set; }
-#endif
-        /// <summary>The image_72 property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Image72 { get; set; }
-#nullable restore
-#else
-        public string Image72 { get; set; }
-#endif
-        /// <summary>The name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Name { get; set; }
-#nullable restore
-#else
-        public string Name { get; set; }
+        public string UserId { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.User7"/> and sets the default values.
@@ -111,15 +55,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "email", n => { Email = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
-                { "image_192", n => { Image192 = n.GetStringValue(); } },
-                { "image_24", n => { Image24 = n.GetStringValue(); } },
-                { "image_32", n => { Image32 = n.GetStringValue(); } },
-                { "image_48", n => { Image48 = n.GetStringValue(); } },
-                { "image_512", n => { Image512 = n.GetStringValue(); } },
-                { "image_72", n => { Image72 = n.GetStringValue(); } },
-                { "name", n => { Name = n.GetStringValue(); } },
+                { "app_home", n => { AppHome = n.GetStringValue(); } },
+                { "user_id", n => { UserId = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -129,15 +66,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("email", Email);
-            writer.WriteStringValue("id", Id);
-            writer.WriteStringValue("image_192", Image192);
-            writer.WriteStringValue("image_24", Image24);
-            writer.WriteStringValue("image_32", Image32);
-            writer.WriteStringValue("image_48", Image48);
-            writer.WriteStringValue("image_512", Image512);
-            writer.WriteStringValue("image_72", Image72);
-            writer.WriteStringValue("name", Name);
+            writer.WriteStringValue("app_home", AppHome);
+            writer.WriteStringValue("user_id", UserId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

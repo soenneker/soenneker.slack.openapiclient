@@ -86,6 +86,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
+        /// <summary>The is_sfdc_auto_slack property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.Team7IsSfdcAutoSlack? IsSfdcAutoSlack { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.Team7IsSfdcAutoSlack IsSfdcAutoSlack { get; set; }
+#endif
         /// <summary>The is_verified property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -102,6 +110,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.Team7LobSalesHomeEnabled LobSalesHomeEnabled { get; set; }
 #endif
+        /// <summary>The locale property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Locale { get; set; }
+#nullable restore
+#else
+        public string Locale { get; set; }
+#endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -109,6 +125,22 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #nullable restore
 #else
         public string Name { get; set; }
+#endif
+        /// <summary>The pay_prod_cur property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PayProdCur { get; set; }
+#nullable restore
+#else
+        public string PayProdCur { get; set; }
+#endif
+        /// <summary>The sso_provider property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.SsoProvider? SsoProvider { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.SsoProvider SsoProvider { get; set; }
 #endif
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -152,9 +184,13 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "enterprise_name", n => { EnterpriseName = n.GetStringValue(); } },
                 { "icon", n => { Icon = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Icon>(global::Soenneker.Slack.OpenApiClient.Models.Icon.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
+                { "is_sfdc_auto_slack", n => { IsSfdcAutoSlack = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Team7IsSfdcAutoSlack>(global::Soenneker.Slack.OpenApiClient.Models.Team7IsSfdcAutoSlack.CreateFromDiscriminatorValue); } },
                 { "is_verified", n => { IsVerified = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Team7IsVerified>(global::Soenneker.Slack.OpenApiClient.Models.Team7IsVerified.CreateFromDiscriminatorValue); } },
                 { "lob_sales_home_enabled", n => { LobSalesHomeEnabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Team7LobSalesHomeEnabled>(global::Soenneker.Slack.OpenApiClient.Models.Team7LobSalesHomeEnabled.CreateFromDiscriminatorValue); } },
+                { "locale", n => { Locale = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
+                { "pay_prod_cur", n => { PayProdCur = n.GetStringValue(); } },
+                { "sso_provider", n => { SsoProvider = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SsoProvider>(global::Soenneker.Slack.OpenApiClient.Models.SsoProvider.CreateFromDiscriminatorValue); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -174,9 +210,13 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("enterprise_name", EnterpriseName);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Icon>("icon", Icon);
             writer.WriteStringValue("id", Id);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Team7IsSfdcAutoSlack>("is_sfdc_auto_slack", IsSfdcAutoSlack);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Team7IsVerified>("is_verified", IsVerified);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Team7LobSalesHomeEnabled>("lob_sales_home_enabled", LobSalesHomeEnabled);
+            writer.WriteStringValue("locale", Locale);
             writer.WriteStringValue("name", Name);
+            writer.WriteStringValue("pay_prod_cur", PayProdCur);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SsoProvider>("sso_provider", SsoProvider);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -65,10 +65,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The file property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.File4? File { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.File5? File { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.File4 File { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.File5 File { get; set; }
 #endif
         /// <summary>The is_truncated property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -112,6 +112,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata ResponseMetadata { get; set; }
 #endif
+        /// <summary>The warning property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Warning { get; set; }
+#nullable restore
+#else
+        public string Warning { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.FilesInfoResponse"/> and sets the default values.
         /// </summary>
@@ -143,13 +151,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "content_highlight_html", n => { ContentHighlightHtml = n.GetStringValue(); } },
                 { "content_highlight_html_truncated", n => { ContentHighlightHtmlTruncated = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FilesInfoResponseAllOf2ContentHighlightHtmlTruncated>(global::Soenneker.Slack.OpenApiClient.Models.FilesInfoResponseAllOf2ContentHighlightHtmlTruncated.CreateFromDiscriminatorValue); } },
                 { "error", n => { Error = n.GetStringValue(); } },
-                { "file", n => { File = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.File4>(global::Soenneker.Slack.OpenApiClient.Models.File4.CreateFromDiscriminatorValue); } },
+                { "file", n => { File = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.File5>(global::Soenneker.Slack.OpenApiClient.Models.File5.CreateFromDiscriminatorValue); } },
                 { "is_truncated", n => { IsTruncated = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FilesInfoResponseAllOf2IsTruncated>(global::Soenneker.Slack.OpenApiClient.Models.FilesInfoResponseAllOf2IsTruncated.CreateFromDiscriminatorValue); } },
                 { "needed", n => { Needed = n.GetStringValue(); } },
                 { "ok", n => { Ok = n.GetBoolValue(); } },
                 { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Paging>(global::Soenneker.Slack.OpenApiClient.Models.Paging.CreateFromDiscriminatorValue); } },
                 { "provided", n => { Provided = n.GetStringValue(); } },
                 { "response_metadata", n => { ResponseMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>(global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata.CreateFromDiscriminatorValue); } },
+                { "warning", n => { Warning = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -165,13 +174,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("content_highlight_html", ContentHighlightHtml);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FilesInfoResponseAllOf2ContentHighlightHtmlTruncated>("content_highlight_html_truncated", ContentHighlightHtmlTruncated);
             writer.WriteStringValue("error", Error);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.File4>("file", File);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.File5>("file", File);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FilesInfoResponseAllOf2IsTruncated>("is_truncated", IsTruncated);
             writer.WriteStringValue("needed", Needed);
             writer.WriteBoolValue("ok", Ok);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Paging>("paging", Paging);
             writer.WriteStringValue("provided", Provided);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>("response_metadata", ResponseMetadata);
+            writer.WriteStringValue("warning", Warning);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

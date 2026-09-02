@@ -14,6 +14,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The pkce_enabled property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.OAuthConfigPkceEnabled? PkceEnabled { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.OAuthConfigPkceEnabled PkceEnabled { get; set; }
+#endif
         /// <summary>The redirect_urls property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -63,6 +71,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "pkce_enabled", n => { PkceEnabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.OAuthConfigPkceEnabled>(global::Soenneker.Slack.OpenApiClient.Models.OAuthConfigPkceEnabled.CreateFromDiscriminatorValue); } },
                 { "redirect_urls", n => { RedirectUrls = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "scopes", n => { Scopes = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Scopes>(global::Soenneker.Slack.OpenApiClient.Models.Scopes.CreateFromDiscriminatorValue); } },
                 { "token_management_enabled", n => { TokenManagementEnabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.OAuthConfigTokenManagementEnabled>(global::Soenneker.Slack.OpenApiClient.Models.OAuthConfigTokenManagementEnabled.CreateFromDiscriminatorValue); } },
@@ -75,6 +84,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.OAuthConfigPkceEnabled>("pkce_enabled", PkceEnabled);
             writer.WriteCollectionOfPrimitiveValues<string>("redirect_urls", RedirectUrls);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Scopes>("scopes", Scopes);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.OAuthConfigTokenManagementEnabled>("token_management_enabled", TokenManagementEnabled);

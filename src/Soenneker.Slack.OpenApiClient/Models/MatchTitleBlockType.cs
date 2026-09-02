@@ -8,74 +8,74 @@ using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.ActionsWrapper7"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ContextWrapper7"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.DividerWrapper7"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ImageWrapper10"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.RichTextWrapper7"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.Section2Wrapper7"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ShareShortcutWrapper7"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.VideoWrapper7"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.ActionsWrapper11"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ContextWrapper11"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.DividerWrapper11"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ImageWrapper16"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.RichTextWrapper11"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.Section2Wrapper11"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ShareShortcutWrapper11"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.VideoWrapper11"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MatchTitleBlockType : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ActionsWrapper7"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ActionsWrapper11"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ActionsWrapper7? ActionsWrapper7 { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ActionsWrapper11? ActionsWrapper11 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ActionsWrapper7 ActionsWrapper7 { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ActionsWrapper11 ActionsWrapper11 { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ContextWrapper7"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ContextWrapper11"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ContextWrapper7? ContextWrapper7 { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ContextWrapper11? ContextWrapper11 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ContextWrapper7 ContextWrapper7 { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ContextWrapper11 ContextWrapper11 { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.DividerWrapper7"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.DividerWrapper11"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.DividerWrapper7? DividerWrapper7 { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.DividerWrapper11? DividerWrapper11 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.DividerWrapper7 DividerWrapper7 { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.DividerWrapper11 DividerWrapper11 { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ImageWrapper10"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ImageWrapper16"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ImageWrapper10? ImageWrapper10 { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ImageWrapper16? ImageWrapper16 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ImageWrapper10 ImageWrapper10 { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ImageWrapper16 ImageWrapper16 { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.RichTextWrapper7"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.RichTextWrapper11"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextWrapper7? RichTextWrapper7 { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.RichTextWrapper11? RichTextWrapper11 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextWrapper7 RichTextWrapper7 { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.RichTextWrapper11 RichTextWrapper11 { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.Section2Wrapper7"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.Section2Wrapper11"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Section2Wrapper7? Section2Wrapper7 { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Section2Wrapper11? Section2Wrapper11 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Section2Wrapper7 Section2Wrapper7 { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Section2Wrapper11 Section2Wrapper11 { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ShareShortcutWrapper7"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ShareShortcutWrapper11"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ShareShortcutWrapper7? ShareShortcutWrapper7 { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ShareShortcutWrapper11? ShareShortcutWrapper11 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ShareShortcutWrapper7 ShareShortcutWrapper7 { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ShareShortcutWrapper11 ShareShortcutWrapper11 { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.VideoWrapper7"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.VideoWrapper11"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.VideoWrapper7? VideoWrapper7 { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.VideoWrapper11? VideoWrapper11 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.VideoWrapper7 VideoWrapper7 { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.VideoWrapper11 VideoWrapper11 { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -86,14 +86,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Slack.OpenApiClient.Models.MatchTitleBlockType();
-            result.ActionsWrapper7 = new global::Soenneker.Slack.OpenApiClient.Models.ActionsWrapper7();
-            result.ContextWrapper7 = new global::Soenneker.Slack.OpenApiClient.Models.ContextWrapper7();
-            result.DividerWrapper7 = new global::Soenneker.Slack.OpenApiClient.Models.DividerWrapper7();
-            result.ImageWrapper10 = new global::Soenneker.Slack.OpenApiClient.Models.ImageWrapper10();
-            result.RichTextWrapper7 = new global::Soenneker.Slack.OpenApiClient.Models.RichTextWrapper7();
-            result.Section2Wrapper7 = new global::Soenneker.Slack.OpenApiClient.Models.Section2Wrapper7();
-            result.ShareShortcutWrapper7 = new global::Soenneker.Slack.OpenApiClient.Models.ShareShortcutWrapper7();
-            result.VideoWrapper7 = new global::Soenneker.Slack.OpenApiClient.Models.VideoWrapper7();
+            result.ActionsWrapper11 = new global::Soenneker.Slack.OpenApiClient.Models.ActionsWrapper11();
+            result.ContextWrapper11 = new global::Soenneker.Slack.OpenApiClient.Models.ContextWrapper11();
+            result.DividerWrapper11 = new global::Soenneker.Slack.OpenApiClient.Models.DividerWrapper11();
+            result.ImageWrapper16 = new global::Soenneker.Slack.OpenApiClient.Models.ImageWrapper16();
+            result.RichTextWrapper11 = new global::Soenneker.Slack.OpenApiClient.Models.RichTextWrapper11();
+            result.Section2Wrapper11 = new global::Soenneker.Slack.OpenApiClient.Models.Section2Wrapper11();
+            result.ShareShortcutWrapper11 = new global::Soenneker.Slack.OpenApiClient.Models.ShareShortcutWrapper11();
+            result.VideoWrapper11 = new global::Soenneker.Slack.OpenApiClient.Models.VideoWrapper11();
             return result;
         }
         /// <summary>
@@ -102,9 +102,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(ActionsWrapper7 != null || ContextWrapper7 != null || DividerWrapper7 != null || ImageWrapper10 != null || RichTextWrapper7 != null || Section2Wrapper7 != null || ShareShortcutWrapper7 != null || VideoWrapper7 != null)
+            if(ActionsWrapper11 != null || ContextWrapper11 != null || DividerWrapper11 != null || ImageWrapper16 != null || RichTextWrapper11 != null || Section2Wrapper11 != null || ShareShortcutWrapper11 != null || VideoWrapper11 != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(ActionsWrapper7, ContextWrapper7, DividerWrapper7, ImageWrapper10, RichTextWrapper7, Section2Wrapper7, ShareShortcutWrapper7, VideoWrapper7);
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(ActionsWrapper11, ContextWrapper11, DividerWrapper11, ImageWrapper16, RichTextWrapper11, Section2Wrapper11, ShareShortcutWrapper11, VideoWrapper11);
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -115,7 +115,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ActionsWrapper7>(null, ActionsWrapper7, ContextWrapper7, DividerWrapper7, ImageWrapper10, RichTextWrapper7, Section2Wrapper7, ShareShortcutWrapper7, VideoWrapper7);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ActionsWrapper11>(null, ActionsWrapper11, ContextWrapper11, DividerWrapper11, ImageWrapper16, RichTextWrapper11, Section2Wrapper11, ShareShortcutWrapper11, VideoWrapper11);
         }
     }
 }

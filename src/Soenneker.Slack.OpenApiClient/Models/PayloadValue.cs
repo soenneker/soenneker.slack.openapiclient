@@ -30,6 +30,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The app_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AppId { get; set; }
+#nullable restore
+#else
+        public string AppId { get; set; }
+#endif
         /// <summary>The billing_reason property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -56,6 +64,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string ChannelId { get; set; }
 #endif
+        /// <summary>The code property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Code { get; set; }
+#nullable restore
+#else
+        public string Code { get; set; }
+#endif
         /// <summary>The current_step property</summary>
         public double? CurrentStep { get; set; }
         /// <summary>The datastore_name property</summary>
@@ -74,6 +90,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string Details { get; set; }
 #endif
+        /// <summary>The elapsed_ms property</summary>
+        public double? ElapsedMs { get; set; }
         /// <summary>The error property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -82,6 +100,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string Error { get; set; }
 #endif
+        /// <summary>The error_stage property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ErrorStage { get; set; }
+#nullable restore
+#else
+        public string ErrorStage { get; set; }
+#endif
         /// <summary>The exec_outcome property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -89,6 +115,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #nullable restore
 #else
         public string ExecOutcome { get; set; }
+#endif
+        /// <summary>The extra_message property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ExtraMessage { get; set; }
+#nullable restore
+#else
+        public string ExtraMessage { get; set; }
 #endif
         /// <summary>The function_execution_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -122,6 +156,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string FunctionType { get; set; }
 #endif
+        /// <summary>The http_status_code property</summary>
+        public double? HttpStatusCode { get; set; }
         /// <summary>The inputs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -146,6 +182,30 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string Log { get; set; }
 #endif
+        /// <summary>The message property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Message { get; set; }
+#nullable restore
+#else
+        public string Message { get; set; }
+#endif
+        /// <summary>The outputs property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.Outputs? Outputs { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.Outputs Outputs { get; set; }
+#endif
+        /// <summary>The provider_key property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ProviderKey { get; set; }
+#nullable restore
+#else
+        public string ProviderKey { get; set; }
+#endif
         /// <summary>The request_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -154,6 +214,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string RequestType { get; set; }
 #endif
+        /// <summary>The server_name property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ServerName { get; set; }
+#nullable restore
+#else
+        public string ServerName { get; set; }
+#endif
         /// <summary>The team_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -161,6 +229,18 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #nullable restore
 #else
         public string TeamId { get; set; }
+#endif
+        /// <summary>The tokens_checked property</summary>
+        public double? TokensChecked { get; set; }
+        /// <summary>The tool_count property</summary>
+        public double? ToolCount { get; set; }
+        /// <summary>The tool_name property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ToolName { get; set; }
+#nullable restore
+#else
+        public string ToolName { get; set; }
 #endif
         /// <summary>The total_steps property</summary>
         public double? TotalSteps { get; set; }
@@ -223,24 +303,37 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "action", n => { Action = n.GetStringValue(); } },
                 { "actor", n => { Actor = n.GetStringValue(); } },
+                { "app_id", n => { AppId = n.GetStringValue(); } },
                 { "billing_reason", n => { BillingReason = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "bot_user_id", n => { BotUserId = n.GetStringValue(); } },
                 { "bundle_size_kb", n => { BundleSizeKb = n.GetDoubleValue(); } },
                 { "channel_id", n => { ChannelId = n.GetStringValue(); } },
+                { "code", n => { Code = n.GetStringValue(); } },
                 { "current_step", n => { CurrentStep = n.GetDoubleValue(); } },
                 { "datastore_name", n => { DatastoreName = n.GetStringValue(); } },
                 { "details", n => { Details = n.GetStringValue(); } },
+                { "elapsed_ms", n => { ElapsedMs = n.GetDoubleValue(); } },
                 { "error", n => { Error = n.GetStringValue(); } },
+                { "error_stage", n => { ErrorStage = n.GetStringValue(); } },
                 { "exec_outcome", n => { ExecOutcome = n.GetStringValue(); } },
+                { "extra_message", n => { ExtraMessage = n.GetStringValue(); } },
                 { "function_execution_id", n => { FunctionExecutionId = n.GetStringValue(); } },
                 { "function_id", n => { FunctionId = n.GetStringValue(); } },
                 { "function_name", n => { FunctionName = n.GetStringValue(); } },
                 { "function_type", n => { FunctionType = n.GetStringValue(); } },
+                { "http_status_code", n => { HttpStatusCode = n.GetDoubleValue(); } },
                 { "inputs", n => { Inputs = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PayloadValueInputs>(global::Soenneker.Slack.OpenApiClient.Models.PayloadValueInputs.CreateFromDiscriminatorValue); } },
                 { "is_billing_excluded", n => { IsBillingExcluded = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PayloadValueIsBillingExcluded>(global::Soenneker.Slack.OpenApiClient.Models.PayloadValueIsBillingExcluded.CreateFromDiscriminatorValue); } },
                 { "log", n => { Log = n.GetStringValue(); } },
+                { "message", n => { Message = n.GetStringValue(); } },
+                { "outputs", n => { Outputs = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Outputs>(global::Soenneker.Slack.OpenApiClient.Models.Outputs.CreateFromDiscriminatorValue); } },
+                { "provider_key", n => { ProviderKey = n.GetStringValue(); } },
                 { "request_type", n => { RequestType = n.GetStringValue(); } },
+                { "server_name", n => { ServerName = n.GetStringValue(); } },
                 { "team_id", n => { TeamId = n.GetStringValue(); } },
+                { "tokens_checked", n => { TokensChecked = n.GetDoubleValue(); } },
+                { "tool_count", n => { ToolCount = n.GetDoubleValue(); } },
+                { "tool_name", n => { ToolName = n.GetStringValue(); } },
                 { "total_steps", n => { TotalSteps = n.GetDoubleValue(); } },
                 { "trigger", n => { Trigger = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Trigger>(global::Soenneker.Slack.OpenApiClient.Models.Trigger.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
@@ -257,24 +350,37 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("action", Action);
             writer.WriteStringValue("actor", Actor);
+            writer.WriteStringValue("app_id", AppId);
             writer.WriteCollectionOfPrimitiveValues<string>("billing_reason", BillingReason);
             writer.WriteStringValue("bot_user_id", BotUserId);
             writer.WriteDoubleValue("bundle_size_kb", BundleSizeKb);
             writer.WriteStringValue("channel_id", ChannelId);
+            writer.WriteStringValue("code", Code);
             writer.WriteDoubleValue("current_step", CurrentStep);
             writer.WriteStringValue("datastore_name", DatastoreName);
             writer.WriteStringValue("details", Details);
+            writer.WriteDoubleValue("elapsed_ms", ElapsedMs);
             writer.WriteStringValue("error", Error);
+            writer.WriteStringValue("error_stage", ErrorStage);
             writer.WriteStringValue("exec_outcome", ExecOutcome);
+            writer.WriteStringValue("extra_message", ExtraMessage);
             writer.WriteStringValue("function_execution_id", FunctionExecutionId);
             writer.WriteStringValue("function_id", FunctionId);
             writer.WriteStringValue("function_name", FunctionName);
             writer.WriteStringValue("function_type", FunctionType);
+            writer.WriteDoubleValue("http_status_code", HttpStatusCode);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PayloadValueInputs>("inputs", Inputs);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PayloadValueIsBillingExcluded>("is_billing_excluded", IsBillingExcluded);
             writer.WriteStringValue("log", Log);
+            writer.WriteStringValue("message", Message);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Outputs>("outputs", Outputs);
+            writer.WriteStringValue("provider_key", ProviderKey);
             writer.WriteStringValue("request_type", RequestType);
+            writer.WriteStringValue("server_name", ServerName);
             writer.WriteStringValue("team_id", TeamId);
+            writer.WriteDoubleValue("tokens_checked", TokensChecked);
+            writer.WriteDoubleValue("tool_count", ToolCount);
+            writer.WriteStringValue("tool_name", ToolName);
             writer.WriteDoubleValue("total_steps", TotalSteps);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Trigger>("trigger", Trigger);
             writer.WriteStringValue("type", Type);

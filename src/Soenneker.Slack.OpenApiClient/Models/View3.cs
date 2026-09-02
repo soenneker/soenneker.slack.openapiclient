@@ -14,77 +14,47 @@ namespace Soenneker.Slack.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The app_id property</summary>
+        /// <summary>The columns property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AppId { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Column2>? Columns { get; set; }
 #nullable restore
 #else
-        public string AppId { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Column2> Columns { get; set; }
 #endif
-        /// <summary>The app_installed_team_id property</summary>
+        /// <summary>The created_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AppInstalledTeamId { get; set; }
+        public string? CreatedBy { get; set; }
 #nullable restore
 #else
-        public string AppInstalledTeamId { get; set; }
+        public string CreatedBy { get; set; }
 #endif
-        /// <summary>The blocks property</summary>
+        /// <summary>The date_created property</summary>
+        public double? DateCreated { get; set; }
+        /// <summary>The default_view_key property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Block4>? Blocks { get; set; }
+        public string? DefaultViewKey { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Block4> Blocks { get; set; }
+        public string DefaultViewKey { get; set; }
 #endif
-        /// <summary>The bot_id property</summary>
+        /// <summary>The filters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BotId { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.FilterElement>? Filters { get; set; }
 #nullable restore
 #else
-        public string BotId { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.FilterElement> Filters { get; set; }
 #endif
-        /// <summary>The callback_id property</summary>
+        /// <summary>The grouping property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallbackId { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Grouping2? Grouping { get; set; }
 #nullable restore
 #else
-        public string CallbackId { get; set; }
-#endif
-        /// <summary>The clear_on_close property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.View3ClearOnClose? ClearOnClose { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.View3ClearOnClose ClearOnClose { get; set; }
-#endif
-        /// <summary>The close property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Close? Close { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Close Close { get; set; }
-#endif
-        /// <summary>The external_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ExternalId { get; set; }
-#nullable restore
-#else
-        public string ExternalId { get; set; }
-#endif
-        /// <summary>The hash property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Hash { get; set; }
-#nullable restore
-#else
-        public string Hash { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Grouping2 Grouping { get; set; }
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -94,77 +64,53 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>The notify_on_close property</summary>
+        /// <summary>The is_all_items_view property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.View3NotifyOnClose? NotifyOnClose { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.View3IsAllItemsView? IsAllItemsView { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.View3NotifyOnClose NotifyOnClose { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.View3IsAllItemsView IsAllItemsView { get; set; }
 #endif
-        /// <summary>The previous_view_id property</summary>
+        /// <summary>The is_locked property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreviousViewId { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.View3IsLocked? IsLocked { get; set; }
 #nullable restore
 #else
-        public string PreviousViewId { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.View3IsLocked IsLocked { get; set; }
 #endif
-        /// <summary>The private_metadata property</summary>
+        /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrivateMetadata { get; set; }
+        public string? Name { get; set; }
 #nullable restore
 #else
-        public string PrivateMetadata { get; set; }
+        public string Name { get; set; }
 #endif
-        /// <summary>The root_view_id property</summary>
+        /// <summary>The position property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RootViewId { get; set; }
+        public string? Position { get; set; }
 #nullable restore
 #else
-        public string RootViewId { get; set; }
+        public string Position { get; set; }
 #endif
-        /// <summary>The state property</summary>
+        /// <summary>The show_completed_items property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.View3State? State { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.View3ShowCompletedItems? ShowCompletedItems { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.View3State State { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.View3ShowCompletedItems ShowCompletedItems { get; set; }
 #endif
-        /// <summary>The submit property</summary>
+        /// <summary>The stick_column_left property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Close? Submit { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.View3StickColumnLeft? StickColumnLeft { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Close Submit { get; set; }
-#endif
-        /// <summary>The submit_disabled property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.View3SubmitDisabled? SubmitDisabled { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.View3SubmitDisabled SubmitDisabled { get; set; }
-#endif
-        /// <summary>The team_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? TeamId { get; set; }
-#nullable restore
-#else
-        public string TeamId { get; set; }
-#endif
-        /// <summary>The title property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Close? Title { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Close Title { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.View3StickColumnLeft StickColumnLeft { get; set; }
 #endif
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -199,25 +145,19 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "app_id", n => { AppId = n.GetStringValue(); } },
-                { "app_installed_team_id", n => { AppInstalledTeamId = n.GetStringValue(); } },
-                { "blocks", n => { Blocks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Block4>(global::Soenneker.Slack.OpenApiClient.Models.Block4.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "bot_id", n => { BotId = n.GetStringValue(); } },
-                { "callback_id", n => { CallbackId = n.GetStringValue(); } },
-                { "clear_on_close", n => { ClearOnClose = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View3ClearOnClose>(global::Soenneker.Slack.OpenApiClient.Models.View3ClearOnClose.CreateFromDiscriminatorValue); } },
-                { "close", n => { Close = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Close>(global::Soenneker.Slack.OpenApiClient.Models.Close.CreateFromDiscriminatorValue); } },
-                { "external_id", n => { ExternalId = n.GetStringValue(); } },
-                { "hash", n => { Hash = n.GetStringValue(); } },
+                { "columns", n => { Columns = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Column2>(global::Soenneker.Slack.OpenApiClient.Models.Column2.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "created_by", n => { CreatedBy = n.GetStringValue(); } },
+                { "date_created", n => { DateCreated = n.GetDoubleValue(); } },
+                { "default_view_key", n => { DefaultViewKey = n.GetStringValue(); } },
+                { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.FilterElement>(global::Soenneker.Slack.OpenApiClient.Models.FilterElement.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "grouping", n => { Grouping = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Grouping2>(global::Soenneker.Slack.OpenApiClient.Models.Grouping2.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "notify_on_close", n => { NotifyOnClose = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View3NotifyOnClose>(global::Soenneker.Slack.OpenApiClient.Models.View3NotifyOnClose.CreateFromDiscriminatorValue); } },
-                { "previous_view_id", n => { PreviousViewId = n.GetStringValue(); } },
-                { "private_metadata", n => { PrivateMetadata = n.GetStringValue(); } },
-                { "root_view_id", n => { RootViewId = n.GetStringValue(); } },
-                { "state", n => { State = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View3State>(global::Soenneker.Slack.OpenApiClient.Models.View3State.CreateFromDiscriminatorValue); } },
-                { "submit", n => { Submit = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Close>(global::Soenneker.Slack.OpenApiClient.Models.Close.CreateFromDiscriminatorValue); } },
-                { "submit_disabled", n => { SubmitDisabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View3SubmitDisabled>(global::Soenneker.Slack.OpenApiClient.Models.View3SubmitDisabled.CreateFromDiscriminatorValue); } },
-                { "team_id", n => { TeamId = n.GetStringValue(); } },
-                { "title", n => { Title = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Close>(global::Soenneker.Slack.OpenApiClient.Models.Close.CreateFromDiscriminatorValue); } },
+                { "is_all_items_view", n => { IsAllItemsView = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View3IsAllItemsView>(global::Soenneker.Slack.OpenApiClient.Models.View3IsAllItemsView.CreateFromDiscriminatorValue); } },
+                { "is_locked", n => { IsLocked = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View3IsLocked>(global::Soenneker.Slack.OpenApiClient.Models.View3IsLocked.CreateFromDiscriminatorValue); } },
+                { "name", n => { Name = n.GetStringValue(); } },
+                { "position", n => { Position = n.GetStringValue(); } },
+                { "show_completed_items", n => { ShowCompletedItems = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View3ShowCompletedItems>(global::Soenneker.Slack.OpenApiClient.Models.View3ShowCompletedItems.CreateFromDiscriminatorValue); } },
+                { "stick_column_left", n => { StickColumnLeft = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View3StickColumnLeft>(global::Soenneker.Slack.OpenApiClient.Models.View3StickColumnLeft.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
         }
@@ -228,25 +168,19 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("app_id", AppId);
-            writer.WriteStringValue("app_installed_team_id", AppInstalledTeamId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Block4>("blocks", Blocks);
-            writer.WriteStringValue("bot_id", BotId);
-            writer.WriteStringValue("callback_id", CallbackId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View3ClearOnClose>("clear_on_close", ClearOnClose);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Close>("close", Close);
-            writer.WriteStringValue("external_id", ExternalId);
-            writer.WriteStringValue("hash", Hash);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Column2>("columns", Columns);
+            writer.WriteStringValue("created_by", CreatedBy);
+            writer.WriteDoubleValue("date_created", DateCreated);
+            writer.WriteStringValue("default_view_key", DefaultViewKey);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.FilterElement>("filters", Filters);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Grouping2>("grouping", Grouping);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View3NotifyOnClose>("notify_on_close", NotifyOnClose);
-            writer.WriteStringValue("previous_view_id", PreviousViewId);
-            writer.WriteStringValue("private_metadata", PrivateMetadata);
-            writer.WriteStringValue("root_view_id", RootViewId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View3State>("state", State);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Close>("submit", Submit);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View3SubmitDisabled>("submit_disabled", SubmitDisabled);
-            writer.WriteStringValue("team_id", TeamId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Close>("title", Title);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View3IsAllItemsView>("is_all_items_view", IsAllItemsView);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View3IsLocked>("is_locked", IsLocked);
+            writer.WriteStringValue("name", Name);
+            writer.WriteStringValue("position", Position);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View3ShowCompletedItems>("show_completed_items", ShowCompletedItems);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View3StickColumnLeft>("stick_column_left", StickColumnLeft);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
