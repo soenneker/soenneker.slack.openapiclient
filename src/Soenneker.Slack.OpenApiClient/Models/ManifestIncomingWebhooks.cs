@@ -7,11 +7,10 @@ using System.IO;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
-    /// <summary>
-    /// A subgroup of settings that describe [Incoming Webhooks](https://docs.slack.dev/messaging/sending-messages-using-incoming-webhooks) configuration for the app.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class ManifestIncomingWebhooks : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }

@@ -7,11 +7,10 @@ using System.IO;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
-    /// <summary>
-    /// A group of settings that describe parts of an app&apos;s appearance within Slack. If you&apos;re distributingthe app via the Slack Marketplace, read our [listing guidelines](https://docs.slack.dev/slack-marketplace/distributing-your-app-in-the-slack-marketplace) to pick the best values for these settings.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class ManifestDisplayInformation : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
