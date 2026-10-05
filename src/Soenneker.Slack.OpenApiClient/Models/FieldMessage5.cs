@@ -97,10 +97,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The comment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Comment? Comment { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Comment2? Comment { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Comment Comment { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Comment2 Comment { get; set; }
 #endif
         /// <summary>The display_as_bot property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -193,10 +193,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The item property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Comment? Item { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Comment2? Item { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Comment Item { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Comment2 Item { get; set; }
 #endif
         /// <summary>The item_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -485,7 +485,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "bot_profile", n => { BotProfile = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotProfile>(global::Soenneker.Slack.OpenApiClient.Models.BotProfile.CreateFromDiscriminatorValue); } },
                 { "channel", n => { Channel = n.GetStringValue(); } },
                 { "client_msg_id", n => { ClientMsgId = n.GetStringValue(); } },
-                { "comment", n => { Comment = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment>(global::Soenneker.Slack.OpenApiClient.Models.Comment.CreateFromDiscriminatorValue); } },
+                { "comment", n => { Comment = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment2>(global::Soenneker.Slack.OpenApiClient.Models.Comment2.CreateFromDiscriminatorValue); } },
                 { "display_as_bot", n => { DisplayAsBot = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FieldMessage5DisplayAsBot>(global::Soenneker.Slack.OpenApiClient.Models.FieldMessage5DisplayAsBot.CreateFromDiscriminatorValue); } },
                 { "edited", n => { Edited = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Edited>(global::Soenneker.Slack.OpenApiClient.Models.Edited.CreateFromDiscriminatorValue); } },
                 { "file", n => { File = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PurpleFile3>(global::Soenneker.Slack.OpenApiClient.Models.PurpleFile3.CreateFromDiscriminatorValue); } },
@@ -497,7 +497,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "is_locked", n => { IsLocked = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FieldMessage5IsLocked>(global::Soenneker.Slack.OpenApiClient.Models.FieldMessage5IsLocked.CreateFromDiscriminatorValue); } },
                 { "is_starred", n => { IsStarred = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FieldMessage5IsStarred>(global::Soenneker.Slack.OpenApiClient.Models.FieldMessage5IsStarred.CreateFromDiscriminatorValue); } },
                 { "is_thread_broadcast", n => { IsThreadBroadcast = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FieldMessage5IsThreadBroadcast>(global::Soenneker.Slack.OpenApiClient.Models.FieldMessage5IsThreadBroadcast.CreateFromDiscriminatorValue); } },
-                { "item", n => { Item = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment>(global::Soenneker.Slack.OpenApiClient.Models.Comment.CreateFromDiscriminatorValue); } },
+                { "item", n => { Item = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment2>(global::Soenneker.Slack.OpenApiClient.Models.Comment2.CreateFromDiscriminatorValue); } },
                 { "item_type", n => { ItemType = n.GetStringValue(); } },
                 { "language", n => { Language = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Language>(global::Soenneker.Slack.OpenApiClient.Models.Language.CreateFromDiscriminatorValue); } },
                 { "last_read", n => { LastRead = n.GetStringValue(); } },
@@ -550,7 +550,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotProfile>("bot_profile", BotProfile);
             writer.WriteStringValue("channel", Channel);
             writer.WriteStringValue("client_msg_id", ClientMsgId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment>("comment", Comment);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment2>("comment", Comment);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FieldMessage5DisplayAsBot>("display_as_bot", DisplayAsBot);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Edited>("edited", Edited);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PurpleFile3>("file", File);
@@ -562,7 +562,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FieldMessage5IsLocked>("is_locked", IsLocked);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FieldMessage5IsStarred>("is_starred", IsStarred);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FieldMessage5IsThreadBroadcast>("is_thread_broadcast", IsThreadBroadcast);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment>("item", Item);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment2>("item", Item);
             writer.WriteStringValue("item_type", ItemType);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Language>("language", Language);
             writer.WriteStringValue("last_read", LastRead);

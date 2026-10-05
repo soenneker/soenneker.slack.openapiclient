@@ -329,10 +329,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The list_view property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.View? ListView { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.View2? ListView { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.View ListView { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.View2 ListView { get; set; }
 #endif
         /// <summary>The list_view_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -579,7 +579,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "list_record_id", n => { ListRecordId = n.GetStringValue(); } },
                 { "list_records", n => { ListRecords = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ListRecordElement7>(global::Soenneker.Slack.OpenApiClient.Models.ListRecordElement7.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "list_schema", n => { ListSchema = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SchemaValue>(global::Soenneker.Slack.OpenApiClient.Models.SchemaValue.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "list_view", n => { ListView = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View>(global::Soenneker.Slack.OpenApiClient.Models.View.CreateFromDiscriminatorValue); } },
+                { "list_view", n => { ListView = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View2>(global::Soenneker.Slack.OpenApiClient.Models.View2.CreateFromDiscriminatorValue); } },
                 { "list_view_id", n => { ListViewId = n.GetStringValue(); } },
                 { "message_blocks", n => { MessageBlocks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageBlock8>(global::Soenneker.Slack.OpenApiClient.Models.MessageBlock8.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AttachmentMetadata>(global::Soenneker.Slack.OpenApiClient.Models.AttachmentMetadata.CreateFromDiscriminatorValue); } },
@@ -657,7 +657,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("list_record_id", ListRecordId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ListRecordElement7>("list_records", ListRecords);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SchemaValue>("list_schema", ListSchema);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View>("list_view", ListView);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View2>("list_view", ListView);
             writer.WriteStringValue("list_view_id", ListViewId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageBlock8>("message_blocks", MessageBlocks);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AttachmentMetadata>("metadata", Metadata);

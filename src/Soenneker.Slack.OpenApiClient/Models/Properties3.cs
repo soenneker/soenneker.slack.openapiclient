@@ -14,6 +14,22 @@ namespace Soenneker.Slack.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The agent_session property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.AgentSession3? AgentSession { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.AgentSession3 AgentSession { get; set; }
+#endif
+        /// <summary>The code_channel property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.CodeChannel? CodeChannel { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.CodeChannel CodeChannel { get; set; }
+#endif
         /// <summary>The has_slack_connect_invite_created property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -29,6 +45,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.Properties3IsDormant IsDormant { get; set; }
+#endif
+        /// <summary>The record_channel property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.RecordChannel? RecordChannel { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.RecordChannel RecordChannel { get; set; }
 #endif
         /// <summary>The tabs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -71,8 +95,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "agent_session", n => { AgentSession = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AgentSession3>(global::Soenneker.Slack.OpenApiClient.Models.AgentSession3.CreateFromDiscriminatorValue); } },
+                { "code_channel", n => { CodeChannel = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.CodeChannel>(global::Soenneker.Slack.OpenApiClient.Models.CodeChannel.CreateFromDiscriminatorValue); } },
                 { "has_slack_connect_invite_created", n => { HasSlackConnectInviteCreated = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Properties3HasSlackConnectInviteCreated>(global::Soenneker.Slack.OpenApiClient.Models.Properties3HasSlackConnectInviteCreated.CreateFromDiscriminatorValue); } },
                 { "is_dormant", n => { IsDormant = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Properties3IsDormant>(global::Soenneker.Slack.OpenApiClient.Models.Properties3IsDormant.CreateFromDiscriminatorValue); } },
+                { "record_channel", n => { RecordChannel = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RecordChannel>(global::Soenneker.Slack.OpenApiClient.Models.RecordChannel.CreateFromDiscriminatorValue); } },
                 { "tabs", n => { Tabs = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Tab2>(global::Soenneker.Slack.OpenApiClient.Models.Tab2.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "tabz", n => { Tabz = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Tabz>(global::Soenneker.Slack.OpenApiClient.Models.Tabz.CreateFromDiscriminatorValue)?.AsList(); } },
             };
@@ -84,8 +111,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AgentSession3>("agent_session", AgentSession);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.CodeChannel>("code_channel", CodeChannel);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Properties3HasSlackConnectInviteCreated>("has_slack_connect_invite_created", HasSlackConnectInviteCreated);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Properties3IsDormant>("is_dormant", IsDormant);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RecordChannel>("record_channel", RecordChannel);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Tab2>("tabs", Tabs);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Tabz>("tabz", Tabz);
             writer.WriteAdditionalData(AdditionalData);

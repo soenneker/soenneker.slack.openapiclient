@@ -17,10 +17,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The comments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Comment2>? Comments { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Comment3>? Comments { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Comment2> Comments { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Comment3> Comments { get; set; }
 #endif
         /// <summary>The content property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -145,7 +145,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "comments", n => { Comments = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Comment2>(global::Soenneker.Slack.OpenApiClient.Models.Comment2.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "comments", n => { Comments = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Comment3>(global::Soenneker.Slack.OpenApiClient.Models.Comment3.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "content", n => { Content = n.GetStringValue(); } },
                 { "content_highlight_css", n => { ContentHighlightCss = n.GetStringValue(); } },
                 { "content_highlight_html", n => { ContentHighlightHtml = n.GetStringValue(); } },
@@ -168,7 +168,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Comment2>("comments", Comments);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Comment3>("comments", Comments);
             writer.WriteStringValue("content", Content);
             writer.WriteStringValue("content_highlight_css", ContentHighlightCss);
             writer.WriteStringValue("content_highlight_html", ContentHighlightHtml);

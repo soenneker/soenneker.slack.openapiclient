@@ -30,7 +30,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string Text { get; set; }
 #endif
-        /// <summary>Type of the bookmark. Only `link` is supported at the moment.</summary>
+        /// <summary>The type of element. In this case `type` is always `link`.</summary>
         public global::Soenneker.Slack.OpenApiClient.Models.LinkType? Type { get; set; }
         /// <summary>TODO: ?</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

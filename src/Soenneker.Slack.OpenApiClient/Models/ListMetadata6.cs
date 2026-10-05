@@ -89,10 +89,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The views property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.View3>? Views { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.View4>? Views { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.View3> Views { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.View4> Views { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ListMetadata6"/> and sets the default values.
@@ -128,7 +128,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "integrations", n => { Integrations = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "is_trial", n => { IsTrial = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata6IsTrial>(global::Soenneker.Slack.OpenApiClient.Models.ListMetadata6IsTrial.CreateFromDiscriminatorValue); } },
                 { "schema", n => { Schema = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Schema3>(global::Soenneker.Slack.OpenApiClient.Models.Schema3.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "views", n => { Views = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.View3>(global::Soenneker.Slack.OpenApiClient.Models.View3.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "views", n => { Views = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.View4>(global::Soenneker.Slack.OpenApiClient.Models.View4.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -147,7 +147,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("integrations", Integrations);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata6IsTrial>("is_trial", IsTrial);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Schema3>("schema", Schema);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.View3>("views", Views);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.View4>("views", Views);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

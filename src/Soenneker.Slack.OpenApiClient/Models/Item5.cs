@@ -25,10 +25,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The comment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Comment3? Comment { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Comment4? Comment { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Comment3 Comment { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Comment4 Comment { get; set; }
 #endif
         /// <summary>The date_create property</summary>
         public double? DateCreate { get; set; }
@@ -82,7 +82,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "channel", n => { Channel = n.GetStringValue(); } },
-                { "comment", n => { Comment = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment3>(global::Soenneker.Slack.OpenApiClient.Models.Comment3.CreateFromDiscriminatorValue); } },
+                { "comment", n => { Comment = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment4>(global::Soenneker.Slack.OpenApiClient.Models.Comment4.CreateFromDiscriminatorValue); } },
                 { "date_create", n => { DateCreate = n.GetDoubleValue(); } },
                 { "file", n => { File = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ItemFile>(global::Soenneker.Slack.OpenApiClient.Models.ItemFile.CreateFromDiscriminatorValue); } },
                 { "message", n => { Message = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Message8>(global::Soenneker.Slack.OpenApiClient.Models.Message8.CreateFromDiscriminatorValue); } },
@@ -97,7 +97,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("channel", Channel);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment3>("comment", Comment);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment4>("comment", Comment);
             writer.WriteDoubleValue("date_create", DateCreate);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ItemFile>("file", File);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Message8>("message", Message);

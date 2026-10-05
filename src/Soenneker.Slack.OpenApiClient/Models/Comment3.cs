@@ -48,16 +48,6 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.Comment3IsIntro IsIntro { get; set; }
 #endif
-        /// <summary>The is_starred property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Comment3IsStarred? IsStarred { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Comment3IsStarred IsStarred { get; set; }
-#endif
-        /// <summary>The num_stars property</summary>
-        public double? NumStars { get; set; }
         /// <summary>The timestamp property</summary>
         public double? Timestamp { get; set; }
         /// <summary>The user property</summary>
@@ -98,8 +88,6 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "created", n => { Created = n.GetDoubleValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "is_intro", n => { IsIntro = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment3IsIntro>(global::Soenneker.Slack.OpenApiClient.Models.Comment3IsIntro.CreateFromDiscriminatorValue); } },
-                { "is_starred", n => { IsStarred = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment3IsStarred>(global::Soenneker.Slack.OpenApiClient.Models.Comment3IsStarred.CreateFromDiscriminatorValue); } },
-                { "num_stars", n => { NumStars = n.GetDoubleValue(); } },
                 { "timestamp", n => { Timestamp = n.GetDoubleValue(); } },
                 { "user", n => { User = n.GetStringValue(); } },
             };
@@ -116,8 +104,6 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("created", Created);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment3IsIntro>("is_intro", IsIntro);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment3IsStarred>("is_starred", IsStarred);
-            writer.WriteDoubleValue("num_stars", NumStars);
             writer.WriteDoubleValue("timestamp", Timestamp);
             writer.WriteStringValue("user", User);
             writer.WriteAdditionalData(AdditionalData);

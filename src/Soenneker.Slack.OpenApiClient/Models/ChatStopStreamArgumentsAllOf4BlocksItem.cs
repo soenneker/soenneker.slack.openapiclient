@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.ActionsBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.AlertBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.Block"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.CardBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.CarouselBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatStopStreamArgumentsAllOf4BlocksItemAnyOf11"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatStopStreamArgumentsAllOf4BlocksItemAnyOf12"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ContextActionsBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ContextBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.DividerBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.FileBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.HeaderBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.InputBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.MarkdownBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.PlanBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.SectionBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.TableBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.TaskCardBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.VideoBlock"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.ActionsBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.AlertBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.Block"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.CardBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.CarouselBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatStopStreamArgumentsAllOf4BlocksItemAnyOf13"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatStopStreamArgumentsAllOf4BlocksItemAnyOf14"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ContainerBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ContextActionsBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ContextBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.DataTableBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.DividerBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.FileBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.HeaderBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.InputBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.MarkdownBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.PlanBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.SectionBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.TableBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.TaskCardBlock"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.VideoBlock"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ChatStopStreamArgumentsAllOf4BlocksItem : IComposedTypeWrapper, IParsable
@@ -53,21 +53,29 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.CarouselBlock CarouselBlock { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatStopStreamArgumentsAllOf4BlocksItemAnyOf11"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatStopStreamArgumentsAllOf4BlocksItemAnyOf13"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ChatStopStreamArgumentsAllOf4BlocksItemAnyOf11? ChatStopStreamArgumentsAllOf4BlocksItemAnyOf11 { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatStopStreamArgumentsAllOf4BlocksItemAnyOf13? ChatStopStreamArgumentsAllOf4BlocksItemAnyOf13 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ChatStopStreamArgumentsAllOf4BlocksItemAnyOf11 ChatStopStreamArgumentsAllOf4BlocksItemAnyOf11 { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatStopStreamArgumentsAllOf4BlocksItemAnyOf13 ChatStopStreamArgumentsAllOf4BlocksItemAnyOf13 { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatStopStreamArgumentsAllOf4BlocksItemAnyOf12"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatStopStreamArgumentsAllOf4BlocksItemAnyOf14"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ChatStopStreamArgumentsAllOf4BlocksItemAnyOf12? ChatStopStreamArgumentsAllOf4BlocksItemAnyOf12 { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatStopStreamArgumentsAllOf4BlocksItemAnyOf14? ChatStopStreamArgumentsAllOf4BlocksItemAnyOf14 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ChatStopStreamArgumentsAllOf4BlocksItemAnyOf12 ChatStopStreamArgumentsAllOf4BlocksItemAnyOf12 { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatStopStreamArgumentsAllOf4BlocksItemAnyOf14 ChatStopStreamArgumentsAllOf4BlocksItemAnyOf14 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ContainerBlock"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ContainerBlock? ContainerBlock { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ContainerBlock ContainerBlock { get; set; }
 #endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ContextActionsBlock"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -84,6 +92,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.ContextBlock ContextBlock { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.DataTableBlock"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.DataTableBlock? DataTableBlock { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.DataTableBlock DataTableBlock { get; set; }
 #endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.DividerBlock"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -187,10 +203,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
             result.Block = new global::Soenneker.Slack.OpenApiClient.Models.Block();
             result.CardBlock = new global::Soenneker.Slack.OpenApiClient.Models.CardBlock();
             result.CarouselBlock = new global::Soenneker.Slack.OpenApiClient.Models.CarouselBlock();
-            result.ChatStopStreamArgumentsAllOf4BlocksItemAnyOf11 = new global::Soenneker.Slack.OpenApiClient.Models.ChatStopStreamArgumentsAllOf4BlocksItemAnyOf11();
-            result.ChatStopStreamArgumentsAllOf4BlocksItemAnyOf12 = new global::Soenneker.Slack.OpenApiClient.Models.ChatStopStreamArgumentsAllOf4BlocksItemAnyOf12();
+            result.ChatStopStreamArgumentsAllOf4BlocksItemAnyOf13 = new global::Soenneker.Slack.OpenApiClient.Models.ChatStopStreamArgumentsAllOf4BlocksItemAnyOf13();
+            result.ChatStopStreamArgumentsAllOf4BlocksItemAnyOf14 = new global::Soenneker.Slack.OpenApiClient.Models.ChatStopStreamArgumentsAllOf4BlocksItemAnyOf14();
+            result.ContainerBlock = new global::Soenneker.Slack.OpenApiClient.Models.ContainerBlock();
             result.ContextActionsBlock = new global::Soenneker.Slack.OpenApiClient.Models.ContextActionsBlock();
             result.ContextBlock = new global::Soenneker.Slack.OpenApiClient.Models.ContextBlock();
+            result.DataTableBlock = new global::Soenneker.Slack.OpenApiClient.Models.DataTableBlock();
             result.DividerBlock = new global::Soenneker.Slack.OpenApiClient.Models.DividerBlock();
             result.FileBlock = new global::Soenneker.Slack.OpenApiClient.Models.FileBlock();
             result.HeaderBlock = new global::Soenneker.Slack.OpenApiClient.Models.HeaderBlock();
@@ -210,9 +228,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(ActionsBlock != null || AlertBlock != null || Block != null || CardBlock != null || CarouselBlock != null || ChatStopStreamArgumentsAllOf4BlocksItemAnyOf11 != null || ChatStopStreamArgumentsAllOf4BlocksItemAnyOf12 != null || ContextActionsBlock != null || ContextBlock != null || DividerBlock != null || FileBlock != null || HeaderBlock != null || InputBlock != null || MarkdownBlock != null || PlanBlock != null || RichTextBlock != null || SectionBlock != null || TableBlock != null || TaskCardBlock != null || VideoBlock != null)
+            if(ActionsBlock != null || AlertBlock != null || Block != null || CardBlock != null || CarouselBlock != null || ChatStopStreamArgumentsAllOf4BlocksItemAnyOf13 != null || ChatStopStreamArgumentsAllOf4BlocksItemAnyOf14 != null || ContainerBlock != null || ContextActionsBlock != null || ContextBlock != null || DataTableBlock != null || DividerBlock != null || FileBlock != null || HeaderBlock != null || InputBlock != null || MarkdownBlock != null || PlanBlock != null || RichTextBlock != null || SectionBlock != null || TableBlock != null || TaskCardBlock != null || VideoBlock != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(ActionsBlock, AlertBlock, Block, CardBlock, CarouselBlock, ChatStopStreamArgumentsAllOf4BlocksItemAnyOf11, ChatStopStreamArgumentsAllOf4BlocksItemAnyOf12, ContextActionsBlock, ContextBlock, DividerBlock, FileBlock, HeaderBlock, InputBlock, MarkdownBlock, PlanBlock, RichTextBlock, SectionBlock, TableBlock, TaskCardBlock, VideoBlock);
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(ActionsBlock, AlertBlock, Block, CardBlock, CarouselBlock, ChatStopStreamArgumentsAllOf4BlocksItemAnyOf13, ChatStopStreamArgumentsAllOf4BlocksItemAnyOf14, ContainerBlock, ContextActionsBlock, ContextBlock, DataTableBlock, DividerBlock, FileBlock, HeaderBlock, InputBlock, MarkdownBlock, PlanBlock, RichTextBlock, SectionBlock, TableBlock, TaskCardBlock, VideoBlock);
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -223,7 +241,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ActionsBlock>(null, ActionsBlock, AlertBlock, Block, CardBlock, CarouselBlock, ChatStopStreamArgumentsAllOf4BlocksItemAnyOf11, ChatStopStreamArgumentsAllOf4BlocksItemAnyOf12, ContextActionsBlock, ContextBlock, DividerBlock, FileBlock, HeaderBlock, InputBlock, MarkdownBlock, PlanBlock, RichTextBlock, SectionBlock, TableBlock, TaskCardBlock, VideoBlock);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ActionsBlock>(null, ActionsBlock, AlertBlock, Block, CardBlock, CarouselBlock, ChatStopStreamArgumentsAllOf4BlocksItemAnyOf13, ChatStopStreamArgumentsAllOf4BlocksItemAnyOf14, ContainerBlock, ContextActionsBlock, ContextBlock, DataTableBlock, DividerBlock, FileBlock, HeaderBlock, InputBlock, MarkdownBlock, PlanBlock, RichTextBlock, SectionBlock, TableBlock, TaskCardBlock, VideoBlock);
         }
     }
 }

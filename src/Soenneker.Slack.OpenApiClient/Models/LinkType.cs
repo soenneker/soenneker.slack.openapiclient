@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
-    /// <summary>Type of the bookmark. Only `link` is supported at the moment.</summary>
+    /// <summary>The type of element. In this case `type` is always `link`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum LinkType
     {

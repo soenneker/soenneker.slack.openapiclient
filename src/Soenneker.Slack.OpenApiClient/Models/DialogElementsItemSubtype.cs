@@ -12,13 +12,13 @@ namespace Soenneker.Slack.OpenApiClient.Models
         #pragma warning disable CS1591
         Number,
         #pragma warning restore CS1591
-        [EnumMember(Value = "email")]
-        #pragma warning disable CS1591
-        Email,
-        #pragma warning restore CS1591
         [EnumMember(Value = "url")]
         #pragma warning disable CS1591
         Url,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "email")]
+        #pragma warning disable CS1591
+        Email,
         #pragma warning restore CS1591
         [EnumMember(Value = "tel")]
         #pragma warning disable CS1591

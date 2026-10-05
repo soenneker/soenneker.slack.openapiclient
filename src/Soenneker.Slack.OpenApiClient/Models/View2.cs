@@ -115,10 +115,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ViewOptions? Options { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ListViewOptions? Options { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ViewOptions Options { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ListViewOptions Options { get; set; }
 #endif
         /// <summary>The position property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -200,7 +200,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "is_locked", n => { IsLocked = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View2IsLocked>(global::Soenneker.Slack.OpenApiClient.Models.View2IsLocked.CreateFromDiscriminatorValue); } },
                 { "is_template_initial_view", n => { IsTemplateInitialView = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View2IsTemplateInitialView>(global::Soenneker.Slack.OpenApiClient.Models.View2IsTemplateInitialView.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "options", n => { Options = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ViewOptions>(global::Soenneker.Slack.OpenApiClient.Models.ViewOptions.CreateFromDiscriminatorValue); } },
+                { "options", n => { Options = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListViewOptions>(global::Soenneker.Slack.OpenApiClient.Models.ListViewOptions.CreateFromDiscriminatorValue); } },
                 { "position", n => { Position = n.GetStringValue(); } },
                 { "row_height", n => { RowHeight = n.GetDoubleValue(); } },
                 { "show_completed_items", n => { ShowCompletedItems = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View2ShowCompletedItems>(global::Soenneker.Slack.OpenApiClient.Models.View2ShowCompletedItems.CreateFromDiscriminatorValue); } },
@@ -229,7 +229,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View2IsLocked>("is_locked", IsLocked);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View2IsTemplateInitialView>("is_template_initial_view", IsTemplateInitialView);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ViewOptions>("options", Options);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListViewOptions>("options", Options);
             writer.WriteStringValue("position", Position);
             writer.WriteDoubleValue("row_height", RowHeight);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View2ShowCompletedItems>("show_completed_items", ShowCompletedItems);

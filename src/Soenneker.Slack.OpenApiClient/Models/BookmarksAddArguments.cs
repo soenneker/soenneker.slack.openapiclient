@@ -70,7 +70,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string Token { get; set; }
 #endif
-        /// <summary>Type of the bookmark. Only `link` is supported at the moment.</summary>
+        /// <summary>The type of element. In this case `type` is always `link`.</summary>
         public global::Soenneker.Slack.OpenApiClient.Models.LinkType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.BookmarksAddArguments"/> and sets the default values.

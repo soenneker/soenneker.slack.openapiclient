@@ -335,10 +335,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The initial_comment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Comment2? InitialComment { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Comment3? InitialComment { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Comment2 InitialComment { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Comment3 InitialComment { get; set; }
 #endif
         /// <summary>The inline_attachment_count property</summary>
         public double? InlineAttachmentCount { get; set; }
@@ -1272,7 +1272,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "image_exif_rotation", n => { ImageExifRotation = n.GetDoubleValue(); } },
                 { "ims", n => { Ims = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "initial_comment", n => { InitialComment = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment2>(global::Soenneker.Slack.OpenApiClient.Models.Comment2.CreateFromDiscriminatorValue); } },
+                { "initial_comment", n => { InitialComment = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment3>(global::Soenneker.Slack.OpenApiClient.Models.Comment3.CreateFromDiscriminatorValue); } },
                 { "inline_attachment_count", n => { InlineAttachmentCount = n.GetDoubleValue(); } },
                 { "is_ai_suggested", n => { IsAiSuggested = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.File5IsAiSuggested>(global::Soenneker.Slack.OpenApiClient.Models.File5IsAiSuggested.CreateFromDiscriminatorValue); } },
                 { "is_channel_space", n => { IsChannelSpace = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.File5IsChannelSpace>(global::Soenneker.Slack.OpenApiClient.Models.File5IsChannelSpace.CreateFromDiscriminatorValue); } },
@@ -1446,7 +1446,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteDoubleValue("image_exif_rotation", ImageExifRotation);
             writer.WriteCollectionOfPrimitiveValues<string>("ims", Ims);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment2>("initial_comment", InitialComment);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment3>("initial_comment", InitialComment);
             writer.WriteDoubleValue("inline_attachment_count", InlineAttachmentCount);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.File5IsAiSuggested>("is_ai_suggested", IsAiSuggested);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.File5IsChannelSpace>("is_channel_space", IsChannelSpace);

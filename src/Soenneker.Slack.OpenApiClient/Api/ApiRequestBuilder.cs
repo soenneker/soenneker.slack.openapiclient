@@ -98,6 +98,15 @@ using Soenneker.Slack.OpenApiClient.Api.AdminWorkflowsCollaboratorsRemove;
 using Soenneker.Slack.OpenApiClient.Api.AdminWorkflowsPermissionsLookup;
 using Soenneker.Slack.OpenApiClient.Api.AdminWorkflowsSearch;
 using Soenneker.Slack.OpenApiClient.Api.AdminWorkflowsUnpublish;
+using Soenneker.Slack.OpenApiClient.Api.AgentsConversationsArchive;
+using Soenneker.Slack.OpenApiClient.Api.AgentsConversationsCreate;
+using Soenneker.Slack.OpenApiClient.Api.AgentsConversationsGetCanvas;
+using Soenneker.Slack.OpenApiClient.Api.AgentsConversationsListViews;
+using Soenneker.Slack.OpenApiClient.Api.AgentsConversationsRemoveView;
+using Soenneker.Slack.OpenApiClient.Api.AgentsConversationsSetCanvasContent;
+using Soenneker.Slack.OpenApiClient.Api.AgentsConversationsSetCommands;
+using Soenneker.Slack.OpenApiClient.Api.AgentsConversationsSetProperties;
+using Soenneker.Slack.OpenApiClient.Api.AgentsConversationsSetView;
 using Soenneker.Slack.OpenApiClient.Api.AgentsSessionsRename;
 using Soenneker.Slack.OpenApiClient.Api.AgentsSessionsSetStatus;
 using Soenneker.Slack.OpenApiClient.Api.ApiTest;
@@ -764,6 +773,51 @@ namespace Soenneker.Slack.OpenApiClient.Api
         public global::Soenneker.Slack.OpenApiClient.Api.AdminWorkflowsUnpublish.AdminWorkflowsUnpublishRequestBuilder AdminWorkflowsUnpublish
         {
             get => new global::Soenneker.Slack.OpenApiClient.Api.AdminWorkflowsUnpublish.AdminWorkflowsUnpublishRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The agentsConversationsArchive property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.AgentsConversationsArchive.AgentsConversationsArchiveRequestBuilder AgentsConversationsArchive
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.AgentsConversationsArchive.AgentsConversationsArchiveRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The agentsConversationsCreate property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.AgentsConversationsCreate.AgentsConversationsCreateRequestBuilder AgentsConversationsCreate
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.AgentsConversationsCreate.AgentsConversationsCreateRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The agentsConversationsGetCanvas property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.AgentsConversationsGetCanvas.AgentsConversationsGetCanvasRequestBuilder AgentsConversationsGetCanvas
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.AgentsConversationsGetCanvas.AgentsConversationsGetCanvasRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The agentsConversationsListViews property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.AgentsConversationsListViews.AgentsConversationsListViewsRequestBuilder AgentsConversationsListViews
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.AgentsConversationsListViews.AgentsConversationsListViewsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The agentsConversationsRemoveView property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.AgentsConversationsRemoveView.AgentsConversationsRemoveViewRequestBuilder AgentsConversationsRemoveView
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.AgentsConversationsRemoveView.AgentsConversationsRemoveViewRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The agentsConversationsSetCanvasContent property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.AgentsConversationsSetCanvasContent.AgentsConversationsSetCanvasContentRequestBuilder AgentsConversationsSetCanvasContent
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.AgentsConversationsSetCanvasContent.AgentsConversationsSetCanvasContentRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The agentsConversationsSetCommands property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.AgentsConversationsSetCommands.AgentsConversationsSetCommandsRequestBuilder AgentsConversationsSetCommands
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.AgentsConversationsSetCommands.AgentsConversationsSetCommandsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The agentsConversationsSetProperties property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.AgentsConversationsSetProperties.AgentsConversationsSetPropertiesRequestBuilder AgentsConversationsSetProperties
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.AgentsConversationsSetProperties.AgentsConversationsSetPropertiesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The agentsConversationsSetView property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.AgentsConversationsSetView.AgentsConversationsSetViewRequestBuilder AgentsConversationsSetView
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.AgentsConversationsSetView.AgentsConversationsSetViewRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The agentsSessionsRename property</summary>
         public global::Soenneker.Slack.OpenApiClient.Api.AgentsSessionsRename.AgentsSessionsRenameRequestBuilder AgentsSessionsRename

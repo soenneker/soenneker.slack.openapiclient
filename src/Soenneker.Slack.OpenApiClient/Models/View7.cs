@@ -7,228 +7,36 @@ using System.IO;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.HomeView"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ModalView"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepView"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class View7 : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class View7 : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The app_id property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.HomeView"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AppId { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.HomeView? HomeView { get; set; }
 #nullable restore
 #else
-        public string AppId { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.HomeView HomeView { get; set; }
 #endif
-        /// <summary>The app_installed_team_id property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ModalView"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AppInstalledTeamId { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ModalView? ModalView { get; set; }
 #nullable restore
 #else
-        public string AppInstalledTeamId { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ModalView ModalView { get; set; }
 #endif
-        /// <summary>The app_unfurl_url property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepView"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AppUnfurlUrl { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepView? WorkflowStepView { get; set; }
 #nullable restore
 #else
-        public string AppUnfurlUrl { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepView WorkflowStepView { get; set; }
 #endif
-        /// <summary>The blocks property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Block5>? Blocks { get; set; }
-#nullable restore
-#else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Block5> Blocks { get; set; }
-#endif
-        /// <summary>The bot_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? BotId { get; set; }
-#nullable restore
-#else
-        public string BotId { get; set; }
-#endif
-        /// <summary>The callback_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? CallbackId { get; set; }
-#nullable restore
-#else
-        public string CallbackId { get; set; }
-#endif
-        /// <summary>The channel property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Channel { get; set; }
-#nullable restore
-#else
-        public string Channel { get; set; }
-#endif
-        /// <summary>The clear_on_close property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.View7ClearOnClose? ClearOnClose { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.View7ClearOnClose ClearOnClose { get; set; }
-#endif
-        /// <summary>The close property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Close? Close { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Close Close { get; set; }
-#endif
-        /// <summary>The entity_url property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? EntityUrl { get; set; }
-#nullable restore
-#else
-        public string EntityUrl { get; set; }
-#endif
-        /// <summary>The external_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ExternalId { get; set; }
-#nullable restore
-#else
-        public string ExternalId { get; set; }
-#endif
-        /// <summary>The external_ref property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ExternalRef2? ExternalRef { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ExternalRef2 ExternalRef { get; set; }
-#endif
-        /// <summary>The hash property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Hash { get; set; }
-#nullable restore
-#else
-        public string Hash { get; set; }
-#endif
-        /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
-        /// <summary>The message_ts property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? MessageTs { get; set; }
-#nullable restore
-#else
-        public string MessageTs { get; set; }
-#endif
-        /// <summary>The notify_on_close property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.View7NotifyOnClose? NotifyOnClose { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.View7NotifyOnClose NotifyOnClose { get; set; }
-#endif
-        /// <summary>The previous_view_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? PreviousViewId { get; set; }
-#nullable restore
-#else
-        public string PreviousViewId { get; set; }
-#endif
-        /// <summary>The private_metadata property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? PrivateMetadata { get; set; }
-#nullable restore
-#else
-        public string PrivateMetadata { get; set; }
-#endif
-        /// <summary>The root_view_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? RootViewId { get; set; }
-#nullable restore
-#else
-        public string RootViewId { get; set; }
-#endif
-        /// <summary>The state property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.View7State? State { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.View7State State { get; set; }
-#endif
-        /// <summary>The submit property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Close? Submit { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Close Submit { get; set; }
-#endif
-        /// <summary>The submit_disabled property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.View7SubmitDisabled? SubmitDisabled { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.View7SubmitDisabled SubmitDisabled { get; set; }
-#endif
-        /// <summary>The team_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? TeamId { get; set; }
-#nullable restore
-#else
-        public string TeamId { get; set; }
-#endif
-        /// <summary>The thread_ts property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ThreadTs { get; set; }
-#nullable restore
-#else
-        public string ThreadTs { get; set; }
-#endif
-        /// <summary>The title property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Close? Title { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Close Title { get; set; }
-#endif
-        /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.View7"/> and sets the default values.
-        /// </summary>
-        public View7()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -237,7 +45,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.View7 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.View7();
+            var result = new global::Soenneker.Slack.OpenApiClient.Models.View7();
+            result.HomeView = new global::Soenneker.Slack.OpenApiClient.Models.HomeView();
+            result.ModalView = new global::Soenneker.Slack.OpenApiClient.Models.ModalView();
+            result.WorkflowStepView = new global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepView();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -245,35 +57,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(HomeView != null || ModalView != null || WorkflowStepView != null)
             {
-                { "app_id", n => { AppId = n.GetStringValue(); } },
-                { "app_installed_team_id", n => { AppInstalledTeamId = n.GetStringValue(); } },
-                { "app_unfurl_url", n => { AppUnfurlUrl = n.GetStringValue(); } },
-                { "blocks", n => { Blocks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Block5>(global::Soenneker.Slack.OpenApiClient.Models.Block5.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "bot_id", n => { BotId = n.GetStringValue(); } },
-                { "callback_id", n => { CallbackId = n.GetStringValue(); } },
-                { "channel", n => { Channel = n.GetStringValue(); } },
-                { "clear_on_close", n => { ClearOnClose = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View7ClearOnClose>(global::Soenneker.Slack.OpenApiClient.Models.View7ClearOnClose.CreateFromDiscriminatorValue); } },
-                { "close", n => { Close = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Close>(global::Soenneker.Slack.OpenApiClient.Models.Close.CreateFromDiscriminatorValue); } },
-                { "entity_url", n => { EntityUrl = n.GetStringValue(); } },
-                { "external_id", n => { ExternalId = n.GetStringValue(); } },
-                { "external_ref", n => { ExternalRef = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ExternalRef2>(global::Soenneker.Slack.OpenApiClient.Models.ExternalRef2.CreateFromDiscriminatorValue); } },
-                { "hash", n => { Hash = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
-                { "message_ts", n => { MessageTs = n.GetStringValue(); } },
-                { "notify_on_close", n => { NotifyOnClose = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View7NotifyOnClose>(global::Soenneker.Slack.OpenApiClient.Models.View7NotifyOnClose.CreateFromDiscriminatorValue); } },
-                { "previous_view_id", n => { PreviousViewId = n.GetStringValue(); } },
-                { "private_metadata", n => { PrivateMetadata = n.GetStringValue(); } },
-                { "root_view_id", n => { RootViewId = n.GetStringValue(); } },
-                { "state", n => { State = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View7State>(global::Soenneker.Slack.OpenApiClient.Models.View7State.CreateFromDiscriminatorValue); } },
-                { "submit", n => { Submit = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Close>(global::Soenneker.Slack.OpenApiClient.Models.Close.CreateFromDiscriminatorValue); } },
-                { "submit_disabled", n => { SubmitDisabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View7SubmitDisabled>(global::Soenneker.Slack.OpenApiClient.Models.View7SubmitDisabled.CreateFromDiscriminatorValue); } },
-                { "team_id", n => { TeamId = n.GetStringValue(); } },
-                { "thread_ts", n => { ThreadTs = n.GetStringValue(); } },
-                { "title", n => { Title = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Close>(global::Soenneker.Slack.OpenApiClient.Models.Close.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetStringValue(); } },
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(HomeView, ModalView, WorkflowStepView);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -282,33 +70,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("app_id", AppId);
-            writer.WriteStringValue("app_installed_team_id", AppInstalledTeamId);
-            writer.WriteStringValue("app_unfurl_url", AppUnfurlUrl);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Block5>("blocks", Blocks);
-            writer.WriteStringValue("bot_id", BotId);
-            writer.WriteStringValue("callback_id", CallbackId);
-            writer.WriteStringValue("channel", Channel);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View7ClearOnClose>("clear_on_close", ClearOnClose);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Close>("close", Close);
-            writer.WriteStringValue("entity_url", EntityUrl);
-            writer.WriteStringValue("external_id", ExternalId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ExternalRef2>("external_ref", ExternalRef);
-            writer.WriteStringValue("hash", Hash);
-            writer.WriteStringValue("id", Id);
-            writer.WriteStringValue("message_ts", MessageTs);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View7NotifyOnClose>("notify_on_close", NotifyOnClose);
-            writer.WriteStringValue("previous_view_id", PreviousViewId);
-            writer.WriteStringValue("private_metadata", PrivateMetadata);
-            writer.WriteStringValue("root_view_id", RootViewId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View7State>("state", State);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Close>("submit", Submit);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View7SubmitDisabled>("submit_disabled", SubmitDisabled);
-            writer.WriteStringValue("team_id", TeamId);
-            writer.WriteStringValue("thread_ts", ThreadTs);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Close>("title", Title);
-            writer.WriteStringValue("type", Type);
-            writer.WriteAdditionalData(AdditionalData);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.HomeView>(null, HomeView, ModalView, WorkflowStepView);
         }
     }
 }

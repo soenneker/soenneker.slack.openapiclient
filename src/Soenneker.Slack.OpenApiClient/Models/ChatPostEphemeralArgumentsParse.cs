@@ -7,13 +7,13 @@ namespace Soenneker.Slack.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ChatPostEphemeralArgumentsParse
     {
-        [EnumMember(Value = "none")]
-        #pragma warning disable CS1591
-        None,
-        #pragma warning restore CS1591
         [EnumMember(Value = "full")]
         #pragma warning disable CS1591
         Full,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "none")]
+        #pragma warning disable CS1591
+        None,
         #pragma warning restore CS1591
     }
 }

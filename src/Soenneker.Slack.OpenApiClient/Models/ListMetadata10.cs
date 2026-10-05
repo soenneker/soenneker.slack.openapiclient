@@ -41,10 +41,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The views property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.View4>? Views { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.View5>? Views { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.View4> Views { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.View5> Views { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ListMetadata10"/> and sets the default values.
@@ -74,7 +74,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "integrations", n => { Integrations = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "schema", n => { Schema = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Schema4>(global::Soenneker.Slack.OpenApiClient.Models.Schema4.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "subtask_schema", n => { SubtaskSchema = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SubtaskSchema>(global::Soenneker.Slack.OpenApiClient.Models.SubtaskSchema.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "views", n => { Views = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.View4>(global::Soenneker.Slack.OpenApiClient.Models.View4.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "views", n => { Views = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.View5>(global::Soenneker.Slack.OpenApiClient.Models.View5.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -87,7 +87,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("integrations", Integrations);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Schema4>("schema", Schema);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SubtaskSchema>("subtask_schema", SubtaskSchema);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.View4>("views", Views);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.View5>("views", Views);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

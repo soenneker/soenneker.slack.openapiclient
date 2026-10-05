@@ -259,10 +259,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The initial_comment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Comment3? InitialComment { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Comment4? InitialComment { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Comment3 InitialComment { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Comment4 InitialComment { get; set; }
 #endif
         /// <summary>The is_external property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -1013,7 +1013,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "image_exif_rotation", n => { ImageExifRotation = n.GetDoubleValue(); } },
                 { "ims", n => { Ims = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "initial_comment", n => { InitialComment = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment3>(global::Soenneker.Slack.OpenApiClient.Models.Comment3.CreateFromDiscriminatorValue); } },
+                { "initial_comment", n => { InitialComment = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment4>(global::Soenneker.Slack.OpenApiClient.Models.Comment4.CreateFromDiscriminatorValue); } },
                 { "is_external", n => { IsExternal = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ItemFileIsExternal>(global::Soenneker.Slack.OpenApiClient.Models.ItemFileIsExternal.CreateFromDiscriminatorValue); } },
                 { "is_public", n => { IsPublic = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ItemFileIsPublic>(global::Soenneker.Slack.OpenApiClient.Models.ItemFileIsPublic.CreateFromDiscriminatorValue); } },
                 { "is_starred", n => { IsStarred = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ItemFileIsStarred>(global::Soenneker.Slack.OpenApiClient.Models.ItemFileIsStarred.CreateFromDiscriminatorValue); } },
@@ -1150,7 +1150,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteDoubleValue("image_exif_rotation", ImageExifRotation);
             writer.WriteCollectionOfPrimitiveValues<string>("ims", Ims);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment3>("initial_comment", InitialComment);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment4>("initial_comment", InitialComment);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ItemFileIsExternal>("is_external", IsExternal);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ItemFileIsPublic>("is_public", IsPublic);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ItemFileIsStarred>("is_starred", IsStarred);
