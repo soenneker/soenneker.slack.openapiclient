@@ -55,10 +55,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The response_metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata? ResponseMetadata { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ToolingTokensRotateResponseResponseMetadata? ResponseMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata ResponseMetadata { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ToolingTokensRotateResponseResponseMetadata ResponseMetadata { get; set; }
 #endif
         /// <summary>The team_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -116,7 +116,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "ok", n => { Ok = n.GetBoolValue(); } },
                 { "provided", n => { Provided = n.GetStringValue(); } },
                 { "refresh_token", n => { RefreshToken = n.GetStringValue(); } },
-                { "response_metadata", n => { ResponseMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>(global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata.CreateFromDiscriminatorValue); } },
+                { "response_metadata", n => { ResponseMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ToolingTokensRotateResponseResponseMetadata>(global::Soenneker.Slack.OpenApiClient.Models.ToolingTokensRotateResponseResponseMetadata.CreateFromDiscriminatorValue); } },
                 { "team_id", n => { TeamId = n.GetStringValue(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
                 { "user_id", n => { UserId = n.GetStringValue(); } },
@@ -136,7 +136,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteBoolValue("ok", Ok);
             writer.WriteStringValue("provided", Provided);
             writer.WriteStringValue("refresh_token", RefreshToken);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>("response_metadata", ResponseMetadata);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ToolingTokensRotateResponseResponseMetadata>("response_metadata", ResponseMetadata);
             writer.WriteStringValue("team_id", TeamId);
             writer.WriteStringValue("token", Token);
             writer.WriteStringValue("user_id", UserId);

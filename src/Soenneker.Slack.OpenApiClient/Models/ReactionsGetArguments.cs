@@ -7,28 +7,36 @@ using System.IO;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.ReactionsGetArgumentsMember1"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ReactionsGetArgumentsMember2"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ReactionsGetArgumentsMember3"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class ReactionsGetArguments : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class ReactionsGetArguments : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>If `true`, return the complete reaction list.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ReactionsGetArgumentsMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ReactionsFullFull? Full { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ReactionsGetArgumentsMember1? ReactionsGetArgumentsMember1 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ReactionsFullFull Full { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ReactionsGetArgumentsMember1 ReactionsGetArgumentsMember1 { get; set; }
 #endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ReactionsGetArguments"/> and sets the default values.
-        /// </summary>
-        public ReactionsGetArguments()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ReactionsGetArgumentsMember2"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ReactionsGetArgumentsMember2? ReactionsGetArgumentsMember2 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ReactionsGetArgumentsMember2 ReactionsGetArgumentsMember2 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ReactionsGetArgumentsMember3"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ReactionsGetArgumentsMember3? ReactionsGetArgumentsMember3 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ReactionsGetArgumentsMember3 ReactionsGetArgumentsMember3 { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -37,7 +45,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.ReactionsGetArguments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.ReactionsGetArguments();
+            var result = new global::Soenneker.Slack.OpenApiClient.Models.ReactionsGetArguments();
+            result.ReactionsGetArgumentsMember1 = new global::Soenneker.Slack.OpenApiClient.Models.ReactionsGetArgumentsMember1();
+            result.ReactionsGetArgumentsMember2 = new global::Soenneker.Slack.OpenApiClient.Models.ReactionsGetArgumentsMember2();
+            result.ReactionsGetArgumentsMember3 = new global::Soenneker.Slack.OpenApiClient.Models.ReactionsGetArgumentsMember3();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -45,10 +57,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(ReactionsGetArgumentsMember1 != null || ReactionsGetArgumentsMember2 != null || ReactionsGetArgumentsMember3 != null)
             {
-                { "full", n => { Full = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ReactionsFullFull>(global::Soenneker.Slack.OpenApiClient.Models.ReactionsFullFull.CreateFromDiscriminatorValue); } },
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(ReactionsGetArgumentsMember1, ReactionsGetArgumentsMember2, ReactionsGetArgumentsMember3);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -57,8 +70,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ReactionsFullFull>("full", Full);
-            writer.WriteAdditionalData(AdditionalData);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ReactionsGetArgumentsMember1>(null, ReactionsGetArgumentsMember1, ReactionsGetArgumentsMember2, ReactionsGetArgumentsMember3);
         }
     }
 }

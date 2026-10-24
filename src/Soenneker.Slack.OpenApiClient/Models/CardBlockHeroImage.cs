@@ -8,30 +8,27 @@ using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
     /// <summary>
-    /// A top banner image for the card in the form of an [ImageElement](ImageElement).
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.CardBlockHeroImageMember1"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.CardBlockHeroImageMember2"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class CardBlockHeroImage : IAdditionalDataHolder, IParsable
+    public partial class CardBlockHeroImage : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A plain-text summary of the image. This should not contain any markup.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.CardBlockHeroImageMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AltText { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.CardBlockHeroImageMember1? CardBlockHeroImageMember1 { get; set; }
 #nullable restore
 #else
-        public string AltText { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.CardBlockHeroImageMember1 CardBlockHeroImageMember1 { get; set; }
 #endif
-        /// <summary>The type of element. In this case `type` is always `image`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.ImageType? Type { get; set; }
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.CardBlockHeroImage"/> and sets the default values.
-        /// </summary>
-        public CardBlockHeroImage()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.CardBlockHeroImageMember2"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.CardBlockHeroImageMember2? CardBlockHeroImageMember2 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.CardBlockHeroImageMember2 CardBlockHeroImageMember2 { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -40,7 +37,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.CardBlockHeroImage CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.CardBlockHeroImage();
+            var result = new global::Soenneker.Slack.OpenApiClient.Models.CardBlockHeroImage();
+            result.CardBlockHeroImageMember1 = new global::Soenneker.Slack.OpenApiClient.Models.CardBlockHeroImageMember1();
+            result.CardBlockHeroImageMember2 = new global::Soenneker.Slack.OpenApiClient.Models.CardBlockHeroImageMember2();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -48,11 +48,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(CardBlockHeroImageMember1 != null || CardBlockHeroImageMember2 != null)
             {
-                { "alt_text", n => { AltText = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ImageType>(); } },
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(CardBlockHeroImageMember1, CardBlockHeroImageMember2);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -61,9 +61,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("alt_text", AltText);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ImageType>("type", Type);
-            writer.WriteAdditionalData(AdditionalData);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.CardBlockHeroImageMember1>(null, CardBlockHeroImageMember1, CardBlockHeroImageMember2);
         }
     }
 }

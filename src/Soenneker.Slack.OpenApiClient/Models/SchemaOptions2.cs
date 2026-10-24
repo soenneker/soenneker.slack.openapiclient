@@ -65,23 +65,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The max property</summary>
         public double? Max { get; set; }
         /// <summary>The notify_users property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.SchemaOptions2NotifyUsers? NotifyUsers { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.SchemaOptions2NotifyUsers NotifyUsers { get; set; }
-#endif
+        public bool? NotifyUsers { get; set; }
         /// <summary>The precision property</summary>
         public double? Precision { get; set; }
         /// <summary>The show_member_name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.SchemaOptions2ShowMemberName? ShowMemberName { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.SchemaOptions2ShowMemberName ShowMemberName { get; set; }
-#endif
+        public bool? ShowMemberName { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.SchemaOptions2"/> and sets the default values.
         /// </summary>
@@ -114,9 +102,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "emoji_team_id", n => { EmojiTeamId = n.GetStringValue(); } },
                 { "format", n => { Format = n.GetStringValue(); } },
                 { "max", n => { Max = n.GetDoubleValue(); } },
-                { "notify_users", n => { NotifyUsers = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SchemaOptions2NotifyUsers>(global::Soenneker.Slack.OpenApiClient.Models.SchemaOptions2NotifyUsers.CreateFromDiscriminatorValue); } },
+                { "notify_users", n => { NotifyUsers = n.GetBoolValue(); } },
                 { "precision", n => { Precision = n.GetDoubleValue(); } },
-                { "show_member_name", n => { ShowMemberName = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SchemaOptions2ShowMemberName>(global::Soenneker.Slack.OpenApiClient.Models.SchemaOptions2ShowMemberName.CreateFromDiscriminatorValue); } },
+                { "show_member_name", n => { ShowMemberName = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -133,9 +121,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("emoji_team_id", EmojiTeamId);
             writer.WriteStringValue("format", Format);
             writer.WriteDoubleValue("max", Max);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SchemaOptions2NotifyUsers>("notify_users", NotifyUsers);
+            writer.WriteBoolValue("notify_users", NotifyUsers);
             writer.WriteDoubleValue("precision", Precision);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SchemaOptions2ShowMemberName>("show_member_name", ShowMemberName);
+            writer.WriteBoolValue("show_member_name", ShowMemberName);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

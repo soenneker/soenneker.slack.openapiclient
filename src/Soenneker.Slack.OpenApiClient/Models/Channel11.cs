@@ -33,21 +33,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The is_im property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel11IsIm? IsIm { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel11IsIm IsIm { get; set; }
-#endif
+        public bool? IsIm { get; set; }
         /// <summary>The is_private property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel11IsPrivate? IsPrivate { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel11IsPrivate IsPrivate { get; set; }
-#endif
+        public bool? IsPrivate { get; set; }
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -100,8 +88,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "connections", n => { Connections = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Connection>(global::Soenneker.Slack.OpenApiClient.Models.Connection.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "date_created", n => { DateCreated = n.GetDoubleValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "is_im", n => { IsIm = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel11IsIm>(global::Soenneker.Slack.OpenApiClient.Models.Channel11IsIm.CreateFromDiscriminatorValue); } },
-                { "is_private", n => { IsPrivate = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel11IsPrivate>(global::Soenneker.Slack.OpenApiClient.Models.Channel11IsPrivate.CreateFromDiscriminatorValue); } },
+                { "is_im", n => { IsIm = n.GetBoolValue(); } },
+                { "is_private", n => { IsPrivate = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "pending_connections", n => { PendingConnections = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Connection>(global::Soenneker.Slack.OpenApiClient.Models.Connection.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "previous_connections", n => { PreviousConnections = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Connection>(global::Soenneker.Slack.OpenApiClient.Models.Connection.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -117,8 +105,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Connection>("connections", Connections);
             writer.WriteDoubleValue("date_created", DateCreated);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel11IsIm>("is_im", IsIm);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel11IsPrivate>("is_private", IsPrivate);
+            writer.WriteBoolValue("is_im", IsIm);
+            writer.WriteBoolValue("is_private", IsPrivate);
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Connection>("pending_connections", PendingConnections);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Connection>("previous_connections", PreviousConnections);

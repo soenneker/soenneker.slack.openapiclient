@@ -39,13 +39,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string InviteId { get; set; }
 #endif
         /// <summary>The is_legacy_shared_channel property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsInviteSharedResponseAllOf2IsLegacySharedChannel? IsLegacySharedChannel { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsInviteSharedResponseAllOf2IsLegacySharedChannel IsLegacySharedChannel { get; set; }
-#endif
+        public bool? IsLegacySharedChannel { get; set; }
         /// <summary>The needed property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -108,7 +102,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "conf_code", n => { ConfCode = n.GetStringValue(); } },
                 { "error", n => { Error = n.GetStringValue(); } },
                 { "invite_id", n => { InviteId = n.GetStringValue(); } },
-                { "is_legacy_shared_channel", n => { IsLegacySharedChannel = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsInviteSharedResponseAllOf2IsLegacySharedChannel>(global::Soenneker.Slack.OpenApiClient.Models.ConversationsInviteSharedResponseAllOf2IsLegacySharedChannel.CreateFromDiscriminatorValue); } },
+                { "is_legacy_shared_channel", n => { IsLegacySharedChannel = n.GetBoolValue(); } },
                 { "needed", n => { Needed = n.GetStringValue(); } },
                 { "ok", n => { Ok = n.GetBoolValue(); } },
                 { "provided", n => { Provided = n.GetStringValue(); } },
@@ -126,7 +120,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("conf_code", ConfCode);
             writer.WriteStringValue("error", Error);
             writer.WriteStringValue("invite_id", InviteId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsInviteSharedResponseAllOf2IsLegacySharedChannel>("is_legacy_shared_channel", IsLegacySharedChannel);
+            writer.WriteBoolValue("is_legacy_shared_channel", IsLegacySharedChannel);
             writer.WriteStringValue("needed", Needed);
             writer.WriteBoolValue("ok", Ok);
             writer.WriteStringValue("provided", Provided);

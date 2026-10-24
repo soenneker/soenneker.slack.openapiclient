@@ -23,13 +23,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string BlockId { get; set; }
 #endif
         /// <summary>A boolean that indicates whether or not the use of elements in this block should dispatch a[block_actions payload](https://docs.slack.dev/reference/interaction-payloads/block_actions-payload). Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.InputBlockDispatchAction? DispatchAction { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.InputBlockDispatchAction DispatchAction { get; set; }
-#endif
+        public bool? DispatchAction { get; set; }
         /// <summary>A block element.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -55,13 +49,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement Label { get; set; }
 #endif
         /// <summary>A boolean that indicates whether the input element may be empty when a user submits the modal.Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.InputBlockOptional? Optional { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.InputBlockOptional Optional { get; set; }
-#endif
+        public bool? Optional { get; set; }
         /// <summary>The type of block. For an input block, `type` is always `input`.</summary>
         public global::Soenneker.Slack.OpenApiClient.Models.InputType? Type { get; set; }
         /// <summary>
@@ -90,11 +78,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "block_id", n => { BlockId = n.GetStringValue(); } },
-                { "dispatch_action", n => { DispatchAction = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InputBlockDispatchAction>(global::Soenneker.Slack.OpenApiClient.Models.InputBlockDispatchAction.CreateFromDiscriminatorValue); } },
+                { "dispatch_action", n => { DispatchAction = n.GetBoolValue(); } },
                 { "element", n => { Element = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InputBlockElement>(global::Soenneker.Slack.OpenApiClient.Models.InputBlockElement.CreateFromDiscriminatorValue); } },
                 { "hint", n => { Hint = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>(global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement.CreateFromDiscriminatorValue); } },
                 { "label", n => { Label = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>(global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement.CreateFromDiscriminatorValue); } },
-                { "optional", n => { Optional = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InputBlockOptional>(global::Soenneker.Slack.OpenApiClient.Models.InputBlockOptional.CreateFromDiscriminatorValue); } },
+                { "optional", n => { Optional = n.GetBoolValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.InputType>(); } },
             };
         }
@@ -106,11 +94,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("block_id", BlockId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InputBlockDispatchAction>("dispatch_action", DispatchAction);
+            writer.WriteBoolValue("dispatch_action", DispatchAction);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InputBlockElement>("element", Element);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>("hint", Hint);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>("label", Label);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InputBlockOptional>("optional", Optional);
+            writer.WriteBoolValue("optional", Optional);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.InputType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -23,29 +23,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public List<string> ChannelIds { get; set; }
 #endif
         /// <summary>The is_domain_matched property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.InvitePreferencesIsDomainMatched? IsDomainMatched { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.InvitePreferencesIsDomainMatched IsDomainMatched { get; set; }
-#endif
+        public bool? IsDomainMatched { get; set; }
         /// <summary>The is_restricted property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.InvitePreferencesIsRestricted? IsRestricted { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.InvitePreferencesIsRestricted IsRestricted { get; set; }
-#endif
+        public bool? IsRestricted { get; set; }
         /// <summary>The is_ultra_restricted property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.InvitePreferencesIsUltraRestricted? IsUltraRestricted { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.InvitePreferencesIsUltraRestricted IsUltraRestricted { get; set; }
-#endif
+        public bool? IsUltraRestricted { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.InvitePreferences"/> and sets the default values.
         /// </summary>
@@ -72,9 +54,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "channel_ids", n => { ChannelIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "is_domain_matched", n => { IsDomainMatched = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InvitePreferencesIsDomainMatched>(global::Soenneker.Slack.OpenApiClient.Models.InvitePreferencesIsDomainMatched.CreateFromDiscriminatorValue); } },
-                { "is_restricted", n => { IsRestricted = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InvitePreferencesIsRestricted>(global::Soenneker.Slack.OpenApiClient.Models.InvitePreferencesIsRestricted.CreateFromDiscriminatorValue); } },
-                { "is_ultra_restricted", n => { IsUltraRestricted = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InvitePreferencesIsUltraRestricted>(global::Soenneker.Slack.OpenApiClient.Models.InvitePreferencesIsUltraRestricted.CreateFromDiscriminatorValue); } },
+                { "is_domain_matched", n => { IsDomainMatched = n.GetBoolValue(); } },
+                { "is_restricted", n => { IsRestricted = n.GetBoolValue(); } },
+                { "is_ultra_restricted", n => { IsUltraRestricted = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -85,9 +67,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("channel_ids", ChannelIds);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InvitePreferencesIsDomainMatched>("is_domain_matched", IsDomainMatched);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InvitePreferencesIsRestricted>("is_restricted", IsRestricted);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InvitePreferencesIsUltraRestricted>("is_ultra_restricted", IsUltraRestricted);
+            writer.WriteBoolValue("is_domain_matched", IsDomainMatched);
+            writer.WriteBoolValue("is_restricted", IsRestricted);
+            writer.WriteBoolValue("is_ultra_restricted", IsUltraRestricted);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

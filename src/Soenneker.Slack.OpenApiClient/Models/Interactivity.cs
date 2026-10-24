@@ -15,13 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The is_enabled property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.InteractivityIsEnabled? IsEnabled { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.InteractivityIsEnabled IsEnabled { get; set; }
-#endif
+        public bool? IsEnabled { get; set; }
         /// <summary>The message_menu_options_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -63,7 +57,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "is_enabled", n => { IsEnabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InteractivityIsEnabled>(global::Soenneker.Slack.OpenApiClient.Models.InteractivityIsEnabled.CreateFromDiscriminatorValue); } },
+                { "is_enabled", n => { IsEnabled = n.GetBoolValue(); } },
                 { "message_menu_options_url", n => { MessageMenuOptionsUrl = n.GetStringValue(); } },
                 { "request_url", n => { RequestUrl = n.GetStringValue(); } },
             };
@@ -75,7 +69,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InteractivityIsEnabled>("is_enabled", IsEnabled);
+            writer.WriteBoolValue("is_enabled", IsEnabled);
             writer.WriteStringValue("message_menu_options_url", MessageMenuOptionsUrl);
             writer.WriteStringValue("request_url", RequestUrl);
             writer.WriteAdditionalData(AdditionalData);

@@ -23,21 +23,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string EnterpriseId { get; set; }
 #endif
         /// <summary>The is_bot property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AuthorizationIsBot? IsBot { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AuthorizationIsBot IsBot { get; set; }
-#endif
+        public bool? IsBot { get; set; }
         /// <summary>The is_enterprise_install property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AuthorizationIsEnterpriseInstall? IsEnterpriseInstall { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AuthorizationIsEnterpriseInstall IsEnterpriseInstall { get; set; }
-#endif
+        public bool? IsEnterpriseInstall { get; set; }
         /// <summary>The team_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -80,8 +68,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "enterprise_id", n => { EnterpriseId = n.GetStringValue(); } },
-                { "is_bot", n => { IsBot = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AuthorizationIsBot>(global::Soenneker.Slack.OpenApiClient.Models.AuthorizationIsBot.CreateFromDiscriminatorValue); } },
-                { "is_enterprise_install", n => { IsEnterpriseInstall = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AuthorizationIsEnterpriseInstall>(global::Soenneker.Slack.OpenApiClient.Models.AuthorizationIsEnterpriseInstall.CreateFromDiscriminatorValue); } },
+                { "is_bot", n => { IsBot = n.GetBoolValue(); } },
+                { "is_enterprise_install", n => { IsEnterpriseInstall = n.GetBoolValue(); } },
                 { "team_id", n => { TeamId = n.GetStringValue(); } },
                 { "user_id", n => { UserId = n.GetStringValue(); } },
             };
@@ -94,8 +82,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("enterprise_id", EnterpriseId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AuthorizationIsBot>("is_bot", IsBot);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AuthorizationIsEnterpriseInstall>("is_enterprise_install", IsEnterpriseInstall);
+            writer.WriteBoolValue("is_bot", IsBot);
+            writer.WriteBoolValue("is_enterprise_install", IsEnterpriseInstall);
             writer.WriteStringValue("team_id", TeamId);
             writer.WriteStringValue("user_id", UserId);
             writer.WriteAdditionalData(AdditionalData);

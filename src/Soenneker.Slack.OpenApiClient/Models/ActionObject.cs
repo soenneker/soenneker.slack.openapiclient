@@ -89,13 +89,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Text { get; set; }
 #endif
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.ActionType? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ActionType Type { get; set; }
-#endif
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -147,7 +141,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "selected_options", n => { SelectedOptions = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SelectedOptionElement>(global::Soenneker.Slack.OpenApiClient.Models.SelectedOptionElement.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "style", n => { Style = n.GetStringValue(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ActionType>(global::Soenneker.Slack.OpenApiClient.Models.ActionType.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ActionType>(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "value", n => { Value = n.GetStringValue(); } },
             };
@@ -169,7 +163,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SelectedOptionElement>("selected_options", SelectedOptions);
             writer.WriteStringValue("style", Style);
             writer.WriteStringValue("text", Text);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ActionType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ActionType>("type", Type);
             writer.WriteStringValue("url", Url);
             writer.WriteStringValue("value", Value);
             writer.WriteAdditionalData(AdditionalData);

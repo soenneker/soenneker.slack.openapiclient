@@ -43,10 +43,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The response_metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata? ResponseMetadata { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminRolesListAssignmentsResponseResponseMetadata? ResponseMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata ResponseMetadata { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminRolesListAssignmentsResponseResponseMetadata ResponseMetadata { get; set; }
 #endif
         /// <summary>The role_assignments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -93,7 +93,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "needed", n => { Needed = n.GetStringValue(); } },
                 { "ok", n => { Ok = n.GetBoolValue(); } },
                 { "provided", n => { Provided = n.GetStringValue(); } },
-                { "response_metadata", n => { ResponseMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>(global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata.CreateFromDiscriminatorValue); } },
+                { "response_metadata", n => { ResponseMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminRolesListAssignmentsResponseResponseMetadata>(global::Soenneker.Slack.OpenApiClient.Models.AdminRolesListAssignmentsResponseResponseMetadata.CreateFromDiscriminatorValue); } },
                 { "role_assignments", n => { RoleAssignments = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RoleAssignment>(global::Soenneker.Slack.OpenApiClient.Models.RoleAssignment.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "warning", n => { Warning = n.GetStringValue(); } },
             };
@@ -109,7 +109,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("needed", Needed);
             writer.WriteBoolValue("ok", Ok);
             writer.WriteStringValue("provided", Provided);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>("response_metadata", ResponseMetadata);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminRolesListAssignmentsResponseResponseMetadata>("response_metadata", ResponseMetadata);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RoleAssignment>("role_assignments", RoleAssignments);
             writer.WriteStringValue("warning", Warning);
             writer.WriteAdditionalData(AdditionalData);

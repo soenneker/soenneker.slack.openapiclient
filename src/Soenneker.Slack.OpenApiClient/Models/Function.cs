@@ -63,13 +63,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Description { get; set; }
 #endif
         /// <summary>The form_enabled property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.FunctionFormEnabled? FormEnabled { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.FunctionFormEnabled FormEnabled { get; set; }
-#endif
+        public bool? FormEnabled { get; set; }
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -152,7 +146,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "date_released", n => { DateReleased = n.GetDoubleValue(); } },
                 { "date_updated", n => { DateUpdated = n.GetDoubleValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "form_enabled", n => { FormEnabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FunctionFormEnabled>(global::Soenneker.Slack.OpenApiClient.Models.FunctionFormEnabled.CreateFromDiscriminatorValue); } },
+                { "form_enabled", n => { FormEnabled = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "input_parameters", n => { InputParameters = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.PutParameter>(global::Soenneker.Slack.OpenApiClient.Models.PutParameter.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "output_parameters", n => { OutputParameters = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.PutParameter>(global::Soenneker.Slack.OpenApiClient.Models.PutParameter.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -177,7 +171,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("date_released", DateReleased);
             writer.WriteDoubleValue("date_updated", DateUpdated);
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FunctionFormEnabled>("form_enabled", FormEnabled);
+            writer.WriteBoolValue("form_enabled", FormEnabled);
             writer.WriteStringValue("id", Id);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.PutParameter>("input_parameters", InputParameters);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.PutParameter>("output_parameters", OutputParameters);

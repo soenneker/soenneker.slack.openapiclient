@@ -143,13 +143,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string ImageUrl { get; set; }
 #endif
         /// <summary>The is_app_unfurl property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageAttachmentIsAppUnfurl? IsAppUnfurl { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageAttachmentIsAppUnfurl IsAppUnfurl { get; set; }
-#endif
+        public bool? IsAppUnfurl { get; set; }
         /// <summary>Field names that should be [by `mrkdwn` syntax](https://docs.slack.dev/messaging/formatting-message-textformatted).The fields that can be formatted in this way include the names of the `fields` property, orthe `text` or `pretext` properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -255,7 +249,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "footer", n => { Footer = n.GetStringValue(); } },
                 { "footer_icon", n => { FooterIcon = n.GetStringValue(); } },
                 { "image_url", n => { ImageUrl = n.GetStringValue(); } },
-                { "is_app_unfurl", n => { IsAppUnfurl = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageAttachmentIsAppUnfurl>(global::Soenneker.Slack.OpenApiClient.Models.MessageAttachmentIsAppUnfurl.CreateFromDiscriminatorValue); } },
+                { "is_app_unfurl", n => { IsAppUnfurl = n.GetBoolValue(); } },
                 { "mrkdwn_in", n => { MrkdwnIn = n.GetCollectionOfEnumValues<global::Soenneker.Slack.OpenApiClient.Models.MessageAttachmentMrkdwnInItem>()?.AsList(); } },
                 { "pretext", n => { Pretext = n.GetStringValue(); } },
                 { "preview", n => { Preview = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageAttachmentPreview>(global::Soenneker.Slack.OpenApiClient.Models.MessageAttachmentPreview.CreateFromDiscriminatorValue); } },
@@ -289,7 +283,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("footer", Footer);
             writer.WriteStringValue("footer_icon", FooterIcon);
             writer.WriteStringValue("image_url", ImageUrl);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageAttachmentIsAppUnfurl>("is_app_unfurl", IsAppUnfurl);
+            writer.WriteBoolValue("is_app_unfurl", IsAppUnfurl);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Slack.OpenApiClient.Models.MessageAttachmentMrkdwnInItem>("mrkdwn_in", MrkdwnIn);
             writer.WriteStringValue("pretext", Pretext);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageAttachmentPreview>("preview", Preview);

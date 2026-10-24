@@ -103,13 +103,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string EmojiUrl { get; set; }
 #endif
         /// <summary>The for_assignment property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ListSchemaOptionsForAssignment? ForAssignment { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ListSchemaOptionsForAssignment ForAssignment { get; set; }
-#endif
+        public bool? ForAssignment { get; set; }
         /// <summary>The format property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -127,23 +121,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public List<string> LinkedTo { get; set; }
 #endif
         /// <summary>The mark_as_done_when_checked property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ListSchemaOptionsMarkAsDoneWhenChecked? MarkAsDoneWhenChecked { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ListSchemaOptionsMarkAsDoneWhenChecked MarkAsDoneWhenChecked { get; set; }
-#endif
+        public bool? MarkAsDoneWhenChecked { get; set; }
         /// <summary>The max property</summary>
         public double? Max { get; set; }
         /// <summary>The notify_users property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ListSchemaOptionsNotifyUsers? NotifyUsers { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ListSchemaOptionsNotifyUsers NotifyUsers { get; set; }
-#endif
+        public bool? NotifyUsers { get; set; }
         /// <summary>The precision property</summary>
         public double? Precision { get; set; }
         /// <summary>The rounding property</summary>
@@ -155,13 +137,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Rounding { get; set; }
 #endif
         /// <summary>The show_member_name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ListSchemaOptionsShowMemberName? ShowMemberName { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ListSchemaOptionsShowMemberName ShowMemberName { get; set; }
-#endif
+        public bool? ShowMemberName { get; set; }
         /// <summary>The time_format property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -206,15 +182,15 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "emoji", n => { Emoji = n.GetStringValue(); } },
                 { "emoji_team_id", n => { EmojiTeamId = n.GetStringValue(); } },
                 { "emoji_url", n => { EmojiUrl = n.GetStringValue(); } },
-                { "for_assignment", n => { ForAssignment = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListSchemaOptionsForAssignment>(global::Soenneker.Slack.OpenApiClient.Models.ListSchemaOptionsForAssignment.CreateFromDiscriminatorValue); } },
+                { "for_assignment", n => { ForAssignment = n.GetBoolValue(); } },
                 { "format", n => { Format = n.GetStringValue(); } },
                 { "linked_to", n => { LinkedTo = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "mark_as_done_when_checked", n => { MarkAsDoneWhenChecked = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListSchemaOptionsMarkAsDoneWhenChecked>(global::Soenneker.Slack.OpenApiClient.Models.ListSchemaOptionsMarkAsDoneWhenChecked.CreateFromDiscriminatorValue); } },
+                { "mark_as_done_when_checked", n => { MarkAsDoneWhenChecked = n.GetBoolValue(); } },
                 { "max", n => { Max = n.GetDoubleValue(); } },
-                { "notify_users", n => { NotifyUsers = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListSchemaOptionsNotifyUsers>(global::Soenneker.Slack.OpenApiClient.Models.ListSchemaOptionsNotifyUsers.CreateFromDiscriminatorValue); } },
+                { "notify_users", n => { NotifyUsers = n.GetBoolValue(); } },
                 { "precision", n => { Precision = n.GetDoubleValue(); } },
                 { "rounding", n => { Rounding = n.GetStringValue(); } },
-                { "show_member_name", n => { ShowMemberName = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListSchemaOptionsShowMemberName>(global::Soenneker.Slack.OpenApiClient.Models.ListSchemaOptionsShowMemberName.CreateFromDiscriminatorValue); } },
+                { "show_member_name", n => { ShowMemberName = n.GetBoolValue(); } },
                 { "time_format", n => { TimeFormat = n.GetStringValue(); } },
             };
         }
@@ -236,15 +212,15 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("emoji", Emoji);
             writer.WriteStringValue("emoji_team_id", EmojiTeamId);
             writer.WriteStringValue("emoji_url", EmojiUrl);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListSchemaOptionsForAssignment>("for_assignment", ForAssignment);
+            writer.WriteBoolValue("for_assignment", ForAssignment);
             writer.WriteStringValue("format", Format);
             writer.WriteCollectionOfPrimitiveValues<string>("linked_to", LinkedTo);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListSchemaOptionsMarkAsDoneWhenChecked>("mark_as_done_when_checked", MarkAsDoneWhenChecked);
+            writer.WriteBoolValue("mark_as_done_when_checked", MarkAsDoneWhenChecked);
             writer.WriteDoubleValue("max", Max);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListSchemaOptionsNotifyUsers>("notify_users", NotifyUsers);
+            writer.WriteBoolValue("notify_users", NotifyUsers);
             writer.WriteDoubleValue("precision", Precision);
             writer.WriteStringValue("rounding", Rounding);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListSchemaOptionsShowMemberName>("show_member_name", ShowMemberName);
+            writer.WriteBoolValue("show_member_name", ShowMemberName);
             writer.WriteStringValue("time_format", TimeFormat);
             writer.WriteAdditionalData(AdditionalData);
         }

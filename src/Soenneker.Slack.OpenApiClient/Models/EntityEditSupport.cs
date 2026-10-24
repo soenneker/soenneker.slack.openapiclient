@@ -33,13 +33,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportNumber Number { get; set; }
 #endif
         /// <summary>The optional property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportOptional? Optional { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportOptional Optional { get; set; }
-#endif
+        public bool? Optional { get; set; }
         /// <summary>The placeholder property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -92,7 +86,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
                 { "hint", n => { Hint = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>(global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement.CreateFromDiscriminatorValue); } },
                 { "number", n => { Number = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportNumber>(global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportNumber.CreateFromDiscriminatorValue); } },
-                { "optional", n => { Optional = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportOptional>(global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportOptional.CreateFromDiscriminatorValue); } },
+                { "optional", n => { Optional = n.GetBoolValue(); } },
                 { "placeholder", n => { Placeholder = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>(global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement.CreateFromDiscriminatorValue); } },
                 { "select", n => { Select = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportSelect>(global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportSelect.CreateFromDiscriminatorValue); } },
                 { "text", n => { Text = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportText>(global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportText.CreateFromDiscriminatorValue); } },
@@ -108,7 +102,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteBoolValue("enabled", Enabled);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>("hint", Hint);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportNumber>("number", Number);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportOptional>("optional", Optional);
+            writer.WriteBoolValue("optional", Optional);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>("placeholder", Placeholder);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportSelect>("select", Select);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportText>("text", Text);

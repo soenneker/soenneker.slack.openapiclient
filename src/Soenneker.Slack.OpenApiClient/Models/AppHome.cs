@@ -15,29 +15,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The home_tab_enabled property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AppHomeHomeTabEnabled? HomeTabEnabled { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AppHomeHomeTabEnabled HomeTabEnabled { get; set; }
-#endif
+        public bool? HomeTabEnabled { get; set; }
         /// <summary>The messages_tab_enabled property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AppHomeMessagesTabEnabled? MessagesTabEnabled { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AppHomeMessagesTabEnabled MessagesTabEnabled { get; set; }
-#endif
+        public bool? MessagesTabEnabled { get; set; }
         /// <summary>The messages_tab_read_only_enabled property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AppHomeMessagesTabReadOnlyEnabled? MessagesTabReadOnlyEnabled { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AppHomeMessagesTabReadOnlyEnabled MessagesTabReadOnlyEnabled { get; set; }
-#endif
+        public bool? MessagesTabReadOnlyEnabled { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.AppHome"/> and sets the default values.
         /// </summary>
@@ -63,9 +45,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "home_tab_enabled", n => { HomeTabEnabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AppHomeHomeTabEnabled>(global::Soenneker.Slack.OpenApiClient.Models.AppHomeHomeTabEnabled.CreateFromDiscriminatorValue); } },
-                { "messages_tab_enabled", n => { MessagesTabEnabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AppHomeMessagesTabEnabled>(global::Soenneker.Slack.OpenApiClient.Models.AppHomeMessagesTabEnabled.CreateFromDiscriminatorValue); } },
-                { "messages_tab_read_only_enabled", n => { MessagesTabReadOnlyEnabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AppHomeMessagesTabReadOnlyEnabled>(global::Soenneker.Slack.OpenApiClient.Models.AppHomeMessagesTabReadOnlyEnabled.CreateFromDiscriminatorValue); } },
+                { "home_tab_enabled", n => { HomeTabEnabled = n.GetBoolValue(); } },
+                { "messages_tab_enabled", n => { MessagesTabEnabled = n.GetBoolValue(); } },
+                { "messages_tab_read_only_enabled", n => { MessagesTabReadOnlyEnabled = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -75,9 +57,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AppHomeHomeTabEnabled>("home_tab_enabled", HomeTabEnabled);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AppHomeMessagesTabEnabled>("messages_tab_enabled", MessagesTabEnabled);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AppHomeMessagesTabReadOnlyEnabled>("messages_tab_read_only_enabled", MessagesTabReadOnlyEnabled);
+            writer.WriteBoolValue("home_tab_enabled", HomeTabEnabled);
+            writer.WriteBoolValue("messages_tab_enabled", MessagesTabEnabled);
+            writer.WriteBoolValue("messages_tab_read_only_enabled", MessagesTabReadOnlyEnabled);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

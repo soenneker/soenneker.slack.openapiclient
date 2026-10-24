@@ -7,79 +7,79 @@ using System.IO;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsMember1"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsMember2"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsMember3"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsMember4"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class ChatUnfurlArguments : global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsAllOf1Composed, IParsable
-    #pragma warning restore CS1591
+    public partial class ChatUnfurlArguments : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Provide a JSON based array of structured blocks presented as URL-encoded string to send as anephemeral message to the user as invitation to authenticate further and enable full unfurling behavior.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsAllOf1UserAuthBlocksItem>? UserAuthBlocks { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsMember1? ChatUnfurlArgumentsMember1 { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsAllOf1UserAuthBlocksItem> UserAuthBlocks { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsMember1 ChatUnfurlArgumentsMember1 { get; set; }
 #endif
-        /// <summary>Provide a simply-formatted string to send as an ephemeral message to the user as invitation toauthenticate further and enable full unfurling behavior. Provides two buttons, Not now or Never ask me again.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsMember2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserAuthMessage { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsMember2? ChatUnfurlArgumentsMember2 { get; set; }
 #nullable restore
 #else
-        public string UserAuthMessage { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsMember2 ChatUnfurlArgumentsMember2 { get; set; }
 #endif
-        /// <summary>Set to `true` to indicate the user must install your Slack app to trigger unfurls for this domain.Defaults to `false`.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsMember3"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsAllOf1UserAuthRequired? UserAuthRequired { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsMember3? ChatUnfurlArgumentsMember3 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsAllOf1UserAuthRequired UserAuthRequired { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsMember3 ChatUnfurlArgumentsMember3 { get; set; }
 #endif
-        /// <summary>Send users to this custom URL where they will complete authentication in your app to fully triggerunfurling. Value should be properly URL-encoded.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsMember4"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserAuthUrl { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsMember4? ChatUnfurlArgumentsMember4 { get; set; }
 #nullable restore
 #else
-        public string UserAuthUrl { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsMember4 ChatUnfurlArgumentsMember4 { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArguments"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArguments CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArguments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArguments();
+            var result = new global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArguments();
+            result.ChatUnfurlArgumentsMember1 = new global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsMember1();
+            result.ChatUnfurlArgumentsMember2 = new global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsMember2();
+            result.ChatUnfurlArgumentsMember3 = new global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsMember3();
+            result.ChatUnfurlArgumentsMember4 = new global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsMember4();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            if(ChatUnfurlArgumentsMember1 != null || ChatUnfurlArgumentsMember2 != null || ChatUnfurlArgumentsMember3 != null || ChatUnfurlArgumentsMember4 != null)
             {
-                { "user_auth_blocks", n => { UserAuthBlocks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsAllOf1UserAuthBlocksItem>(global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsAllOf1UserAuthBlocksItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "user_auth_message", n => { UserAuthMessage = n.GetStringValue(); } },
-                { "user_auth_required", n => { UserAuthRequired = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsAllOf1UserAuthRequired>(global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsAllOf1UserAuthRequired.CreateFromDiscriminatorValue); } },
-                { "user_auth_url", n => { UserAuthUrl = n.GetStringValue(); } },
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(ChatUnfurlArgumentsMember1, ChatUnfurlArgumentsMember2, ChatUnfurlArgumentsMember3, ChatUnfurlArgumentsMember4);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsAllOf1UserAuthBlocksItem>("user_auth_blocks", UserAuthBlocks);
-            writer.WriteStringValue("user_auth_message", UserAuthMessage);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsAllOf1UserAuthRequired>("user_auth_required", UserAuthRequired);
-            writer.WriteStringValue("user_auth_url", UserAuthUrl);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsMember1>(null, ChatUnfurlArgumentsMember1, ChatUnfurlArgumentsMember2, ChatUnfurlArgumentsMember3, ChatUnfurlArgumentsMember4);
         }
     }
 }

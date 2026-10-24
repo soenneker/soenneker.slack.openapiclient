@@ -23,13 +23,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Description { get; set; }
 #endif
         /// <summary>The is_sensitive property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ScopeIsSensitive? IsSensitive { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ScopeIsSensitive IsSensitive { get; set; }
-#endif
+        public bool? IsSensitive { get; set; }
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -72,7 +66,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "is_sensitive", n => { IsSensitive = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ScopeIsSensitive>(global::Soenneker.Slack.OpenApiClient.Models.ScopeIsSensitive.CreateFromDiscriminatorValue); } },
+                { "is_sensitive", n => { IsSensitive = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "token_type", n => { TokenType = n.GetStringValue(); } },
             };
@@ -85,7 +79,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ScopeIsSensitive>("is_sensitive", IsSensitive);
+            writer.WriteBoolValue("is_sensitive", IsSensitive);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("token_type", TokenType);
             writer.WriteAdditionalData(AdditionalData);

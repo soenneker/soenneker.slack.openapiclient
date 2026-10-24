@@ -23,13 +23,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Description { get; set; }
 #endif
         /// <summary>The is_required property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.PutParameterIsRequired? IsRequired { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.PutParameterIsRequired IsRequired { get; set; }
-#endif
+        public bool? IsRequired { get; set; }
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -80,7 +74,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "is_required", n => { IsRequired = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PutParameterIsRequired>(global::Soenneker.Slack.OpenApiClient.Models.PutParameterIsRequired.CreateFromDiscriminatorValue); } },
+                { "is_required", n => { IsRequired = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
@@ -94,7 +88,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PutParameterIsRequired>("is_required", IsRequired);
+            writer.WriteBoolValue("is_required", IsRequired);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("title", Title);
             writer.WriteStringValue("type", Type);

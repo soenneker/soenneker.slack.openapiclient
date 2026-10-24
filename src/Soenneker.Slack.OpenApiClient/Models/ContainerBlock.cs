@@ -31,21 +31,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public List<global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockChildBlocksItem> ChildBlocks { get; set; }
 #endif
         /// <summary>Whether the container is collapsed by default. Requires `is_collapsible` to be `true`. Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockDefaultCollapsed? DefaultCollapsed { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockDefaultCollapsed DefaultCollapsed { get; set; }
-#endif
+        public bool? DefaultCollapsed { get; set; }
         /// <summary>Whether to show a visible border separating header from content.Only applies when `is_collapsible` is not `true`. Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockHasHeaderDivider? HasHeaderDivider { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockHasHeaderDivider HasHeaderDivider { get; set; }
-#endif
+        public bool? HasHeaderDivider { get; set; }
         /// <summary>An image element displayed alongside the title and subtitle.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -55,13 +43,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockIcon Icon { get; set; }
 #endif
         /// <summary>Whether the container can be collapsed. Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockIsCollapsible? IsCollapsible { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockIsCollapsible IsCollapsible { get; set; }
-#endif
+        public bool? IsCollapsible { get; set; }
         /// <summary>Rich text title for the container. Takes precedence over `title` if both are provided.One of `title` or `rich_text_title` is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -117,10 +99,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "block_id", n => { BlockId = n.GetStringValue(); } },
                 { "child_blocks", n => { ChildBlocks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockChildBlocksItem>(global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockChildBlocksItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "default_collapsed", n => { DefaultCollapsed = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockDefaultCollapsed>(global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockDefaultCollapsed.CreateFromDiscriminatorValue); } },
-                { "has_header_divider", n => { HasHeaderDivider = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockHasHeaderDivider>(global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockHasHeaderDivider.CreateFromDiscriminatorValue); } },
+                { "default_collapsed", n => { DefaultCollapsed = n.GetBoolValue(); } },
+                { "has_header_divider", n => { HasHeaderDivider = n.GetBoolValue(); } },
                 { "icon", n => { Icon = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockIcon>(global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockIcon.CreateFromDiscriminatorValue); } },
-                { "is_collapsible", n => { IsCollapsible = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockIsCollapsible>(global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockIsCollapsible.CreateFromDiscriminatorValue); } },
+                { "is_collapsible", n => { IsCollapsible = n.GetBoolValue(); } },
                 { "rich_text_title", n => { RichTextTitle = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock>(global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock.CreateFromDiscriminatorValue); } },
                 { "subtitle", n => { Subtitle = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockSubtitle>(global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockSubtitle.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>(global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement.CreateFromDiscriminatorValue); } },
@@ -137,10 +119,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("block_id", BlockId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockChildBlocksItem>("child_blocks", ChildBlocks);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockDefaultCollapsed>("default_collapsed", DefaultCollapsed);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockHasHeaderDivider>("has_header_divider", HasHeaderDivider);
+            writer.WriteBoolValue("default_collapsed", DefaultCollapsed);
+            writer.WriteBoolValue("has_header_divider", HasHeaderDivider);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockIcon>("icon", Icon);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockIsCollapsible>("is_collapsible", IsCollapsible);
+            writer.WriteBoolValue("is_collapsible", IsCollapsible);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock>("rich_text_title", RichTextTitle);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockSubtitle>("subtitle", Subtitle);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>("title", Title);

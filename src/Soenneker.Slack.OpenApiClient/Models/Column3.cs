@@ -39,13 +39,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Position { get; set; }
 #endif
         /// <summary>The visible property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Column3Visible? Visible { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Column3Visible Visible { get; set; }
-#endif
+        public bool? Visible { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Column3"/> and sets the default values.
         /// </summary>
@@ -74,7 +68,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "key", n => { Key = n.GetStringValue(); } },
                 { "position", n => { Position = n.GetStringValue(); } },
-                { "visible", n => { Visible = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Column3Visible>(global::Soenneker.Slack.OpenApiClient.Models.Column3Visible.CreateFromDiscriminatorValue); } },
+                { "visible", n => { Visible = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -87,7 +81,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("key", Key);
             writer.WriteStringValue("position", Position);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Column3Visible>("visible", Visible);
+            writer.WriteBoolValue("visible", Visible);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

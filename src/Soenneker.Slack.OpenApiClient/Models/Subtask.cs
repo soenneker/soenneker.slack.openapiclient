@@ -41,13 +41,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The is_subscribed property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.SubtaskIsSubscribed? IsSubscribed { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.SubtaskIsSubscribed IsSubscribed { get; set; }
-#endif
+        public bool? IsSubscribed { get; set; }
         /// <summary>The list_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -101,7 +95,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "date_created", n => { DateCreated = n.GetDoubleValue(); } },
                 { "fields", n => { Fields = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SubtaskField>(global::Soenneker.Slack.OpenApiClient.Models.SubtaskField.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "is_subscribed", n => { IsSubscribed = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SubtaskIsSubscribed>(global::Soenneker.Slack.OpenApiClient.Models.SubtaskIsSubscribed.CreateFromDiscriminatorValue); } },
+                { "is_subscribed", n => { IsSubscribed = n.GetBoolValue(); } },
                 { "list_id", n => { ListId = n.GetStringValue(); } },
                 { "updated_by", n => { UpdatedBy = n.GetStringValue(); } },
                 { "updated_timestamp", n => { UpdatedTimestamp = n.GetStringValue(); } },
@@ -118,7 +112,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("date_created", DateCreated);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SubtaskField>("fields", Fields);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SubtaskIsSubscribed>("is_subscribed", IsSubscribed);
+            writer.WriteBoolValue("is_subscribed", IsSubscribed);
             writer.WriteStringValue("list_id", ListId);
             writer.WriteStringValue("updated_by", UpdatedBy);
             writer.WriteStringValue("updated_timestamp", UpdatedTimestamp);

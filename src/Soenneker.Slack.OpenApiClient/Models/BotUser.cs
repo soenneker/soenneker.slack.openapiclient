@@ -15,13 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The always_online property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.BotUserAlwaysOnline? AlwaysOnline { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.BotUserAlwaysOnline AlwaysOnline { get; set; }
-#endif
+        public bool? AlwaysOnline { get; set; }
         /// <summary>The display_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -55,7 +49,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "always_online", n => { AlwaysOnline = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotUserAlwaysOnline>(global::Soenneker.Slack.OpenApiClient.Models.BotUserAlwaysOnline.CreateFromDiscriminatorValue); } },
+                { "always_online", n => { AlwaysOnline = n.GetBoolValue(); } },
                 { "display_name", n => { DisplayName = n.GetStringValue(); } },
             };
         }
@@ -66,7 +60,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotUserAlwaysOnline>("always_online", AlwaysOnline);
+            writer.WriteBoolValue("always_online", AlwaysOnline);
             writer.WriteStringValue("display_name", DisplayName);
             writer.WriteAdditionalData(AdditionalData);
         }

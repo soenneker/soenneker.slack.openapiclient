@@ -23,13 +23,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The is_hidden property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Section3IsHidden? IsHidden { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Section3IsHidden IsHidden { get; set; }
-#endif
+        public bool? IsHidden { get; set; }
         /// <summary>The label property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -82,7 +76,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "is_hidden", n => { IsHidden = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Section3IsHidden>(global::Soenneker.Slack.OpenApiClient.Models.Section3IsHidden.CreateFromDiscriminatorValue); } },
+                { "is_hidden", n => { IsHidden = n.GetBoolValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "order", n => { Order = n.GetDoubleValue(); } },
                 { "section_type", n => { SectionType = n.GetStringValue(); } },
@@ -97,7 +91,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Section3IsHidden>("is_hidden", IsHidden);
+            writer.WriteBoolValue("is_hidden", IsHidden);
             writer.WriteStringValue("label", Label);
             writer.WriteDoubleValue("order", Order);
             writer.WriteStringValue("section_type", SectionType);

@@ -23,21 +23,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Channel { get; set; }
 #endif
         /// <summary>Set this to `true` to receive the locale with the response.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsInfoArgumentsIncludeLocale? IncludeLocale { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsInfoArgumentsIncludeLocale IncludeLocale { get; set; }
-#endif
+        public bool? IncludeLocale { get; set; }
         /// <summary>Set to `true` to include the member count for the specified conversation. Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsInfoArgumentsIncludeNumMembers? IncludeNumMembers { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsInfoArgumentsIncludeNumMembers IncludeNumMembers { get; set; }
-#endif
+        public bool? IncludeNumMembers { get; set; }
         /// <summary>Overridable authentication token bearing required scopes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -72,8 +60,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "channel", n => { Channel = n.GetStringValue(); } },
-                { "include_locale", n => { IncludeLocale = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsInfoArgumentsIncludeLocale>(global::Soenneker.Slack.OpenApiClient.Models.ConversationsInfoArgumentsIncludeLocale.CreateFromDiscriminatorValue); } },
-                { "include_num_members", n => { IncludeNumMembers = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsInfoArgumentsIncludeNumMembers>(global::Soenneker.Slack.OpenApiClient.Models.ConversationsInfoArgumentsIncludeNumMembers.CreateFromDiscriminatorValue); } },
+                { "include_locale", n => { IncludeLocale = n.GetBoolValue(); } },
+                { "include_num_members", n => { IncludeNumMembers = n.GetBoolValue(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
             };
         }
@@ -85,8 +73,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("channel", Channel);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsInfoArgumentsIncludeLocale>("include_locale", IncludeLocale);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsInfoArgumentsIncludeNumMembers>("include_num_members", IncludeNumMembers);
+            writer.WriteBoolValue("include_locale", IncludeLocale);
+            writer.WriteBoolValue("include_num_members", IncludeNumMembers);
             writer.WriteStringValue("token", Token);
             writer.WriteAdditionalData(AdditionalData);
         }

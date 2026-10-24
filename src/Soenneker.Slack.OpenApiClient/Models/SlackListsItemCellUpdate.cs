@@ -7,28 +7,132 @@ using System.IO;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember1"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember10"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember11"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember12"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember13"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember14"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember15"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember2"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember3"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember4"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember5"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember6"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember7"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember8"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember9"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class SlackListsItemCellUpdate : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class SlackListsItemCellUpdate : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The ID of the row to update.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RowId { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember1? SlackListsItemCellUpdateMember1 { get; set; }
 #nullable restore
 #else
-        public string RowId { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember1 SlackListsItemCellUpdateMember1 { get; set; }
 #endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdate"/> and sets the default values.
-        /// </summary>
-        public SlackListsItemCellUpdate()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember10"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember10? SlackListsItemCellUpdateMember10 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember10 SlackListsItemCellUpdateMember10 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember11"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember11? SlackListsItemCellUpdateMember11 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember11 SlackListsItemCellUpdateMember11 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember12"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember12? SlackListsItemCellUpdateMember12 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember12 SlackListsItemCellUpdateMember12 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember13"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember13? SlackListsItemCellUpdateMember13 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember13 SlackListsItemCellUpdateMember13 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember14"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember14? SlackListsItemCellUpdateMember14 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember14 SlackListsItemCellUpdateMember14 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember15"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember15? SlackListsItemCellUpdateMember15 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember15 SlackListsItemCellUpdateMember15 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember2"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember2? SlackListsItemCellUpdateMember2 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember2 SlackListsItemCellUpdateMember2 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember3"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember3? SlackListsItemCellUpdateMember3 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember3 SlackListsItemCellUpdateMember3 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember4"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember4? SlackListsItemCellUpdateMember4 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember4 SlackListsItemCellUpdateMember4 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember5"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember5? SlackListsItemCellUpdateMember5 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember5 SlackListsItemCellUpdateMember5 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember6"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember6? SlackListsItemCellUpdateMember6 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember6 SlackListsItemCellUpdateMember6 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember7"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember7? SlackListsItemCellUpdateMember7 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember7 SlackListsItemCellUpdateMember7 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember8"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember8? SlackListsItemCellUpdateMember8 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember8 SlackListsItemCellUpdateMember8 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember9"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember9? SlackListsItemCellUpdateMember9 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember9 SlackListsItemCellUpdateMember9 { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -37,7 +141,23 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdate CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdate();
+            var result = new global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdate();
+            result.SlackListsItemCellUpdateMember1 = new global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember1();
+            result.SlackListsItemCellUpdateMember10 = new global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember10();
+            result.SlackListsItemCellUpdateMember11 = new global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember11();
+            result.SlackListsItemCellUpdateMember12 = new global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember12();
+            result.SlackListsItemCellUpdateMember13 = new global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember13();
+            result.SlackListsItemCellUpdateMember14 = new global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember14();
+            result.SlackListsItemCellUpdateMember15 = new global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember15();
+            result.SlackListsItemCellUpdateMember2 = new global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember2();
+            result.SlackListsItemCellUpdateMember3 = new global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember3();
+            result.SlackListsItemCellUpdateMember4 = new global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember4();
+            result.SlackListsItemCellUpdateMember5 = new global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember5();
+            result.SlackListsItemCellUpdateMember6 = new global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember6();
+            result.SlackListsItemCellUpdateMember7 = new global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember7();
+            result.SlackListsItemCellUpdateMember8 = new global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember8();
+            result.SlackListsItemCellUpdateMember9 = new global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember9();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -45,10 +165,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(SlackListsItemCellUpdateMember1 != null || SlackListsItemCellUpdateMember10 != null || SlackListsItemCellUpdateMember11 != null || SlackListsItemCellUpdateMember12 != null || SlackListsItemCellUpdateMember13 != null || SlackListsItemCellUpdateMember14 != null || SlackListsItemCellUpdateMember15 != null || SlackListsItemCellUpdateMember2 != null || SlackListsItemCellUpdateMember3 != null || SlackListsItemCellUpdateMember4 != null || SlackListsItemCellUpdateMember5 != null || SlackListsItemCellUpdateMember6 != null || SlackListsItemCellUpdateMember7 != null || SlackListsItemCellUpdateMember8 != null || SlackListsItemCellUpdateMember9 != null)
             {
-                { "row_id", n => { RowId = n.GetStringValue(); } },
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(SlackListsItemCellUpdateMember1, SlackListsItemCellUpdateMember10, SlackListsItemCellUpdateMember11, SlackListsItemCellUpdateMember12, SlackListsItemCellUpdateMember13, SlackListsItemCellUpdateMember14, SlackListsItemCellUpdateMember15, SlackListsItemCellUpdateMember2, SlackListsItemCellUpdateMember3, SlackListsItemCellUpdateMember4, SlackListsItemCellUpdateMember5, SlackListsItemCellUpdateMember6, SlackListsItemCellUpdateMember7, SlackListsItemCellUpdateMember8, SlackListsItemCellUpdateMember9);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -57,8 +178,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("row_id", RowId);
-            writer.WriteAdditionalData(AdditionalData);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember1>(null, SlackListsItemCellUpdateMember1, SlackListsItemCellUpdateMember10, SlackListsItemCellUpdateMember11, SlackListsItemCellUpdateMember12, SlackListsItemCellUpdateMember13, SlackListsItemCellUpdateMember14, SlackListsItemCellUpdateMember15, SlackListsItemCellUpdateMember2, SlackListsItemCellUpdateMember3, SlackListsItemCellUpdateMember4, SlackListsItemCellUpdateMember5, SlackListsItemCellUpdateMember6, SlackListsItemCellUpdateMember7, SlackListsItemCellUpdateMember8, SlackListsItemCellUpdateMember9);
         }
     }
 }

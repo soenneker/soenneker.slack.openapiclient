@@ -7,52 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.ConversationsAcceptSharedInviteArgumentsMember1"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ConversationsAcceptSharedInviteArgumentsMember2"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class ConversationsAcceptSharedInviteArguments : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class ConversationsAcceptSharedInviteArguments : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Name of the channel. If the channel does not exist already in your workspace,this name is the one that the channel will take.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ConversationsAcceptSharedInviteArgumentsMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChannelName { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsAcceptSharedInviteArgumentsMember1? ConversationsAcceptSharedInviteArgumentsMember1 { get; set; }
 #nullable restore
 #else
-        public string ChannelName { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsAcceptSharedInviteArgumentsMember1 ConversationsAcceptSharedInviteArgumentsMember1 { get; set; }
 #endif
-        /// <summary>Whether you&apos;d like to use your workspace&apos;s free trial to begin using Slack Connect.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ConversationsAcceptSharedInviteArgumentsMember2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsAcceptSharedInviteArgumentsAllOf3AllOf1FreeTrialAccepted? FreeTrialAccepted { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsAcceptSharedInviteArgumentsMember2? ConversationsAcceptSharedInviteArgumentsMember2 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsAcceptSharedInviteArgumentsAllOf3AllOf1FreeTrialAccepted FreeTrialAccepted { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsAcceptSharedInviteArgumentsMember2 ConversationsAcceptSharedInviteArgumentsMember2 { get; set; }
 #endif
-        /// <summary>Whether the channel should be private.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.IsPrivateIsPrivate? IsPrivate { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.IsPrivateIsPrivate IsPrivate { get; set; }
-#endif
-        /// <summary>If using an org token, `team_id` is required.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? TeamId { get; set; }
-#nullable restore
-#else
-        public string TeamId { get; set; }
-#endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ConversationsAcceptSharedInviteArguments"/> and sets the default values.
-        /// </summary>
-        public ConversationsAcceptSharedInviteArguments()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -61,7 +37,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.ConversationsAcceptSharedInviteArguments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.ConversationsAcceptSharedInviteArguments();
+            var result = new global::Soenneker.Slack.OpenApiClient.Models.ConversationsAcceptSharedInviteArguments();
+            result.ConversationsAcceptSharedInviteArgumentsMember1 = new global::Soenneker.Slack.OpenApiClient.Models.ConversationsAcceptSharedInviteArgumentsMember1();
+            result.ConversationsAcceptSharedInviteArgumentsMember2 = new global::Soenneker.Slack.OpenApiClient.Models.ConversationsAcceptSharedInviteArgumentsMember2();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,13 +48,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(ConversationsAcceptSharedInviteArgumentsMember1 != null || ConversationsAcceptSharedInviteArgumentsMember2 != null)
             {
-                { "channel_name", n => { ChannelName = n.GetStringValue(); } },
-                { "free_trial_accepted", n => { FreeTrialAccepted = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsAcceptSharedInviteArgumentsAllOf3AllOf1FreeTrialAccepted>(global::Soenneker.Slack.OpenApiClient.Models.ConversationsAcceptSharedInviteArgumentsAllOf3AllOf1FreeTrialAccepted.CreateFromDiscriminatorValue); } },
-                { "is_private", n => { IsPrivate = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.IsPrivateIsPrivate>(global::Soenneker.Slack.OpenApiClient.Models.IsPrivateIsPrivate.CreateFromDiscriminatorValue); } },
-                { "team_id", n => { TeamId = n.GetStringValue(); } },
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(ConversationsAcceptSharedInviteArgumentsMember1, ConversationsAcceptSharedInviteArgumentsMember2);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -84,11 +61,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("channel_name", ChannelName);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsAcceptSharedInviteArgumentsAllOf3AllOf1FreeTrialAccepted>("free_trial_accepted", FreeTrialAccepted);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.IsPrivateIsPrivate>("is_private", IsPrivate);
-            writer.WriteStringValue("team_id", TeamId);
-            writer.WriteAdditionalData(AdditionalData);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsAcceptSharedInviteArgumentsMember1>(null, ConversationsAcceptSharedInviteArgumentsMember1, ConversationsAcceptSharedInviteArgumentsMember2);
         }
     }
 }

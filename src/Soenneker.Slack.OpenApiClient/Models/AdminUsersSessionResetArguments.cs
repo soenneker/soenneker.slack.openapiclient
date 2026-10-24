@@ -15,13 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Only expire mobile sessions. Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsersSessionResetArgumentsMobileOnly? MobileOnly { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsersSessionResetArgumentsMobileOnly MobileOnly { get; set; }
-#endif
+        public bool? MobileOnly { get; set; }
         /// <summary>Overridable authentication token bearing required scopes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -39,13 +33,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string UserId { get; set; }
 #endif
         /// <summary>Only expire web sessions. Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsersSessionResetArgumentsWebOnly? WebOnly { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsersSessionResetArgumentsWebOnly WebOnly { get; set; }
-#endif
+        public bool? WebOnly { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminUsersSessionResetArguments"/> and sets the default values.
         /// </summary>
@@ -71,10 +59,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "mobile_only", n => { MobileOnly = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminUsersSessionResetArgumentsMobileOnly>(global::Soenneker.Slack.OpenApiClient.Models.AdminUsersSessionResetArgumentsMobileOnly.CreateFromDiscriminatorValue); } },
+                { "mobile_only", n => { MobileOnly = n.GetBoolValue(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
                 { "user_id", n => { UserId = n.GetStringValue(); } },
-                { "web_only", n => { WebOnly = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminUsersSessionResetArgumentsWebOnly>(global::Soenneker.Slack.OpenApiClient.Models.AdminUsersSessionResetArgumentsWebOnly.CreateFromDiscriminatorValue); } },
+                { "web_only", n => { WebOnly = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -84,10 +72,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminUsersSessionResetArgumentsMobileOnly>("mobile_only", MobileOnly);
+            writer.WriteBoolValue("mobile_only", MobileOnly);
             writer.WriteStringValue("token", Token);
             writer.WriteStringValue("user_id", UserId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminUsersSessionResetArgumentsWebOnly>("web_only", WebOnly);
+            writer.WriteBoolValue("web_only", WebOnly);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

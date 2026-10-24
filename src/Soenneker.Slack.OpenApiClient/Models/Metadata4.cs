@@ -37,33 +37,15 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The rotation property</summary>
         public double? Rotation { get; set; }
         /// <summary>The thumb_160 property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Metadata4Thumb160? Thumb160 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Metadata4Thumb160 Thumb160 { get; set; }
-#endif
+        public bool? Thumb160 { get; set; }
         /// <summary>The thumb_360_h property</summary>
         public double? Thumb360H { get; set; }
         /// <summary>The thumb_360_w property</summary>
         public double? Thumb360W { get; set; }
         /// <summary>The thumb_64 property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Metadata4Thumb64? Thumb64 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Metadata4Thumb64 Thumb64 { get; set; }
-#endif
+        public bool? Thumb64 { get; set; }
         /// <summary>The thumb_80 property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Metadata4Thumb80? Thumb80 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Metadata4Thumb80 Thumb80 { get; set; }
-#endif
+        public bool? Thumb80 { get; set; }
         /// <summary>The thumb_tiny property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -102,11 +84,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "original_h", n => { OriginalH = n.GetDoubleValue(); } },
                 { "original_w", n => { OriginalW = n.GetDoubleValue(); } },
                 { "rotation", n => { Rotation = n.GetDoubleValue(); } },
-                { "thumb_160", n => { Thumb160 = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Metadata4Thumb160>(global::Soenneker.Slack.OpenApiClient.Models.Metadata4Thumb160.CreateFromDiscriminatorValue); } },
+                { "thumb_160", n => { Thumb160 = n.GetBoolValue(); } },
                 { "thumb_360_h", n => { Thumb360H = n.GetDoubleValue(); } },
                 { "thumb_360_w", n => { Thumb360W = n.GetDoubleValue(); } },
-                { "thumb_64", n => { Thumb64 = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Metadata4Thumb64>(global::Soenneker.Slack.OpenApiClient.Models.Metadata4Thumb64.CreateFromDiscriminatorValue); } },
-                { "thumb_80", n => { Thumb80 = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Metadata4Thumb80>(global::Soenneker.Slack.OpenApiClient.Models.Metadata4Thumb80.CreateFromDiscriminatorValue); } },
+                { "thumb_64", n => { Thumb64 = n.GetBoolValue(); } },
+                { "thumb_80", n => { Thumb80 = n.GetBoolValue(); } },
                 { "thumb_tiny", n => { ThumbTiny = n.GetStringValue(); } },
             };
         }
@@ -122,11 +104,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("original_h", OriginalH);
             writer.WriteDoubleValue("original_w", OriginalW);
             writer.WriteDoubleValue("rotation", Rotation);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Metadata4Thumb160>("thumb_160", Thumb160);
+            writer.WriteBoolValue("thumb_160", Thumb160);
             writer.WriteDoubleValue("thumb_360_h", Thumb360H);
             writer.WriteDoubleValue("thumb_360_w", Thumb360W);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Metadata4Thumb64>("thumb_64", Thumb64);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Metadata4Thumb80>("thumb_80", Thumb80);
+            writer.WriteBoolValue("thumb_64", Thumb64);
+            writer.WriteBoolValue("thumb_80", Thumb80);
             writer.WriteStringValue("thumb_tiny", ThumbTiny);
             writer.WriteAdditionalData(AdditionalData);
         }

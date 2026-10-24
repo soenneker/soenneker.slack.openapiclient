@@ -41,10 +41,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The typed_values property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.FilterElementTypedValuesItem>? TypedValues { get; set; }
+        public UntypedNode? TypedValues { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.FilterElementTypedValuesItem> TypedValues { get; set; }
+        public UntypedNode TypedValues { get; set; }
 #endif
         /// <summary>The values property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,7 +82,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "column_id", n => { ColumnId = n.GetStringValue(); } },
                 { "key", n => { Key = n.GetStringValue(); } },
                 { "operator", n => { Operator = n.GetStringValue(); } },
-                { "typed_values", n => { TypedValues = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.FilterElementTypedValuesItem>(global::Soenneker.Slack.OpenApiClient.Models.FilterElementTypedValuesItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "typed_values", n => { TypedValues = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "values", n => { Values = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
@@ -96,7 +96,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("column_id", ColumnId);
             writer.WriteStringValue("key", Key);
             writer.WriteStringValue("operator", Operator);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.FilterElementTypedValuesItem>("typed_values", TypedValues);
+            writer.WriteObjectValue<UntypedNode>("typed_values", TypedValues);
             writer.WriteCollectionOfPrimitiveValues<string>("values", Values);
             writer.WriteAdditionalData(AdditionalData);
         }

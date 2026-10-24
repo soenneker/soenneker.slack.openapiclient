@@ -33,13 +33,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The is_user_app_collaborator property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AppRequestIsUserAppCollaborator? IsUserAppCollaborator { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AppRequestIsUserAppCollaborator IsUserAppCollaborator { get; set; }
-#endif
+        public bool? IsUserAppCollaborator { get; set; }
         /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -59,10 +53,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The scopes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.AppRequestScopesItem>? Scopes { get; set; }
+        public UntypedNode? Scopes { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.AppRequestScopesItem> Scopes { get; set; }
+        public UntypedNode Scopes { get; set; }
 #endif
         /// <summary>The team property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -108,10 +102,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "app", n => { App = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.App>(global::Soenneker.Slack.OpenApiClient.Models.App.CreateFromDiscriminatorValue); } },
                 { "date_created", n => { DateCreated = n.GetDoubleValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "is_user_app_collaborator", n => { IsUserAppCollaborator = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AppRequestIsUserAppCollaborator>(global::Soenneker.Slack.OpenApiClient.Models.AppRequestIsUserAppCollaborator.CreateFromDiscriminatorValue); } },
+                { "is_user_app_collaborator", n => { IsUserAppCollaborator = n.GetBoolValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "previous_resolution", n => { PreviousResolution = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PreviousResolution>(global::Soenneker.Slack.OpenApiClient.Models.PreviousResolution.CreateFromDiscriminatorValue); } },
-                { "scopes", n => { Scopes = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AppRequestScopesItem>(global::Soenneker.Slack.OpenApiClient.Models.AppRequestScopesItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "scopes", n => { Scopes = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "team", n => { Team = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Team>(global::Soenneker.Slack.OpenApiClient.Models.Team.CreateFromDiscriminatorValue); } },
                 { "user", n => { User = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User>(global::Soenneker.Slack.OpenApiClient.Models.User.CreateFromDiscriminatorValue); } },
             };
@@ -126,10 +120,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.App>("app", App);
             writer.WriteDoubleValue("date_created", DateCreated);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AppRequestIsUserAppCollaborator>("is_user_app_collaborator", IsUserAppCollaborator);
+            writer.WriteBoolValue("is_user_app_collaborator", IsUserAppCollaborator);
             writer.WriteStringValue("message", Message);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PreviousResolution>("previous_resolution", PreviousResolution);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AppRequestScopesItem>("scopes", Scopes);
+            writer.WriteObjectValue<UntypedNode>("scopes", Scopes);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Team>("team", Team);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User>("user", User);
             writer.WriteAdditionalData(AdditionalData);

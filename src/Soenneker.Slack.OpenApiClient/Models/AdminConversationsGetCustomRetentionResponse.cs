@@ -25,13 +25,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Error { get; set; }
 #endif
         /// <summary>The is_policy_enabled property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsGetCustomRetentionResponseAllOf2IsPolicyEnabled? IsPolicyEnabled { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsGetCustomRetentionResponseAllOf2IsPolicyEnabled IsPolicyEnabled { get; set; }
-#endif
+        public bool? IsPolicyEnabled { get; set; }
         /// <summary>The needed property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -93,7 +87,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "duration_days", n => { DurationDays = n.GetDoubleValue(); } },
                 { "error", n => { Error = n.GetStringValue(); } },
-                { "is_policy_enabled", n => { IsPolicyEnabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsGetCustomRetentionResponseAllOf2IsPolicyEnabled>(global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsGetCustomRetentionResponseAllOf2IsPolicyEnabled.CreateFromDiscriminatorValue); } },
+                { "is_policy_enabled", n => { IsPolicyEnabled = n.GetBoolValue(); } },
                 { "needed", n => { Needed = n.GetStringValue(); } },
                 { "ok", n => { Ok = n.GetBoolValue(); } },
                 { "provided", n => { Provided = n.GetStringValue(); } },
@@ -110,7 +104,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("duration_days", DurationDays);
             writer.WriteStringValue("error", Error);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsGetCustomRetentionResponseAllOf2IsPolicyEnabled>("is_policy_enabled", IsPolicyEnabled);
+            writer.WriteBoolValue("is_policy_enabled", IsPolicyEnabled);
             writer.WriteStringValue("needed", Needed);
             writer.WriteBoolValue("ok", Ok);
             writer.WriteStringValue("provided", Provided);

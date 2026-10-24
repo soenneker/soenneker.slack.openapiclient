@@ -21,13 +21,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public List<string> AcceptInWorkspaceIds { get; set; }
 #endif
         /// <summary>The accept_private property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AcceptScInvitesAcceptPrivate? AcceptPrivate { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AcceptScInvitesAcceptPrivate AcceptPrivate { get; set; }
-#endif
+        public bool? AcceptPrivate { get; set; }
         /// <summary>The actor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,13 +59,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Type { get; set; }
 #endif
         /// <summary>The use_allowed_workspaces property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AcceptScInvitesUseAllowedWorkspaces? UseAllowedWorkspaces { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AcceptScInvitesUseAllowedWorkspaces UseAllowedWorkspaces { get; set; }
-#endif
+        public bool? UseAllowedWorkspaces { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.AcceptScInvites"/> and sets the default values.
         /// </summary>
@@ -98,13 +86,13 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "accept_in_workspace_ids", n => { AcceptInWorkspaceIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "accept_private", n => { AcceptPrivate = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AcceptScInvitesAcceptPrivate>(global::Soenneker.Slack.OpenApiClient.Models.AcceptScInvitesAcceptPrivate.CreateFromDiscriminatorValue); } },
+                { "accept_private", n => { AcceptPrivate = n.GetBoolValue(); } },
                 { "actor", n => { Actor = n.GetStringValue(); } },
                 { "date_update", n => { DateUpdate = n.GetDoubleValue(); } },
                 { "invalid_workspace_ids", n => { InvalidWorkspaceIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "source", n => { Source = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
-                { "use_allowed_workspaces", n => { UseAllowedWorkspaces = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AcceptScInvitesUseAllowedWorkspaces>(global::Soenneker.Slack.OpenApiClient.Models.AcceptScInvitesUseAllowedWorkspaces.CreateFromDiscriminatorValue); } },
+                { "use_allowed_workspaces", n => { UseAllowedWorkspaces = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -115,13 +103,13 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("accept_in_workspace_ids", AcceptInWorkspaceIds);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AcceptScInvitesAcceptPrivate>("accept_private", AcceptPrivate);
+            writer.WriteBoolValue("accept_private", AcceptPrivate);
             writer.WriteStringValue("actor", Actor);
             writer.WriteDoubleValue("date_update", DateUpdate);
             writer.WriteCollectionOfPrimitiveValues<string>("invalid_workspace_ids", InvalidWorkspaceIds);
             writer.WriteStringValue("source", Source);
             writer.WriteStringValue("type", Type);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AcceptScInvitesUseAllowedWorkspaces>("use_allowed_workspaces", UseAllowedWorkspaces);
+            writer.WriteBoolValue("use_allowed_workspaces", UseAllowedWorkspaces);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

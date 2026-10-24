@@ -61,10 +61,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The response_metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata? ResponseMetadata { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageResponseResponseMetadata? ResponseMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata ResponseMetadata { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageResponseResponseMetadata ResponseMetadata { get; set; }
 #endif
         /// <summary>The scheduled_message_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -114,7 +114,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "ok", n => { Ok = n.GetBoolValue(); } },
                 { "post_at", n => { PostAt = n.GetDoubleValue(); } },
                 { "provided", n => { Provided = n.GetStringValue(); } },
-                { "response_metadata", n => { ResponseMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>(global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata.CreateFromDiscriminatorValue); } },
+                { "response_metadata", n => { ResponseMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageResponseResponseMetadata>(global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageResponseResponseMetadata.CreateFromDiscriminatorValue); } },
                 { "scheduled_message_id", n => { ScheduledMessageId = n.GetStringValue(); } },
                 { "warning", n => { Warning = n.GetStringValue(); } },
             };
@@ -133,7 +133,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteBoolValue("ok", Ok);
             writer.WriteDoubleValue("post_at", PostAt);
             writer.WriteStringValue("provided", Provided);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>("response_metadata", ResponseMetadata);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageResponseResponseMetadata>("response_metadata", ResponseMetadata);
             writer.WriteStringValue("scheduled_message_id", ScheduledMessageId);
             writer.WriteStringValue("warning", Warning);
             writer.WriteAdditionalData(AdditionalData);

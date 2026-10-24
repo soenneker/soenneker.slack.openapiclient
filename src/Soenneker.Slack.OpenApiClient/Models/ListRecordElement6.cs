@@ -41,13 +41,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The is_subscribed property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ListRecordElement6IsSubscribed? IsSubscribed { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ListRecordElement6IsSubscribed IsSubscribed { get; set; }
-#endif
+        public bool? IsSubscribed { get; set; }
         /// <summary>The list_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -133,7 +127,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "date_created", n => { DateCreated = n.GetDoubleValue(); } },
                 { "fields", n => { Fields = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RecordField6>(global::Soenneker.Slack.OpenApiClient.Models.RecordField6.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "is_subscribed", n => { IsSubscribed = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListRecordElement6IsSubscribed>(global::Soenneker.Slack.OpenApiClient.Models.ListRecordElement6IsSubscribed.CreateFromDiscriminatorValue); } },
+                { "is_subscribed", n => { IsSubscribed = n.GetBoolValue(); } },
                 { "list_id", n => { ListId = n.GetStringValue(); } },
                 { "platform_refs", n => { PlatformRefs = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlatformRefs>(global::Soenneker.Slack.OpenApiClient.Models.PlatformRefs.CreateFromDiscriminatorValue); } },
                 { "position", n => { Position = n.GetStringValue(); } },
@@ -154,7 +148,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("date_created", DateCreated);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RecordField6>("fields", Fields);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListRecordElement6IsSubscribed>("is_subscribed", IsSubscribed);
+            writer.WriteBoolValue("is_subscribed", IsSubscribed);
             writer.WriteStringValue("list_id", ListId);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlatformRefs>("platform_refs", PlatformRefs);
             writer.WriteStringValue("position", Position);

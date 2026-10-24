@@ -33,21 +33,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The is_restricted property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.User2IsRestricted? IsRestricted { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.User2IsRestricted IsRestricted { get; set; }
-#endif
+        public bool? IsRestricted { get; set; }
         /// <summary>The is_ultra_restricted property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.User2IsUltraRestricted? IsUltraRestricted { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.User2IsUltraRestricted IsUltraRestricted { get; set; }
-#endif
+        public bool? IsUltraRestricted { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.User2"/> and sets the default values.
         /// </summary>
@@ -76,8 +64,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "expiration_ts", n => { ExpirationTs = n.GetDoubleValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "is_restricted", n => { IsRestricted = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User2IsRestricted>(global::Soenneker.Slack.OpenApiClient.Models.User2IsRestricted.CreateFromDiscriminatorValue); } },
-                { "is_ultra_restricted", n => { IsUltraRestricted = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User2IsUltraRestricted>(global::Soenneker.Slack.OpenApiClient.Models.User2IsUltraRestricted.CreateFromDiscriminatorValue); } },
+                { "is_restricted", n => { IsRestricted = n.GetBoolValue(); } },
+                { "is_ultra_restricted", n => { IsUltraRestricted = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -90,8 +78,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("email", Email);
             writer.WriteDoubleValue("expiration_ts", ExpirationTs);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User2IsRestricted>("is_restricted", IsRestricted);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User2IsUltraRestricted>("is_ultra_restricted", IsUltraRestricted);
+            writer.WriteBoolValue("is_restricted", IsRestricted);
+            writer.WriteBoolValue("is_ultra_restricted", IsUltraRestricted);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

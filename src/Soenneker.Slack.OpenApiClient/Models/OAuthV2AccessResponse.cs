@@ -73,13 +73,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.IncomingWebhook IncomingWebhook { get; set; }
 #endif
         /// <summary>The is_enterprise_install property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.OAuthV2AccessResponseAllOf2IsEnterpriseInstall? IsEnterpriseInstall { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.OAuthV2AccessResponseAllOf2IsEnterpriseInstall IsEnterpriseInstall { get; set; }
-#endif
+        public bool? IsEnterpriseInstall { get; set; }
         /// <summary>The needed property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -179,7 +173,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "error", n => { Error = n.GetStringValue(); } },
                 { "expires_in", n => { ExpiresIn = n.GetDoubleValue(); } },
                 { "incoming_webhook", n => { IncomingWebhook = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.IncomingWebhook>(global::Soenneker.Slack.OpenApiClient.Models.IncomingWebhook.CreateFromDiscriminatorValue); } },
-                { "is_enterprise_install", n => { IsEnterpriseInstall = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.OAuthV2AccessResponseAllOf2IsEnterpriseInstall>(global::Soenneker.Slack.OpenApiClient.Models.OAuthV2AccessResponseAllOf2IsEnterpriseInstall.CreateFromDiscriminatorValue); } },
+                { "is_enterprise_install", n => { IsEnterpriseInstall = n.GetBoolValue(); } },
                 { "needed", n => { Needed = n.GetStringValue(); } },
                 { "ok", n => { Ok = n.GetBoolValue(); } },
                 { "provided", n => { Provided = n.GetStringValue(); } },
@@ -206,7 +200,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("error", Error);
             writer.WriteDoubleValue("expires_in", ExpiresIn);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.IncomingWebhook>("incoming_webhook", IncomingWebhook);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.OAuthV2AccessResponseAllOf2IsEnterpriseInstall>("is_enterprise_install", IsEnterpriseInstall);
+            writer.WriteBoolValue("is_enterprise_install", IsEnterpriseInstall);
             writer.WriteStringValue("needed", Needed);
             writer.WriteBoolValue("ok", Ok);
             writer.WriteStringValue("provided", Provided);

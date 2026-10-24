@@ -53,13 +53,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.InvitingUser InvitingUser { get; set; }
 #endif
         /// <summary>The is_external_limited property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.InviteRequest4IsExternalLimited? IsExternalLimited { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.InviteRequest4IsExternalLimited IsExternalLimited { get; set; }
-#endif
+        public bool? IsExternalLimited { get; set; }
         /// <summary>The target_user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -100,7 +94,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "inviting_team", n => { InvitingTeam = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Team6>(global::Soenneker.Slack.OpenApiClient.Models.Team6.CreateFromDiscriminatorValue); } },
                 { "inviting_user", n => { InvitingUser = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InvitingUser>(global::Soenneker.Slack.OpenApiClient.Models.InvitingUser.CreateFromDiscriminatorValue); } },
-                { "is_external_limited", n => { IsExternalLimited = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InviteRequest4IsExternalLimited>(global::Soenneker.Slack.OpenApiClient.Models.InviteRequest4IsExternalLimited.CreateFromDiscriminatorValue); } },
+                { "is_external_limited", n => { IsExternalLimited = n.GetBoolValue(); } },
                 { "target_user", n => { TargetUser = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.TargetUser>(global::Soenneker.Slack.OpenApiClient.Models.TargetUser.CreateFromDiscriminatorValue); } },
             };
         }
@@ -118,7 +112,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Team6>("inviting_team", InvitingTeam);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InvitingUser>("inviting_user", InvitingUser);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InviteRequest4IsExternalLimited>("is_external_limited", IsExternalLimited);
+            writer.WriteBoolValue("is_external_limited", IsExternalLimited);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.TargetUser>("target_user", TargetUser);
             writer.WriteAdditionalData(AdditionalData);
         }

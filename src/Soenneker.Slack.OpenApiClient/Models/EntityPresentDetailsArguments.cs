@@ -39,13 +39,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string TriggerId { get; set; }
 #endif
         /// <summary>Set user_auth_required to true to indicate that the user must authenticate to view the full flexpane data. Defaults to false.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.EntityPresentDetailsArgumentsUserAuthRequired? UserAuthRequired { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.EntityPresentDetailsArgumentsUserAuthRequired UserAuthRequired { get; set; }
-#endif
+        public bool? UserAuthRequired { get; set; }
         /// <summary>A custom URL to which users are directed for authentication if required.Example: &quot;https://example.com/onboarding?user_id=xxx&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -82,7 +76,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "error", n => { Error = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityPresentDetailsArgumentsError>(global::Soenneker.Slack.OpenApiClient.Models.EntityPresentDetailsArgumentsError.CreateFromDiscriminatorValue); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityMetadata>(global::Soenneker.Slack.OpenApiClient.Models.EntityMetadata.CreateFromDiscriminatorValue); } },
                 { "trigger_id", n => { TriggerId = n.GetStringValue(); } },
-                { "user_auth_required", n => { UserAuthRequired = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityPresentDetailsArgumentsUserAuthRequired>(global::Soenneker.Slack.OpenApiClient.Models.EntityPresentDetailsArgumentsUserAuthRequired.CreateFromDiscriminatorValue); } },
+                { "user_auth_required", n => { UserAuthRequired = n.GetBoolValue(); } },
                 { "user_auth_url", n => { UserAuthUrl = n.GetStringValue(); } },
             };
         }
@@ -96,7 +90,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityPresentDetailsArgumentsError>("error", Error);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityMetadata>("metadata", Metadata);
             writer.WriteStringValue("trigger_id", TriggerId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityPresentDetailsArgumentsUserAuthRequired>("user_auth_required", UserAuthRequired);
+            writer.WriteBoolValue("user_auth_required", UserAuthRequired);
             writer.WriteStringValue("user_auth_url", UserAuthUrl);
             writer.WriteAdditionalData(AdditionalData);
         }

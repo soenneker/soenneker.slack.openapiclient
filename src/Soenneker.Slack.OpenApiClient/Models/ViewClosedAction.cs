@@ -33,13 +33,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The is_cleared property</summary>
         public bool? IsCleared { get; set; }
         /// <summary>The is_enterprise_install property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ViewClosedActionIsEnterpriseInstall? IsEnterpriseInstall { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ViewClosedActionIsEnterpriseInstall IsEnterpriseInstall { get; set; }
-#endif
+        public bool? IsEnterpriseInstall { get; set; }
         /// <summary>The team property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -102,7 +96,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "api_app_id", n => { ApiAppId = n.GetStringValue(); } },
                 { "enterprise", n => { Enterprise = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ViewClosedActionEnterprise>(global::Soenneker.Slack.OpenApiClient.Models.ViewClosedActionEnterprise.CreateFromDiscriminatorValue); } },
                 { "is_cleared", n => { IsCleared = n.GetBoolValue(); } },
-                { "is_enterprise_install", n => { IsEnterpriseInstall = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ViewClosedActionIsEnterpriseInstall>(global::Soenneker.Slack.OpenApiClient.Models.ViewClosedActionIsEnterpriseInstall.CreateFromDiscriminatorValue); } },
+                { "is_enterprise_install", n => { IsEnterpriseInstall = n.GetBoolValue(); } },
                 { "team", n => { Team = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ViewClosedActionTeam>(global::Soenneker.Slack.OpenApiClient.Models.ViewClosedActionTeam.CreateFromDiscriminatorValue); } },
                 { "token", n => { Token = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ViewClosedType>(); } },
@@ -120,7 +114,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("api_app_id", ApiAppId);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ViewClosedActionEnterprise>("enterprise", Enterprise);
             writer.WriteBoolValue("is_cleared", IsCleared);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ViewClosedActionIsEnterpriseInstall>("is_enterprise_install", IsEnterpriseInstall);
+            writer.WriteBoolValue("is_enterprise_install", IsEnterpriseInstall);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ViewClosedActionTeam>("team", Team);
             writer.WriteStringValue("token", Token);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ViewClosedType>("type", Type);

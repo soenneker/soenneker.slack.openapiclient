@@ -15,13 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The all_who_can_manage_shared_channels property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ApprovalDestinationAllWhoCanManageSharedChannels? AllWhoCanManageSharedChannels { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ApprovalDestinationAllWhoCanManageSharedChannels AllWhoCanManageSharedChannels { get; set; }
-#endif
+        public bool? AllWhoCanManageSharedChannels { get; set; }
         /// <summary>The channel_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -55,7 +49,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "all_who_can_manage_shared_channels", n => { AllWhoCanManageSharedChannels = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ApprovalDestinationAllWhoCanManageSharedChannels>(global::Soenneker.Slack.OpenApiClient.Models.ApprovalDestinationAllWhoCanManageSharedChannels.CreateFromDiscriminatorValue); } },
+                { "all_who_can_manage_shared_channels", n => { AllWhoCanManageSharedChannels = n.GetBoolValue(); } },
                 { "channel_id", n => { ChannelId = n.GetStringValue(); } },
             };
         }
@@ -66,7 +60,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ApprovalDestinationAllWhoCanManageSharedChannels>("all_who_can_manage_shared_channels", AllWhoCanManageSharedChannels);
+            writer.WriteBoolValue("all_who_can_manage_shared_channels", AllWhoCanManageSharedChannels);
             writer.WriteStringValue("channel_id", ChannelId);
             writer.WriteAdditionalData(AdditionalData);
         }

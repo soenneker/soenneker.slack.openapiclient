@@ -23,13 +23,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Error { get; set; }
 #endif
         /// <summary>The has_more property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsRepliesResponseAllOf2HasMore? HasMore { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsRepliesResponseAllOf2HasMore HasMore { get; set; }
-#endif
+        public bool? HasMore { get; set; }
         /// <summary>The messages property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -59,10 +53,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The response_metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata? ResponseMetadata { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsRepliesResponseResponseMetadata? ResponseMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata ResponseMetadata { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsRepliesResponseResponseMetadata ResponseMetadata { get; set; }
 #endif
         /// <summary>The warning property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -98,12 +92,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "error", n => { Error = n.GetStringValue(); } },
-                { "has_more", n => { HasMore = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsRepliesResponseAllOf2HasMore>(global::Soenneker.Slack.OpenApiClient.Models.ConversationsRepliesResponseAllOf2HasMore.CreateFromDiscriminatorValue); } },
+                { "has_more", n => { HasMore = n.GetBoolValue(); } },
                 { "messages", n => { Messages = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageElement2>(global::Soenneker.Slack.OpenApiClient.Models.MessageElement2.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "needed", n => { Needed = n.GetStringValue(); } },
                 { "ok", n => { Ok = n.GetBoolValue(); } },
                 { "provided", n => { Provided = n.GetStringValue(); } },
-                { "response_metadata", n => { ResponseMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>(global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata.CreateFromDiscriminatorValue); } },
+                { "response_metadata", n => { ResponseMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsRepliesResponseResponseMetadata>(global::Soenneker.Slack.OpenApiClient.Models.ConversationsRepliesResponseResponseMetadata.CreateFromDiscriminatorValue); } },
                 { "warning", n => { Warning = n.GetStringValue(); } },
             };
         }
@@ -115,12 +109,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("error", Error);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsRepliesResponseAllOf2HasMore>("has_more", HasMore);
+            writer.WriteBoolValue("has_more", HasMore);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageElement2>("messages", Messages);
             writer.WriteStringValue("needed", Needed);
             writer.WriteBoolValue("ok", Ok);
             writer.WriteStringValue("provided", Provided);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>("response_metadata", ResponseMetadata);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsRepliesResponseResponseMetadata>("response_metadata", ResponseMetadata);
             writer.WriteStringValue("warning", Warning);
             writer.WriteAdditionalData(AdditionalData);
         }

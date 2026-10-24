@@ -8,19 +8,11 @@ using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.DescriptionBlockElement2DescriptionBranch1"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement"/>, <see cref="string"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DescriptionBlockElement2Description : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.DescriptionBlockElement2DescriptionBranch1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.DescriptionBlockElement2DescriptionBranch1? DescriptionBlockElement2DescriptionBranch1 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.DescriptionBlockElement2DescriptionBranch1 DescriptionBlockElement2DescriptionBranch1 { get; set; }
-#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -28,6 +20,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement DescriptionElement { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? String { get; set; }
+#nullable restore
+#else
+        public string String { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -38,8 +38,13 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Slack.OpenApiClient.Models.DescriptionBlockElement2Description();
-            result.DescriptionBlockElement2DescriptionBranch1 = new global::Soenneker.Slack.OpenApiClient.Models.DescriptionBlockElement2DescriptionBranch1();
-            result.DescriptionElement = new global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement();
+            if(parseNode.GetStringValue() is string stringValue)
+            {
+                result.String = stringValue;
+            }
+            else {
+                result.DescriptionElement = new global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement();
+            }
             return result;
         }
         /// <summary>
@@ -48,9 +53,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(DescriptionBlockElement2DescriptionBranch1 != null || DescriptionElement != null)
+            if(DescriptionElement != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(DescriptionBlockElement2DescriptionBranch1, DescriptionElement);
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(DescriptionElement);
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -61,7 +66,13 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DescriptionBlockElement2DescriptionBranch1>(null, DescriptionBlockElement2DescriptionBranch1, DescriptionElement);
+            if(String != null)
+            {
+                writer.WriteStringValue(null, String);
+            }
+            else {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement>(null, DescriptionElement);
+            }
         }
     }
 }

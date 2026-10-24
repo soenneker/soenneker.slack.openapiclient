@@ -17,18 +17,18 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The agent_bot_user_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.AgentSessionAgentBotUserIdsItem>? AgentBotUserIds { get; set; }
+        public UntypedNode? AgentBotUserIds { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.AgentSessionAgentBotUserIdsItem> AgentBotUserIds { get; set; }
+        public UntypedNode AgentBotUserIds { get; set; }
 #endif
         /// <summary>The agent_statuses property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.AgentSessionAgentStatusesItem>? AgentStatuses { get; set; }
+        public UntypedNode? AgentStatuses { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.AgentSessionAgentStatusesItem> AgentStatuses { get; set; }
+        public UntypedNode AgentStatuses { get; set; }
 #endif
         /// <summary>The date_status_processing_expire property</summary>
         public double? DateStatusProcessingExpire { get; set; }
@@ -73,8 +73,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "agent_bot_user_ids", n => { AgentBotUserIds = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AgentSessionAgentBotUserIdsItem>(global::Soenneker.Slack.OpenApiClient.Models.AgentSessionAgentBotUserIdsItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "agent_statuses", n => { AgentStatuses = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AgentSessionAgentStatusesItem>(global::Soenneker.Slack.OpenApiClient.Models.AgentSessionAgentStatusesItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "agent_bot_user_ids", n => { AgentBotUserIds = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "agent_statuses", n => { AgentStatuses = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "date_status_processing_expire", n => { DateStatusProcessingExpire = n.GetDoubleValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
@@ -87,8 +87,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AgentSessionAgentBotUserIdsItem>("agent_bot_user_ids", AgentBotUserIds);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AgentSessionAgentStatusesItem>("agent_statuses", AgentStatuses);
+            writer.WriteObjectValue<UntypedNode>("agent_bot_user_ids", AgentBotUserIds);
+            writer.WriteObjectValue<UntypedNode>("agent_statuses", AgentStatuses);
             writer.WriteDoubleValue("date_status_processing_expire", DateStatusProcessingExpire);
             writer.WriteStringValue("status", Status);
             writer.WriteStringValue("title", Title);

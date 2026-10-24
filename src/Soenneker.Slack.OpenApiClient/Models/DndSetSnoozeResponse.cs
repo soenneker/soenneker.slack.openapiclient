@@ -49,23 +49,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata ResponseMetadata { get; set; }
 #endif
         /// <summary>The snooze_enabled property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.DndSetSnoozeResponseAllOf2SnoozeEnabled? SnoozeEnabled { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.DndSetSnoozeResponseAllOf2SnoozeEnabled SnoozeEnabled { get; set; }
-#endif
+        public bool? SnoozeEnabled { get; set; }
         /// <summary>The snooze_endtime property</summary>
         public double? SnoozeEndtime { get; set; }
         /// <summary>The snooze_is_indefinite property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.DndSetSnoozeResponseAllOf2SnoozeIsIndefinite? SnoozeIsIndefinite { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.DndSetSnoozeResponseAllOf2SnoozeIsIndefinite SnoozeIsIndefinite { get; set; }
-#endif
+        public bool? SnoozeIsIndefinite { get; set; }
         /// <summary>The snooze_remaining property</summary>
         public double? SnoozeRemaining { get; set; }
         /// <summary>The warning property</summary>
@@ -106,9 +94,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "ok", n => { Ok = n.GetBoolValue(); } },
                 { "provided", n => { Provided = n.GetStringValue(); } },
                 { "response_metadata", n => { ResponseMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>(global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata.CreateFromDiscriminatorValue); } },
-                { "snooze_enabled", n => { SnoozeEnabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DndSetSnoozeResponseAllOf2SnoozeEnabled>(global::Soenneker.Slack.OpenApiClient.Models.DndSetSnoozeResponseAllOf2SnoozeEnabled.CreateFromDiscriminatorValue); } },
+                { "snooze_enabled", n => { SnoozeEnabled = n.GetBoolValue(); } },
                 { "snooze_endtime", n => { SnoozeEndtime = n.GetDoubleValue(); } },
-                { "snooze_is_indefinite", n => { SnoozeIsIndefinite = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DndSetSnoozeResponseAllOf2SnoozeIsIndefinite>(global::Soenneker.Slack.OpenApiClient.Models.DndSetSnoozeResponseAllOf2SnoozeIsIndefinite.CreateFromDiscriminatorValue); } },
+                { "snooze_is_indefinite", n => { SnoozeIsIndefinite = n.GetBoolValue(); } },
                 { "snooze_remaining", n => { SnoozeRemaining = n.GetDoubleValue(); } },
                 { "warning", n => { Warning = n.GetStringValue(); } },
             };
@@ -125,9 +113,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteBoolValue("ok", Ok);
             writer.WriteStringValue("provided", Provided);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>("response_metadata", ResponseMetadata);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DndSetSnoozeResponseAllOf2SnoozeEnabled>("snooze_enabled", SnoozeEnabled);
+            writer.WriteBoolValue("snooze_enabled", SnoozeEnabled);
             writer.WriteDoubleValue("snooze_endtime", SnoozeEndtime);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DndSetSnoozeResponseAllOf2SnoozeIsIndefinite>("snooze_is_indefinite", SnoozeIsIndefinite);
+            writer.WriteBoolValue("snooze_is_indefinite", SnoozeIsIndefinite);
             writer.WriteDoubleValue("snooze_remaining", SnoozeRemaining);
             writer.WriteStringValue("warning", Warning);
             writer.WriteAdditionalData(AdditionalData);

@@ -49,13 +49,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.Recurrence Recurrence { get; set; }
 #endif
         /// <summary>The recurring property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Reminder2Recurring? Recurring { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Reminder2Recurring Recurring { get; set; }
-#endif
+        public bool? Recurring { get; set; }
         /// <summary>The text property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -104,7 +98,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "creator", n => { Creator = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "recurrence", n => { Recurrence = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Recurrence>(global::Soenneker.Slack.OpenApiClient.Models.Recurrence.CreateFromDiscriminatorValue); } },
-                { "recurring", n => { Recurring = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Reminder2Recurring>(global::Soenneker.Slack.OpenApiClient.Models.Reminder2Recurring.CreateFromDiscriminatorValue); } },
+                { "recurring", n => { Recurring = n.GetBoolValue(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
                 { "time", n => { Time = n.GetDoubleValue(); } },
                 { "user", n => { User = n.GetStringValue(); } },
@@ -122,7 +116,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("creator", Creator);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Recurrence>("recurrence", Recurrence);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Reminder2Recurring>("recurring", Recurring);
+            writer.WriteBoolValue("recurring", Recurring);
             writer.WriteStringValue("text", Text);
             writer.WriteDoubleValue("time", Time);
             writer.WriteStringValue("user", User);

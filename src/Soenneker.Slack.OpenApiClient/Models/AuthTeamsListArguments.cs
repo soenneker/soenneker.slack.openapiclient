@@ -23,13 +23,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Cursor { get; set; }
 #endif
         /// <summary>Whether to return icon paths for each workspace.An icon path represents a URI pointing to the image signifying the workspace.Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AuthTeamsListArgumentsAllOf2IncludeIcon? IncludeIcon { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AuthTeamsListArgumentsAllOf2IncludeIcon IncludeIcon { get; set; }
-#endif
+        public bool? IncludeIcon { get; set; }
         /// <summary>The maximum number of items to return. Fewer than the requested number of items may be returned,even if the end of the list hasn&apos;t been reached. Must be an integer with a max value of `999`. Default is `100`.</summary>
         public double? Limit { get; set; }
         /// <summary>
@@ -58,7 +52,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "cursor", n => { Cursor = n.GetStringValue(); } },
-                { "include_icon", n => { IncludeIcon = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AuthTeamsListArgumentsAllOf2IncludeIcon>(global::Soenneker.Slack.OpenApiClient.Models.AuthTeamsListArgumentsAllOf2IncludeIcon.CreateFromDiscriminatorValue); } },
+                { "include_icon", n => { IncludeIcon = n.GetBoolValue(); } },
                 { "limit", n => { Limit = n.GetDoubleValue(); } },
             };
         }
@@ -70,7 +64,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("cursor", Cursor);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AuthTeamsListArgumentsAllOf2IncludeIcon>("include_icon", IncludeIcon);
+            writer.WriteBoolValue("include_icon", IncludeIcon);
             writer.WriteDoubleValue("limit", Limit);
             writer.WriteAdditionalData(AdditionalData);
         }

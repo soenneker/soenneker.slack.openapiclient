@@ -39,13 +39,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.StepInputsProperty Inputs { get; set; }
 #endif
         /// <summary>The is_pristine property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.StepIsPristine? IsPristine { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.StepIsPristine IsPristine { get; set; }
-#endif
+        public bool? IsPristine { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Step"/> and sets the default values.
         /// </summary>
@@ -74,7 +68,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "function_id", n => { FunctionId = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "inputs", n => { Inputs = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.StepInputsProperty>(global::Soenneker.Slack.OpenApiClient.Models.StepInputsProperty.CreateFromDiscriminatorValue); } },
-                { "is_pristine", n => { IsPristine = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.StepIsPristine>(global::Soenneker.Slack.OpenApiClient.Models.StepIsPristine.CreateFromDiscriminatorValue); } },
+                { "is_pristine", n => { IsPristine = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -87,7 +81,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("function_id", FunctionId);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.StepInputsProperty>("inputs", Inputs);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.StepIsPristine>("is_pristine", IsPristine);
+            writer.WriteBoolValue("is_pristine", IsPristine);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

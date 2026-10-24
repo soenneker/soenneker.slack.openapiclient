@@ -47,13 +47,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.DialogSubmitActionEnterprise Enterprise { get; set; }
 #endif
         /// <summary>The is_enterprise_install property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.DialogSubmitActionIsEnterpriseInstall? IsEnterpriseInstall { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.DialogSubmitActionIsEnterpriseInstall IsEnterpriseInstall { get; set; }
-#endif
+        public bool? IsEnterpriseInstall { get; set; }
         /// <summary>The response_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -133,7 +127,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "callback_id", n => { CallbackId = n.GetStringValue(); } },
                 { "channel", n => { Channel = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DialogSubmitActionChannel>(global::Soenneker.Slack.OpenApiClient.Models.DialogSubmitActionChannel.CreateFromDiscriminatorValue); } },
                 { "enterprise", n => { Enterprise = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DialogSubmitActionEnterprise>(global::Soenneker.Slack.OpenApiClient.Models.DialogSubmitActionEnterprise.CreateFromDiscriminatorValue); } },
-                { "is_enterprise_install", n => { IsEnterpriseInstall = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DialogSubmitActionIsEnterpriseInstall>(global::Soenneker.Slack.OpenApiClient.Models.DialogSubmitActionIsEnterpriseInstall.CreateFromDiscriminatorValue); } },
+                { "is_enterprise_install", n => { IsEnterpriseInstall = n.GetBoolValue(); } },
                 { "response_url", n => { ResponseUrl = n.GetStringValue(); } },
                 { "state", n => { State = n.GetStringValue(); } },
                 { "submission", n => { Submission = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DialogSubmitActionSubmissionProperty>(global::Soenneker.Slack.OpenApiClient.Models.DialogSubmitActionSubmissionProperty.CreateFromDiscriminatorValue); } },
@@ -154,7 +148,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("callback_id", CallbackId);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DialogSubmitActionChannel>("channel", Channel);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DialogSubmitActionEnterprise>("enterprise", Enterprise);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DialogSubmitActionIsEnterpriseInstall>("is_enterprise_install", IsEnterpriseInstall);
+            writer.WriteBoolValue("is_enterprise_install", IsEnterpriseInstall);
             writer.WriteStringValue("response_url", ResponseUrl);
             writer.WriteStringValue("state", State);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DialogSubmitActionSubmissionProperty>("submission", Submission);

@@ -27,13 +27,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Page number of results to return. Defaults to `1`.</summary>
         public double? Page { get; set; }
         /// <summary>Show truncated file info for files hidden due to being too old, and the team who owns the filebeing over the file limit.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.FilesListArgumentsShowFilesHiddenByLimit? ShowFilesHiddenByLimit { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.FilesListArgumentsShowFilesHiddenByLimit ShowFilesHiddenByLimit { get; set; }
-#endif
+        public bool? ShowFilesHiddenByLimit { get; set; }
         /// <summary>If using an org token, `team_id` is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -110,7 +104,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "channel", n => { Channel = n.GetStringValue(); } },
                 { "count", n => { Count = n.GetDoubleValue(); } },
                 { "page", n => { Page = n.GetDoubleValue(); } },
-                { "show_files_hidden_by_limit", n => { ShowFilesHiddenByLimit = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FilesListArgumentsShowFilesHiddenByLimit>(global::Soenneker.Slack.OpenApiClient.Models.FilesListArgumentsShowFilesHiddenByLimit.CreateFromDiscriminatorValue); } },
+                { "show_files_hidden_by_limit", n => { ShowFilesHiddenByLimit = n.GetBoolValue(); } },
                 { "team_id", n => { TeamId = n.GetStringValue(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
                 { "ts_from", n => { TsFrom = n.GetStringValue(); } },
@@ -129,7 +123,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("channel", Channel);
             writer.WriteDoubleValue("count", Count);
             writer.WriteDoubleValue("page", Page);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FilesListArgumentsShowFilesHiddenByLimit>("show_files_hidden_by_limit", ShowFilesHiddenByLimit);
+            writer.WriteBoolValue("show_files_hidden_by_limit", ShowFilesHiddenByLimit);
             writer.WriteStringValue("team_id", TeamId);
             writer.WriteStringValue("token", Token);
             writer.WriteStringValue("ts_from", TsFrom);

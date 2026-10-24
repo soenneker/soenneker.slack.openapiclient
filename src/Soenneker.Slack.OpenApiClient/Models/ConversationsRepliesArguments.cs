@@ -31,21 +31,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Cursor { get; set; }
 #endif
         /// <summary>Return all metadata associated with messages. Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsRepliesArgumentsIncludeAllMetadata? IncludeAllMetadata { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsRepliesArgumentsIncludeAllMetadata IncludeAllMetadata { get; set; }
-#endif
+        public bool? IncludeAllMetadata { get; set; }
         /// <summary>Include messages with `oldest` or `latest` timestamps in results.Ignored unless either timestamp is specified. Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsRepliesArgumentsInclusive? Inclusive { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsRepliesArgumentsInclusive Inclusive { get; set; }
-#endif
+        public bool? Inclusive { get; set; }
         /// <summary>Only messages before this Unix timestamp will be included in results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -107,8 +95,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "channel", n => { Channel = n.GetStringValue(); } },
                 { "cursor", n => { Cursor = n.GetStringValue(); } },
-                { "include_all_metadata", n => { IncludeAllMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsRepliesArgumentsIncludeAllMetadata>(global::Soenneker.Slack.OpenApiClient.Models.ConversationsRepliesArgumentsIncludeAllMetadata.CreateFromDiscriminatorValue); } },
-                { "inclusive", n => { Inclusive = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsRepliesArgumentsInclusive>(global::Soenneker.Slack.OpenApiClient.Models.ConversationsRepliesArgumentsInclusive.CreateFromDiscriminatorValue); } },
+                { "include_all_metadata", n => { IncludeAllMetadata = n.GetBoolValue(); } },
+                { "inclusive", n => { Inclusive = n.GetBoolValue(); } },
                 { "latest", n => { Latest = n.GetStringValue(); } },
                 { "limit", n => { Limit = n.GetDoubleValue(); } },
                 { "oldest", n => { Oldest = n.GetStringValue(); } },
@@ -125,8 +113,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("channel", Channel);
             writer.WriteStringValue("cursor", Cursor);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsRepliesArgumentsIncludeAllMetadata>("include_all_metadata", IncludeAllMetadata);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsRepliesArgumentsInclusive>("inclusive", Inclusive);
+            writer.WriteBoolValue("include_all_metadata", IncludeAllMetadata);
+            writer.WriteBoolValue("inclusive", Inclusive);
             writer.WriteStringValue("latest", Latest);
             writer.WriteDoubleValue("limit", Limit);
             writer.WriteStringValue("oldest", Oldest);

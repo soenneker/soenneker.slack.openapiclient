@@ -15,13 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether to [enable Incoming Webhooks](https://docs.slack.dev/messaging/sending-messages-using-incoming-webhooks) for your application or not.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ManifestIncomingWebhooksIncomingWebhooksEnabled? IncomingWebhooksEnabled { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ManifestIncomingWebhooksIncomingWebhooksEnabled IncomingWebhooksEnabled { get; set; }
-#endif
+        public bool? IncomingWebhooksEnabled { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ManifestIncomingWebhooks"/> and sets the default values.
         /// </summary>
@@ -47,7 +41,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "incoming_webhooks_enabled", n => { IncomingWebhooksEnabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestIncomingWebhooksIncomingWebhooksEnabled>(global::Soenneker.Slack.OpenApiClient.Models.ManifestIncomingWebhooksIncomingWebhooksEnabled.CreateFromDiscriminatorValue); } },
+                { "incoming_webhooks_enabled", n => { IncomingWebhooksEnabled = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -57,7 +51,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestIncomingWebhooksIncomingWebhooksEnabled>("incoming_webhooks_enabled", IncomingWebhooksEnabled);
+            writer.WriteBoolValue("incoming_webhooks_enabled", IncomingWebhooksEnabled);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

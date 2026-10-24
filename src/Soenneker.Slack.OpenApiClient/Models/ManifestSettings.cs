@@ -55,29 +55,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.ManifestInteractivity Interactivity { get; set; }
 #endif
         /// <summary>A boolean that specifies whether or not [organization-wide deployment](https://docs.slack.dev/enterprise-grid/organization-ready-apps) is enabled.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ManifestSettingsOrgDeployEnabled? OrgDeployEnabled { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ManifestSettingsOrgDeployEnabled OrgDeployEnabled { get; set; }
-#endif
+        public bool? OrgDeployEnabled { get; set; }
         /// <summary>A boolean that specifies whether or not [Socket Mode](https://docs.slack.dev/apis/events-api/using-socket-mode) is enabled.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ManifestSettingsSocketModeEnabled? SocketModeEnabled { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ManifestSettingsSocketModeEnabled SocketModeEnabled { get; set; }
-#endif
+        public bool? SocketModeEnabled { get; set; }
         /// <summary>A boolean that specifies whether or not [token rotation](https://docs.slack.dev/authentication/using-token-rotation) is enabled.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ManifestSettingsTokenRotationEnabled? TokenRotationEnabled { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ManifestSettingsTokenRotationEnabled TokenRotationEnabled { get; set; }
-#endif
+        public bool? TokenRotationEnabled { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ManifestSettings"/> and sets the default values.
         /// </summary>
@@ -108,9 +90,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "function_runtime", n => { FunctionRuntime = n.GetStringValue(); } },
                 { "incoming_webhooks", n => { IncomingWebhooks = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestIncomingWebhooks>(global::Soenneker.Slack.OpenApiClient.Models.ManifestIncomingWebhooks.CreateFromDiscriminatorValue); } },
                 { "interactivity", n => { Interactivity = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestInteractivity>(global::Soenneker.Slack.OpenApiClient.Models.ManifestInteractivity.CreateFromDiscriminatorValue); } },
-                { "org_deploy_enabled", n => { OrgDeployEnabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestSettingsOrgDeployEnabled>(global::Soenneker.Slack.OpenApiClient.Models.ManifestSettingsOrgDeployEnabled.CreateFromDiscriminatorValue); } },
-                { "socket_mode_enabled", n => { SocketModeEnabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestSettingsSocketModeEnabled>(global::Soenneker.Slack.OpenApiClient.Models.ManifestSettingsSocketModeEnabled.CreateFromDiscriminatorValue); } },
-                { "token_rotation_enabled", n => { TokenRotationEnabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestSettingsTokenRotationEnabled>(global::Soenneker.Slack.OpenApiClient.Models.ManifestSettingsTokenRotationEnabled.CreateFromDiscriminatorValue); } },
+                { "org_deploy_enabled", n => { OrgDeployEnabled = n.GetBoolValue(); } },
+                { "socket_mode_enabled", n => { SocketModeEnabled = n.GetBoolValue(); } },
+                { "token_rotation_enabled", n => { TokenRotationEnabled = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -125,9 +107,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("function_runtime", FunctionRuntime);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestIncomingWebhooks>("incoming_webhooks", IncomingWebhooks);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestInteractivity>("interactivity", Interactivity);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestSettingsOrgDeployEnabled>("org_deploy_enabled", OrgDeployEnabled);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestSettingsSocketModeEnabled>("socket_mode_enabled", SocketModeEnabled);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestSettingsTokenRotationEnabled>("token_rotation_enabled", TokenRotationEnabled);
+            writer.WriteBoolValue("org_deploy_enabled", OrgDeployEnabled);
+            writer.WriteBoolValue("socket_mode_enabled", SocketModeEnabled);
+            writer.WriteBoolValue("token_rotation_enabled", TokenRotationEnabled);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

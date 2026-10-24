@@ -39,29 +39,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The is_admin property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.EnterpriseUserIsAdmin? IsAdmin { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.EnterpriseUserIsAdmin IsAdmin { get; set; }
-#endif
+        public bool? IsAdmin { get; set; }
         /// <summary>The is_owner property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.EnterpriseUserIsOwner? IsOwner { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.EnterpriseUserIsOwner IsOwner { get; set; }
-#endif
+        public bool? IsOwner { get; set; }
         /// <summary>The is_primary_owner property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.EnterpriseUserIsPrimaryOwner? IsPrimaryOwner { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.EnterpriseUserIsPrimaryOwner IsPrimaryOwner { get; set; }
-#endif
+        public bool? IsPrimaryOwner { get; set; }
         /// <summary>The teams property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -98,9 +80,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "enterprise_id", n => { EnterpriseId = n.GetStringValue(); } },
                 { "enterprise_name", n => { EnterpriseName = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "is_admin", n => { IsAdmin = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EnterpriseUserIsAdmin>(global::Soenneker.Slack.OpenApiClient.Models.EnterpriseUserIsAdmin.CreateFromDiscriminatorValue); } },
-                { "is_owner", n => { IsOwner = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EnterpriseUserIsOwner>(global::Soenneker.Slack.OpenApiClient.Models.EnterpriseUserIsOwner.CreateFromDiscriminatorValue); } },
-                { "is_primary_owner", n => { IsPrimaryOwner = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EnterpriseUserIsPrimaryOwner>(global::Soenneker.Slack.OpenApiClient.Models.EnterpriseUserIsPrimaryOwner.CreateFromDiscriminatorValue); } },
+                { "is_admin", n => { IsAdmin = n.GetBoolValue(); } },
+                { "is_owner", n => { IsOwner = n.GetBoolValue(); } },
+                { "is_primary_owner", n => { IsPrimaryOwner = n.GetBoolValue(); } },
                 { "teams", n => { Teams = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
@@ -114,9 +96,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("enterprise_id", EnterpriseId);
             writer.WriteStringValue("enterprise_name", EnterpriseName);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EnterpriseUserIsAdmin>("is_admin", IsAdmin);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EnterpriseUserIsOwner>("is_owner", IsOwner);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EnterpriseUserIsPrimaryOwner>("is_primary_owner", IsPrimaryOwner);
+            writer.WriteBoolValue("is_admin", IsAdmin);
+            writer.WriteBoolValue("is_owner", IsOwner);
+            writer.WriteBoolValue("is_primary_owner", IsPrimaryOwner);
             writer.WriteCollectionOfPrimitiveValues<string>("teams", Teams);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -15,13 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The allow_message_deletion property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.TeamPreferencesListResponseAllOf2AllowMessageDeletion? AllowMessageDeletion { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.TeamPreferencesListResponseAllOf2AllowMessageDeletion AllowMessageDeletion { get; set; }
-#endif
+        public bool? AllowMessageDeletion { get; set; }
         /// <summary>The disable_file_uploads property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -31,13 +25,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string DisableFileUploads { get; set; }
 #endif
         /// <summary>The display_real_names property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.TeamPreferencesListResponseAllOf2DisplayRealNames? DisplayRealNames { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.TeamPreferencesListResponseAllOf2DisplayRealNames DisplayRealNames { get; set; }
-#endif
+        public bool? DisplayRealNames { get; set; }
         /// <summary>The error property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -115,9 +103,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "allow_message_deletion", n => { AllowMessageDeletion = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.TeamPreferencesListResponseAllOf2AllowMessageDeletion>(global::Soenneker.Slack.OpenApiClient.Models.TeamPreferencesListResponseAllOf2AllowMessageDeletion.CreateFromDiscriminatorValue); } },
+                { "allow_message_deletion", n => { AllowMessageDeletion = n.GetBoolValue(); } },
                 { "disable_file_uploads", n => { DisableFileUploads = n.GetStringValue(); } },
-                { "display_real_names", n => { DisplayRealNames = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.TeamPreferencesListResponseAllOf2DisplayRealNames>(global::Soenneker.Slack.OpenApiClient.Models.TeamPreferencesListResponseAllOf2DisplayRealNames.CreateFromDiscriminatorValue); } },
+                { "display_real_names", n => { DisplayRealNames = n.GetBoolValue(); } },
                 { "error", n => { Error = n.GetStringValue(); } },
                 { "msg_edit_window_mins", n => { MsgEditWindowMins = n.GetDoubleValue(); } },
                 { "needed", n => { Needed = n.GetStringValue(); } },
@@ -135,9 +123,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.TeamPreferencesListResponseAllOf2AllowMessageDeletion>("allow_message_deletion", AllowMessageDeletion);
+            writer.WriteBoolValue("allow_message_deletion", AllowMessageDeletion);
             writer.WriteStringValue("disable_file_uploads", DisableFileUploads);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.TeamPreferencesListResponseAllOf2DisplayRealNames>("display_real_names", DisplayRealNames);
+            writer.WriteBoolValue("display_real_names", DisplayRealNames);
             writer.WriteStringValue("error", Error);
             writer.WriteDoubleValue("msg_edit_window_mins", MsgEditWindowMins);
             writer.WriteStringValue("needed", Needed);

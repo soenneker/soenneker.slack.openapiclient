@@ -15,13 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The already_open property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsOpenResponseAllOf2AlreadyOpen? AlreadyOpen { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsOpenResponseAllOf2AlreadyOpen AlreadyOpen { get; set; }
-#endif
+        public bool? AlreadyOpen { get; set; }
         /// <summary>The channel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -47,13 +41,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Needed { get; set; }
 #endif
         /// <summary>The no_op property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsOpenResponseAllOf2NoOp? NoOp { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsOpenResponseAllOf2NoOp NoOp { get; set; }
-#endif
+        public bool? NoOp { get; set; }
         /// <summary>The ok property</summary>
         public bool? Ok { get; set; }
         /// <summary>The provided property</summary>
@@ -105,11 +93,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "already_open", n => { AlreadyOpen = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsOpenResponseAllOf2AlreadyOpen>(global::Soenneker.Slack.OpenApiClient.Models.ConversationsOpenResponseAllOf2AlreadyOpen.CreateFromDiscriminatorValue); } },
+                { "already_open", n => { AlreadyOpen = n.GetBoolValue(); } },
                 { "channel", n => { Channel = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel10>(global::Soenneker.Slack.OpenApiClient.Models.Channel10.CreateFromDiscriminatorValue); } },
                 { "error", n => { Error = n.GetStringValue(); } },
                 { "needed", n => { Needed = n.GetStringValue(); } },
-                { "no_op", n => { NoOp = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsOpenResponseAllOf2NoOp>(global::Soenneker.Slack.OpenApiClient.Models.ConversationsOpenResponseAllOf2NoOp.CreateFromDiscriminatorValue); } },
+                { "no_op", n => { NoOp = n.GetBoolValue(); } },
                 { "ok", n => { Ok = n.GetBoolValue(); } },
                 { "provided", n => { Provided = n.GetStringValue(); } },
                 { "response_metadata", n => { ResponseMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>(global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata.CreateFromDiscriminatorValue); } },
@@ -123,11 +111,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsOpenResponseAllOf2AlreadyOpen>("already_open", AlreadyOpen);
+            writer.WriteBoolValue("already_open", AlreadyOpen);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel10>("channel", Channel);
             writer.WriteStringValue("error", Error);
             writer.WriteStringValue("needed", Needed);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsOpenResponseAllOf2NoOp>("no_op", NoOp);
+            writer.WriteBoolValue("no_op", NoOp);
             writer.WriteBoolValue("ok", Ok);
             writer.WriteStringValue("provided", Provided);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>("response_metadata", ResponseMetadata);

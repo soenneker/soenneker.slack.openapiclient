@@ -15,13 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The auto_provision property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Usergroup3AutoProvision? AutoProvision { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Usergroup3AutoProvision AutoProvision { get; set; }
-#endif
+        public bool? AutoProvision { get; set; }
         /// <summary>The channel_count property</summary>
         public double? ChannelCount { get; set; }
         /// <summary>The created_by property</summary>
@@ -71,77 +65,23 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The is_editing_restricted property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsEditingRestricted? IsEditingRestricted { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsEditingRestricted IsEditingRestricted { get; set; }
-#endif
+        public bool? IsEditingRestricted { get; set; }
         /// <summary>The is_external property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsExternal? IsExternal { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsExternal IsExternal { get; set; }
-#endif
+        public bool? IsExternal { get; set; }
         /// <summary>The is_idp_group property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsIdpGroup? IsIdpGroup { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsIdpGroup IsIdpGroup { get; set; }
-#endif
+        public bool? IsIdpGroup { get; set; }
         /// <summary>The is_membership_locked property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsMembershipLocked? IsMembershipLocked { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsMembershipLocked IsMembershipLocked { get; set; }
-#endif
+        public bool? IsMembershipLocked { get; set; }
         /// <summary>The is_org_level property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsOrgLevel? IsOrgLevel { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsOrgLevel IsOrgLevel { get; set; }
-#endif
+        public bool? IsOrgLevel { get; set; }
         /// <summary>The is_section property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsSection? IsSection { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsSection IsSection { get; set; }
-#endif
+        public bool? IsSection { get; set; }
         /// <summary>The is_subteam property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsSubteam? IsSubteam { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsSubteam IsSubteam { get; set; }
-#endif
+        public bool? IsSubteam { get; set; }
         /// <summary>The is_usergroup property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsUsergroup? IsUsergroup { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsUsergroup IsUsergroup { get; set; }
-#endif
+        public bool? IsUsergroup { get; set; }
         /// <summary>The is_visible property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsVisible? IsVisible { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsVisible IsVisible { get; set; }
-#endif
+        public bool? IsVisible { get; set; }
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -207,7 +147,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "auto_provision", n => { AutoProvision = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Usergroup3AutoProvision>(global::Soenneker.Slack.OpenApiClient.Models.Usergroup3AutoProvision.CreateFromDiscriminatorValue); } },
+                { "auto_provision", n => { AutoProvision = n.GetBoolValue(); } },
                 { "channel_count", n => { ChannelCount = n.GetDoubleValue(); } },
                 { "created_by", n => { CreatedBy = n.GetStringValue(); } },
                 { "date_create", n => { DateCreate = n.GetDoubleValue(); } },
@@ -217,15 +157,15 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "enterprise_subteam_id", n => { EnterpriseSubteamId = n.GetStringValue(); } },
                 { "handle", n => { Handle = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "is_editing_restricted", n => { IsEditingRestricted = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsEditingRestricted>(global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsEditingRestricted.CreateFromDiscriminatorValue); } },
-                { "is_external", n => { IsExternal = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsExternal>(global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsExternal.CreateFromDiscriminatorValue); } },
-                { "is_idp_group", n => { IsIdpGroup = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsIdpGroup>(global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsIdpGroup.CreateFromDiscriminatorValue); } },
-                { "is_membership_locked", n => { IsMembershipLocked = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsMembershipLocked>(global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsMembershipLocked.CreateFromDiscriminatorValue); } },
-                { "is_org_level", n => { IsOrgLevel = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsOrgLevel>(global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsOrgLevel.CreateFromDiscriminatorValue); } },
-                { "is_section", n => { IsSection = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsSection>(global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsSection.CreateFromDiscriminatorValue); } },
-                { "is_subteam", n => { IsSubteam = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsSubteam>(global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsSubteam.CreateFromDiscriminatorValue); } },
-                { "is_usergroup", n => { IsUsergroup = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsUsergroup>(global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsUsergroup.CreateFromDiscriminatorValue); } },
-                { "is_visible", n => { IsVisible = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsVisible>(global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsVisible.CreateFromDiscriminatorValue); } },
+                { "is_editing_restricted", n => { IsEditingRestricted = n.GetBoolValue(); } },
+                { "is_external", n => { IsExternal = n.GetBoolValue(); } },
+                { "is_idp_group", n => { IsIdpGroup = n.GetBoolValue(); } },
+                { "is_membership_locked", n => { IsMembershipLocked = n.GetBoolValue(); } },
+                { "is_org_level", n => { IsOrgLevel = n.GetBoolValue(); } },
+                { "is_section", n => { IsSection = n.GetBoolValue(); } },
+                { "is_subteam", n => { IsSubteam = n.GetBoolValue(); } },
+                { "is_usergroup", n => { IsUsergroup = n.GetBoolValue(); } },
+                { "is_visible", n => { IsVisible = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "prefs", n => { Prefs = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Prefs2>(global::Soenneker.Slack.OpenApiClient.Models.Prefs2.CreateFromDiscriminatorValue); } },
                 { "team_id", n => { TeamId = n.GetStringValue(); } },
@@ -240,7 +180,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Usergroup3AutoProvision>("auto_provision", AutoProvision);
+            writer.WriteBoolValue("auto_provision", AutoProvision);
             writer.WriteDoubleValue("channel_count", ChannelCount);
             writer.WriteStringValue("created_by", CreatedBy);
             writer.WriteDoubleValue("date_create", DateCreate);
@@ -250,15 +190,15 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("enterprise_subteam_id", EnterpriseSubteamId);
             writer.WriteStringValue("handle", Handle);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsEditingRestricted>("is_editing_restricted", IsEditingRestricted);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsExternal>("is_external", IsExternal);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsIdpGroup>("is_idp_group", IsIdpGroup);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsMembershipLocked>("is_membership_locked", IsMembershipLocked);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsOrgLevel>("is_org_level", IsOrgLevel);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsSection>("is_section", IsSection);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsSubteam>("is_subteam", IsSubteam);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsUsergroup>("is_usergroup", IsUsergroup);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Usergroup3IsVisible>("is_visible", IsVisible);
+            writer.WriteBoolValue("is_editing_restricted", IsEditingRestricted);
+            writer.WriteBoolValue("is_external", IsExternal);
+            writer.WriteBoolValue("is_idp_group", IsIdpGroup);
+            writer.WriteBoolValue("is_membership_locked", IsMembershipLocked);
+            writer.WriteBoolValue("is_org_level", IsOrgLevel);
+            writer.WriteBoolValue("is_section", IsSection);
+            writer.WriteBoolValue("is_subteam", IsSubteam);
+            writer.WriteBoolValue("is_usergroup", IsUsergroup);
+            writer.WriteBoolValue("is_visible", IsVisible);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Prefs2>("prefs", Prefs);
             writer.WriteStringValue("team_id", TeamId);

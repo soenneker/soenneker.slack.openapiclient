@@ -39,13 +39,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.GlobalShortcutEnterprise Enterprise { get; set; }
 #endif
         /// <summary>The is_enterprise_install property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.GlobalShortcutIsEnterpriseInstall? IsEnterpriseInstall { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.GlobalShortcutIsEnterpriseInstall IsEnterpriseInstall { get; set; }
-#endif
+        public bool? IsEnterpriseInstall { get; set; }
         /// <summary>The team property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -108,7 +102,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "action_ts", n => { ActionTs = n.GetStringValue(); } },
                 { "callback_id", n => { CallbackId = n.GetStringValue(); } },
                 { "enterprise", n => { Enterprise = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.GlobalShortcutEnterprise>(global::Soenneker.Slack.OpenApiClient.Models.GlobalShortcutEnterprise.CreateFromDiscriminatorValue); } },
-                { "is_enterprise_install", n => { IsEnterpriseInstall = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.GlobalShortcutIsEnterpriseInstall>(global::Soenneker.Slack.OpenApiClient.Models.GlobalShortcutIsEnterpriseInstall.CreateFromDiscriminatorValue); } },
+                { "is_enterprise_install", n => { IsEnterpriseInstall = n.GetBoolValue(); } },
                 { "team", n => { Team = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.GlobalShortcutTeam>(global::Soenneker.Slack.OpenApiClient.Models.GlobalShortcutTeam.CreateFromDiscriminatorValue); } },
                 { "token", n => { Token = n.GetStringValue(); } },
                 { "trigger_id", n => { TriggerId = n.GetStringValue(); } },
@@ -126,7 +120,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("action_ts", ActionTs);
             writer.WriteStringValue("callback_id", CallbackId);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.GlobalShortcutEnterprise>("enterprise", Enterprise);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.GlobalShortcutIsEnterpriseInstall>("is_enterprise_install", IsEnterpriseInstall);
+            writer.WriteBoolValue("is_enterprise_install", IsEnterpriseInstall);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.GlobalShortcutTeam>("team", Team);
             writer.WriteStringValue("token", Token);
             writer.WriteStringValue("trigger_id", TriggerId);

@@ -17,13 +17,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The alignment for items in this column. Can be left, center, or right. Defaults to left if not defined.</summary>
         public global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettingsAlign? Align { get; set; }
         /// <summary>Whether the contents of this column should be wrapped or not. Defaults to false if not defined.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettingsIsWrapped? IsWrapped { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettingsIsWrapped IsWrapped { get; set; }
-#endif
+        public bool? IsWrapped { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettings"/> and sets the default values.
         /// </summary>
@@ -50,7 +44,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "align", n => { Align = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettingsAlign>(); } },
-                { "is_wrapped", n => { IsWrapped = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettingsIsWrapped>(global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettingsIsWrapped.CreateFromDiscriminatorValue); } },
+                { "is_wrapped", n => { IsWrapped = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -61,7 +55,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettingsAlign>("align", Align);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettingsIsWrapped>("is_wrapped", IsWrapped);
+            writer.WriteBoolValue("is_wrapped", IsWrapped);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

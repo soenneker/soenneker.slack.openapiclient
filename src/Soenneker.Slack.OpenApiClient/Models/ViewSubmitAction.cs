@@ -31,13 +31,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.ViewSubmitActionEnterprise Enterprise { get; set; }
 #endif
         /// <summary>The is_enterprise_install property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ViewSubmitActionIsEnterpriseInstall? IsEnterpriseInstall { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ViewSubmitActionIsEnterpriseInstall IsEnterpriseInstall { get; set; }
-#endif
+        public bool? IsEnterpriseInstall { get; set; }
         /// <summary>The response_urls property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -115,7 +109,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "api_app_id", n => { ApiAppId = n.GetStringValue(); } },
                 { "enterprise", n => { Enterprise = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ViewSubmitActionEnterprise>(global::Soenneker.Slack.OpenApiClient.Models.ViewSubmitActionEnterprise.CreateFromDiscriminatorValue); } },
-                { "is_enterprise_install", n => { IsEnterpriseInstall = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ViewSubmitActionIsEnterpriseInstall>(global::Soenneker.Slack.OpenApiClient.Models.ViewSubmitActionIsEnterpriseInstall.CreateFromDiscriminatorValue); } },
+                { "is_enterprise_install", n => { IsEnterpriseInstall = n.GetBoolValue(); } },
                 { "response_urls", n => { ResponseUrls = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ViewResponseUrl>(global::Soenneker.Slack.OpenApiClient.Models.ViewResponseUrl.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "team", n => { Team = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ViewSubmitActionTeam>(global::Soenneker.Slack.OpenApiClient.Models.ViewSubmitActionTeam.CreateFromDiscriminatorValue); } },
                 { "token", n => { Token = n.GetStringValue(); } },
@@ -134,7 +128,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("api_app_id", ApiAppId);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ViewSubmitActionEnterprise>("enterprise", Enterprise);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ViewSubmitActionIsEnterpriseInstall>("is_enterprise_install", IsEnterpriseInstall);
+            writer.WriteBoolValue("is_enterprise_install", IsEnterpriseInstall);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ViewResponseUrl>("response_urls", ResponseUrls);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ViewSubmitActionTeam>("team", Team);
             writer.WriteStringValue("token", Token);

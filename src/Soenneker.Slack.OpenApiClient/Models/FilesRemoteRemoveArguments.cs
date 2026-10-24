@@ -7,36 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteRemoveArgumentsAnyOf1"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteRemoveArgumentsAnyOf2"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class FilesRemoteRemoveArguments : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class FilesRemoteRemoveArguments : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Creator defined GUID for the file.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteRemoveArgumentsAnyOf1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalId { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteRemoveArgumentsAnyOf1? FilesRemoteRemoveArgumentsAnyOf1 { get; set; }
 #nullable restore
 #else
-        public string ExternalId { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteRemoveArgumentsAnyOf1 FilesRemoteRemoveArgumentsAnyOf1 { get; set; }
 #endif
-        /// <summary>Encoded file ID.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteRemoveArgumentsAnyOf2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? File { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteRemoveArgumentsAnyOf2? FilesRemoteRemoveArgumentsAnyOf2 { get; set; }
 #nullable restore
 #else
-        public string File { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteRemoveArgumentsAnyOf2 FilesRemoteRemoveArgumentsAnyOf2 { get; set; }
 #endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteRemoveArguments"/> and sets the default values.
-        /// </summary>
-        public FilesRemoteRemoveArguments()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -45,7 +37,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteRemoveArguments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteRemoveArguments();
+            var result = new global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteRemoveArguments();
+            result.FilesRemoteRemoveArgumentsAnyOf1 = new global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteRemoveArgumentsAnyOf1();
+            result.FilesRemoteRemoveArgumentsAnyOf2 = new global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteRemoveArgumentsAnyOf2();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -53,11 +48,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(FilesRemoteRemoveArgumentsAnyOf1 != null || FilesRemoteRemoveArgumentsAnyOf2 != null)
             {
-                { "external_id", n => { ExternalId = n.GetStringValue(); } },
-                { "file", n => { File = n.GetStringValue(); } },
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(FilesRemoteRemoveArgumentsAnyOf1, FilesRemoteRemoveArgumentsAnyOf2);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -66,9 +61,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("external_id", ExternalId);
-            writer.WriteStringValue("file", File);
-            writer.WriteAdditionalData(AdditionalData);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteRemoveArgumentsAnyOf1>(null, FilesRemoteRemoveArgumentsAnyOf1, FilesRemoteRemoveArgumentsAnyOf2);
         }
     }
 }

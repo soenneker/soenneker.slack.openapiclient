@@ -73,13 +73,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.IncomingWebhook IncomingWebhook { get; set; }
 #endif
         /// <summary>The is_enterprise_install property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.OAuthV2ExchangeResponseAllOf2IsEnterpriseInstall? IsEnterpriseInstall { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.OAuthV2ExchangeResponseAllOf2IsEnterpriseInstall IsEnterpriseInstall { get; set; }
-#endif
+        public bool? IsEnterpriseInstall { get; set; }
         /// <summary>The needed property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -109,10 +103,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The response_metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata? ResponseMetadata { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.OAuthV2ExchangeResponseResponseMetadata? ResponseMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata ResponseMetadata { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.OAuthV2ExchangeResponseResponseMetadata ResponseMetadata { get; set; }
 #endif
         /// <summary>The scope property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -179,12 +173,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "error", n => { Error = n.GetStringValue(); } },
                 { "expires_in", n => { ExpiresIn = n.GetDoubleValue(); } },
                 { "incoming_webhook", n => { IncomingWebhook = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.IncomingWebhook>(global::Soenneker.Slack.OpenApiClient.Models.IncomingWebhook.CreateFromDiscriminatorValue); } },
-                { "is_enterprise_install", n => { IsEnterpriseInstall = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.OAuthV2ExchangeResponseAllOf2IsEnterpriseInstall>(global::Soenneker.Slack.OpenApiClient.Models.OAuthV2ExchangeResponseAllOf2IsEnterpriseInstall.CreateFromDiscriminatorValue); } },
+                { "is_enterprise_install", n => { IsEnterpriseInstall = n.GetBoolValue(); } },
                 { "needed", n => { Needed = n.GetStringValue(); } },
                 { "ok", n => { Ok = n.GetBoolValue(); } },
                 { "provided", n => { Provided = n.GetStringValue(); } },
                 { "refresh_token", n => { RefreshToken = n.GetStringValue(); } },
-                { "response_metadata", n => { ResponseMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>(global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata.CreateFromDiscriminatorValue); } },
+                { "response_metadata", n => { ResponseMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.OAuthV2ExchangeResponseResponseMetadata>(global::Soenneker.Slack.OpenApiClient.Models.OAuthV2ExchangeResponseResponseMetadata.CreateFromDiscriminatorValue); } },
                 { "scope", n => { Scope = n.GetStringValue(); } },
                 { "team", n => { Team = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Enterprise>(global::Soenneker.Slack.OpenApiClient.Models.Enterprise.CreateFromDiscriminatorValue); } },
                 { "token_type", n => { TokenType = n.GetStringValue(); } },
@@ -206,12 +200,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("error", Error);
             writer.WriteDoubleValue("expires_in", ExpiresIn);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.IncomingWebhook>("incoming_webhook", IncomingWebhook);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.OAuthV2ExchangeResponseAllOf2IsEnterpriseInstall>("is_enterprise_install", IsEnterpriseInstall);
+            writer.WriteBoolValue("is_enterprise_install", IsEnterpriseInstall);
             writer.WriteStringValue("needed", Needed);
             writer.WriteBoolValue("ok", Ok);
             writer.WriteStringValue("provided", Provided);
             writer.WriteStringValue("refresh_token", RefreshToken);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>("response_metadata", ResponseMetadata);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.OAuthV2ExchangeResponseResponseMetadata>("response_metadata", ResponseMetadata);
             writer.WriteStringValue("scope", Scope);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Enterprise>("team", Team);
             writer.WriteStringValue("token_type", TokenType);

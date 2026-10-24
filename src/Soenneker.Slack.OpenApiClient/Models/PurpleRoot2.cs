@@ -63,21 +63,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string LatestReply { get; set; }
 #endif
         /// <summary>The mrkdwn property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.PurpleRoot2Mrkdwn? Mrkdwn { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.PurpleRoot2Mrkdwn Mrkdwn { get; set; }
-#endif
+        public bool? Mrkdwn { get; set; }
         /// <summary>The no_notifications property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.PurpleRoot2NoNotifications? NoNotifications { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.PurpleRoot2NoNotifications NoNotifications { get; set; }
-#endif
+        public bool? NoNotifications { get; set; }
         /// <summary>The parent_user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -89,20 +77,20 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The replies property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.PurpleRoot2RepliesItem>? Replies { get; set; }
+        public UntypedNode? Replies { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.PurpleRoot2RepliesItem> Replies { get; set; }
+        public UntypedNode Replies { get; set; }
 #endif
         /// <summary>The reply_count property</summary>
         public double? ReplyCount { get; set; }
         /// <summary>The reply_users property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.PurpleRoot2ReplyUsersItem>? ReplyUsers { get; set; }
+        public UntypedNode? ReplyUsers { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.PurpleRoot2ReplyUsersItem> ReplyUsers { get; set; }
+        public UntypedNode ReplyUsers { get; set; }
 #endif
         /// <summary>The reply_users_count property</summary>
         public double? ReplyUsersCount { get; set; }
@@ -115,13 +103,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.Room3 Room { get; set; }
 #endif
         /// <summary>The subscribed property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.PurpleRoot2Subscribed? Subscribed { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.PurpleRoot2Subscribed Subscribed { get; set; }
-#endif
+        public bool? Subscribed { get; set; }
         /// <summary>The subtype property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -219,15 +201,15 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "icons", n => { Icons = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageIcons>(global::Soenneker.Slack.OpenApiClient.Models.MessageIcons.CreateFromDiscriminatorValue); } },
                 { "last_read", n => { LastRead = n.GetStringValue(); } },
                 { "latest_reply", n => { LatestReply = n.GetStringValue(); } },
-                { "mrkdwn", n => { Mrkdwn = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PurpleRoot2Mrkdwn>(global::Soenneker.Slack.OpenApiClient.Models.PurpleRoot2Mrkdwn.CreateFromDiscriminatorValue); } },
-                { "no_notifications", n => { NoNotifications = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PurpleRoot2NoNotifications>(global::Soenneker.Slack.OpenApiClient.Models.PurpleRoot2NoNotifications.CreateFromDiscriminatorValue); } },
+                { "mrkdwn", n => { Mrkdwn = n.GetBoolValue(); } },
+                { "no_notifications", n => { NoNotifications = n.GetBoolValue(); } },
                 { "parent_user_id", n => { ParentUserId = n.GetStringValue(); } },
-                { "replies", n => { Replies = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.PurpleRoot2RepliesItem>(global::Soenneker.Slack.OpenApiClient.Models.PurpleRoot2RepliesItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "replies", n => { Replies = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "reply_count", n => { ReplyCount = n.GetDoubleValue(); } },
-                { "reply_users", n => { ReplyUsers = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.PurpleRoot2ReplyUsersItem>(global::Soenneker.Slack.OpenApiClient.Models.PurpleRoot2ReplyUsersItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "reply_users", n => { ReplyUsers = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "reply_users_count", n => { ReplyUsersCount = n.GetDoubleValue(); } },
                 { "room", n => { Room = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Room3>(global::Soenneker.Slack.OpenApiClient.Models.Room3.CreateFromDiscriminatorValue); } },
-                { "subscribed", n => { Subscribed = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PurpleRoot2Subscribed>(global::Soenneker.Slack.OpenApiClient.Models.PurpleRoot2Subscribed.CreateFromDiscriminatorValue); } },
+                { "subscribed", n => { Subscribed = n.GetBoolValue(); } },
                 { "subtype", n => { Subtype = n.GetStringValue(); } },
                 { "team", n => { Team = n.GetStringValue(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
@@ -252,15 +234,15 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageIcons>("icons", Icons);
             writer.WriteStringValue("last_read", LastRead);
             writer.WriteStringValue("latest_reply", LatestReply);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PurpleRoot2Mrkdwn>("mrkdwn", Mrkdwn);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PurpleRoot2NoNotifications>("no_notifications", NoNotifications);
+            writer.WriteBoolValue("mrkdwn", Mrkdwn);
+            writer.WriteBoolValue("no_notifications", NoNotifications);
             writer.WriteStringValue("parent_user_id", ParentUserId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.PurpleRoot2RepliesItem>("replies", Replies);
+            writer.WriteObjectValue<UntypedNode>("replies", Replies);
             writer.WriteDoubleValue("reply_count", ReplyCount);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.PurpleRoot2ReplyUsersItem>("reply_users", ReplyUsers);
+            writer.WriteObjectValue<UntypedNode>("reply_users", ReplyUsers);
             writer.WriteDoubleValue("reply_users_count", ReplyUsersCount);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Room3>("room", Room);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PurpleRoot2Subscribed>("subscribed", Subscribed);
+            writer.WriteBoolValue("subscribed", Subscribed);
             writer.WriteStringValue("subtype", Subtype);
             writer.WriteStringValue("team", Team);
             writer.WriteStringValue("text", Text);

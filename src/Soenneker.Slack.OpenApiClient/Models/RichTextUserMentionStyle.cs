@@ -16,45 +16,15 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>When `true`, boldens the text in this element. Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyleBold? Bold { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyleBold Bold { get; set; }
-#endif
+        public bool? Bold { get; set; }
         /// <summary>When `true`, the text is preformatted in an inline code style. Defaults to `false.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyleCode? Code { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyleCode Code { get; set; }
-#endif
+        public bool? Code { get; set; }
         /// <summary>When `true`, italicizes the text in this element. Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyleItalic? Italic { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyleItalic Italic { get; set; }
-#endif
+        public bool? Italic { get; set; }
         /// <summary>When `true`, strikes through the text in this element. Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyleStrike? Strike { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyleStrike Strike { get; set; }
-#endif
+        public bool? Strike { get; set; }
         /// <summary>When `true`, underlines the text in this element. Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyleUnderline? Underline { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyleUnderline Underline { get; set; }
-#endif
+        public bool? Underline { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyle"/> and sets the default values.
         /// </summary>
@@ -80,11 +50,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "bold", n => { Bold = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyleBold>(global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyleBold.CreateFromDiscriminatorValue); } },
-                { "code", n => { Code = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyleCode>(global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyleCode.CreateFromDiscriminatorValue); } },
-                { "italic", n => { Italic = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyleItalic>(global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyleItalic.CreateFromDiscriminatorValue); } },
-                { "strike", n => { Strike = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyleStrike>(global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyleStrike.CreateFromDiscriminatorValue); } },
-                { "underline", n => { Underline = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyleUnderline>(global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyleUnderline.CreateFromDiscriminatorValue); } },
+                { "bold", n => { Bold = n.GetBoolValue(); } },
+                { "code", n => { Code = n.GetBoolValue(); } },
+                { "italic", n => { Italic = n.GetBoolValue(); } },
+                { "strike", n => { Strike = n.GetBoolValue(); } },
+                { "underline", n => { Underline = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -94,11 +64,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyleBold>("bold", Bold);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyleCode>("code", Code);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyleItalic>("italic", Italic);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyleStrike>("strike", Strike);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyleUnderline>("underline", Underline);
+            writer.WriteBoolValue("bold", Bold);
+            writer.WriteBoolValue("code", Code);
+            writer.WriteBoolValue("italic", Italic);
+            writer.WriteBoolValue("strike", Strike);
+            writer.WriteBoolValue("underline", Underline);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

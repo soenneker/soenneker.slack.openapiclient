@@ -41,13 +41,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The ok property</summary>
         public bool? Ok { get; set; }
         /// <summary>The permissions_updated property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AppsManifestUpdateResponseAllOf2PermissionsUpdated? PermissionsUpdated { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AppsManifestUpdateResponseAllOf2PermissionsUpdated PermissionsUpdated { get; set; }
-#endif
+        public bool? PermissionsUpdated { get; set; }
         /// <summary>The provided property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -101,7 +95,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "error", n => { Error = n.GetStringValue(); } },
                 { "needed", n => { Needed = n.GetStringValue(); } },
                 { "ok", n => { Ok = n.GetBoolValue(); } },
-                { "permissions_updated", n => { PermissionsUpdated = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AppsManifestUpdateResponseAllOf2PermissionsUpdated>(global::Soenneker.Slack.OpenApiClient.Models.AppsManifestUpdateResponseAllOf2PermissionsUpdated.CreateFromDiscriminatorValue); } },
+                { "permissions_updated", n => { PermissionsUpdated = n.GetBoolValue(); } },
                 { "provided", n => { Provided = n.GetStringValue(); } },
                 { "response_metadata", n => { ResponseMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>(global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata.CreateFromDiscriminatorValue); } },
                 { "warning", n => { Warning = n.GetStringValue(); } },
@@ -118,7 +112,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("error", Error);
             writer.WriteStringValue("needed", Needed);
             writer.WriteBoolValue("ok", Ok);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AppsManifestUpdateResponseAllOf2PermissionsUpdated>("permissions_updated", PermissionsUpdated);
+            writer.WriteBoolValue("permissions_updated", PermissionsUpdated);
             writer.WriteStringValue("provided", Provided);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>("response_metadata", ResponseMetadata);
             writer.WriteStringValue("warning", Warning);

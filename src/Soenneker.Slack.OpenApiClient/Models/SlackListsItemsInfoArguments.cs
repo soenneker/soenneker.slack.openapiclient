@@ -23,13 +23,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>Set to true to include is_subscribed data for the returned List row.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemsInfoArgumentsIncludeIsSubscribed? IncludeIsSubscribed { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemsInfoArgumentsIncludeIsSubscribed IncludeIsSubscribed { get; set; }
-#endif
+        public bool? IncludeIsSubscribed { get; set; }
         /// <summary>Encoded ID of the List.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -72,7 +66,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "include_is_subscribed", n => { IncludeIsSubscribed = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemsInfoArgumentsIncludeIsSubscribed>(global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemsInfoArgumentsIncludeIsSubscribed.CreateFromDiscriminatorValue); } },
+                { "include_is_subscribed", n => { IncludeIsSubscribed = n.GetBoolValue(); } },
                 { "list_id", n => { ListId = n.GetStringValue(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
             };
@@ -85,7 +79,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemsInfoArgumentsIncludeIsSubscribed>("include_is_subscribed", IncludeIsSubscribed);
+            writer.WriteBoolValue("include_is_subscribed", IncludeIsSubscribed);
             writer.WriteStringValue("list_id", ListId);
             writer.WriteStringValue("token", Token);
             writer.WriteAdditionalData(AdditionalData);

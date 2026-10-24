@@ -31,13 +31,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog Confirm { get; set; }
 #endif
         /// <summary>Pre-populates the select menu with the conversation that the user was viewing when they opened themodal, if available. Default is `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MultiConversationsSelectDefaultToCurrentConversation? DefaultToCurrentConversation { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MultiConversationsSelectDefaultToCurrentConversation DefaultToCurrentConversation { get; set; }
-#endif
+        public bool? DefaultToCurrentConversation { get; set; }
         /// <summary>A filter object that reduces the list of available conversations using the specified criteria.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -47,13 +41,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.MultiConversationsSelectFilter Filter { get; set; }
 #endif
         /// <summary>Indicates whether the element will be set to auto focus within the[`view` object](https://docs.slack.dev/surfaces/modals). Only one element can be set to `true`.Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MultiConversationsSelectFocusOnLoad? FocusOnLoad { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MultiConversationsSelectFocusOnLoad FocusOnLoad { get; set; }
-#endif
+        public bool? FocusOnLoad { get; set; }
         /// <summary>An array of one or more IDs of any valid conversations to be pre-selected when the menu loads. If`default_to_current_conversation` is also supplied, `initial_conversation` will be ignored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -101,9 +89,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "action_id", n => { ActionId = n.GetStringValue(); } },
                 { "confirm", n => { Confirm = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog>(global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog.CreateFromDiscriminatorValue); } },
-                { "default_to_current_conversation", n => { DefaultToCurrentConversation = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MultiConversationsSelectDefaultToCurrentConversation>(global::Soenneker.Slack.OpenApiClient.Models.MultiConversationsSelectDefaultToCurrentConversation.CreateFromDiscriminatorValue); } },
+                { "default_to_current_conversation", n => { DefaultToCurrentConversation = n.GetBoolValue(); } },
                 { "filter", n => { Filter = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MultiConversationsSelectFilter>(global::Soenneker.Slack.OpenApiClient.Models.MultiConversationsSelectFilter.CreateFromDiscriminatorValue); } },
-                { "focus_on_load", n => { FocusOnLoad = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MultiConversationsSelectFocusOnLoad>(global::Soenneker.Slack.OpenApiClient.Models.MultiConversationsSelectFocusOnLoad.CreateFromDiscriminatorValue); } },
+                { "focus_on_load", n => { FocusOnLoad = n.GetBoolValue(); } },
                 { "initial_conversations", n => { InitialConversations = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "max_selected_items", n => { MaxSelectedItems = n.GetDoubleValue(); } },
                 { "placeholder", n => { Placeholder = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>(global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement.CreateFromDiscriminatorValue); } },
@@ -119,9 +107,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("action_id", ActionId);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog>("confirm", Confirm);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MultiConversationsSelectDefaultToCurrentConversation>("default_to_current_conversation", DefaultToCurrentConversation);
+            writer.WriteBoolValue("default_to_current_conversation", DefaultToCurrentConversation);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MultiConversationsSelectFilter>("filter", Filter);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MultiConversationsSelectFocusOnLoad>("focus_on_load", FocusOnLoad);
+            writer.WriteBoolValue("focus_on_load", FocusOnLoad);
             writer.WriteCollectionOfPrimitiveValues<string>("initial_conversations", InitialConversations);
             writer.WriteDoubleValue("max_selected_items", MaxSelectedItems);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>("placeholder", Placeholder);

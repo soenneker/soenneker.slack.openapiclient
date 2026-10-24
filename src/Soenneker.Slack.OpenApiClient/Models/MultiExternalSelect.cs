@@ -31,13 +31,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog Confirm { get; set; }
 #endif
         /// <summary>Indicates whether the element will be set to auto focus within the[`view` object](https://docs.slack.dev/surfaces/modals). Only one element can be set to `true`.Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MultiExternalSelectFocusOnLoad? FocusOnLoad { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MultiExternalSelectFocusOnLoad FocusOnLoad { get; set; }
-#endif
+        public bool? FocusOnLoad { get; set; }
         /// <summary>An array of options to be selected when the menu initially loads.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -87,7 +81,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "action_id", n => { ActionId = n.GetStringValue(); } },
                 { "confirm", n => { Confirm = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog>(global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog.CreateFromDiscriminatorValue); } },
-                { "focus_on_load", n => { FocusOnLoad = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MultiExternalSelectFocusOnLoad>(global::Soenneker.Slack.OpenApiClient.Models.MultiExternalSelectFocusOnLoad.CreateFromDiscriminatorValue); } },
+                { "focus_on_load", n => { FocusOnLoad = n.GetBoolValue(); } },
                 { "initial_options", n => { InitialOptions = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.PlainTextOption>(global::Soenneker.Slack.OpenApiClient.Models.PlainTextOption.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "max_selected_items", n => { MaxSelectedItems = n.GetDoubleValue(); } },
                 { "min_query_length", n => { MinQueryLength = n.GetDoubleValue(); } },
@@ -104,7 +98,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("action_id", ActionId);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog>("confirm", Confirm);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MultiExternalSelectFocusOnLoad>("focus_on_load", FocusOnLoad);
+            writer.WriteBoolValue("focus_on_load", FocusOnLoad);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.PlainTextOption>("initial_options", InitialOptions);
             writer.WriteDoubleValue("max_selected_items", MaxSelectedItems);
             writer.WriteDoubleValue("min_query_length", MinQueryLength);

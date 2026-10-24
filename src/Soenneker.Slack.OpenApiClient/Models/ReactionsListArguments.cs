@@ -25,13 +25,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Cursor { get; set; }
 #endif
         /// <summary>If `true`, return the complete reaction list.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ReactionsFullFull? Full { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ReactionsFullFull Full { get; set; }
-#endif
+        public bool? Full { get; set; }
         /// <summary>The maximum number of items to return. Fewer than the requested number of items may be returned,even if the end of the list hasn&apos;t been reached. Must be an integer with a max value of `999`. Default is `100`.</summary>
         public double? Limit { get; set; }
         /// <summary>Page number of results to return. Defaults to `1`.</summary>
@@ -79,7 +73,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "count", n => { Count = n.GetDoubleValue(); } },
                 { "cursor", n => { Cursor = n.GetStringValue(); } },
-                { "full", n => { Full = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ReactionsFullFull>(global::Soenneker.Slack.OpenApiClient.Models.ReactionsFullFull.CreateFromDiscriminatorValue); } },
+                { "full", n => { Full = n.GetBoolValue(); } },
                 { "limit", n => { Limit = n.GetDoubleValue(); } },
                 { "page", n => { Page = n.GetDoubleValue(); } },
                 { "team_id", n => { TeamId = n.GetStringValue(); } },
@@ -95,7 +89,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("count", Count);
             writer.WriteStringValue("cursor", Cursor);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ReactionsFullFull>("full", Full);
+            writer.WriteBoolValue("full", Full);
             writer.WriteDoubleValue("limit", Limit);
             writer.WriteDoubleValue("page", Page);
             writer.WriteStringValue("team_id", TeamId);

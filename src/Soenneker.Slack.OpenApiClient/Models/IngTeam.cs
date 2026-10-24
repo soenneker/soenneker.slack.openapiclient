@@ -49,13 +49,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The is_verified property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.IngTeamIsVerified? IsVerified { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.IngTeamIsVerified IsVerified { get; set; }
-#endif
+        public bool? IsVerified { get; set; }
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,13 +59,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>The requires_sponsorship property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.IngTeamRequiresSponsorship? RequiresSponsorship { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.IngTeamRequiresSponsorship RequiresSponsorship { get; set; }
-#endif
+        public bool? RequiresSponsorship { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.IngTeam"/> and sets the default values.
         /// </summary>
@@ -102,9 +90,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "domain", n => { Domain = n.GetStringValue(); } },
                 { "icon", n => { Icon = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Icon>(global::Soenneker.Slack.OpenApiClient.Models.Icon.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "is_verified", n => { IsVerified = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.IngTeamIsVerified>(global::Soenneker.Slack.OpenApiClient.Models.IngTeamIsVerified.CreateFromDiscriminatorValue); } },
+                { "is_verified", n => { IsVerified = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "requires_sponsorship", n => { RequiresSponsorship = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.IngTeamRequiresSponsorship>(global::Soenneker.Slack.OpenApiClient.Models.IngTeamRequiresSponsorship.CreateFromDiscriminatorValue); } },
+                { "requires_sponsorship", n => { RequiresSponsorship = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -119,9 +107,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("domain", Domain);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Icon>("icon", Icon);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.IngTeamIsVerified>("is_verified", IsVerified);
+            writer.WriteBoolValue("is_verified", IsVerified);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.IngTeamRequiresSponsorship>("requires_sponsorship", RequiresSponsorship);
+            writer.WriteBoolValue("requires_sponsorship", RequiresSponsorship);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

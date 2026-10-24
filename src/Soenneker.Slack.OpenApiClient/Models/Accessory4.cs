@@ -49,13 +49,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.Confirm2 Confirm { get; set; }
 #endif
         /// <summary>The default_to_current_conversation property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Accessory4DefaultToCurrentConversation? DefaultToCurrentConversation { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Accessory4DefaultToCurrentConversation DefaultToCurrentConversation { get; set; }
-#endif
+        public bool? DefaultToCurrentConversation { get; set; }
         /// <summary>The elements property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -81,13 +75,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.AccessoryFilter Filter { get; set; }
 #endif
         /// <summary>The focus_on_load property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Accessory4FocusOnLoad? FocusOnLoad { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Accessory4FocusOnLoad FocusOnLoad { get; set; }
-#endif
+        public bool? FocusOnLoad { get; set; }
         /// <summary>The image_bytes property</summary>
         public double? ImageBytes { get; set; }
         /// <summary>The image_height property</summary>
@@ -217,13 +205,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.Text2 Placeholder { get; set; }
 #endif
         /// <summary>The response_url_enabled property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Accessory4ResponseUrlEnabled? ResponseUrlEnabled { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Accessory4ResponseUrlEnabled ResponseUrlEnabled { get; set; }
-#endif
+        public bool? ResponseUrlEnabled { get; set; }
         /// <summary>The slack_file property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -318,11 +300,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "alt_text", n => { AltText = n.GetStringValue(); } },
                 { "border", n => { Border = n.GetDoubleValue(); } },
                 { "confirm", n => { Confirm = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Confirm2>(global::Soenneker.Slack.OpenApiClient.Models.Confirm2.CreateFromDiscriminatorValue); } },
-                { "default_to_current_conversation", n => { DefaultToCurrentConversation = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Accessory4DefaultToCurrentConversation>(global::Soenneker.Slack.OpenApiClient.Models.Accessory4DefaultToCurrentConversation.CreateFromDiscriminatorValue); } },
+                { "default_to_current_conversation", n => { DefaultToCurrentConversation = n.GetBoolValue(); } },
                 { "elements", n => { Elements = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AccessoryElement4>(global::Soenneker.Slack.OpenApiClient.Models.AccessoryElement4.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "fallback", n => { Fallback = n.GetStringValue(); } },
                 { "filter", n => { Filter = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AccessoryFilter>(global::Soenneker.Slack.OpenApiClient.Models.AccessoryFilter.CreateFromDiscriminatorValue); } },
-                { "focus_on_load", n => { FocusOnLoad = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Accessory4FocusOnLoad>(global::Soenneker.Slack.OpenApiClient.Models.Accessory4FocusOnLoad.CreateFromDiscriminatorValue); } },
+                { "focus_on_load", n => { FocusOnLoad = n.GetBoolValue(); } },
                 { "image_bytes", n => { ImageBytes = n.GetDoubleValue(); } },
                 { "image_height", n => { ImageHeight = n.GetDoubleValue(); } },
                 { "image_url", n => { ImageUrl = n.GetStringValue(); } },
@@ -345,7 +327,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "option_groups", n => { OptionGroups = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.OptionGroup2>(global::Soenneker.Slack.OpenApiClient.Models.OptionGroup2.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Option3>(global::Soenneker.Slack.OpenApiClient.Models.Option3.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "placeholder", n => { Placeholder = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Text2>(global::Soenneker.Slack.OpenApiClient.Models.Text2.CreateFromDiscriminatorValue); } },
-                { "response_url_enabled", n => { ResponseUrlEnabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Accessory4ResponseUrlEnabled>(global::Soenneker.Slack.OpenApiClient.Models.Accessory4ResponseUrlEnabled.CreateFromDiscriminatorValue); } },
+                { "response_url_enabled", n => { ResponseUrlEnabled = n.GetBoolValue(); } },
                 { "slack_file", n => { SlackFile = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackFile2>(global::Soenneker.Slack.OpenApiClient.Models.SlackFile2.CreateFromDiscriminatorValue); } },
                 { "style", n => { Style = n.GetStringValue(); } },
                 { "text", n => { Text = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Text2>(global::Soenneker.Slack.OpenApiClient.Models.Text2.CreateFromDiscriminatorValue); } },
@@ -368,11 +350,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("alt_text", AltText);
             writer.WriteDoubleValue("border", Border);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Confirm2>("confirm", Confirm);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Accessory4DefaultToCurrentConversation>("default_to_current_conversation", DefaultToCurrentConversation);
+            writer.WriteBoolValue("default_to_current_conversation", DefaultToCurrentConversation);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AccessoryElement4>("elements", Elements);
             writer.WriteStringValue("fallback", Fallback);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AccessoryFilter>("filter", Filter);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Accessory4FocusOnLoad>("focus_on_load", FocusOnLoad);
+            writer.WriteBoolValue("focus_on_load", FocusOnLoad);
             writer.WriteDoubleValue("image_bytes", ImageBytes);
             writer.WriteDoubleValue("image_height", ImageHeight);
             writer.WriteStringValue("image_url", ImageUrl);
@@ -395,7 +377,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.OptionGroup2>("option_groups", OptionGroups);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Option3>("options", Options);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Text2>("placeholder", Placeholder);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Accessory4ResponseUrlEnabled>("response_url_enabled", ResponseUrlEnabled);
+            writer.WriteBoolValue("response_url_enabled", ResponseUrlEnabled);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackFile2>("slack_file", SlackFile);
             writer.WriteStringValue("style", Style);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Text2>("text", Text);

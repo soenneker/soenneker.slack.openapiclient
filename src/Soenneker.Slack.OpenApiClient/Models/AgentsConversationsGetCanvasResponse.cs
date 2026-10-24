@@ -47,13 +47,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Error { get; set; }
 #endif
         /// <summary>The has_more_comments property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsGetCanvasResponseAllOf2HasMoreComments? HasMoreComments { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsGetCanvasResponseAllOf2HasMoreComments HasMoreComments { get; set; }
-#endif
+        public bool? HasMoreComments { get; set; }
         /// <summary>The needed property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -125,7 +119,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "comments", n => { Comments = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Comment>(global::Soenneker.Slack.OpenApiClient.Models.Comment.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "content", n => { Content = n.GetStringValue(); } },
                 { "error", n => { Error = n.GetStringValue(); } },
-                { "has_more_comments", n => { HasMoreComments = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsGetCanvasResponseAllOf2HasMoreComments>(global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsGetCanvasResponseAllOf2HasMoreComments.CreateFromDiscriminatorValue); } },
+                { "has_more_comments", n => { HasMoreComments = n.GetBoolValue(); } },
                 { "needed", n => { Needed = n.GetStringValue(); } },
                 { "ok", n => { Ok = n.GetBoolValue(); } },
                 { "provided", n => { Provided = n.GetStringValue(); } },
@@ -145,7 +139,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Comment>("comments", Comments);
             writer.WriteStringValue("content", Content);
             writer.WriteStringValue("error", Error);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsGetCanvasResponseAllOf2HasMoreComments>("has_more_comments", HasMoreComments);
+            writer.WriteBoolValue("has_more_comments", HasMoreComments);
             writer.WriteStringValue("needed", Needed);
             writer.WriteBoolValue("ok", Ok);
             writer.WriteStringValue("provided", Provided);

@@ -41,13 +41,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The im_channel_count property</summary>
         public double? ImChannelCount { get; set; }
         /// <summary>The is_sponsored property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.OrganizationIsSponsored? IsSponsored { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.OrganizationIsSponsored IsSponsored { get; set; }
-#endif
+        public bool? IsSponsored { get; set; }
         /// <summary>The last_active_timestamp property</summary>
         public double? LastActiveTimestamp { get; set; }
         /// <summary>The lists property</summary>
@@ -125,7 +119,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "connected_workspaces", n => { ConnectedWorkspaces = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ConnectedWorkspace>(global::Soenneker.Slack.OpenApiClient.Models.ConnectedWorkspace.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "connection_status", n => { ConnectionStatus = n.GetStringValue(); } },
                 { "im_channel_count", n => { ImChannelCount = n.GetDoubleValue(); } },
-                { "is_sponsored", n => { IsSponsored = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.OrganizationIsSponsored>(global::Soenneker.Slack.OpenApiClient.Models.OrganizationIsSponsored.CreateFromDiscriminatorValue); } },
+                { "is_sponsored", n => { IsSponsored = n.GetBoolValue(); } },
                 { "last_active_timestamp", n => { LastActiveTimestamp = n.GetDoubleValue(); } },
                 { "lists", n => { Lists = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Canvas2>(global::Soenneker.Slack.OpenApiClient.Models.Canvas2.CreateFromDiscriminatorValue); } },
                 { "mpim_channel_count", n => { MpimChannelCount = n.GetDoubleValue(); } },
@@ -148,7 +142,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ConnectedWorkspace>("connected_workspaces", ConnectedWorkspaces);
             writer.WriteStringValue("connection_status", ConnectionStatus);
             writer.WriteDoubleValue("im_channel_count", ImChannelCount);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.OrganizationIsSponsored>("is_sponsored", IsSponsored);
+            writer.WriteBoolValue("is_sponsored", IsSponsored);
             writer.WriteDoubleValue("last_active_timestamp", LastActiveTimestamp);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Canvas2>("lists", Lists);
             writer.WriteDoubleValue("mpim_channel_count", MpimChannelCount);

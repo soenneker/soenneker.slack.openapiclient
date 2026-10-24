@@ -49,21 +49,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The is_all_items_view property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.View6IsAllItemsView? IsAllItemsView { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.View6IsAllItemsView IsAllItemsView { get; set; }
-#endif
+        public bool? IsAllItemsView { get; set; }
         /// <summary>The is_locked property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.View6IsLocked? IsLocked { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.View6IsLocked IsLocked { get; set; }
-#endif
+        public bool? IsLocked { get; set; }
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -81,21 +69,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Position { get; set; }
 #endif
         /// <summary>The show_completed_items property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.View6ShowCompletedItems? ShowCompletedItems { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.View6ShowCompletedItems ShowCompletedItems { get; set; }
-#endif
+        public bool? ShowCompletedItems { get; set; }
         /// <summary>The stick_column_left property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.View6StickColumnLeft? StickColumnLeft { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.View6StickColumnLeft StickColumnLeft { get; set; }
-#endif
+        public bool? StickColumnLeft { get; set; }
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -134,12 +110,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "date_created", n => { DateCreated = n.GetDoubleValue(); } },
                 { "default_view_key", n => { DefaultViewKey = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "is_all_items_view", n => { IsAllItemsView = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View6IsAllItemsView>(global::Soenneker.Slack.OpenApiClient.Models.View6IsAllItemsView.CreateFromDiscriminatorValue); } },
-                { "is_locked", n => { IsLocked = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View6IsLocked>(global::Soenneker.Slack.OpenApiClient.Models.View6IsLocked.CreateFromDiscriminatorValue); } },
+                { "is_all_items_view", n => { IsAllItemsView = n.GetBoolValue(); } },
+                { "is_locked", n => { IsLocked = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "position", n => { Position = n.GetStringValue(); } },
-                { "show_completed_items", n => { ShowCompletedItems = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View6ShowCompletedItems>(global::Soenneker.Slack.OpenApiClient.Models.View6ShowCompletedItems.CreateFromDiscriminatorValue); } },
-                { "stick_column_left", n => { StickColumnLeft = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View6StickColumnLeft>(global::Soenneker.Slack.OpenApiClient.Models.View6StickColumnLeft.CreateFromDiscriminatorValue); } },
+                { "show_completed_items", n => { ShowCompletedItems = n.GetBoolValue(); } },
+                { "stick_column_left", n => { StickColumnLeft = n.GetBoolValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
         }
@@ -155,12 +131,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("date_created", DateCreated);
             writer.WriteStringValue("default_view_key", DefaultViewKey);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View6IsAllItemsView>("is_all_items_view", IsAllItemsView);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View6IsLocked>("is_locked", IsLocked);
+            writer.WriteBoolValue("is_all_items_view", IsAllItemsView);
+            writer.WriteBoolValue("is_locked", IsLocked);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("position", Position);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View6ShowCompletedItems>("show_completed_items", ShowCompletedItems);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View6StickColumnLeft>("stick_column_left", StickColumnLeft);
+            writer.WriteBoolValue("show_completed_items", ShowCompletedItems);
+            writer.WriteBoolValue("stick_column_left", StickColumnLeft);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -31,13 +31,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string AltText { get; set; }
 #endif
         /// <summary>The api_decoration_available property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Block6ApiDecorationAvailable? ApiDecorationAvailable { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Block6ApiDecorationAvailable ApiDecorationAvailable { get; set; }
-#endif
+        public bool? ApiDecorationAvailable { get; set; }
         /// <summary>The app_collaborators property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -111,13 +105,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.Description Description { get; set; }
 #endif
         /// <summary>The dispatch_action property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Block6DispatchAction? DispatchAction { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Block6DispatchAction DispatchAction { get; set; }
-#endif
+        public bool? DispatchAction { get; set; }
         /// <summary>The element property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -205,13 +193,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The image_width property</summary>
         public double? ImageWidth { get; set; }
         /// <summary>The is_workflow_app property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Block6IsWorkflowApp? IsWorkflowApp { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Block6IsWorkflowApp IsWorkflowApp { get; set; }
-#endif
+        public bool? IsWorkflowApp { get; set; }
         /// <summary>The label property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -221,13 +203,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.Description Label { get; set; }
 #endif
         /// <summary>The optional property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Block6Optional? Optional { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Block6Optional Optional { get; set; }
-#endif
+        public bool? Optional { get; set; }
         /// <summary>The provider_icon_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -335,7 +311,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "accessory", n => { Accessory = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Accessory9>(global::Soenneker.Slack.OpenApiClient.Models.Accessory9.CreateFromDiscriminatorValue); } },
                 { "alt_text", n => { AltText = n.GetStringValue(); } },
-                { "api_decoration_available", n => { ApiDecorationAvailable = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Block6ApiDecorationAvailable>(global::Soenneker.Slack.OpenApiClient.Models.Block6ApiDecorationAvailable.CreateFromDiscriminatorValue); } },
+                { "api_decoration_available", n => { ApiDecorationAvailable = n.GetBoolValue(); } },
                 { "app_collaborators", n => { AppCollaborators = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "app_id", n => { AppId = n.GetStringValue(); } },
                 { "author_name", n => { AuthorName = n.GetStringValue(); } },
@@ -345,7 +321,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "call", n => { Call = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Call4>(global::Soenneker.Slack.OpenApiClient.Models.Call4.CreateFromDiscriminatorValue); } },
                 { "call_id", n => { CallId = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Description>(global::Soenneker.Slack.OpenApiClient.Models.Description.CreateFromDiscriminatorValue); } },
-                { "dispatch_action", n => { DispatchAction = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Block6DispatchAction>(global::Soenneker.Slack.OpenApiClient.Models.Block6DispatchAction.CreateFromDiscriminatorValue); } },
+                { "dispatch_action", n => { DispatchAction = n.GetBoolValue(); } },
                 { "element", n => { Element = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Accessory9>(global::Soenneker.Slack.OpenApiClient.Models.Accessory9.CreateFromDiscriminatorValue); } },
                 { "elements", n => { Elements = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Accessory9>(global::Soenneker.Slack.OpenApiClient.Models.Accessory9.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "external_id", n => { ExternalId = n.GetStringValue(); } },
@@ -359,9 +335,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "image_height", n => { ImageHeight = n.GetDoubleValue(); } },
                 { "image_url", n => { ImageUrl = n.GetStringValue(); } },
                 { "image_width", n => { ImageWidth = n.GetDoubleValue(); } },
-                { "is_workflow_app", n => { IsWorkflowApp = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Block6IsWorkflowApp>(global::Soenneker.Slack.OpenApiClient.Models.Block6IsWorkflowApp.CreateFromDiscriminatorValue); } },
+                { "is_workflow_app", n => { IsWorkflowApp = n.GetBoolValue(); } },
                 { "label", n => { Label = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Description>(global::Soenneker.Slack.OpenApiClient.Models.Description.CreateFromDiscriminatorValue); } },
-                { "optional", n => { Optional = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Block6Optional>(global::Soenneker.Slack.OpenApiClient.Models.Block6Optional.CreateFromDiscriminatorValue); } },
+                { "optional", n => { Optional = n.GetBoolValue(); } },
                 { "provider_icon_url", n => { ProviderIconUrl = n.GetStringValue(); } },
                 { "provider_name", n => { ProviderName = n.GetStringValue(); } },
                 { "source", n => { Source = n.GetStringValue(); } },
@@ -383,7 +359,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Accessory9>("accessory", Accessory);
             writer.WriteStringValue("alt_text", AltText);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Block6ApiDecorationAvailable>("api_decoration_available", ApiDecorationAvailable);
+            writer.WriteBoolValue("api_decoration_available", ApiDecorationAvailable);
             writer.WriteCollectionOfPrimitiveValues<string>("app_collaborators", AppCollaborators);
             writer.WriteStringValue("app_id", AppId);
             writer.WriteStringValue("author_name", AuthorName);
@@ -393,7 +369,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Call4>("call", Call);
             writer.WriteStringValue("call_id", CallId);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Description>("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Block6DispatchAction>("dispatch_action", DispatchAction);
+            writer.WriteBoolValue("dispatch_action", DispatchAction);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Accessory9>("element", Element);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Accessory9>("elements", Elements);
             writer.WriteStringValue("external_id", ExternalId);
@@ -407,9 +383,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("image_height", ImageHeight);
             writer.WriteStringValue("image_url", ImageUrl);
             writer.WriteDoubleValue("image_width", ImageWidth);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Block6IsWorkflowApp>("is_workflow_app", IsWorkflowApp);
+            writer.WriteBoolValue("is_workflow_app", IsWorkflowApp);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Description>("label", Label);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Block6Optional>("optional", Optional);
+            writer.WriteBoolValue("optional", Optional);
             writer.WriteStringValue("provider_icon_url", ProviderIconUrl);
             writer.WriteStringValue("provider_name", ProviderName);
             writer.WriteStringValue("source", Source);

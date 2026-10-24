@@ -7,72 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.PlanBlockTasksItemAnyOf1"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.TaskCardBlock"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class PlanBlockTasksItem : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class PlanBlockTasksItem : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A string acting as a unique identifier for a block. If not specified, a `block_id` will be generated.You can use this `block_id` when you receive an interaction payload to[identify the source of the action](https://docs.slack.dev/interactivity/handling-user-interaction#payloads).Maximum length for this field is 255 characters. `block_id` should be unique for each message and each iteration ofa message. If a message is updated, use a new `block_id`.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.PlanBlockTasksItemAnyOf1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BlockId { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.PlanBlockTasksItemAnyOf1? PlanBlockTasksItemAnyOf1 { get; set; }
 #nullable restore
 #else
-        public string BlockId { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.PlanBlockTasksItemAnyOf1 PlanBlockTasksItemAnyOf1 { get; set; }
 #endif
-        /// <summary>Details of the task in the form of a single &quot;rich_text&quot; entity.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.TaskCardBlock"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock? Details { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.TaskCardBlock? TaskCardBlock { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock Details { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.TaskCardBlock TaskCardBlock { get; set; }
 #endif
-        /// <summary>Output of the task in the form of a single &quot;rich_text&quot; entity.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock? Output { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock Output { get; set; }
-#endif
-        /// <summary>Array of URL source elements used to generate a response.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.UrlSourceElement>? Sources { get; set; }
-#nullable restore
-#else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.UrlSourceElement> Sources { get; set; }
-#endif
-        /// <summary>The state of a task. Can be &quot;pending&quot;, &quot;in_progress&quot;, &quot;complete&quot;, or &quot;error&quot;.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.TaskCardBlockStatus? Status { get; set; }
-        /// <summary>ID for the task.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? TaskId { get; set; }
-#nullable restore
-#else
-        public string TaskId { get; set; }
-#endif
-        /// <summary>Title of the task in plain text.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Title { get; set; }
-#nullable restore
-#else
-        public string Title { get; set; }
-#endif
-        /// <summary>The type of block. For this block, type will always be `task_card`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.TaskCardType? Type { get; set; }
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.PlanBlockTasksItem"/> and sets the default values.
-        /// </summary>
-        public PlanBlockTasksItem()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -81,7 +37,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.PlanBlockTasksItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.PlanBlockTasksItem();
+            var result = new global::Soenneker.Slack.OpenApiClient.Models.PlanBlockTasksItem();
+            result.PlanBlockTasksItemAnyOf1 = new global::Soenneker.Slack.OpenApiClient.Models.PlanBlockTasksItemAnyOf1();
+            result.TaskCardBlock = new global::Soenneker.Slack.OpenApiClient.Models.TaskCardBlock();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,17 +48,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(PlanBlockTasksItemAnyOf1 != null || TaskCardBlock != null)
             {
-                { "block_id", n => { BlockId = n.GetStringValue(); } },
-                { "details", n => { Details = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock>(global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock.CreateFromDiscriminatorValue); } },
-                { "output", n => { Output = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock>(global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock.CreateFromDiscriminatorValue); } },
-                { "sources", n => { Sources = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.UrlSourceElement>(global::Soenneker.Slack.OpenApiClient.Models.UrlSourceElement.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.TaskCardBlockStatus>(); } },
-                { "task_id", n => { TaskId = n.GetStringValue(); } },
-                { "title", n => { Title = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.TaskCardType>(); } },
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PlanBlockTasksItemAnyOf1, TaskCardBlock);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -108,15 +61,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("block_id", BlockId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock>("details", Details);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock>("output", Output);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.UrlSourceElement>("sources", Sources);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.TaskCardBlockStatus>("status", Status);
-            writer.WriteStringValue("task_id", TaskId);
-            writer.WriteStringValue("title", Title);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.TaskCardType>("type", Type);
-            writer.WriteAdditionalData(AdditionalData);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlanBlockTasksItemAnyOf1>(null, PlanBlockTasksItemAnyOf1, TaskCardBlock);
         }
     }
 }

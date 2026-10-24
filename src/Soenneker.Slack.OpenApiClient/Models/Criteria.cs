@@ -7,36 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.CriteriaAnyOf1"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.CriteriaAnyOf2"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class Criteria : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class Criteria : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Textual content that must appear in the section.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.CriteriaAnyOf1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContainsText { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.CriteriaAnyOf1? CriteriaAnyOf1 { get; set; }
 #nullable restore
 #else
-        public string ContainsText { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.CriteriaAnyOf1 CriteriaAnyOf1 { get; set; }
 #endif
-        /// <summary>List of desired section types to filter on. Minimum of 1, maximum of 3.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.CriteriaAnyOf2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.SectionType?>? SectionTypes { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.CriteriaAnyOf2? CriteriaAnyOf2 { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.SectionType?> SectionTypes { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.CriteriaAnyOf2 CriteriaAnyOf2 { get; set; }
 #endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Criteria"/> and sets the default values.
-        /// </summary>
-        public Criteria()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -45,7 +37,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.Criteria CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.Criteria();
+            var result = new global::Soenneker.Slack.OpenApiClient.Models.Criteria();
+            result.CriteriaAnyOf1 = new global::Soenneker.Slack.OpenApiClient.Models.CriteriaAnyOf1();
+            result.CriteriaAnyOf2 = new global::Soenneker.Slack.OpenApiClient.Models.CriteriaAnyOf2();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -53,11 +48,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(CriteriaAnyOf1 != null || CriteriaAnyOf2 != null)
             {
-                { "contains_text", n => { ContainsText = n.GetStringValue(); } },
-                { "section_types", n => { SectionTypes = n.GetCollectionOfEnumValues<global::Soenneker.Slack.OpenApiClient.Models.SectionType>()?.AsList(); } },
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(CriteriaAnyOf1, CriteriaAnyOf2);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -66,9 +61,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("contains_text", ContainsText);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Slack.OpenApiClient.Models.SectionType>("section_types", SectionTypes);
-            writer.WriteAdditionalData(AdditionalData);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.CriteriaAnyOf1>(null, CriteriaAnyOf1, CriteriaAnyOf2);
         }
     }
 }

@@ -15,13 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The is_private property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ConnectionIsPrivate? IsPrivate { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ConnectionIsPrivate IsPrivate { get; set; }
-#endif
+        public bool? IsPrivate { get; set; }
         /// <summary>The team property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -55,7 +49,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "is_private", n => { IsPrivate = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConnectionIsPrivate>(global::Soenneker.Slack.OpenApiClient.Models.ConnectionIsPrivate.CreateFromDiscriminatorValue); } },
+                { "is_private", n => { IsPrivate = n.GetBoolValue(); } },
                 { "team", n => { Team = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Team6>(global::Soenneker.Slack.OpenApiClient.Models.Team6.CreateFromDiscriminatorValue); } },
             };
         }
@@ -66,7 +60,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConnectionIsPrivate>("is_private", IsPrivate);
+            writer.WriteBoolValue("is_private", IsPrivate);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Team6>("team", Team);
             writer.WriteAdditionalData(AdditionalData);
         }

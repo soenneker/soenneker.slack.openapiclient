@@ -23,13 +23,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string ChannelId { get; set; }
 #endif
         /// <summary>Set to `true` if channel has to be converted to an org channel. Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSetTeamsArgumentsOrgChannel? OrgChannel { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSetTeamsArgumentsOrgChannel OrgChannel { get; set; }
-#endif
+        public bool? OrgChannel { get; set; }
         /// <summary>A list of workspaces to which the channel should be shared.Not required if the channel is being shared org-wide.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -80,7 +74,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "channel_id", n => { ChannelId = n.GetStringValue(); } },
-                { "org_channel", n => { OrgChannel = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSetTeamsArgumentsOrgChannel>(global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSetTeamsArgumentsOrgChannel.CreateFromDiscriminatorValue); } },
+                { "org_channel", n => { OrgChannel = n.GetBoolValue(); } },
                 { "target_team_ids", n => { TargetTeamIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "team_id", n => { TeamId = n.GetStringValue(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
@@ -94,7 +88,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("channel_id", ChannelId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSetTeamsArgumentsOrgChannel>("org_channel", OrgChannel);
+            writer.WriteBoolValue("org_channel", OrgChannel);
             writer.WriteCollectionOfPrimitiveValues<string>("target_team_ids", TargetTeamIds);
             writer.WriteStringValue("team_id", TeamId);
             writer.WriteStringValue("token", Token);

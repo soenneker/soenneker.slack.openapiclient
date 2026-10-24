@@ -37,9 +37,16 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.RichTextPreformattedElementsItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
             var result = new global::Soenneker.Slack.OpenApiClient.Models.RichTextPreformattedElementsItem();
-            result.RichTextLink = new global::Soenneker.Slack.OpenApiClient.Models.RichTextLink();
-            result.RichTextText = new global::Soenneker.Slack.OpenApiClient.Models.RichTextText();
+            if("link".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.RichTextLink = new global::Soenneker.Slack.OpenApiClient.Models.RichTextLink();
+            }
+            else if("text".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.RichTextText = new global::Soenneker.Slack.OpenApiClient.Models.RichTextText();
+            }
             return result;
         }
         /// <summary>
@@ -48,9 +55,13 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(RichTextLink != null || RichTextText != null)
+            if(RichTextLink != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(RichTextLink, RichTextText);
+                return RichTextLink.GetFieldDeserializers();
+            }
+            else if(RichTextText != null)
+            {
+                return RichTextText.GetFieldDeserializers();
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -61,7 +72,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextLink>(null, RichTextLink, RichTextText);
+            if(RichTextLink != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextLink>(null, RichTextLink);
+            }
+            else if(RichTextText != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextText>(null, RichTextText);
+            }
         }
     }
 }

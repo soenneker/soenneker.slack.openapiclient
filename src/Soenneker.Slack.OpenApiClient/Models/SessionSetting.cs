@@ -15,13 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The desktop_app_browser_quit property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.SessionSettingDesktopAppBrowserQuit? DesktopAppBrowserQuit { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.SessionSettingDesktopAppBrowserQuit DesktopAppBrowserQuit { get; set; }
-#endif
+        public bool? DesktopAppBrowserQuit { get; set; }
         /// <summary>The duration property</summary>
         public double? Duration { get; set; }
         /// <summary>The user_id property</summary>
@@ -57,7 +51,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "desktop_app_browser_quit", n => { DesktopAppBrowserQuit = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SessionSettingDesktopAppBrowserQuit>(global::Soenneker.Slack.OpenApiClient.Models.SessionSettingDesktopAppBrowserQuit.CreateFromDiscriminatorValue); } },
+                { "desktop_app_browser_quit", n => { DesktopAppBrowserQuit = n.GetBoolValue(); } },
                 { "duration", n => { Duration = n.GetDoubleValue(); } },
                 { "user_id", n => { UserId = n.GetStringValue(); } },
             };
@@ -69,7 +63,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SessionSettingDesktopAppBrowserQuit>("desktop_app_browser_quit", DesktopAppBrowserQuit);
+            writer.WriteBoolValue("desktop_app_browser_quit", DesktopAppBrowserQuit);
             writer.WriteDoubleValue("duration", Duration);
             writer.WriteStringValue("user_id", UserId);
             writer.WriteAdditionalData(AdditionalData);

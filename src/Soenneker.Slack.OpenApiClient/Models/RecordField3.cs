@@ -17,27 +17,21 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The attachment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.RecordField3AttachmentItem>? Attachment { get; set; }
+        public UntypedNode? Attachment { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.RecordField3AttachmentItem> Attachment { get; set; }
+        public UntypedNode Attachment { get; set; }
 #endif
         /// <summary>The channel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.RecordField3ChannelItem>? Channel { get; set; }
+        public UntypedNode? Channel { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.RecordField3ChannelItem> Channel { get; set; }
+        public UntypedNode Channel { get; set; }
 #endif
         /// <summary>The checkbox property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.RecordField3Checkbox? Checkbox { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.RecordField3Checkbox Checkbox { get; set; }
-#endif
+        public bool? Checkbox { get; set; }
         /// <summary>The column_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,18 +43,18 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The date property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.RecordField3DateItem>? Date { get; set; }
+        public UntypedNode? Date { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.RecordField3DateItem> Date { get; set; }
+        public UntypedNode Date { get; set; }
 #endif
         /// <summary>The email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.RecordField3EmailItem>? Email { get; set; }
+        public UntypedNode? Email { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.RecordField3EmailItem> Email { get; set; }
+        public UntypedNode Email { get; set; }
 #endif
         /// <summary>The key property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -73,10 +67,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The link property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.RecordField3LinkItem>? Link { get; set; }
+        public UntypedNode? Link { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.RecordField3LinkItem> Link { get; set; }
+        public UntypedNode Link { get; set; }
 #endif
         /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -89,50 +83,50 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.RecordField3NumberItem>? Number { get; set; }
+        public UntypedNode? Number { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.RecordField3NumberItem> Number { get; set; }
+        public UntypedNode Number { get; set; }
 #endif
         /// <summary>The phone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.RecordField3PhoneItem>? Phone { get; set; }
+        public UntypedNode? Phone { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.RecordField3PhoneItem> Phone { get; set; }
+        public UntypedNode Phone { get; set; }
 #endif
         /// <summary>The rating property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.RecordField3RatingItem>? Rating { get; set; }
+        public UntypedNode? Rating { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.RecordField3RatingItem> Rating { get; set; }
+        public UntypedNode Rating { get; set; }
 #endif
         /// <summary>The reference property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.RecordField3ReferenceItem>? Reference { get; set; }
+        public UntypedNode? Reference { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.RecordField3ReferenceItem> Reference { get; set; }
+        public UntypedNode Reference { get; set; }
 #endif
         /// <summary>The rich_text property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.RecordField3RichTextItem>? RichText { get; set; }
+        public UntypedNode? RichText { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.RecordField3RichTextItem> RichText { get; set; }
+        public UntypedNode RichText { get; set; }
 #endif
         /// <summary>The select property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.RecordField3SelectItem>? Select { get; set; }
+        public UntypedNode? Select { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.RecordField3SelectItem> Select { get; set; }
+        public UntypedNode Select { get; set; }
 #endif
         /// <summary>The text property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -145,18 +139,18 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The timestamp property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.RecordField3TimestampItem>? Timestamp { get; set; }
+        public UntypedNode? Timestamp { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.RecordField3TimestampItem> Timestamp { get; set; }
+        public UntypedNode Timestamp { get; set; }
 #endif
         /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.RecordField3UserItem>? User { get; set; }
+        public UntypedNode? User { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.RecordField3UserItem> User { get; set; }
+        public UntypedNode User { get; set; }
 #endif
         /// <summary>The value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -191,24 +185,24 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "attachment", n => { Attachment = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RecordField3AttachmentItem>(global::Soenneker.Slack.OpenApiClient.Models.RecordField3AttachmentItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "channel", n => { Channel = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RecordField3ChannelItem>(global::Soenneker.Slack.OpenApiClient.Models.RecordField3ChannelItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "checkbox", n => { Checkbox = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RecordField3Checkbox>(global::Soenneker.Slack.OpenApiClient.Models.RecordField3Checkbox.CreateFromDiscriminatorValue); } },
+                { "attachment", n => { Attachment = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "channel", n => { Channel = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "checkbox", n => { Checkbox = n.GetBoolValue(); } },
                 { "column_id", n => { ColumnId = n.GetStringValue(); } },
-                { "date", n => { Date = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RecordField3DateItem>(global::Soenneker.Slack.OpenApiClient.Models.RecordField3DateItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "email", n => { Email = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RecordField3EmailItem>(global::Soenneker.Slack.OpenApiClient.Models.RecordField3EmailItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "date", n => { Date = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "email", n => { Email = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "key", n => { Key = n.GetStringValue(); } },
-                { "link", n => { Link = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RecordField3LinkItem>(global::Soenneker.Slack.OpenApiClient.Models.RecordField3LinkItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "link", n => { Link = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "message", n => { Message = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FieldMessage3>(global::Soenneker.Slack.OpenApiClient.Models.FieldMessage3.CreateFromDiscriminatorValue); } },
-                { "number", n => { Number = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RecordField3NumberItem>(global::Soenneker.Slack.OpenApiClient.Models.RecordField3NumberItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "phone", n => { Phone = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RecordField3PhoneItem>(global::Soenneker.Slack.OpenApiClient.Models.RecordField3PhoneItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "rating", n => { Rating = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RecordField3RatingItem>(global::Soenneker.Slack.OpenApiClient.Models.RecordField3RatingItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "reference", n => { Reference = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RecordField3ReferenceItem>(global::Soenneker.Slack.OpenApiClient.Models.RecordField3ReferenceItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "rich_text", n => { RichText = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RecordField3RichTextItem>(global::Soenneker.Slack.OpenApiClient.Models.RecordField3RichTextItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "select", n => { Select = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RecordField3SelectItem>(global::Soenneker.Slack.OpenApiClient.Models.RecordField3SelectItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "number", n => { Number = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "phone", n => { Phone = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "rating", n => { Rating = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "reference", n => { Reference = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "rich_text", n => { RichText = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "select", n => { Select = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "text", n => { Text = n.GetStringValue(); } },
-                { "timestamp", n => { Timestamp = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RecordField3TimestampItem>(global::Soenneker.Slack.OpenApiClient.Models.RecordField3TimestampItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "user", n => { User = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RecordField3UserItem>(global::Soenneker.Slack.OpenApiClient.Models.RecordField3UserItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "timestamp", n => { Timestamp = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "user", n => { User = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "value", n => { Value = n.GetStringValue(); } },
             };
         }
@@ -219,24 +213,24 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RecordField3AttachmentItem>("attachment", Attachment);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RecordField3ChannelItem>("channel", Channel);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RecordField3Checkbox>("checkbox", Checkbox);
+            writer.WriteObjectValue<UntypedNode>("attachment", Attachment);
+            writer.WriteObjectValue<UntypedNode>("channel", Channel);
+            writer.WriteBoolValue("checkbox", Checkbox);
             writer.WriteStringValue("column_id", ColumnId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RecordField3DateItem>("date", Date);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RecordField3EmailItem>("email", Email);
+            writer.WriteObjectValue<UntypedNode>("date", Date);
+            writer.WriteObjectValue<UntypedNode>("email", Email);
             writer.WriteStringValue("key", Key);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RecordField3LinkItem>("link", Link);
+            writer.WriteObjectValue<UntypedNode>("link", Link);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FieldMessage3>("message", Message);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RecordField3NumberItem>("number", Number);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RecordField3PhoneItem>("phone", Phone);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RecordField3RatingItem>("rating", Rating);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RecordField3ReferenceItem>("reference", Reference);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RecordField3RichTextItem>("rich_text", RichText);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RecordField3SelectItem>("select", Select);
+            writer.WriteObjectValue<UntypedNode>("number", Number);
+            writer.WriteObjectValue<UntypedNode>("phone", Phone);
+            writer.WriteObjectValue<UntypedNode>("rating", Rating);
+            writer.WriteObjectValue<UntypedNode>("reference", Reference);
+            writer.WriteObjectValue<UntypedNode>("rich_text", RichText);
+            writer.WriteObjectValue<UntypedNode>("select", Select);
             writer.WriteStringValue("text", Text);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RecordField3TimestampItem>("timestamp", Timestamp);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RecordField3UserItem>("user", User);
+            writer.WriteObjectValue<UntypedNode>("timestamp", Timestamp);
+            writer.WriteObjectValue<UntypedNode>("user", User);
             writer.WriteStringValue("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }

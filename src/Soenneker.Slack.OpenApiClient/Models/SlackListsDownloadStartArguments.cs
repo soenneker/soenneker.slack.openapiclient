@@ -15,13 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Boolean indicating whether to include archived items.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsDownloadStartArgumentsIncludeArchived? IncludeArchived { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsDownloadStartArgumentsIncludeArchived IncludeArchived { get; set; }
-#endif
+        public bool? IncludeArchived { get; set; }
         /// <summary>Encoded ID of the List.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -63,7 +57,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "include_archived", n => { IncludeArchived = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackListsDownloadStartArgumentsIncludeArchived>(global::Soenneker.Slack.OpenApiClient.Models.SlackListsDownloadStartArgumentsIncludeArchived.CreateFromDiscriminatorValue); } },
+                { "include_archived", n => { IncludeArchived = n.GetBoolValue(); } },
                 { "list_id", n => { ListId = n.GetStringValue(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
             };
@@ -75,7 +69,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackListsDownloadStartArgumentsIncludeArchived>("include_archived", IncludeArchived);
+            writer.WriteBoolValue("include_archived", IncludeArchived);
             writer.WriteStringValue("list_id", ListId);
             writer.WriteStringValue("token", Token);
             writer.WriteAdditionalData(AdditionalData);

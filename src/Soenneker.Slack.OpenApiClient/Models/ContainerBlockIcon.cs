@@ -8,30 +8,27 @@ using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
     /// <summary>
-    /// An image element displayed alongside the title and subtitle.
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockIconMember1"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockIconMember2"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ContainerBlockIcon : IAdditionalDataHolder, IParsable
+    public partial class ContainerBlockIcon : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A plain-text summary of the image. This should not contain any markup.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockIconMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AltText { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockIconMember1? ContainerBlockIconMember1 { get; set; }
 #nullable restore
 #else
-        public string AltText { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockIconMember1 ContainerBlockIconMember1 { get; set; }
 #endif
-        /// <summary>The type of element. In this case `type` is always `image`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.ImageType? Type { get; set; }
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockIcon"/> and sets the default values.
-        /// </summary>
-        public ContainerBlockIcon()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockIconMember2"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockIconMember2? ContainerBlockIconMember2 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockIconMember2 ContainerBlockIconMember2 { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -40,7 +37,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockIcon CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockIcon();
+            var result = new global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockIcon();
+            result.ContainerBlockIconMember1 = new global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockIconMember1();
+            result.ContainerBlockIconMember2 = new global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockIconMember2();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -48,11 +48,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(ContainerBlockIconMember1 != null || ContainerBlockIconMember2 != null)
             {
-                { "alt_text", n => { AltText = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ImageType>(); } },
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(ContainerBlockIconMember1, ContainerBlockIconMember2);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -61,9 +61,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("alt_text", AltText);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ImageType>("type", Type);
-            writer.WriteAdditionalData(AdditionalData);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ContainerBlockIconMember1>(null, ContainerBlockIconMember1, ContainerBlockIconMember2);
         }
     }
 }

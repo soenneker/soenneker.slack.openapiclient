@@ -15,13 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The short property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AttachmentFieldShort? Short { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AttachmentFieldShort Short { get; set; }
-#endif
+        public bool? Short { get; set; }
         /// <summary>The title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -63,7 +57,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "short", n => { Short = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AttachmentFieldShort>(global::Soenneker.Slack.OpenApiClient.Models.AttachmentFieldShort.CreateFromDiscriminatorValue); } },
+                { "short", n => { Short = n.GetBoolValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "value", n => { Value = n.GetStringValue(); } },
             };
@@ -75,7 +69,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AttachmentFieldShort>("short", Short);
+            writer.WriteBoolValue("short", Short);
             writer.WriteStringValue("title", Title);
             writer.WriteStringValue("value", Value);
             writer.WriteAdditionalData(AdditionalData);

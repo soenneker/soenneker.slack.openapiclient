@@ -31,13 +31,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.DispatchActionConfig DispatchActionConfig { get; set; }
 #endif
         /// <summary>Indicates whether the element will be set to auto focus within the[`view` object](https://docs.slack.dev/surfaces/modals). Only one element can be set to `true`.Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.UrlInputFocusOnLoad? FocusOnLoad { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.UrlInputFocusOnLoad FocusOnLoad { get; set; }
-#endif
+        public bool? FocusOnLoad { get; set; }
         /// <summary>The initial value in the URL input when it is loaded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -83,7 +77,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "action_id", n => { ActionId = n.GetStringValue(); } },
                 { "dispatch_action_config", n => { DispatchActionConfig = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DispatchActionConfig>(global::Soenneker.Slack.OpenApiClient.Models.DispatchActionConfig.CreateFromDiscriminatorValue); } },
-                { "focus_on_load", n => { FocusOnLoad = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UrlInputFocusOnLoad>(global::Soenneker.Slack.OpenApiClient.Models.UrlInputFocusOnLoad.CreateFromDiscriminatorValue); } },
+                { "focus_on_load", n => { FocusOnLoad = n.GetBoolValue(); } },
                 { "initial_value", n => { InitialValue = n.GetStringValue(); } },
                 { "placeholder", n => { Placeholder = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>(global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.UrlTextInputType>(); } },
@@ -98,7 +92,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("action_id", ActionId);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DispatchActionConfig>("dispatch_action_config", DispatchActionConfig);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UrlInputFocusOnLoad>("focus_on_load", FocusOnLoad);
+            writer.WriteBoolValue("focus_on_load", FocusOnLoad);
             writer.WriteStringValue("initial_value", InitialValue);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>("placeholder", Placeholder);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.UrlTextInputType>("type", Type);

@@ -41,13 +41,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The is_intro property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Comment3IsIntro? IsIntro { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Comment3IsIntro IsIntro { get; set; }
-#endif
+        public bool? IsIntro { get; set; }
         /// <summary>The timestamp property</summary>
         public double? Timestamp { get; set; }
         /// <summary>The user property</summary>
@@ -87,7 +81,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "comment", n => { Comment = n.GetStringValue(); } },
                 { "created", n => { Created = n.GetDoubleValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "is_intro", n => { IsIntro = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment3IsIntro>(global::Soenneker.Slack.OpenApiClient.Models.Comment3IsIntro.CreateFromDiscriminatorValue); } },
+                { "is_intro", n => { IsIntro = n.GetBoolValue(); } },
                 { "timestamp", n => { Timestamp = n.GetDoubleValue(); } },
                 { "user", n => { User = n.GetStringValue(); } },
             };
@@ -103,7 +97,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("comment", Comment);
             writer.WriteDoubleValue("created", Created);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment3IsIntro>("is_intro", IsIntro);
+            writer.WriteBoolValue("is_intro", IsIntro);
             writer.WriteDoubleValue("timestamp", Timestamp);
             writer.WriteStringValue("user", User);
             writer.WriteAdditionalData(AdditionalData);

@@ -57,21 +57,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Iid { get; set; }
 #endif
         /// <summary>The is_mpim property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Match2IsMpim? IsMpim { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Match2IsMpim IsMpim { get; set; }
-#endif
+        public bool? IsMpim { get; set; }
         /// <summary>The no_reactions property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Match2NoReactions? NoReactions { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Match2NoReactions NoReactions { get; set; }
-#endif
+        public bool? NoReactions { get; set; }
         /// <summary>The permalink property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -177,8 +165,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "db_message", n => { DbMessage = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Match2DbMessage>(global::Soenneker.Slack.OpenApiClient.Models.Match2DbMessage.CreateFromDiscriminatorValue); } },
                 { "files", n => { Files = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.FileElement5>(global::Soenneker.Slack.OpenApiClient.Models.FileElement5.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "iid", n => { Iid = n.GetStringValue(); } },
-                { "is_mpim", n => { IsMpim = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Match2IsMpim>(global::Soenneker.Slack.OpenApiClient.Models.Match2IsMpim.CreateFromDiscriminatorValue); } },
-                { "no_reactions", n => { NoReactions = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Match2NoReactions>(global::Soenneker.Slack.OpenApiClient.Models.Match2NoReactions.CreateFromDiscriminatorValue); } },
+                { "is_mpim", n => { IsMpim = n.GetBoolValue(); } },
+                { "no_reactions", n => { NoReactions = n.GetBoolValue(); } },
                 { "permalink", n => { Permalink = n.GetStringValue(); } },
                 { "previous", n => { Previous = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Previous2>(global::Soenneker.Slack.OpenApiClient.Models.Previous2.CreateFromDiscriminatorValue); } },
                 { "previous_2", n => { Previous2 = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Previous2>(global::Soenneker.Slack.OpenApiClient.Models.Previous2.CreateFromDiscriminatorValue); } },
@@ -204,8 +192,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Match2DbMessage>("db_message", DbMessage);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.FileElement5>("files", Files);
             writer.WriteStringValue("iid", Iid);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Match2IsMpim>("is_mpim", IsMpim);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Match2NoReactions>("no_reactions", NoReactions);
+            writer.WriteBoolValue("is_mpim", IsMpim);
+            writer.WriteBoolValue("no_reactions", NoReactions);
             writer.WriteStringValue("permalink", Permalink);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Previous2>("previous", Previous);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Previous2>("previous_2", Previous2);

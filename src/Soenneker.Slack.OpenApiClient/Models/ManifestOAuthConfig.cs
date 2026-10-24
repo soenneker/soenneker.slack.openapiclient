@@ -31,13 +31,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.ManifestOAuthScopes Scopes { get; set; }
 #endif
         /// <summary>The token_management_enabled property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ManifestOAuthConfigTokenManagementEnabled? TokenManagementEnabled { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ManifestOAuthConfigTokenManagementEnabled TokenManagementEnabled { get; set; }
-#endif
+        public bool? TokenManagementEnabled { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ManifestOAuthConfig"/> and sets the default values.
         /// </summary>
@@ -65,7 +59,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "redirect_urls", n => { RedirectUrls = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "scopes", n => { Scopes = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestOAuthScopes>(global::Soenneker.Slack.OpenApiClient.Models.ManifestOAuthScopes.CreateFromDiscriminatorValue); } },
-                { "token_management_enabled", n => { TokenManagementEnabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestOAuthConfigTokenManagementEnabled>(global::Soenneker.Slack.OpenApiClient.Models.ManifestOAuthConfigTokenManagementEnabled.CreateFromDiscriminatorValue); } },
+                { "token_management_enabled", n => { TokenManagementEnabled = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -77,7 +71,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("redirect_urls", RedirectUrls);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestOAuthScopes>("scopes", Scopes);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestOAuthConfigTokenManagementEnabled>("token_management_enabled", TokenManagementEnabled);
+            writer.WriteBoolValue("token_management_enabled", TokenManagementEnabled);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

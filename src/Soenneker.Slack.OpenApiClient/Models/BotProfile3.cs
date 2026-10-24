@@ -23,13 +23,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string AppId { get; set; }
 #endif
         /// <summary>The deleted property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.BotProfile3Deleted? Deleted { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.BotProfile3Deleted Deleted { get; set; }
-#endif
+        public bool? Deleted { get; set; }
         /// <summary>The icons property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -90,7 +84,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "app_id", n => { AppId = n.GetStringValue(); } },
-                { "deleted", n => { Deleted = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotProfile3Deleted>(global::Soenneker.Slack.OpenApiClient.Models.BotProfile3Deleted.CreateFromDiscriminatorValue); } },
+                { "deleted", n => { Deleted = n.GetBoolValue(); } },
                 { "icons", n => { Icons = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Icons2>(global::Soenneker.Slack.OpenApiClient.Models.Icons2.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -106,7 +100,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("app_id", AppId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotProfile3Deleted>("deleted", Deleted);
+            writer.WriteBoolValue("deleted", Deleted);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Icons2>("icons", Icons);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);

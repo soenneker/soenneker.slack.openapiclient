@@ -81,29 +81,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.WorkflowInputParametersProperty InputParameters { get; set; }
 #endif
         /// <summary>The is_billable property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowIsBillable? IsBillable { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowIsBillable IsBillable { get; set; }
-#endif
+        public bool? IsBillable { get; set; }
         /// <summary>The is_published property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowIsPublished? IsPublished { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowIsPublished IsPublished { get; set; }
-#endif
+        public bool? IsPublished { get; set; }
         /// <summary>The is_sales_home_workflow property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowIsSalesHomeWorkflow? IsSalesHomeWorkflow { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowIsSalesHomeWorkflow IsSalesHomeWorkflow { get; set; }
-#endif
+        public bool? IsSalesHomeWorkflow { get; set; }
         /// <summary>The last_published_date property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -212,9 +194,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "icons", n => { Icons = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Icons3>(global::Soenneker.Slack.OpenApiClient.Models.Icons3.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "input_parameters", n => { InputParameters = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WorkflowInputParametersProperty>(global::Soenneker.Slack.OpenApiClient.Models.WorkflowInputParametersProperty.CreateFromDiscriminatorValue); } },
-                { "is_billable", n => { IsBillable = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WorkflowIsBillable>(global::Soenneker.Slack.OpenApiClient.Models.WorkflowIsBillable.CreateFromDiscriminatorValue); } },
-                { "is_published", n => { IsPublished = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WorkflowIsPublished>(global::Soenneker.Slack.OpenApiClient.Models.WorkflowIsPublished.CreateFromDiscriminatorValue); } },
-                { "is_sales_home_workflow", n => { IsSalesHomeWorkflow = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WorkflowIsSalesHomeWorkflow>(global::Soenneker.Slack.OpenApiClient.Models.WorkflowIsSalesHomeWorkflow.CreateFromDiscriminatorValue); } },
+                { "is_billable", n => { IsBillable = n.GetBoolValue(); } },
+                { "is_published", n => { IsPublished = n.GetBoolValue(); } },
+                { "is_sales_home_workflow", n => { IsSalesHomeWorkflow = n.GetBoolValue(); } },
                 { "last_published_date", n => { LastPublishedDate = n.GetStringValue(); } },
                 { "last_published_version_id", n => { LastPublishedVersionId = n.GetStringValue(); } },
                 { "last_updated_by", n => { LastUpdatedBy = n.GetStringValue(); } },
@@ -243,9 +225,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Icons3>("icons", Icons);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WorkflowInputParametersProperty>("input_parameters", InputParameters);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WorkflowIsBillable>("is_billable", IsBillable);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WorkflowIsPublished>("is_published", IsPublished);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WorkflowIsSalesHomeWorkflow>("is_sales_home_workflow", IsSalesHomeWorkflow);
+            writer.WriteBoolValue("is_billable", IsBillable);
+            writer.WriteBoolValue("is_published", IsPublished);
+            writer.WriteBoolValue("is_sales_home_workflow", IsSalesHomeWorkflow);
             writer.WriteStringValue("last_published_date", LastPublishedDate);
             writer.WriteStringValue("last_published_version_id", LastPublishedVersionId);
             writer.WriteStringValue("last_updated_by", LastUpdatedBy);

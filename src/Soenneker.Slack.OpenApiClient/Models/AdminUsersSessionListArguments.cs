@@ -7,30 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminUsersSessionListArgumentsMember1"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminUsersSessionListArgumentsMember2"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class AdminUsersSessionListArguments : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class AdminUsersSessionListArguments : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Paginate through collections of data by setting the `cursor` parameter to a `next_cursor` attributereturned by a previous request&apos;s `response_metadata`.Default value fetches the first &quot;page&quot; of the collection.[pagination](https://docs.slack.dev/apis/web-api/pagination) for more detail.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminUsersSessionListArgumentsMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Cursor { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsersSessionListArgumentsMember1? AdminUsersSessionListArgumentsMember1 { get; set; }
 #nullable restore
 #else
-        public string Cursor { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsersSessionListArgumentsMember1 AdminUsersSessionListArgumentsMember1 { get; set; }
 #endif
-        /// <summary>The maximum number of items to return. Fewer than the requested number of items may be returned,even if the end of the list hasn&apos;t been reached. Must be an integer with a max value of `999`. Default is `100`.</summary>
-        public double? Limit { get; set; }
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminUsersSessionListArguments"/> and sets the default values.
-        /// </summary>
-        public AdminUsersSessionListArguments()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminUsersSessionListArgumentsMember2"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsersSessionListArgumentsMember2? AdminUsersSessionListArgumentsMember2 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsersSessionListArgumentsMember2 AdminUsersSessionListArgumentsMember2 { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -39,7 +37,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.AdminUsersSessionListArguments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.AdminUsersSessionListArguments();
+            var result = new global::Soenneker.Slack.OpenApiClient.Models.AdminUsersSessionListArguments();
+            result.AdminUsersSessionListArgumentsMember1 = new global::Soenneker.Slack.OpenApiClient.Models.AdminUsersSessionListArgumentsMember1();
+            result.AdminUsersSessionListArgumentsMember2 = new global::Soenneker.Slack.OpenApiClient.Models.AdminUsersSessionListArgumentsMember2();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -47,11 +48,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(AdminUsersSessionListArgumentsMember1 != null || AdminUsersSessionListArgumentsMember2 != null)
             {
-                { "cursor", n => { Cursor = n.GetStringValue(); } },
-                { "limit", n => { Limit = n.GetDoubleValue(); } },
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(AdminUsersSessionListArgumentsMember1, AdminUsersSessionListArgumentsMember2);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -60,9 +61,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("cursor", Cursor);
-            writer.WriteDoubleValue("limit", Limit);
-            writer.WriteAdditionalData(AdditionalData);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminUsersSessionListArgumentsMember1>(null, AdminUsersSessionListArgumentsMember1, AdminUsersSessionListArgumentsMember2);
         }
     }
 }

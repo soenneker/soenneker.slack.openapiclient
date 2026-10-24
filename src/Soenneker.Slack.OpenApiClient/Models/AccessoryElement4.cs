@@ -37,13 +37,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Style { get; set; }
 #endif
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.AccessoryElement4Type? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AccessoryElement4Type Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.AccessoryElement4"/> and sets the default values.
         /// </summary>
@@ -74,7 +68,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "indent", n => { Indent = n.GetDoubleValue(); } },
                 { "offset", n => { Offset = n.GetDoubleValue(); } },
                 { "style", n => { Style = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AccessoryElement4Type>(global::Soenneker.Slack.OpenApiClient.Models.AccessoryElement4Type.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AccessoryElement4Type>(); } },
             };
         }
         /// <summary>
@@ -89,7 +83,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("indent", Indent);
             writer.WriteDoubleValue("offset", Offset);
             writer.WriteStringValue("style", Style);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AccessoryElement4Type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AccessoryElement4Type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

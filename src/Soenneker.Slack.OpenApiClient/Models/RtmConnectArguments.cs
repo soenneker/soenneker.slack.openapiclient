@@ -15,21 +15,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Batch presence deliveries via subscription. Enabling changes the shape of `presence_change` events.[batch presence](https://docs.slack.dev/apis/web-api/user-presence-and-status#batching).</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.RtmConnectArgumentsBatchPresenceAware? BatchPresenceAware { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.RtmConnectArgumentsBatchPresenceAware BatchPresenceAware { get; set; }
-#endif
+        public bool? BatchPresenceAware { get; set; }
         /// <summary>Only deliver presence events when requested by subscription.[deliver presence events when requested by subscription. presence subscriptions](Only).</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.RtmConnectArgumentsPresenceSub? PresenceSub { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.RtmConnectArgumentsPresenceSub PresenceSub { get; set; }
-#endif
+        public bool? PresenceSub { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.RtmConnectArguments"/> and sets the default values.
         /// </summary>
@@ -55,8 +43,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "batch_presence_aware", n => { BatchPresenceAware = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RtmConnectArgumentsBatchPresenceAware>(global::Soenneker.Slack.OpenApiClient.Models.RtmConnectArgumentsBatchPresenceAware.CreateFromDiscriminatorValue); } },
-                { "presence_sub", n => { PresenceSub = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RtmConnectArgumentsPresenceSub>(global::Soenneker.Slack.OpenApiClient.Models.RtmConnectArgumentsPresenceSub.CreateFromDiscriminatorValue); } },
+                { "batch_presence_aware", n => { BatchPresenceAware = n.GetBoolValue(); } },
+                { "presence_sub", n => { PresenceSub = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -66,8 +54,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RtmConnectArgumentsBatchPresenceAware>("batch_presence_aware", BatchPresenceAware);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RtmConnectArgumentsPresenceSub>("presence_sub", PresenceSub);
+            writer.WriteBoolValue("batch_presence_aware", BatchPresenceAware);
+            writer.WriteBoolValue("presence_sub", PresenceSub);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

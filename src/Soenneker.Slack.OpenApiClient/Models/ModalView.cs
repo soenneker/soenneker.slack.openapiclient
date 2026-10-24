@@ -31,13 +31,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string CallbackId { get; set; }
 #endif
         /// <summary>When set to `true`, clicking on the close button will clear all views in a modal and close it.Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ModalViewClearOnClose? ClearOnClose { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ModalViewClearOnClose ClearOnClose { get; set; }
-#endif
+        public bool? ClearOnClose { get; set; }
         /// <summary>An optional [PlainTextElement](PlainTextElement) that defines the text displayed in the close button at thebottom-right of the view. Maximum length of 24 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -55,13 +49,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string ExternalId { get; set; }
 #endif
         /// <summary>Indicates whether Slack will send your app a[`view_closed`](https://docs.slack.dev/reference/interaction-payloads/view-interactions-payload#view_closed) event when a userclicks the close button. Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ModalViewNotifyOnClose? NotifyOnClose { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ModalViewNotifyOnClose NotifyOnClose { get; set; }
-#endif
+        public bool? NotifyOnClose { get; set; }
         /// <summary>String that will be sent to your app in[`view_submission`](https://docs.slack.dev/reference/interaction-payloads/view-interactions-payload#view_submission) and[`block_actions`](https://docs.slack.dev/reference/interaction-payloads/block_actions-payload) events.Maximum length of 3000 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -115,10 +103,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "blocks", n => { Blocks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AnyBlock>(global::Soenneker.Slack.OpenApiClient.Models.AnyBlock.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "callback_id", n => { CallbackId = n.GetStringValue(); } },
-                { "clear_on_close", n => { ClearOnClose = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ModalViewClearOnClose>(global::Soenneker.Slack.OpenApiClient.Models.ModalViewClearOnClose.CreateFromDiscriminatorValue); } },
+                { "clear_on_close", n => { ClearOnClose = n.GetBoolValue(); } },
                 { "close", n => { Close = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>(global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement.CreateFromDiscriminatorValue); } },
                 { "external_id", n => { ExternalId = n.GetStringValue(); } },
-                { "notify_on_close", n => { NotifyOnClose = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ModalViewNotifyOnClose>(global::Soenneker.Slack.OpenApiClient.Models.ModalViewNotifyOnClose.CreateFromDiscriminatorValue); } },
+                { "notify_on_close", n => { NotifyOnClose = n.GetBoolValue(); } },
                 { "private_metadata", n => { PrivateMetadata = n.GetStringValue(); } },
                 { "submit", n => { Submit = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>(global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>(global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement.CreateFromDiscriminatorValue); } },
@@ -134,10 +122,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AnyBlock>("blocks", Blocks);
             writer.WriteStringValue("callback_id", CallbackId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ModalViewClearOnClose>("clear_on_close", ClearOnClose);
+            writer.WriteBoolValue("clear_on_close", ClearOnClose);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>("close", Close);
             writer.WriteStringValue("external_id", ExternalId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ModalViewNotifyOnClose>("notify_on_close", NotifyOnClose);
+            writer.WriteBoolValue("notify_on_close", NotifyOnClose);
             writer.WriteStringValue("private_metadata", PrivateMetadata);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>("submit", Submit);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>("title", Title);

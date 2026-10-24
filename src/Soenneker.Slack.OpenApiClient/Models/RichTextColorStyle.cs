@@ -16,45 +16,15 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>When `true`, boldens the text in this element. Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextColorStyleBold? Bold { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextColorStyleBold Bold { get; set; }
-#endif
+        public bool? Bold { get; set; }
         /// <summary>When `true`, the text is preformatted in an inline code style. Defaults to `false.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextColorStyleCode? Code { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextColorStyleCode Code { get; set; }
-#endif
+        public bool? Code { get; set; }
         /// <summary>When `true`, italicizes the text in this element. Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextColorStyleItalic? Italic { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextColorStyleItalic Italic { get; set; }
-#endif
+        public bool? Italic { get; set; }
         /// <summary>When `true`, strikes through the text in this element. Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextColorStyleStrike? Strike { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextColorStyleStrike Strike { get; set; }
-#endif
+        public bool? Strike { get; set; }
         /// <summary>When `true`, underlines the text in this element. Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextColorStyleUnderline? Underline { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextColorStyleUnderline Underline { get; set; }
-#endif
+        public bool? Underline { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.RichTextColorStyle"/> and sets the default values.
         /// </summary>
@@ -80,11 +50,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "bold", n => { Bold = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextColorStyleBold>(global::Soenneker.Slack.OpenApiClient.Models.RichTextColorStyleBold.CreateFromDiscriminatorValue); } },
-                { "code", n => { Code = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextColorStyleCode>(global::Soenneker.Slack.OpenApiClient.Models.RichTextColorStyleCode.CreateFromDiscriminatorValue); } },
-                { "italic", n => { Italic = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextColorStyleItalic>(global::Soenneker.Slack.OpenApiClient.Models.RichTextColorStyleItalic.CreateFromDiscriminatorValue); } },
-                { "strike", n => { Strike = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextColorStyleStrike>(global::Soenneker.Slack.OpenApiClient.Models.RichTextColorStyleStrike.CreateFromDiscriminatorValue); } },
-                { "underline", n => { Underline = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextColorStyleUnderline>(global::Soenneker.Slack.OpenApiClient.Models.RichTextColorStyleUnderline.CreateFromDiscriminatorValue); } },
+                { "bold", n => { Bold = n.GetBoolValue(); } },
+                { "code", n => { Code = n.GetBoolValue(); } },
+                { "italic", n => { Italic = n.GetBoolValue(); } },
+                { "strike", n => { Strike = n.GetBoolValue(); } },
+                { "underline", n => { Underline = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -94,11 +64,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextColorStyleBold>("bold", Bold);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextColorStyleCode>("code", Code);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextColorStyleItalic>("italic", Italic);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextColorStyleStrike>("strike", Strike);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextColorStyleUnderline>("underline", Underline);
+            writer.WriteBoolValue("bold", Bold);
+            writer.WriteBoolValue("code", Code);
+            writer.WriteBoolValue("italic", Italic);
+            writer.WriteBoolValue("strike", Strike);
+            writer.WriteBoolValue("underline", Underline);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

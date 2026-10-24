@@ -15,29 +15,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Include the number of users in each User Group.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.UsergroupsIncludeCountIncludeCount? IncludeCount { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.UsergroupsIncludeCountIncludeCount IncludeCount { get; set; }
-#endif
+        public bool? IncludeCount { get; set; }
         /// <summary>Include disabled User Groups.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.UsergroupsListArgumentsAllOf3IncludeDisabled? IncludeDisabled { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.UsergroupsListArgumentsAllOf3IncludeDisabled IncludeDisabled { get; set; }
-#endif
+        public bool? IncludeDisabled { get; set; }
         /// <summary>Include the list of users for each User Group.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.UsergroupsListArgumentsAllOf3IncludeUsers? IncludeUsers { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.UsergroupsListArgumentsAllOf3IncludeUsers IncludeUsers { get; set; }
-#endif
+        public bool? IncludeUsers { get; set; }
         /// <summary>If using an org token, `team_id` is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -71,9 +53,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "include_count", n => { IncludeCount = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UsergroupsIncludeCountIncludeCount>(global::Soenneker.Slack.OpenApiClient.Models.UsergroupsIncludeCountIncludeCount.CreateFromDiscriminatorValue); } },
-                { "include_disabled", n => { IncludeDisabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UsergroupsListArgumentsAllOf3IncludeDisabled>(global::Soenneker.Slack.OpenApiClient.Models.UsergroupsListArgumentsAllOf3IncludeDisabled.CreateFromDiscriminatorValue); } },
-                { "include_users", n => { IncludeUsers = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UsergroupsListArgumentsAllOf3IncludeUsers>(global::Soenneker.Slack.OpenApiClient.Models.UsergroupsListArgumentsAllOf3IncludeUsers.CreateFromDiscriminatorValue); } },
+                { "include_count", n => { IncludeCount = n.GetBoolValue(); } },
+                { "include_disabled", n => { IncludeDisabled = n.GetBoolValue(); } },
+                { "include_users", n => { IncludeUsers = n.GetBoolValue(); } },
                 { "team_id", n => { TeamId = n.GetStringValue(); } },
             };
         }
@@ -84,9 +66,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UsergroupsIncludeCountIncludeCount>("include_count", IncludeCount);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UsergroupsListArgumentsAllOf3IncludeDisabled>("include_disabled", IncludeDisabled);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UsergroupsListArgumentsAllOf3IncludeUsers>("include_users", IncludeUsers);
+            writer.WriteBoolValue("include_count", IncludeCount);
+            writer.WriteBoolValue("include_disabled", IncludeDisabled);
+            writer.WriteBoolValue("include_users", IncludeUsers);
             writer.WriteStringValue("team_id", TeamId);
             writer.WriteAdditionalData(AdditionalData);
         }

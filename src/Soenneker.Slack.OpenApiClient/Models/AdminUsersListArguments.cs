@@ -7,38 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminUsersListArgumentsMember1"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminUsersListArgumentsMember2"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class AdminUsersListArguments : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class AdminUsersListArguments : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Paginate through collections of data by setting the `cursor` parameter to a `next_cursor` attributereturned by a previous request&apos;s `response_metadata`.Default value fetches the first &quot;page&quot; of the collection.[pagination](https://docs.slack.dev/apis/web-api/pagination) for more detail.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminUsersListArgumentsMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Cursor { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsersListArgumentsMember1? AdminUsersListArgumentsMember1 { get; set; }
 #nullable restore
 #else
-        public string Cursor { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsersListArgumentsMember1 AdminUsersListArgumentsMember1 { get; set; }
 #endif
-        /// <summary>If `true`, only active users will be returned. If `false`, only deactivated users will be returned.Default is `true`.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminUsersListArgumentsMember2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsersListArgumentsAllOf2AllOf1IsActive? IsActive { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsersListArgumentsMember2? AdminUsersListArgumentsMember2 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsersListArgumentsAllOf2AllOf1IsActive IsActive { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsersListArgumentsMember2 AdminUsersListArgumentsMember2 { get; set; }
 #endif
-        /// <summary>The maximum number of items to return. Fewer than the requested number of items may be returned,even if the end of the list hasn&apos;t been reached. Must be an integer with a max value of `999`. Default is `100`.</summary>
-        public double? Limit { get; set; }
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminUsersListArguments"/> and sets the default values.
-        /// </summary>
-        public AdminUsersListArguments()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -47,7 +37,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.AdminUsersListArguments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.AdminUsersListArguments();
+            var result = new global::Soenneker.Slack.OpenApiClient.Models.AdminUsersListArguments();
+            result.AdminUsersListArgumentsMember1 = new global::Soenneker.Slack.OpenApiClient.Models.AdminUsersListArgumentsMember1();
+            result.AdminUsersListArgumentsMember2 = new global::Soenneker.Slack.OpenApiClient.Models.AdminUsersListArgumentsMember2();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -55,12 +48,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(AdminUsersListArgumentsMember1 != null || AdminUsersListArgumentsMember2 != null)
             {
-                { "cursor", n => { Cursor = n.GetStringValue(); } },
-                { "is_active", n => { IsActive = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminUsersListArgumentsAllOf2AllOf1IsActive>(global::Soenneker.Slack.OpenApiClient.Models.AdminUsersListArgumentsAllOf2AllOf1IsActive.CreateFromDiscriminatorValue); } },
-                { "limit", n => { Limit = n.GetDoubleValue(); } },
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(AdminUsersListArgumentsMember1, AdminUsersListArgumentsMember2);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -69,10 +61,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("cursor", Cursor);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminUsersListArgumentsAllOf2AllOf1IsActive>("is_active", IsActive);
-            writer.WriteDoubleValue("limit", Limit);
-            writer.WriteAdditionalData(AdditionalData);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminUsersListArgumentsMember1>(null, AdminUsersListArgumentsMember1, AdminUsersListArgumentsMember2);
         }
     }
 }

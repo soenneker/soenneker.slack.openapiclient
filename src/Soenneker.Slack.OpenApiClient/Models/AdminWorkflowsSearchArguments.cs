@@ -41,13 +41,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The maximum number of items to return. Fewer than the requested number of items may be returned,even if the end of the list hasn&apos;t been reached. Must be an integer with a max value of `999`. Default is `100`.</summary>
         public double? Limit { get; set; }
         /// <summary>Only include workflows with no collaborators in the result; default is `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminWorkflowsSearchArgumentsAllOf5NoCollaborators? NoCollaborators { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminWorkflowsSearchArgumentsAllOf5NoCollaborators NoCollaborators { get; set; }
-#endif
+        public bool? NoCollaborators { get; set; }
         /// <summary>Number of trigger IDs to fetch for each workflow; default is `0`.</summary>
         public double? NumTriggerIds { get; set; }
         /// <summary>A search query to filter for workflow name or description.</summary>
@@ -93,7 +87,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "collaborator_ids", n => { CollaboratorIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "cursor", n => { Cursor = n.GetStringValue(); } },
                 { "limit", n => { Limit = n.GetDoubleValue(); } },
-                { "no_collaborators", n => { NoCollaborators = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminWorkflowsSearchArgumentsAllOf5NoCollaborators>(global::Soenneker.Slack.OpenApiClient.Models.AdminWorkflowsSearchArgumentsAllOf5NoCollaborators.CreateFromDiscriminatorValue); } },
+                { "no_collaborators", n => { NoCollaborators = n.GetBoolValue(); } },
                 { "num_trigger_ids", n => { NumTriggerIds = n.GetDoubleValue(); } },
                 { "query", n => { Query = n.GetStringValue(); } },
                 { "sort", n => { Sort = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.PremiumRunsSort>(); } },
@@ -112,7 +106,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("collaborator_ids", CollaboratorIds);
             writer.WriteStringValue("cursor", Cursor);
             writer.WriteDoubleValue("limit", Limit);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminWorkflowsSearchArgumentsAllOf5NoCollaborators>("no_collaborators", NoCollaborators);
+            writer.WriteBoolValue("no_collaborators", NoCollaborators);
             writer.WriteDoubleValue("num_trigger_ids", NumTriggerIds);
             writer.WriteStringValue("query", Query);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.PremiumRunsSort>("sort", Sort);

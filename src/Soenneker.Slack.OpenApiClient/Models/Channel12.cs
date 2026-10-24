@@ -41,101 +41,29 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The is_archived property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel12IsArchived? IsArchived { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel12IsArchived IsArchived { get; set; }
-#endif
+        public bool? IsArchived { get; set; }
         /// <summary>The is_channel property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel12IsChannel? IsChannel { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel12IsChannel IsChannel { get; set; }
-#endif
+        public bool? IsChannel { get; set; }
         /// <summary>The is_ext_shared property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel12IsExtShared? IsExtShared { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel12IsExtShared IsExtShared { get; set; }
-#endif
+        public bool? IsExtShared { get; set; }
         /// <summary>The is_general property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel12IsGeneral? IsGeneral { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel12IsGeneral IsGeneral { get; set; }
-#endif
+        public bool? IsGeneral { get; set; }
         /// <summary>The is_group property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel12IsGroup? IsGroup { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel12IsGroup IsGroup { get; set; }
-#endif
+        public bool? IsGroup { get; set; }
         /// <summary>The is_im property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel12IsIm? IsIm { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel12IsIm IsIm { get; set; }
-#endif
+        public bool? IsIm { get; set; }
         /// <summary>The is_member property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel12IsMember? IsMember { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel12IsMember IsMember { get; set; }
-#endif
+        public bool? IsMember { get; set; }
         /// <summary>The is_mpim property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel12IsMpim? IsMpim { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel12IsMpim IsMpim { get; set; }
-#endif
+        public bool? IsMpim { get; set; }
         /// <summary>The is_org_shared property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel12IsOrgShared? IsOrgShared { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel12IsOrgShared IsOrgShared { get; set; }
-#endif
+        public bool? IsOrgShared { get; set; }
         /// <summary>The is_pending_ext_shared property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel12IsPendingExtShared? IsPendingExtShared { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel12IsPendingExtShared IsPendingExtShared { get; set; }
-#endif
+        public bool? IsPendingExtShared { get; set; }
         /// <summary>The is_private property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel12IsPrivate? IsPrivate { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel12IsPrivate IsPrivate { get; set; }
-#endif
+        public bool? IsPrivate { get; set; }
         /// <summary>The is_shared property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel12IsShared? IsShared { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel12IsShared IsShared { get; set; }
-#endif
+        public bool? IsShared { get; set; }
         /// <summary>The last_read property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -241,18 +169,18 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "created", n => { Created = n.GetDoubleValue(); } },
                 { "creator", n => { Creator = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "is_archived", n => { IsArchived = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel12IsArchived>(global::Soenneker.Slack.OpenApiClient.Models.Channel12IsArchived.CreateFromDiscriminatorValue); } },
-                { "is_channel", n => { IsChannel = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel12IsChannel>(global::Soenneker.Slack.OpenApiClient.Models.Channel12IsChannel.CreateFromDiscriminatorValue); } },
-                { "is_ext_shared", n => { IsExtShared = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel12IsExtShared>(global::Soenneker.Slack.OpenApiClient.Models.Channel12IsExtShared.CreateFromDiscriminatorValue); } },
-                { "is_general", n => { IsGeneral = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel12IsGeneral>(global::Soenneker.Slack.OpenApiClient.Models.Channel12IsGeneral.CreateFromDiscriminatorValue); } },
-                { "is_group", n => { IsGroup = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel12IsGroup>(global::Soenneker.Slack.OpenApiClient.Models.Channel12IsGroup.CreateFromDiscriminatorValue); } },
-                { "is_im", n => { IsIm = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel12IsIm>(global::Soenneker.Slack.OpenApiClient.Models.Channel12IsIm.CreateFromDiscriminatorValue); } },
-                { "is_member", n => { IsMember = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel12IsMember>(global::Soenneker.Slack.OpenApiClient.Models.Channel12IsMember.CreateFromDiscriminatorValue); } },
-                { "is_mpim", n => { IsMpim = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel12IsMpim>(global::Soenneker.Slack.OpenApiClient.Models.Channel12IsMpim.CreateFromDiscriminatorValue); } },
-                { "is_org_shared", n => { IsOrgShared = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel12IsOrgShared>(global::Soenneker.Slack.OpenApiClient.Models.Channel12IsOrgShared.CreateFromDiscriminatorValue); } },
-                { "is_pending_ext_shared", n => { IsPendingExtShared = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel12IsPendingExtShared>(global::Soenneker.Slack.OpenApiClient.Models.Channel12IsPendingExtShared.CreateFromDiscriminatorValue); } },
-                { "is_private", n => { IsPrivate = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel12IsPrivate>(global::Soenneker.Slack.OpenApiClient.Models.Channel12IsPrivate.CreateFromDiscriminatorValue); } },
-                { "is_shared", n => { IsShared = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel12IsShared>(global::Soenneker.Slack.OpenApiClient.Models.Channel12IsShared.CreateFromDiscriminatorValue); } },
+                { "is_archived", n => { IsArchived = n.GetBoolValue(); } },
+                { "is_channel", n => { IsChannel = n.GetBoolValue(); } },
+                { "is_ext_shared", n => { IsExtShared = n.GetBoolValue(); } },
+                { "is_general", n => { IsGeneral = n.GetBoolValue(); } },
+                { "is_group", n => { IsGroup = n.GetBoolValue(); } },
+                { "is_im", n => { IsIm = n.GetBoolValue(); } },
+                { "is_member", n => { IsMember = n.GetBoolValue(); } },
+                { "is_mpim", n => { IsMpim = n.GetBoolValue(); } },
+                { "is_org_shared", n => { IsOrgShared = n.GetBoolValue(); } },
+                { "is_pending_ext_shared", n => { IsPendingExtShared = n.GetBoolValue(); } },
+                { "is_private", n => { IsPrivate = n.GetBoolValue(); } },
+                { "is_shared", n => { IsShared = n.GetBoolValue(); } },
                 { "last_read", n => { LastRead = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "name_normalized", n => { NameNormalized = n.GetStringValue(); } },
@@ -277,18 +205,18 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("created", Created);
             writer.WriteStringValue("creator", Creator);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel12IsArchived>("is_archived", IsArchived);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel12IsChannel>("is_channel", IsChannel);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel12IsExtShared>("is_ext_shared", IsExtShared);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel12IsGeneral>("is_general", IsGeneral);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel12IsGroup>("is_group", IsGroup);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel12IsIm>("is_im", IsIm);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel12IsMember>("is_member", IsMember);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel12IsMpim>("is_mpim", IsMpim);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel12IsOrgShared>("is_org_shared", IsOrgShared);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel12IsPendingExtShared>("is_pending_ext_shared", IsPendingExtShared);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel12IsPrivate>("is_private", IsPrivate);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel12IsShared>("is_shared", IsShared);
+            writer.WriteBoolValue("is_archived", IsArchived);
+            writer.WriteBoolValue("is_channel", IsChannel);
+            writer.WriteBoolValue("is_ext_shared", IsExtShared);
+            writer.WriteBoolValue("is_general", IsGeneral);
+            writer.WriteBoolValue("is_group", IsGroup);
+            writer.WriteBoolValue("is_im", IsIm);
+            writer.WriteBoolValue("is_member", IsMember);
+            writer.WriteBoolValue("is_mpim", IsMpim);
+            writer.WriteBoolValue("is_org_shared", IsOrgShared);
+            writer.WriteBoolValue("is_pending_ext_shared", IsPendingExtShared);
+            writer.WriteBoolValue("is_private", IsPrivate);
+            writer.WriteBoolValue("is_shared", IsShared);
             writer.WriteStringValue("last_read", LastRead);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("name_normalized", NameNormalized);

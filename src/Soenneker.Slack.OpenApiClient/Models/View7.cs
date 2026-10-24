@@ -45,10 +45,20 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.View7 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
             var result = new global::Soenneker.Slack.OpenApiClient.Models.View7();
-            result.HomeView = new global::Soenneker.Slack.OpenApiClient.Models.HomeView();
-            result.ModalView = new global::Soenneker.Slack.OpenApiClient.Models.ModalView();
-            result.WorkflowStepView = new global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepView();
+            if("home".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.HomeView = new global::Soenneker.Slack.OpenApiClient.Models.HomeView();
+            }
+            else if("modal".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.ModalView = new global::Soenneker.Slack.OpenApiClient.Models.ModalView();
+            }
+            else if("workflow_step".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.WorkflowStepView = new global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepView();
+            }
             return result;
         }
         /// <summary>
@@ -57,9 +67,17 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(HomeView != null || ModalView != null || WorkflowStepView != null)
+            if(HomeView != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(HomeView, ModalView, WorkflowStepView);
+                return HomeView.GetFieldDeserializers();
+            }
+            else if(ModalView != null)
+            {
+                return ModalView.GetFieldDeserializers();
+            }
+            else if(WorkflowStepView != null)
+            {
+                return WorkflowStepView.GetFieldDeserializers();
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -70,7 +88,18 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.HomeView>(null, HomeView, ModalView, WorkflowStepView);
+            if(HomeView != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.HomeView>(null, HomeView);
+            }
+            else if(ModalView != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ModalView>(null, ModalView);
+            }
+            else if(WorkflowStepView != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepView>(null, WorkflowStepView);
+            }
         }
     }
 }

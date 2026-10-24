@@ -63,13 +63,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public List<string> Integrations { get; set; }
 #endif
         /// <summary>The is_trial property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ListMetadata11IsTrial? IsTrial { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ListMetadata11IsTrial IsTrial { get; set; }
-#endif
+        public bool? IsTrial { get; set; }
         /// <summary>The schema property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -87,13 +81,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public List<global::Soenneker.Slack.OpenApiClient.Models.SubtaskSchema> SubtaskSchema { get; set; }
 #endif
         /// <summary>The todo_mode property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ListMetadata11TodoMode? TodoMode { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ListMetadata11TodoMode TodoMode { get; set; }
-#endif
+        public bool? TodoMode { get; set; }
         /// <summary>The views property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -133,10 +121,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "description_blocks", n => { DescriptionBlocks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.DescriptionBlock>(global::Soenneker.Slack.OpenApiClient.Models.DescriptionBlock.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "icon", n => { Icon = n.GetStringValue(); } },
                 { "integrations", n => { Integrations = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "is_trial", n => { IsTrial = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata11IsTrial>(global::Soenneker.Slack.OpenApiClient.Models.ListMetadata11IsTrial.CreateFromDiscriminatorValue); } },
+                { "is_trial", n => { IsTrial = n.GetBoolValue(); } },
                 { "schema", n => { Schema = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Schema4>(global::Soenneker.Slack.OpenApiClient.Models.Schema4.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "subtask_schema", n => { SubtaskSchema = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SubtaskSchema>(global::Soenneker.Slack.OpenApiClient.Models.SubtaskSchema.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "todo_mode", n => { TodoMode = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata11TodoMode>(global::Soenneker.Slack.OpenApiClient.Models.ListMetadata11TodoMode.CreateFromDiscriminatorValue); } },
+                { "todo_mode", n => { TodoMode = n.GetBoolValue(); } },
                 { "views", n => { Views = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.View6>(global::Soenneker.Slack.OpenApiClient.Models.View6.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -153,10 +141,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.DescriptionBlock>("description_blocks", DescriptionBlocks);
             writer.WriteStringValue("icon", Icon);
             writer.WriteCollectionOfPrimitiveValues<string>("integrations", Integrations);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata11IsTrial>("is_trial", IsTrial);
+            writer.WriteBoolValue("is_trial", IsTrial);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Schema4>("schema", Schema);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SubtaskSchema>("subtask_schema", SubtaskSchema);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata11TodoMode>("todo_mode", TodoMode);
+            writer.WriteBoolValue("todo_mode", TodoMode);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.View6>("views", Views);
             writer.WriteAdditionalData(AdditionalData);
         }

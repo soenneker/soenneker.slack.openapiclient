@@ -31,13 +31,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string FolderBookmarkId { get; set; }
 #endif
         /// <summary>The mute_edit_updates property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Data3MuteEditUpdates? MuteEditUpdates { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Data3MuteEditUpdates MuteEditUpdates { get; set; }
-#endif
+        public bool? MuteEditUpdates { get; set; }
         /// <summary>The shared_ts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -73,7 +67,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "file_id", n => { FileId = n.GetStringValue(); } },
                 { "folder_bookmark_id", n => { FolderBookmarkId = n.GetStringValue(); } },
-                { "mute_edit_updates", n => { MuteEditUpdates = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Data3MuteEditUpdates>(global::Soenneker.Slack.OpenApiClient.Models.Data3MuteEditUpdates.CreateFromDiscriminatorValue); } },
+                { "mute_edit_updates", n => { MuteEditUpdates = n.GetBoolValue(); } },
                 { "shared_ts", n => { SharedTs = n.GetStringValue(); } },
             };
         }
@@ -86,7 +80,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("file_id", FileId);
             writer.WriteStringValue("folder_bookmark_id", FolderBookmarkId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Data3MuteEditUpdates>("mute_edit_updates", MuteEditUpdates);
+            writer.WriteBoolValue("mute_edit_updates", MuteEditUpdates);
             writer.WriteStringValue("shared_ts", SharedTs);
             writer.WriteAdditionalData(AdditionalData);
         }

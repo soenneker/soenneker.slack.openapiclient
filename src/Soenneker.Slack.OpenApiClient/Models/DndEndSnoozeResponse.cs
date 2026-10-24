@@ -15,13 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The dnd_enabled property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.DndEndSnoozeResponseAllOf2DndEnabled? DndEnabled { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.DndEndSnoozeResponseAllOf2DndEnabled DndEnabled { get; set; }
-#endif
+        public bool? DndEnabled { get; set; }
         /// <summary>The error property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -61,13 +55,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata ResponseMetadata { get; set; }
 #endif
         /// <summary>The snooze_enabled property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.DndEndSnoozeResponseAllOf2SnoozeEnabled? SnoozeEnabled { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.DndEndSnoozeResponseAllOf2SnoozeEnabled SnoozeEnabled { get; set; }
-#endif
+        public bool? SnoozeEnabled { get; set; }
         /// <summary>The warning property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -101,7 +89,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "dnd_enabled", n => { DndEnabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DndEndSnoozeResponseAllOf2DndEnabled>(global::Soenneker.Slack.OpenApiClient.Models.DndEndSnoozeResponseAllOf2DndEnabled.CreateFromDiscriminatorValue); } },
+                { "dnd_enabled", n => { DndEnabled = n.GetBoolValue(); } },
                 { "error", n => { Error = n.GetStringValue(); } },
                 { "needed", n => { Needed = n.GetStringValue(); } },
                 { "next_dnd_end_ts", n => { NextDndEndTs = n.GetDoubleValue(); } },
@@ -109,7 +97,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "ok", n => { Ok = n.GetBoolValue(); } },
                 { "provided", n => { Provided = n.GetStringValue(); } },
                 { "response_metadata", n => { ResponseMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>(global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata.CreateFromDiscriminatorValue); } },
-                { "snooze_enabled", n => { SnoozeEnabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DndEndSnoozeResponseAllOf2SnoozeEnabled>(global::Soenneker.Slack.OpenApiClient.Models.DndEndSnoozeResponseAllOf2SnoozeEnabled.CreateFromDiscriminatorValue); } },
+                { "snooze_enabled", n => { SnoozeEnabled = n.GetBoolValue(); } },
                 { "warning", n => { Warning = n.GetStringValue(); } },
             };
         }
@@ -120,7 +108,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DndEndSnoozeResponseAllOf2DndEnabled>("dnd_enabled", DndEnabled);
+            writer.WriteBoolValue("dnd_enabled", DndEnabled);
             writer.WriteStringValue("error", Error);
             writer.WriteStringValue("needed", Needed);
             writer.WriteDoubleValue("next_dnd_end_ts", NextDndEndTs);
@@ -128,7 +116,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteBoolValue("ok", Ok);
             writer.WriteStringValue("provided", Provided);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>("response_metadata", ResponseMetadata);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DndEndSnoozeResponseAllOf2SnoozeEnabled>("snooze_enabled", SnoozeEnabled);
+            writer.WriteBoolValue("snooze_enabled", SnoozeEnabled);
             writer.WriteStringValue("warning", Warning);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -189,28 +189,92 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.InputBlockElement CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
             var result = new global::Soenneker.Slack.OpenApiClient.Models.InputBlockElement();
-            result.ChannelsSelect = new global::Soenneker.Slack.OpenApiClient.Models.ChannelsSelect();
-            result.Checkboxes = new global::Soenneker.Slack.OpenApiClient.Models.Checkboxes();
-            result.ConversationsSelect = new global::Soenneker.Slack.OpenApiClient.Models.ConversationsSelect();
-            result.Datepicker = new global::Soenneker.Slack.OpenApiClient.Models.Datepicker();
-            result.DateTimepicker = new global::Soenneker.Slack.OpenApiClient.Models.DateTimepicker();
-            result.EmailInput = new global::Soenneker.Slack.OpenApiClient.Models.EmailInput();
-            result.ExternalSelect = new global::Soenneker.Slack.OpenApiClient.Models.ExternalSelect();
-            result.FileInput = new global::Soenneker.Slack.OpenApiClient.Models.FileInput();
-            result.MultiChannelsSelect = new global::Soenneker.Slack.OpenApiClient.Models.MultiChannelsSelect();
-            result.MultiConversationsSelect = new global::Soenneker.Slack.OpenApiClient.Models.MultiConversationsSelect();
-            result.MultiExternalSelect = new global::Soenneker.Slack.OpenApiClient.Models.MultiExternalSelect();
-            result.MultiStaticSelect = new global::Soenneker.Slack.OpenApiClient.Models.MultiStaticSelect();
-            result.MultiUsersSelect = new global::Soenneker.Slack.OpenApiClient.Models.MultiUsersSelect();
-            result.NumberInput = new global::Soenneker.Slack.OpenApiClient.Models.NumberInput();
-            result.PlainTextInput = new global::Soenneker.Slack.OpenApiClient.Models.PlainTextInput();
-            result.RadioButtons = new global::Soenneker.Slack.OpenApiClient.Models.RadioButtons();
-            result.RichTextInput = new global::Soenneker.Slack.OpenApiClient.Models.RichTextInput();
-            result.StaticSelect = new global::Soenneker.Slack.OpenApiClient.Models.StaticSelect();
-            result.Timepicker = new global::Soenneker.Slack.OpenApiClient.Models.Timepicker();
-            result.UrlInput = new global::Soenneker.Slack.OpenApiClient.Models.UrlInput();
-            result.UsersSelect = new global::Soenneker.Slack.OpenApiClient.Models.UsersSelect();
+            if("channels_select".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.ChannelsSelect = new global::Soenneker.Slack.OpenApiClient.Models.ChannelsSelect();
+            }
+            else if("checkboxes".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.Checkboxes = new global::Soenneker.Slack.OpenApiClient.Models.Checkboxes();
+            }
+            else if("conversations_select".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.ConversationsSelect = new global::Soenneker.Slack.OpenApiClient.Models.ConversationsSelect();
+            }
+            else if("datetimepicker".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.DateTimepicker = new global::Soenneker.Slack.OpenApiClient.Models.DateTimepicker();
+            }
+            else if("datepicker".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.Datepicker = new global::Soenneker.Slack.OpenApiClient.Models.Datepicker();
+            }
+            else if("email_text_input".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.EmailInput = new global::Soenneker.Slack.OpenApiClient.Models.EmailInput();
+            }
+            else if("external_select".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.ExternalSelect = new global::Soenneker.Slack.OpenApiClient.Models.ExternalSelect();
+            }
+            else if("file_input".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.FileInput = new global::Soenneker.Slack.OpenApiClient.Models.FileInput();
+            }
+            else if("multi_channels_select".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.MultiChannelsSelect = new global::Soenneker.Slack.OpenApiClient.Models.MultiChannelsSelect();
+            }
+            else if("multi_conversations_select".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.MultiConversationsSelect = new global::Soenneker.Slack.OpenApiClient.Models.MultiConversationsSelect();
+            }
+            else if("multi_external_select".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.MultiExternalSelect = new global::Soenneker.Slack.OpenApiClient.Models.MultiExternalSelect();
+            }
+            else if("multi_static_select".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.MultiStaticSelect = new global::Soenneker.Slack.OpenApiClient.Models.MultiStaticSelect();
+            }
+            else if("multi_users_select".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.MultiUsersSelect = new global::Soenneker.Slack.OpenApiClient.Models.MultiUsersSelect();
+            }
+            else if("number_input".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.NumberInput = new global::Soenneker.Slack.OpenApiClient.Models.NumberInput();
+            }
+            else if("plain_text_input".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.PlainTextInput = new global::Soenneker.Slack.OpenApiClient.Models.PlainTextInput();
+            }
+            else if("radio_buttons".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.RadioButtons = new global::Soenneker.Slack.OpenApiClient.Models.RadioButtons();
+            }
+            else if("rich_text_input".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.RichTextInput = new global::Soenneker.Slack.OpenApiClient.Models.RichTextInput();
+            }
+            else if("static_select".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.StaticSelect = new global::Soenneker.Slack.OpenApiClient.Models.StaticSelect();
+            }
+            else if("timepicker".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.Timepicker = new global::Soenneker.Slack.OpenApiClient.Models.Timepicker();
+            }
+            else if("url_text_input".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.UrlInput = new global::Soenneker.Slack.OpenApiClient.Models.UrlInput();
+            }
+            else if("users_select".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.UsersSelect = new global::Soenneker.Slack.OpenApiClient.Models.UsersSelect();
+            }
             return result;
         }
         /// <summary>
@@ -219,9 +283,89 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(ChannelsSelect != null || Checkboxes != null || ConversationsSelect != null || Datepicker != null || DateTimepicker != null || EmailInput != null || ExternalSelect != null || FileInput != null || MultiChannelsSelect != null || MultiConversationsSelect != null || MultiExternalSelect != null || MultiStaticSelect != null || MultiUsersSelect != null || NumberInput != null || PlainTextInput != null || RadioButtons != null || RichTextInput != null || StaticSelect != null || Timepicker != null || UrlInput != null || UsersSelect != null)
+            if(ChannelsSelect != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(ChannelsSelect, Checkboxes, ConversationsSelect, Datepicker, DateTimepicker, EmailInput, ExternalSelect, FileInput, MultiChannelsSelect, MultiConversationsSelect, MultiExternalSelect, MultiStaticSelect, MultiUsersSelect, NumberInput, PlainTextInput, RadioButtons, RichTextInput, StaticSelect, Timepicker, UrlInput, UsersSelect);
+                return ChannelsSelect.GetFieldDeserializers();
+            }
+            else if(Checkboxes != null)
+            {
+                return Checkboxes.GetFieldDeserializers();
+            }
+            else if(ConversationsSelect != null)
+            {
+                return ConversationsSelect.GetFieldDeserializers();
+            }
+            else if(Datepicker != null)
+            {
+                return Datepicker.GetFieldDeserializers();
+            }
+            else if(DateTimepicker != null)
+            {
+                return DateTimepicker.GetFieldDeserializers();
+            }
+            else if(EmailInput != null)
+            {
+                return EmailInput.GetFieldDeserializers();
+            }
+            else if(ExternalSelect != null)
+            {
+                return ExternalSelect.GetFieldDeserializers();
+            }
+            else if(FileInput != null)
+            {
+                return FileInput.GetFieldDeserializers();
+            }
+            else if(MultiChannelsSelect != null)
+            {
+                return MultiChannelsSelect.GetFieldDeserializers();
+            }
+            else if(MultiConversationsSelect != null)
+            {
+                return MultiConversationsSelect.GetFieldDeserializers();
+            }
+            else if(MultiExternalSelect != null)
+            {
+                return MultiExternalSelect.GetFieldDeserializers();
+            }
+            else if(MultiStaticSelect != null)
+            {
+                return MultiStaticSelect.GetFieldDeserializers();
+            }
+            else if(MultiUsersSelect != null)
+            {
+                return MultiUsersSelect.GetFieldDeserializers();
+            }
+            else if(NumberInput != null)
+            {
+                return NumberInput.GetFieldDeserializers();
+            }
+            else if(PlainTextInput != null)
+            {
+                return PlainTextInput.GetFieldDeserializers();
+            }
+            else if(RadioButtons != null)
+            {
+                return RadioButtons.GetFieldDeserializers();
+            }
+            else if(RichTextInput != null)
+            {
+                return RichTextInput.GetFieldDeserializers();
+            }
+            else if(StaticSelect != null)
+            {
+                return StaticSelect.GetFieldDeserializers();
+            }
+            else if(Timepicker != null)
+            {
+                return Timepicker.GetFieldDeserializers();
+            }
+            else if(UrlInput != null)
+            {
+                return UrlInput.GetFieldDeserializers();
+            }
+            else if(UsersSelect != null)
+            {
+                return UsersSelect.GetFieldDeserializers();
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -232,7 +376,90 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ChannelsSelect>(null, ChannelsSelect, Checkboxes, ConversationsSelect, Datepicker, DateTimepicker, EmailInput, ExternalSelect, FileInput, MultiChannelsSelect, MultiConversationsSelect, MultiExternalSelect, MultiStaticSelect, MultiUsersSelect, NumberInput, PlainTextInput, RadioButtons, RichTextInput, StaticSelect, Timepicker, UrlInput, UsersSelect);
+            if(ChannelsSelect != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ChannelsSelect>(null, ChannelsSelect);
+            }
+            else if(Checkboxes != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Checkboxes>(null, Checkboxes);
+            }
+            else if(ConversationsSelect != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsSelect>(null, ConversationsSelect);
+            }
+            else if(Datepicker != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Datepicker>(null, Datepicker);
+            }
+            else if(DateTimepicker != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DateTimepicker>(null, DateTimepicker);
+            }
+            else if(EmailInput != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EmailInput>(null, EmailInput);
+            }
+            else if(ExternalSelect != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ExternalSelect>(null, ExternalSelect);
+            }
+            else if(FileInput != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FileInput>(null, FileInput);
+            }
+            else if(MultiChannelsSelect != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MultiChannelsSelect>(null, MultiChannelsSelect);
+            }
+            else if(MultiConversationsSelect != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MultiConversationsSelect>(null, MultiConversationsSelect);
+            }
+            else if(MultiExternalSelect != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MultiExternalSelect>(null, MultiExternalSelect);
+            }
+            else if(MultiStaticSelect != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MultiStaticSelect>(null, MultiStaticSelect);
+            }
+            else if(MultiUsersSelect != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MultiUsersSelect>(null, MultiUsersSelect);
+            }
+            else if(NumberInput != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.NumberInput>(null, NumberInput);
+            }
+            else if(PlainTextInput != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextInput>(null, PlainTextInput);
+            }
+            else if(RadioButtons != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RadioButtons>(null, RadioButtons);
+            }
+            else if(RichTextInput != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextInput>(null, RichTextInput);
+            }
+            else if(StaticSelect != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.StaticSelect>(null, StaticSelect);
+            }
+            else if(Timepicker != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Timepicker>(null, Timepicker);
+            }
+            else if(UrlInput != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UrlInput>(null, UrlInput);
+            }
+            else if(UsersSelect != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UsersSelect>(null, UsersSelect);
+            }
         }
     }
 }

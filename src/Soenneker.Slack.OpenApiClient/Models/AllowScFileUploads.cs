@@ -49,13 +49,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploadsType Type { get; set; }
 #endif
         /// <summary>The value property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploadsValue? Value { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploadsValue Value { get; set; }
-#endif
+        public bool? Value { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads"/> and sets the default values.
         /// </summary>
@@ -86,7 +80,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "date_update", n => { DateUpdate = n.GetDoubleValue(); } },
                 { "source", n => { Source = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploadsType>(global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploadsType.CreateFromDiscriminatorValue); } },
-                { "value", n => { Value = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploadsValue>(global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploadsValue.CreateFromDiscriminatorValue); } },
+                { "value", n => { Value = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -101,7 +95,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("date_update", DateUpdate);
             writer.WriteStringValue("source", Source);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploadsType>("type", Type);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploadsValue>("value", Value);
+            writer.WriteBoolValue("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

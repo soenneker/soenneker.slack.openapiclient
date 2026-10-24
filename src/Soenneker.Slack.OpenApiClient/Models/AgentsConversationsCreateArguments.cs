@@ -15,13 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Create a private channel instead of a public one.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsCreateArgumentsIsPrivate? IsPrivate { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsCreateArgumentsIsPrivate IsPrivate { get; set; }
-#endif
+        public bool? IsPrivate { get; set; }
         /// <summary>A friendly display name for the code channel. Optional when `origin_channel_id` and `origin_message_ts`are provided — in that case the channel is named from the origin message and re-titled automatically. Required when no origin link is given.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -95,7 +89,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "is_private", n => { IsPrivate = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsCreateArgumentsIsPrivate>(global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsCreateArgumentsIsPrivate.CreateFromDiscriminatorValue); } },
+                { "is_private", n => { IsPrivate = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "origin_channel_id", n => { OriginChannelId = n.GetStringValue(); } },
                 { "origin_message_ts", n => { OriginMessageTs = n.GetStringValue(); } },
@@ -111,7 +105,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsCreateArgumentsIsPrivate>("is_private", IsPrivate);
+            writer.WriteBoolValue("is_private", IsPrivate);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("origin_channel_id", OriginChannelId);
             writer.WriteStringValue("origin_message_ts", OriginMessageTs);

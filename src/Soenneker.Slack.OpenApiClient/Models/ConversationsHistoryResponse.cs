@@ -27,13 +27,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Error { get; set; }
 #endif
         /// <summary>The has_more property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsHistoryResponseAllOf2HasMore? HasMore { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsHistoryResponseAllOf2HasMore HasMore { get; set; }
-#endif
+        public bool? HasMore { get; set; }
         /// <summary>The latest property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -81,10 +75,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The response_metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata? ResponseMetadata { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsHistoryResponseResponseMetadata? ResponseMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata ResponseMetadata { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsHistoryResponseResponseMetadata ResponseMetadata { get; set; }
 #endif
         /// <summary>The warning property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -122,7 +116,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "channel_actions_count", n => { ChannelActionsCount = n.GetDoubleValue(); } },
                 { "channel_actions_ts", n => { ChannelActionsTs = n.GetDoubleValue(); } },
                 { "error", n => { Error = n.GetStringValue(); } },
-                { "has_more", n => { HasMore = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsHistoryResponseAllOf2HasMore>(global::Soenneker.Slack.OpenApiClient.Models.ConversationsHistoryResponseAllOf2HasMore.CreateFromDiscriminatorValue); } },
+                { "has_more", n => { HasMore = n.GetBoolValue(); } },
                 { "latest", n => { Latest = n.GetStringValue(); } },
                 { "messages", n => { Messages = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageElement>(global::Soenneker.Slack.OpenApiClient.Models.MessageElement.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "needed", n => { Needed = n.GetStringValue(); } },
@@ -130,7 +124,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "oldest", n => { Oldest = n.GetStringValue(); } },
                 { "pin_count", n => { PinCount = n.GetDoubleValue(); } },
                 { "provided", n => { Provided = n.GetStringValue(); } },
-                { "response_metadata", n => { ResponseMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>(global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata.CreateFromDiscriminatorValue); } },
+                { "response_metadata", n => { ResponseMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsHistoryResponseResponseMetadata>(global::Soenneker.Slack.OpenApiClient.Models.ConversationsHistoryResponseResponseMetadata.CreateFromDiscriminatorValue); } },
                 { "warning", n => { Warning = n.GetStringValue(); } },
             };
         }
@@ -144,7 +138,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("channel_actions_count", ChannelActionsCount);
             writer.WriteDoubleValue("channel_actions_ts", ChannelActionsTs);
             writer.WriteStringValue("error", Error);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsHistoryResponseAllOf2HasMore>("has_more", HasMore);
+            writer.WriteBoolValue("has_more", HasMore);
             writer.WriteStringValue("latest", Latest);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageElement>("messages", Messages);
             writer.WriteStringValue("needed", Needed);
@@ -152,7 +146,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("oldest", Oldest);
             writer.WriteDoubleValue("pin_count", PinCount);
             writer.WriteStringValue("provided", Provided);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>("response_metadata", ResponseMetadata);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsHistoryResponseResponseMetadata>("response_metadata", ResponseMetadata);
             writer.WriteStringValue("warning", Warning);
             writer.WriteAdditionalData(AdditionalData);
         }

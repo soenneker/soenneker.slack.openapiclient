@@ -15,13 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The auto_away property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.UsersGetPresenceResponseAllOf2AutoAway? AutoAway { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.UsersGetPresenceResponseAllOf2AutoAway AutoAway { get; set; }
-#endif
+        public bool? AutoAway { get; set; }
         /// <summary>The connection_count property</summary>
         public double? ConnectionCount { get; set; }
         /// <summary>The error property</summary>
@@ -35,13 +29,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The last_activity property</summary>
         public double? LastActivity { get; set; }
         /// <summary>The manual_away property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.UsersGetPresenceResponseAllOf2ManualAway? ManualAway { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.UsersGetPresenceResponseAllOf2ManualAway ManualAway { get; set; }
-#endif
+        public bool? ManualAway { get; set; }
         /// <summary>The needed property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -53,13 +41,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The ok property</summary>
         public bool? Ok { get; set; }
         /// <summary>The online property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.UsersGetPresenceResponseAllOf2Online? Online { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.UsersGetPresenceResponseAllOf2Online Online { get; set; }
-#endif
+        public bool? Online { get; set; }
         /// <summary>The presence property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -117,14 +99,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "auto_away", n => { AutoAway = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UsersGetPresenceResponseAllOf2AutoAway>(global::Soenneker.Slack.OpenApiClient.Models.UsersGetPresenceResponseAllOf2AutoAway.CreateFromDiscriminatorValue); } },
+                { "auto_away", n => { AutoAway = n.GetBoolValue(); } },
                 { "connection_count", n => { ConnectionCount = n.GetDoubleValue(); } },
                 { "error", n => { Error = n.GetStringValue(); } },
                 { "last_activity", n => { LastActivity = n.GetDoubleValue(); } },
-                { "manual_away", n => { ManualAway = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UsersGetPresenceResponseAllOf2ManualAway>(global::Soenneker.Slack.OpenApiClient.Models.UsersGetPresenceResponseAllOf2ManualAway.CreateFromDiscriminatorValue); } },
+                { "manual_away", n => { ManualAway = n.GetBoolValue(); } },
                 { "needed", n => { Needed = n.GetStringValue(); } },
                 { "ok", n => { Ok = n.GetBoolValue(); } },
-                { "online", n => { Online = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UsersGetPresenceResponseAllOf2Online>(global::Soenneker.Slack.OpenApiClient.Models.UsersGetPresenceResponseAllOf2Online.CreateFromDiscriminatorValue); } },
+                { "online", n => { Online = n.GetBoolValue(); } },
                 { "presence", n => { Presence = n.GetStringValue(); } },
                 { "provided", n => { Provided = n.GetStringValue(); } },
                 { "response_metadata", n => { ResponseMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>(global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata.CreateFromDiscriminatorValue); } },
@@ -138,14 +120,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UsersGetPresenceResponseAllOf2AutoAway>("auto_away", AutoAway);
+            writer.WriteBoolValue("auto_away", AutoAway);
             writer.WriteDoubleValue("connection_count", ConnectionCount);
             writer.WriteStringValue("error", Error);
             writer.WriteDoubleValue("last_activity", LastActivity);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UsersGetPresenceResponseAllOf2ManualAway>("manual_away", ManualAway);
+            writer.WriteBoolValue("manual_away", ManualAway);
             writer.WriteStringValue("needed", Needed);
             writer.WriteBoolValue("ok", Ok);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UsersGetPresenceResponseAllOf2Online>("online", Online);
+            writer.WriteBoolValue("online", Online);
             writer.WriteStringValue("presence", Presence);
             writer.WriteStringValue("provided", Provided);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>("response_metadata", ResponseMetadata);

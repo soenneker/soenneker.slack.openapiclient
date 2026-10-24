@@ -15,13 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The checkbox property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Field2Checkbox? Checkbox { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Field2Checkbox Checkbox { get; set; }
-#endif
+        public bool? Checkbox { get; set; }
         /// <summary>The column_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -95,7 +89,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "checkbox", n => { Checkbox = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Field2Checkbox>(global::Soenneker.Slack.OpenApiClient.Models.Field2Checkbox.CreateFromDiscriminatorValue); } },
+                { "checkbox", n => { Checkbox = n.GetBoolValue(); } },
                 { "column_id", n => { ColumnId = n.GetStringValue(); } },
                 { "key", n => { Key = n.GetStringValue(); } },
                 { "rich_text", n => { RichText = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RichText2>(global::Soenneker.Slack.OpenApiClient.Models.RichText2.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -111,7 +105,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Field2Checkbox>("checkbox", Checkbox);
+            writer.WriteBoolValue("checkbox", Checkbox);
             writer.WriteStringValue("column_id", ColumnId);
             writer.WriteStringValue("key", Key);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RichText2>("rich_text", RichText);

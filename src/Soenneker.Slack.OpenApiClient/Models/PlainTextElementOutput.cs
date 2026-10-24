@@ -15,13 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The emoji property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElementOutputEmoji? Emoji { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElementOutputEmoji Emoji { get; set; }
-#endif
+        public bool? Emoji { get; set; }
         /// <summary>The text property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,7 +51,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "emoji", n => { Emoji = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElementOutputEmoji>(global::Soenneker.Slack.OpenApiClient.Models.PlainTextElementOutputEmoji.CreateFromDiscriminatorValue); } },
+                { "emoji", n => { Emoji = n.GetBoolValue(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextType>(); } },
             };
@@ -69,7 +63,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElementOutputEmoji>("emoji", Emoji);
+            writer.WriteBoolValue("emoji", Emoji);
             writer.WriteStringValue("text", Text);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);

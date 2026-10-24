@@ -15,13 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The can_open_scdm property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsAcceptSharedInviteResponseAllOf2CanOpenScdm? CanOpenScdm { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsAcceptSharedInviteResponseAllOf2CanOpenScdm CanOpenScdm { get; set; }
-#endif
+        public bool? CanOpenScdm { get; set; }
         /// <summary>The channel_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -39,13 +33,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Error { get; set; }
 #endif
         /// <summary>The implicit_approval property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsAcceptSharedInviteResponseAllOf2ImplicitApproval? ImplicitApproval { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsAcceptSharedInviteResponseAllOf2ImplicitApproval ImplicitApproval { get; set; }
-#endif
+        public bool? ImplicitApproval { get; set; }
         /// <summary>The invite_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -105,10 +93,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "can_open_scdm", n => { CanOpenScdm = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsAcceptSharedInviteResponseAllOf2CanOpenScdm>(global::Soenneker.Slack.OpenApiClient.Models.ConversationsAcceptSharedInviteResponseAllOf2CanOpenScdm.CreateFromDiscriminatorValue); } },
+                { "can_open_scdm", n => { CanOpenScdm = n.GetBoolValue(); } },
                 { "channel_id", n => { ChannelId = n.GetStringValue(); } },
                 { "error", n => { Error = n.GetStringValue(); } },
-                { "implicit_approval", n => { ImplicitApproval = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsAcceptSharedInviteResponseAllOf2ImplicitApproval>(global::Soenneker.Slack.OpenApiClient.Models.ConversationsAcceptSharedInviteResponseAllOf2ImplicitApproval.CreateFromDiscriminatorValue); } },
+                { "implicit_approval", n => { ImplicitApproval = n.GetBoolValue(); } },
                 { "invite_id", n => { InviteId = n.GetStringValue(); } },
                 { "needed", n => { Needed = n.GetStringValue(); } },
                 { "ok", n => { Ok = n.GetBoolValue(); } },
@@ -123,10 +111,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsAcceptSharedInviteResponseAllOf2CanOpenScdm>("can_open_scdm", CanOpenScdm);
+            writer.WriteBoolValue("can_open_scdm", CanOpenScdm);
             writer.WriteStringValue("channel_id", ChannelId);
             writer.WriteStringValue("error", Error);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsAcceptSharedInviteResponseAllOf2ImplicitApproval>("implicit_approval", ImplicitApproval);
+            writer.WriteBoolValue("implicit_approval", ImplicitApproval);
             writer.WriteStringValue("invite_id", InviteId);
             writer.WriteStringValue("needed", Needed);
             writer.WriteBoolValue("ok", Ok);

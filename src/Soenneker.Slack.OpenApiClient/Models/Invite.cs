@@ -49,13 +49,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string InviterId { get; set; }
 #endif
         /// <summary>The is_bouncing property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.InviteIsBouncing? IsBouncing { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.InviteIsBouncing IsBouncing { get; set; }
-#endif
+        public bool? IsBouncing { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Invite"/> and sets the default values.
         /// </summary>
@@ -86,7 +80,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "invite_preferences", n => { InvitePreferences = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InvitePreferences>(global::Soenneker.Slack.OpenApiClient.Models.InvitePreferences.CreateFromDiscriminatorValue); } },
                 { "inviter_id", n => { InviterId = n.GetStringValue(); } },
-                { "is_bouncing", n => { IsBouncing = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InviteIsBouncing>(global::Soenneker.Slack.OpenApiClient.Models.InviteIsBouncing.CreateFromDiscriminatorValue); } },
+                { "is_bouncing", n => { IsBouncing = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -101,7 +95,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InvitePreferences>("invite_preferences", InvitePreferences);
             writer.WriteStringValue("inviter_id", InviterId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InviteIsBouncing>("is_bouncing", IsBouncing);
+            writer.WriteBoolValue("is_bouncing", IsBouncing);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -87,29 +87,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The is_sfdc_auto_slack property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Team7IsSfdcAutoSlack? IsSfdcAutoSlack { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Team7IsSfdcAutoSlack IsSfdcAutoSlack { get; set; }
-#endif
+        public bool? IsSfdcAutoSlack { get; set; }
         /// <summary>The is_verified property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Team7IsVerified? IsVerified { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Team7IsVerified IsVerified { get; set; }
-#endif
+        public bool? IsVerified { get; set; }
         /// <summary>The lob_sales_home_enabled property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Team7LobSalesHomeEnabled? LobSalesHomeEnabled { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Team7LobSalesHomeEnabled LobSalesHomeEnabled { get; set; }
-#endif
+        public bool? LobSalesHomeEnabled { get; set; }
         /// <summary>The locale property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -184,9 +166,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "enterprise_name", n => { EnterpriseName = n.GetStringValue(); } },
                 { "icon", n => { Icon = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Icon>(global::Soenneker.Slack.OpenApiClient.Models.Icon.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "is_sfdc_auto_slack", n => { IsSfdcAutoSlack = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Team7IsSfdcAutoSlack>(global::Soenneker.Slack.OpenApiClient.Models.Team7IsSfdcAutoSlack.CreateFromDiscriminatorValue); } },
-                { "is_verified", n => { IsVerified = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Team7IsVerified>(global::Soenneker.Slack.OpenApiClient.Models.Team7IsVerified.CreateFromDiscriminatorValue); } },
-                { "lob_sales_home_enabled", n => { LobSalesHomeEnabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Team7LobSalesHomeEnabled>(global::Soenneker.Slack.OpenApiClient.Models.Team7LobSalesHomeEnabled.CreateFromDiscriminatorValue); } },
+                { "is_sfdc_auto_slack", n => { IsSfdcAutoSlack = n.GetBoolValue(); } },
+                { "is_verified", n => { IsVerified = n.GetBoolValue(); } },
+                { "lob_sales_home_enabled", n => { LobSalesHomeEnabled = n.GetBoolValue(); } },
                 { "locale", n => { Locale = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "pay_prod_cur", n => { PayProdCur = n.GetStringValue(); } },
@@ -210,9 +192,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("enterprise_name", EnterpriseName);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Icon>("icon", Icon);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Team7IsSfdcAutoSlack>("is_sfdc_auto_slack", IsSfdcAutoSlack);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Team7IsVerified>("is_verified", IsVerified);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Team7LobSalesHomeEnabled>("lob_sales_home_enabled", LobSalesHomeEnabled);
+            writer.WriteBoolValue("is_sfdc_auto_slack", IsSfdcAutoSlack);
+            writer.WriteBoolValue("is_verified", IsVerified);
+            writer.WriteBoolValue("lob_sales_home_enabled", LobSalesHomeEnabled);
             writer.WriteStringValue("locale", Locale);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("pay_prod_cur", PayProdCur);

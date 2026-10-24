@@ -15,13 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Include a list of categories for Unicode emoji and the emoji in each category.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.EmojiListArgumentsIncludeCategories? IncludeCategories { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.EmojiListArgumentsIncludeCategories IncludeCategories { get; set; }
-#endif
+        public bool? IncludeCategories { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.EmojiListArguments"/> and sets the default values.
         /// </summary>
@@ -47,7 +41,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "include_categories", n => { IncludeCategories = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EmojiListArgumentsIncludeCategories>(global::Soenneker.Slack.OpenApiClient.Models.EmojiListArgumentsIncludeCategories.CreateFromDiscriminatorValue); } },
+                { "include_categories", n => { IncludeCategories = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -57,7 +51,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EmojiListArgumentsIncludeCategories>("include_categories", IncludeCategories);
+            writer.WriteBoolValue("include_categories", IncludeCategories);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -55,13 +55,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Link { get; set; }
 #endif
         /// <summary>The long property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.EntityStringFieldLong? Long { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.EntityStringFieldLong Long { get; set; }
-#endif
+        public bool? Long { get; set; }
         /// <summary>The tag_color property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -116,7 +110,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "icon", n => { Icon = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityIconField>(global::Soenneker.Slack.OpenApiClient.Models.EntityIconField.CreateFromDiscriminatorValue); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "link", n => { Link = n.GetStringValue(); } },
-                { "long", n => { Long = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityStringFieldLong>(global::Soenneker.Slack.OpenApiClient.Models.EntityStringFieldLong.CreateFromDiscriminatorValue); } },
+                { "long", n => { Long = n.GetBoolValue(); } },
                 { "tag_color", n => { TagColor = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
                 { "value", n => { Value = n.GetStringValue(); } },
@@ -134,7 +128,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityIconField>("icon", Icon);
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("link", Link);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityStringFieldLong>("long", Long);
+            writer.WriteBoolValue("long", Long);
             writer.WriteStringValue("tag_color", TagColor);
             writer.WriteStringValue("type", Type);
             writer.WriteStringValue("value", Value);

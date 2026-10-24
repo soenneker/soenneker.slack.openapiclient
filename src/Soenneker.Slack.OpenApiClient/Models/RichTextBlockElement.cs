@@ -53,11 +53,24 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.RichTextBlockElement CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
             var result = new global::Soenneker.Slack.OpenApiClient.Models.RichTextBlockElement();
-            result.RichTextList = new global::Soenneker.Slack.OpenApiClient.Models.RichTextList();
-            result.RichTextPreformatted = new global::Soenneker.Slack.OpenApiClient.Models.RichTextPreformatted();
-            result.RichTextQuote = new global::Soenneker.Slack.OpenApiClient.Models.RichTextQuote();
-            result.RichTextSection = new global::Soenneker.Slack.OpenApiClient.Models.RichTextSection();
+            if("rich_text_list".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.RichTextList = new global::Soenneker.Slack.OpenApiClient.Models.RichTextList();
+            }
+            else if("rich_text_preformatted".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.RichTextPreformatted = new global::Soenneker.Slack.OpenApiClient.Models.RichTextPreformatted();
+            }
+            else if("rich_text_quote".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.RichTextQuote = new global::Soenneker.Slack.OpenApiClient.Models.RichTextQuote();
+            }
+            else if("rich_text_section".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.RichTextSection = new global::Soenneker.Slack.OpenApiClient.Models.RichTextSection();
+            }
             return result;
         }
         /// <summary>
@@ -66,9 +79,21 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(RichTextList != null || RichTextPreformatted != null || RichTextQuote != null || RichTextSection != null)
+            if(RichTextList != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(RichTextList, RichTextPreformatted, RichTextQuote, RichTextSection);
+                return RichTextList.GetFieldDeserializers();
+            }
+            else if(RichTextPreformatted != null)
+            {
+                return RichTextPreformatted.GetFieldDeserializers();
+            }
+            else if(RichTextQuote != null)
+            {
+                return RichTextQuote.GetFieldDeserializers();
+            }
+            else if(RichTextSection != null)
+            {
+                return RichTextSection.GetFieldDeserializers();
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -79,7 +104,22 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextList>(null, RichTextList, RichTextPreformatted, RichTextQuote, RichTextSection);
+            if(RichTextList != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextList>(null, RichTextList);
+            }
+            else if(RichTextPreformatted != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextPreformatted>(null, RichTextPreformatted);
+            }
+            else if(RichTextQuote != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextQuote>(null, RichTextQuote);
+            }
+            else if(RichTextSection != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextSection>(null, RichTextSection);
+            }
         }
     }
 }

@@ -23,21 +23,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string CanRecordSummary { get; set; }
 #endif
         /// <summary>The notetaking property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.RecordingNotetaking? Notetaking { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.RecordingNotetaking Notetaking { get; set; }
-#endif
+        public bool? Notetaking { get; set; }
         /// <summary>The summary property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.RecordingSummary? Summary { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.RecordingSummary Summary { get; set; }
-#endif
+        public bool? Summary { get; set; }
         /// <summary>The summary_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -47,13 +35,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string SummaryStatus { get; set; }
 #endif
         /// <summary>The transcript property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.RecordingTranscript? Transcript { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.RecordingTranscript Transcript { get; set; }
-#endif
+        public bool? Transcript { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Recording"/> and sets the default values.
         /// </summary>
@@ -80,10 +62,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "can_record_summary", n => { CanRecordSummary = n.GetStringValue(); } },
-                { "notetaking", n => { Notetaking = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RecordingNotetaking>(global::Soenneker.Slack.OpenApiClient.Models.RecordingNotetaking.CreateFromDiscriminatorValue); } },
-                { "summary", n => { Summary = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RecordingSummary>(global::Soenneker.Slack.OpenApiClient.Models.RecordingSummary.CreateFromDiscriminatorValue); } },
+                { "notetaking", n => { Notetaking = n.GetBoolValue(); } },
+                { "summary", n => { Summary = n.GetBoolValue(); } },
                 { "summary_status", n => { SummaryStatus = n.GetStringValue(); } },
-                { "transcript", n => { Transcript = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RecordingTranscript>(global::Soenneker.Slack.OpenApiClient.Models.RecordingTranscript.CreateFromDiscriminatorValue); } },
+                { "transcript", n => { Transcript = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -94,10 +76,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("can_record_summary", CanRecordSummary);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RecordingNotetaking>("notetaking", Notetaking);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RecordingSummary>("summary", Summary);
+            writer.WriteBoolValue("notetaking", Notetaking);
+            writer.WriteBoolValue("summary", Summary);
             writer.WriteStringValue("summary_status", SummaryStatus);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RecordingTranscript>("transcript", Transcript);
+            writer.WriteBoolValue("transcript", Transcript);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

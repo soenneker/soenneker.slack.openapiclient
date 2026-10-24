@@ -7,49 +7,61 @@ using System.IO;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminAppsClearResolutionArgumentsMember1"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminAppsClearResolutionArgumentsMember2"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class AdminAppsClearResolutionArguments : global::Soenneker.Slack.OpenApiClient.Models.AdminAppsClearResolutionArgumentsAllOf1, IParsable
-    #pragma warning restore CS1591
+    public partial class AdminAppsClearResolutionArguments : IComposedTypeWrapper, IParsable
     {
-        /// <summary>The ID of the app.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminAppsClearResolutionArgumentsMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AppId { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminAppsClearResolutionArgumentsMember1? AdminAppsClearResolutionArgumentsMember1 { get; set; }
 #nullable restore
 #else
-        public string AppId { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminAppsClearResolutionArgumentsMember1 AdminAppsClearResolutionArgumentsMember1 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminAppsClearResolutionArgumentsMember2"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminAppsClearResolutionArgumentsMember2? AdminAppsClearResolutionArgumentsMember2 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminAppsClearResolutionArgumentsMember2 AdminAppsClearResolutionArgumentsMember2 { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminAppsClearResolutionArguments"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Slack.OpenApiClient.Models.AdminAppsClearResolutionArguments CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Slack.OpenApiClient.Models.AdminAppsClearResolutionArguments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.AdminAppsClearResolutionArguments();
+            var result = new global::Soenneker.Slack.OpenApiClient.Models.AdminAppsClearResolutionArguments();
+            result.AdminAppsClearResolutionArgumentsMember1 = new global::Soenneker.Slack.OpenApiClient.Models.AdminAppsClearResolutionArgumentsMember1();
+            result.AdminAppsClearResolutionArgumentsMember2 = new global::Soenneker.Slack.OpenApiClient.Models.AdminAppsClearResolutionArgumentsMember2();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            if(AdminAppsClearResolutionArgumentsMember1 != null || AdminAppsClearResolutionArgumentsMember2 != null)
             {
-                { "app_id", n => { AppId = n.GetStringValue(); } },
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(AdminAppsClearResolutionArgumentsMember1, AdminAppsClearResolutionArgumentsMember2);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
-            writer.WriteStringValue("app_id", AppId);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminAppsClearResolutionArgumentsMember1>(null, AdminAppsClearResolutionArgumentsMember1, AdminAppsClearResolutionArgumentsMember2);
         }
     }
 }

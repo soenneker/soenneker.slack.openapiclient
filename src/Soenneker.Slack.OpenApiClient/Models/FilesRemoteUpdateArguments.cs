@@ -7,89 +7,61 @@ using System.IO;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteUpdateArgumentsMember1"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteUpdateArgumentsMember2"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class FilesRemoteUpdateArguments : global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteUpdateArgumentsAllOf1, IParsable
-    #pragma warning restore CS1591
+    public partial class FilesRemoteUpdateArguments : IComposedTypeWrapper, IParsable
     {
-        /// <summary>URL of the remote file.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteUpdateArgumentsMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalUrl { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteUpdateArgumentsMember1? FilesRemoteUpdateArgumentsMember1 { get; set; }
 #nullable restore
 #else
-        public string ExternalUrl { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteUpdateArgumentsMember1 FilesRemoteUpdateArgumentsMember1 { get; set; }
 #endif
-        /// <summary>A file type identifier.[File types](https://docs.slack.dev/reference/objects/file-object) for a complete list of supported file types.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteUpdateArgumentsMember2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Filetype { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteUpdateArgumentsMember2? FilesRemoteUpdateArgumentsMember2 { get; set; }
 #nullable restore
 #else
-        public string Filetype { get; set; }
-#endif
-        /// <summary>A text file (txt, pdf, doc, etc.) containing textual search terms that are used to improve discoveryof the remote file.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public byte[]? IndexableFileContents { get; set; }
-#nullable restore
-#else
-        public byte[] IndexableFileContents { get; set; }
-#endif
-        /// <summary>Preview of the document.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public byte[]? PreviewImage { get; set; }
-#nullable restore
-#else
-        public byte[] PreviewImage { get; set; }
-#endif
-        /// <summary>Title of the file being shared.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Title { get; set; }
-#nullable restore
-#else
-        public string Title { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteUpdateArgumentsMember2 FilesRemoteUpdateArgumentsMember2 { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteUpdateArguments"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteUpdateArguments CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteUpdateArguments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteUpdateArguments();
+            var result = new global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteUpdateArguments();
+            result.FilesRemoteUpdateArgumentsMember1 = new global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteUpdateArgumentsMember1();
+            result.FilesRemoteUpdateArgumentsMember2 = new global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteUpdateArgumentsMember2();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            if(FilesRemoteUpdateArgumentsMember1 != null || FilesRemoteUpdateArgumentsMember2 != null)
             {
-                { "external_url", n => { ExternalUrl = n.GetStringValue(); } },
-                { "filetype", n => { Filetype = n.GetStringValue(); } },
-                { "indexable_file_contents", n => { IndexableFileContents = n.GetByteArrayValue(); } },
-                { "preview_image", n => { PreviewImage = n.GetByteArrayValue(); } },
-                { "title", n => { Title = n.GetStringValue(); } },
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(FilesRemoteUpdateArgumentsMember1, FilesRemoteUpdateArgumentsMember2);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
-            writer.WriteStringValue("external_url", ExternalUrl);
-            writer.WriteStringValue("filetype", Filetype);
-            writer.WriteByteArrayValue("indexable_file_contents", IndexableFileContents);
-            writer.WriteByteArrayValue("preview_image", PreviewImage);
-            writer.WriteStringValue("title", Title);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteUpdateArgumentsMember1>(null, FilesRemoteUpdateArgumentsMember1, FilesRemoteUpdateArgumentsMember2);
         }
     }
 }

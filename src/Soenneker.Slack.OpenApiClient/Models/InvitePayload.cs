@@ -31,21 +31,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string InviteType { get; set; }
 #endif
         /// <summary>The is_external_limited property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.InvitePayloadIsExternalLimited? IsExternalLimited { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.InvitePayloadIsExternalLimited IsExternalLimited { get; set; }
-#endif
+        public bool? IsExternalLimited { get; set; }
         /// <summary>The is_sponsored property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.InvitePayloadIsSponsored? IsSponsored { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.InvitePayloadIsSponsored IsSponsored { get; set; }
-#endif
+        public bool? IsSponsored { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.InvitePayload"/> and sets the default values.
         /// </summary>
@@ -73,8 +61,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "channel", n => { Channel = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel9>(global::Soenneker.Slack.OpenApiClient.Models.Channel9.CreateFromDiscriminatorValue); } },
                 { "invite_type", n => { InviteType = n.GetStringValue(); } },
-                { "is_external_limited", n => { IsExternalLimited = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InvitePayloadIsExternalLimited>(global::Soenneker.Slack.OpenApiClient.Models.InvitePayloadIsExternalLimited.CreateFromDiscriminatorValue); } },
-                { "is_sponsored", n => { IsSponsored = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InvitePayloadIsSponsored>(global::Soenneker.Slack.OpenApiClient.Models.InvitePayloadIsSponsored.CreateFromDiscriminatorValue); } },
+                { "is_external_limited", n => { IsExternalLimited = n.GetBoolValue(); } },
+                { "is_sponsored", n => { IsSponsored = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -86,8 +74,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel9>("channel", Channel);
             writer.WriteStringValue("invite_type", InviteType);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InvitePayloadIsExternalLimited>("is_external_limited", IsExternalLimited);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InvitePayloadIsSponsored>("is_sponsored", IsSponsored);
+            writer.WriteBoolValue("is_external_limited", IsExternalLimited);
+            writer.WriteBoolValue("is_sponsored", IsSponsored);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

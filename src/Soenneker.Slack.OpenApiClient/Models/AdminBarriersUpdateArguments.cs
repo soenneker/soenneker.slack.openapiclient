@@ -41,10 +41,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>What kind of interactions are blocked by this barrier?Currently you must provide all three: `im`, `mpim`, `call`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.AdminBarriersUpdateArgumentsRestrictedSubjectsItem>? RestrictedSubjects { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.AdminBarriersUpdateArgumentsRestrictedSubjectsItem?>? RestrictedSubjects { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.AdminBarriersUpdateArgumentsRestrictedSubjectsItem> RestrictedSubjects { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.AdminBarriersUpdateArgumentsRestrictedSubjectsItem?> RestrictedSubjects { get; set; }
 #endif
         /// <summary>Overridable authentication token bearing required scopes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,7 +82,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "barrier_id", n => { BarrierId = n.GetStringValue(); } },
                 { "barriered_from_usergroup_ids", n => { BarrieredFromUsergroupIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "primary_usergroup_id", n => { PrimaryUsergroupId = n.GetStringValue(); } },
-                { "restricted_subjects", n => { RestrictedSubjects = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AdminBarriersUpdateArgumentsRestrictedSubjectsItem>(global::Soenneker.Slack.OpenApiClient.Models.AdminBarriersUpdateArgumentsRestrictedSubjectsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "restricted_subjects", n => { RestrictedSubjects = n.GetCollectionOfEnumValues<global::Soenneker.Slack.OpenApiClient.Models.AdminBarriersUpdateArgumentsRestrictedSubjectsItem>()?.AsList(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
             };
         }
@@ -96,7 +96,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("barriered_from_usergroup_ids", BarrieredFromUsergroupIds);
             writer.WriteStringValue("barrier_id", BarrierId);
             writer.WriteStringValue("primary_usergroup_id", PrimaryUsergroupId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AdminBarriersUpdateArgumentsRestrictedSubjectsItem>("restricted_subjects", RestrictedSubjects);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Slack.OpenApiClient.Models.AdminBarriersUpdateArgumentsRestrictedSubjectsItem>("restricted_subjects", RestrictedSubjects);
             writer.WriteStringValue("token", Token);
             writer.WriteAdditionalData(AdditionalData);
         }

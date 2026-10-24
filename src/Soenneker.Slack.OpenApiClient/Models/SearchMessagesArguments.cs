@@ -25,13 +25,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Cursor { get; set; }
 #endif
         /// <summary>Set to `true` to enable query highlight markers. Defaults to `false`.[`search.messages` Usage info](https://docs.slack.dev/reference/methods/search.messages) for details.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.SearchMessagesArgumentsHighlight? Highlight { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.SearchMessagesArgumentsHighlight Highlight { get; set; }
-#endif
+        public bool? Highlight { get; set; }
         /// <summary>Page number of results to return. Defaults to `1`.</summary>
         public double? Page { get; set; }
         /// <summary>Search query.</summary>
@@ -89,7 +83,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "count", n => { Count = n.GetDoubleValue(); } },
                 { "cursor", n => { Cursor = n.GetStringValue(); } },
-                { "highlight", n => { Highlight = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SearchMessagesArgumentsHighlight>(global::Soenneker.Slack.OpenApiClient.Models.SearchMessagesArgumentsHighlight.CreateFromDiscriminatorValue); } },
+                { "highlight", n => { Highlight = n.GetBoolValue(); } },
                 { "page", n => { Page = n.GetDoubleValue(); } },
                 { "query", n => { Query = n.GetStringValue(); } },
                 { "sort", n => { Sort = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.SearchMessagesArgumentsSort>(); } },
@@ -107,7 +101,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("count", Count);
             writer.WriteStringValue("cursor", Cursor);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SearchMessagesArgumentsHighlight>("highlight", Highlight);
+            writer.WriteBoolValue("highlight", Highlight);
             writer.WriteDoubleValue("page", Page);
             writer.WriteStringValue("query", Query);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.SearchMessagesArgumentsSort>("sort", Sort);

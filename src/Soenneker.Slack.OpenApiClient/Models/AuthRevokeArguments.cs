@@ -15,13 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Setting this parameter to `true` triggers a testing mode where the specified tokenwill not actually be revoked.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AuthRevokeArgumentsTest? Test { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AuthRevokeArgumentsTest Test { get; set; }
-#endif
+        public bool? Test { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.AuthRevokeArguments"/> and sets the default values.
         /// </summary>
@@ -47,7 +41,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "test", n => { Test = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AuthRevokeArgumentsTest>(global::Soenneker.Slack.OpenApiClient.Models.AuthRevokeArgumentsTest.CreateFromDiscriminatorValue); } },
+                { "test", n => { Test = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -57,7 +51,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AuthRevokeArgumentsTest>("test", Test);
+            writer.WriteBoolValue("test", Test);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

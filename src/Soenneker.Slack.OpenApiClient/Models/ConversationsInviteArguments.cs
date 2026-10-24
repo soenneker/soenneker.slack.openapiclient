@@ -23,13 +23,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Channel { get; set; }
 #endif
         /// <summary>When set to `true` and multiple user IDs are provided, continue inviting the valid ones whiledisregarding invalid IDs. Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsInviteArgumentsForce? Force { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsInviteArgumentsForce Force { get; set; }
-#endif
+        public bool? Force { get; set; }
         /// <summary>Overridable authentication token bearing required scopes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -72,7 +66,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "channel", n => { Channel = n.GetStringValue(); } },
-                { "force", n => { Force = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsInviteArgumentsForce>(global::Soenneker.Slack.OpenApiClient.Models.ConversationsInviteArgumentsForce.CreateFromDiscriminatorValue); } },
+                { "force", n => { Force = n.GetBoolValue(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
                 { "users", n => { Users = n.GetStringValue(); } },
             };
@@ -85,7 +79,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("channel", Channel);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsInviteArgumentsForce>("force", Force);
+            writer.WriteBoolValue("force", Force);
             writer.WriteStringValue("token", Token);
             writer.WriteStringValue("users", Users);
             writer.WriteAdditionalData(AdditionalData);

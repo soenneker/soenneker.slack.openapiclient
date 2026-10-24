@@ -25,13 +25,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The date_status_processing_expire property</summary>
         public double? DateStatusProcessingExpire { get; set; }
         /// <summary>The is_stoppable property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AgentStatusIsStoppable? IsStoppable { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AgentStatusIsStoppable IsStoppable { get; set; }
-#endif
+        public bool? IsStoppable { get; set; }
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -67,7 +61,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "agent_bot_user_id", n => { AgentBotUserId = n.GetStringValue(); } },
                 { "date_status_processing_expire", n => { DateStatusProcessingExpire = n.GetDoubleValue(); } },
-                { "is_stoppable", n => { IsStoppable = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AgentStatusIsStoppable>(global::Soenneker.Slack.OpenApiClient.Models.AgentStatusIsStoppable.CreateFromDiscriminatorValue); } },
+                { "is_stoppable", n => { IsStoppable = n.GetBoolValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
             };
         }
@@ -80,7 +74,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("agent_bot_user_id", AgentBotUserId);
             writer.WriteDoubleValue("date_status_processing_expire", DateStatusProcessingExpire);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AgentStatusIsStoppable>("is_stoppable", IsStoppable);
+            writer.WriteBoolValue("is_stoppable", IsStoppable);
             writer.WriteStringValue("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }

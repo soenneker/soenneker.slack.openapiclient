@@ -83,13 +83,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string DisplayId { get; set; }
 #endif
         /// <summary>The has_ended property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.V1HasEnded? HasEnded { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.V1HasEnded HasEnded { get; set; }
-#endif
+        public bool? HasEnded { get; set; }
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -99,13 +93,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The is_dm_call property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.V1IsDmCall? IsDmCall { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.V1IsDmCall IsDmCall { get; set; }
-#endif
+        public bool? IsDmCall { get; set; }
         /// <summary>The join_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -123,29 +111,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>The was_accepted property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.V1WasAccepted? WasAccepted { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.V1WasAccepted WasAccepted { get; set; }
-#endif
+        public bool? WasAccepted { get; set; }
         /// <summary>The was_missed property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.V1WasMissed? WasMissed { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.V1WasMissed WasMissed { get; set; }
-#endif
+        public bool? WasMissed { get; set; }
         /// <summary>The was_rejected property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.V1WasRejected? WasRejected { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.V1WasRejected WasRejected { get; set; }
-#endif
+        public bool? WasRejected { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.V1"/> and sets the default values.
         /// </summary>
@@ -181,14 +151,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "date_start", n => { DateStart = n.GetDoubleValue(); } },
                 { "desktop_app_join_url", n => { DesktopAppJoinUrl = n.GetStringValue(); } },
                 { "display_id", n => { DisplayId = n.GetStringValue(); } },
-                { "has_ended", n => { HasEnded = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.V1HasEnded>(global::Soenneker.Slack.OpenApiClient.Models.V1HasEnded.CreateFromDiscriminatorValue); } },
+                { "has_ended", n => { HasEnded = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "is_dm_call", n => { IsDmCall = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.V1IsDmCall>(global::Soenneker.Slack.OpenApiClient.Models.V1IsDmCall.CreateFromDiscriminatorValue); } },
+                { "is_dm_call", n => { IsDmCall = n.GetBoolValue(); } },
                 { "join_url", n => { JoinUrl = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "was_accepted", n => { WasAccepted = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.V1WasAccepted>(global::Soenneker.Slack.OpenApiClient.Models.V1WasAccepted.CreateFromDiscriminatorValue); } },
-                { "was_missed", n => { WasMissed = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.V1WasMissed>(global::Soenneker.Slack.OpenApiClient.Models.V1WasMissed.CreateFromDiscriminatorValue); } },
-                { "was_rejected", n => { WasRejected = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.V1WasRejected>(global::Soenneker.Slack.OpenApiClient.Models.V1WasRejected.CreateFromDiscriminatorValue); } },
+                { "was_accepted", n => { WasAccepted = n.GetBoolValue(); } },
+                { "was_missed", n => { WasMissed = n.GetBoolValue(); } },
+                { "was_rejected", n => { WasRejected = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -208,14 +178,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("date_start", DateStart);
             writer.WriteStringValue("desktop_app_join_url", DesktopAppJoinUrl);
             writer.WriteStringValue("display_id", DisplayId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.V1HasEnded>("has_ended", HasEnded);
+            writer.WriteBoolValue("has_ended", HasEnded);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.V1IsDmCall>("is_dm_call", IsDmCall);
+            writer.WriteBoolValue("is_dm_call", IsDmCall);
             writer.WriteStringValue("join_url", JoinUrl);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.V1WasAccepted>("was_accepted", WasAccepted);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.V1WasMissed>("was_missed", WasMissed);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.V1WasRejected>("was_rejected", WasRejected);
+            writer.WriteBoolValue("was_accepted", WasAccepted);
+            writer.WriteBoolValue("was_missed", WasMissed);
+            writer.WriteBoolValue("was_rejected", WasRejected);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

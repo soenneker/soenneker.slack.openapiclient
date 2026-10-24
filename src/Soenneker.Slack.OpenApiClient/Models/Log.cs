@@ -71,13 +71,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Resolution { get; set; }
 #endif
         /// <summary>The rss_feed property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.LogRssFeed? RssFeed { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.LogRssFeed RssFeed { get; set; }
-#endif
+        public bool? RssFeed { get; set; }
         /// <summary>The rss_feed_change_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -168,7 +162,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "date", n => { Date = n.GetStringValue(); } },
                 { "reason", n => { Reason = n.GetStringValue(); } },
                 { "resolution", n => { Resolution = n.GetStringValue(); } },
-                { "rss_feed", n => { RssFeed = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.LogRssFeed>(global::Soenneker.Slack.OpenApiClient.Models.LogRssFeed.CreateFromDiscriminatorValue); } },
+                { "rss_feed", n => { RssFeed = n.GetBoolValue(); } },
                 { "rss_feed_change_type", n => { RssFeedChangeType = n.GetStringValue(); } },
                 { "rss_feed_title", n => { RssFeedTitle = n.GetStringValue(); } },
                 { "rss_feed_url", n => { RssFeedUrl = n.GetStringValue(); } },
@@ -193,7 +187,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("date", Date);
             writer.WriteStringValue("reason", Reason);
             writer.WriteStringValue("resolution", Resolution);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.LogRssFeed>("rss_feed", RssFeed);
+            writer.WriteBoolValue("rss_feed", RssFeed);
             writer.WriteStringValue("rss_feed_change_type", RssFeedChangeType);
             writer.WriteStringValue("rss_feed_title", RssFeedTitle);
             writer.WriteStringValue("rss_feed_url", RssFeedUrl);

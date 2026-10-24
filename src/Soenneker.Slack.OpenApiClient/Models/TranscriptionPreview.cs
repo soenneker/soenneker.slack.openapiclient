@@ -23,13 +23,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Content { get; set; }
 #endif
         /// <summary>The has_more property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.TranscriptionPreviewHasMore? HasMore { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.TranscriptionPreviewHasMore HasMore { get; set; }
-#endif
+        public bool? HasMore { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.TranscriptionPreview"/> and sets the default values.
         /// </summary>
@@ -56,7 +50,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "content", n => { Content = n.GetStringValue(); } },
-                { "has_more", n => { HasMore = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.TranscriptionPreviewHasMore>(global::Soenneker.Slack.OpenApiClient.Models.TranscriptionPreviewHasMore.CreateFromDiscriminatorValue); } },
+                { "has_more", n => { HasMore = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -67,7 +61,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("content", Content);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.TranscriptionPreviewHasMore>("has_more", HasMore);
+            writer.WriteBoolValue("has_more", HasMore);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

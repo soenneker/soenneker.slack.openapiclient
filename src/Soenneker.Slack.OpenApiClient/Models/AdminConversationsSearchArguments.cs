@@ -61,13 +61,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public List<string> TeamIds { get; set; }
 #endif
         /// <summary>Only return the total count of channels.Omits channel data and allows access for admins without channel manager permissions. Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSearchArgumentsAllOf4TotalCountOnly? TotalCountOnly { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSearchArgumentsAllOf4TotalCountOnly TotalCountOnly { get; set; }
-#endif
+        public bool? TotalCountOnly { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSearchArguments"/> and sets the default values.
         /// </summary>
@@ -101,7 +95,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "sort", n => { Sort = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSearchArgumentsSort>(); } },
                 { "sort_dir", n => { SortDir = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSearchArgumentsSortDir>(); } },
                 { "team_ids", n => { TeamIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "total_count_only", n => { TotalCountOnly = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSearchArgumentsAllOf4TotalCountOnly>(global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSearchArgumentsAllOf4TotalCountOnly.CreateFromDiscriminatorValue); } },
+                { "total_count_only", n => { TotalCountOnly = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -119,7 +113,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSearchArgumentsSort>("sort", Sort);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSearchArgumentsSortDir>("sort_dir", SortDir);
             writer.WriteCollectionOfPrimitiveValues<string>("team_ids", TeamIds);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSearchArgumentsAllOf4TotalCountOnly>("total_count_only", TotalCountOnly);
+            writer.WriteBoolValue("total_count_only", TotalCountOnly);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

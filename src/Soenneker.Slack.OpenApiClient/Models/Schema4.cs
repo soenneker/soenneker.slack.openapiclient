@@ -23,13 +23,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The is_primary_column property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Schema4IsPrimaryColumn? IsPrimaryColumn { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Schema4IsPrimaryColumn IsPrimaryColumn { get; set; }
-#endif
+        public bool? IsPrimaryColumn { get; set; }
         /// <summary>The key property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -88,7 +82,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "is_primary_column", n => { IsPrimaryColumn = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Schema4IsPrimaryColumn>(global::Soenneker.Slack.OpenApiClient.Models.Schema4IsPrimaryColumn.CreateFromDiscriminatorValue); } },
+                { "is_primary_column", n => { IsPrimaryColumn = n.GetBoolValue(); } },
                 { "key", n => { Key = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "options", n => { Options = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SchemaOptions2>(global::Soenneker.Slack.OpenApiClient.Models.SchemaOptions2.CreateFromDiscriminatorValue); } },
@@ -103,7 +97,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Schema4IsPrimaryColumn>("is_primary_column", IsPrimaryColumn);
+            writer.WriteBoolValue("is_primary_column", IsPrimaryColumn);
             writer.WriteStringValue("key", Key);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SchemaOptions2>("options", Options);

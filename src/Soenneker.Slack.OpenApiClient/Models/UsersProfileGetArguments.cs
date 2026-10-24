@@ -15,13 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Include labels for each ID in custom profile fields.Using this parameter will heavily rate-limit your requests and is not recommended. Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.UsersProfileGetArgumentsIncludeLabels? IncludeLabels { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.UsersProfileGetArgumentsIncludeLabels IncludeLabels { get; set; }
-#endif
+        public bool? IncludeLabels { get; set; }
         /// <summary>Overridable authentication token bearing required scopes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -63,7 +57,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "include_labels", n => { IncludeLabels = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UsersProfileGetArgumentsIncludeLabels>(global::Soenneker.Slack.OpenApiClient.Models.UsersProfileGetArgumentsIncludeLabels.CreateFromDiscriminatorValue); } },
+                { "include_labels", n => { IncludeLabels = n.GetBoolValue(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
                 { "user", n => { User = n.GetStringValue(); } },
             };
@@ -75,7 +69,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UsersProfileGetArgumentsIncludeLabels>("include_labels", IncludeLabels);
+            writer.WriteBoolValue("include_labels", IncludeLabels);
             writer.WriteStringValue("token", Token);
             writer.WriteStringValue("user", User);
             writer.WriteAdditionalData(AdditionalData);

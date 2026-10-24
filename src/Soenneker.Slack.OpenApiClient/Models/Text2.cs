@@ -15,13 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The emoji property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Text2Emoji? Emoji { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Text2Emoji Emoji { get; set; }
-#endif
+        public bool? Emoji { get; set; }
         /// <summary>The text property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -31,21 +25,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Text { get; set; }
 #endif
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.Text2Type? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Text2Type Type { get; set; }
-#endif
         /// <summary>The verbatim property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Text2Verbatim? Verbatim { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Text2Verbatim Verbatim { get; set; }
-#endif
+        public bool? Verbatim { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Text2"/> and sets the default values.
         /// </summary>
@@ -71,10 +53,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "emoji", n => { Emoji = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Text2Emoji>(global::Soenneker.Slack.OpenApiClient.Models.Text2Emoji.CreateFromDiscriminatorValue); } },
+                { "emoji", n => { Emoji = n.GetBoolValue(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Text2Type>(global::Soenneker.Slack.OpenApiClient.Models.Text2Type.CreateFromDiscriminatorValue); } },
-                { "verbatim", n => { Verbatim = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Text2Verbatim>(global::Soenneker.Slack.OpenApiClient.Models.Text2Verbatim.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.Text2Type>(); } },
+                { "verbatim", n => { Verbatim = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -84,10 +66,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Text2Emoji>("emoji", Emoji);
+            writer.WriteBoolValue("emoji", Emoji);
             writer.WriteStringValue("text", Text);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Text2Type>("type", Type);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Text2Verbatim>("verbatim", Verbatim);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.Text2Type>("type", Type);
+            writer.WriteBoolValue("verbatim", Verbatim);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

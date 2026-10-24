@@ -53,11 +53,24 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.AnyChunk CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
             var result = new global::Soenneker.Slack.OpenApiClient.Models.AnyChunk();
-            result.BlocksChunk = new global::Soenneker.Slack.OpenApiClient.Models.BlocksChunk();
-            result.MarkdownTextChunk = new global::Soenneker.Slack.OpenApiClient.Models.MarkdownTextChunk();
-            result.PlanUpdateChunk = new global::Soenneker.Slack.OpenApiClient.Models.PlanUpdateChunk();
-            result.TaskUpdateChunk = new global::Soenneker.Slack.OpenApiClient.Models.TaskUpdateChunk();
+            if("blocks".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.BlocksChunk = new global::Soenneker.Slack.OpenApiClient.Models.BlocksChunk();
+            }
+            else if("markdown_text".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.MarkdownTextChunk = new global::Soenneker.Slack.OpenApiClient.Models.MarkdownTextChunk();
+            }
+            else if("plan_update".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.PlanUpdateChunk = new global::Soenneker.Slack.OpenApiClient.Models.PlanUpdateChunk();
+            }
+            else if("task_update".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.TaskUpdateChunk = new global::Soenneker.Slack.OpenApiClient.Models.TaskUpdateChunk();
+            }
             return result;
         }
         /// <summary>
@@ -66,9 +79,21 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(BlocksChunk != null || MarkdownTextChunk != null || PlanUpdateChunk != null || TaskUpdateChunk != null)
+            if(BlocksChunk != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BlocksChunk, MarkdownTextChunk, PlanUpdateChunk, TaskUpdateChunk);
+                return BlocksChunk.GetFieldDeserializers();
+            }
+            else if(MarkdownTextChunk != null)
+            {
+                return MarkdownTextChunk.GetFieldDeserializers();
+            }
+            else if(PlanUpdateChunk != null)
+            {
+                return PlanUpdateChunk.GetFieldDeserializers();
+            }
+            else if(TaskUpdateChunk != null)
+            {
+                return TaskUpdateChunk.GetFieldDeserializers();
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -79,7 +104,22 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BlocksChunk>(null, BlocksChunk, MarkdownTextChunk, PlanUpdateChunk, TaskUpdateChunk);
+            if(BlocksChunk != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BlocksChunk>(null, BlocksChunk);
+            }
+            else if(MarkdownTextChunk != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MarkdownTextChunk>(null, MarkdownTextChunk);
+            }
+            else if(PlanUpdateChunk != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlanUpdateChunk>(null, PlanUpdateChunk);
+            }
+            else if(TaskUpdateChunk != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.TaskUpdateChunk>(null, TaskUpdateChunk);
+            }
         }
     }
 }

@@ -31,13 +31,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public List<global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock> DescriptionBlocks { get; set; }
 #endif
         /// <summary>Boolean indicating whether to include records when a List is copied.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsCreateArgumentsIncludeCopiedListRecords? IncludeCopiedListRecords { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsCreateArgumentsIncludeCopiedListRecords IncludeCopiedListRecords { get; set; }
-#endif
+        public bool? IncludeCopiedListRecords { get; set; }
         /// <summary>Name of the List.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -55,13 +49,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public List<global::Soenneker.Slack.OpenApiClient.Models.SlackListsSchemaColumn> Schema { get; set; }
 #endif
         /// <summary>Boolean indicating whether the List should be used to track todo tasks.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsCreateArgumentsTodoMode? TodoMode { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsCreateArgumentsTodoMode TodoMode { get; set; }
-#endif
+        public bool? TodoMode { get; set; }
         /// <summary>Overridable authentication token bearing required scopes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -97,10 +85,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "copy_from_list_id", n => { CopyFromListId = n.GetStringValue(); } },
                 { "description_blocks", n => { DescriptionBlocks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock>(global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "include_copied_list_records", n => { IncludeCopiedListRecords = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackListsCreateArgumentsIncludeCopiedListRecords>(global::Soenneker.Slack.OpenApiClient.Models.SlackListsCreateArgumentsIncludeCopiedListRecords.CreateFromDiscriminatorValue); } },
+                { "include_copied_list_records", n => { IncludeCopiedListRecords = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "schema", n => { Schema = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SlackListsSchemaColumn>(global::Soenneker.Slack.OpenApiClient.Models.SlackListsSchemaColumn.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "todo_mode", n => { TodoMode = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackListsCreateArgumentsTodoMode>(global::Soenneker.Slack.OpenApiClient.Models.SlackListsCreateArgumentsTodoMode.CreateFromDiscriminatorValue); } },
+                { "todo_mode", n => { TodoMode = n.GetBoolValue(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
             };
         }
@@ -113,10 +101,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("copy_from_list_id", CopyFromListId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock>("description_blocks", DescriptionBlocks);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackListsCreateArgumentsIncludeCopiedListRecords>("include_copied_list_records", IncludeCopiedListRecords);
+            writer.WriteBoolValue("include_copied_list_records", IncludeCopiedListRecords);
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SlackListsSchemaColumn>("schema", Schema);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackListsCreateArgumentsTodoMode>("todo_mode", TodoMode);
+            writer.WriteBoolValue("todo_mode", TodoMode);
             writer.WriteStringValue("token", Token);
             writer.WriteAdditionalData(AdditionalData);
         }

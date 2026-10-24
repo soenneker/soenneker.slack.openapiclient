@@ -8,34 +8,20 @@ using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploadsTypeBranch1"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploadsTypeWrapper"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploadsTypeWrapper2"/>
+    /// Composed type wrapper for classes <see cref="bool"/>, <see cref="string"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AllowScFileUploadsType : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploadsTypeBranch1"/></summary>
+        /// <summary>Composed type representation for type <see cref="bool"/></summary>
+        public bool? Boolean { get; set; }
+        /// <summary>Composed type representation for type <see cref="string"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploadsTypeBranch1? AllowScFileUploadsTypeBranch1 { get; set; }
+        public string? String { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploadsTypeBranch1 AllowScFileUploadsTypeBranch1 { get; set; }
-#endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploadsTypeWrapper"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploadsTypeWrapper? AllowScFileUploadsTypeWrapper { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploadsTypeWrapper AllowScFileUploadsTypeWrapper { get; set; }
-#endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploadsTypeWrapper2"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploadsTypeWrapper2? AllowScFileUploadsTypeWrapper2 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploadsTypeWrapper2 AllowScFileUploadsTypeWrapper2 { get; set; }
+        public string String { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -46,9 +32,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploadsType();
-            result.AllowScFileUploadsTypeBranch1 = new global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploadsTypeBranch1();
-            result.AllowScFileUploadsTypeWrapper = new global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploadsTypeWrapper();
-            result.AllowScFileUploadsTypeWrapper2 = new global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploadsTypeWrapper2();
+            if(parseNode.GetBoolValue() is bool booleanValue)
+            {
+                result.Boolean = booleanValue;
+            }
+            else if(parseNode.GetStringValue() is string stringValue)
+            {
+                result.String = stringValue;
+            }
             return result;
         }
         /// <summary>
@@ -57,10 +48,6 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(AllowScFileUploadsTypeBranch1 != null || AllowScFileUploadsTypeWrapper != null || AllowScFileUploadsTypeWrapper2 != null)
-            {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(AllowScFileUploadsTypeBranch1, AllowScFileUploadsTypeWrapper, AllowScFileUploadsTypeWrapper2);
-            }
             return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
@@ -70,7 +57,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploadsTypeBranch1>(null, AllowScFileUploadsTypeBranch1, AllowScFileUploadsTypeWrapper, AllowScFileUploadsTypeWrapper2);
+            if(Boolean != null)
+            {
+                writer.WriteBoolValue(null, Boolean);
+            }
+            else if(String != null)
+            {
+                writer.WriteStringValue(null, String);
+            }
         }
     }
 }

@@ -39,13 +39,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>When true, channel, user, and link references in the command&apos;s text are escaped/parsed beforebeing sent to the agent app, matching the slash-command `should_escape` behavior. Absent is treated as false.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetCommandsArgumentsCommandsItemShouldEscape? ShouldEscape { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetCommandsArgumentsCommandsItemShouldEscape ShouldEscape { get; set; }
-#endif
+        public bool? ShouldEscape { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetCommandsArgumentsCommandsItem"/> and sets the default values.
         /// </summary>
@@ -74,7 +68,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "argument_hint", n => { ArgumentHint = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "should_escape", n => { ShouldEscape = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetCommandsArgumentsCommandsItemShouldEscape>(global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetCommandsArgumentsCommandsItemShouldEscape.CreateFromDiscriminatorValue); } },
+                { "should_escape", n => { ShouldEscape = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -87,7 +81,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("argument_hint", ArgumentHint);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetCommandsArgumentsCommandsItemShouldEscape>("should_escape", ShouldEscape);
+            writer.WriteBoolValue("should_escape", ShouldEscape);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

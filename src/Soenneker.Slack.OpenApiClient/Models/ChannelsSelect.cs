@@ -31,13 +31,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog Confirm { get; set; }
 #endif
         /// <summary>Indicates whether the element will be set to auto focus within the[`view` object](https://docs.slack.dev/surfaces/modals). Only one element can be set to `true`.Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ChannelsSelectFocusOnLoad? FocusOnLoad { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ChannelsSelectFocusOnLoad FocusOnLoad { get; set; }
-#endif
+        public bool? FocusOnLoad { get; set; }
         /// <summary>The ID of any valid public channel to be pre-selected when the menu loads.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -55,13 +49,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement Placeholder { get; set; }
 #endif
         /// <summary>When set to `true`, the [`view_submission` payload](https://docs.slack.dev/reference/interaction-payloads/view-interactions-payload#view_submission)from the menu&apos;s parent view will contain a `response_url`. This `response_url` can be used for[message responses](https://docs.slack.dev/interactivity/handling-user-interaction#message_responses). The target conversationfor the message will be determined by the value of this select menu.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ChannelsSelectResponseUrlEnabled? ResponseUrlEnabled { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ChannelsSelectResponseUrlEnabled ResponseUrlEnabled { get; set; }
-#endif
+        public bool? ResponseUrlEnabled { get; set; }
         /// <summary>The type of element. In this case `type` is always `channels_select`.</summary>
         public global::Soenneker.Slack.OpenApiClient.Models.ChannelsSelectType? Type { get; set; }
         /// <summary>
@@ -91,10 +79,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "action_id", n => { ActionId = n.GetStringValue(); } },
                 { "confirm", n => { Confirm = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog>(global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog.CreateFromDiscriminatorValue); } },
-                { "focus_on_load", n => { FocusOnLoad = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ChannelsSelectFocusOnLoad>(global::Soenneker.Slack.OpenApiClient.Models.ChannelsSelectFocusOnLoad.CreateFromDiscriminatorValue); } },
+                { "focus_on_load", n => { FocusOnLoad = n.GetBoolValue(); } },
                 { "initial_channel", n => { InitialChannel = n.GetStringValue(); } },
                 { "placeholder", n => { Placeholder = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>(global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement.CreateFromDiscriminatorValue); } },
-                { "response_url_enabled", n => { ResponseUrlEnabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ChannelsSelectResponseUrlEnabled>(global::Soenneker.Slack.OpenApiClient.Models.ChannelsSelectResponseUrlEnabled.CreateFromDiscriminatorValue); } },
+                { "response_url_enabled", n => { ResponseUrlEnabled = n.GetBoolValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ChannelsSelectType>(); } },
             };
         }
@@ -107,10 +95,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("action_id", ActionId);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog>("confirm", Confirm);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ChannelsSelectFocusOnLoad>("focus_on_load", FocusOnLoad);
+            writer.WriteBoolValue("focus_on_load", FocusOnLoad);
             writer.WriteStringValue("initial_channel", InitialChannel);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>("placeholder", Placeholder);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ChannelsSelectResponseUrlEnabled>("response_url_enabled", ResponseUrlEnabled);
+            writer.WriteBoolValue("response_url_enabled", ResponseUrlEnabled);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ChannelsSelectType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

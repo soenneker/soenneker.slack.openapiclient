@@ -167,13 +167,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.PayloadValueInputs Inputs { get; set; }
 #endif
         /// <summary>The is_billing_excluded property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.PayloadValueIsBillingExcluded? IsBillingExcluded { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.PayloadValueIsBillingExcluded IsBillingExcluded { get; set; }
-#endif
+        public bool? IsBillingExcluded { get; set; }
         /// <summary>The log property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -323,7 +317,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "function_type", n => { FunctionType = n.GetStringValue(); } },
                 { "http_status_code", n => { HttpStatusCode = n.GetDoubleValue(); } },
                 { "inputs", n => { Inputs = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PayloadValueInputs>(global::Soenneker.Slack.OpenApiClient.Models.PayloadValueInputs.CreateFromDiscriminatorValue); } },
-                { "is_billing_excluded", n => { IsBillingExcluded = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PayloadValueIsBillingExcluded>(global::Soenneker.Slack.OpenApiClient.Models.PayloadValueIsBillingExcluded.CreateFromDiscriminatorValue); } },
+                { "is_billing_excluded", n => { IsBillingExcluded = n.GetBoolValue(); } },
                 { "log", n => { Log = n.GetStringValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "outputs", n => { Outputs = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Outputs>(global::Soenneker.Slack.OpenApiClient.Models.Outputs.CreateFromDiscriminatorValue); } },
@@ -370,7 +364,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("function_type", FunctionType);
             writer.WriteDoubleValue("http_status_code", HttpStatusCode);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PayloadValueInputs>("inputs", Inputs);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PayloadValueIsBillingExcluded>("is_billing_excluded", IsBillingExcluded);
+            writer.WriteBoolValue("is_billing_excluded", IsBillingExcluded);
             writer.WriteStringValue("log", Log);
             writer.WriteStringValue("message", Message);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Outputs>("outputs", Outputs);

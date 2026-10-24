@@ -39,13 +39,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Handle { get; set; }
 #endif
         /// <summary>Include the number of users in each User Group.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.UsergroupsUpdateArgumentsIncludeCount? IncludeCount { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.UsergroupsUpdateArgumentsIncludeCount IncludeCount { get; set; }
-#endif
+        public bool? IncludeCount { get; set; }
         /// <summary>A name for the User Group. Must be unique among User Groups.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -106,7 +100,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "channels", n => { Channels = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "handle", n => { Handle = n.GetStringValue(); } },
-                { "include_count", n => { IncludeCount = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UsergroupsUpdateArgumentsIncludeCount>(global::Soenneker.Slack.OpenApiClient.Models.UsergroupsUpdateArgumentsIncludeCount.CreateFromDiscriminatorValue); } },
+                { "include_count", n => { IncludeCount = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "team_id", n => { TeamId = n.GetStringValue(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
@@ -123,7 +117,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("channels", Channels);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("handle", Handle);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UsergroupsUpdateArgumentsIncludeCount>("include_count", IncludeCount);
+            writer.WriteBoolValue("include_count", IncludeCount);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("team_id", TeamId);
             writer.WriteStringValue("token", Token);

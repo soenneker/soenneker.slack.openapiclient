@@ -31,13 +31,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string AltText { get; set; }
 #endif
         /// <summary>The api_decoration_available property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3ApiDecorationAvailable? ApiDecorationAvailable { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3ApiDecorationAvailable ApiDecorationAvailable { get; set; }
-#endif
+        public bool? ApiDecorationAvailable { get; set; }
         /// <summary>The app_collaborators property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -119,13 +113,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string DeveloperTraceId { get; set; }
 #endif
         /// <summary>The dispatch_action property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3DispatchAction? DispatchAction { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3DispatchAction DispatchAction { get; set; }
-#endif
+        public bool? DispatchAction { get; set; }
         /// <summary>The element property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -143,13 +131,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public List<global::Soenneker.Slack.OpenApiClient.Models.Accessory3> Elements { get; set; }
 #endif
         /// <summary>The expand property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3Expand? Expand { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3Expand Expand { get; set; }
-#endif
+        public bool? Expand { get; set; }
         /// <summary>The external_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -221,21 +203,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The image_width property</summary>
         public double? ImageWidth { get; set; }
         /// <summary>The is_animated property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3IsAnimated? IsAnimated { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3IsAnimated IsAnimated { get; set; }
-#endif
+        public bool? IsAnimated { get; set; }
         /// <summary>The is_workflow_app property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3IsWorkflowApp? IsWorkflowApp { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3IsWorkflowApp IsWorkflowApp { get; set; }
-#endif
+        public bool? IsWorkflowApp { get; set; }
         /// <summary>The label property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -245,13 +215,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement Label { get; set; }
 #endif
         /// <summary>The optional property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3Optional? Optional { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3Optional Optional { get; set; }
-#endif
+        public bool? Optional { get; set; }
         /// <summary>The owning_team_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -351,13 +315,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string TriggerType { get; set; }
 #endif
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3Type? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3Type Type { get; set; }
-#endif
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -409,7 +367,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "accessory", n => { Accessory = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Accessory3>(global::Soenneker.Slack.OpenApiClient.Models.Accessory3.CreateFromDiscriminatorValue); } },
                 { "alt_text", n => { AltText = n.GetStringValue(); } },
-                { "api_decoration_available", n => { ApiDecorationAvailable = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3ApiDecorationAvailable>(global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3ApiDecorationAvailable.CreateFromDiscriminatorValue); } },
+                { "api_decoration_available", n => { ApiDecorationAvailable = n.GetBoolValue(); } },
                 { "app_collaborators", n => { AppCollaborators = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "app_id", n => { AppId = n.GetStringValue(); } },
                 { "author_name", n => { AuthorName = n.GetStringValue(); } },
@@ -420,10 +378,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "call_id", n => { CallId = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement>(global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement.CreateFromDiscriminatorValue); } },
                 { "developer_trace_id", n => { DeveloperTraceId = n.GetStringValue(); } },
-                { "dispatch_action", n => { DispatchAction = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3DispatchAction>(global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3DispatchAction.CreateFromDiscriminatorValue); } },
+                { "dispatch_action", n => { DispatchAction = n.GetBoolValue(); } },
                 { "element", n => { Element = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Accessory3>(global::Soenneker.Slack.OpenApiClient.Models.Accessory3.CreateFromDiscriminatorValue); } },
                 { "elements", n => { Elements = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Accessory3>(global::Soenneker.Slack.OpenApiClient.Models.Accessory3.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "expand", n => { Expand = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3Expand>(global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3Expand.CreateFromDiscriminatorValue); } },
+                { "expand", n => { Expand = n.GetBoolValue(); } },
                 { "external_id", n => { ExternalId = n.GetStringValue(); } },
                 { "fallback", n => { Fallback = n.GetStringValue(); } },
                 { "fields", n => { Fields = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement>(global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -435,10 +393,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "image_height", n => { ImageHeight = n.GetDoubleValue(); } },
                 { "image_url", n => { ImageUrl = n.GetStringValue(); } },
                 { "image_width", n => { ImageWidth = n.GetDoubleValue(); } },
-                { "is_animated", n => { IsAnimated = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3IsAnimated>(global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3IsAnimated.CreateFromDiscriminatorValue); } },
-                { "is_workflow_app", n => { IsWorkflowApp = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3IsWorkflowApp>(global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3IsWorkflowApp.CreateFromDiscriminatorValue); } },
+                { "is_animated", n => { IsAnimated = n.GetBoolValue(); } },
+                { "is_workflow_app", n => { IsWorkflowApp = n.GetBoolValue(); } },
                 { "label", n => { Label = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement>(global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement.CreateFromDiscriminatorValue); } },
-                { "optional", n => { Optional = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3Optional>(global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3Optional.CreateFromDiscriminatorValue); } },
+                { "optional", n => { Optional = n.GetBoolValue(); } },
                 { "owning_team_id", n => { OwningTeamId = n.GetStringValue(); } },
                 { "provider_icon_url", n => { ProviderIconUrl = n.GetStringValue(); } },
                 { "provider_name", n => { ProviderName = n.GetStringValue(); } },
@@ -452,7 +410,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "title_url", n => { TitleUrl = n.GetStringValue(); } },
                 { "trigger_subtype", n => { TriggerSubtype = n.GetStringValue(); } },
                 { "trigger_type", n => { TriggerType = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3Type>(global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3Type.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3Type>(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "video_url", n => { VideoUrl = n.GetStringValue(); } },
                 { "workflow_id", n => { WorkflowId = n.GetStringValue(); } },
@@ -467,7 +425,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Accessory3>("accessory", Accessory);
             writer.WriteStringValue("alt_text", AltText);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3ApiDecorationAvailable>("api_decoration_available", ApiDecorationAvailable);
+            writer.WriteBoolValue("api_decoration_available", ApiDecorationAvailable);
             writer.WriteCollectionOfPrimitiveValues<string>("app_collaborators", AppCollaborators);
             writer.WriteStringValue("app_id", AppId);
             writer.WriteStringValue("author_name", AuthorName);
@@ -478,10 +436,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("call_id", CallId);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement>("description", Description);
             writer.WriteStringValue("developer_trace_id", DeveloperTraceId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3DispatchAction>("dispatch_action", DispatchAction);
+            writer.WriteBoolValue("dispatch_action", DispatchAction);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Accessory3>("element", Element);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Accessory3>("elements", Elements);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3Expand>("expand", Expand);
+            writer.WriteBoolValue("expand", Expand);
             writer.WriteStringValue("external_id", ExternalId);
             writer.WriteStringValue("fallback", Fallback);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement>("fields", Fields);
@@ -493,10 +451,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("image_height", ImageHeight);
             writer.WriteStringValue("image_url", ImageUrl);
             writer.WriteDoubleValue("image_width", ImageWidth);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3IsAnimated>("is_animated", IsAnimated);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3IsWorkflowApp>("is_workflow_app", IsWorkflowApp);
+            writer.WriteBoolValue("is_animated", IsAnimated);
+            writer.WriteBoolValue("is_workflow_app", IsWorkflowApp);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement>("label", Label);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3Optional>("optional", Optional);
+            writer.WriteBoolValue("optional", Optional);
             writer.WriteStringValue("owning_team_id", OwningTeamId);
             writer.WriteStringValue("provider_icon_url", ProviderIconUrl);
             writer.WriteStringValue("provider_name", ProviderName);
@@ -510,7 +468,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("title_url", TitleUrl);
             writer.WriteStringValue("trigger_subtype", TriggerSubtype);
             writer.WriteStringValue("trigger_type", TriggerType);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3Type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock3Type>("type", Type);
             writer.WriteStringValue("url", Url);
             writer.WriteStringValue("video_url", VideoUrl);
             writer.WriteStringValue("workflow_id", WorkflowId);

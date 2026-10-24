@@ -17,10 +17,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The scopes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.PreviousResolutionScopesItem>? Scopes { get; set; }
+        public UntypedNode? Scopes { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.PreviousResolutionScopesItem> Scopes { get; set; }
+        public UntypedNode Scopes { get; set; }
 #endif
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "scopes", n => { Scopes = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.PreviousResolutionScopesItem>(global::Soenneker.Slack.OpenApiClient.Models.PreviousResolutionScopesItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "scopes", n => { Scopes = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetStringValue(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.PreviousResolutionScopesItem>("scopes", Scopes);
+            writer.WriteObjectValue<UntypedNode>("scopes", Scopes);
             writer.WriteStringValue("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }

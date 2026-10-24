@@ -31,13 +31,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog Confirm { get; set; }
 #endif
         /// <summary>Indicates whether the element will be set to auto focus within the[`view` object](https://docs.slack.dev/surfaces/modals). Only one element can be set to `true`.Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.DateTimepickerFocusOnLoad? FocusOnLoad { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.DateTimepickerFocusOnLoad FocusOnLoad { get; set; }
-#endif
+        public bool? FocusOnLoad { get; set; }
         /// <summary>The initial date and time that is selected when the element is loaded, represented as a UNIXtimestamp in seconds. This should be in the format of 10 digits, for example `1628633820` represents the date andtime August 10th, 2021 at 03:17pm PST.</summary>
         public double? InitialDateTime { get; set; }
         /// <summary>The type of element. In this case `type` is always `datetimepicker`.</summary>
@@ -69,7 +63,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "action_id", n => { ActionId = n.GetStringValue(); } },
                 { "confirm", n => { Confirm = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog>(global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog.CreateFromDiscriminatorValue); } },
-                { "focus_on_load", n => { FocusOnLoad = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DateTimepickerFocusOnLoad>(global::Soenneker.Slack.OpenApiClient.Models.DateTimepickerFocusOnLoad.CreateFromDiscriminatorValue); } },
+                { "focus_on_load", n => { FocusOnLoad = n.GetBoolValue(); } },
                 { "initial_date_time", n => { InitialDateTime = n.GetDoubleValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.DatetimepickerType>(); } },
             };
@@ -83,7 +77,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("action_id", ActionId);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog>("confirm", Confirm);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DateTimepickerFocusOnLoad>("focus_on_load", FocusOnLoad);
+            writer.WriteBoolValue("focus_on_load", FocusOnLoad);
             writer.WriteDoubleValue("initial_date_time", InitialDateTime);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.DatetimepickerType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);

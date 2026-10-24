@@ -15,28 +15,16 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The exclude_bot_users property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.FilterExcludeBotUsers? ExcludeBotUsers { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.FilterExcludeBotUsers ExcludeBotUsers { get; set; }
-#endif
+        public bool? ExcludeBotUsers { get; set; }
         /// <summary>The exclude_external_shared_channels property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.FilterExcludeExternalSharedChannels? ExcludeExternalSharedChannels { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.FilterExcludeExternalSharedChannels ExcludeExternalSharedChannels { get; set; }
-#endif
+        public bool? ExcludeExternalSharedChannels { get; set; }
         /// <summary>The include property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.FilterIncludeItem>? Include { get; set; }
+        public UntypedNode? Include { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.FilterIncludeItem> Include { get; set; }
+        public UntypedNode Include { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Filter"/> and sets the default values.
@@ -63,9 +51,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "exclude_bot_users", n => { ExcludeBotUsers = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FilterExcludeBotUsers>(global::Soenneker.Slack.OpenApiClient.Models.FilterExcludeBotUsers.CreateFromDiscriminatorValue); } },
-                { "exclude_external_shared_channels", n => { ExcludeExternalSharedChannels = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FilterExcludeExternalSharedChannels>(global::Soenneker.Slack.OpenApiClient.Models.FilterExcludeExternalSharedChannels.CreateFromDiscriminatorValue); } },
-                { "include", n => { Include = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.FilterIncludeItem>(global::Soenneker.Slack.OpenApiClient.Models.FilterIncludeItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "exclude_bot_users", n => { ExcludeBotUsers = n.GetBoolValue(); } },
+                { "exclude_external_shared_channels", n => { ExcludeExternalSharedChannels = n.GetBoolValue(); } },
+                { "include", n => { Include = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -75,9 +63,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FilterExcludeBotUsers>("exclude_bot_users", ExcludeBotUsers);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FilterExcludeExternalSharedChannels>("exclude_external_shared_channels", ExcludeExternalSharedChannels);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.FilterIncludeItem>("include", Include);
+            writer.WriteBoolValue("exclude_bot_users", ExcludeBotUsers);
+            writer.WriteBoolValue("exclude_external_shared_channels", ExcludeExternalSharedChannels);
+            writer.WriteObjectValue<UntypedNode>("include", Include);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

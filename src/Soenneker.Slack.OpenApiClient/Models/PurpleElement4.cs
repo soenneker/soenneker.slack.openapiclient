@@ -99,13 +99,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Unicode { get; set; }
 #endif
         /// <summary>The unsafe property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.PurpleElement4Unsafe? Unsafe { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.PurpleElement4Unsafe Unsafe { get; set; }
-#endif
+        public bool? Unsafe { get; set; }
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -175,7 +169,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "timestamp", n => { Timestamp = n.GetDoubleValue(); } },
                 { "type", n => { Type = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement4Type>(global::Soenneker.Slack.OpenApiClient.Models.PurpleElement4Type.CreateFromDiscriminatorValue); } },
                 { "unicode", n => { Unicode = n.GetStringValue(); } },
-                { "unsafe", n => { Unsafe = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement4Unsafe>(global::Soenneker.Slack.OpenApiClient.Models.PurpleElement4Unsafe.CreateFromDiscriminatorValue); } },
+                { "unsafe", n => { Unsafe = n.GetBoolValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "user_id", n => { UserId = n.GetStringValue(); } },
                 { "usergroup_id", n => { UsergroupId = n.GetStringValue(); } },
@@ -201,7 +195,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("timestamp", Timestamp);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement4Type>("type", Type);
             writer.WriteStringValue("unicode", Unicode);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement4Unsafe>("unsafe", Unsafe);
+            writer.WriteBoolValue("unsafe", Unsafe);
             writer.WriteStringValue("url", Url);
             writer.WriteStringValue("usergroup_id", UsergroupId);
             writer.WriteStringValue("user_id", UserId);

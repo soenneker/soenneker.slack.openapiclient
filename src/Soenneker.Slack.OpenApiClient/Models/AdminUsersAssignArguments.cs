@@ -23,21 +23,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public List<string> ChannelIds { get; set; }
 #endif
         /// <summary>Set to `true` if user should be added to the workspace as a guest.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsersAssignArgumentsIsRestricted? IsRestricted { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsersAssignArgumentsIsRestricted IsRestricted { get; set; }
-#endif
+        public bool? IsRestricted { get; set; }
         /// <summary>Set to `true` if user should be added to the workspace as a guest.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsersAssignArgumentsIsUltraRestricted? IsUltraRestricted { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsersAssignArgumentsIsUltraRestricted IsUltraRestricted { get; set; }
-#endif
+        public bool? IsUltraRestricted { get; set; }
         /// <summary>The encoded team ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -88,8 +76,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "channel_ids", n => { ChannelIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "is_restricted", n => { IsRestricted = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminUsersAssignArgumentsIsRestricted>(global::Soenneker.Slack.OpenApiClient.Models.AdminUsersAssignArgumentsIsRestricted.CreateFromDiscriminatorValue); } },
-                { "is_ultra_restricted", n => { IsUltraRestricted = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminUsersAssignArgumentsIsUltraRestricted>(global::Soenneker.Slack.OpenApiClient.Models.AdminUsersAssignArgumentsIsUltraRestricted.CreateFromDiscriminatorValue); } },
+                { "is_restricted", n => { IsRestricted = n.GetBoolValue(); } },
+                { "is_ultra_restricted", n => { IsUltraRestricted = n.GetBoolValue(); } },
                 { "team_id", n => { TeamId = n.GetStringValue(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
                 { "user_id", n => { UserId = n.GetStringValue(); } },
@@ -103,8 +91,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("channel_ids", ChannelIds);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminUsersAssignArgumentsIsRestricted>("is_restricted", IsRestricted);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminUsersAssignArgumentsIsUltraRestricted>("is_ultra_restricted", IsUltraRestricted);
+            writer.WriteBoolValue("is_restricted", IsRestricted);
+            writer.WriteBoolValue("is_ultra_restricted", IsUltraRestricted);
             writer.WriteStringValue("team_id", TeamId);
             writer.WriteStringValue("token", Token);
             writer.WriteStringValue("user_id", UserId);

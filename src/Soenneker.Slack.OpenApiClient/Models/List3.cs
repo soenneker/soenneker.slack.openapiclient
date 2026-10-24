@@ -27,13 +27,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The created property</summary>
         public double? Created { get; set; }
         /// <summary>The display_as_bot property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.List3DisplayAsBot? DisplayAsBot { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.List3DisplayAsBot DisplayAsBot { get; set; }
-#endif
+        public bool? DisplayAsBot { get; set; }
         /// <summary>The dm_mpdm_users_with_file_access property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -43,13 +37,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public List<global::Soenneker.Slack.OpenApiClient.Models.DmMpdmUsersWithFileAccess> DmMpdmUsersWithFileAccess { get; set; }
 #endif
         /// <summary>The editable property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.List3Editable? Editable { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.List3Editable Editable { get; set; }
-#endif
+        public bool? Editable { get; set; }
         /// <summary>The external_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -83,21 +71,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public List<string> Groups { get; set; }
 #endif
         /// <summary>The has_more_shares property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.List3HasMoreShares? HasMoreShares { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.List3HasMoreShares HasMoreShares { get; set; }
-#endif
+        public bool? HasMoreShares { get; set; }
         /// <summary>The has_rich_preview property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.List3HasRichPreview? HasRichPreview { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.List3HasRichPreview HasRichPreview { get; set; }
-#endif
+        public bool? HasRichPreview { get; set; }
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -115,21 +91,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public List<string> Ims { get; set; }
 #endif
         /// <summary>The is_external property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.List3IsExternal? IsExternal { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.List3IsExternal IsExternal { get; set; }
-#endif
+        public bool? IsExternal { get; set; }
         /// <summary>The is_public property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.List3IsPublic? IsPublic { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.List3IsPublic IsPublic { get; set; }
-#endif
+        public bool? IsPublic { get; set; }
         /// <summary>The last_editor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -207,13 +171,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The private_file_with_access_count property</summary>
         public double? PrivateFileWithAccessCount { get; set; }
         /// <summary>The public_url_shared property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.List3PublicUrlShared? PublicUrlShared { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.List3PublicUrlShared PublicUrlShared { get; set; }
-#endif
+        public bool? PublicUrlShared { get; set; }
         /// <summary>The shares property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -304,19 +262,19 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "channels", n => { Channels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "comments_count", n => { CommentsCount = n.GetDoubleValue(); } },
                 { "created", n => { Created = n.GetDoubleValue(); } },
-                { "display_as_bot", n => { DisplayAsBot = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.List3DisplayAsBot>(global::Soenneker.Slack.OpenApiClient.Models.List3DisplayAsBot.CreateFromDiscriminatorValue); } },
+                { "display_as_bot", n => { DisplayAsBot = n.GetBoolValue(); } },
                 { "dm_mpdm_users_with_file_access", n => { DmMpdmUsersWithFileAccess = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.DmMpdmUsersWithFileAccess>(global::Soenneker.Slack.OpenApiClient.Models.DmMpdmUsersWithFileAccess.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "editable", n => { Editable = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.List3Editable>(global::Soenneker.Slack.OpenApiClient.Models.List3Editable.CreateFromDiscriminatorValue); } },
+                { "editable", n => { Editable = n.GetBoolValue(); } },
                 { "external_type", n => { ExternalType = n.GetStringValue(); } },
                 { "file_access", n => { FileAccess = n.GetStringValue(); } },
                 { "filetype", n => { Filetype = n.GetStringValue(); } },
                 { "groups", n => { Groups = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "has_more_shares", n => { HasMoreShares = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.List3HasMoreShares>(global::Soenneker.Slack.OpenApiClient.Models.List3HasMoreShares.CreateFromDiscriminatorValue); } },
-                { "has_rich_preview", n => { HasRichPreview = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.List3HasRichPreview>(global::Soenneker.Slack.OpenApiClient.Models.List3HasRichPreview.CreateFromDiscriminatorValue); } },
+                { "has_more_shares", n => { HasMoreShares = n.GetBoolValue(); } },
+                { "has_rich_preview", n => { HasRichPreview = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "ims", n => { Ims = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "is_external", n => { IsExternal = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.List3IsExternal>(global::Soenneker.Slack.OpenApiClient.Models.List3IsExternal.CreateFromDiscriminatorValue); } },
-                { "is_public", n => { IsPublic = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.List3IsPublic>(global::Soenneker.Slack.OpenApiClient.Models.List3IsPublic.CreateFromDiscriminatorValue); } },
+                { "is_external", n => { IsExternal = n.GetBoolValue(); } },
+                { "is_public", n => { IsPublic = n.GetBoolValue(); } },
                 { "last_editor", n => { LastEditor = n.GetStringValue(); } },
                 { "list_limits", n => { ListLimits = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListLimits>(global::Soenneker.Slack.OpenApiClient.Models.ListLimits.CreateFromDiscriminatorValue); } },
                 { "list_metadata", n => { ListMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata>(global::Soenneker.Slack.OpenApiClient.Models.ListMetadata.CreateFromDiscriminatorValue); } },
@@ -328,7 +286,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "pretty_type", n => { PrettyType = n.GetStringValue(); } },
                 { "private_channels_with_file_access_count", n => { PrivateChannelsWithFileAccessCount = n.GetDoubleValue(); } },
                 { "private_file_with_access_count", n => { PrivateFileWithAccessCount = n.GetDoubleValue(); } },
-                { "public_url_shared", n => { PublicUrlShared = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.List3PublicUrlShared>(global::Soenneker.Slack.OpenApiClient.Models.List3PublicUrlShared.CreateFromDiscriminatorValue); } },
+                { "public_url_shared", n => { PublicUrlShared = n.GetBoolValue(); } },
                 { "shares", n => { Shares = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.List3Shares>(global::Soenneker.Slack.OpenApiClient.Models.List3Shares.CreateFromDiscriminatorValue); } },
                 { "size", n => { Size = n.GetDoubleValue(); } },
                 { "timestamp", n => { Timestamp = n.GetDoubleValue(); } },
@@ -351,19 +309,19 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("channels", Channels);
             writer.WriteDoubleValue("comments_count", CommentsCount);
             writer.WriteDoubleValue("created", Created);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.List3DisplayAsBot>("display_as_bot", DisplayAsBot);
+            writer.WriteBoolValue("display_as_bot", DisplayAsBot);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.DmMpdmUsersWithFileAccess>("dm_mpdm_users_with_file_access", DmMpdmUsersWithFileAccess);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.List3Editable>("editable", Editable);
+            writer.WriteBoolValue("editable", Editable);
             writer.WriteStringValue("external_type", ExternalType);
             writer.WriteStringValue("file_access", FileAccess);
             writer.WriteStringValue("filetype", Filetype);
             writer.WriteCollectionOfPrimitiveValues<string>("groups", Groups);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.List3HasMoreShares>("has_more_shares", HasMoreShares);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.List3HasRichPreview>("has_rich_preview", HasRichPreview);
+            writer.WriteBoolValue("has_more_shares", HasMoreShares);
+            writer.WriteBoolValue("has_rich_preview", HasRichPreview);
             writer.WriteStringValue("id", Id);
             writer.WriteCollectionOfPrimitiveValues<string>("ims", Ims);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.List3IsExternal>("is_external", IsExternal);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.List3IsPublic>("is_public", IsPublic);
+            writer.WriteBoolValue("is_external", IsExternal);
+            writer.WriteBoolValue("is_public", IsPublic);
             writer.WriteStringValue("last_editor", LastEditor);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListLimits>("list_limits", ListLimits);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata>("list_metadata", ListMetadata);
@@ -375,7 +333,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("pretty_type", PrettyType);
             writer.WriteDoubleValue("private_channels_with_file_access_count", PrivateChannelsWithFileAccessCount);
             writer.WriteDoubleValue("private_file_with_access_count", PrivateFileWithAccessCount);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.List3PublicUrlShared>("public_url_shared", PublicUrlShared);
+            writer.WriteBoolValue("public_url_shared", PublicUrlShared);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.List3Shares>("shares", Shares);
             writer.WriteDoubleValue("size", Size);
             writer.WriteDoubleValue("timestamp", Timestamp);

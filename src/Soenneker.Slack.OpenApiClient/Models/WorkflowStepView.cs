@@ -47,13 +47,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string PrivateMetadata { get; set; }
 #endif
         /// <summary>When set to `true`, disables the submit button until the user has completed one or more inputs.Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepViewSubmitDisabled? SubmitDisabled { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepViewSubmitDisabled SubmitDisabled { get; set; }
-#endif
+        public bool? SubmitDisabled { get; set; }
         /// <summary>The type property</summary>
         public global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepType? Type { get; set; }
         /// <summary>
@@ -85,7 +79,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "callback_id", n => { CallbackId = n.GetStringValue(); } },
                 { "external_id", n => { ExternalId = n.GetStringValue(); } },
                 { "private_metadata", n => { PrivateMetadata = n.GetStringValue(); } },
-                { "submit_disabled", n => { SubmitDisabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepViewSubmitDisabled>(global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepViewSubmitDisabled.CreateFromDiscriminatorValue); } },
+                { "submit_disabled", n => { SubmitDisabled = n.GetBoolValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepType>(); } },
             };
         }
@@ -100,7 +94,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("callback_id", CallbackId);
             writer.WriteStringValue("external_id", ExternalId);
             writer.WriteStringValue("private_metadata", PrivateMetadata);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepViewSubmitDisabled>("submit_disabled", SubmitDisabled);
+            writer.WriteBoolValue("submit_disabled", SubmitDisabled);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -23,21 +23,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string FileId { get; set; }
 #endif
         /// <summary>The is_empty property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.PropertiesCanvasIsEmpty? IsEmpty { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.PropertiesCanvasIsEmpty IsEmpty { get; set; }
-#endif
+        public bool? IsEmpty { get; set; }
         /// <summary>The is_migrated property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.PropertiesCanvasIsMigrated? IsMigrated { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.PropertiesCanvasIsMigrated IsMigrated { get; set; }
-#endif
+        public bool? IsMigrated { get; set; }
         /// <summary>The quip_thread_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -72,8 +60,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "file_id", n => { FileId = n.GetStringValue(); } },
-                { "is_empty", n => { IsEmpty = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PropertiesCanvasIsEmpty>(global::Soenneker.Slack.OpenApiClient.Models.PropertiesCanvasIsEmpty.CreateFromDiscriminatorValue); } },
-                { "is_migrated", n => { IsMigrated = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PropertiesCanvasIsMigrated>(global::Soenneker.Slack.OpenApiClient.Models.PropertiesCanvasIsMigrated.CreateFromDiscriminatorValue); } },
+                { "is_empty", n => { IsEmpty = n.GetBoolValue(); } },
+                { "is_migrated", n => { IsMigrated = n.GetBoolValue(); } },
                 { "quip_thread_id", n => { QuipThreadId = n.GetStringValue(); } },
             };
         }
@@ -85,8 +73,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("file_id", FileId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PropertiesCanvasIsEmpty>("is_empty", IsEmpty);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PropertiesCanvasIsMigrated>("is_migrated", IsMigrated);
+            writer.WriteBoolValue("is_empty", IsEmpty);
+            writer.WriteBoolValue("is_migrated", IsMigrated);
             writer.WriteStringValue("quip_thread_id", QuipThreadId);
             writer.WriteAdditionalData(AdditionalData);
         }

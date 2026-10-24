@@ -31,13 +31,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Description { get; set; }
 #endif
         /// <summary>The should_escape property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.SlashCommandShouldEscape? ShouldEscape { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.SlashCommandShouldEscape ShouldEscape { get; set; }
-#endif
+        public bool? ShouldEscape { get; set; }
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -81,7 +75,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "command", n => { Command = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "should_escape", n => { ShouldEscape = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlashCommandShouldEscape>(global::Soenneker.Slack.OpenApiClient.Models.SlashCommandShouldEscape.CreateFromDiscriminatorValue); } },
+                { "should_escape", n => { ShouldEscape = n.GetBoolValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "usage_hint", n => { UsageHint = n.GetStringValue(); } },
             };
@@ -95,7 +89,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("command", Command);
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlashCommandShouldEscape>("should_escape", ShouldEscape);
+            writer.WriteBoolValue("should_escape", ShouldEscape);
             writer.WriteStringValue("url", Url);
             writer.WriteStringValue("usage_hint", UsageHint);
             writer.WriteAdditionalData(AdditionalData);

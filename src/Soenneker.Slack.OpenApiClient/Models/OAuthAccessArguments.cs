@@ -47,13 +47,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string RedirectUri { get; set; }
 #endif
         /// <summary>Request the user to add your app only to a single channel. Only valid with a [legacy workspace app](https://docs.slack.dev/legacy/legacy-steps-from-apps). Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.OAuthAccessArgumentsSingleChannel? SingleChannel { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.OAuthAccessArgumentsSingleChannel SingleChannel { get; set; }
-#endif
+        public bool? SingleChannel { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.OAuthAccessArguments"/> and sets the default values.
         /// </summary>
@@ -83,7 +77,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "client_secret", n => { ClientSecret = n.GetStringValue(); } },
                 { "code", n => { Code = n.GetStringValue(); } },
                 { "redirect_uri", n => { RedirectUri = n.GetStringValue(); } },
-                { "single_channel", n => { SingleChannel = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.OAuthAccessArgumentsSingleChannel>(global::Soenneker.Slack.OpenApiClient.Models.OAuthAccessArgumentsSingleChannel.CreateFromDiscriminatorValue); } },
+                { "single_channel", n => { SingleChannel = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -97,7 +91,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("client_secret", ClientSecret);
             writer.WriteStringValue("code", Code);
             writer.WriteStringValue("redirect_uri", RedirectUri);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.OAuthAccessArgumentsSingleChannel>("single_channel", SingleChannel);
+            writer.WriteBoolValue("single_channel", SingleChannel);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

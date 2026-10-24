@@ -31,13 +31,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string BlockId { get; set; }
 #endif
         /// <summary>Whether or not this section block&apos;s text should always expand when rendered. If false or not provided, it may be rendered with a &apos;see more&apos; option to expand and show the full text. For AI Assistant apps, this allows the app to post long messages without users needing to click &apos;see more&apos; to expand the message.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.SectionBlockExpand? Expand { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.SectionBlockExpand Expand { get; set; }
-#endif
+        public bool? Expand { get; set; }
         /// <summary>Required if no `text` is provided. An array of text objects. Any text objects included with `fields`will be rendered in a compact format that allows for 2 columns of side-by-side text. Maximum number of items is 10.Maximum length for the text in each item is 2000 characters.[Click here for an example](https://app.slack.com/block-kit-builder/#%7B%22blocks%22:%5B%7B%22type%22:%22section%22,%22text%22:%7B%22text%22:%22A%20message%20*with%20some%20bold%20text*%20and%20_some%20italicized%20text_.%22,%22type%22:%22mrkdwn%22%7D,%22fields%22:%5B%7B%22type%22:%22mrkdwn%22,%22text%22:%22*Priority*%22%7D,%7B%22type%22:%22mrkdwn%22,%22text%22:%22*Type*%22%7D,%7B%22type%22:%22plain_text%22,%22text%22:%22High%22%7D,%7B%22type%22:%22plain_text%22,%22text%22:%22String%22%7D%5D%7D%5D%7D).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -83,7 +77,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "accessory", n => { Accessory = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SectionBlockAccessory>(global::Soenneker.Slack.OpenApiClient.Models.SectionBlockAccessory.CreateFromDiscriminatorValue); } },
                 { "block_id", n => { BlockId = n.GetStringValue(); } },
-                { "expand", n => { Expand = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SectionBlockExpand>(global::Soenneker.Slack.OpenApiClient.Models.SectionBlockExpand.CreateFromDiscriminatorValue); } },
+                { "expand", n => { Expand = n.GetBoolValue(); } },
                 { "fields", n => { Fields = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.TextObject>(global::Soenneker.Slack.OpenApiClient.Models.TextObject.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "text", n => { Text = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SectionBlockText>(global::Soenneker.Slack.OpenApiClient.Models.SectionBlockText.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.SectionBlockType>(); } },
@@ -98,7 +92,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SectionBlockAccessory>("accessory", Accessory);
             writer.WriteStringValue("block_id", BlockId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SectionBlockExpand>("expand", Expand);
+            writer.WriteBoolValue("expand", Expand);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.TextObject>("fields", Fields);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SectionBlockText>("text", Text);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.SectionBlockType>("type", Type);

@@ -19,13 +19,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The date_due property</summary>
         public double? DateDue { get; set; }
         /// <summary>The is_archived property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.SavedIsArchived? IsArchived { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.SavedIsArchived IsArchived { get; set; }
-#endif
+        public bool? IsArchived { get; set; }
         /// <summary>The state property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -61,7 +55,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "date_completed", n => { DateCompleted = n.GetDoubleValue(); } },
                 { "date_due", n => { DateDue = n.GetDoubleValue(); } },
-                { "is_archived", n => { IsArchived = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SavedIsArchived>(global::Soenneker.Slack.OpenApiClient.Models.SavedIsArchived.CreateFromDiscriminatorValue); } },
+                { "is_archived", n => { IsArchived = n.GetBoolValue(); } },
                 { "state", n => { State = n.GetStringValue(); } },
             };
         }
@@ -74,7 +68,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("date_completed", DateCompleted);
             writer.WriteDoubleValue("date_due", DateDue);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SavedIsArchived>("is_archived", IsArchived);
+            writer.WriteBoolValue("is_archived", IsArchived);
             writer.WriteStringValue("state", State);
             writer.WriteAdditionalData(AdditionalData);
         }

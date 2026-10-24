@@ -15,13 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>When `true`, this method automatically creates new workspace accounts for the IDP group members.Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsergroupsAddTeamsArgumentsAutoProvision? AutoProvision { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsergroupsAddTeamsArgumentsAutoProvision AutoProvision { get; set; }
-#endif
+        public bool? AutoProvision { get; set; }
         /// <summary>One or more encoded team (workspace) IDs.Each workspace MUST belong to the organization associated with the token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -71,7 +65,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "auto_provision", n => { AutoProvision = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminUsergroupsAddTeamsArgumentsAutoProvision>(global::Soenneker.Slack.OpenApiClient.Models.AdminUsergroupsAddTeamsArgumentsAutoProvision.CreateFromDiscriminatorValue); } },
+                { "auto_provision", n => { AutoProvision = n.GetBoolValue(); } },
                 { "team_ids", n => { TeamIds = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminUsergroupsAddTeamsArgumentsTeamIds>(global::Soenneker.Slack.OpenApiClient.Models.AdminUsergroupsAddTeamsArgumentsTeamIds.CreateFromDiscriminatorValue); } },
                 { "token", n => { Token = n.GetStringValue(); } },
                 { "usergroup_id", n => { UsergroupId = n.GetStringValue(); } },
@@ -84,7 +78,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminUsergroupsAddTeamsArgumentsAutoProvision>("auto_provision", AutoProvision);
+            writer.WriteBoolValue("auto_provision", AutoProvision);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminUsergroupsAddTeamsArgumentsTeamIds>("team_ids", TeamIds);
             writer.WriteStringValue("token", Token);
             writer.WriteStringValue("usergroup_id", UsergroupId);

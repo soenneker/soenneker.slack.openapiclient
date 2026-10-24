@@ -47,28 +47,22 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string AppName { get; set; }
 #endif
         /// <summary>The app_provides_file_work_objects property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileAppProvidesFileWorkObjects? AppProvidesFileWorkObjects { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileAppProvidesFileWorkObjects AppProvidesFileWorkObjects { get; set; }
-#endif
+        public bool? AppProvidesFileWorkObjects { get; set; }
         /// <summary>The attachments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageFileAttachmentsItem>? Attachments { get; set; }
+        public UntypedNode? Attachments { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageFileAttachmentsItem> Attachments { get; set; }
+        public UntypedNode Attachments { get; set; }
 #endif
         /// <summary>The blocks property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageFileBlocksItem>? Blocks { get; set; }
+        public UntypedNode? Blocks { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageFileBlocksItem> Blocks { get; set; }
+        public UntypedNode Blocks { get; set; }
 #endif
         /// <summary>The bot_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -79,13 +73,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string BotId { get; set; }
 #endif
         /// <summary>The can_toggle_canvas_lock property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileCanToggleCanvasLock? CanToggleCanvasLock { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileCanToggleCanvasLock CanToggleCanvasLock { get; set; }
-#endif
+        public bool? CanToggleCanvasLock { get; set; }
         /// <summary>The canvas_creator_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -95,13 +83,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string CanvasCreatorId { get; set; }
 #endif
         /// <summary>The canvas_printing_enabled property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileCanvasPrintingEnabled? CanvasPrintingEnabled { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileCanvasPrintingEnabled CanvasPrintingEnabled { get; set; }
-#endif
+        public bool? CanvasPrintingEnabled { get; set; }
         /// <summary>The canvas_readtime property</summary>
         public double? CanvasReadtime { get; set; }
         /// <summary>The canvas_template_mode property</summary>
@@ -115,10 +97,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The cc property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageFileCcItem>? Cc { get; set; }
+        public UntypedNode? Cc { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageFileCcItem> Cc { get; set; }
+        public UntypedNode Cc { get; set; }
 #endif
         /// <summary>The channel_actions_count property</summary>
         public double? ChannelActionsCount { get; set; }
@@ -133,10 +115,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The channels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageFileChannelsItem>? Channels { get; set; }
+        public UntypedNode? Channels { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageFileChannelsItem> Channels { get; set; }
+        public UntypedNode Channels { get; set; }
 #endif
         /// <summary>The comments_count property</summary>
         public double? CommentsCount { get; set; }
@@ -167,31 +149,19 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string DeanimateGif { get; set; }
 #endif
         /// <summary>The display_as_bot property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileDisplayAsBot? DisplayAsBot { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileDisplayAsBot DisplayAsBot { get; set; }
-#endif
+        public bool? DisplayAsBot { get; set; }
         /// <summary>The dm_mpdm_users_with_file_access property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageFileDmMpdmUsersWithFileAccessItem>? DmMpdmUsersWithFileAccess { get; set; }
+        public UntypedNode? DmMpdmUsersWithFileAccess { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageFileDmMpdmUsersWithFileAccessItem> DmMpdmUsersWithFileAccess { get; set; }
+        public UntypedNode DmMpdmUsersWithFileAccess { get; set; }
 #endif
         /// <summary>The duration_ms property</summary>
         public double? DurationMs { get; set; }
         /// <summary>The editable property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileEditable? Editable { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileEditable Editable { get; set; }
-#endif
+        public bool? Editable { get; set; }
         /// <summary>The edit_link property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -211,10 +181,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The editors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageFileEditorsItem>? Editors { get; set; }
+        public UntypedNode? Editors { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageFileEditorsItem> Editors { get; set; }
+        public UntypedNode Editors { get; set; }
 #endif
         /// <summary>The edit_timestamp property</summary>
         public double? EditTimestamp { get; set; }
@@ -245,10 +215,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The favorites property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageFileFavoritesItem>? Favorites { get; set; }
+        public UntypedNode? Favorites { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageFileFavoritesItem> Favorites { get; set; }
+        public UntypedNode Favorites { get; set; }
 #endif
         /// <summary>The file_access property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -269,43 +239,25 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The from property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageFileFromItem>? From { get; set; }
+        public UntypedNode? From { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageFileFromItem> From { get; set; }
+        public UntypedNode From { get; set; }
 #endif
         /// <summary>The groups property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageFileGroupsItem>? Groups { get; set; }
+        public UntypedNode? Groups { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageFileGroupsItem> Groups { get; set; }
+        public UntypedNode Groups { get; set; }
 #endif
         /// <summary>The has_more property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileHasMore? HasMore { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileHasMore HasMore { get; set; }
-#endif
+        public bool? HasMore { get; set; }
         /// <summary>The has_more_shares property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileHasMoreShares? HasMoreShares { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileHasMoreShares HasMoreShares { get; set; }
-#endif
+        public bool? HasMoreShares { get; set; }
         /// <summary>The has_rich_preview property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileHasRichPreview? HasRichPreview { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileHasRichPreview HasRichPreview { get; set; }
-#endif
+        public bool? HasRichPreview { get; set; }
         /// <summary>The headers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -343,10 +295,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The ims property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageFileImsItem>? Ims { get; set; }
+        public UntypedNode? Ims { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageFileImsItem> Ims { get; set; }
+        public UntypedNode Ims { get; set; }
 #endif
         /// <summary>The initial_comment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -359,61 +311,19 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The inline_attachment_count property</summary>
         public double? InlineAttachmentCount { get; set; }
         /// <summary>The is_ai_suggested property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsAiSuggested? IsAiSuggested { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsAiSuggested IsAiSuggested { get; set; }
-#endif
+        public bool? IsAiSuggested { get; set; }
         /// <summary>The is_channel_space property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsChannelSpace? IsChannelSpace { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsChannelSpace IsChannelSpace { get; set; }
-#endif
+        public bool? IsChannelSpace { get; set; }
         /// <summary>The is_external property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsExternal? IsExternal { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsExternal IsExternal { get; set; }
-#endif
+        public bool? IsExternal { get; set; }
         /// <summary>The is_modified_by_ai property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsModifiedByAi? IsModifiedByAi { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsModifiedByAi IsModifiedByAi { get; set; }
-#endif
+        public bool? IsModifiedByAi { get; set; }
         /// <summary>The is_public property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsPublic? IsPublic { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsPublic IsPublic { get; set; }
-#endif
+        public bool? IsPublic { get; set; }
         /// <summary>The is_restricted_sharing_enabled property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsRestrictedSharingEnabled? IsRestrictedSharingEnabled { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsRestrictedSharingEnabled IsRestrictedSharingEnabled { get; set; }
-#endif
+        public bool? IsRestrictedSharingEnabled { get; set; }
         /// <summary>The is_starred property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsStarred? IsStarred { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsStarred IsStarred { get; set; }
-#endif
+        public bool? IsStarred { get; set; }
         /// <summary>The last_editor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -517,13 +427,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>The non_owner_editable property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileNonOwnerEditable? NonOwnerEditable { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileNonOwnerEditable NonOwnerEditable { get; set; }
-#endif
+        public bool? NonOwnerEditable { get; set; }
         /// <summary>The num_stars property</summary>
         public double? NumStars { get; set; }
         /// <summary>The org_or_workspace_access property</summary>
@@ -571,10 +475,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The pinned_to property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageFilePinnedToItem>? PinnedTo { get; set; }
+        public UntypedNode? PinnedTo { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageFilePinnedToItem> PinnedTo { get; set; }
+        public UntypedNode PinnedTo { get; set; }
 #endif
         /// <summary>The pjpeg property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -617,13 +521,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string PreviewHighlight { get; set; }
 #endif
         /// <summary>The preview_is_truncated property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFilePreviewIsTruncated? PreviewIsTruncated { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFilePreviewIsTruncated PreviewIsTruncated { get; set; }
-#endif
+        public bool? PreviewIsTruncated { get; set; }
         /// <summary>The preview_plain_text property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -637,13 +535,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The private_file_with_access_count property</summary>
         public double? PrivateFileWithAccessCount { get; set; }
         /// <summary>The public_url_shared property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFilePublicUrlShared? PublicUrlShared { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFilePublicUrlShared PublicUrlShared { get; set; }
-#endif
+        public bool? PublicUrlShared { get; set; }
         /// <summary>The quip_thread_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -655,10 +547,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The reactions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageFileReactionsItem>? Reactions { get; set; }
+        public UntypedNode? Reactions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageFileReactionsItem> Reactions { get; set; }
+        public UntypedNode Reactions { get; set; }
 #endif
         /// <summary>The saved property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -669,13 +561,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.Saved Saved { get; set; }
 #endif
         /// <summary>The sent_to_self property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileSentToSelf? SentToSelf { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileSentToSelf SentToSelf { get; set; }
-#endif
+        public bool? SentToSelf { get; set; }
         /// <summary>The shares property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -685,13 +571,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.MessageFileShares Shares { get; set; }
 #endif
         /// <summary>The show_badge property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileShowBadge? ShowBadge { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileShowBadge ShowBadge { get; set; }
-#endif
+        public bool? ShowBadge { get; set; }
         /// <summary>The simplified_html property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -703,13 +583,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The size property</summary>
         public double? Size { get; set; }
         /// <summary>The skipped_shares property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileSkippedShares? SkippedShares { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileSkippedShares SkippedShares { get; set; }
-#endif
+        public bool? SkippedShares { get; set; }
         /// <summary>The source_team property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -735,20 +609,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Subtype { get; set; }
 #endif
         /// <summary>The team_pref_version_history_enabled property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileTeamPrefVersionHistoryEnabled? TeamPrefVersionHistoryEnabled { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageFileTeamPrefVersionHistoryEnabled TeamPrefVersionHistoryEnabled { get; set; }
-#endif
+        public bool? TeamPrefVersionHistoryEnabled { get; set; }
         /// <summary>The teams_shared_with property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageFileTeamsSharedWithItem>? TeamsSharedWith { get; set; }
+        public UntypedNode? TeamsSharedWith { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageFileTeamsSharedWithItem> TeamsSharedWith { get; set; }
+        public UntypedNode TeamsSharedWith { get; set; }
 #endif
         /// <summary>The template_conversion_ts property</summary>
         public double? TemplateConversionTs { get; set; }
@@ -1137,18 +1005,18 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The title_blocks property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageFileTitleBlocksItem>? TitleBlocks { get; set; }
+        public UntypedNode? TitleBlocks { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageFileTitleBlocksItem> TitleBlocks { get; set; }
+        public UntypedNode TitleBlocks { get; set; }
 #endif
         /// <summary>The to property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageFileToItem>? To { get; set; }
+        public UntypedNode? To { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MessageFileToItem> To { get; set; }
+        public UntypedNode To { get; set; }
 #endif
         /// <summary>The transcription property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -1247,58 +1115,58 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "alt_txt", n => { AltTxt = n.GetStringValue(); } },
                 { "app_id", n => { AppId = n.GetStringValue(); } },
                 { "app_name", n => { AppName = n.GetStringValue(); } },
-                { "app_provides_file_work_objects", n => { AppProvidesFileWorkObjects = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileAppProvidesFileWorkObjects>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileAppProvidesFileWorkObjects.CreateFromDiscriminatorValue); } },
-                { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageFileAttachmentsItem>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileAttachmentsItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "blocks", n => { Blocks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageFileBlocksItem>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileBlocksItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "app_provides_file_work_objects", n => { AppProvidesFileWorkObjects = n.GetBoolValue(); } },
+                { "attachments", n => { Attachments = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "blocks", n => { Blocks = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "bot_id", n => { BotId = n.GetStringValue(); } },
-                { "can_toggle_canvas_lock", n => { CanToggleCanvasLock = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileCanToggleCanvasLock>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileCanToggleCanvasLock.CreateFromDiscriminatorValue); } },
+                { "can_toggle_canvas_lock", n => { CanToggleCanvasLock = n.GetBoolValue(); } },
                 { "canvas_creator_id", n => { CanvasCreatorId = n.GetStringValue(); } },
-                { "canvas_printing_enabled", n => { CanvasPrintingEnabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileCanvasPrintingEnabled>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileCanvasPrintingEnabled.CreateFromDiscriminatorValue); } },
+                { "canvas_printing_enabled", n => { CanvasPrintingEnabled = n.GetBoolValue(); } },
                 { "canvas_readtime", n => { CanvasReadtime = n.GetDoubleValue(); } },
                 { "canvas_template_mode", n => { CanvasTemplateMode = n.GetStringValue(); } },
-                { "cc", n => { Cc = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageFileCcItem>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileCcItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "cc", n => { Cc = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "channel_actions_count", n => { ChannelActionsCount = n.GetDoubleValue(); } },
                 { "channel_actions_ts", n => { ChannelActionsTs = n.GetStringValue(); } },
-                { "channels", n => { Channels = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageFileChannelsItem>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileChannelsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "channels", n => { Channels = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "comments_count", n => { CommentsCount = n.GetDoubleValue(); } },
                 { "converted_pdf", n => { ConvertedPdf = n.GetStringValue(); } },
                 { "created", n => { Created = n.GetDoubleValue(); } },
                 { "deanimate", n => { Deanimate = n.GetStringValue(); } },
                 { "deanimate_gif", n => { DeanimateGif = n.GetStringValue(); } },
-                { "display_as_bot", n => { DisplayAsBot = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileDisplayAsBot>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileDisplayAsBot.CreateFromDiscriminatorValue); } },
-                { "dm_mpdm_users_with_file_access", n => { DmMpdmUsersWithFileAccess = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageFileDmMpdmUsersWithFileAccessItem>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileDmMpdmUsersWithFileAccessItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "display_as_bot", n => { DisplayAsBot = n.GetBoolValue(); } },
+                { "dm_mpdm_users_with_file_access", n => { DmMpdmUsersWithFileAccess = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "duration_ms", n => { DurationMs = n.GetDoubleValue(); } },
                 { "edit_link", n => { EditLink = n.GetStringValue(); } },
                 { "edit_timestamp", n => { EditTimestamp = n.GetDoubleValue(); } },
-                { "editable", n => { Editable = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileEditable>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileEditable.CreateFromDiscriminatorValue); } },
+                { "editable", n => { Editable = n.GetBoolValue(); } },
                 { "editor", n => { Editor = n.GetStringValue(); } },
-                { "editors", n => { Editors = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageFileEditorsItem>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileEditorsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "editors", n => { Editors = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "external_id", n => { ExternalId = n.GetStringValue(); } },
                 { "external_type", n => { ExternalType = n.GetStringValue(); } },
                 { "external_url", n => { ExternalUrl = n.GetStringValue(); } },
-                { "favorites", n => { Favorites = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageFileFavoritesItem>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileFavoritesItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "favorites", n => { Favorites = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "file_access", n => { FileAccess = n.GetStringValue(); } },
                 { "filetype", n => { Filetype = n.GetStringValue(); } },
-                { "from", n => { From = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageFileFromItem>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileFromItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "groups", n => { Groups = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageFileGroupsItem>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileGroupsItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "has_more", n => { HasMore = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileHasMore>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileHasMore.CreateFromDiscriminatorValue); } },
-                { "has_more_shares", n => { HasMoreShares = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileHasMoreShares>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileHasMoreShares.CreateFromDiscriminatorValue); } },
-                { "has_rich_preview", n => { HasRichPreview = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileHasRichPreview>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileHasRichPreview.CreateFromDiscriminatorValue); } },
+                { "from", n => { From = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "groups", n => { Groups = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "has_more", n => { HasMore = n.GetBoolValue(); } },
+                { "has_more_shares", n => { HasMoreShares = n.GetBoolValue(); } },
+                { "has_rich_preview", n => { HasRichPreview = n.GetBoolValue(); } },
                 { "headers", n => { Headers = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Headers>(global::Soenneker.Slack.OpenApiClient.Models.Headers.CreateFromDiscriminatorValue); } },
                 { "hls", n => { Hls = n.GetStringValue(); } },
                 { "hls_embed", n => { HlsEmbed = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "image_exif_rotation", n => { ImageExifRotation = n.GetDoubleValue(); } },
-                { "ims", n => { Ims = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageFileImsItem>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileImsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "ims", n => { Ims = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "initial_comment", n => { InitialComment = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InitialComment>(global::Soenneker.Slack.OpenApiClient.Models.InitialComment.CreateFromDiscriminatorValue); } },
                 { "inline_attachment_count", n => { InlineAttachmentCount = n.GetDoubleValue(); } },
-                { "is_ai_suggested", n => { IsAiSuggested = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsAiSuggested>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsAiSuggested.CreateFromDiscriminatorValue); } },
-                { "is_channel_space", n => { IsChannelSpace = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsChannelSpace>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsChannelSpace.CreateFromDiscriminatorValue); } },
-                { "is_external", n => { IsExternal = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsExternal>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsExternal.CreateFromDiscriminatorValue); } },
-                { "is_modified_by_ai", n => { IsModifiedByAi = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsModifiedByAi>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsModifiedByAi.CreateFromDiscriminatorValue); } },
-                { "is_public", n => { IsPublic = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsPublic>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsPublic.CreateFromDiscriminatorValue); } },
-                { "is_restricted_sharing_enabled", n => { IsRestrictedSharingEnabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsRestrictedSharingEnabled>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsRestrictedSharingEnabled.CreateFromDiscriminatorValue); } },
-                { "is_starred", n => { IsStarred = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsStarred>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsStarred.CreateFromDiscriminatorValue); } },
+                { "is_ai_suggested", n => { IsAiSuggested = n.GetBoolValue(); } },
+                { "is_channel_space", n => { IsChannelSpace = n.GetBoolValue(); } },
+                { "is_external", n => { IsExternal = n.GetBoolValue(); } },
+                { "is_modified_by_ai", n => { IsModifiedByAi = n.GetBoolValue(); } },
+                { "is_public", n => { IsPublic = n.GetBoolValue(); } },
+                { "is_restricted_sharing_enabled", n => { IsRestrictedSharingEnabled = n.GetBoolValue(); } },
+                { "is_starred", n => { IsStarred = n.GetBoolValue(); } },
                 { "last_editor", n => { LastEditor = n.GetStringValue(); } },
                 { "last_read", n => { LastRead = n.GetDoubleValue(); } },
                 { "lines", n => { Lines = n.GetDoubleValue(); } },
@@ -1314,7 +1182,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "mp4", n => { Mp4 = n.GetStringValue(); } },
                 { "mp4_low", n => { Mp4Low = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "non_owner_editable", n => { NonOwnerEditable = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileNonOwnerEditable>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileNonOwnerEditable.CreateFromDiscriminatorValue); } },
+                { "non_owner_editable", n => { NonOwnerEditable = n.GetBoolValue(); } },
                 { "num_stars", n => { NumStars = n.GetDoubleValue(); } },
                 { "org_or_workspace_access", n => { OrgOrWorkspaceAccess = n.GetStringValue(); } },
                 { "original_attachment_count", n => { OriginalAttachmentCount = n.GetDoubleValue(); } },
@@ -1322,31 +1190,31 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "original_w", n => { OriginalW = n.GetStringValue(); } },
                 { "permalink", n => { Permalink = n.GetStringValue(); } },
                 { "permalink_public", n => { PermalinkPublic = n.GetStringValue(); } },
-                { "pinned_to", n => { PinnedTo = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageFilePinnedToItem>(global::Soenneker.Slack.OpenApiClient.Models.MessageFilePinnedToItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "pinned_to", n => { PinnedTo = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "pjpeg", n => { Pjpeg = n.GetStringValue(); } },
                 { "plain_text", n => { PlainText = n.GetStringValue(); } },
                 { "pretty_type", n => { PrettyType = n.GetStringValue(); } },
                 { "preview", n => { Preview = n.GetStringValue(); } },
                 { "preview_highlight", n => { PreviewHighlight = n.GetStringValue(); } },
-                { "preview_is_truncated", n => { PreviewIsTruncated = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFilePreviewIsTruncated>(global::Soenneker.Slack.OpenApiClient.Models.MessageFilePreviewIsTruncated.CreateFromDiscriminatorValue); } },
+                { "preview_is_truncated", n => { PreviewIsTruncated = n.GetBoolValue(); } },
                 { "preview_plain_text", n => { PreviewPlainText = n.GetStringValue(); } },
                 { "private_channels_with_file_access_count", n => { PrivateChannelsWithFileAccessCount = n.GetDoubleValue(); } },
                 { "private_file_with_access_count", n => { PrivateFileWithAccessCount = n.GetDoubleValue(); } },
-                { "public_url_shared", n => { PublicUrlShared = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFilePublicUrlShared>(global::Soenneker.Slack.OpenApiClient.Models.MessageFilePublicUrlShared.CreateFromDiscriminatorValue); } },
+                { "public_url_shared", n => { PublicUrlShared = n.GetBoolValue(); } },
                 { "quip_thread_id", n => { QuipThreadId = n.GetStringValue(); } },
-                { "reactions", n => { Reactions = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageFileReactionsItem>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileReactionsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "reactions", n => { Reactions = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "saved", n => { Saved = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Saved>(global::Soenneker.Slack.OpenApiClient.Models.Saved.CreateFromDiscriminatorValue); } },
-                { "sent_to_self", n => { SentToSelf = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileSentToSelf>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileSentToSelf.CreateFromDiscriminatorValue); } },
+                { "sent_to_self", n => { SentToSelf = n.GetBoolValue(); } },
                 { "shares", n => { Shares = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileShares>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileShares.CreateFromDiscriminatorValue); } },
-                { "show_badge", n => { ShowBadge = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileShowBadge>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileShowBadge.CreateFromDiscriminatorValue); } },
+                { "show_badge", n => { ShowBadge = n.GetBoolValue(); } },
                 { "simplified_html", n => { SimplifiedHtml = n.GetStringValue(); } },
                 { "size", n => { Size = n.GetDoubleValue(); } },
-                { "skipped_shares", n => { SkippedShares = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileSkippedShares>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileSkippedShares.CreateFromDiscriminatorValue); } },
+                { "skipped_shares", n => { SkippedShares = n.GetBoolValue(); } },
                 { "source_team", n => { SourceTeam = n.GetStringValue(); } },
                 { "subject", n => { Subject = n.GetStringValue(); } },
                 { "subtype", n => { Subtype = n.GetStringValue(); } },
-                { "team_pref_version_history_enabled", n => { TeamPrefVersionHistoryEnabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileTeamPrefVersionHistoryEnabled>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileTeamPrefVersionHistoryEnabled.CreateFromDiscriminatorValue); } },
-                { "teams_shared_with", n => { TeamsSharedWith = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageFileTeamsSharedWithItem>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileTeamsSharedWithItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "team_pref_version_history_enabled", n => { TeamPrefVersionHistoryEnabled = n.GetBoolValue(); } },
+                { "teams_shared_with", n => { TeamsSharedWith = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "template_conversion_ts", n => { TemplateConversionTs = n.GetDoubleValue(); } },
                 { "template_description", n => { TemplateDescription = n.GetStringValue(); } },
                 { "template_icon", n => { TemplateIcon = n.GetStringValue(); } },
@@ -1398,8 +1266,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "thumb_video_w", n => { ThumbVideoW = n.GetDoubleValue(); } },
                 { "timestamp", n => { Timestamp = n.GetDoubleValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
-                { "title_blocks", n => { TitleBlocks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageFileTitleBlocksItem>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileTitleBlocksItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "to", n => { To = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageFileToItem>(global::Soenneker.Slack.OpenApiClient.Models.MessageFileToItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "title_blocks", n => { TitleBlocks = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "to", n => { To = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "transcription", n => { Transcription = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Transcription>(global::Soenneker.Slack.OpenApiClient.Models.Transcription.CreateFromDiscriminatorValue); } },
                 { "update_notification", n => { UpdateNotification = n.GetDoubleValue(); } },
                 { "updated", n => { Updated = n.GetDoubleValue(); } },
@@ -1423,58 +1291,58 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("alt_txt", AltTxt);
             writer.WriteStringValue("app_id", AppId);
             writer.WriteStringValue("app_name", AppName);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileAppProvidesFileWorkObjects>("app_provides_file_work_objects", AppProvidesFileWorkObjects);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageFileAttachmentsItem>("attachments", Attachments);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageFileBlocksItem>("blocks", Blocks);
+            writer.WriteBoolValue("app_provides_file_work_objects", AppProvidesFileWorkObjects);
+            writer.WriteObjectValue<UntypedNode>("attachments", Attachments);
+            writer.WriteObjectValue<UntypedNode>("blocks", Blocks);
             writer.WriteStringValue("bot_id", BotId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileCanToggleCanvasLock>("can_toggle_canvas_lock", CanToggleCanvasLock);
+            writer.WriteBoolValue("can_toggle_canvas_lock", CanToggleCanvasLock);
             writer.WriteStringValue("canvas_creator_id", CanvasCreatorId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileCanvasPrintingEnabled>("canvas_printing_enabled", CanvasPrintingEnabled);
+            writer.WriteBoolValue("canvas_printing_enabled", CanvasPrintingEnabled);
             writer.WriteDoubleValue("canvas_readtime", CanvasReadtime);
             writer.WriteStringValue("canvas_template_mode", CanvasTemplateMode);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageFileCcItem>("cc", Cc);
+            writer.WriteObjectValue<UntypedNode>("cc", Cc);
             writer.WriteDoubleValue("channel_actions_count", ChannelActionsCount);
             writer.WriteStringValue("channel_actions_ts", ChannelActionsTs);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageFileChannelsItem>("channels", Channels);
+            writer.WriteObjectValue<UntypedNode>("channels", Channels);
             writer.WriteDoubleValue("comments_count", CommentsCount);
             writer.WriteStringValue("converted_pdf", ConvertedPdf);
             writer.WriteDoubleValue("created", Created);
             writer.WriteStringValue("deanimate", Deanimate);
             writer.WriteStringValue("deanimate_gif", DeanimateGif);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileDisplayAsBot>("display_as_bot", DisplayAsBot);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageFileDmMpdmUsersWithFileAccessItem>("dm_mpdm_users_with_file_access", DmMpdmUsersWithFileAccess);
+            writer.WriteBoolValue("display_as_bot", DisplayAsBot);
+            writer.WriteObjectValue<UntypedNode>("dm_mpdm_users_with_file_access", DmMpdmUsersWithFileAccess);
             writer.WriteDoubleValue("duration_ms", DurationMs);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileEditable>("editable", Editable);
+            writer.WriteBoolValue("editable", Editable);
             writer.WriteStringValue("edit_link", EditLink);
             writer.WriteStringValue("editor", Editor);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageFileEditorsItem>("editors", Editors);
+            writer.WriteObjectValue<UntypedNode>("editors", Editors);
             writer.WriteDoubleValue("edit_timestamp", EditTimestamp);
             writer.WriteStringValue("external_id", ExternalId);
             writer.WriteStringValue("external_type", ExternalType);
             writer.WriteStringValue("external_url", ExternalUrl);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageFileFavoritesItem>("favorites", Favorites);
+            writer.WriteObjectValue<UntypedNode>("favorites", Favorites);
             writer.WriteStringValue("file_access", FileAccess);
             writer.WriteStringValue("filetype", Filetype);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageFileFromItem>("from", From);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageFileGroupsItem>("groups", Groups);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileHasMore>("has_more", HasMore);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileHasMoreShares>("has_more_shares", HasMoreShares);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileHasRichPreview>("has_rich_preview", HasRichPreview);
+            writer.WriteObjectValue<UntypedNode>("from", From);
+            writer.WriteObjectValue<UntypedNode>("groups", Groups);
+            writer.WriteBoolValue("has_more", HasMore);
+            writer.WriteBoolValue("has_more_shares", HasMoreShares);
+            writer.WriteBoolValue("has_rich_preview", HasRichPreview);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Headers>("headers", Headers);
             writer.WriteStringValue("hls", Hls);
             writer.WriteStringValue("hls_embed", HlsEmbed);
             writer.WriteStringValue("id", Id);
             writer.WriteDoubleValue("image_exif_rotation", ImageExifRotation);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageFileImsItem>("ims", Ims);
+            writer.WriteObjectValue<UntypedNode>("ims", Ims);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InitialComment>("initial_comment", InitialComment);
             writer.WriteDoubleValue("inline_attachment_count", InlineAttachmentCount);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsAiSuggested>("is_ai_suggested", IsAiSuggested);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsChannelSpace>("is_channel_space", IsChannelSpace);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsExternal>("is_external", IsExternal);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsModifiedByAi>("is_modified_by_ai", IsModifiedByAi);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsPublic>("is_public", IsPublic);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsRestrictedSharingEnabled>("is_restricted_sharing_enabled", IsRestrictedSharingEnabled);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileIsStarred>("is_starred", IsStarred);
+            writer.WriteBoolValue("is_ai_suggested", IsAiSuggested);
+            writer.WriteBoolValue("is_channel_space", IsChannelSpace);
+            writer.WriteBoolValue("is_external", IsExternal);
+            writer.WriteBoolValue("is_modified_by_ai", IsModifiedByAi);
+            writer.WriteBoolValue("is_public", IsPublic);
+            writer.WriteBoolValue("is_restricted_sharing_enabled", IsRestrictedSharingEnabled);
+            writer.WriteBoolValue("is_starred", IsStarred);
             writer.WriteStringValue("last_editor", LastEditor);
             writer.WriteDoubleValue("last_read", LastRead);
             writer.WriteDoubleValue("lines", Lines);
@@ -1490,7 +1358,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("mp4", Mp4);
             writer.WriteStringValue("mp4_low", Mp4Low);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileNonOwnerEditable>("non_owner_editable", NonOwnerEditable);
+            writer.WriteBoolValue("non_owner_editable", NonOwnerEditable);
             writer.WriteDoubleValue("num_stars", NumStars);
             writer.WriteStringValue("org_or_workspace_access", OrgOrWorkspaceAccess);
             writer.WriteDoubleValue("original_attachment_count", OriginalAttachmentCount);
@@ -1498,31 +1366,31 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("original_w", OriginalW);
             writer.WriteStringValue("permalink", Permalink);
             writer.WriteStringValue("permalink_public", PermalinkPublic);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageFilePinnedToItem>("pinned_to", PinnedTo);
+            writer.WriteObjectValue<UntypedNode>("pinned_to", PinnedTo);
             writer.WriteStringValue("pjpeg", Pjpeg);
             writer.WriteStringValue("plain_text", PlainText);
             writer.WriteStringValue("pretty_type", PrettyType);
             writer.WriteStringValue("preview", Preview);
             writer.WriteStringValue("preview_highlight", PreviewHighlight);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFilePreviewIsTruncated>("preview_is_truncated", PreviewIsTruncated);
+            writer.WriteBoolValue("preview_is_truncated", PreviewIsTruncated);
             writer.WriteStringValue("preview_plain_text", PreviewPlainText);
             writer.WriteDoubleValue("private_channels_with_file_access_count", PrivateChannelsWithFileAccessCount);
             writer.WriteDoubleValue("private_file_with_access_count", PrivateFileWithAccessCount);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFilePublicUrlShared>("public_url_shared", PublicUrlShared);
+            writer.WriteBoolValue("public_url_shared", PublicUrlShared);
             writer.WriteStringValue("quip_thread_id", QuipThreadId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageFileReactionsItem>("reactions", Reactions);
+            writer.WriteObjectValue<UntypedNode>("reactions", Reactions);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Saved>("saved", Saved);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileSentToSelf>("sent_to_self", SentToSelf);
+            writer.WriteBoolValue("sent_to_self", SentToSelf);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileShares>("shares", Shares);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileShowBadge>("show_badge", ShowBadge);
+            writer.WriteBoolValue("show_badge", ShowBadge);
             writer.WriteStringValue("simplified_html", SimplifiedHtml);
             writer.WriteDoubleValue("size", Size);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileSkippedShares>("skipped_shares", SkippedShares);
+            writer.WriteBoolValue("skipped_shares", SkippedShares);
             writer.WriteStringValue("source_team", SourceTeam);
             writer.WriteStringValue("subject", Subject);
             writer.WriteStringValue("subtype", Subtype);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageFileTeamPrefVersionHistoryEnabled>("team_pref_version_history_enabled", TeamPrefVersionHistoryEnabled);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageFileTeamsSharedWithItem>("teams_shared_with", TeamsSharedWith);
+            writer.WriteBoolValue("team_pref_version_history_enabled", TeamPrefVersionHistoryEnabled);
+            writer.WriteObjectValue<UntypedNode>("teams_shared_with", TeamsSharedWith);
             writer.WriteDoubleValue("template_conversion_ts", TemplateConversionTs);
             writer.WriteStringValue("template_description", TemplateDescription);
             writer.WriteStringValue("template_icon", TemplateIcon);
@@ -1574,8 +1442,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("thumb_video_w", ThumbVideoW);
             writer.WriteDoubleValue("timestamp", Timestamp);
             writer.WriteStringValue("title", Title);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageFileTitleBlocksItem>("title_blocks", TitleBlocks);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageFileToItem>("to", To);
+            writer.WriteObjectValue<UntypedNode>("title_blocks", TitleBlocks);
+            writer.WriteObjectValue<UntypedNode>("to", To);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Transcription>("transcription", Transcription);
             writer.WriteDoubleValue("updated", Updated);
             writer.WriteDoubleValue("update_notification", UpdateNotification);

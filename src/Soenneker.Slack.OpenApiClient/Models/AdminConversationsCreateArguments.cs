@@ -7,38 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsCreateArgumentsMember1"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsCreateArgumentsMember2"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class AdminConversationsCreateArguments : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class AdminConversationsCreateArguments : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Description of the public or private channel to create.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsCreateArgumentsMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsCreateArgumentsMember1? AdminConversationsCreateArgumentsMember1 { get; set; }
 #nullable restore
 #else
-        public string Description { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsCreateArgumentsMember1 AdminConversationsCreateArgumentsMember1 { get; set; }
 #endif
-        /// <summary>When `true`, creates a private channel instead of a public channel.</summary>
-        public bool? IsPrivate { get; set; }
-        /// <summary>Name of the public or private channel to create.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsCreateArgumentsMember2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsCreateArgumentsMember2? AdminConversationsCreateArgumentsMember2 { get; set; }
 #nullable restore
 #else
-        public string Name { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsCreateArgumentsMember2 AdminConversationsCreateArgumentsMember2 { get; set; }
 #endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsCreateArguments"/> and sets the default values.
-        /// </summary>
-        public AdminConversationsCreateArguments()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -47,7 +37,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsCreateArguments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsCreateArguments();
+            var result = new global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsCreateArguments();
+            result.AdminConversationsCreateArgumentsMember1 = new global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsCreateArgumentsMember1();
+            result.AdminConversationsCreateArgumentsMember2 = new global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsCreateArgumentsMember2();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -55,12 +48,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(AdminConversationsCreateArgumentsMember1 != null || AdminConversationsCreateArgumentsMember2 != null)
             {
-                { "description", n => { Description = n.GetStringValue(); } },
-                { "is_private", n => { IsPrivate = n.GetBoolValue(); } },
-                { "name", n => { Name = n.GetStringValue(); } },
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(AdminConversationsCreateArgumentsMember1, AdminConversationsCreateArgumentsMember2);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -69,10 +61,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("description", Description);
-            writer.WriteBoolValue("is_private", IsPrivate);
-            writer.WriteStringValue("name", Name);
-            writer.WriteAdditionalData(AdditionalData);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsCreateArgumentsMember1>(null, AdminConversationsCreateArgumentsMember1, AdminConversationsCreateArgumentsMember2);
         }
     }
 }

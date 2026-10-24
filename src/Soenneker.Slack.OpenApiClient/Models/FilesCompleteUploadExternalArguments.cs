@@ -7,44 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.FilesCompleteUploadExternalArgumentsMember1"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.FilesCompleteUploadExternalArgumentsMember2"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class FilesCompleteUploadExternalArguments : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class FilesCompleteUploadExternalArguments : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>An array of structured rich text blocks. If the `initial_comment` field is provided, the `blocks` field is ignored.e.g. `[{&quot;type&quot;: &quot;section&quot;, &quot;text&quot;: {&quot;type&quot;: &quot;plain_text&quot;, &quot;text&quot;: &quot;Hello world&quot;}}]`[https://docs.slack.dev/reference/block-kit/blocks](https://docs.slack.dev/reference/block-kit/blocks)</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.FilesCompleteUploadExternalArgumentsMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.FilesCompleteUploadExternalArgumentsAllOf1BlocksItem>? Blocks { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.FilesCompleteUploadExternalArgumentsMember1? FilesCompleteUploadExternalArgumentsMember1 { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.FilesCompleteUploadExternalArgumentsAllOf1BlocksItem> Blocks { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.FilesCompleteUploadExternalArgumentsMember1 FilesCompleteUploadExternalArgumentsMember1 { get; set; }
 #endif
-        /// <summary>Array of file IDs and their corresponding (optional) titles.e.g. `[{&quot;id&quot;:&quot;F044GKUHN9Z&quot;, &quot;title&quot;:&quot;slack-test&quot;}]`</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.FilesCompleteUploadExternalArgumentsMember2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.FileUploadComplete>? Files { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.FilesCompleteUploadExternalArgumentsMember2? FilesCompleteUploadExternalArgumentsMember2 { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.FileUploadComplete> Files { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.FilesCompleteUploadExternalArgumentsMember2 FilesCompleteUploadExternalArgumentsMember2 { get; set; }
 #endif
-        /// <summary>The message text introducing the file in the specified channel.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? InitialComment { get; set; }
-#nullable restore
-#else
-        public string InitialComment { get; set; }
-#endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.FilesCompleteUploadExternalArguments"/> and sets the default values.
-        /// </summary>
-        public FilesCompleteUploadExternalArguments()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -53,7 +37,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.FilesCompleteUploadExternalArguments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.FilesCompleteUploadExternalArguments();
+            var result = new global::Soenneker.Slack.OpenApiClient.Models.FilesCompleteUploadExternalArguments();
+            result.FilesCompleteUploadExternalArgumentsMember1 = new global::Soenneker.Slack.OpenApiClient.Models.FilesCompleteUploadExternalArgumentsMember1();
+            result.FilesCompleteUploadExternalArgumentsMember2 = new global::Soenneker.Slack.OpenApiClient.Models.FilesCompleteUploadExternalArgumentsMember2();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -61,12 +48,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(FilesCompleteUploadExternalArgumentsMember1 != null || FilesCompleteUploadExternalArgumentsMember2 != null)
             {
-                { "blocks", n => { Blocks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.FilesCompleteUploadExternalArgumentsAllOf1BlocksItem>(global::Soenneker.Slack.OpenApiClient.Models.FilesCompleteUploadExternalArgumentsAllOf1BlocksItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "files", n => { Files = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.FileUploadComplete>(global::Soenneker.Slack.OpenApiClient.Models.FileUploadComplete.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "initial_comment", n => { InitialComment = n.GetStringValue(); } },
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(FilesCompleteUploadExternalArgumentsMember1, FilesCompleteUploadExternalArgumentsMember2);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -75,10 +61,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.FilesCompleteUploadExternalArgumentsAllOf1BlocksItem>("blocks", Blocks);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.FileUploadComplete>("files", Files);
-            writer.WriteStringValue("initial_comment", InitialComment);
-            writer.WriteAdditionalData(AdditionalData);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FilesCompleteUploadExternalArgumentsMember1>(null, FilesCompleteUploadExternalArgumentsMember1, FilesCompleteUploadExternalArgumentsMember2);
         }
     }
 }

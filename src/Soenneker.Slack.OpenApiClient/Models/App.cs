@@ -71,29 +71,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The is_app_directory_approved property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AppIsAppDirectoryApproved? IsAppDirectoryApproved { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AppIsAppDirectoryApproved IsAppDirectoryApproved { get; set; }
-#endif
+        public bool? IsAppDirectoryApproved { get; set; }
         /// <summary>The is_granular_bot_app property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AppIsGranularBotApp? IsGranularBotApp { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AppIsGranularBotApp IsGranularBotApp { get; set; }
-#endif
+        public bool? IsGranularBotApp { get; set; }
         /// <summary>The is_internal property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AppIsInternal? IsInternal { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AppIsInternal IsInternal { get; set; }
-#endif
+        public bool? IsInternal { get; set; }
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -142,9 +124,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "help_url", n => { HelpUrl = n.GetStringValue(); } },
                 { "icons", n => { Icons = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Icons>(global::Soenneker.Slack.OpenApiClient.Models.Icons.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "is_app_directory_approved", n => { IsAppDirectoryApproved = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AppIsAppDirectoryApproved>(global::Soenneker.Slack.OpenApiClient.Models.AppIsAppDirectoryApproved.CreateFromDiscriminatorValue); } },
-                { "is_granular_bot_app", n => { IsGranularBotApp = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AppIsGranularBotApp>(global::Soenneker.Slack.OpenApiClient.Models.AppIsGranularBotApp.CreateFromDiscriminatorValue); } },
-                { "is_internal", n => { IsInternal = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AppIsInternal>(global::Soenneker.Slack.OpenApiClient.Models.AppIsInternal.CreateFromDiscriminatorValue); } },
+                { "is_app_directory_approved", n => { IsAppDirectoryApproved = n.GetBoolValue(); } },
+                { "is_granular_bot_app", n => { IsGranularBotApp = n.GetBoolValue(); } },
+                { "is_internal", n => { IsInternal = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "privacy_policy_url", n => { PrivacyPolicyUrl = n.GetStringValue(); } },
             };
@@ -163,9 +145,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("help_url", HelpUrl);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Icons>("icons", Icons);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AppIsAppDirectoryApproved>("is_app_directory_approved", IsAppDirectoryApproved);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AppIsGranularBotApp>("is_granular_bot_app", IsGranularBotApp);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AppIsInternal>("is_internal", IsInternal);
+            writer.WriteBoolValue("is_app_directory_approved", IsAppDirectoryApproved);
+            writer.WriteBoolValue("is_granular_bot_app", IsGranularBotApp);
+            writer.WriteBoolValue("is_internal", IsInternal);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("privacy_policy_url", PrivacyPolicyUrl);
             writer.WriteAdditionalData(AdditionalData);

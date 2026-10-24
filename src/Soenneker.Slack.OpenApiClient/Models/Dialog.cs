@@ -31,13 +31,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public List<global::Soenneker.Slack.OpenApiClient.Models.DialogElementsItem> Elements { get; set; }
 #endif
         /// <summary>The notify_on_cancel property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.DialogNotifyOnCancel? NotifyOnCancel { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.DialogNotifyOnCancel NotifyOnCancel { get; set; }
-#endif
+        public bool? NotifyOnCancel { get; set; }
         /// <summary>The state property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -89,7 +83,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "callback_id", n => { CallbackId = n.GetStringValue(); } },
                 { "elements", n => { Elements = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.DialogElementsItem>(global::Soenneker.Slack.OpenApiClient.Models.DialogElementsItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "notify_on_cancel", n => { NotifyOnCancel = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DialogNotifyOnCancel>(global::Soenneker.Slack.OpenApiClient.Models.DialogNotifyOnCancel.CreateFromDiscriminatorValue); } },
+                { "notify_on_cancel", n => { NotifyOnCancel = n.GetBoolValue(); } },
                 { "state", n => { State = n.GetStringValue(); } },
                 { "submit_label", n => { SubmitLabel = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
@@ -104,7 +98,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("callback_id", CallbackId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.DialogElementsItem>("elements", Elements);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DialogNotifyOnCancel>("notify_on_cancel", NotifyOnCancel);
+            writer.WriteBoolValue("notify_on_cancel", NotifyOnCancel);
             writer.WriteStringValue("state", State);
             writer.WriteStringValue("submit_label", SubmitLabel);
             writer.WriteStringValue("title", Title);

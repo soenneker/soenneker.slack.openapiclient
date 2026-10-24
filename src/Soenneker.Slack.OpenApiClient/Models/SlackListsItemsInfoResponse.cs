@@ -59,10 +59,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The response_metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata? ResponseMetadata { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemsInfoResponseResponseMetadata? ResponseMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata ResponseMetadata { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemsInfoResponseResponseMetadata ResponseMetadata { get; set; }
 #endif
         /// <summary>The subtasks property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -111,7 +111,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "ok", n => { Ok = n.GetBoolValue(); } },
                 { "provided", n => { Provided = n.GetStringValue(); } },
                 { "record", n => { Record = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Record9>(global::Soenneker.Slack.OpenApiClient.Models.Record9.CreateFromDiscriminatorValue); } },
-                { "response_metadata", n => { ResponseMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>(global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata.CreateFromDiscriminatorValue); } },
+                { "response_metadata", n => { ResponseMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemsInfoResponseResponseMetadata>(global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemsInfoResponseResponseMetadata.CreateFromDiscriminatorValue); } },
                 { "subtasks", n => { Subtasks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Subtask>(global::Soenneker.Slack.OpenApiClient.Models.Subtask.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "warning", n => { Warning = n.GetStringValue(); } },
             };
@@ -129,7 +129,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteBoolValue("ok", Ok);
             writer.WriteStringValue("provided", Provided);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Record9>("record", Record);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>("response_metadata", ResponseMetadata);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemsInfoResponseResponseMetadata>("response_metadata", ResponseMetadata);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Subtask>("subtasks", Subtasks);
             writer.WriteStringValue("warning", Warning);
             writer.WriteAdditionalData(AdditionalData);

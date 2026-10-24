@@ -47,13 +47,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.MessageShortcutEnterprise Enterprise { get; set; }
 #endif
         /// <summary>The is_enterprise_install property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageShortcutIsEnterpriseInstall? IsEnterpriseInstall { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageShortcutIsEnterpriseInstall IsEnterpriseInstall { get; set; }
-#endif
+        public bool? IsEnterpriseInstall { get; set; }
         /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -141,7 +135,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "callback_id", n => { CallbackId = n.GetStringValue(); } },
                 { "channel", n => { Channel = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageShortcutChannel>(global::Soenneker.Slack.OpenApiClient.Models.MessageShortcutChannel.CreateFromDiscriminatorValue); } },
                 { "enterprise", n => { Enterprise = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageShortcutEnterprise>(global::Soenneker.Slack.OpenApiClient.Models.MessageShortcutEnterprise.CreateFromDiscriminatorValue); } },
-                { "is_enterprise_install", n => { IsEnterpriseInstall = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageShortcutIsEnterpriseInstall>(global::Soenneker.Slack.OpenApiClient.Models.MessageShortcutIsEnterpriseInstall.CreateFromDiscriminatorValue); } },
+                { "is_enterprise_install", n => { IsEnterpriseInstall = n.GetBoolValue(); } },
                 { "message", n => { Message = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageShortcutMessage>(global::Soenneker.Slack.OpenApiClient.Models.MessageShortcutMessage.CreateFromDiscriminatorValue); } },
                 { "message_ts", n => { MessageTs = n.GetStringValue(); } },
                 { "response_url", n => { ResponseUrl = n.GetStringValue(); } },
@@ -163,7 +157,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("callback_id", CallbackId);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageShortcutChannel>("channel", Channel);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageShortcutEnterprise>("enterprise", Enterprise);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageShortcutIsEnterpriseInstall>("is_enterprise_install", IsEnterpriseInstall);
+            writer.WriteBoolValue("is_enterprise_install", IsEnterpriseInstall);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageShortcutMessage>("message", Message);
             writer.WriteStringValue("message_ts", MessageTs);
             writer.WriteStringValue("response_url", ResponseUrl);

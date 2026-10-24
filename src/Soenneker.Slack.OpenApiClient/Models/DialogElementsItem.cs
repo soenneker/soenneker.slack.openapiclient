@@ -47,13 +47,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>The optional property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.DialogElementsItemOptional? Optional { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.DialogElementsItemOptional Optional { get; set; }
-#endif
+        public bool? Optional { get; set; }
         /// <summary>The option_groups property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -131,7 +125,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "min_query_length", n => { MinQueryLength = n.GetDoubleValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "option_groups", n => { OptionGroups = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.DialogElementsItemOptionGroupsItem>(global::Soenneker.Slack.OpenApiClient.Models.DialogElementsItemOptionGroupsItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "optional", n => { Optional = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DialogElementsItemOptional>(global::Soenneker.Slack.OpenApiClient.Models.DialogElementsItemOptional.CreateFromDiscriminatorValue); } },
+                { "optional", n => { Optional = n.GetBoolValue(); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SelectOption>(global::Soenneker.Slack.OpenApiClient.Models.SelectOption.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "placeholder", n => { Placeholder = n.GetStringValue(); } },
                 { "selected_options", n => { SelectedOptions = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SelectOption>(global::Soenneker.Slack.OpenApiClient.Models.SelectOption.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -154,7 +148,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("min_length", MinLength);
             writer.WriteDoubleValue("min_query_length", MinQueryLength);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DialogElementsItemOptional>("optional", Optional);
+            writer.WriteBoolValue("optional", Optional);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.DialogElementsItemOptionGroupsItem>("option_groups", OptionGroups);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SelectOption>("options", Options);
             writer.WriteStringValue("placeholder", Placeholder);

@@ -33,10 +33,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The title_blocks property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThread4TitleBlocksItem>? TitleBlocks { get; set; }
+        public UntypedNode? TitleBlocks { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThread4TitleBlocksItem> TitleBlocks { get; set; }
+        public UntypedNode TitleBlocks { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThread4"/> and sets the default values.
@@ -65,7 +65,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "first_user_thread_reply", n => { FirstUserThreadReply = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
-                { "title_blocks", n => { TitleBlocks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThread4TitleBlocksItem>(global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThread4TitleBlocksItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "title_blocks", n => { TitleBlocks = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -77,7 +77,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("first_user_thread_reply", FirstUserThreadReply);
             writer.WriteStringValue("title", Title);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThread4TitleBlocksItem>("title_blocks", TitleBlocks);
+            writer.WriteObjectValue<UntypedNode>("title_blocks", TitleBlocks);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

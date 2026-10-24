@@ -7,28 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.ViewsPushArgumentsMember1"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ViewsPushArgumentsMember2"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class ViewsPushArguments : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class ViewsPushArguments : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A [view payload](https://docs.slack.dev/surfaces/modals).</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ViewsPushArgumentsMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.View7? View { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ViewsPushArgumentsMember1? ViewsPushArgumentsMember1 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.View7 View { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ViewsPushArgumentsMember1 ViewsPushArgumentsMember1 { get; set; }
 #endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ViewsPushArguments"/> and sets the default values.
-        /// </summary>
-        public ViewsPushArguments()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ViewsPushArgumentsMember2"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ViewsPushArgumentsMember2? ViewsPushArgumentsMember2 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ViewsPushArgumentsMember2 ViewsPushArgumentsMember2 { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -37,7 +37,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.ViewsPushArguments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.ViewsPushArguments();
+            var result = new global::Soenneker.Slack.OpenApiClient.Models.ViewsPushArguments();
+            result.ViewsPushArgumentsMember1 = new global::Soenneker.Slack.OpenApiClient.Models.ViewsPushArgumentsMember1();
+            result.ViewsPushArgumentsMember2 = new global::Soenneker.Slack.OpenApiClient.Models.ViewsPushArgumentsMember2();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -45,10 +48,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(ViewsPushArgumentsMember1 != null || ViewsPushArgumentsMember2 != null)
             {
-                { "view", n => { View = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View7>(global::Soenneker.Slack.OpenApiClient.Models.View7.CreateFromDiscriminatorValue); } },
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(ViewsPushArgumentsMember1, ViewsPushArgumentsMember2);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -57,8 +61,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View7>("view", View);
-            writer.WriteAdditionalData(AdditionalData);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ViewsPushArgumentsMember1>(null, ViewsPushArgumentsMember1, ViewsPushArgumentsMember2);
         }
     }
 }

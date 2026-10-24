@@ -15,13 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether the column is the primary column.Only one column in the List can be the primary column, and it must be a text column.In addition, you cannot reassign a different column to be the new primary column, evenif the new column is also a text column. If you want a new text column to be the primaryone, it is recommended to export the List to CSV, modify the order, and then create anew List from the new CSV with the columns reordered.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsSchemaColumnIsPrimaryColumn? IsPrimaryColumn { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsSchemaColumnIsPrimaryColumn IsPrimaryColumn { get; set; }
-#endif
+        public bool? IsPrimaryColumn { get; set; }
         /// <summary>Key of the column.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -79,7 +73,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "is_primary_column", n => { IsPrimaryColumn = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackListsSchemaColumnIsPrimaryColumn>(global::Soenneker.Slack.OpenApiClient.Models.SlackListsSchemaColumnIsPrimaryColumn.CreateFromDiscriminatorValue); } },
+                { "is_primary_column", n => { IsPrimaryColumn = n.GetBoolValue(); } },
                 { "key", n => { Key = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "options", n => { Options = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackListsSchemaColumnOptions>(global::Soenneker.Slack.OpenApiClient.Models.SlackListsSchemaColumnOptions.CreateFromDiscriminatorValue); } },
@@ -93,7 +87,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackListsSchemaColumnIsPrimaryColumn>("is_primary_column", IsPrimaryColumn);
+            writer.WriteBoolValue("is_primary_column", IsPrimaryColumn);
             writer.WriteStringValue("key", Key);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackListsSchemaColumnOptions>("options", Options);

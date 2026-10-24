@@ -7,62 +7,204 @@ using System.IO;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember1"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember10"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember11"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember12"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember13"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember14"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember15"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember16"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember17"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember18"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember19"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember2"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember20"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember21"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember22"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember23"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember24"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember3"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember4"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember5"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember6"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember7"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember8"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember9"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class ChatPostMessageArguments : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class ChatPostMessageArguments : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Find and link channel names and usernames.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.LinkNamesLinkNames? LinkNames { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember1? ChatPostMessageArgumentsMember1 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.LinkNamesLinkNames LinkNames { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember1 ChatPostMessageArgumentsMember1 { get; set; }
 #endif
-        /// <summary>Object representing message metadata, entity and/or event data to attach to a Slack message.Provide &apos;entities&apos; to set work object entity metadata.Provide &apos;event_type&apos; and &apos;event_payload&apos; to set event metadata.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember10"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageMetadataMetadata? Metadata { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember10? ChatPostMessageArgumentsMember10 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageMetadataMetadata Metadata { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember10 ChatPostMessageArgumentsMember10 { get; set; }
 #endif
-        /// <summary>Disable Slack markup parsing by setting to `false`. Enabled by default.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember11"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsAllOf5AllOf1Mrkdwn? Mrkdwn { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember11? ChatPostMessageArgumentsMember11 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsAllOf5AllOf1Mrkdwn Mrkdwn { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember11 ChatPostMessageArgumentsMember11 { get; set; }
 #endif
-        /// <summary>Change how messages are treated. Defaults to `none`.[Formatting: Automatic parsing](https://docs.slack.dev/messaging/formatting-message-text).</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostEphemeralArgumentsParse? Parse { get; set; }
-        /// <summary>Pass `true` to enable unfurling of primarily text-based content.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember12"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.UnfurlsUnfurlLinks? UnfurlLinks { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember12? ChatPostMessageArgumentsMember12 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.UnfurlsUnfurlLinks UnfurlLinks { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember12 ChatPostMessageArgumentsMember12 { get; set; }
 #endif
-        /// <summary>Pass `false` to disable unfurling of media content.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember13"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.UnfurlsUnfurlMedia? UnfurlMedia { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember13? ChatPostMessageArgumentsMember13 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.UnfurlsUnfurlMedia UnfurlMedia { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember13 ChatPostMessageArgumentsMember13 { get; set; }
 #endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArguments"/> and sets the default values.
-        /// </summary>
-        public ChatPostMessageArguments()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember14"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember14? ChatPostMessageArgumentsMember14 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember14 ChatPostMessageArgumentsMember14 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember15"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember15? ChatPostMessageArgumentsMember15 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember15 ChatPostMessageArgumentsMember15 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember16"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember16? ChatPostMessageArgumentsMember16 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember16 ChatPostMessageArgumentsMember16 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember17"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember17? ChatPostMessageArgumentsMember17 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember17 ChatPostMessageArgumentsMember17 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember18"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember18? ChatPostMessageArgumentsMember18 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember18 ChatPostMessageArgumentsMember18 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember19"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember19? ChatPostMessageArgumentsMember19 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember19 ChatPostMessageArgumentsMember19 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember2"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember2? ChatPostMessageArgumentsMember2 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember2 ChatPostMessageArgumentsMember2 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember20"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember20? ChatPostMessageArgumentsMember20 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember20 ChatPostMessageArgumentsMember20 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember21"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember21? ChatPostMessageArgumentsMember21 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember21 ChatPostMessageArgumentsMember21 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember22"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember22? ChatPostMessageArgumentsMember22 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember22 ChatPostMessageArgumentsMember22 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember23"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember23? ChatPostMessageArgumentsMember23 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember23 ChatPostMessageArgumentsMember23 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember24"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember24? ChatPostMessageArgumentsMember24 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember24 ChatPostMessageArgumentsMember24 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember3"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember3? ChatPostMessageArgumentsMember3 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember3 ChatPostMessageArgumentsMember3 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember4"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember4? ChatPostMessageArgumentsMember4 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember4 ChatPostMessageArgumentsMember4 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember5"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember5? ChatPostMessageArgumentsMember5 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember5 ChatPostMessageArgumentsMember5 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember6"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember6? ChatPostMessageArgumentsMember6 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember6 ChatPostMessageArgumentsMember6 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember7"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember7? ChatPostMessageArgumentsMember7 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember7 ChatPostMessageArgumentsMember7 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember8"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember8? ChatPostMessageArgumentsMember8 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember8 ChatPostMessageArgumentsMember8 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember9"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember9? ChatPostMessageArgumentsMember9 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember9 ChatPostMessageArgumentsMember9 { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -71,7 +213,32 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArguments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArguments();
+            var result = new global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArguments();
+            result.ChatPostMessageArgumentsMember1 = new global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember1();
+            result.ChatPostMessageArgumentsMember10 = new global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember10();
+            result.ChatPostMessageArgumentsMember11 = new global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember11();
+            result.ChatPostMessageArgumentsMember12 = new global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember12();
+            result.ChatPostMessageArgumentsMember13 = new global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember13();
+            result.ChatPostMessageArgumentsMember14 = new global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember14();
+            result.ChatPostMessageArgumentsMember15 = new global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember15();
+            result.ChatPostMessageArgumentsMember16 = new global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember16();
+            result.ChatPostMessageArgumentsMember17 = new global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember17();
+            result.ChatPostMessageArgumentsMember18 = new global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember18();
+            result.ChatPostMessageArgumentsMember19 = new global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember19();
+            result.ChatPostMessageArgumentsMember2 = new global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember2();
+            result.ChatPostMessageArgumentsMember20 = new global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember20();
+            result.ChatPostMessageArgumentsMember21 = new global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember21();
+            result.ChatPostMessageArgumentsMember22 = new global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember22();
+            result.ChatPostMessageArgumentsMember23 = new global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember23();
+            result.ChatPostMessageArgumentsMember24 = new global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember24();
+            result.ChatPostMessageArgumentsMember3 = new global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember3();
+            result.ChatPostMessageArgumentsMember4 = new global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember4();
+            result.ChatPostMessageArgumentsMember5 = new global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember5();
+            result.ChatPostMessageArgumentsMember6 = new global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember6();
+            result.ChatPostMessageArgumentsMember7 = new global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember7();
+            result.ChatPostMessageArgumentsMember8 = new global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember8();
+            result.ChatPostMessageArgumentsMember9 = new global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember9();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,15 +246,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(ChatPostMessageArgumentsMember1 != null || ChatPostMessageArgumentsMember10 != null || ChatPostMessageArgumentsMember11 != null || ChatPostMessageArgumentsMember12 != null || ChatPostMessageArgumentsMember13 != null || ChatPostMessageArgumentsMember14 != null || ChatPostMessageArgumentsMember15 != null || ChatPostMessageArgumentsMember16 != null || ChatPostMessageArgumentsMember17 != null || ChatPostMessageArgumentsMember18 != null || ChatPostMessageArgumentsMember19 != null || ChatPostMessageArgumentsMember2 != null || ChatPostMessageArgumentsMember20 != null || ChatPostMessageArgumentsMember21 != null || ChatPostMessageArgumentsMember22 != null || ChatPostMessageArgumentsMember23 != null || ChatPostMessageArgumentsMember24 != null || ChatPostMessageArgumentsMember3 != null || ChatPostMessageArgumentsMember4 != null || ChatPostMessageArgumentsMember5 != null || ChatPostMessageArgumentsMember6 != null || ChatPostMessageArgumentsMember7 != null || ChatPostMessageArgumentsMember8 != null || ChatPostMessageArgumentsMember9 != null)
             {
-                { "link_names", n => { LinkNames = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.LinkNamesLinkNames>(global::Soenneker.Slack.OpenApiClient.Models.LinkNamesLinkNames.CreateFromDiscriminatorValue); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageMetadataMetadata>(global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageMetadataMetadata.CreateFromDiscriminatorValue); } },
-                { "mrkdwn", n => { Mrkdwn = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsAllOf5AllOf1Mrkdwn>(global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsAllOf5AllOf1Mrkdwn.CreateFromDiscriminatorValue); } },
-                { "parse", n => { Parse = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ChatPostEphemeralArgumentsParse>(); } },
-                { "unfurl_links", n => { UnfurlLinks = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UnfurlsUnfurlLinks>(global::Soenneker.Slack.OpenApiClient.Models.UnfurlsUnfurlLinks.CreateFromDiscriminatorValue); } },
-                { "unfurl_media", n => { UnfurlMedia = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UnfurlsUnfurlMedia>(global::Soenneker.Slack.OpenApiClient.Models.UnfurlsUnfurlMedia.CreateFromDiscriminatorValue); } },
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(ChatPostMessageArgumentsMember1, ChatPostMessageArgumentsMember10, ChatPostMessageArgumentsMember11, ChatPostMessageArgumentsMember12, ChatPostMessageArgumentsMember13, ChatPostMessageArgumentsMember14, ChatPostMessageArgumentsMember15, ChatPostMessageArgumentsMember16, ChatPostMessageArgumentsMember17, ChatPostMessageArgumentsMember18, ChatPostMessageArgumentsMember19, ChatPostMessageArgumentsMember2, ChatPostMessageArgumentsMember20, ChatPostMessageArgumentsMember21, ChatPostMessageArgumentsMember22, ChatPostMessageArgumentsMember23, ChatPostMessageArgumentsMember24, ChatPostMessageArgumentsMember3, ChatPostMessageArgumentsMember4, ChatPostMessageArgumentsMember5, ChatPostMessageArgumentsMember6, ChatPostMessageArgumentsMember7, ChatPostMessageArgumentsMember8, ChatPostMessageArgumentsMember9);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -96,13 +259,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.LinkNamesLinkNames>("link_names", LinkNames);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageMetadataMetadata>("metadata", Metadata);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsAllOf5AllOf1Mrkdwn>("mrkdwn", Mrkdwn);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ChatPostEphemeralArgumentsParse>("parse", Parse);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UnfurlsUnfurlLinks>("unfurl_links", UnfurlLinks);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UnfurlsUnfurlMedia>("unfurl_media", UnfurlMedia);
-            writer.WriteAdditionalData(AdditionalData);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ChatPostMessageArgumentsMember1>(null, ChatPostMessageArgumentsMember1, ChatPostMessageArgumentsMember10, ChatPostMessageArgumentsMember11, ChatPostMessageArgumentsMember12, ChatPostMessageArgumentsMember13, ChatPostMessageArgumentsMember14, ChatPostMessageArgumentsMember15, ChatPostMessageArgumentsMember16, ChatPostMessageArgumentsMember17, ChatPostMessageArgumentsMember18, ChatPostMessageArgumentsMember19, ChatPostMessageArgumentsMember2, ChatPostMessageArgumentsMember20, ChatPostMessageArgumentsMember21, ChatPostMessageArgumentsMember22, ChatPostMessageArgumentsMember23, ChatPostMessageArgumentsMember24, ChatPostMessageArgumentsMember3, ChatPostMessageArgumentsMember4, ChatPostMessageArgumentsMember5, ChatPostMessageArgumentsMember6, ChatPostMessageArgumentsMember7, ChatPostMessageArgumentsMember8, ChatPostMessageArgumentsMember9);
         }
     }
 }

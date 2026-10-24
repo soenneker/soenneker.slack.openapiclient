@@ -25,13 +25,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Email { get; set; }
 #endif
         /// <summary>The email_verified property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.OpenIdConnectUserInfoResponseAllOf2EmailVerified? EmailVerified { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.OpenIdConnectUserInfoResponseAllOf2EmailVerified EmailVerified { get; set; }
-#endif
+        public bool? EmailVerified { get; set; }
         /// <summary>The error property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -317,7 +311,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "date_email_verified", n => { DateEmailVerified = n.GetDoubleValue(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
-                { "email_verified", n => { EmailVerified = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.OpenIdConnectUserInfoResponseAllOf2EmailVerified>(global::Soenneker.Slack.OpenApiClient.Models.OpenIdConnectUserInfoResponseAllOf2EmailVerified.CreateFromDiscriminatorValue); } },
+                { "email_verified", n => { EmailVerified = n.GetBoolValue(); } },
                 { "error", n => { Error = n.GetStringValue(); } },
                 { "family_name", n => { FamilyName = n.GetStringValue(); } },
                 { "given_name", n => { GivenName = n.GetStringValue(); } },
@@ -362,7 +356,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("date_email_verified", DateEmailVerified);
             writer.WriteStringValue("email", Email);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.OpenIdConnectUserInfoResponseAllOf2EmailVerified>("email_verified", EmailVerified);
+            writer.WriteBoolValue("email_verified", EmailVerified);
             writer.WriteStringValue("error", Error);
             writer.WriteStringValue("family_name", FamilyName);
             writer.WriteStringValue("given_name", GivenName);

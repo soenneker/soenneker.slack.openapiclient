@@ -23,13 +23,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Color { get; set; }
 #endif
         /// <summary>The deleted property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MemberDeleted? Deleted { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MemberDeleted Deleted { get; set; }
-#endif
+        public bool? Deleted { get; set; }
         /// <summary>The enterprise_user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -39,13 +33,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.EnterpriseUser EnterpriseUser { get; set; }
 #endif
         /// <summary>The has_2fa property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MemberHas2Fa? Has2fa { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MemberHas2Fa Has2fa { get; set; }
-#endif
+        public bool? Has2fa { get; set; }
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -55,85 +43,25 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The is_admin property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MemberIsAdmin? IsAdmin { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MemberIsAdmin IsAdmin { get; set; }
-#endif
+        public bool? IsAdmin { get; set; }
         /// <summary>The is_app_user property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MemberIsAppUser? IsAppUser { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MemberIsAppUser IsAppUser { get; set; }
-#endif
+        public bool? IsAppUser { get; set; }
         /// <summary>The is_bot property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MemberIsBot? IsBot { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MemberIsBot IsBot { get; set; }
-#endif
+        public bool? IsBot { get; set; }
         /// <summary>The is_email_confirmed property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MemberIsEmailConfirmed? IsEmailConfirmed { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MemberIsEmailConfirmed IsEmailConfirmed { get; set; }
-#endif
+        public bool? IsEmailConfirmed { get; set; }
         /// <summary>The is_invited_user property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MemberIsInvitedUser? IsInvitedUser { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MemberIsInvitedUser IsInvitedUser { get; set; }
-#endif
+        public bool? IsInvitedUser { get; set; }
         /// <summary>The is_owner property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MemberIsOwner? IsOwner { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MemberIsOwner IsOwner { get; set; }
-#endif
+        public bool? IsOwner { get; set; }
         /// <summary>The is_primary_owner property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MemberIsPrimaryOwner? IsPrimaryOwner { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MemberIsPrimaryOwner IsPrimaryOwner { get; set; }
-#endif
+        public bool? IsPrimaryOwner { get; set; }
         /// <summary>The is_restricted property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MemberIsRestricted? IsRestricted { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MemberIsRestricted IsRestricted { get; set; }
-#endif
+        public bool? IsRestricted { get; set; }
         /// <summary>The is_ultra_restricted property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MemberIsUltraRestricted? IsUltraRestricted { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MemberIsUltraRestricted IsUltraRestricted { get; set; }
-#endif
+        public bool? IsUltraRestricted { get; set; }
         /// <summary>The is_workflow_bot property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MemberIsWorkflowBot? IsWorkflowBot { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MemberIsWorkflowBot IsWorkflowBot { get; set; }
-#endif
+        public bool? IsWorkflowBot { get; set; }
         /// <summary>The locale property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -236,20 +164,20 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "color", n => { Color = n.GetStringValue(); } },
-                { "deleted", n => { Deleted = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MemberDeleted>(global::Soenneker.Slack.OpenApiClient.Models.MemberDeleted.CreateFromDiscriminatorValue); } },
+                { "deleted", n => { Deleted = n.GetBoolValue(); } },
                 { "enterprise_user", n => { EnterpriseUser = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EnterpriseUser>(global::Soenneker.Slack.OpenApiClient.Models.EnterpriseUser.CreateFromDiscriminatorValue); } },
-                { "has_2fa", n => { Has2fa = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MemberHas2Fa>(global::Soenneker.Slack.OpenApiClient.Models.MemberHas2Fa.CreateFromDiscriminatorValue); } },
+                { "has_2fa", n => { Has2fa = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "is_admin", n => { IsAdmin = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MemberIsAdmin>(global::Soenneker.Slack.OpenApiClient.Models.MemberIsAdmin.CreateFromDiscriminatorValue); } },
-                { "is_app_user", n => { IsAppUser = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MemberIsAppUser>(global::Soenneker.Slack.OpenApiClient.Models.MemberIsAppUser.CreateFromDiscriminatorValue); } },
-                { "is_bot", n => { IsBot = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MemberIsBot>(global::Soenneker.Slack.OpenApiClient.Models.MemberIsBot.CreateFromDiscriminatorValue); } },
-                { "is_email_confirmed", n => { IsEmailConfirmed = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MemberIsEmailConfirmed>(global::Soenneker.Slack.OpenApiClient.Models.MemberIsEmailConfirmed.CreateFromDiscriminatorValue); } },
-                { "is_invited_user", n => { IsInvitedUser = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MemberIsInvitedUser>(global::Soenneker.Slack.OpenApiClient.Models.MemberIsInvitedUser.CreateFromDiscriminatorValue); } },
-                { "is_owner", n => { IsOwner = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MemberIsOwner>(global::Soenneker.Slack.OpenApiClient.Models.MemberIsOwner.CreateFromDiscriminatorValue); } },
-                { "is_primary_owner", n => { IsPrimaryOwner = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MemberIsPrimaryOwner>(global::Soenneker.Slack.OpenApiClient.Models.MemberIsPrimaryOwner.CreateFromDiscriminatorValue); } },
-                { "is_restricted", n => { IsRestricted = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MemberIsRestricted>(global::Soenneker.Slack.OpenApiClient.Models.MemberIsRestricted.CreateFromDiscriminatorValue); } },
-                { "is_ultra_restricted", n => { IsUltraRestricted = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MemberIsUltraRestricted>(global::Soenneker.Slack.OpenApiClient.Models.MemberIsUltraRestricted.CreateFromDiscriminatorValue); } },
-                { "is_workflow_bot", n => { IsWorkflowBot = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MemberIsWorkflowBot>(global::Soenneker.Slack.OpenApiClient.Models.MemberIsWorkflowBot.CreateFromDiscriminatorValue); } },
+                { "is_admin", n => { IsAdmin = n.GetBoolValue(); } },
+                { "is_app_user", n => { IsAppUser = n.GetBoolValue(); } },
+                { "is_bot", n => { IsBot = n.GetBoolValue(); } },
+                { "is_email_confirmed", n => { IsEmailConfirmed = n.GetBoolValue(); } },
+                { "is_invited_user", n => { IsInvitedUser = n.GetBoolValue(); } },
+                { "is_owner", n => { IsOwner = n.GetBoolValue(); } },
+                { "is_primary_owner", n => { IsPrimaryOwner = n.GetBoolValue(); } },
+                { "is_restricted", n => { IsRestricted = n.GetBoolValue(); } },
+                { "is_ultra_restricted", n => { IsUltraRestricted = n.GetBoolValue(); } },
+                { "is_workflow_bot", n => { IsWorkflowBot = n.GetBoolValue(); } },
                 { "locale", n => { Locale = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "profile", n => { Profile = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Profile5>(global::Soenneker.Slack.OpenApiClient.Models.Profile5.CreateFromDiscriminatorValue); } },
@@ -271,20 +199,20 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("color", Color);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MemberDeleted>("deleted", Deleted);
+            writer.WriteBoolValue("deleted", Deleted);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EnterpriseUser>("enterprise_user", EnterpriseUser);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MemberHas2Fa>("has_2fa", Has2fa);
+            writer.WriteBoolValue("has_2fa", Has2fa);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MemberIsAdmin>("is_admin", IsAdmin);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MemberIsAppUser>("is_app_user", IsAppUser);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MemberIsBot>("is_bot", IsBot);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MemberIsEmailConfirmed>("is_email_confirmed", IsEmailConfirmed);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MemberIsInvitedUser>("is_invited_user", IsInvitedUser);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MemberIsOwner>("is_owner", IsOwner);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MemberIsPrimaryOwner>("is_primary_owner", IsPrimaryOwner);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MemberIsRestricted>("is_restricted", IsRestricted);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MemberIsUltraRestricted>("is_ultra_restricted", IsUltraRestricted);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MemberIsWorkflowBot>("is_workflow_bot", IsWorkflowBot);
+            writer.WriteBoolValue("is_admin", IsAdmin);
+            writer.WriteBoolValue("is_app_user", IsAppUser);
+            writer.WriteBoolValue("is_bot", IsBot);
+            writer.WriteBoolValue("is_email_confirmed", IsEmailConfirmed);
+            writer.WriteBoolValue("is_invited_user", IsInvitedUser);
+            writer.WriteBoolValue("is_owner", IsOwner);
+            writer.WriteBoolValue("is_primary_owner", IsPrimaryOwner);
+            writer.WriteBoolValue("is_restricted", IsRestricted);
+            writer.WriteBoolValue("is_ultra_restricted", IsUltraRestricted);
+            writer.WriteBoolValue("is_workflow_bot", IsWorkflowBot);
             writer.WriteStringValue("locale", Locale);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Profile5>("profile", Profile);

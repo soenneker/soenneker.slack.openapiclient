@@ -7,70 +7,44 @@ using System.IO;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatUpdateArgumentsMember1"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatUpdateArgumentsMember2"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatUpdateArgumentsMember3"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatUpdateArgumentsMember4"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class ChatUpdateArguments : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class ChatUpdateArguments : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Pass `true` to act as the authed user with [`chat:write:user` scope](https://docs.slack.dev/reference/scopes/chat.write).Bot users in this context are considered authed users. If unused or `false`, the message will be acted upon with[`chat:write:bot` scope](https://docs.slack.dev/reference/scopes/chat.write).</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatUpdateArgumentsMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AsUserAsUser? AsUser { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatUpdateArgumentsMember1? ChatUpdateArgumentsMember1 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.AsUserAsUser AsUser { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatUpdateArgumentsMember1 ChatUpdateArgumentsMember1 { get; set; }
 #endif
-        /// <summary>Array of new file ids that will be sent with this message.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatUpdateArgumentsMember2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? FileIds { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatUpdateArgumentsMember2? ChatUpdateArgumentsMember2 { get; set; }
 #nullable restore
 #else
-        public List<string> FileIds { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatUpdateArgumentsMember2 ChatUpdateArgumentsMember2 { get; set; }
 #endif
-        /// <summary>Find and link channel names and usernames.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatUpdateArgumentsMember3"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.LinkNamesLinkNames? LinkNames { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatUpdateArgumentsMember3? ChatUpdateArgumentsMember3 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.LinkNamesLinkNames LinkNames { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatUpdateArgumentsMember3 ChatUpdateArgumentsMember3 { get; set; }
 #endif
-        /// <summary>Object representing message metadata, which will be made accessible to any user or app.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatUpdateArgumentsMember4"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageMetadata? Metadata { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatUpdateArgumentsMember4? ChatUpdateArgumentsMember4 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageMetadata Metadata { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatUpdateArgumentsMember4 ChatUpdateArgumentsMember4 { get; set; }
 #endif
-        /// <summary>Change how messages are treated. Defaults to `none`.[Formatting: Automatic parsing](https://docs.slack.dev/messaging/formatting-message-text).</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostEphemeralArgumentsParse? Parse { get; set; }
-        /// <summary>Broadcast an existing thread reply to make it visible to everyone in the channel or conversation.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ChatUpdateArgumentsAllOf5AllOf1ReplyBroadcast? ReplyBroadcast { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ChatUpdateArgumentsAllOf5AllOf1ReplyBroadcast ReplyBroadcast { get; set; }
-#endif
-        /// <summary>Timestamp of the message to be updated.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Ts { get; set; }
-#nullable restore
-#else
-        public string Ts { get; set; }
-#endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatUpdateArguments"/> and sets the default values.
-        /// </summary>
-        public ChatUpdateArguments()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -79,7 +53,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.ChatUpdateArguments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.ChatUpdateArguments();
+            var result = new global::Soenneker.Slack.OpenApiClient.Models.ChatUpdateArguments();
+            result.ChatUpdateArgumentsMember1 = new global::Soenneker.Slack.OpenApiClient.Models.ChatUpdateArgumentsMember1();
+            result.ChatUpdateArgumentsMember2 = new global::Soenneker.Slack.OpenApiClient.Models.ChatUpdateArgumentsMember2();
+            result.ChatUpdateArgumentsMember3 = new global::Soenneker.Slack.OpenApiClient.Models.ChatUpdateArgumentsMember3();
+            result.ChatUpdateArgumentsMember4 = new global::Soenneker.Slack.OpenApiClient.Models.ChatUpdateArgumentsMember4();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -87,16 +66,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(ChatUpdateArgumentsMember1 != null || ChatUpdateArgumentsMember2 != null || ChatUpdateArgumentsMember3 != null || ChatUpdateArgumentsMember4 != null)
             {
-                { "as_user", n => { AsUser = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AsUserAsUser>(global::Soenneker.Slack.OpenApiClient.Models.AsUserAsUser.CreateFromDiscriminatorValue); } },
-                { "file_ids", n => { FileIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "link_names", n => { LinkNames = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.LinkNamesLinkNames>(global::Soenneker.Slack.OpenApiClient.Models.LinkNamesLinkNames.CreateFromDiscriminatorValue); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageMetadata>(global::Soenneker.Slack.OpenApiClient.Models.MessageMetadata.CreateFromDiscriminatorValue); } },
-                { "parse", n => { Parse = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ChatPostEphemeralArgumentsParse>(); } },
-                { "reply_broadcast", n => { ReplyBroadcast = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ChatUpdateArgumentsAllOf5AllOf1ReplyBroadcast>(global::Soenneker.Slack.OpenApiClient.Models.ChatUpdateArgumentsAllOf5AllOf1ReplyBroadcast.CreateFromDiscriminatorValue); } },
-                { "ts", n => { Ts = n.GetStringValue(); } },
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(ChatUpdateArgumentsMember1, ChatUpdateArgumentsMember2, ChatUpdateArgumentsMember3, ChatUpdateArgumentsMember4);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -105,14 +79,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AsUserAsUser>("as_user", AsUser);
-            writer.WriteCollectionOfPrimitiveValues<string>("file_ids", FileIds);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.LinkNamesLinkNames>("link_names", LinkNames);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageMetadata>("metadata", Metadata);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ChatPostEphemeralArgumentsParse>("parse", Parse);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ChatUpdateArgumentsAllOf5AllOf1ReplyBroadcast>("reply_broadcast", ReplyBroadcast);
-            writer.WriteStringValue("ts", Ts);
-            writer.WriteAdditionalData(AdditionalData);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ChatUpdateArgumentsMember1>(null, ChatUpdateArgumentsMember1, ChatUpdateArgumentsMember2, ChatUpdateArgumentsMember3, ChatUpdateArgumentsMember4);
         }
     }
 }

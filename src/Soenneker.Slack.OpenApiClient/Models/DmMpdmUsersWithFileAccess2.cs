@@ -23,13 +23,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The user_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.DmMpdmUsersWithFileAccess2UserId? UserId { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.DmMpdmUsersWithFileAccess2UserId UserId { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.DmMpdmUsersWithFileAccess2"/> and sets the default values.
         /// </summary>
@@ -56,7 +50,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "access", n => { Access = n.GetStringValue(); } },
-                { "user_id", n => { UserId = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DmMpdmUsersWithFileAccess2UserId>(global::Soenneker.Slack.OpenApiClient.Models.DmMpdmUsersWithFileAccess2UserId.CreateFromDiscriminatorValue); } },
+                { "user_id", n => { UserId = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.DmMpdmUsersWithFileAccess2UserId>(); } },
             };
         }
         /// <summary>
@@ -67,7 +61,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("access", Access);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DmMpdmUsersWithFileAccess2UserId>("user_id", UserId);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.DmMpdmUsersWithFileAccess2UserId>("user_id", UserId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

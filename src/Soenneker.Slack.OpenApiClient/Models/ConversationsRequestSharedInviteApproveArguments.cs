@@ -31,13 +31,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string InviteId { get; set; }
 #endif
         /// <summary>Whether the invited team will have post-only permissions in the channel.Will override the value on the requested invite.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsRequestSharedInviteApproveArgumentsIsExternalLimited? IsExternalLimited { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsRequestSharedInviteApproveArgumentsIsExternalLimited IsExternalLimited { get; set; }
-#endif
+        public bool? IsExternalLimited { get; set; }
         /// <summary>Optional additional messaging to attach to the invite approval message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -81,7 +75,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "channel_id", n => { ChannelId = n.GetStringValue(); } },
                 { "invite_id", n => { InviteId = n.GetStringValue(); } },
-                { "is_external_limited", n => { IsExternalLimited = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsRequestSharedInviteApproveArgumentsIsExternalLimited>(global::Soenneker.Slack.OpenApiClient.Models.ConversationsRequestSharedInviteApproveArgumentsIsExternalLimited.CreateFromDiscriminatorValue); } },
+                { "is_external_limited", n => { IsExternalLimited = n.GetBoolValue(); } },
                 { "message", n => { Message = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsRequestSharedInviteApproveArgumentsMessage>(global::Soenneker.Slack.OpenApiClient.Models.ConversationsRequestSharedInviteApproveArgumentsMessage.CreateFromDiscriminatorValue); } },
                 { "token", n => { Token = n.GetStringValue(); } },
             };
@@ -95,7 +89,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("channel_id", ChannelId);
             writer.WriteStringValue("invite_id", InviteId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsRequestSharedInviteApproveArgumentsIsExternalLimited>("is_external_limited", IsExternalLimited);
+            writer.WriteBoolValue("is_external_limited", IsExternalLimited);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsRequestSharedInviteApproveArgumentsMessage>("message", Message);
             writer.WriteStringValue("token", Token);
             writer.WriteAdditionalData(AdditionalData);

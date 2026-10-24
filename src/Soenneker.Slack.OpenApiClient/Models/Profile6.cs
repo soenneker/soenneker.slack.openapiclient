@@ -139,13 +139,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string ImageOriginal { get; set; }
 #endif
         /// <summary>The is_custom_image property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Profile6IsCustomImage? IsCustomImage { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Profile6IsCustomImage IsCustomImage { get; set; }
-#endif
+        public bool? IsCustomImage { get; set; }
         /// <summary>The last_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -302,7 +296,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "image_512", n => { Image512 = n.GetStringValue(); } },
                 { "image_72", n => { Image72 = n.GetStringValue(); } },
                 { "image_original", n => { ImageOriginal = n.GetStringValue(); } },
-                { "is_custom_image", n => { IsCustomImage = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Profile6IsCustomImage>(global::Soenneker.Slack.OpenApiClient.Models.Profile6IsCustomImage.CreateFromDiscriminatorValue); } },
+                { "is_custom_image", n => { IsCustomImage = n.GetBoolValue(); } },
                 { "last_name", n => { LastName = n.GetStringValue(); } },
                 { "phone", n => { Phone = n.GetStringValue(); } },
                 { "pronouns", n => { Pronouns = n.GetStringValue(); } },
@@ -344,7 +338,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("image_512", Image512);
             writer.WriteStringValue("image_72", Image72);
             writer.WriteStringValue("image_original", ImageOriginal);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Profile6IsCustomImage>("is_custom_image", IsCustomImage);
+            writer.WriteBoolValue("is_custom_image", IsCustomImage);
             writer.WriteStringValue("last_name", LastName);
             writer.WriteStringValue("phone", Phone);
             writer.WriteStringValue("pronouns", Pronouns);

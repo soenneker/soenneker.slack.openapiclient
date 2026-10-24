@@ -15,13 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The is_decimal_allowed property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportNumberIsDecimalAllowed? IsDecimalAllowed { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportNumberIsDecimalAllowed IsDecimalAllowed { get; set; }
-#endif
+        public bool? IsDecimalAllowed { get; set; }
         /// <summary>The max_value property</summary>
         public double? MaxValue { get; set; }
         /// <summary>The min_value property</summary>
@@ -51,7 +45,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "is_decimal_allowed", n => { IsDecimalAllowed = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportNumberIsDecimalAllowed>(global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportNumberIsDecimalAllowed.CreateFromDiscriminatorValue); } },
+                { "is_decimal_allowed", n => { IsDecimalAllowed = n.GetBoolValue(); } },
                 { "max_value", n => { MaxValue = n.GetDoubleValue(); } },
                 { "min_value", n => { MinValue = n.GetDoubleValue(); } },
             };
@@ -63,7 +57,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportNumberIsDecimalAllowed>("is_decimal_allowed", IsDecimalAllowed);
+            writer.WriteBoolValue("is_decimal_allowed", IsDecimalAllowed);
             writer.WriteDoubleValue("max_value", MaxValue);
             writer.WriteDoubleValue("min_value", MinValue);
             writer.WriteAdditionalData(AdditionalData);

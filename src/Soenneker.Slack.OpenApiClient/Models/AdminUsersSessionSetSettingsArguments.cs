@@ -15,13 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Terminate the session when the client—either the desktop app or a browser window—is closed.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsersSessionSetSettingsArgumentsDesktopAppBrowserQuit? DesktopAppBrowserQuit { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsersSessionSetSettingsArgumentsDesktopAppBrowserQuit DesktopAppBrowserQuit { get; set; }
-#endif
+        public bool? DesktopAppBrowserQuit { get; set; }
         /// <summary>The session duration in seconds. The minimum value is 28800, which represents 8 hours;the max value is 315569520 or 10 years (that&apos;s a long Slack session).</summary>
         public double? Duration { get; set; }
         /// <summary>Overridable authentication token bearing required scopes.</summary>
@@ -65,7 +59,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "desktop_app_browser_quit", n => { DesktopAppBrowserQuit = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminUsersSessionSetSettingsArgumentsDesktopAppBrowserQuit>(global::Soenneker.Slack.OpenApiClient.Models.AdminUsersSessionSetSettingsArgumentsDesktopAppBrowserQuit.CreateFromDiscriminatorValue); } },
+                { "desktop_app_browser_quit", n => { DesktopAppBrowserQuit = n.GetBoolValue(); } },
                 { "duration", n => { Duration = n.GetDoubleValue(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
                 { "user_ids", n => { UserIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -78,7 +72,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminUsersSessionSetSettingsArgumentsDesktopAppBrowserQuit>("desktop_app_browser_quit", DesktopAppBrowserQuit);
+            writer.WriteBoolValue("desktop_app_browser_quit", DesktopAppBrowserQuit);
             writer.WriteDoubleValue("duration", Duration);
             writer.WriteStringValue("token", Token);
             writer.WriteCollectionOfPrimitiveValues<string>("user_ids", UserIds);

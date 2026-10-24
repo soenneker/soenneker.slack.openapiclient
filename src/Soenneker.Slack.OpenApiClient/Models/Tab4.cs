@@ -31,13 +31,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The is_disabled property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Tab4IsDisabled? IsDisabled { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Tab4IsDisabled IsDisabled { get; set; }
-#endif
+        public bool? IsDisabled { get; set; }
         /// <summary>The label property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -81,7 +75,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "data", n => { Data = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Data3>(global::Soenneker.Slack.OpenApiClient.Models.Data3.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "is_disabled", n => { IsDisabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Tab4IsDisabled>(global::Soenneker.Slack.OpenApiClient.Models.Tab4IsDisabled.CreateFromDiscriminatorValue); } },
+                { "is_disabled", n => { IsDisabled = n.GetBoolValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
@@ -95,7 +89,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Data3>("data", Data);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Tab4IsDisabled>("is_disabled", IsDisabled);
+            writer.WriteBoolValue("is_disabled", IsDisabled);
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);

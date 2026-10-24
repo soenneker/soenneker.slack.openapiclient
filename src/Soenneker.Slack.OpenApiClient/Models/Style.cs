@@ -15,69 +15,21 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The bold property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.StyleBold? Bold { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.StyleBold Bold { get; set; }
-#endif
+        public bool? Bold { get; set; }
         /// <summary>The client_highlight property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.StyleClientHighlight? ClientHighlight { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.StyleClientHighlight ClientHighlight { get; set; }
-#endif
+        public bool? ClientHighlight { get; set; }
         /// <summary>The code property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.StyleCode? Code { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.StyleCode Code { get; set; }
-#endif
+        public bool? Code { get; set; }
         /// <summary>The highlight property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.StyleHighlight? Highlight { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.StyleHighlight Highlight { get; set; }
-#endif
+        public bool? Highlight { get; set; }
         /// <summary>The italic property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.StyleItalic? Italic { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.StyleItalic Italic { get; set; }
-#endif
+        public bool? Italic { get; set; }
         /// <summary>The strike property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.StyleStrike? Strike { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.StyleStrike Strike { get; set; }
-#endif
+        public bool? Strike { get; set; }
         /// <summary>The underline property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.StyleUnderline? Underline { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.StyleUnderline Underline { get; set; }
-#endif
+        public bool? Underline { get; set; }
         /// <summary>The unlink property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.StyleUnlink? Unlink { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.StyleUnlink Unlink { get; set; }
-#endif
+        public bool? Unlink { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Style"/> and sets the default values.
         /// </summary>
@@ -103,14 +55,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "bold", n => { Bold = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.StyleBold>(global::Soenneker.Slack.OpenApiClient.Models.StyleBold.CreateFromDiscriminatorValue); } },
-                { "client_highlight", n => { ClientHighlight = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.StyleClientHighlight>(global::Soenneker.Slack.OpenApiClient.Models.StyleClientHighlight.CreateFromDiscriminatorValue); } },
-                { "code", n => { Code = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.StyleCode>(global::Soenneker.Slack.OpenApiClient.Models.StyleCode.CreateFromDiscriminatorValue); } },
-                { "highlight", n => { Highlight = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.StyleHighlight>(global::Soenneker.Slack.OpenApiClient.Models.StyleHighlight.CreateFromDiscriminatorValue); } },
-                { "italic", n => { Italic = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.StyleItalic>(global::Soenneker.Slack.OpenApiClient.Models.StyleItalic.CreateFromDiscriminatorValue); } },
-                { "strike", n => { Strike = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.StyleStrike>(global::Soenneker.Slack.OpenApiClient.Models.StyleStrike.CreateFromDiscriminatorValue); } },
-                { "underline", n => { Underline = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.StyleUnderline>(global::Soenneker.Slack.OpenApiClient.Models.StyleUnderline.CreateFromDiscriminatorValue); } },
-                { "unlink", n => { Unlink = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.StyleUnlink>(global::Soenneker.Slack.OpenApiClient.Models.StyleUnlink.CreateFromDiscriminatorValue); } },
+                { "bold", n => { Bold = n.GetBoolValue(); } },
+                { "client_highlight", n => { ClientHighlight = n.GetBoolValue(); } },
+                { "code", n => { Code = n.GetBoolValue(); } },
+                { "highlight", n => { Highlight = n.GetBoolValue(); } },
+                { "italic", n => { Italic = n.GetBoolValue(); } },
+                { "strike", n => { Strike = n.GetBoolValue(); } },
+                { "underline", n => { Underline = n.GetBoolValue(); } },
+                { "unlink", n => { Unlink = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -120,14 +72,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.StyleBold>("bold", Bold);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.StyleClientHighlight>("client_highlight", ClientHighlight);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.StyleCode>("code", Code);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.StyleHighlight>("highlight", Highlight);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.StyleItalic>("italic", Italic);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.StyleStrike>("strike", Strike);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.StyleUnderline>("underline", Underline);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.StyleUnlink>("unlink", Unlink);
+            writer.WriteBoolValue("bold", Bold);
+            writer.WriteBoolValue("client_highlight", ClientHighlight);
+            writer.WriteBoolValue("code", Code);
+            writer.WriteBoolValue("highlight", Highlight);
+            writer.WriteBoolValue("italic", Italic);
+            writer.WriteBoolValue("strike", Strike);
+            writer.WriteBoolValue("underline", Underline);
+            writer.WriteBoolValue("unlink", Unlink);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

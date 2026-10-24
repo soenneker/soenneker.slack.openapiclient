@@ -39,13 +39,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string ContentFormat { get; set; }
 #endif
         /// <summary>Whether to include resolved comment threads in the response. Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsGetCanvasArgumentsIncludeResolved? IncludeResolved { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsGetCanvasArgumentsIncludeResolved IncludeResolved { get; set; }
-#endif
+        public bool? IncludeResolved { get; set; }
         /// <summary>Overridable authentication token bearing required scopes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -82,7 +76,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "canvas_id", n => { CanvasId = n.GetStringValue(); } },
                 { "channel", n => { Channel = n.GetStringValue(); } },
                 { "content_format", n => { ContentFormat = n.GetStringValue(); } },
-                { "include_resolved", n => { IncludeResolved = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsGetCanvasArgumentsIncludeResolved>(global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsGetCanvasArgumentsIncludeResolved.CreateFromDiscriminatorValue); } },
+                { "include_resolved", n => { IncludeResolved = n.GetBoolValue(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
             };
         }
@@ -96,7 +90,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("canvas_id", CanvasId);
             writer.WriteStringValue("channel", Channel);
             writer.WriteStringValue("content_format", ContentFormat);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsGetCanvasArgumentsIncludeResolved>("include_resolved", IncludeResolved);
+            writer.WriteBoolValue("include_resolved", IncludeResolved);
             writer.WriteStringValue("token", Token);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -39,21 +39,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The is_hidden property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Field3IsHidden? IsHidden { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Field3IsHidden IsHidden { get; set; }
-#endif
+        public bool? IsHidden { get; set; }
         /// <summary>The is_inverse property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Field3IsInverse? IsInverse { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Field3IsInverse IsInverse { get; set; }
-#endif
+        public bool? IsInverse { get; set; }
         /// <summary>The label property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -132,8 +120,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "field_name", n => { FieldName = n.GetStringValue(); } },
                 { "hint", n => { Hint = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "is_hidden", n => { IsHidden = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Field3IsHidden>(global::Soenneker.Slack.OpenApiClient.Models.Field3IsHidden.CreateFromDiscriminatorValue); } },
-                { "is_inverse", n => { IsInverse = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Field3IsInverse>(global::Soenneker.Slack.OpenApiClient.Models.Field3IsInverse.CreateFromDiscriminatorValue); } },
+                { "is_hidden", n => { IsHidden = n.GetBoolValue(); } },
+                { "is_inverse", n => { IsInverse = n.GetBoolValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "options", n => { Options = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Options2>(global::Soenneker.Slack.OpenApiClient.Models.Options2.CreateFromDiscriminatorValue); } },
                 { "ordering", n => { Ordering = n.GetDoubleValue(); } },
@@ -153,8 +141,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("field_name", FieldName);
             writer.WriteStringValue("hint", Hint);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Field3IsHidden>("is_hidden", IsHidden);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Field3IsInverse>("is_inverse", IsInverse);
+            writer.WriteBoolValue("is_hidden", IsHidden);
+            writer.WriteBoolValue("is_inverse", IsInverse);
             writer.WriteStringValue("label", Label);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Options2>("options", Options);
             writer.WriteDoubleValue("ordering", Ordering);

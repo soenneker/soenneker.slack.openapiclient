@@ -23,13 +23,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Error { get; set; }
 #endif
         /// <summary>The ok property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Error4Ok? Ok { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Error4Ok Ok { get; set; }
-#endif
+        public bool? Ok { get; set; }
         /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -64,7 +58,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "error", n => { Error = n.GetStringValue(); } },
-                { "ok", n => { Ok = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Error4Ok>(global::Soenneker.Slack.OpenApiClient.Models.Error4Ok.CreateFromDiscriminatorValue); } },
+                { "ok", n => { Ok = n.GetBoolValue(); } },
                 { "user", n => { User = n.GetStringValue(); } },
             };
         }
@@ -76,7 +70,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("error", Error);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Error4Ok>("ok", Ok);
+            writer.WriteBoolValue("ok", Ok);
             writer.WriteStringValue("user", User);
             writer.WriteAdditionalData(AdditionalData);
         }

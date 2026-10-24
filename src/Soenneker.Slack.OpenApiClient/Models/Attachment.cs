@@ -207,21 +207,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string FromUrl { get; set; }
 #endif
         /// <summary>The hide_border property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AttachmentHideBorder? HideBorder { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AttachmentHideBorder HideBorder { get; set; }
-#endif
+        public bool? HideBorder { get; set; }
         /// <summary>The hide_color property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AttachmentHideColor? HideColor { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AttachmentHideColor HideColor { get; set; }
-#endif
+        public bool? HideColor { get; set; }
         /// <summary>The id property</summary>
         public double? Id { get; set; }
         /// <summary>The image_bytes property</summary>
@@ -239,53 +227,17 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The image_width property</summary>
         public double? ImageWidth { get; set; }
         /// <summary>The indent property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AttachmentIndent? Indent { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AttachmentIndent Indent { get; set; }
-#endif
+        public bool? Indent { get; set; }
         /// <summary>The is_app_unfurl property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AttachmentIsAppUnfurl? IsAppUnfurl { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AttachmentIsAppUnfurl IsAppUnfurl { get; set; }
-#endif
+        public bool? IsAppUnfurl { get; set; }
         /// <summary>The is_file_attachment property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AttachmentIsFileAttachment? IsFileAttachment { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AttachmentIsFileAttachment IsFileAttachment { get; set; }
-#endif
+        public bool? IsFileAttachment { get; set; }
         /// <summary>The is_msg_unfurl property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AttachmentIsMsgUnfurl? IsMsgUnfurl { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AttachmentIsMsgUnfurl IsMsgUnfurl { get; set; }
-#endif
+        public bool? IsMsgUnfurl { get; set; }
         /// <summary>The is_reply_unfurl property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AttachmentIsReplyUnfurl? IsReplyUnfurl { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AttachmentIsReplyUnfurl IsReplyUnfurl { get; set; }
-#endif
+        public bool? IsReplyUnfurl { get; set; }
         /// <summary>The is_thread_root_unfurl property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AttachmentIsThreadRootUnfurl? IsThreadRootUnfurl { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AttachmentIsThreadRootUnfurl IsThreadRootUnfurl { get; set; }
-#endif
+        public bool? IsThreadRootUnfurl { get; set; }
         /// <summary>The list property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -561,19 +513,19 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "footer", n => { Footer = n.GetStringValue(); } },
                 { "footer_icon", n => { FooterIcon = n.GetStringValue(); } },
                 { "from_url", n => { FromUrl = n.GetStringValue(); } },
-                { "hide_border", n => { HideBorder = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AttachmentHideBorder>(global::Soenneker.Slack.OpenApiClient.Models.AttachmentHideBorder.CreateFromDiscriminatorValue); } },
-                { "hide_color", n => { HideColor = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AttachmentHideColor>(global::Soenneker.Slack.OpenApiClient.Models.AttachmentHideColor.CreateFromDiscriminatorValue); } },
+                { "hide_border", n => { HideBorder = n.GetBoolValue(); } },
+                { "hide_color", n => { HideColor = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetDoubleValue(); } },
                 { "image_bytes", n => { ImageBytes = n.GetDoubleValue(); } },
                 { "image_height", n => { ImageHeight = n.GetDoubleValue(); } },
                 { "image_url", n => { ImageUrl = n.GetStringValue(); } },
                 { "image_width", n => { ImageWidth = n.GetDoubleValue(); } },
-                { "indent", n => { Indent = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AttachmentIndent>(global::Soenneker.Slack.OpenApiClient.Models.AttachmentIndent.CreateFromDiscriminatorValue); } },
-                { "is_app_unfurl", n => { IsAppUnfurl = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AttachmentIsAppUnfurl>(global::Soenneker.Slack.OpenApiClient.Models.AttachmentIsAppUnfurl.CreateFromDiscriminatorValue); } },
-                { "is_file_attachment", n => { IsFileAttachment = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AttachmentIsFileAttachment>(global::Soenneker.Slack.OpenApiClient.Models.AttachmentIsFileAttachment.CreateFromDiscriminatorValue); } },
-                { "is_msg_unfurl", n => { IsMsgUnfurl = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AttachmentIsMsgUnfurl>(global::Soenneker.Slack.OpenApiClient.Models.AttachmentIsMsgUnfurl.CreateFromDiscriminatorValue); } },
-                { "is_reply_unfurl", n => { IsReplyUnfurl = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AttachmentIsReplyUnfurl>(global::Soenneker.Slack.OpenApiClient.Models.AttachmentIsReplyUnfurl.CreateFromDiscriminatorValue); } },
-                { "is_thread_root_unfurl", n => { IsThreadRootUnfurl = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AttachmentIsThreadRootUnfurl>(global::Soenneker.Slack.OpenApiClient.Models.AttachmentIsThreadRootUnfurl.CreateFromDiscriminatorValue); } },
+                { "indent", n => { Indent = n.GetBoolValue(); } },
+                { "is_app_unfurl", n => { IsAppUnfurl = n.GetBoolValue(); } },
+                { "is_file_attachment", n => { IsFileAttachment = n.GetBoolValue(); } },
+                { "is_msg_unfurl", n => { IsMsgUnfurl = n.GetBoolValue(); } },
+                { "is_reply_unfurl", n => { IsReplyUnfurl = n.GetBoolValue(); } },
+                { "is_thread_root_unfurl", n => { IsThreadRootUnfurl = n.GetBoolValue(); } },
                 { "list", n => { List = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.List>(global::Soenneker.Slack.OpenApiClient.Models.List.CreateFromDiscriminatorValue); } },
                 { "list_record", n => { ListRecord = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PurpleListRecord>(global::Soenneker.Slack.OpenApiClient.Models.PurpleListRecord.CreateFromDiscriminatorValue); } },
                 { "list_record_id", n => { ListRecordId = n.GetStringValue(); } },
@@ -639,19 +591,19 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("footer", Footer);
             writer.WriteStringValue("footer_icon", FooterIcon);
             writer.WriteStringValue("from_url", FromUrl);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AttachmentHideBorder>("hide_border", HideBorder);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AttachmentHideColor>("hide_color", HideColor);
+            writer.WriteBoolValue("hide_border", HideBorder);
+            writer.WriteBoolValue("hide_color", HideColor);
             writer.WriteDoubleValue("id", Id);
             writer.WriteDoubleValue("image_bytes", ImageBytes);
             writer.WriteDoubleValue("image_height", ImageHeight);
             writer.WriteStringValue("image_url", ImageUrl);
             writer.WriteDoubleValue("image_width", ImageWidth);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AttachmentIndent>("indent", Indent);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AttachmentIsAppUnfurl>("is_app_unfurl", IsAppUnfurl);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AttachmentIsFileAttachment>("is_file_attachment", IsFileAttachment);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AttachmentIsMsgUnfurl>("is_msg_unfurl", IsMsgUnfurl);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AttachmentIsReplyUnfurl>("is_reply_unfurl", IsReplyUnfurl);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AttachmentIsThreadRootUnfurl>("is_thread_root_unfurl", IsThreadRootUnfurl);
+            writer.WriteBoolValue("indent", Indent);
+            writer.WriteBoolValue("is_app_unfurl", IsAppUnfurl);
+            writer.WriteBoolValue("is_file_attachment", IsFileAttachment);
+            writer.WriteBoolValue("is_msg_unfurl", IsMsgUnfurl);
+            writer.WriteBoolValue("is_reply_unfurl", IsReplyUnfurl);
+            writer.WriteBoolValue("is_thread_root_unfurl", IsThreadRootUnfurl);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.List>("list", List);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PurpleListRecord>("list_record", ListRecord);
             writer.WriteStringValue("list_record_id", ListRecordId);

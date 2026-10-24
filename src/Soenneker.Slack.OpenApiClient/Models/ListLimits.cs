@@ -23,29 +23,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The max_attachments_per_cell property</summary>
         public double? MaxAttachmentsPerCell { get; set; }
         /// <summary>The over_column_maximum property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ListLimitsOverColumnMaximum? OverColumnMaximum { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ListLimitsOverColumnMaximum OverColumnMaximum { get; set; }
-#endif
+        public bool? OverColumnMaximum { get; set; }
         /// <summary>The over_row_maximum property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ListLimitsOverRowMaximum? OverRowMaximum { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ListLimitsOverRowMaximum OverRowMaximum { get; set; }
-#endif
+        public bool? OverRowMaximum { get; set; }
         /// <summary>The over_view_maximum property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ListLimitsOverViewMaximum? OverViewMaximum { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ListLimitsOverViewMaximum OverViewMaximum { get; set; }
-#endif
+        public bool? OverViewMaximum { get; set; }
         /// <summary>The row_count property</summary>
         public double? RowCount { get; set; }
         /// <summary>The row_count_limit property</summary>
@@ -83,9 +65,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "column_count", n => { ColumnCount = n.GetDoubleValue(); } },
                 { "column_count_limit", n => { ColumnCountLimit = n.GetDoubleValue(); } },
                 { "max_attachments_per_cell", n => { MaxAttachmentsPerCell = n.GetDoubleValue(); } },
-                { "over_column_maximum", n => { OverColumnMaximum = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListLimitsOverColumnMaximum>(global::Soenneker.Slack.OpenApiClient.Models.ListLimitsOverColumnMaximum.CreateFromDiscriminatorValue); } },
-                { "over_row_maximum", n => { OverRowMaximum = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListLimitsOverRowMaximum>(global::Soenneker.Slack.OpenApiClient.Models.ListLimitsOverRowMaximum.CreateFromDiscriminatorValue); } },
-                { "over_view_maximum", n => { OverViewMaximum = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListLimitsOverViewMaximum>(global::Soenneker.Slack.OpenApiClient.Models.ListLimitsOverViewMaximum.CreateFromDiscriminatorValue); } },
+                { "over_column_maximum", n => { OverColumnMaximum = n.GetBoolValue(); } },
+                { "over_row_maximum", n => { OverRowMaximum = n.GetBoolValue(); } },
+                { "over_view_maximum", n => { OverViewMaximum = n.GetBoolValue(); } },
                 { "row_count", n => { RowCount = n.GetDoubleValue(); } },
                 { "row_count_limit", n => { RowCountLimit = n.GetDoubleValue(); } },
                 { "view_count", n => { ViewCount = n.GetDoubleValue(); } },
@@ -103,9 +85,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("column_count", ColumnCount);
             writer.WriteDoubleValue("column_count_limit", ColumnCountLimit);
             writer.WriteDoubleValue("max_attachments_per_cell", MaxAttachmentsPerCell);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListLimitsOverColumnMaximum>("over_column_maximum", OverColumnMaximum);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListLimitsOverRowMaximum>("over_row_maximum", OverRowMaximum);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListLimitsOverViewMaximum>("over_view_maximum", OverViewMaximum);
+            writer.WriteBoolValue("over_column_maximum", OverColumnMaximum);
+            writer.WriteBoolValue("over_row_maximum", OverRowMaximum);
+            writer.WriteBoolValue("over_view_maximum", OverViewMaximum);
             writer.WriteDoubleValue("row_count", RowCount);
             writer.WriteDoubleValue("row_count_limit", RowCountLimit);
             writer.WriteDoubleValue("view_count", ViewCount);

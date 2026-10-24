@@ -15,21 +15,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The exclude_bot_users property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Filter2ExcludeBotUsers? ExcludeBotUsers { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Filter2ExcludeBotUsers ExcludeBotUsers { get; set; }
-#endif
+        public bool? ExcludeBotUsers { get; set; }
         /// <summary>The exclude_external_shared_channels property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Filter2ExcludeExternalSharedChannels? ExcludeExternalSharedChannels { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Filter2ExcludeExternalSharedChannels ExcludeExternalSharedChannels { get; set; }
-#endif
+        public bool? ExcludeExternalSharedChannels { get; set; }
         /// <summary>The include property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -63,8 +51,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "exclude_bot_users", n => { ExcludeBotUsers = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Filter2ExcludeBotUsers>(global::Soenneker.Slack.OpenApiClient.Models.Filter2ExcludeBotUsers.CreateFromDiscriminatorValue); } },
-                { "exclude_external_shared_channels", n => { ExcludeExternalSharedChannels = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Filter2ExcludeExternalSharedChannels>(global::Soenneker.Slack.OpenApiClient.Models.Filter2ExcludeExternalSharedChannels.CreateFromDiscriminatorValue); } },
+                { "exclude_bot_users", n => { ExcludeBotUsers = n.GetBoolValue(); } },
+                { "exclude_external_shared_channels", n => { ExcludeExternalSharedChannels = n.GetBoolValue(); } },
                 { "include", n => { Include = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
@@ -75,8 +63,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Filter2ExcludeBotUsers>("exclude_bot_users", ExcludeBotUsers);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Filter2ExcludeExternalSharedChannels>("exclude_external_shared_channels", ExcludeExternalSharedChannels);
+            writer.WriteBoolValue("exclude_bot_users", ExcludeBotUsers);
+            writer.WriteBoolValue("exclude_external_shared_channels", ExcludeExternalSharedChannels);
             writer.WriteCollectionOfPrimitiveValues<string>("include", Include);
             writer.WriteAdditionalData(AdditionalData);
         }

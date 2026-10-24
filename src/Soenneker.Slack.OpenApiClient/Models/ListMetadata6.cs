@@ -71,13 +71,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public List<string> Integrations { get; set; }
 #endif
         /// <summary>The is_trial property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ListMetadata6IsTrial? IsTrial { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ListMetadata6IsTrial IsTrial { get; set; }
-#endif
+        public bool? IsTrial { get; set; }
         /// <summary>The schema property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -126,7 +120,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "icon_team_id", n => { IconTeamId = n.GetStringValue(); } },
                 { "icon_url", n => { IconUrl = n.GetStringValue(); } },
                 { "integrations", n => { Integrations = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "is_trial", n => { IsTrial = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata6IsTrial>(global::Soenneker.Slack.OpenApiClient.Models.ListMetadata6IsTrial.CreateFromDiscriminatorValue); } },
+                { "is_trial", n => { IsTrial = n.GetBoolValue(); } },
                 { "schema", n => { Schema = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Schema3>(global::Soenneker.Slack.OpenApiClient.Models.Schema3.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "views", n => { Views = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.View4>(global::Soenneker.Slack.OpenApiClient.Models.View4.CreateFromDiscriminatorValue)?.AsList(); } },
             };
@@ -145,7 +139,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("icon_team_id", IconTeamId);
             writer.WriteStringValue("icon_url", IconUrl);
             writer.WriteCollectionOfPrimitiveValues<string>("integrations", Integrations);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata6IsTrial>("is_trial", IsTrial);
+            writer.WriteBoolValue("is_trial", IsTrial);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Schema3>("schema", Schema);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.View4>("views", Views);
             writer.WriteAdditionalData(AdditionalData);

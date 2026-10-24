@@ -15,21 +15,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The is_protected property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Options2IsProtected? IsProtected { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Options2IsProtected IsProtected { get; set; }
-#endif
+        public bool? IsProtected { get; set; }
         /// <summary>The is_scim property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Options2IsScim? IsScim { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Options2IsScim IsScim { get; set; }
-#endif
+        public bool? IsScim { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Options2"/> and sets the default values.
         /// </summary>
@@ -55,8 +43,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "is_protected", n => { IsProtected = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Options2IsProtected>(global::Soenneker.Slack.OpenApiClient.Models.Options2IsProtected.CreateFromDiscriminatorValue); } },
-                { "is_scim", n => { IsScim = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Options2IsScim>(global::Soenneker.Slack.OpenApiClient.Models.Options2IsScim.CreateFromDiscriminatorValue); } },
+                { "is_protected", n => { IsProtected = n.GetBoolValue(); } },
+                { "is_scim", n => { IsScim = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -66,8 +54,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Options2IsProtected>("is_protected", IsProtected);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Options2IsScim>("is_scim", IsScim);
+            writer.WriteBoolValue("is_protected", IsProtected);
+            writer.WriteBoolValue("is_scim", IsScim);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

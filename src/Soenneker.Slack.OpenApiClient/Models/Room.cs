@@ -99,13 +99,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string ExternalUniqueId { get; set; }
 #endif
         /// <summary>The has_ended property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.RoomHasEnded? HasEnded { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.RoomHasEnded HasEnded { get; set; }
-#endif
+        public bool? HasEnded { get; set; }
         /// <summary>The huddle_link property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -123,29 +117,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The is_dm_call property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.RoomIsDmCall? IsDmCall { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.RoomIsDmCall IsDmCall { get; set; }
-#endif
+        public bool? IsDmCall { get; set; }
         /// <summary>The is_prewarmed property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.RoomIsPrewarmed? IsPrewarmed { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.RoomIsPrewarmed IsPrewarmed { get; set; }
-#endif
+        public bool? IsPrewarmed { get; set; }
         /// <summary>The is_scheduled property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.RoomIsScheduled? IsScheduled { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.RoomIsScheduled IsScheduled { get; set; }
-#endif
+        public bool? IsScheduled { get; set; }
         /// <summary>The knocks property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -259,29 +235,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string ThreadRootTs { get; set; }
 #endif
         /// <summary>The was_accepted property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.RoomWasAccepted? WasAccepted { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.RoomWasAccepted WasAccepted { get; set; }
-#endif
+        public bool? WasAccepted { get; set; }
         /// <summary>The was_missed property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.RoomWasMissed? WasMissed { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.RoomWasMissed WasMissed { get; set; }
-#endif
+        public bool? WasMissed { get; set; }
         /// <summary>The was_rejected property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.RoomWasRejected? WasRejected { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.RoomWasRejected WasRejected { get; set; }
-#endif
+        public bool? WasRejected { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Room"/> and sets the default values.
         /// </summary>
@@ -319,12 +277,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "date_start", n => { DateStart = n.GetDoubleValue(); } },
                 { "display_id", n => { DisplayId = n.GetStringValue(); } },
                 { "external_unique_id", n => { ExternalUniqueId = n.GetStringValue(); } },
-                { "has_ended", n => { HasEnded = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RoomHasEnded>(global::Soenneker.Slack.OpenApiClient.Models.RoomHasEnded.CreateFromDiscriminatorValue); } },
+                { "has_ended", n => { HasEnded = n.GetBoolValue(); } },
                 { "huddle_link", n => { HuddleLink = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "is_dm_call", n => { IsDmCall = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RoomIsDmCall>(global::Soenneker.Slack.OpenApiClient.Models.RoomIsDmCall.CreateFromDiscriminatorValue); } },
-                { "is_prewarmed", n => { IsPrewarmed = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RoomIsPrewarmed>(global::Soenneker.Slack.OpenApiClient.Models.RoomIsPrewarmed.CreateFromDiscriminatorValue); } },
-                { "is_scheduled", n => { IsScheduled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RoomIsScheduled>(global::Soenneker.Slack.OpenApiClient.Models.RoomIsScheduled.CreateFromDiscriminatorValue); } },
+                { "is_dm_call", n => { IsDmCall = n.GetBoolValue(); } },
+                { "is_prewarmed", n => { IsPrewarmed = n.GetBoolValue(); } },
+                { "is_scheduled", n => { IsScheduled = n.GetBoolValue(); } },
                 { "knocks", n => { Knocks = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RoomKnocks>(global::Soenneker.Slack.OpenApiClient.Models.RoomKnocks.CreateFromDiscriminatorValue); } },
                 { "last_invite_status_by_user", n => { LastInviteStatusByUser = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RoomLastInviteStatusByUser>(global::Soenneker.Slack.OpenApiClient.Models.RoomLastInviteStatusByUser.CreateFromDiscriminatorValue); } },
                 { "media_backend_type", n => { MediaBackendType = n.GetStringValue(); } },
@@ -339,9 +297,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "pending_invitees", n => { PendingInvitees = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RoomPendingInvitees>(global::Soenneker.Slack.OpenApiClient.Models.RoomPendingInvitees.CreateFromDiscriminatorValue); } },
                 { "recording", n => { Recording = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Recording>(global::Soenneker.Slack.OpenApiClient.Models.Recording.CreateFromDiscriminatorValue); } },
                 { "thread_root_ts", n => { ThreadRootTs = n.GetStringValue(); } },
-                { "was_accepted", n => { WasAccepted = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RoomWasAccepted>(global::Soenneker.Slack.OpenApiClient.Models.RoomWasAccepted.CreateFromDiscriminatorValue); } },
-                { "was_missed", n => { WasMissed = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RoomWasMissed>(global::Soenneker.Slack.OpenApiClient.Models.RoomWasMissed.CreateFromDiscriminatorValue); } },
-                { "was_rejected", n => { WasRejected = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RoomWasRejected>(global::Soenneker.Slack.OpenApiClient.Models.RoomWasRejected.CreateFromDiscriminatorValue); } },
+                { "was_accepted", n => { WasAccepted = n.GetBoolValue(); } },
+                { "was_missed", n => { WasMissed = n.GetBoolValue(); } },
+                { "was_rejected", n => { WasRejected = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -363,12 +321,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("date_start", DateStart);
             writer.WriteStringValue("display_id", DisplayId);
             writer.WriteStringValue("external_unique_id", ExternalUniqueId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RoomHasEnded>("has_ended", HasEnded);
+            writer.WriteBoolValue("has_ended", HasEnded);
             writer.WriteStringValue("huddle_link", HuddleLink);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RoomIsDmCall>("is_dm_call", IsDmCall);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RoomIsPrewarmed>("is_prewarmed", IsPrewarmed);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RoomIsScheduled>("is_scheduled", IsScheduled);
+            writer.WriteBoolValue("is_dm_call", IsDmCall);
+            writer.WriteBoolValue("is_prewarmed", IsPrewarmed);
+            writer.WriteBoolValue("is_scheduled", IsScheduled);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RoomKnocks>("knocks", Knocks);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RoomLastInviteStatusByUser>("last_invite_status_by_user", LastInviteStatusByUser);
             writer.WriteStringValue("media_backend_type", MediaBackendType);
@@ -383,9 +341,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RoomPendingInvitees>("pending_invitees", PendingInvitees);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Recording>("recording", Recording);
             writer.WriteStringValue("thread_root_ts", ThreadRootTs);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RoomWasAccepted>("was_accepted", WasAccepted);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RoomWasMissed>("was_missed", WasMissed);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RoomWasRejected>("was_rejected", WasRejected);
+            writer.WriteBoolValue("was_accepted", WasAccepted);
+            writer.WriteBoolValue("was_missed", WasMissed);
+            writer.WriteBoolValue("was_rejected", WasRejected);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

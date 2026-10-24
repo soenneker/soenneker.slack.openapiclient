@@ -31,13 +31,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Token { get; set; }
 #endif
         /// <summary>Specify `true` to convert `W` global user IDs to workspace-specific `U` IDs. Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MigrationExchangeArgumentsToOld? ToOld { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MigrationExchangeArgumentsToOld ToOld { get; set; }
-#endif
+        public bool? ToOld { get; set; }
         /// <summary>A comma-separated list of user IDs, up to 400 per request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -72,7 +66,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "team_id", n => { TeamId = n.GetStringValue(); } },
-                { "to_old", n => { ToOld = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MigrationExchangeArgumentsToOld>(global::Soenneker.Slack.OpenApiClient.Models.MigrationExchangeArgumentsToOld.CreateFromDiscriminatorValue); } },
+                { "to_old", n => { ToOld = n.GetBoolValue(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
                 { "users", n => { Users = n.GetStringValue(); } },
             };
@@ -86,7 +80,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("team_id", TeamId);
             writer.WriteStringValue("token", Token);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MigrationExchangeArgumentsToOld>("to_old", ToOld);
+            writer.WriteBoolValue("to_old", ToOld);
             writer.WriteStringValue("users", Users);
             writer.WriteAdditionalData(AdditionalData);
         }

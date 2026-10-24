@@ -39,13 +39,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Email { get; set; }
 #endif
         /// <summary>Allow invited user to sign in via email and password. Only available for Enterprise Grid teams viaadmin invite.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsersInviteArgumentsEmailPasswordPolicyEnabled? EmailPasswordPolicyEnabled { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsersInviteArgumentsEmailPasswordPolicyEnabled EmailPasswordPolicyEnabled { get; set; }
-#endif
+        public bool? EmailPasswordPolicyEnabled { get; set; }
         /// <summary>Timestamp when guest account should be disabled. Only include this timestamp if you are inviting aguest user and you want their account to expire on a certain date.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -55,21 +49,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string GuestExpirationTs { get; set; }
 #endif
         /// <summary>Set to `true` if user should be added to the workspace as a guest.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsersInviteArgumentsIsRestricted? IsRestricted { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsersInviteArgumentsIsRestricted IsRestricted { get; set; }
-#endif
+        public bool? IsRestricted { get; set; }
         /// <summary>Set to `true` if user should be added to the workspace as a guest.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsersInviteArgumentsIsUltraRestricted? IsUltraRestricted { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsersInviteArgumentsIsUltraRestricted IsUltraRestricted { get; set; }
-#endif
+        public bool? IsUltraRestricted { get; set; }
         /// <summary>Full name of the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -79,13 +61,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string RealName { get; set; }
 #endif
         /// <summary>Allow this invite to be resent in the future if a user has not signed up yet.Resending can only be done via the UI and has no expiration. Defaults to `false`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsersInviteArgumentsResend? Resend { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsersInviteArgumentsResend Resend { get; set; }
-#endif
+        public bool? Resend { get; set; }
         /// <summary>The encoded team ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -130,12 +106,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "channel_ids", n => { ChannelIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "custom_message", n => { CustomMessage = n.GetStringValue(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
-                { "email_password_policy_enabled", n => { EmailPasswordPolicyEnabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminUsersInviteArgumentsEmailPasswordPolicyEnabled>(global::Soenneker.Slack.OpenApiClient.Models.AdminUsersInviteArgumentsEmailPasswordPolicyEnabled.CreateFromDiscriminatorValue); } },
+                { "email_password_policy_enabled", n => { EmailPasswordPolicyEnabled = n.GetBoolValue(); } },
                 { "guest_expiration_ts", n => { GuestExpirationTs = n.GetStringValue(); } },
-                { "is_restricted", n => { IsRestricted = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminUsersInviteArgumentsIsRestricted>(global::Soenneker.Slack.OpenApiClient.Models.AdminUsersInviteArgumentsIsRestricted.CreateFromDiscriminatorValue); } },
-                { "is_ultra_restricted", n => { IsUltraRestricted = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminUsersInviteArgumentsIsUltraRestricted>(global::Soenneker.Slack.OpenApiClient.Models.AdminUsersInviteArgumentsIsUltraRestricted.CreateFromDiscriminatorValue); } },
+                { "is_restricted", n => { IsRestricted = n.GetBoolValue(); } },
+                { "is_ultra_restricted", n => { IsUltraRestricted = n.GetBoolValue(); } },
                 { "real_name", n => { RealName = n.GetStringValue(); } },
-                { "resend", n => { Resend = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminUsersInviteArgumentsResend>(global::Soenneker.Slack.OpenApiClient.Models.AdminUsersInviteArgumentsResend.CreateFromDiscriminatorValue); } },
+                { "resend", n => { Resend = n.GetBoolValue(); } },
                 { "team_id", n => { TeamId = n.GetStringValue(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
             };
@@ -150,12 +126,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("channel_ids", ChannelIds);
             writer.WriteStringValue("custom_message", CustomMessage);
             writer.WriteStringValue("email", Email);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminUsersInviteArgumentsEmailPasswordPolicyEnabled>("email_password_policy_enabled", EmailPasswordPolicyEnabled);
+            writer.WriteBoolValue("email_password_policy_enabled", EmailPasswordPolicyEnabled);
             writer.WriteStringValue("guest_expiration_ts", GuestExpirationTs);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminUsersInviteArgumentsIsRestricted>("is_restricted", IsRestricted);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminUsersInviteArgumentsIsUltraRestricted>("is_ultra_restricted", IsUltraRestricted);
+            writer.WriteBoolValue("is_restricted", IsRestricted);
+            writer.WriteBoolValue("is_ultra_restricted", IsUltraRestricted);
             writer.WriteStringValue("real_name", RealName);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminUsersInviteArgumentsResend>("resend", Resend);
+            writer.WriteBoolValue("resend", Resend);
             writer.WriteStringValue("team_id", TeamId);
             writer.WriteStringValue("token", Token);
             writer.WriteAdditionalData(AdditionalData);

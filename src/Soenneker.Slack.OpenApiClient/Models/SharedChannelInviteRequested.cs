@@ -33,13 +33,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The date_update property</summary>
         public double? DateUpdate { get; set; }
         /// <summary>The enabled property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.SharedChannelInviteRequestedEnabled? Enabled { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.SharedChannelInviteRequestedEnabled Enabled { get; set; }
-#endif
+        public bool? Enabled { get; set; }
         /// <summary>The source property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -92,7 +86,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "actor", n => { Actor = n.GetStringValue(); } },
                 { "approval_destination", n => { ApprovalDestination = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ApprovalDestination>(global::Soenneker.Slack.OpenApiClient.Models.ApprovalDestination.CreateFromDiscriminatorValue); } },
                 { "date_update", n => { DateUpdate = n.GetDoubleValue(); } },
-                { "enabled", n => { Enabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SharedChannelInviteRequestedEnabled>(global::Soenneker.Slack.OpenApiClient.Models.SharedChannelInviteRequestedEnabled.CreateFromDiscriminatorValue); } },
+                { "enabled", n => { Enabled = n.GetBoolValue(); } },
                 { "source", n => { Source = n.GetStringValue(); } },
                 { "usergroup_exclude", n => { UsergroupExclude = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UsergroupClude>(global::Soenneker.Slack.OpenApiClient.Models.UsergroupClude.CreateFromDiscriminatorValue); } },
                 { "usergroup_include", n => { UsergroupInclude = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UsergroupClude>(global::Soenneker.Slack.OpenApiClient.Models.UsergroupClude.CreateFromDiscriminatorValue); } },
@@ -108,7 +102,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("actor", Actor);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ApprovalDestination>("approval_destination", ApprovalDestination);
             writer.WriteDoubleValue("date_update", DateUpdate);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SharedChannelInviteRequestedEnabled>("enabled", Enabled);
+            writer.WriteBoolValue("enabled", Enabled);
             writer.WriteStringValue("source", Source);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UsergroupClude>("usergroup_exclude", UsergroupExclude);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UsergroupClude>("usergroup_include", UsergroupInclude);

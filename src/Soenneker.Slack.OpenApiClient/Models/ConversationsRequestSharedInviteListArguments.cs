@@ -23,29 +23,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Cursor { get; set; }
 #endif
         /// <summary>When `true` approved invitation requests will be returned, otherwise they will be excluded.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsRequestSharedInviteListArgumentsAllOf2IncludeApproved? IncludeApproved { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsRequestSharedInviteListArgumentsAllOf2IncludeApproved IncludeApproved { get; set; }
-#endif
+        public bool? IncludeApproved { get; set; }
         /// <summary>When `true` denied invitation requests will be returned, otherwise they will be excluded.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsRequestSharedInviteListArgumentsAllOf2IncludeDenied? IncludeDenied { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsRequestSharedInviteListArgumentsAllOf2IncludeDenied IncludeDenied { get; set; }
-#endif
+        public bool? IncludeDenied { get; set; }
         /// <summary>When `true` expired invitation requests will be returned, otherwise they will be excluded.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsRequestSharedInviteListArgumentsAllOf2IncludeExpired? IncludeExpired { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ConversationsRequestSharedInviteListArgumentsAllOf2IncludeExpired IncludeExpired { get; set; }
-#endif
+        public bool? IncludeExpired { get; set; }
         /// <summary>An optional list of invitation ids to look up.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -90,9 +72,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "cursor", n => { Cursor = n.GetStringValue(); } },
-                { "include_approved", n => { IncludeApproved = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsRequestSharedInviteListArgumentsAllOf2IncludeApproved>(global::Soenneker.Slack.OpenApiClient.Models.ConversationsRequestSharedInviteListArgumentsAllOf2IncludeApproved.CreateFromDiscriminatorValue); } },
-                { "include_denied", n => { IncludeDenied = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsRequestSharedInviteListArgumentsAllOf2IncludeDenied>(global::Soenneker.Slack.OpenApiClient.Models.ConversationsRequestSharedInviteListArgumentsAllOf2IncludeDenied.CreateFromDiscriminatorValue); } },
-                { "include_expired", n => { IncludeExpired = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsRequestSharedInviteListArgumentsAllOf2IncludeExpired>(global::Soenneker.Slack.OpenApiClient.Models.ConversationsRequestSharedInviteListArgumentsAllOf2IncludeExpired.CreateFromDiscriminatorValue); } },
+                { "include_approved", n => { IncludeApproved = n.GetBoolValue(); } },
+                { "include_denied", n => { IncludeDenied = n.GetBoolValue(); } },
+                { "include_expired", n => { IncludeExpired = n.GetBoolValue(); } },
                 { "invite_ids", n => { InviteIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "limit", n => { Limit = n.GetDoubleValue(); } },
                 { "user_id", n => { UserId = n.GetStringValue(); } },
@@ -106,9 +88,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("cursor", Cursor);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsRequestSharedInviteListArgumentsAllOf2IncludeApproved>("include_approved", IncludeApproved);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsRequestSharedInviteListArgumentsAllOf2IncludeDenied>("include_denied", IncludeDenied);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConversationsRequestSharedInviteListArgumentsAllOf2IncludeExpired>("include_expired", IncludeExpired);
+            writer.WriteBoolValue("include_approved", IncludeApproved);
+            writer.WriteBoolValue("include_denied", IncludeDenied);
+            writer.WriteBoolValue("include_expired", IncludeExpired);
             writer.WriteCollectionOfPrimitiveValues<string>("invite_ids", InviteIds);
             writer.WriteDoubleValue("limit", Limit);
             writer.WriteStringValue("user_id", UserId);

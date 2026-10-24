@@ -59,10 +59,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The response_metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata? ResponseMetadata { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSearchResponseResponseMetadata? ResponseMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata ResponseMetadata { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSearchResponseResponseMetadata ResponseMetadata { get; set; }
 #endif
         /// <summary>The total_count property</summary>
         public double? TotalCount { get; set; }
@@ -105,7 +105,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "next_cursor", n => { NextCursor = n.GetStringValue(); } },
                 { "ok", n => { Ok = n.GetBoolValue(); } },
                 { "provided", n => { Provided = n.GetStringValue(); } },
-                { "response_metadata", n => { ResponseMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>(global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata.CreateFromDiscriminatorValue); } },
+                { "response_metadata", n => { ResponseMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSearchResponseResponseMetadata>(global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSearchResponseResponseMetadata.CreateFromDiscriminatorValue); } },
                 { "total_count", n => { TotalCount = n.GetDoubleValue(); } },
                 { "warning", n => { Warning = n.GetStringValue(); } },
             };
@@ -123,7 +123,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("next_cursor", NextCursor);
             writer.WriteBoolValue("ok", Ok);
             writer.WriteStringValue("provided", Provided);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>("response_metadata", ResponseMetadata);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSearchResponseResponseMetadata>("response_metadata", ResponseMetadata);
             writer.WriteDoubleValue("total_count", TotalCount);
             writer.WriteStringValue("warning", Warning);
             writer.WriteAdditionalData(AdditionalData);

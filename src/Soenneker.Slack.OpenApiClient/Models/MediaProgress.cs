@@ -19,13 +19,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The max_offset_ms property</summary>
         public double? MaxOffsetMs { get; set; }
         /// <summary>The media_watched property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MediaProgressMediaWatched? MediaWatched { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.MediaProgressMediaWatched MediaWatched { get; set; }
-#endif
+        public bool? MediaWatched { get; set; }
         /// <summary>The offset_ms property</summary>
         public double? OffsetMs { get; set; }
         /// <summary>
@@ -55,7 +49,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "duration_ms", n => { DurationMs = n.GetDoubleValue(); } },
                 { "max_offset_ms", n => { MaxOffsetMs = n.GetDoubleValue(); } },
-                { "media_watched", n => { MediaWatched = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MediaProgressMediaWatched>(global::Soenneker.Slack.OpenApiClient.Models.MediaProgressMediaWatched.CreateFromDiscriminatorValue); } },
+                { "media_watched", n => { MediaWatched = n.GetBoolValue(); } },
                 { "offset_ms", n => { OffsetMs = n.GetDoubleValue(); } },
             };
         }
@@ -68,7 +62,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("duration_ms", DurationMs);
             writer.WriteDoubleValue("max_offset_ms", MaxOffsetMs);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MediaProgressMediaWatched>("media_watched", MediaWatched);
+            writer.WriteBoolValue("media_watched", MediaWatched);
             writer.WriteDoubleValue("offset_ms", OffsetMs);
             writer.WriteAdditionalData(AdditionalData);
         }

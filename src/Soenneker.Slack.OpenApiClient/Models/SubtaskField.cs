@@ -15,13 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The checkbox property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.SubtaskFieldCheckbox? Checkbox { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.SubtaskFieldCheckbox Checkbox { get; set; }
-#endif
+        public bool? Checkbox { get; set; }
         /// <summary>The column_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -39,13 +33,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Key { get; set; }
 #endif
         /// <summary>The value property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.SubtaskFieldValue? Value { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.SubtaskFieldValue Value { get; set; }
-#endif
+        public bool? Value { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.SubtaskField"/> and sets the default values.
         /// </summary>
@@ -71,10 +59,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "checkbox", n => { Checkbox = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SubtaskFieldCheckbox>(global::Soenneker.Slack.OpenApiClient.Models.SubtaskFieldCheckbox.CreateFromDiscriminatorValue); } },
+                { "checkbox", n => { Checkbox = n.GetBoolValue(); } },
                 { "column_id", n => { ColumnId = n.GetStringValue(); } },
                 { "key", n => { Key = n.GetStringValue(); } },
-                { "value", n => { Value = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SubtaskFieldValue>(global::Soenneker.Slack.OpenApiClient.Models.SubtaskFieldValue.CreateFromDiscriminatorValue); } },
+                { "value", n => { Value = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -84,10 +72,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SubtaskFieldCheckbox>("checkbox", Checkbox);
+            writer.WriteBoolValue("checkbox", Checkbox);
             writer.WriteStringValue("column_id", ColumnId);
             writer.WriteStringValue("key", Key);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SubtaskFieldValue>("value", Value);
+            writer.WriteBoolValue("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

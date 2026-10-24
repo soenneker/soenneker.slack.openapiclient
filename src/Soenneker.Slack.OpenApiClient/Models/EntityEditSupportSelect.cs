@@ -31,13 +31,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public List<string> CurrentValues { get; set; }
 #endif
         /// <summary>The fetch_options_dynamically property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportSelectFetchOptionsDynamically? FetchOptionsDynamically { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportSelectFetchOptionsDynamically FetchOptionsDynamically { get; set; }
-#endif
+        public bool? FetchOptionsDynamically { get; set; }
         /// <summary>The min_query_length property</summary>
         public double? MinQueryLength { get; set; }
         /// <summary>The static_options property</summary>
@@ -75,7 +69,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "current_value", n => { CurrentValue = n.GetStringValue(); } },
                 { "current_values", n => { CurrentValues = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "fetch_options_dynamically", n => { FetchOptionsDynamically = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportSelectFetchOptionsDynamically>(global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportSelectFetchOptionsDynamically.CreateFromDiscriminatorValue); } },
+                { "fetch_options_dynamically", n => { FetchOptionsDynamically = n.GetBoolValue(); } },
                 { "min_query_length", n => { MinQueryLength = n.GetDoubleValue(); } },
                 { "static_options", n => { StaticOptions = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Option>(global::Soenneker.Slack.OpenApiClient.Models.Option.CreateFromDiscriminatorValue)?.AsList(); } },
             };
@@ -89,7 +83,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("current_value", CurrentValue);
             writer.WriteCollectionOfPrimitiveValues<string>("current_values", CurrentValues);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportSelectFetchOptionsDynamically>("fetch_options_dynamically", FetchOptionsDynamically);
+            writer.WriteBoolValue("fetch_options_dynamically", FetchOptionsDynamically);
             writer.WriteDoubleValue("min_query_length", MinQueryLength);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Option>("static_options", StaticOptions);
             writer.WriteAdditionalData(AdditionalData);

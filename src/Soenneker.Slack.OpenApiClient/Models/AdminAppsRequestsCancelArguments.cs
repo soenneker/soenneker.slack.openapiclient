@@ -7,49 +7,61 @@ using System.IO;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRequestsCancelArgumentsMember1"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRequestsCancelArgumentsMember2"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class AdminAppsRequestsCancelArguments : global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRequestsCancelArgumentsAllOf1, IParsable
-    #pragma warning restore CS1591
+    public partial class AdminAppsRequestsCancelArguments : IComposedTypeWrapper, IParsable
     {
-        /// <summary>The id of the request.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRequestsCancelArgumentsMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RequestId { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRequestsCancelArgumentsMember1? AdminAppsRequestsCancelArgumentsMember1 { get; set; }
 #nullable restore
 #else
-        public string RequestId { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRequestsCancelArgumentsMember1 AdminAppsRequestsCancelArgumentsMember1 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRequestsCancelArgumentsMember2"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRequestsCancelArgumentsMember2? AdminAppsRequestsCancelArgumentsMember2 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRequestsCancelArgumentsMember2 AdminAppsRequestsCancelArgumentsMember2 { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRequestsCancelArguments"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRequestsCancelArguments CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRequestsCancelArguments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRequestsCancelArguments();
+            var result = new global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRequestsCancelArguments();
+            result.AdminAppsRequestsCancelArgumentsMember1 = new global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRequestsCancelArgumentsMember1();
+            result.AdminAppsRequestsCancelArgumentsMember2 = new global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRequestsCancelArgumentsMember2();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            if(AdminAppsRequestsCancelArgumentsMember1 != null || AdminAppsRequestsCancelArgumentsMember2 != null)
             {
-                { "request_id", n => { RequestId = n.GetStringValue(); } },
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(AdminAppsRequestsCancelArgumentsMember1, AdminAppsRequestsCancelArgumentsMember2);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
-            writer.WriteStringValue("request_id", RequestId);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRequestsCancelArgumentsMember1>(null, AdminAppsRequestsCancelArgumentsMember1, AdminAppsRequestsCancelArgumentsMember2);
         }
     }
 }

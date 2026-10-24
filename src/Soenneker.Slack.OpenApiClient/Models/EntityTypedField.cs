@@ -79,13 +79,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Link { get; set; }
 #endif
         /// <summary>The long property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.EntityTypedFieldLong? Long { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.EntityTypedFieldLong Long { get; set; }
-#endif
+        public bool? Long { get; set; }
         /// <summary>The slack_file property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -159,7 +153,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "image_url", n => { ImageUrl = n.GetStringValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "link", n => { Link = n.GetStringValue(); } },
-                { "long", n => { Long = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityTypedFieldLong>(global::Soenneker.Slack.OpenApiClient.Models.EntityTypedFieldLong.CreateFromDiscriminatorValue); } },
+                { "long", n => { Long = n.GetBoolValue(); } },
                 { "slack_file", n => { SlackFile = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityTypedFieldSlackFile>(global::Soenneker.Slack.OpenApiClient.Models.EntityTypedFieldSlackFile.CreateFromDiscriminatorValue); } },
                 { "tag_color", n => { TagColor = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
@@ -182,7 +176,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("image_url", ImageUrl);
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("link", Link);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityTypedFieldLong>("long", Long);
+            writer.WriteBoolValue("long", Long);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityTypedFieldSlackFile>("slack_file", SlackFile);
             writer.WriteStringValue("tag_color", TagColor);
             writer.WriteStringValue("type", Type);

@@ -65,23 +65,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Used by rating columns to specify the maximum rate value.</summary>
         public double? Max { get; set; }
         /// <summary>Used by people columns to specify whether the users should be notified when the column is updated.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsSchemaColumnOptionsNotifyUsers? NotifyUsers { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsSchemaColumnOptionsNotifyUsers NotifyUsers { get; set; }
-#endif
+        public bool? NotifyUsers { get; set; }
         /// <summary>Used by numeric columns to specify number of decimal places.</summary>
         public double? Precision { get; set; }
         /// <summary>Used by people, channel, and canvas columns to specify whether the entity name should be shown. Default is true.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsSchemaColumnOptionsShowMemberName? ShowMemberName { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsSchemaColumnOptionsShowMemberName ShowMemberName { get; set; }
-#endif
+        public bool? ShowMemberName { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsSchemaColumnOptions"/> and sets the default values.
         /// </summary>
@@ -114,9 +102,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "emoji_team_id", n => { EmojiTeamId = n.GetStringValue(); } },
                 { "format", n => { Format = n.GetStringValue(); } },
                 { "max", n => { Max = n.GetDoubleValue(); } },
-                { "notify_users", n => { NotifyUsers = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackListsSchemaColumnOptionsNotifyUsers>(global::Soenneker.Slack.OpenApiClient.Models.SlackListsSchemaColumnOptionsNotifyUsers.CreateFromDiscriminatorValue); } },
+                { "notify_users", n => { NotifyUsers = n.GetBoolValue(); } },
                 { "precision", n => { Precision = n.GetDoubleValue(); } },
-                { "show_member_name", n => { ShowMemberName = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackListsSchemaColumnOptionsShowMemberName>(global::Soenneker.Slack.OpenApiClient.Models.SlackListsSchemaColumnOptionsShowMemberName.CreateFromDiscriminatorValue); } },
+                { "show_member_name", n => { ShowMemberName = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -133,9 +121,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("emoji_team_id", EmojiTeamId);
             writer.WriteStringValue("format", Format);
             writer.WriteDoubleValue("max", Max);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackListsSchemaColumnOptionsNotifyUsers>("notify_users", NotifyUsers);
+            writer.WriteBoolValue("notify_users", NotifyUsers);
             writer.WriteDoubleValue("precision", Precision);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackListsSchemaColumnOptionsShowMemberName>("show_member_name", ShowMemberName);
+            writer.WriteBoolValue("show_member_name", ShowMemberName);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

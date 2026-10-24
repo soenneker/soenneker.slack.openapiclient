@@ -101,17 +101,48 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.RichTextElement CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
             var result = new global::Soenneker.Slack.OpenApiClient.Models.RichTextElement();
-            result.RichTextBroadcastMention = new global::Soenneker.Slack.OpenApiClient.Models.RichTextBroadcastMention();
-            result.RichTextChannelMention = new global::Soenneker.Slack.OpenApiClient.Models.RichTextChannelMention();
-            result.RichTextColor = new global::Soenneker.Slack.OpenApiClient.Models.RichTextColor();
-            result.RichTextDate = new global::Soenneker.Slack.OpenApiClient.Models.RichTextDate();
-            result.RichTextEmoji = new global::Soenneker.Slack.OpenApiClient.Models.RichTextEmoji();
-            result.RichTextLink = new global::Soenneker.Slack.OpenApiClient.Models.RichTextLink();
-            result.RichTextTeamMention = new global::Soenneker.Slack.OpenApiClient.Models.RichTextTeamMention();
-            result.RichTextText = new global::Soenneker.Slack.OpenApiClient.Models.RichTextText();
-            result.RichTextUsergroupMention = new global::Soenneker.Slack.OpenApiClient.Models.RichTextUsergroupMention();
-            result.RichTextUserMention = new global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMention();
+            if("broadcast".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.RichTextBroadcastMention = new global::Soenneker.Slack.OpenApiClient.Models.RichTextBroadcastMention();
+            }
+            else if("channel".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.RichTextChannelMention = new global::Soenneker.Slack.OpenApiClient.Models.RichTextChannelMention();
+            }
+            else if("color".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.RichTextColor = new global::Soenneker.Slack.OpenApiClient.Models.RichTextColor();
+            }
+            else if("date".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.RichTextDate = new global::Soenneker.Slack.OpenApiClient.Models.RichTextDate();
+            }
+            else if("emoji".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.RichTextEmoji = new global::Soenneker.Slack.OpenApiClient.Models.RichTextEmoji();
+            }
+            else if("link".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.RichTextLink = new global::Soenneker.Slack.OpenApiClient.Models.RichTextLink();
+            }
+            else if("team".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.RichTextTeamMention = new global::Soenneker.Slack.OpenApiClient.Models.RichTextTeamMention();
+            }
+            else if("text".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.RichTextText = new global::Soenneker.Slack.OpenApiClient.Models.RichTextText();
+            }
+            else if("user".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.RichTextUserMention = new global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMention();
+            }
+            else if("usergroup".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.RichTextUsergroupMention = new global::Soenneker.Slack.OpenApiClient.Models.RichTextUsergroupMention();
+            }
             return result;
         }
         /// <summary>
@@ -120,9 +151,45 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(RichTextBroadcastMention != null || RichTextChannelMention != null || RichTextColor != null || RichTextDate != null || RichTextEmoji != null || RichTextLink != null || RichTextTeamMention != null || RichTextText != null || RichTextUsergroupMention != null || RichTextUserMention != null)
+            if(RichTextBroadcastMention != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(RichTextBroadcastMention, RichTextChannelMention, RichTextColor, RichTextDate, RichTextEmoji, RichTextLink, RichTextTeamMention, RichTextText, RichTextUsergroupMention, RichTextUserMention);
+                return RichTextBroadcastMention.GetFieldDeserializers();
+            }
+            else if(RichTextChannelMention != null)
+            {
+                return RichTextChannelMention.GetFieldDeserializers();
+            }
+            else if(RichTextColor != null)
+            {
+                return RichTextColor.GetFieldDeserializers();
+            }
+            else if(RichTextDate != null)
+            {
+                return RichTextDate.GetFieldDeserializers();
+            }
+            else if(RichTextEmoji != null)
+            {
+                return RichTextEmoji.GetFieldDeserializers();
+            }
+            else if(RichTextLink != null)
+            {
+                return RichTextLink.GetFieldDeserializers();
+            }
+            else if(RichTextTeamMention != null)
+            {
+                return RichTextTeamMention.GetFieldDeserializers();
+            }
+            else if(RichTextText != null)
+            {
+                return RichTextText.GetFieldDeserializers();
+            }
+            else if(RichTextUsergroupMention != null)
+            {
+                return RichTextUsergroupMention.GetFieldDeserializers();
+            }
+            else if(RichTextUserMention != null)
+            {
+                return RichTextUserMention.GetFieldDeserializers();
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -133,7 +200,46 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextBroadcastMention>(null, RichTextBroadcastMention, RichTextChannelMention, RichTextColor, RichTextDate, RichTextEmoji, RichTextLink, RichTextTeamMention, RichTextText, RichTextUsergroupMention, RichTextUserMention);
+            if(RichTextBroadcastMention != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextBroadcastMention>(null, RichTextBroadcastMention);
+            }
+            else if(RichTextChannelMention != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextChannelMention>(null, RichTextChannelMention);
+            }
+            else if(RichTextColor != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextColor>(null, RichTextColor);
+            }
+            else if(RichTextDate != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextDate>(null, RichTextDate);
+            }
+            else if(RichTextEmoji != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextEmoji>(null, RichTextEmoji);
+            }
+            else if(RichTextLink != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextLink>(null, RichTextLink);
+            }
+            else if(RichTextTeamMention != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextTeamMention>(null, RichTextTeamMention);
+            }
+            else if(RichTextText != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextText>(null, RichTextText);
+            }
+            else if(RichTextUsergroupMention != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextUsergroupMention>(null, RichTextUsergroupMention);
+            }
+            else if(RichTextUserMention != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMention>(null, RichTextUserMention);
+            }
         }
     }
 }

@@ -83,13 +83,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The timestamp property</summary>
         public double? Timestamp { get; set; }
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.PurpleElementType? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.PurpleElementType Type { get; set; }
-#endif
         /// <summary>The unicode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -99,13 +93,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Unicode { get; set; }
 #endif
         /// <summary>The unsafe property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.PurpleElementUnsafe? Unsafe { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.PurpleElementUnsafe Unsafe { get; set; }
-#endif
+        public bool? Unsafe { get; set; }
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -173,9 +161,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "team_id", n => { TeamId = n.GetStringValue(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
                 { "timestamp", n => { Timestamp = n.GetDoubleValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PurpleElementType>(global::Soenneker.Slack.OpenApiClient.Models.PurpleElementType.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.PurpleElementType>(); } },
                 { "unicode", n => { Unicode = n.GetStringValue(); } },
-                { "unsafe", n => { Unsafe = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PurpleElementUnsafe>(global::Soenneker.Slack.OpenApiClient.Models.PurpleElementUnsafe.CreateFromDiscriminatorValue); } },
+                { "unsafe", n => { Unsafe = n.GetBoolValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "user_id", n => { UserId = n.GetStringValue(); } },
                 { "usergroup_id", n => { UsergroupId = n.GetStringValue(); } },
@@ -199,9 +187,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("team_id", TeamId);
             writer.WriteStringValue("text", Text);
             writer.WriteDoubleValue("timestamp", Timestamp);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PurpleElementType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.PurpleElementType>("type", Type);
             writer.WriteStringValue("unicode", Unicode);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PurpleElementUnsafe>("unsafe", Unsafe);
+            writer.WriteBoolValue("unsafe", Unsafe);
             writer.WriteStringValue("url", Url);
             writer.WriteStringValue("usergroup_id", UsergroupId);
             writer.WriteStringValue("user_id", UserId);

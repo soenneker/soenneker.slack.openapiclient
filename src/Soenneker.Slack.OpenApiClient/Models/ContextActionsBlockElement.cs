@@ -37,9 +37,16 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.ContextActionsBlockElement CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
             var result = new global::Soenneker.Slack.OpenApiClient.Models.ContextActionsBlockElement();
-            result.FeedbackButtons = new global::Soenneker.Slack.OpenApiClient.Models.FeedbackButtons();
-            result.IconButton = new global::Soenneker.Slack.OpenApiClient.Models.IconButton();
+            if("feedback_buttons".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.FeedbackButtons = new global::Soenneker.Slack.OpenApiClient.Models.FeedbackButtons();
+            }
+            else if("icon_button".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.IconButton = new global::Soenneker.Slack.OpenApiClient.Models.IconButton();
+            }
             return result;
         }
         /// <summary>
@@ -48,9 +55,13 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(FeedbackButtons != null || IconButton != null)
+            if(FeedbackButtons != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(FeedbackButtons, IconButton);
+                return FeedbackButtons.GetFieldDeserializers();
+            }
+            else if(IconButton != null)
+            {
+                return IconButton.GetFieldDeserializers();
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -61,7 +72,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FeedbackButtons>(null, FeedbackButtons, IconButton);
+            if(FeedbackButtons != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FeedbackButtons>(null, FeedbackButtons);
+            }
+            else if(IconButton != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.IconButton>(null, IconButton);
+            }
         }
     }
 }

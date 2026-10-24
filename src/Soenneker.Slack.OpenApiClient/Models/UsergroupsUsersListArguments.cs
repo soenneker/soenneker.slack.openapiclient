@@ -15,13 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Allow results that involve disabled User Groups.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.UsergroupsUsersListArgumentsIncludeDisabled? IncludeDisabled { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.UsergroupsUsersListArgumentsIncludeDisabled IncludeDisabled { get; set; }
-#endif
+        public bool? IncludeDisabled { get; set; }
         /// <summary>If using an org token, `team_id` is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -71,7 +65,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "include_disabled", n => { IncludeDisabled = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UsergroupsUsersListArgumentsIncludeDisabled>(global::Soenneker.Slack.OpenApiClient.Models.UsergroupsUsersListArgumentsIncludeDisabled.CreateFromDiscriminatorValue); } },
+                { "include_disabled", n => { IncludeDisabled = n.GetBoolValue(); } },
                 { "team_id", n => { TeamId = n.GetStringValue(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
                 { "usergroup", n => { Usergroup = n.GetStringValue(); } },
@@ -84,7 +78,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UsergroupsUsersListArgumentsIncludeDisabled>("include_disabled", IncludeDisabled);
+            writer.WriteBoolValue("include_disabled", IncludeDisabled);
             writer.WriteStringValue("team_id", TeamId);
             writer.WriteStringValue("token", Token);
             writer.WriteStringValue("usergroup", Usergroup);

@@ -71,13 +71,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Type { get; set; }
 #endif
         /// <summary>The user property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.PreviousUser? User { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.PreviousUser User { get; set; }
-#endif
         /// <summary>The username property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -118,7 +112,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "text", n => { Text = n.GetStringValue(); } },
                 { "ts", n => { Ts = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
-                { "user", n => { User = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PreviousUser>(global::Soenneker.Slack.OpenApiClient.Models.PreviousUser.CreateFromDiscriminatorValue); } },
+                { "user", n => { User = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.PreviousUser>(); } },
                 { "username", n => { Username = n.GetStringValue(); } },
             };
         }
@@ -136,7 +130,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("text", Text);
             writer.WriteStringValue("ts", Ts);
             writer.WriteStringValue("type", Type);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PreviousUser>("user", User);
+            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.PreviousUser>("user", User);
             writer.WriteStringValue("username", Username);
             writer.WriteAdditionalData(AdditionalData);
         }

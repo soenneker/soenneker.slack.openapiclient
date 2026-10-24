@@ -79,13 +79,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public List<string> Integrations { get; set; }
 #endif
         /// <summary>The is_trial property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ListMetadata9IsTrial? IsTrial { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ListMetadata9IsTrial IsTrial { get; set; }
-#endif
+        public bool? IsTrial { get; set; }
         /// <summary>The schema property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -97,19 +91,13 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The subtask_schema property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata9SubtaskSchemaItem>? SubtaskSchema { get; set; }
+        public UntypedNode? SubtaskSchema { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata9SubtaskSchemaItem> SubtaskSchema { get; set; }
+        public UntypedNode SubtaskSchema { get; set; }
 #endif
         /// <summary>The todo_mode property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ListMetadata9TodoMode? TodoMode { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ListMetadata9TodoMode TodoMode { get; set; }
-#endif
+        public bool? TodoMode { get; set; }
         /// <summary>The views property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -151,10 +139,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "icon_team_id", n => { IconTeamId = n.GetStringValue(); } },
                 { "icon_url", n => { IconUrl = n.GetStringValue(); } },
                 { "integrations", n => { Integrations = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "is_trial", n => { IsTrial = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata9IsTrial>(global::Soenneker.Slack.OpenApiClient.Models.ListMetadata9IsTrial.CreateFromDiscriminatorValue); } },
+                { "is_trial", n => { IsTrial = n.GetBoolValue(); } },
                 { "schema", n => { Schema = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SchemaValue>(global::Soenneker.Slack.OpenApiClient.Models.SchemaValue.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "subtask_schema", n => { SubtaskSchema = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata9SubtaskSchemaItem>(global::Soenneker.Slack.OpenApiClient.Models.ListMetadata9SubtaskSchemaItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "todo_mode", n => { TodoMode = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata9TodoMode>(global::Soenneker.Slack.OpenApiClient.Models.ListMetadata9TodoMode.CreateFromDiscriminatorValue); } },
+                { "subtask_schema", n => { SubtaskSchema = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "todo_mode", n => { TodoMode = n.GetBoolValue(); } },
                 { "views", n => { Views = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.View2>(global::Soenneker.Slack.OpenApiClient.Models.View2.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -173,10 +161,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("icon_team_id", IconTeamId);
             writer.WriteStringValue("icon_url", IconUrl);
             writer.WriteCollectionOfPrimitiveValues<string>("integrations", Integrations);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata9IsTrial>("is_trial", IsTrial);
+            writer.WriteBoolValue("is_trial", IsTrial);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SchemaValue>("schema", Schema);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata9SubtaskSchemaItem>("subtask_schema", SubtaskSchema);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata9TodoMode>("todo_mode", TodoMode);
+            writer.WriteObjectValue<UntypedNode>("subtask_schema", SubtaskSchema);
+            writer.WriteBoolValue("todo_mode", TodoMode);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.View2>("views", Views);
             writer.WriteAdditionalData(AdditionalData);
         }

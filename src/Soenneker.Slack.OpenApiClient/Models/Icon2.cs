@@ -71,13 +71,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Image88 { get; set; }
 #endif
         /// <summary>The image_default property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Icon2ImageDefault? ImageDefault { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Icon2ImageDefault ImageDefault { get; set; }
-#endif
+        public bool? ImageDefault { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Icon2"/> and sets the default values.
         /// </summary>
@@ -110,7 +104,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "image_44", n => { Image44 = n.GetStringValue(); } },
                 { "image_68", n => { Image68 = n.GetStringValue(); } },
                 { "image_88", n => { Image88 = n.GetStringValue(); } },
-                { "image_default", n => { ImageDefault = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Icon2ImageDefault>(global::Soenneker.Slack.OpenApiClient.Models.Icon2ImageDefault.CreateFromDiscriminatorValue); } },
+                { "image_default", n => { ImageDefault = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -127,7 +121,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("image_44", Image44);
             writer.WriteStringValue("image_68", Image68);
             writer.WriteStringValue("image_88", Image88);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Icon2ImageDefault>("image_default", ImageDefault);
+            writer.WriteBoolValue("image_default", ImageDefault);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

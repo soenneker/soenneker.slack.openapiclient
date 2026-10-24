@@ -33,13 +33,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The type of element. In this case `type` is always `link`.</summary>
         public global::Soenneker.Slack.OpenApiClient.Models.LinkType? Type { get; set; }
         /// <summary>TODO: ?</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextLinkUnsafe? Unsafe { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextLinkUnsafe Unsafe { get; set; }
-#endif
+        public bool? Unsafe { get; set; }
         /// <summary>URL to link to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -76,7 +70,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "style", n => { Style = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextLinkStyle>(global::Soenneker.Slack.OpenApiClient.Models.RichTextLinkStyle.CreateFromDiscriminatorValue); } },
                 { "text", n => { Text = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.LinkType>(); } },
-                { "unsafe", n => { Unsafe = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextLinkUnsafe>(global::Soenneker.Slack.OpenApiClient.Models.RichTextLinkUnsafe.CreateFromDiscriminatorValue); } },
+                { "unsafe", n => { Unsafe = n.GetBoolValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -90,7 +84,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextLinkStyle>("style", Style);
             writer.WriteStringValue("text", Text);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.LinkType>("type", Type);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextLinkUnsafe>("unsafe", Unsafe);
+            writer.WriteBoolValue("unsafe", Unsafe);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -39,13 +39,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>Boolean indicating whether the List should be used to track todo tasks.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsUpdateArgumentsTodoMode? TodoMode { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.SlackListsUpdateArgumentsTodoMode TodoMode { get; set; }
-#endif
+        public bool? TodoMode { get; set; }
         /// <summary>Overridable authentication token bearing required scopes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -82,7 +76,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "description_blocks", n => { DescriptionBlocks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock>(global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "todo_mode", n => { TodoMode = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackListsUpdateArgumentsTodoMode>(global::Soenneker.Slack.OpenApiClient.Models.SlackListsUpdateArgumentsTodoMode.CreateFromDiscriminatorValue); } },
+                { "todo_mode", n => { TodoMode = n.GetBoolValue(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
             };
         }
@@ -96,7 +90,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock>("description_blocks", DescriptionBlocks);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SlackListsUpdateArgumentsTodoMode>("todo_mode", TodoMode);
+            writer.WriteBoolValue("todo_mode", TodoMode);
             writer.WriteStringValue("token", Token);
             writer.WriteAdditionalData(AdditionalData);
         }

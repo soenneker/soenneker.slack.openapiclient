@@ -23,21 +23,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public List<string> Api { get; set; }
 #endif
         /// <summary>The scim property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.PermissionsScim? Scim { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.PermissionsScim Scim { get; set; }
-#endif
+        public bool? Scim { get; set; }
         /// <summary>The ui property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.PermissionsUi? Ui { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.PermissionsUi Ui { get; set; }
-#endif
+        public bool? Ui { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Permissions"/> and sets the default values.
         /// </summary>
@@ -64,8 +52,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "api", n => { Api = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "scim", n => { Scim = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PermissionsScim>(global::Soenneker.Slack.OpenApiClient.Models.PermissionsScim.CreateFromDiscriminatorValue); } },
-                { "ui", n => { Ui = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PermissionsUi>(global::Soenneker.Slack.OpenApiClient.Models.PermissionsUi.CreateFromDiscriminatorValue); } },
+                { "scim", n => { Scim = n.GetBoolValue(); } },
+                { "ui", n => { Ui = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -76,8 +64,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("api", Api);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PermissionsScim>("scim", Scim);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PermissionsUi>("ui", Ui);
+            writer.WriteBoolValue("scim", Scim);
+            writer.WriteBoolValue("ui", Ui);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

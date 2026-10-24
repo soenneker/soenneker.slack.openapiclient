@@ -7,70 +7,76 @@ using System.IO;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember1"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember2"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember3"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember4"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember5"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember6"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember7"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember8"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class ChatScheduleMessageArguments : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class ChatScheduleMessageArguments : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Pass `true` to act as the authed user with [`chat:write:user` scope](https://docs.slack.dev/reference/scopes/chat.write).Bot users in this context are considered authed users. If unused or `false`, the message will be acted upon with[`chat:write:bot` scope](https://docs.slack.dev/reference/scopes/chat.write).</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AsUserAsUser? AsUser { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember1? ChatScheduleMessageArgumentsMember1 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.AsUserAsUser AsUser { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember1 ChatScheduleMessageArgumentsMember1 { get; set; }
 #endif
-        /// <summary>Find and link channel names and usernames.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.LinkNamesLinkNames? LinkNames { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember2? ChatScheduleMessageArgumentsMember2 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.LinkNamesLinkNames LinkNames { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember2 ChatScheduleMessageArgumentsMember2 { get; set; }
 #endif
-        /// <summary>Object representing message metadata, which will be made accessible to any user or app.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember3"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageMetadata? Metadata { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember3? ChatScheduleMessageArgumentsMember3 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.MessageMetadata Metadata { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember3 ChatScheduleMessageArgumentsMember3 { get; set; }
 #endif
-        /// <summary>Change how messages are treated. Defaults to `none`.[Formatting: Automatic parsing](https://docs.slack.dev/messaging/formatting-message-text).</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.ChatPostEphemeralArgumentsParse? Parse { get; set; }
-        /// <summary>Unix EPOCH timestamp of time in future to send the message.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember4"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArguments.ChatScheduleMessageArguments_post_at? PostAt { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember4? ChatScheduleMessageArgumentsMember4 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArguments.ChatScheduleMessageArguments_post_at PostAt { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember4 ChatScheduleMessageArgumentsMember4 { get; set; }
 #endif
-        /// <summary>Pass `true` to enable unfurling of primarily text-based content.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember5"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.UnfurlsUnfurlLinks? UnfurlLinks { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember5? ChatScheduleMessageArgumentsMember5 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.UnfurlsUnfurlLinks UnfurlLinks { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember5 ChatScheduleMessageArgumentsMember5 { get; set; }
 #endif
-        /// <summary>Pass `false` to disable unfurling of media content.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember6"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.UnfurlsUnfurlMedia? UnfurlMedia { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember6? ChatScheduleMessageArgumentsMember6 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.UnfurlsUnfurlMedia UnfurlMedia { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember6 ChatScheduleMessageArgumentsMember6 { get; set; }
 #endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArguments"/> and sets the default values.
-        /// </summary>
-        public ChatScheduleMessageArguments()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember7"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember7? ChatScheduleMessageArgumentsMember7 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember7 ChatScheduleMessageArgumentsMember7 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember8"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember8? ChatScheduleMessageArgumentsMember8 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember8 ChatScheduleMessageArgumentsMember8 { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -79,7 +85,16 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArguments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArguments();
+            var result = new global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArguments();
+            result.ChatScheduleMessageArgumentsMember1 = new global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember1();
+            result.ChatScheduleMessageArgumentsMember2 = new global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember2();
+            result.ChatScheduleMessageArgumentsMember3 = new global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember3();
+            result.ChatScheduleMessageArgumentsMember4 = new global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember4();
+            result.ChatScheduleMessageArgumentsMember5 = new global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember5();
+            result.ChatScheduleMessageArgumentsMember6 = new global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember6();
+            result.ChatScheduleMessageArgumentsMember7 = new global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember7();
+            result.ChatScheduleMessageArgumentsMember8 = new global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember8();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -87,16 +102,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(ChatScheduleMessageArgumentsMember1 != null || ChatScheduleMessageArgumentsMember2 != null || ChatScheduleMessageArgumentsMember3 != null || ChatScheduleMessageArgumentsMember4 != null || ChatScheduleMessageArgumentsMember5 != null || ChatScheduleMessageArgumentsMember6 != null || ChatScheduleMessageArgumentsMember7 != null || ChatScheduleMessageArgumentsMember8 != null)
             {
-                { "as_user", n => { AsUser = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AsUserAsUser>(global::Soenneker.Slack.OpenApiClient.Models.AsUserAsUser.CreateFromDiscriminatorValue); } },
-                { "link_names", n => { LinkNames = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.LinkNamesLinkNames>(global::Soenneker.Slack.OpenApiClient.Models.LinkNamesLinkNames.CreateFromDiscriminatorValue); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageMetadata>(global::Soenneker.Slack.OpenApiClient.Models.MessageMetadata.CreateFromDiscriminatorValue); } },
-                { "parse", n => { Parse = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ChatPostEphemeralArgumentsParse>(); } },
-                { "post_at", n => { PostAt = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArguments.ChatScheduleMessageArguments_post_at>(global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArguments.ChatScheduleMessageArguments_post_at.CreateFromDiscriminatorValue); } },
-                { "unfurl_links", n => { UnfurlLinks = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UnfurlsUnfurlLinks>(global::Soenneker.Slack.OpenApiClient.Models.UnfurlsUnfurlLinks.CreateFromDiscriminatorValue); } },
-                { "unfurl_media", n => { UnfurlMedia = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UnfurlsUnfurlMedia>(global::Soenneker.Slack.OpenApiClient.Models.UnfurlsUnfurlMedia.CreateFromDiscriminatorValue); } },
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(ChatScheduleMessageArgumentsMember1, ChatScheduleMessageArgumentsMember2, ChatScheduleMessageArgumentsMember3, ChatScheduleMessageArgumentsMember4, ChatScheduleMessageArgumentsMember5, ChatScheduleMessageArgumentsMember6, ChatScheduleMessageArgumentsMember7, ChatScheduleMessageArgumentsMember8);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -105,74 +115,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AsUserAsUser>("as_user", AsUser);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.LinkNamesLinkNames>("link_names", LinkNames);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageMetadata>("metadata", Metadata);
-            writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ChatPostEphemeralArgumentsParse>("parse", Parse);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArguments.ChatScheduleMessageArguments_post_at>("post_at", PostAt);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UnfurlsUnfurlLinks>("unfurl_links", UnfurlLinks);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UnfurlsUnfurlMedia>("unfurl_media", UnfurlMedia);
-            writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="double"/>, <see cref="string"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ChatScheduleMessageArguments_post_at : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="double"/></summary>
-            public double? Double { get; set; }
-            /// <summary>Composed type representation for type <see cref="string"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public string? String { get; set; }
-#nullable restore
-#else
-            public string String { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArguments.ChatScheduleMessageArguments_post_at"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArguments.ChatScheduleMessageArguments_post_at CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArguments.ChatScheduleMessageArguments_post_at();
-                if(parseNode.GetDoubleValue() is double doubleValue)
-                {
-                    result.Double = doubleValue;
-                }
-                else if(parseNode.GetStringValue() is string stringValue)
-                {
-                    result.String = stringValue;
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(Double != null)
-                {
-                    writer.WriteDoubleValue(null, Double);
-                }
-                else if(String != null)
-                {
-                    writer.WriteStringValue(null, String);
-                }
-            }
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember1>(null, ChatScheduleMessageArgumentsMember1, ChatScheduleMessageArgumentsMember2, ChatScheduleMessageArgumentsMember3, ChatScheduleMessageArgumentsMember4, ChatScheduleMessageArgumentsMember5, ChatScheduleMessageArgumentsMember6, ChatScheduleMessageArgumentsMember7, ChatScheduleMessageArgumentsMember8);
         }
     }
 }

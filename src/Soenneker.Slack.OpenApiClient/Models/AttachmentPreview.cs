@@ -15,13 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The can_remove property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AttachmentPreviewCanRemove? CanRemove { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.AttachmentPreviewCanRemove CanRemove { get; set; }
-#endif
+        public bool? CanRemove { get; set; }
         /// <summary>The icon_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -79,7 +73,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "can_remove", n => { CanRemove = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AttachmentPreviewCanRemove>(global::Soenneker.Slack.OpenApiClient.Models.AttachmentPreviewCanRemove.CreateFromDiscriminatorValue); } },
+                { "can_remove", n => { CanRemove = n.GetBoolValue(); } },
                 { "icon_url", n => { IconUrl = n.GetStringValue(); } },
                 { "subtitle", n => { Subtitle = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement>(global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement>(global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement.CreateFromDiscriminatorValue); } },
@@ -93,7 +87,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AttachmentPreviewCanRemove>("can_remove", CanRemove);
+            writer.WriteBoolValue("can_remove", CanRemove);
             writer.WriteStringValue("icon_url", IconUrl);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement>("subtitle", Subtitle);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement>("title", Title);

@@ -23,29 +23,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.Canvas Canvas { get; set; }
 #endif
         /// <summary>The has_slack_connect_invite_created property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Properties6HasSlackConnectInviteCreated? HasSlackConnectInviteCreated { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Properties6HasSlackConnectInviteCreated HasSlackConnectInviteCreated { get; set; }
-#endif
+        public bool? HasSlackConnectInviteCreated { get; set; }
         /// <summary>The huddles_restricted property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Properties6HuddlesRestricted? HuddlesRestricted { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Properties6HuddlesRestricted HuddlesRestricted { get; set; }
-#endif
+        public bool? HuddlesRestricted { get; set; }
         /// <summary>The is_dormant property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Properties6IsDormant? IsDormant { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Properties6IsDormant IsDormant { get; set; }
-#endif
+        public bool? IsDormant { get; set; }
         /// <summary>The meeting_notes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -120,9 +102,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "canvas", n => { Canvas = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Canvas>(global::Soenneker.Slack.OpenApiClient.Models.Canvas.CreateFromDiscriminatorValue); } },
-                { "has_slack_connect_invite_created", n => { HasSlackConnectInviteCreated = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Properties6HasSlackConnectInviteCreated>(global::Soenneker.Slack.OpenApiClient.Models.Properties6HasSlackConnectInviteCreated.CreateFromDiscriminatorValue); } },
-                { "huddles_restricted", n => { HuddlesRestricted = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Properties6HuddlesRestricted>(global::Soenneker.Slack.OpenApiClient.Models.Properties6HuddlesRestricted.CreateFromDiscriminatorValue); } },
-                { "is_dormant", n => { IsDormant = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Properties6IsDormant>(global::Soenneker.Slack.OpenApiClient.Models.Properties6IsDormant.CreateFromDiscriminatorValue); } },
+                { "has_slack_connect_invite_created", n => { HasSlackConnectInviteCreated = n.GetBoolValue(); } },
+                { "huddles_restricted", n => { HuddlesRestricted = n.GetBoolValue(); } },
+                { "is_dormant", n => { IsDormant = n.GetBoolValue(); } },
                 { "meeting_notes", n => { MeetingNotes = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MeetingNotes>(global::Soenneker.Slack.OpenApiClient.Models.MeetingNotes.CreateFromDiscriminatorValue); } },
                 { "posting_restricted_to", n => { PostingRestrictedTo = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PostingRestrictedTo>(global::Soenneker.Slack.OpenApiClient.Models.PostingRestrictedTo.CreateFromDiscriminatorValue); } },
                 { "tabs", n => { Tabs = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Tab>(global::Soenneker.Slack.OpenApiClient.Models.Tab.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -139,9 +121,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Canvas>("canvas", Canvas);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Properties6HasSlackConnectInviteCreated>("has_slack_connect_invite_created", HasSlackConnectInviteCreated);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Properties6HuddlesRestricted>("huddles_restricted", HuddlesRestricted);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Properties6IsDormant>("is_dormant", IsDormant);
+            writer.WriteBoolValue("has_slack_connect_invite_created", HasSlackConnectInviteCreated);
+            writer.WriteBoolValue("huddles_restricted", HuddlesRestricted);
+            writer.WriteBoolValue("is_dormant", IsDormant);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MeetingNotes>("meeting_notes", MeetingNotes);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PostingRestrictedTo>("posting_restricted_to", PostingRestrictedTo);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Tab>("tabs", Tabs);

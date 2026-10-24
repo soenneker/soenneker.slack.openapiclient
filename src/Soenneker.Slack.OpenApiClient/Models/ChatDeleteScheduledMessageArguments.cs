@@ -15,13 +15,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Pass `true` to act as the authed user with [`chat:write:user` scope](https://docs.slack.dev/reference/scopes/chat.write).Bot users in this context are considered authed users. If unused or `false`, the message will be acted upon with[`chat:write:bot` scope](https://docs.slack.dev/reference/scopes/chat.write).</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ChatDeleteScheduledMessageArgumentsAsUser? AsUser { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ChatDeleteScheduledMessageArgumentsAsUser AsUser { get; set; }
-#endif
+        public bool? AsUser { get; set; }
         /// <summary>Channel ID for the message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -71,7 +65,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "as_user", n => { AsUser = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ChatDeleteScheduledMessageArgumentsAsUser>(global::Soenneker.Slack.OpenApiClient.Models.ChatDeleteScheduledMessageArgumentsAsUser.CreateFromDiscriminatorValue); } },
+                { "as_user", n => { AsUser = n.GetBoolValue(); } },
                 { "channel", n => { Channel = n.GetStringValue(); } },
                 { "scheduled_message_id", n => { ScheduledMessageId = n.GetStringValue(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
@@ -84,7 +78,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ChatDeleteScheduledMessageArgumentsAsUser>("as_user", AsUser);
+            writer.WriteBoolValue("as_user", AsUser);
             writer.WriteStringValue("channel", Channel);
             writer.WriteStringValue("scheduled_message_id", ScheduledMessageId);
             writer.WriteStringValue("token", Token);

@@ -31,21 +31,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public List<global::Soenneker.Slack.OpenApiClient.Models.ChannelWorkflow> ChannelWorkflows { get; set; }
 #endif
         /// <summary>The has_slack_connect_invite_created property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Properties5HasSlackConnectInviteCreated? HasSlackConnectInviteCreated { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Properties5HasSlackConnectInviteCreated HasSlackConnectInviteCreated { get; set; }
-#endif
+        public bool? HasSlackConnectInviteCreated { get; set; }
         /// <summary>The is_dormant property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Properties5IsDormant? IsDormant { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Properties5IsDormant IsDormant { get; set; }
-#endif
+        public bool? IsDormant { get; set; }
         /// <summary>The meeting_notes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -121,8 +109,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "canvas", n => { Canvas = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Canvas>(global::Soenneker.Slack.OpenApiClient.Models.Canvas.CreateFromDiscriminatorValue); } },
                 { "channel_workflows", n => { ChannelWorkflows = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ChannelWorkflow>(global::Soenneker.Slack.OpenApiClient.Models.ChannelWorkflow.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "has_slack_connect_invite_created", n => { HasSlackConnectInviteCreated = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Properties5HasSlackConnectInviteCreated>(global::Soenneker.Slack.OpenApiClient.Models.Properties5HasSlackConnectInviteCreated.CreateFromDiscriminatorValue); } },
-                { "is_dormant", n => { IsDormant = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Properties5IsDormant>(global::Soenneker.Slack.OpenApiClient.Models.Properties5IsDormant.CreateFromDiscriminatorValue); } },
+                { "has_slack_connect_invite_created", n => { HasSlackConnectInviteCreated = n.GetBoolValue(); } },
+                { "is_dormant", n => { IsDormant = n.GetBoolValue(); } },
                 { "meeting_notes", n => { MeetingNotes = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MeetingNotes>(global::Soenneker.Slack.OpenApiClient.Models.MeetingNotes.CreateFromDiscriminatorValue); } },
                 { "posting_restricted_to", n => { PostingRestrictedTo = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RestrictedTo2>(global::Soenneker.Slack.OpenApiClient.Models.RestrictedTo2.CreateFromDiscriminatorValue); } },
                 { "tabs", n => { Tabs = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Tab4>(global::Soenneker.Slack.OpenApiClient.Models.Tab4.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -140,8 +128,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Canvas>("canvas", Canvas);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ChannelWorkflow>("channel_workflows", ChannelWorkflows);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Properties5HasSlackConnectInviteCreated>("has_slack_connect_invite_created", HasSlackConnectInviteCreated);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Properties5IsDormant>("is_dormant", IsDormant);
+            writer.WriteBoolValue("has_slack_connect_invite_created", HasSlackConnectInviteCreated);
+            writer.WriteBoolValue("is_dormant", IsDormant);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MeetingNotes>("meeting_notes", MeetingNotes);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RestrictedTo2>("posting_restricted_to", PostingRestrictedTo);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Tab4>("tabs", Tabs);

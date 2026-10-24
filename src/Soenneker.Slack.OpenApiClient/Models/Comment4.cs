@@ -41,21 +41,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The is_intro property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Comment4IsIntro? IsIntro { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Comment4IsIntro IsIntro { get; set; }
-#endif
+        public bool? IsIntro { get; set; }
         /// <summary>The is_starred property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Comment4IsStarred? IsStarred { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Comment4IsStarred IsStarred { get; set; }
-#endif
+        public bool? IsStarred { get; set; }
         /// <summary>The num_stars property</summary>
         public double? NumStars { get; set; }
         /// <summary>The timestamp property</summary>
@@ -97,8 +85,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "comment", n => { Comment = n.GetStringValue(); } },
                 { "created", n => { Created = n.GetDoubleValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "is_intro", n => { IsIntro = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment4IsIntro>(global::Soenneker.Slack.OpenApiClient.Models.Comment4IsIntro.CreateFromDiscriminatorValue); } },
-                { "is_starred", n => { IsStarred = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment4IsStarred>(global::Soenneker.Slack.OpenApiClient.Models.Comment4IsStarred.CreateFromDiscriminatorValue); } },
+                { "is_intro", n => { IsIntro = n.GetBoolValue(); } },
+                { "is_starred", n => { IsStarred = n.GetBoolValue(); } },
                 { "num_stars", n => { NumStars = n.GetDoubleValue(); } },
                 { "timestamp", n => { Timestamp = n.GetDoubleValue(); } },
                 { "user", n => { User = n.GetStringValue(); } },
@@ -115,8 +103,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("comment", Comment);
             writer.WriteDoubleValue("created", Created);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment4IsIntro>("is_intro", IsIntro);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment4IsStarred>("is_starred", IsStarred);
+            writer.WriteBoolValue("is_intro", IsIntro);
+            writer.WriteBoolValue("is_starred", IsStarred);
             writer.WriteDoubleValue("num_stars", NumStars);
             writer.WriteDoubleValue("timestamp", Timestamp);
             writer.WriteStringValue("user", User);

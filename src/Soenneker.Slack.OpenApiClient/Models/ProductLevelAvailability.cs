@@ -23,13 +23,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string AvailableTo { get; set; }
 #endif
         /// <summary>The is_available property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ProductLevelAvailabilityIsAvailable? IsAvailable { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.ProductLevelAvailabilityIsAvailable IsAvailable { get; set; }
-#endif
+        public bool? IsAvailable { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ProductLevelAvailability"/> and sets the default values.
         /// </summary>
@@ -56,7 +50,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "available_to", n => { AvailableTo = n.GetStringValue(); } },
-                { "is_available", n => { IsAvailable = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ProductLevelAvailabilityIsAvailable>(global::Soenneker.Slack.OpenApiClient.Models.ProductLevelAvailabilityIsAvailable.CreateFromDiscriminatorValue); } },
+                { "is_available", n => { IsAvailable = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -67,7 +61,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("available_to", AvailableTo);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ProductLevelAvailabilityIsAvailable>("is_available", IsAvailable);
+            writer.WriteBoolValue("is_available", IsAvailable);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
