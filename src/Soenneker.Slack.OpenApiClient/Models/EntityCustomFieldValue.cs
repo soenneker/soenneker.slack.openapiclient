@@ -48,7 +48,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 result.String = stringValue;
             }
-            else if(parseNode.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.EntityArrayItemField>(global::Soenneker.Slack.OpenApiClient.Models.EntityArrayItemField.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Slack.OpenApiClient.Models.EntityArrayItemField> entityArrayItemFieldValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray && parseNode.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.EntityArrayItemField>(global::Soenneker.Slack.OpenApiClient.Models.EntityArrayItemField.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Slack.OpenApiClient.Models.EntityArrayItemField> entityArrayItemFieldValue)
             {
                 result.EntityArrayItemField = entityArrayItemFieldValue;
             }

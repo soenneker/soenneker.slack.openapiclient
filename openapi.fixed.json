@@ -11179,7 +11179,7 @@
         }
       },
       "AdminAppsApprovedListArguments": {
-        "anyOf": [
+        "x-client-original-anyOf": [
           {
             "type": "object",
             "properties": {
@@ -11220,7 +11220,29 @@
               }
             }
           }
-        ]
+        ],
+        "type": "object",
+        "properties": {
+          "enterprise_id": {
+            "type": "string",
+            "description": "The ID of the enterprise."
+          },
+          "limit": {
+            "type": "number",
+            "description": "The maximum number of items to return. Fewer than the requested number of items may be returned,\neven if the end of the list hasn\u0027t been reached. Must be an integer with a max value of \u0060999\u0060. Default is \u0060100\u0060."
+          },
+          "cursor": {
+            "type": "string",
+            "description": "Paginate through collections of data by setting the \u0060cursor\u0060 parameter to a \u0060next_cursor\u0060 attribute\nreturned by a previous request\u0027s \u0060response_metadata\u0060.\nDefault value fetches the first \u0022page\u0022 of the collection.\n[pagination](https://docs.slack.dev/apis/web-api/pagination) for more detail."
+          },
+          "certified": {
+            "$ref": "#/components/schemas/CertifiedCertified"
+          },
+          "team_id": {
+            "type": "string",
+            "description": "The encoded team ID."
+          }
+        }
       },
       "PartialEnterpriseIDteamIdnever": {
         "type": "object",
@@ -84254,7 +84276,7 @@
         ]
       },
       "EntityMetadataEntityPayloadFields": {
-        "anyOf": [
+        "x-client-original-anyOf": [
           {
             "$ref": "#/components/schemas/ContentItemEntityFields"
           },
@@ -84267,7 +84289,58 @@
           {
             "$ref": "#/components/schemas/TaskEntityFields"
           }
-        ]
+        ],
+        "type": "object",
+        "properties": {
+          "preview": {
+            "$ref": "#/components/schemas/EntityImageField"
+          },
+          "description": {
+            "$ref": "#/components/schemas/EntityStringField"
+          },
+          "created_by": {
+            "$ref": "#/components/schemas/EntityTypedField"
+          },
+          "date_created": {
+            "$ref": "#/components/schemas/EntityTimestampField"
+          },
+          "date_updated": {
+            "$ref": "#/components/schemas/EntityTimestampField"
+          },
+          "last_modified_by": {
+            "$ref": "#/components/schemas/EntityTypedField"
+          },
+          "file_size": {
+            "$ref": "#/components/schemas/EntityStringField"
+          },
+          "mime_type": {
+            "$ref": "#/components/schemas/EntityStringField"
+          },
+          "full_size_preview": {
+            "$ref": "#/components/schemas/EntityFullSizePreview"
+          },
+          "status": {
+            "$ref": "#/components/schemas/EntityStringField"
+          },
+          "priority": {
+            "$ref": "#/components/schemas/EntityStringField"
+          },
+          "urgency": {
+            "$ref": "#/components/schemas/EntityStringField"
+          },
+          "assigned_to": {
+            "$ref": "#/components/schemas/EntityTypedField"
+          },
+          "service": {
+            "$ref": "#/components/schemas/EntityStringField"
+          },
+          "assignee": {
+            "$ref": "#/components/schemas/EntityTypedField"
+          },
+          "due_date": {
+            "$ref": "#/components/schemas/EntityTypedField"
+          }
+        }
       },
       "EntityEditSupportOptional": {
         "enum": [

@@ -7,44 +7,148 @@ using System.IO;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
-    /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.ContentItemEntityFields"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.FileEntityFields"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.IncidentEntityFields"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.TaskEntityFields"/>
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class EntityMetadataEntityPayloadFields : IComposedTypeWrapper, IParsable
+    #pragma warning disable CS1591
+    public partial class EntityMetadataEntityPayloadFields : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ContentItemEntityFields"/></summary>
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The assigned_to property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ContentItemEntityFields? ContentItemEntityFields { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityTypedField? AssignedTo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ContentItemEntityFields ContentItemEntityFields { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityTypedField AssignedTo { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.FileEntityFields"/></summary>
+        /// <summary>The assignee property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.FileEntityFields? FileEntityFields { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityTypedField? Assignee { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.FileEntityFields FileEntityFields { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityTypedField Assignee { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.IncidentEntityFields"/></summary>
+        /// <summary>The created_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.IncidentEntityFields? IncidentEntityFields { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityTypedField? CreatedBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.IncidentEntityFields IncidentEntityFields { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityTypedField CreatedBy { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.TaskEntityFields"/></summary>
+        /// <summary>The date_created property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.TaskEntityFields? TaskEntityFields { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityTimestampField? DateCreated { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.TaskEntityFields TaskEntityFields { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityTimestampField DateCreated { get; set; }
 #endif
+        /// <summary>The date_updated property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityTimestampField? DateUpdated { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityTimestampField DateUpdated { get; set; }
+#endif
+        /// <summary>The description property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityStringField? Description { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityStringField Description { get; set; }
+#endif
+        /// <summary>The due_date property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityTypedField? DueDate { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityTypedField DueDate { get; set; }
+#endif
+        /// <summary>The file_size property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityStringField? FileSize { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityStringField FileSize { get; set; }
+#endif
+        /// <summary>The full_size_preview property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityFullSizePreview? FullSizePreview { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityFullSizePreview FullSizePreview { get; set; }
+#endif
+        /// <summary>The last_modified_by property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityTypedField? LastModifiedBy { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityTypedField LastModifiedBy { get; set; }
+#endif
+        /// <summary>The mime_type property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityStringField? MimeType { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityStringField MimeType { get; set; }
+#endif
+        /// <summary>The preview property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityImageField? Preview { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityImageField Preview { get; set; }
+#endif
+        /// <summary>The priority property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityStringField? Priority { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityStringField Priority { get; set; }
+#endif
+        /// <summary>The service property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityStringField? Service { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityStringField Service { get; set; }
+#endif
+        /// <summary>The status property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityStringField? Status { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityStringField Status { get; set; }
+#endif
+        /// <summary>The urgency property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityStringField? Urgency { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityStringField Urgency { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.EntityMetadataEntityPayloadFields"/> and sets the default values.
+        /// </summary>
+        public EntityMetadataEntityPayloadFields()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -53,12 +157,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.EntityMetadataEntityPayloadFields CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var result = new global::Soenneker.Slack.OpenApiClient.Models.EntityMetadataEntityPayloadFields();
-            result.ContentItemEntityFields = new global::Soenneker.Slack.OpenApiClient.Models.ContentItemEntityFields();
-            result.FileEntityFields = new global::Soenneker.Slack.OpenApiClient.Models.FileEntityFields();
-            result.IncidentEntityFields = new global::Soenneker.Slack.OpenApiClient.Models.IncidentEntityFields();
-            result.TaskEntityFields = new global::Soenneker.Slack.OpenApiClient.Models.TaskEntityFields();
-            return result;
+            return new global::Soenneker.Slack.OpenApiClient.Models.EntityMetadataEntityPayloadFields();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,11 +165,25 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(ContentItemEntityFields != null || FileEntityFields != null || IncidentEntityFields != null || TaskEntityFields != null)
+            return new Dictionary<string, Action<IParseNode>>
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(ContentItemEntityFields, FileEntityFields, IncidentEntityFields, TaskEntityFields);
-            }
-            return new Dictionary<string, Action<IParseNode>>();
+                { "assigned_to", n => { AssignedTo = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityTypedField>(global::Soenneker.Slack.OpenApiClient.Models.EntityTypedField.CreateFromDiscriminatorValue); } },
+                { "assignee", n => { Assignee = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityTypedField>(global::Soenneker.Slack.OpenApiClient.Models.EntityTypedField.CreateFromDiscriminatorValue); } },
+                { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityTypedField>(global::Soenneker.Slack.OpenApiClient.Models.EntityTypedField.CreateFromDiscriminatorValue); } },
+                { "date_created", n => { DateCreated = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityTimestampField>(global::Soenneker.Slack.OpenApiClient.Models.EntityTimestampField.CreateFromDiscriminatorValue); } },
+                { "date_updated", n => { DateUpdated = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityTimestampField>(global::Soenneker.Slack.OpenApiClient.Models.EntityTimestampField.CreateFromDiscriminatorValue); } },
+                { "description", n => { Description = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityStringField>(global::Soenneker.Slack.OpenApiClient.Models.EntityStringField.CreateFromDiscriminatorValue); } },
+                { "due_date", n => { DueDate = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityTypedField>(global::Soenneker.Slack.OpenApiClient.Models.EntityTypedField.CreateFromDiscriminatorValue); } },
+                { "file_size", n => { FileSize = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityStringField>(global::Soenneker.Slack.OpenApiClient.Models.EntityStringField.CreateFromDiscriminatorValue); } },
+                { "full_size_preview", n => { FullSizePreview = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityFullSizePreview>(global::Soenneker.Slack.OpenApiClient.Models.EntityFullSizePreview.CreateFromDiscriminatorValue); } },
+                { "last_modified_by", n => { LastModifiedBy = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityTypedField>(global::Soenneker.Slack.OpenApiClient.Models.EntityTypedField.CreateFromDiscriminatorValue); } },
+                { "mime_type", n => { MimeType = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityStringField>(global::Soenneker.Slack.OpenApiClient.Models.EntityStringField.CreateFromDiscriminatorValue); } },
+                { "preview", n => { Preview = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityImageField>(global::Soenneker.Slack.OpenApiClient.Models.EntityImageField.CreateFromDiscriminatorValue); } },
+                { "priority", n => { Priority = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityStringField>(global::Soenneker.Slack.OpenApiClient.Models.EntityStringField.CreateFromDiscriminatorValue); } },
+                { "service", n => { Service = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityStringField>(global::Soenneker.Slack.OpenApiClient.Models.EntityStringField.CreateFromDiscriminatorValue); } },
+                { "status", n => { Status = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityStringField>(global::Soenneker.Slack.OpenApiClient.Models.EntityStringField.CreateFromDiscriminatorValue); } },
+                { "urgency", n => { Urgency = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityStringField>(global::Soenneker.Slack.OpenApiClient.Models.EntityStringField.CreateFromDiscriminatorValue); } },
+            };
         }
         /// <summary>
         /// Serializes information the current object
@@ -79,7 +192,23 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ContentItemEntityFields>(null, ContentItemEntityFields, FileEntityFields, IncidentEntityFields, TaskEntityFields);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityTypedField>("assigned_to", AssignedTo);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityTypedField>("assignee", Assignee);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityTypedField>("created_by", CreatedBy);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityTimestampField>("date_created", DateCreated);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityTimestampField>("date_updated", DateUpdated);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityStringField>("description", Description);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityTypedField>("due_date", DueDate);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityStringField>("file_size", FileSize);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityFullSizePreview>("full_size_preview", FullSizePreview);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityTypedField>("last_modified_by", LastModifiedBy);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityStringField>("mime_type", MimeType);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityImageField>("preview", Preview);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityStringField>("priority", Priority);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityStringField>("service", Service);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityStringField>("status", Status);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityStringField>("urgency", Urgency);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

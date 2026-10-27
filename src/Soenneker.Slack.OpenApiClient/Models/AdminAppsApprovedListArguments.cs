@@ -7,28 +7,48 @@ using System.IO;
 using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
-    /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminAppsApprovedListArgumentsMember1"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminAppsApprovedListArgumentsMember2"/>
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class AdminAppsApprovedListArguments : IComposedTypeWrapper, IParsable
+    #pragma warning disable CS1591
+    public partial class AdminAppsApprovedListArguments : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminAppsApprovedListArgumentsMember1"/></summary>
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Include certified apps. Defaults to `false`.</summary>
+        public bool? Certified { get; set; }
+        /// <summary>Paginate through collections of data by setting the `cursor` parameter to a `next_cursor` attributereturned by a previous request&apos;s `response_metadata`.Default value fetches the first &quot;page&quot; of the collection.[pagination](https://docs.slack.dev/apis/web-api/pagination) for more detail.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminAppsApprovedListArgumentsMember1? AdminAppsApprovedListArgumentsMember1 { get; set; }
+        public string? Cursor { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminAppsApprovedListArgumentsMember1 AdminAppsApprovedListArgumentsMember1 { get; set; }
+        public string Cursor { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminAppsApprovedListArgumentsMember2"/></summary>
+        /// <summary>The ID of the enterprise.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminAppsApprovedListArgumentsMember2? AdminAppsApprovedListArgumentsMember2 { get; set; }
+        public string? EnterpriseId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminAppsApprovedListArgumentsMember2 AdminAppsApprovedListArgumentsMember2 { get; set; }
+        public string EnterpriseId { get; set; }
 #endif
+        /// <summary>The maximum number of items to return. Fewer than the requested number of items may be returned,even if the end of the list hasn&apos;t been reached. Must be an integer with a max value of `999`. Default is `100`.</summary>
+        public double? Limit { get; set; }
+        /// <summary>The encoded team ID.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? TeamId { get; set; }
+#nullable restore
+#else
+        public string TeamId { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminAppsApprovedListArguments"/> and sets the default values.
+        /// </summary>
+        public AdminAppsApprovedListArguments()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -37,10 +57,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.AdminAppsApprovedListArguments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var result = new global::Soenneker.Slack.OpenApiClient.Models.AdminAppsApprovedListArguments();
-            result.AdminAppsApprovedListArgumentsMember1 = new global::Soenneker.Slack.OpenApiClient.Models.AdminAppsApprovedListArgumentsMember1();
-            result.AdminAppsApprovedListArgumentsMember2 = new global::Soenneker.Slack.OpenApiClient.Models.AdminAppsApprovedListArgumentsMember2();
-            return result;
+            return new global::Soenneker.Slack.OpenApiClient.Models.AdminAppsApprovedListArguments();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -48,11 +65,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(AdminAppsApprovedListArgumentsMember1 != null || AdminAppsApprovedListArgumentsMember2 != null)
+            return new Dictionary<string, Action<IParseNode>>
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(AdminAppsApprovedListArgumentsMember1, AdminAppsApprovedListArgumentsMember2);
-            }
-            return new Dictionary<string, Action<IParseNode>>();
+                { "certified", n => { Certified = n.GetBoolValue(); } },
+                { "cursor", n => { Cursor = n.GetStringValue(); } },
+                { "enterprise_id", n => { EnterpriseId = n.GetStringValue(); } },
+                { "limit", n => { Limit = n.GetDoubleValue(); } },
+                { "team_id", n => { TeamId = n.GetStringValue(); } },
+            };
         }
         /// <summary>
         /// Serializes information the current object
@@ -61,7 +81,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminAppsApprovedListArgumentsMember1>(null, AdminAppsApprovedListArgumentsMember1, AdminAppsApprovedListArgumentsMember2);
+            writer.WriteBoolValue("certified", Certified);
+            writer.WriteStringValue("cursor", Cursor);
+            writer.WriteStringValue("enterprise_id", EnterpriseId);
+            writer.WriteDoubleValue("limit", Limit);
+            writer.WriteStringValue("team_id", TeamId);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }
