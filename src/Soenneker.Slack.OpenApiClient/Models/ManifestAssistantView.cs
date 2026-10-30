@@ -17,8 +17,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("assistant_description") is { } nullNodeAssistantDescription && nullNodeAssistantDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssistantDescription = null;
-            if (parseNode.GetChildNode("suggested_prompts") is { } nullNodeSuggestedPrompts && nullNodeSuggestedPrompts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuggestedPrompts = null;
+            if (parseNode.GetChildNode("assistant_description") is null) { _explicitNullValueAssistantDescription = default!; _explicitNullProperties?.Remove("assistant_description"); }
+            else if (parseNode.GetChildNode("assistant_description") is { } nullNodeAssistantDescription && nullNodeAssistantDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssistantDescription = null;
+            if (parseNode.GetChildNode("suggested_prompts") is null) { _explicitNullValueSuggestedPrompts = default!; _explicitNullProperties?.Remove("suggested_prompts"); }
+            else if (parseNode.GetChildNode("suggested_prompts") is { } nullNodeSuggestedPrompts && nullNodeSuggestedPrompts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuggestedPrompts = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>A string that describes the app assistant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AssistantDescription { get => _explicitNullValueAssistantDescription; set { _explicitNullValueAssistantDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assistant_description"); else _explicitNullProperties?.Remove("assistant_description"); } }
+        public string? AssistantDescription { get => _explicitNullValueAssistantDescription; set { _explicitNullValueAssistantDescription = value; AdditionalData?.Remove("assistant_description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assistant_description"); else _explicitNullProperties?.Remove("assistant_description"); } }
         private string? _explicitNullValueAssistantDescription = default!;
 #nullable restore
 #else
-        public string AssistantDescription { get => _explicitNullValueAssistantDescription; set { _explicitNullValueAssistantDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assistant_description"); else _explicitNullProperties?.Remove("assistant_description"); } }
+        public string AssistantDescription { get => _explicitNullValueAssistantDescription; set { _explicitNullValueAssistantDescription = value; AdditionalData?.Remove("assistant_description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assistant_description"); else _explicitNullProperties?.Remove("assistant_description"); } }
         private string _explicitNullValueAssistantDescription = default!;
 #endif
         /// <summary>An array of pre-written prompts designed to guide users when interacting with the app assistant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.ManifestSuggestedPrompt>? SuggestedPrompts { get => _explicitNullValueSuggestedPrompts; set { _explicitNullValueSuggestedPrompts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggested_prompts"); else _explicitNullProperties?.Remove("suggested_prompts"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.ManifestSuggestedPrompt>? SuggestedPrompts { get => _explicitNullValueSuggestedPrompts; set { _explicitNullValueSuggestedPrompts = value; AdditionalData?.Remove("suggested_prompts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggested_prompts"); else _explicitNullProperties?.Remove("suggested_prompts"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.ManifestSuggestedPrompt>? _explicitNullValueSuggestedPrompts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.ManifestSuggestedPrompt> SuggestedPrompts { get => _explicitNullValueSuggestedPrompts; set { _explicitNullValueSuggestedPrompts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggested_prompts"); else _explicitNullProperties?.Remove("suggested_prompts"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.ManifestSuggestedPrompt> SuggestedPrompts { get => _explicitNullValueSuggestedPrompts; set { _explicitNullValueSuggestedPrompts = value; AdditionalData?.Remove("suggested_prompts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggested_prompts"); else _explicitNullProperties?.Remove("suggested_prompts"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.ManifestSuggestedPrompt> _explicitNullValueSuggestedPrompts = default!;
 #endif
         /// <summary>

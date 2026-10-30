@@ -17,10 +17,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("agent_resource") is { } nullNodeAgentResource && nullNodeAgentResource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentResource = null;
-            if (parseNode.GetChildNode("channel_id") is { } nullNodeChannelId && nullNodeChannelId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelId = null;
-            if (parseNode.GetChildNode("code_channel") is { } nullNodeCodeChannel && nullNodeCodeChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CodeChannel = null;
-            if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
+            if (parseNode.GetChildNode("agent_resource") is null) { _explicitNullValueAgentResource = default!; _explicitNullProperties?.Remove("agent_resource"); }
+            else if (parseNode.GetChildNode("agent_resource") is { } nullNodeAgentResource && nullNodeAgentResource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentResource = null;
+            if (parseNode.GetChildNode("channel_id") is null) { _explicitNullValueChannelId = default!; _explicitNullProperties?.Remove("channel_id"); }
+            else if (parseNode.GetChildNode("channel_id") is { } nullNodeChannelId && nullNodeChannelId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelId = null;
+            if (parseNode.GetChildNode("code_channel") is null) { _explicitNullValueCodeChannel = default!; _explicitNullProperties?.Remove("code_channel"); }
+            else if (parseNode.GetChildNode("code_channel") is { } nullNodeCodeChannel && nullNodeCodeChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CodeChannel = null;
+            if (parseNode.GetChildNode("token") is null) { _explicitNullValueToken = default!; _explicitNullProperties?.Remove("token"); }
+            else if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Agent resource properties to set. Only provided fields are updated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetPropertiesArgumentsAgentResource? AgentResource { get => _explicitNullValueAgentResource; set { _explicitNullValueAgentResource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_resource"); else _explicitNullProperties?.Remove("agent_resource"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetPropertiesArgumentsAgentResource? AgentResource { get => _explicitNullValueAgentResource; set { _explicitNullValueAgentResource = value; AdditionalData?.Remove("agent_resource"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_resource"); else _explicitNullProperties?.Remove("agent_resource"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetPropertiesArgumentsAgentResource? _explicitNullValueAgentResource = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetPropertiesArgumentsAgentResource AgentResource { get => _explicitNullValueAgentResource; set { _explicitNullValueAgentResource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_resource"); else _explicitNullProperties?.Remove("agent_resource"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetPropertiesArgumentsAgentResource AgentResource { get => _explicitNullValueAgentResource; set { _explicitNullValueAgentResource = value; AdditionalData?.Remove("agent_resource"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_resource"); else _explicitNullProperties?.Remove("agent_resource"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetPropertiesArgumentsAgentResource _explicitNullValueAgentResource = default!;
 #endif
         /// <summary>ID of the code channel to update.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChannelId { get => _explicitNullValueChannelId; set { _explicitNullValueChannelId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_id"); else _explicitNullProperties?.Remove("channel_id"); } }
+        public string? ChannelId { get => _explicitNullValueChannelId; set { _explicitNullValueChannelId = value; AdditionalData?.Remove("channel_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_id"); else _explicitNullProperties?.Remove("channel_id"); } }
         private string? _explicitNullValueChannelId = default!;
 #nullable restore
 #else
-        public string ChannelId { get => _explicitNullValueChannelId; set { _explicitNullValueChannelId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_id"); else _explicitNullProperties?.Remove("channel_id"); } }
+        public string ChannelId { get => _explicitNullValueChannelId; set { _explicitNullValueChannelId = value; AdditionalData?.Remove("channel_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_id"); else _explicitNullProperties?.Remove("channel_id"); } }
         private string _explicitNullValueChannelId = default!;
 #endif
         /// <summary>Code channel properties to set. Only provided fields are updated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetPropertiesArgumentsCodeChannel? CodeChannel { get => _explicitNullValueCodeChannel; set { _explicitNullValueCodeChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code_channel"); else _explicitNullProperties?.Remove("code_channel"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetPropertiesArgumentsCodeChannel? CodeChannel { get => _explicitNullValueCodeChannel; set { _explicitNullValueCodeChannel = value; AdditionalData?.Remove("code_channel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code_channel"); else _explicitNullProperties?.Remove("code_channel"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetPropertiesArgumentsCodeChannel? _explicitNullValueCodeChannel = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetPropertiesArgumentsCodeChannel CodeChannel { get => _explicitNullValueCodeChannel; set { _explicitNullValueCodeChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code_channel"); else _explicitNullProperties?.Remove("code_channel"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetPropertiesArgumentsCodeChannel CodeChannel { get => _explicitNullValueCodeChannel; set { _explicitNullValueCodeChannel = value; AdditionalData?.Remove("code_channel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code_channel"); else _explicitNullProperties?.Remove("code_channel"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetPropertiesArgumentsCodeChannel _explicitNullValueCodeChannel = default!;
 #endif
         /// <summary>Overridable authentication token bearing required scopes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; AdditionalData?.Remove("token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
         private string? _explicitNullValueToken = default!;
 #nullable restore
 #else
-        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; AdditionalData?.Remove("token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
         private string _explicitNullValueToken = default!;
 #endif
         /// <summary>

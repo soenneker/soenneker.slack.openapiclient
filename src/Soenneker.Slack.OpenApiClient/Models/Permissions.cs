@@ -17,9 +17,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("api") is { } nullNodeApi && nullNodeApi.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Api = null;
-            if (parseNode.GetChildNode("scim") is { } nullNodeScim && nullNodeScim.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Scim = null;
-            if (parseNode.GetChildNode("ui") is { } nullNodeUi && nullNodeUi.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ui = null;
+            if (parseNode.GetChildNode("api") is null) { _explicitNullValueApi = default!; _explicitNullProperties?.Remove("api"); }
+            else if (parseNode.GetChildNode("api") is { } nullNodeApi && nullNodeApi.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Api = null;
+            if (parseNode.GetChildNode("scim") is null) { _explicitNullValueScim = default!; _explicitNullProperties?.Remove("scim"); }
+            else if (parseNode.GetChildNode("scim") is { } nullNodeScim && nullNodeScim.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Scim = null;
+            if (parseNode.GetChildNode("ui") is null) { _explicitNullValueUi = default!; _explicitNullProperties?.Remove("ui"); }
+            else if (parseNode.GetChildNode("ui") is { } nullNodeUi && nullNodeUi.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ui = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,18 +30,18 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The api property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Api { get => _explicitNullValueApi; set { _explicitNullValueApi = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api"); else _explicitNullProperties?.Remove("api"); } }
+        public List<string>? Api { get => _explicitNullValueApi; set { _explicitNullValueApi = value; AdditionalData?.Remove("api"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api"); else _explicitNullProperties?.Remove("api"); } }
         private List<string>? _explicitNullValueApi = default!;
 #nullable restore
 #else
-        public List<string> Api { get => _explicitNullValueApi; set { _explicitNullValueApi = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api"); else _explicitNullProperties?.Remove("api"); } }
+        public List<string> Api { get => _explicitNullValueApi; set { _explicitNullValueApi = value; AdditionalData?.Remove("api"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api"); else _explicitNullProperties?.Remove("api"); } }
         private List<string> _explicitNullValueApi = default!;
 #endif
         /// <summary>The scim property</summary>
-        public bool? Scim { get => _explicitNullValueScim; set { _explicitNullValueScim = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scim"); else _explicitNullProperties?.Remove("scim"); } }
+        public bool? Scim { get => _explicitNullValueScim; set { _explicitNullValueScim = value; AdditionalData?.Remove("scim"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scim"); else _explicitNullProperties?.Remove("scim"); } }
         private bool? _explicitNullValueScim = default!;
         /// <summary>The ui property</summary>
-        public bool? Ui { get => _explicitNullValueUi; set { _explicitNullValueUi = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ui"); else _explicitNullProperties?.Remove("ui"); } }
+        public bool? Ui { get => _explicitNullValueUi; set { _explicitNullValueUi = value; AdditionalData?.Remove("ui"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ui"); else _explicitNullProperties?.Remove("ui"); } }
         private bool? _explicitNullValueUi = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Permissions"/> and sets the default values.

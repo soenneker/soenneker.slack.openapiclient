@@ -17,7 +17,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("trigger_actions_on") is { } nullNodeTriggerActionsOn && nullNodeTriggerActionsOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerActionsOn = null;
+            if (parseNode.GetChildNode("trigger_actions_on") is null) { _explicitNullValueTriggerActionsOn = default!; _explicitNullProperties?.Remove("trigger_actions_on"); }
+            else if (parseNode.GetChildNode("trigger_actions_on") is { } nullNodeTriggerActionsOn && nullNodeTriggerActionsOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerActionsOn = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>An array of interaction types that you would like to receive a[`block_actions` payload](https://docs.slack.dev/reference/interaction-payloads/block_actions-payload) for. Should beone or both of:  `on_enter_pressed` — payload is dispatched when user presses the enter key while the input is in focus. Hint  text will appear underneath the input explaining to the user to press enter to submit.  `on_character_entered` — payload is dispatched when a character is entered (or removed) in the input.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.DispatchActionConfigTriggerActionsOnItem?>? TriggerActionsOn { get => _explicitNullValueTriggerActionsOn; set { _explicitNullValueTriggerActionsOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trigger_actions_on"); else _explicitNullProperties?.Remove("trigger_actions_on"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.DispatchActionConfigTriggerActionsOnItem?>? TriggerActionsOn { get => _explicitNullValueTriggerActionsOn; set { _explicitNullValueTriggerActionsOn = value; AdditionalData?.Remove("trigger_actions_on"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trigger_actions_on"); else _explicitNullProperties?.Remove("trigger_actions_on"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.DispatchActionConfigTriggerActionsOnItem?>? _explicitNullValueTriggerActionsOn = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.DispatchActionConfigTriggerActionsOnItem?> TriggerActionsOn { get => _explicitNullValueTriggerActionsOn; set { _explicitNullValueTriggerActionsOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trigger_actions_on"); else _explicitNullProperties?.Remove("trigger_actions_on"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.DispatchActionConfigTriggerActionsOnItem?> TriggerActionsOn { get => _explicitNullValueTriggerActionsOn; set { _explicitNullValueTriggerActionsOn = value; AdditionalData?.Remove("trigger_actions_on"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trigger_actions_on"); else _explicitNullProperties?.Remove("trigger_actions_on"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.DispatchActionConfigTriggerActionsOnItem?> _explicitNullValueTriggerActionsOn = default!;
 #endif
         /// <summary>

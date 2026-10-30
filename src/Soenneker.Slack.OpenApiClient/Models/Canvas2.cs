@@ -17,8 +17,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ownership_details") is { } nullNodeOwnershipDetails && nullNodeOwnershipDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnershipDetails = null;
-            if (parseNode.GetChildNode("total_count") is { } nullNodeTotalCount && nullNodeTotalCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCount = null;
+            if (parseNode.GetChildNode("ownership_details") is null) { _explicitNullValueOwnershipDetails = default!; _explicitNullProperties?.Remove("ownership_details"); }
+            else if (parseNode.GetChildNode("ownership_details") is { } nullNodeOwnershipDetails && nullNodeOwnershipDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnershipDetails = null;
+            if (parseNode.GetChildNode("total_count") is null) { _explicitNullValueTotalCount = default!; _explicitNullProperties?.Remove("total_count"); }
+            else if (parseNode.GetChildNode("total_count") is { } nullNodeTotalCount && nullNodeTotalCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCount = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The ownership_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.OwnershipDetail>? OwnershipDetails { get => _explicitNullValueOwnershipDetails; set { _explicitNullValueOwnershipDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownership_details"); else _explicitNullProperties?.Remove("ownership_details"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.OwnershipDetail>? OwnershipDetails { get => _explicitNullValueOwnershipDetails; set { _explicitNullValueOwnershipDetails = value; AdditionalData?.Remove("ownership_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownership_details"); else _explicitNullProperties?.Remove("ownership_details"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.OwnershipDetail>? _explicitNullValueOwnershipDetails = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.OwnershipDetail> OwnershipDetails { get => _explicitNullValueOwnershipDetails; set { _explicitNullValueOwnershipDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownership_details"); else _explicitNullProperties?.Remove("ownership_details"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.OwnershipDetail> OwnershipDetails { get => _explicitNullValueOwnershipDetails; set { _explicitNullValueOwnershipDetails = value; AdditionalData?.Remove("ownership_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownership_details"); else _explicitNullProperties?.Remove("ownership_details"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.OwnershipDetail> _explicitNullValueOwnershipDetails = default!;
 #endif
         /// <summary>The total_count property</summary>
-        public double? TotalCount { get => _explicitNullValueTotalCount; set { _explicitNullValueTotalCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_count"); else _explicitNullProperties?.Remove("total_count"); } }
+        public double? TotalCount { get => _explicitNullValueTotalCount; set { _explicitNullValueTotalCount = value; AdditionalData?.Remove("total_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_count"); else _explicitNullProperties?.Remove("total_count"); } }
         private double? _explicitNullValueTotalCount = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Canvas2"/> and sets the default values.

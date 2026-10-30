@@ -17,9 +17,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("invite_id") is { } nullNodeInviteId && nullNodeInviteId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InviteId = null;
-            if (parseNode.GetChildNode("target_team") is { } nullNodeTargetTeam && nullNodeTargetTeam.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetTeam = null;
-            if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
+            if (parseNode.GetChildNode("invite_id") is null) { _explicitNullValueInviteId = default!; _explicitNullProperties?.Remove("invite_id"); }
+            else if (parseNode.GetChildNode("invite_id") is { } nullNodeInviteId && nullNodeInviteId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InviteId = null;
+            if (parseNode.GetChildNode("target_team") is null) { _explicitNullValueTargetTeam = default!; _explicitNullProperties?.Remove("target_team"); }
+            else if (parseNode.GetChildNode("target_team") is { } nullNodeTargetTeam && nullNodeTargetTeam.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetTeam = null;
+            if (parseNode.GetChildNode("token") is null) { _explicitNullValueToken = default!; _explicitNullProperties?.Remove("token"); }
+            else if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>ID of the invite.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InviteId { get => _explicitNullValueInviteId; set { _explicitNullValueInviteId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invite_id"); else _explicitNullProperties?.Remove("invite_id"); } }
+        public string? InviteId { get => _explicitNullValueInviteId; set { _explicitNullValueInviteId = value; AdditionalData?.Remove("invite_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invite_id"); else _explicitNullProperties?.Remove("invite_id"); } }
         private string? _explicitNullValueInviteId = default!;
 #nullable restore
 #else
-        public string InviteId { get => _explicitNullValueInviteId; set { _explicitNullValueInviteId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invite_id"); else _explicitNullProperties?.Remove("invite_id"); } }
+        public string InviteId { get => _explicitNullValueInviteId; set { _explicitNullValueInviteId = value; AdditionalData?.Remove("invite_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invite_id"); else _explicitNullProperties?.Remove("invite_id"); } }
         private string _explicitNullValueInviteId = default!;
 #endif
         /// <summary>The team or enterprise id of the other party.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TargetTeam { get => _explicitNullValueTargetTeam; set { _explicitNullValueTargetTeam = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_team"); else _explicitNullProperties?.Remove("target_team"); } }
+        public string? TargetTeam { get => _explicitNullValueTargetTeam; set { _explicitNullValueTargetTeam = value; AdditionalData?.Remove("target_team"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_team"); else _explicitNullProperties?.Remove("target_team"); } }
         private string? _explicitNullValueTargetTeam = default!;
 #nullable restore
 #else
-        public string TargetTeam { get => _explicitNullValueTargetTeam; set { _explicitNullValueTargetTeam = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_team"); else _explicitNullProperties?.Remove("target_team"); } }
+        public string TargetTeam { get => _explicitNullValueTargetTeam; set { _explicitNullValueTargetTeam = value; AdditionalData?.Remove("target_team"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_team"); else _explicitNullProperties?.Remove("target_team"); } }
         private string _explicitNullValueTargetTeam = default!;
 #endif
         /// <summary>Overridable authentication token bearing required scopes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; AdditionalData?.Remove("token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
         private string? _explicitNullValueToken = default!;
 #nullable restore
 #else
-        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; AdditionalData?.Remove("token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
         private string _explicitNullValueToken = default!;
 #endif
         /// <summary>

@@ -17,9 +17,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("first_user_thread_reply") is { } nullNodeFirstUserThreadReply && nullNodeFirstUserThreadReply.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstUserThreadReply = null;
-            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
-            if (parseNode.GetChildNode("title_blocks") is { } nullNodeTitleBlocks && nullNodeTitleBlocks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TitleBlocks = null;
+            if (parseNode.GetChildNode("first_user_thread_reply") is null) { _explicitNullValueFirstUserThreadReply = default!; _explicitNullProperties?.Remove("first_user_thread_reply"); }
+            else if (parseNode.GetChildNode("first_user_thread_reply") is { } nullNodeFirstUserThreadReply && nullNodeFirstUserThreadReply.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstUserThreadReply = null;
+            if (parseNode.GetChildNode("title") is null) { _explicitNullValueTitle = default!; _explicitNullProperties?.Remove("title"); }
+            else if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+            if (parseNode.GetChildNode("title_blocks") is null) { _explicitNullValueTitleBlocks = default!; _explicitNullProperties?.Remove("title_blocks"); }
+            else if (parseNode.GetChildNode("title_blocks") is { } nullNodeTitleBlocks && nullNodeTitleBlocks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TitleBlocks = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The first_user_thread_reply property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FirstUserThreadReply { get => _explicitNullValueFirstUserThreadReply; set { _explicitNullValueFirstUserThreadReply = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_user_thread_reply"); else _explicitNullProperties?.Remove("first_user_thread_reply"); } }
+        public string? FirstUserThreadReply { get => _explicitNullValueFirstUserThreadReply; set { _explicitNullValueFirstUserThreadReply = value; AdditionalData?.Remove("first_user_thread_reply"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_user_thread_reply"); else _explicitNullProperties?.Remove("first_user_thread_reply"); } }
         private string? _explicitNullValueFirstUserThreadReply = default!;
 #nullable restore
 #else
-        public string FirstUserThreadReply { get => _explicitNullValueFirstUserThreadReply; set { _explicitNullValueFirstUserThreadReply = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_user_thread_reply"); else _explicitNullProperties?.Remove("first_user_thread_reply"); } }
+        public string FirstUserThreadReply { get => _explicitNullValueFirstUserThreadReply; set { _explicitNullValueFirstUserThreadReply = value; AdditionalData?.Remove("first_user_thread_reply"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_user_thread_reply"); else _explicitNullProperties?.Remove("first_user_thread_reply"); } }
         private string _explicitNullValueFirstUserThreadReply = default!;
 #endif
         /// <summary>The title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
         private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
         private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>The title_blocks property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock>? TitleBlocks { get => _explicitNullValueTitleBlocks; set { _explicitNullValueTitleBlocks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title_blocks"); else _explicitNullProperties?.Remove("title_blocks"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock>? TitleBlocks { get => _explicitNullValueTitleBlocks; set { _explicitNullValueTitleBlocks = value; AdditionalData?.Remove("title_blocks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title_blocks"); else _explicitNullProperties?.Remove("title_blocks"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock>? _explicitNullValueTitleBlocks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock> TitleBlocks { get => _explicitNullValueTitleBlocks; set { _explicitNullValueTitleBlocks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title_blocks"); else _explicitNullProperties?.Remove("title_blocks"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock> TitleBlocks { get => _explicitNullValueTitleBlocks; set { _explicitNullValueTitleBlocks = value; AdditionalData?.Remove("title_blocks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title_blocks"); else _explicitNullProperties?.Remove("title_blocks"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock> _explicitNullValueTitleBlocks = default!;
 #endif
         /// <summary>

@@ -392,12 +392,12 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AdminAppsRestrictedListArguments"
+                "$ref": "#/components/schemas/AdminAppsRequestsListArguments"
               }
             },
             "application/x-www-form-urlencoded": {
               "schema": {
-                "$ref": "#/components/schemas/AdminAppsRestrictedListArguments"
+                "$ref": "#/components/schemas/AdminAppsRequestsListArguments"
               }
             }
           },
@@ -429,12 +429,12 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AdminAppsUninstallArguments"
+                "$ref": "#/components/schemas/AdminAppsClearResolutionArguments"
               }
             },
             "application/x-www-form-urlencoded": {
               "schema": {
-                "$ref": "#/components/schemas/AdminAppsUninstallArguments"
+                "$ref": "#/components/schemas/AdminAppsClearResolutionArguments"
               }
             }
           },
@@ -10029,12 +10029,12 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ViewsPushArguments"
+                "$ref": "#/components/schemas/ViewsOpenArguments"
               }
             },
             "application/x-www-form-urlencoded": {
               "schema": {
-                "$ref": "#/components/schemas/ViewsPushArguments"
+                "$ref": "#/components/schemas/ViewsOpenArguments"
               }
             }
           },
@@ -16459,7 +16459,7 @@
         "type": "object",
         "properties": {
           "channel_ids": {
-            "$ref": "#/components/schemas/AdminUsergroupsRemoveChannelsArgumentsChannelIds"
+            "$ref": "#/components/schemas/AdminUsergroupsAddChannelsArgumentsChannelIds"
           },
           "usergroup_id": {
             "type": "string",
@@ -17070,46 +17070,17 @@
         }
       },
       "AdminUsersSessionListArguments": {
-        "anyOf": [
-          {
-            "type": "object",
-            "properties": {
-              "team_id": {
-                "type": "string",
-                "description": "The encoded team ID."
-              },
-              "user_id": {
-                "type": "string",
-                "description": "Encoded user ID."
-              },
-              "limit": {
-                "type": "number",
-                "description": "The maximum number of items to return. Fewer than the requested number of items may be returned,\neven if the end of the list hasn\u0027t been reached. Must be an integer with a max value of \u0060999\u0060. Default is \u0060100\u0060."
-              },
-              "cursor": {
-                "type": "string",
-                "description": "Paginate through collections of data by setting the \u0060cursor\u0060 parameter to a \u0060next_cursor\u0060 attribute\nreturned by a previous request\u0027s \u0060response_metadata\u0060.\nDefault value fetches the first \u0022page\u0022 of the collection.\n[pagination](https://docs.slack.dev/apis/web-api/pagination) for more detail."
-              }
-            },
-            "required": [
-              "team_id",
-              "user_id"
-            ]
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "number",
+            "description": "The maximum number of items to return. Fewer than the requested number of items may be returned,\neven if the end of the list hasn\u0027t been reached. Must be an integer with a max value of \u0060999\u0060. Default is \u0060100\u0060."
           },
-          {
-            "type": "object",
-            "properties": {
-              "limit": {
-                "type": "number",
-                "description": "The maximum number of items to return. Fewer than the requested number of items may be returned,\neven if the end of the list hasn\u0027t been reached. Must be an integer with a max value of \u0060999\u0060. Default is \u0060100\u0060."
-              },
-              "cursor": {
-                "type": "string",
-                "description": "Paginate through collections of data by setting the \u0060cursor\u0060 parameter to a \u0060next_cursor\u0060 attribute\nreturned by a previous request\u0027s \u0060response_metadata\u0060.\nDefault value fetches the first \u0022page\u0022 of the collection.\n[pagination](https://docs.slack.dev/apis/web-api/pagination) for more detail."
-              }
-            }
+          "cursor": {
+            "type": "string",
+            "description": "Paginate through collections of data by setting the \u0060cursor\u0060 parameter to a \u0060next_cursor\u0060 attribute\nreturned by a previous request\u0027s \u0060response_metadata\u0060.\nDefault value fetches the first \u0022page\u0022 of the collection.\n[pagination](https://docs.slack.dev/apis/web-api/pagination) for more detail."
           }
-        ]
+        }
       },
       "BothTeamAndUserId": {
         "required": [
@@ -18880,14 +18851,14 @@
           "initial_options": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Option"
+              "$ref": "#/components/schemas/ExternalSelectActionInitialOption"
             },
             "description": "An array of [Option](Option) objects that exactly matches one or more of the options within \u0060options\u0060.\nThese options will be selected when the checkbox group initially loads."
           },
           "options": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Option"
+              "$ref": "#/components/schemas/ExternalSelectActionInitialOption"
             },
             "description": "An array of [Option](Option) objects. A maximum of 10 options are allowed."
           },
@@ -19270,7 +19241,7 @@
           "options": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Option"
+              "$ref": "#/components/schemas/ExternalSelectActionInitialOption"
             },
             "description": "An array of [Option](Option) objects. A maximum of 10 options are allowed."
           },
@@ -20107,7 +20078,7 @@
         "properties": {
           "slack_file": {
             "description": "The slack file of the image to be displayed.",
-            "$ref": "#/components/schemas/SlackFile"
+            "$ref": "#/components/schemas/EntityArrayItemFieldSlackFile"
           }
         }
       },
@@ -20660,7 +20631,7 @@
             "items": {
               "type": "array",
               "items": {
-                "$ref": "#/components/schemas/TableBlockRowsItemItem"
+                "$ref": "#/components/schemas/DataTableBlockRowsItemItem"
               }
             },
             "description": "An array consisting of table rows. Maximum 100 rows. Each row object is an array with a max of 20 table cells. Table cells can have a type of rich_text, raw_text, or raw_number."
@@ -28964,7 +28935,7 @@
             "type": "string"
           },
           "slack_file": {
-            "$ref": "#/components/schemas/EntityImageFieldSlackFile"
+            "$ref": "#/components/schemas/EntityArrayItemFieldSlackFile"
           },
           "title": {
             "type": "string"
@@ -29047,7 +29018,7 @@
             "type": "string"
           },
           "slack_file": {
-            "$ref": "#/components/schemas/EntityTypedFieldSlackFile"
+            "$ref": "#/components/schemas/EntityArrayItemFieldSlackFile"
           },
           "alt_text": {
             "type": "string"
@@ -29059,7 +29030,7 @@
             "type": "string"
           },
           "user": {
-            "$ref": "#/components/schemas/EntityTypedFieldUser"
+            "$ref": "#/components/schemas/EntityArrayItemFieldUser"
           },
           "entity_ref": {
             "$ref": "#/components/schemas/EntityRefField"
@@ -29282,7 +29253,7 @@
             "type": "string"
           },
           "slack_file": {
-            "$ref": "#/components/schemas/EntityCustomFieldSlackFile"
+            "$ref": "#/components/schemas/EntityArrayItemFieldSlackFile"
           },
           "alt_text": {
             "type": "string"
@@ -29297,7 +29268,7 @@
             "type": "string"
           },
           "user": {
-            "$ref": "#/components/schemas/EntityCustomFieldUser"
+            "$ref": "#/components/schemas/EntityArrayItemFieldUser"
           },
           "entity_ref": {
             "$ref": "#/components/schemas/EntityRefField"
@@ -31428,7 +31399,7 @@
             "type": "string"
           },
           "description": {
-            "$ref": "#/components/schemas/DescriptionBlockElementDescription"
+            "$ref": "#/components/schemas/Block4Description"
           },
           "developer_trace_id": {
             "type": "string"
@@ -31497,7 +31468,7 @@
             "type": "string"
           },
           "title": {
-            "$ref": "#/components/schemas/DescriptionBlockElementTitle"
+            "$ref": "#/components/schemas/Block4Description"
           },
           "title_url": {
             "type": "string"
@@ -35780,7 +35751,7 @@
             "type": "string"
           },
           "description": {
-            "$ref": "#/components/schemas/DescriptionBlockElement2Description"
+            "$ref": "#/components/schemas/Block4Description"
           },
           "developer_trace_id": {
             "type": "string"
@@ -35849,7 +35820,7 @@
             "type": "string"
           },
           "title": {
-            "$ref": "#/components/schemas/DescriptionBlockElement2Title"
+            "$ref": "#/components/schemas/Block4Description"
           },
           "title_url": {
             "type": "string"
@@ -37274,7 +37245,7 @@
             "type": "string"
           },
           "description": {
-            "$ref": "#/components/schemas/TitleBlockElementDescription"
+            "$ref": "#/components/schemas/Block4Description"
           },
           "developer_trace_id": {
             "type": "string"
@@ -37343,7 +37314,7 @@
             "type": "string"
           },
           "title": {
-            "$ref": "#/components/schemas/TitleBlockElementTitle"
+            "$ref": "#/components/schemas/Block4Description"
           },
           "title_url": {
             "type": "string"
@@ -43199,7 +43170,7 @@
             "type": "string"
           },
           "description": {
-            "$ref": "#/components/schemas/DescriptionBlockElement3Description"
+            "$ref": "#/components/schemas/Block4Description"
           },
           "developer_trace_id": {
             "type": "string"
@@ -43268,7 +43239,7 @@
             "type": "string"
           },
           "title": {
-            "$ref": "#/components/schemas/DescriptionBlockElement3Title"
+            "$ref": "#/components/schemas/Block4Description"
           },
           "title_url": {
             "type": "string"
@@ -46587,7 +46558,7 @@
             "type": "string"
           },
           "title": {
-            "$ref": "#/components/schemas/Block2Title"
+            "$ref": "#/components/schemas/Block2Description"
           },
           "title_url": {
             "type": "string"
@@ -48229,7 +48200,7 @@
             "type": "string"
           },
           "description": {
-            "$ref": "#/components/schemas/Block3Description"
+            "$ref": "#/components/schemas/Block2Description"
           },
           "developer_trace_id": {
             "type": "string"
@@ -48298,7 +48269,7 @@
             "type": "string"
           },
           "title": {
-            "$ref": "#/components/schemas/Block3Title"
+            "$ref": "#/components/schemas/Block2Description"
           },
           "title_url": {
             "type": "string"
@@ -48532,7 +48503,7 @@
             "type": "number"
           },
           "type": {
-            "$ref": "#/components/schemas/PurpleElement4Type"
+            "$ref": "#/components/schemas/PurpleElement3Type"
           },
           "unicode": {
             "type": "string"
@@ -50788,7 +50759,7 @@
             "type": "string"
           },
           "description": {
-            "$ref": "#/components/schemas/TitleBlockElement2Description"
+            "$ref": "#/components/schemas/Block2Description"
           },
           "developer_trace_id": {
             "type": "string"
@@ -50857,7 +50828,7 @@
             "type": "string"
           },
           "title": {
-            "$ref": "#/components/schemas/TitleBlockElement2Title"
+            "$ref": "#/components/schemas/Block2Description"
           },
           "title_url": {
             "type": "string"
@@ -56391,7 +56362,17 @@
         "enum": [
           ""
         ],
-        "type": "string"
+        "type": "string",
+        "x-ms-enum": {
+          "name": "Empty",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "",
+              "name": "EnumValue"
+            }
+          ]
+        }
       },
       "U00000000": {
         "enum": [
@@ -58644,7 +58625,7 @@
             "type": "string"
           },
           "title": {
-            "$ref": "#/components/schemas/Block4Title"
+            "$ref": "#/components/schemas/Block4Description"
           },
           "title_url": {
             "type": "string"
@@ -61067,7 +61048,7 @@
             "type": "string"
           },
           "description": {
-            "$ref": "#/components/schemas/TitleBlockElement3Description"
+            "$ref": "#/components/schemas/Block4Description"
           },
           "developer_trace_id": {
             "type": "string"
@@ -61136,7 +61117,7 @@
             "type": "string"
           },
           "title": {
-            "$ref": "#/components/schemas/TitleBlockElement3Title"
+            "$ref": "#/components/schemas/Block4Description"
           },
           "title_url": {
             "type": "string"
@@ -64676,7 +64657,7 @@
             }
           },
           "value": {
-            "$ref": "#/components/schemas/Field2Value"
+            "$ref": "#/components/schemas/AllowScFileUploadsType"
           }
         }
       },
@@ -68615,7 +68596,7 @@
               },
               "view": {
                 "description": "A [view payload](https://docs.slack.dev/surfaces/modals).",
-                "$ref": "#/components/schemas/View7"
+                "$ref": "#/components/schemas/AppHomeOpenedEventView"
               }
             },
             "required": [
@@ -68632,7 +68613,7 @@
               },
               "view": {
                 "description": "A [view payload](https://docs.slack.dev/surfaces/modals).",
-                "$ref": "#/components/schemas/View7"
+                "$ref": "#/components/schemas/AppHomeOpenedEventView"
               }
             },
             "required": [
@@ -68650,7 +68631,7 @@
         "properties": {
           "view": {
             "description": "A [view payload](https://docs.slack.dev/surfaces/modals).",
-            "$ref": "#/components/schemas/View7"
+            "$ref": "#/components/schemas/AppHomeOpenedEventView"
           }
         }
       },
@@ -69443,7 +69424,7 @@
           },
           "view": {
             "description": "A [view payload](https://docs.slack.dev/surfaces/modals).",
-            "$ref": "#/components/schemas/View7"
+            "$ref": "#/components/schemas/AppHomeOpenedEventView"
           },
           "token": {
             "type": "string",
@@ -69495,7 +69476,7 @@
               },
               "view": {
                 "description": "A [view payload](https://docs.slack.dev/surfaces/modals).",
-                "$ref": "#/components/schemas/View7"
+                "$ref": "#/components/schemas/AppHomeOpenedEventView"
               }
             },
             "required": [
@@ -69512,7 +69493,7 @@
               },
               "view": {
                 "description": "A [view payload](https://docs.slack.dev/surfaces/modals).",
-                "$ref": "#/components/schemas/View7"
+                "$ref": "#/components/schemas/AppHomeOpenedEventView"
               }
             },
             "required": [
@@ -69562,7 +69543,7 @@
               },
               "view": {
                 "description": "A [view payload](https://docs.slack.dev/surfaces/modals).",
-                "$ref": "#/components/schemas/View7"
+                "$ref": "#/components/schemas/AppHomeOpenedEventView"
               },
               "hash": {
                 "type": "string",
@@ -69583,7 +69564,7 @@
               },
               "view": {
                 "description": "A [view payload](https://docs.slack.dev/surfaces/modals).",
-                "$ref": "#/components/schemas/View7"
+                "$ref": "#/components/schemas/AppHomeOpenedEventView"
               },
               "hash": {
                 "type": "string",
@@ -75945,7 +75926,7 @@
             "$ref": "#/components/schemas/StaticSelectActionSelectedOption"
           },
           "initial_option": {
-            "$ref": "#/components/schemas/StaticSelectActionInitialOption"
+            "$ref": "#/components/schemas/ExternalSelectActionInitialOption"
           },
           "placeholder": {
             "$ref": "#/components/schemas/PlainTextElement"
@@ -75986,7 +75967,7 @@
           "initial_options": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Option"
+              "$ref": "#/components/schemas/ExternalSelectActionInitialOption"
             }
           },
           "placeholder": {
@@ -76253,7 +76234,7 @@
         "type": "object",
         "properties": {
           "selected_option": {
-            "$ref": "#/components/schemas/ExternalSelectActionSelectedOption"
+            "$ref": "#/components/schemas/ExternalSelectActionInitialOption"
           },
           "initial_option": {
             "$ref": "#/components/schemas/ExternalSelectActionInitialOption"
@@ -76293,13 +76274,13 @@
           "selected_options": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Option"
+              "$ref": "#/components/schemas/ExternalSelectActionInitialOption"
             }
           },
           "initial_options": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Option"
+              "$ref": "#/components/schemas/ExternalSelectActionInitialOption"
             }
           },
           "placeholder": {
@@ -76447,7 +76428,7 @@
             "$ref": "#/components/schemas/RadioButtonsActionSelectedOption"
           },
           "initial_option": {
-            "$ref": "#/components/schemas/RadioButtonsActionInitialOption"
+            "$ref": "#/components/schemas/ExternalSelectActionInitialOption"
           },
           "confirm": {
             "$ref": "#/components/schemas/Confirmation"
@@ -76479,13 +76460,13 @@
           "selected_options": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Option"
+              "$ref": "#/components/schemas/ExternalSelectActionInitialOption"
             }
           },
           "initial_options": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Option"
+              "$ref": "#/components/schemas/ExternalSelectActionInitialOption"
             }
           },
           "confirm": {
@@ -76779,7 +76760,7 @@
             "$ref": "#/components/schemas/ViewOutputClose"
           },
           "submit": {
-            "$ref": "#/components/schemas/ViewOutputSubmit"
+            "$ref": "#/components/schemas/ViewOutputClose"
           },
           "state": {
             "$ref": "#/components/schemas/ViewOutputState"
@@ -77730,7 +77711,7 @@
             "$ref": "#/components/schemas/UpdateResponseAction"
           },
           "view": {
-            "$ref": "#/components/schemas/View7"
+            "$ref": "#/components/schemas/AppHomeOpenedEventView"
           }
         }
       },
@@ -77745,7 +77726,7 @@
             "$ref": "#/components/schemas/PushResponseAction"
           },
           "view": {
-            "$ref": "#/components/schemas/View7"
+            "$ref": "#/components/schemas/AppHomeOpenedEventView"
           }
         }
       },
@@ -81847,7 +81828,7 @@
             "properties": {
               "slack_file": {
                 "description": "The slack file of the image to be displayed.",
-                "$ref": "#/components/schemas/SlackFile"
+                "$ref": "#/components/schemas/EntityArrayItemFieldSlackFile"
               },
               "type": {
                 "$ref": "#/components/schemas/ImageType"
@@ -81894,7 +81875,7 @@
             "properties": {
               "slack_file": {
                 "description": "The slack file of the image to be displayed.",
-                "$ref": "#/components/schemas/SlackFile"
+                "$ref": "#/components/schemas/EntityArrayItemFieldSlackFile"
               },
               "type": {
                 "$ref": "#/components/schemas/ImageType"
@@ -81999,7 +81980,7 @@
             "properties": {
               "slack_file": {
                 "description": "The slack file of the image to be displayed.",
-                "$ref": "#/components/schemas/SlackFile"
+                "$ref": "#/components/schemas/EntityArrayItemFieldSlackFile"
               },
               "type": {
                 "$ref": "#/components/schemas/ImageType"
@@ -94163,7 +94144,17 @@
           "",
           "U00000000"
         ],
-        "type": "string"
+        "type": "string",
+        "x-ms-enum": {
+          "name": "FilesMatchLastEditor",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "",
+              "name": "EnumValue"
+            }
+          ]
+        }
       },
       "FilesMatchNonOwnerEditable": {
         "enum": [
@@ -94205,7 +94196,17 @@
           "",
           "U00000000"
         ],
-        "type": "string"
+        "type": "string",
+        "x-ms-enum": {
+          "name": "FilesMatchUser",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "",
+              "name": "EnumValue"
+            }
+          ]
+        }
       },
       "Attachment6HideBorder": {
         "enum": [
@@ -94422,7 +94423,17 @@
           "",
           "U00000000"
         ],
-        "type": "string"
+        "type": "string",
+        "x-ms-enum": {
+          "name": "DmMpdmUsersWithFileAccess2UserId",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "",
+              "name": "EnumValue"
+            }
+          ]
+        }
       },
       "List4DisplayAsBot": {
         "enum": [
@@ -94730,7 +94741,17 @@
           "",
           "U00000000"
         ],
-        "type": "string"
+        "type": "string",
+        "x-ms-enum": {
+          "name": "Public2ShareUserId",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "",
+              "name": "EnumValue"
+            }
+          ]
+        }
       },
       "MatchTitleBlockApiDecorationAvailable": {
         "enum": [
@@ -94844,14 +94865,34 @@
           "",
           "U00000000"
         ],
-        "type": "string"
+        "type": "string",
+        "x-ms-enum": {
+          "name": "MessagesMatchUser",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "",
+              "name": "EnumValue"
+            }
+          ]
+        }
       },
       "PreviousUser": {
         "enum": [
           "",
           "U00000000"
         ],
-        "type": "string"
+        "type": "string",
+        "x-ms-enum": {
+          "name": "PreviousUser",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "",
+              "name": "EnumValue"
+            }
+          ]
+        }
       },
       "SearchFilesArgumentsHighlight": {
         "description": "Set to \u0060true\u0060 to enable query highlight markers. Defaults to \u0060false\u0060.\n[\u0060search.messages\u0060 Usage info](https://docs.slack.dev/reference/methods/search.messages) for details.",
@@ -98988,6 +99029,10 @@
           "name": "CloseType",
           "modelAsString": false,
           "values": [
+            {
+              "value": "",
+              "name": "EnumValue"
+            },
             {
               "value": "mrkdwn",
               "name": "Mrkdwn"
@@ -106393,7 +106438,7 @@
           "static_options": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Option"
+              "$ref": "#/components/schemas/ExternalSelectActionInitialOption"
             }
           },
           "fetch_options_dynamically": {
@@ -114760,7 +114805,7 @@
           },
           "slack_file": {
             "description": "The slack file of the image to be displayed.",
-            "$ref": "#/components/schemas/SlackFile"
+            "$ref": "#/components/schemas/EntityArrayItemFieldSlackFile"
           }
         }
       },
@@ -115294,7 +115339,7 @@
           },
           "slack_file": {
             "description": "The slack file of the image to be displayed.",
-            "$ref": "#/components/schemas/SlackFile"
+            "$ref": "#/components/schemas/EntityArrayItemFieldSlackFile"
           }
         }
       },
@@ -120478,7 +120523,7 @@
           },
           "slack_file": {
             "description": "The slack file of the image to be displayed.",
-            "$ref": "#/components/schemas/SlackFile"
+            "$ref": "#/components/schemas/EntityArrayItemFieldSlackFile"
           }
         }
       },
@@ -120536,7 +120581,7 @@
           },
           "slack_file": {
             "description": "The slack file of the image to be displayed.",
-            "$ref": "#/components/schemas/SlackFile"
+            "$ref": "#/components/schemas/EntityArrayItemFieldSlackFile"
           }
         }
       },
@@ -120578,7 +120623,7 @@
           },
           "slack_file": {
             "description": "The slack file of the image to be displayed.",
-            "$ref": "#/components/schemas/SlackFile"
+            "$ref": "#/components/schemas/EntityArrayItemFieldSlackFile"
           }
         }
       },
@@ -120636,7 +120681,7 @@
           },
           "slack_file": {
             "description": "The slack file of the image to be displayed.",
-            "$ref": "#/components/schemas/SlackFile"
+            "$ref": "#/components/schemas/EntityArrayItemFieldSlackFile"
           }
         }
       },
@@ -120694,7 +120739,7 @@
           },
           "slack_file": {
             "description": "The slack file of the image to be displayed.",
-            "$ref": "#/components/schemas/SlackFile"
+            "$ref": "#/components/schemas/EntityArrayItemFieldSlackFile"
           }
         }
       },
@@ -120752,7 +120797,7 @@
           },
           "slack_file": {
             "description": "The slack file of the image to be displayed.",
-            "$ref": "#/components/schemas/SlackFile"
+            "$ref": "#/components/schemas/EntityArrayItemFieldSlackFile"
           }
         }
       },
@@ -120810,7 +120855,7 @@
           },
           "slack_file": {
             "description": "The slack file of the image to be displayed.",
-            "$ref": "#/components/schemas/SlackFile"
+            "$ref": "#/components/schemas/EntityArrayItemFieldSlackFile"
           }
         }
       },
@@ -120868,7 +120913,7 @@
           },
           "slack_file": {
             "description": "The slack file of the image to be displayed.",
-            "$ref": "#/components/schemas/SlackFile"
+            "$ref": "#/components/schemas/EntityArrayItemFieldSlackFile"
           }
         }
       },
@@ -120926,7 +120971,7 @@
           },
           "slack_file": {
             "description": "The slack file of the image to be displayed.",
-            "$ref": "#/components/schemas/SlackFile"
+            "$ref": "#/components/schemas/EntityArrayItemFieldSlackFile"
           }
         }
       },
@@ -120984,7 +121029,7 @@
           },
           "slack_file": {
             "description": "The slack file of the image to be displayed.",
-            "$ref": "#/components/schemas/SlackFile"
+            "$ref": "#/components/schemas/EntityArrayItemFieldSlackFile"
           }
         }
       },
@@ -121042,7 +121087,7 @@
           },
           "slack_file": {
             "description": "The slack file of the image to be displayed.",
-            "$ref": "#/components/schemas/SlackFile"
+            "$ref": "#/components/schemas/EntityArrayItemFieldSlackFile"
           }
         }
       },
@@ -121100,7 +121145,7 @@
           },
           "slack_file": {
             "description": "The slack file of the image to be displayed.",
-            "$ref": "#/components/schemas/SlackFile"
+            "$ref": "#/components/schemas/EntityArrayItemFieldSlackFile"
           }
         }
       },
@@ -121158,7 +121203,7 @@
           },
           "slack_file": {
             "description": "The slack file of the image to be displayed.",
-            "$ref": "#/components/schemas/SlackFile"
+            "$ref": "#/components/schemas/EntityArrayItemFieldSlackFile"
           }
         }
       },
@@ -121216,7 +121261,7 @@
           },
           "slack_file": {
             "description": "The slack file of the image to be displayed.",
-            "$ref": "#/components/schemas/SlackFile"
+            "$ref": "#/components/schemas/EntityArrayItemFieldSlackFile"
           }
         }
       },
@@ -121274,7 +121319,7 @@
           },
           "slack_file": {
             "description": "The slack file of the image to be displayed.",
-            "$ref": "#/components/schemas/SlackFile"
+            "$ref": "#/components/schemas/EntityArrayItemFieldSlackFile"
           }
         }
       },
@@ -121332,7 +121377,7 @@
           },
           "slack_file": {
             "description": "The slack file of the image to be displayed.",
-            "$ref": "#/components/schemas/SlackFile"
+            "$ref": "#/components/schemas/EntityArrayItemFieldSlackFile"
           }
         }
       },

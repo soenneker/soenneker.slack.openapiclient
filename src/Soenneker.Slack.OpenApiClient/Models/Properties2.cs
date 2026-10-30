@@ -17,8 +17,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("posting_restricted_to") is { } nullNodePostingRestrictedTo && nullNodePostingRestrictedTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostingRestrictedTo = null;
-            if (parseNode.GetChildNode("threads_restricted_to") is { } nullNodeThreadsRestrictedTo && nullNodeThreadsRestrictedTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreadsRestrictedTo = null;
+            if (parseNode.GetChildNode("posting_restricted_to") is null) { _explicitNullValuePostingRestrictedTo = default!; _explicitNullProperties?.Remove("posting_restricted_to"); }
+            else if (parseNode.GetChildNode("posting_restricted_to") is { } nullNodePostingRestrictedTo && nullNodePostingRestrictedTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostingRestrictedTo = null;
+            if (parseNode.GetChildNode("threads_restricted_to") is null) { _explicitNullValueThreadsRestrictedTo = default!; _explicitNullProperties?.Remove("threads_restricted_to"); }
+            else if (parseNode.GetChildNode("threads_restricted_to") is { } nullNodeThreadsRestrictedTo && nullNodeThreadsRestrictedTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreadsRestrictedTo = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The posting_restricted_to property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.RestrictedTo? PostingRestrictedTo { get => _explicitNullValuePostingRestrictedTo; set { _explicitNullValuePostingRestrictedTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("posting_restricted_to"); else _explicitNullProperties?.Remove("posting_restricted_to"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.RestrictedTo? PostingRestrictedTo { get => _explicitNullValuePostingRestrictedTo; set { _explicitNullValuePostingRestrictedTo = value; AdditionalData?.Remove("posting_restricted_to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("posting_restricted_to"); else _explicitNullProperties?.Remove("posting_restricted_to"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.RestrictedTo? _explicitNullValuePostingRestrictedTo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.RestrictedTo PostingRestrictedTo { get => _explicitNullValuePostingRestrictedTo; set { _explicitNullValuePostingRestrictedTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("posting_restricted_to"); else _explicitNullProperties?.Remove("posting_restricted_to"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.RestrictedTo PostingRestrictedTo { get => _explicitNullValuePostingRestrictedTo; set { _explicitNullValuePostingRestrictedTo = value; AdditionalData?.Remove("posting_restricted_to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("posting_restricted_to"); else _explicitNullProperties?.Remove("posting_restricted_to"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.RestrictedTo _explicitNullValuePostingRestrictedTo = default!;
 #endif
         /// <summary>The threads_restricted_to property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.RestrictedTo? ThreadsRestrictedTo { get => _explicitNullValueThreadsRestrictedTo; set { _explicitNullValueThreadsRestrictedTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads_restricted_to"); else _explicitNullProperties?.Remove("threads_restricted_to"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.RestrictedTo? ThreadsRestrictedTo { get => _explicitNullValueThreadsRestrictedTo; set { _explicitNullValueThreadsRestrictedTo = value; AdditionalData?.Remove("threads_restricted_to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads_restricted_to"); else _explicitNullProperties?.Remove("threads_restricted_to"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.RestrictedTo? _explicitNullValueThreadsRestrictedTo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.RestrictedTo ThreadsRestrictedTo { get => _explicitNullValueThreadsRestrictedTo; set { _explicitNullValueThreadsRestrictedTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads_restricted_to"); else _explicitNullProperties?.Remove("threads_restricted_to"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.RestrictedTo ThreadsRestrictedTo { get => _explicitNullValueThreadsRestrictedTo; set { _explicitNullValueThreadsRestrictedTo = value; AdditionalData?.Remove("threads_restricted_to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads_restricted_to"); else _explicitNullProperties?.Remove("threads_restricted_to"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.RestrictedTo _explicitNullValueThreadsRestrictedTo = default!;
 #endif
         /// <summary>

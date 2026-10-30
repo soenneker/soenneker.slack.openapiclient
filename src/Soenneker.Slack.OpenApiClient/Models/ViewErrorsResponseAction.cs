@@ -17,8 +17,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("errors") is { } nullNodeErrors && nullNodeErrors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Errors = null;
-            if (parseNode.GetChildNode("response_action") is { } nullNodeResponseAction && nullNodeResponseAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResponseAction = null;
+            if (parseNode.GetChildNode("errors") is null) { _explicitNullValueErrors = default!; _explicitNullProperties?.Remove("errors"); }
+            else if (parseNode.GetChildNode("errors") is { } nullNodeErrors && nullNodeErrors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Errors = null;
+            if (parseNode.GetChildNode("response_action") is null) { _explicitNullValueResponseAction = default!; _explicitNullProperties?.Remove("response_action"); }
+            else if (parseNode.GetChildNode("response_action") is { } nullNodeResponseAction && nullNodeResponseAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResponseAction = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The errors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ViewErrorsResponseActionErrorsProperty? Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.ViewErrorsResponseActionErrorsProperty? Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; AdditionalData?.Remove("errors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.ViewErrorsResponseActionErrorsProperty? _explicitNullValueErrors = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ViewErrorsResponseActionErrorsProperty Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.ViewErrorsResponseActionErrorsProperty Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; AdditionalData?.Remove("errors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.ViewErrorsResponseActionErrorsProperty _explicitNullValueErrors = default!;
 #endif
         /// <summary>The response_action property</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.ErrorsResponseAction? ResponseAction { get => _explicitNullValueResponseAction; set { _explicitNullValueResponseAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response_action"); else _explicitNullProperties?.Remove("response_action"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.ErrorsResponseAction? ResponseAction { get => _explicitNullValueResponseAction; set { _explicitNullValueResponseAction = value; AdditionalData?.Remove("response_action"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response_action"); else _explicitNullProperties?.Remove("response_action"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.ErrorsResponseAction? _explicitNullValueResponseAction = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ViewErrorsResponseAction"/> and sets the default values.
@@ -62,7 +64,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "errors", n => { Errors = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ViewErrorsResponseActionErrorsProperty>(global::Soenneker.Slack.OpenApiClient.Models.ViewErrorsResponseActionErrorsProperty.CreateFromDiscriminatorValue); } },
-                { "response_action", n => { ResponseAction = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ErrorsResponseAction>(); } },
+                { "response_action", n => { var parsed = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ErrorsResponseAction>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueResponseAction = default; _explicitNullProperties?.Remove("response_action"); AdditionalData["response_action"] = unknown; } else { ResponseAction = parsed; AdditionalData.Remove("response_action"); } } },
             };
         }
         /// <summary>

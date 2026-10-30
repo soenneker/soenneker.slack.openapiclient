@@ -17,8 +17,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("trigger_id") is { } nullNodeTriggerId && nullNodeTriggerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerId = null;
-            if (parseNode.GetChildNode("view") is { } nullNodeView && nullNodeView.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) View = null;
+            if (parseNode.GetChildNode("trigger_id") is null) { _explicitNullValueTriggerId = default!; _explicitNullProperties?.Remove("trigger_id"); }
+            else if (parseNode.GetChildNode("trigger_id") is { } nullNodeTriggerId && nullNodeTriggerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerId = null;
+            if (parseNode.GetChildNode("view") is null) { _explicitNullValueView = default!; _explicitNullProperties?.Remove("view"); }
+            else if (parseNode.GetChildNode("view") is { } nullNodeView && nullNodeView.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) View = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,22 +28,22 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>An access token originating from a user interaction in the Slack client.One of `trigger_id` or `interactivity_pointer` is required to interact with views.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TriggerId { get => _explicitNullValueTriggerId; set { _explicitNullValueTriggerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trigger_id"); else _explicitNullProperties?.Remove("trigger_id"); } }
+        public string? TriggerId { get => _explicitNullValueTriggerId; set { _explicitNullValueTriggerId = value; AdditionalData?.Remove("trigger_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trigger_id"); else _explicitNullProperties?.Remove("trigger_id"); } }
         private string? _explicitNullValueTriggerId = default!;
 #nullable restore
 #else
-        public string TriggerId { get => _explicitNullValueTriggerId; set { _explicitNullValueTriggerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trigger_id"); else _explicitNullProperties?.Remove("trigger_id"); } }
+        public string TriggerId { get => _explicitNullValueTriggerId; set { _explicitNullValueTriggerId = value; AdditionalData?.Remove("trigger_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trigger_id"); else _explicitNullProperties?.Remove("trigger_id"); } }
         private string _explicitNullValueTriggerId = default!;
 #endif
         /// <summary>A [view payload](https://docs.slack.dev/surfaces/modals).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.View7? View { get => _explicitNullValueView; set { _explicitNullValueView = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view"); else _explicitNullProperties?.Remove("view"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.View7? _explicitNullValueView = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.AppHomeOpenedEventView? View { get => _explicitNullValueView; set { _explicitNullValueView = value; AdditionalData?.Remove("view"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view"); else _explicitNullProperties?.Remove("view"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AppHomeOpenedEventView? _explicitNullValueView = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.View7 View { get => _explicitNullValueView; set { _explicitNullValueView = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view"); else _explicitNullProperties?.Remove("view"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.View7 _explicitNullValueView = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.AppHomeOpenedEventView View { get => _explicitNullValueView; set { _explicitNullValueView = value; AdditionalData?.Remove("view"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view"); else _explicitNullProperties?.Remove("view"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AppHomeOpenedEventView _explicitNullValueView = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ViewsOpenArgumentsMember1"/> and sets the default values.
@@ -69,7 +71,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "trigger_id", n => { TriggerId = n.GetStringValue(); } },
-                { "view", n => { View = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View7>(global::Soenneker.Slack.OpenApiClient.Models.View7.CreateFromDiscriminatorValue); } },
+                { "view", n => { View = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AppHomeOpenedEventView>(global::Soenneker.Slack.OpenApiClient.Models.AppHomeOpenedEventView.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -80,7 +82,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("trigger_id", TriggerId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View7>("view", View);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AppHomeOpenedEventView>("view", View);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -65,6 +65,8 @@ return result;
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawFields) { var fields = new global::System.Collections.Generic.Dictionary<string, global::System.Action<IParseNode>>(); foreach (var entry in rawFields.GetValue()) fields[entry.Key] = _ => { }; return fields; }
+
             if(ReactionsRemoveArgumentsMember1 != null || ReactionsRemoveArgumentsMember2 != null || ReactionsRemoveArgumentsMember3 != null)
             {
                 return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(ReactionsRemoveArgumentsMember1, ReactionsRemoveArgumentsMember2, ReactionsRemoveArgumentsMember3);
@@ -79,9 +81,13 @@ return result;
         {
             if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
             if (ReactionsRemoveArgumentsMember1 == null && ReactionsRemoveArgumentsMember2 == null && ReactionsRemoveArgumentsMember3 == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
-            if (ReactionsRemoveArgumentsMember1 != null && ReactionsRemoveArgumentsMember2 == null && ReactionsRemoveArgumentsMember3 == null) { if (ReactionsRemoveArgumentsMember1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ReactionsRemoveArgumentsMember1); return; }
-            if (ReactionsRemoveArgumentsMember2 != null && ReactionsRemoveArgumentsMember1 == null && ReactionsRemoveArgumentsMember3 == null) { if (ReactionsRemoveArgumentsMember2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ReactionsRemoveArgumentsMember2); return; }
-            if (ReactionsRemoveArgumentsMember3 != null && ReactionsRemoveArgumentsMember1 == null && ReactionsRemoveArgumentsMember2 == null) { if (ReactionsRemoveArgumentsMember3 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ReactionsRemoveArgumentsMember3); return; }
+            int selectedUnionBranches = 0;
+            if (ReactionsRemoveArgumentsMember1 != null) selectedUnionBranches++;
+            if (ReactionsRemoveArgumentsMember2 != null) selectedUnionBranches++;
+            if (ReactionsRemoveArgumentsMember3 != null) selectedUnionBranches++;
+            if (ReactionsRemoveArgumentsMember1 != null && selectedUnionBranches == 1) { if (ReactionsRemoveArgumentsMember1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ReactionsRemoveArgumentsMember1); return; }
+            if (ReactionsRemoveArgumentsMember2 != null && selectedUnionBranches == 1) { if (ReactionsRemoveArgumentsMember2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ReactionsRemoveArgumentsMember2); return; }
+            if (ReactionsRemoveArgumentsMember3 != null && selectedUnionBranches == 1) { if (ReactionsRemoveArgumentsMember3 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ReactionsRemoveArgumentsMember3); return; }
 
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ReactionsRemoveArgumentsMember1>(null, ReactionsRemoveArgumentsMember1, ReactionsRemoveArgumentsMember2, ReactionsRemoveArgumentsMember3);

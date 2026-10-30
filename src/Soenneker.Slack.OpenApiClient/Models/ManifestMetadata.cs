@@ -17,17 +17,19 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("major_version") is { } nullNodeMajorVersion && nullNodeMajorVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MajorVersion = null;
-            if (parseNode.GetChildNode("minor_version") is { } nullNodeMinorVersion && nullNodeMinorVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinorVersion = null;
+            if (parseNode.GetChildNode("major_version") is null) { _explicitNullValueMajorVersion = default!; _explicitNullProperties?.Remove("major_version"); }
+            else if (parseNode.GetChildNode("major_version") is { } nullNodeMajorVersion && nullNodeMajorVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MajorVersion = null;
+            if (parseNode.GetChildNode("minor_version") is null) { _explicitNullValueMinorVersion = default!; _explicitNullProperties?.Remove("minor_version"); }
+            else if (parseNode.GetChildNode("minor_version") is { } nullNodeMinorVersion && nullNodeMinorVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinorVersion = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An integer that specifies the major version of the manifest schema to target.Only `1` and `2` are supported. Defaults to `1`.</summary>
-        public double? MajorVersion { get => _explicitNullValueMajorVersion; set { _explicitNullValueMajorVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("major_version"); else _explicitNullProperties?.Remove("major_version"); } }
+        public double? MajorVersion { get => _explicitNullValueMajorVersion; set { _explicitNullValueMajorVersion = value; AdditionalData?.Remove("major_version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("major_version"); else _explicitNullProperties?.Remove("major_version"); } }
         private double? _explicitNullValueMajorVersion = default!;
         /// <summary>An integer that specifies the minor version of the manifest schema to target.</summary>
-        public double? MinorVersion { get => _explicitNullValueMinorVersion; set { _explicitNullValueMinorVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minor_version"); else _explicitNullProperties?.Remove("minor_version"); } }
+        public double? MinorVersion { get => _explicitNullValueMinorVersion; set { _explicitNullValueMinorVersion = value; AdditionalData?.Remove("minor_version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minor_version"); else _explicitNullProperties?.Remove("minor_version"); } }
         private double? _explicitNullValueMinorVersion = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ManifestMetadata"/> and sets the default values.

@@ -17,7 +17,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("target_team") is { } nullNodeTargetTeam && nullNodeTargetTeam.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetTeam = null;
+            if (parseNode.GetChildNode("target_team") is null) { _explicitNullValueTargetTeam = default!; _explicitNullProperties?.Remove("target_team"); }
+            else if (parseNode.GetChildNode("target_team") is { } nullNodeTargetTeam && nullNodeTargetTeam.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetTeam = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The team or enterprise id of the other party.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TargetTeam { get => _explicitNullValueTargetTeam; set { _explicitNullValueTargetTeam = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_team"); else _explicitNullProperties?.Remove("target_team"); } }
+        public string? TargetTeam { get => _explicitNullValueTargetTeam; set { _explicitNullValueTargetTeam = value; AdditionalData?.Remove("target_team"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_team"); else _explicitNullProperties?.Remove("target_team"); } }
         private string? _explicitNullValueTargetTeam = default!;
 #nullable restore
 #else
-        public string TargetTeam { get => _explicitNullValueTargetTeam; set { _explicitNullValueTargetTeam = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_team"); else _explicitNullProperties?.Remove("target_team"); } }
+        public string TargetTeam { get => _explicitNullValueTargetTeam; set { _explicitNullValueTargetTeam = value; AdditionalData?.Remove("target_team"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_team"); else _explicitNullProperties?.Remove("target_team"); } }
         private string _explicitNullValueTargetTeam = default!;
 #endif
         /// <summary>

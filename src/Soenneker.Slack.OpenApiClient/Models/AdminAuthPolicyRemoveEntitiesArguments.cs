@@ -17,10 +17,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("entity_ids") is { } nullNodeEntityIds && nullNodeEntityIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EntityIds = null;
-            if (parseNode.GetChildNode("entity_type") is { } nullNodeEntityType && nullNodeEntityType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EntityType = null;
-            if (parseNode.GetChildNode("policy_name") is { } nullNodePolicyName && nullNodePolicyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PolicyName = null;
-            if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
+            if (parseNode.GetChildNode("entity_ids") is null) { _explicitNullValueEntityIds = default!; _explicitNullProperties?.Remove("entity_ids"); }
+            else if (parseNode.GetChildNode("entity_ids") is { } nullNodeEntityIds && nullNodeEntityIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EntityIds = null;
+            if (parseNode.GetChildNode("entity_type") is null) { _explicitNullValueEntityType = default!; _explicitNullProperties?.Remove("entity_type"); }
+            else if (parseNode.GetChildNode("entity_type") is { } nullNodeEntityType && nullNodeEntityType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EntityType = null;
+            if (parseNode.GetChildNode("policy_name") is null) { _explicitNullValuePolicyName = default!; _explicitNullProperties?.Remove("policy_name"); }
+            else if (parseNode.GetChildNode("policy_name") is { } nullNodePolicyName && nullNodePolicyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PolicyName = null;
+            if (parseNode.GetChildNode("token") is null) { _explicitNullValueToken = default!; _explicitNullProperties?.Remove("token"); }
+            else if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,27 +32,27 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Encoded IDs of the entities interacting with.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? EntityIds { get => _explicitNullValueEntityIds; set { _explicitNullValueEntityIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_ids"); else _explicitNullProperties?.Remove("entity_ids"); } }
+        public List<string>? EntityIds { get => _explicitNullValueEntityIds; set { _explicitNullValueEntityIds = value; AdditionalData?.Remove("entity_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_ids"); else _explicitNullProperties?.Remove("entity_ids"); } }
         private List<string>? _explicitNullValueEntityIds = default!;
 #nullable restore
 #else
-        public List<string> EntityIds { get => _explicitNullValueEntityIds; set { _explicitNullValueEntityIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_ids"); else _explicitNullProperties?.Remove("entity_ids"); } }
+        public List<string> EntityIds { get => _explicitNullValueEntityIds; set { _explicitNullValueEntityIds = value; AdditionalData?.Remove("entity_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_ids"); else _explicitNullProperties?.Remove("entity_ids"); } }
         private List<string> _explicitNullValueEntityIds = default!;
 #endif
         /// <summary>The type of entity interacting with the policy.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.UserEntityType? EntityType { get => _explicitNullValueEntityType; set { _explicitNullValueEntityType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_type"); else _explicitNullProperties?.Remove("entity_type"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.UserEntityType? EntityType { get => _explicitNullValueEntityType; set { _explicitNullValueEntityType = value; AdditionalData?.Remove("entity_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_type"); else _explicitNullProperties?.Remove("entity_type"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.UserEntityType? _explicitNullValueEntityType = default!;
         /// <summary>The name of the policy.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.EmailPasswordPolicyName? PolicyName { get => _explicitNullValuePolicyName; set { _explicitNullValuePolicyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policy_name"); else _explicitNullProperties?.Remove("policy_name"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.EmailPasswordPolicyName? PolicyName { get => _explicitNullValuePolicyName; set { _explicitNullValuePolicyName = value; AdditionalData?.Remove("policy_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policy_name"); else _explicitNullProperties?.Remove("policy_name"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.EmailPasswordPolicyName? _explicitNullValuePolicyName = default!;
         /// <summary>Overridable authentication token bearing required scopes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; AdditionalData?.Remove("token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
         private string? _explicitNullValueToken = default!;
 #nullable restore
 #else
-        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; AdditionalData?.Remove("token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
         private string _explicitNullValueToken = default!;
 #endif
         /// <summary>
@@ -77,8 +81,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "entity_ids", n => { EntityIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "entity_type", n => { EntityType = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.UserEntityType>(); } },
-                { "policy_name", n => { PolicyName = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.EmailPasswordPolicyName>(); } },
+                { "entity_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.UserEntityType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueEntityType = default; _explicitNullProperties?.Remove("entity_type"); AdditionalData["entity_type"] = unknown; } else { EntityType = parsed; AdditionalData.Remove("entity_type"); } } },
+                { "policy_name", n => { var parsed = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.EmailPasswordPolicyName>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePolicyName = default; _explicitNullProperties?.Remove("policy_name"); AdditionalData["policy_name"] = unknown; } else { PolicyName = parsed; AdditionalData.Remove("policy_name"); } } },
                 { "token", n => { Token = n.GetStringValue(); } },
             };
         }

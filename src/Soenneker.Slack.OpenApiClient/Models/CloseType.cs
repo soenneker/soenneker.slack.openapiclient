@@ -8,6 +8,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
     public enum CloseType
     #pragma warning restore CS1591
     {
+        [EnumMember(Value = "")]
+        EmptyString,
+
         [EnumMember(Value = "mrkdwn")]
         #pragma warning disable CS1591
         Mrkdwn,

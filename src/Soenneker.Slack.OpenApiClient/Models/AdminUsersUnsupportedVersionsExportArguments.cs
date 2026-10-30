@@ -17,27 +17,30 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("date_end_of_support") is { } nullNodeDateEndOfSupport && nullNodeDateEndOfSupport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateEndOfSupport = null;
-            if (parseNode.GetChildNode("date_sessions_started") is { } nullNodeDateSessionsStarted && nullNodeDateSessionsStarted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateSessionsStarted = null;
-            if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
+            if (parseNode.GetChildNode("date_end_of_support") is null) { _explicitNullValueDateEndOfSupport = default!; _explicitNullProperties?.Remove("date_end_of_support"); }
+            else if (parseNode.GetChildNode("date_end_of_support") is { } nullNodeDateEndOfSupport && nullNodeDateEndOfSupport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateEndOfSupport = null;
+            if (parseNode.GetChildNode("date_sessions_started") is null) { _explicitNullValueDateSessionsStarted = default!; _explicitNullProperties?.Remove("date_sessions_started"); }
+            else if (parseNode.GetChildNode("date_sessions_started") is { } nullNodeDateSessionsStarted && nullNodeDateSessionsStarted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateSessionsStarted = null;
+            if (parseNode.GetChildNode("token") is null) { _explicitNullValueToken = default!; _explicitNullProperties?.Remove("token"); }
+            else if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Unix timestamp of the date of past or upcoming end of support cycles.If not provided will include all announced end of support cycles. Defaults to `0`.</summary>
-        public double? DateEndOfSupport { get => _explicitNullValueDateEndOfSupport; set { _explicitNullValueDateEndOfSupport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_end_of_support"); else _explicitNullProperties?.Remove("date_end_of_support"); } }
+        public double? DateEndOfSupport { get => _explicitNullValueDateEndOfSupport; set { _explicitNullValueDateEndOfSupport = value; AdditionalData?.Remove("date_end_of_support"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_end_of_support"); else _explicitNullProperties?.Remove("date_end_of_support"); } }
         private double? _explicitNullValueDateEndOfSupport = default!;
         /// <summary>Unix timestamp of a date to start looking for user sessions.If not provided will start six months ago.</summary>
-        public double? DateSessionsStarted { get => _explicitNullValueDateSessionsStarted; set { _explicitNullValueDateSessionsStarted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_sessions_started"); else _explicitNullProperties?.Remove("date_sessions_started"); } }
+        public double? DateSessionsStarted { get => _explicitNullValueDateSessionsStarted; set { _explicitNullValueDateSessionsStarted = value; AdditionalData?.Remove("date_sessions_started"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_sessions_started"); else _explicitNullProperties?.Remove("date_sessions_started"); } }
         private double? _explicitNullValueDateSessionsStarted = default!;
         /// <summary>Overridable authentication token bearing required scopes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; AdditionalData?.Remove("token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
         private string? _explicitNullValueToken = default!;
 #nullable restore
 #else
-        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; AdditionalData?.Remove("token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
         private string _explicitNullValueToken = default!;
 #endif
         /// <summary>

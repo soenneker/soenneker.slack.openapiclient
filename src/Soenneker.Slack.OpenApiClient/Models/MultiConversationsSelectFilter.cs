@@ -18,27 +18,30 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("exclude_bot_users") is { } nullNodeExcludeBotUsers && nullNodeExcludeBotUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExcludeBotUsers = null;
-            if (parseNode.GetChildNode("exclude_external_shared_channels") is { } nullNodeExcludeExternalSharedChannels && nullNodeExcludeExternalSharedChannels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExcludeExternalSharedChannels = null;
-            if (parseNode.GetChildNode("include") is { } nullNodeInclude && nullNodeInclude.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Include = null;
+            if (parseNode.GetChildNode("exclude_bot_users") is null) { _explicitNullValueExcludeBotUsers = default!; _explicitNullProperties?.Remove("exclude_bot_users"); }
+            else if (parseNode.GetChildNode("exclude_bot_users") is { } nullNodeExcludeBotUsers && nullNodeExcludeBotUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExcludeBotUsers = null;
+            if (parseNode.GetChildNode("exclude_external_shared_channels") is null) { _explicitNullValueExcludeExternalSharedChannels = default!; _explicitNullProperties?.Remove("exclude_external_shared_channels"); }
+            else if (parseNode.GetChildNode("exclude_external_shared_channels") is { } nullNodeExcludeExternalSharedChannels && nullNodeExcludeExternalSharedChannels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExcludeExternalSharedChannels = null;
+            if (parseNode.GetChildNode("include") is null) { _explicitNullValueInclude = default!; _explicitNullProperties?.Remove("include"); }
+            else if (parseNode.GetChildNode("include") is { } nullNodeInclude && nullNodeInclude.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Include = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The exclude_bot_users property</summary>
-        public bool? ExcludeBotUsers { get => _explicitNullValueExcludeBotUsers; set { _explicitNullValueExcludeBotUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exclude_bot_users"); else _explicitNullProperties?.Remove("exclude_bot_users"); } }
+        public bool? ExcludeBotUsers { get => _explicitNullValueExcludeBotUsers; set { _explicitNullValueExcludeBotUsers = value; AdditionalData?.Remove("exclude_bot_users"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exclude_bot_users"); else _explicitNullProperties?.Remove("exclude_bot_users"); } }
         private bool? _explicitNullValueExcludeBotUsers = default!;
         /// <summary>The exclude_external_shared_channels property</summary>
-        public bool? ExcludeExternalSharedChannels { get => _explicitNullValueExcludeExternalSharedChannels; set { _explicitNullValueExcludeExternalSharedChannels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exclude_external_shared_channels"); else _explicitNullProperties?.Remove("exclude_external_shared_channels"); } }
+        public bool? ExcludeExternalSharedChannels { get => _explicitNullValueExcludeExternalSharedChannels; set { _explicitNullValueExcludeExternalSharedChannels = value; AdditionalData?.Remove("exclude_external_shared_channels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exclude_external_shared_channels"); else _explicitNullProperties?.Remove("exclude_external_shared_channels"); } }
         private bool? _explicitNullValueExcludeExternalSharedChannels = default!;
         /// <summary>The include property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MultiConversationsSelectFilterIncludeItem?>? Include { get => _explicitNullValueInclude; set { _explicitNullValueInclude = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("include"); else _explicitNullProperties?.Remove("include"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.MultiConversationsSelectFilterIncludeItem?>? Include { get => _explicitNullValueInclude; set { _explicitNullValueInclude = value; AdditionalData?.Remove("include"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("include"); else _explicitNullProperties?.Remove("include"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.MultiConversationsSelectFilterIncludeItem?>? _explicitNullValueInclude = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.MultiConversationsSelectFilterIncludeItem?> Include { get => _explicitNullValueInclude; set { _explicitNullValueInclude = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("include"); else _explicitNullProperties?.Remove("include"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.MultiConversationsSelectFilterIncludeItem?> Include { get => _explicitNullValueInclude; set { _explicitNullValueInclude = value; AdditionalData?.Remove("include"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("include"); else _explicitNullProperties?.Remove("include"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.MultiConversationsSelectFilterIncludeItem?> _explicitNullValueInclude = default!;
 #endif
         /// <summary>

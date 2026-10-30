@@ -17,19 +17,32 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("app_id") is { } nullNodeAppId && nullNodeAppId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppId = null;
-            if (parseNode.GetChildNode("component_id") is { } nullNodeComponentId && nullNodeComponentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ComponentId = null;
-            if (parseNode.GetChildNode("component_type") is { } nullNodeComponentType && nullNodeComponentType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ComponentType = null;
-            if (parseNode.GetChildNode("cursor") is { } nullNodeCursor && nullNodeCursor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cursor = null;
-            if (parseNode.GetChildNode("limit") is { } nullNodeLimit && nullNodeLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Limit = null;
-            if (parseNode.GetChildNode("log_event_type") is { } nullNodeLogEventType && nullNodeLogEventType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LogEventType = null;
-            if (parseNode.GetChildNode("max_date_created") is { } nullNodeMaxDateCreated && nullNodeMaxDateCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxDateCreated = null;
-            if (parseNode.GetChildNode("min_date_created") is { } nullNodeMinDateCreated && nullNodeMinDateCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinDateCreated = null;
-            if (parseNode.GetChildNode("min_log_level") is { } nullNodeMinLogLevel && nullNodeMinLogLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinLogLevel = null;
-            if (parseNode.GetChildNode("sort_direction") is { } nullNodeSortDirection && nullNodeSortDirection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SortDirection = null;
-            if (parseNode.GetChildNode("source") is { } nullNodeSource && nullNodeSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Source = null;
-            if (parseNode.GetChildNode("team_id") is { } nullNodeTeamId && nullNodeTeamId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamId = null;
-            if (parseNode.GetChildNode("trace_id") is { } nullNodeTraceId && nullNodeTraceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TraceId = null;
+            if (parseNode.GetChildNode("app_id") is null) { _explicitNullValueAppId = default!; _explicitNullProperties?.Remove("app_id"); }
+            else if (parseNode.GetChildNode("app_id") is { } nullNodeAppId && nullNodeAppId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppId = null;
+            if (parseNode.GetChildNode("component_id") is null) { _explicitNullValueComponentId = default!; _explicitNullProperties?.Remove("component_id"); }
+            else if (parseNode.GetChildNode("component_id") is { } nullNodeComponentId && nullNodeComponentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ComponentId = null;
+            if (parseNode.GetChildNode("component_type") is null) { _explicitNullValueComponentType = default!; _explicitNullProperties?.Remove("component_type"); }
+            else if (parseNode.GetChildNode("component_type") is { } nullNodeComponentType && nullNodeComponentType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ComponentType = null;
+            if (parseNode.GetChildNode("cursor") is null) { _explicitNullValueCursor = default!; _explicitNullProperties?.Remove("cursor"); }
+            else if (parseNode.GetChildNode("cursor") is { } nullNodeCursor && nullNodeCursor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cursor = null;
+            if (parseNode.GetChildNode("limit") is null) { _explicitNullValueLimit = default!; _explicitNullProperties?.Remove("limit"); }
+            else if (parseNode.GetChildNode("limit") is { } nullNodeLimit && nullNodeLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Limit = null;
+            if (parseNode.GetChildNode("log_event_type") is null) { _explicitNullValueLogEventType = default!; _explicitNullProperties?.Remove("log_event_type"); }
+            else if (parseNode.GetChildNode("log_event_type") is { } nullNodeLogEventType && nullNodeLogEventType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LogEventType = null;
+            if (parseNode.GetChildNode("max_date_created") is null) { _explicitNullValueMaxDateCreated = default!; _explicitNullProperties?.Remove("max_date_created"); }
+            else if (parseNode.GetChildNode("max_date_created") is { } nullNodeMaxDateCreated && nullNodeMaxDateCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxDateCreated = null;
+            if (parseNode.GetChildNode("min_date_created") is null) { _explicitNullValueMinDateCreated = default!; _explicitNullProperties?.Remove("min_date_created"); }
+            else if (parseNode.GetChildNode("min_date_created") is { } nullNodeMinDateCreated && nullNodeMinDateCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinDateCreated = null;
+            if (parseNode.GetChildNode("min_log_level") is null) { _explicitNullValueMinLogLevel = default!; _explicitNullProperties?.Remove("min_log_level"); }
+            else if (parseNode.GetChildNode("min_log_level") is { } nullNodeMinLogLevel && nullNodeMinLogLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinLogLevel = null;
+            if (parseNode.GetChildNode("sort_direction") is null) { _explicitNullValueSortDirection = default!; _explicitNullProperties?.Remove("sort_direction"); }
+            else if (parseNode.GetChildNode("sort_direction") is { } nullNodeSortDirection && nullNodeSortDirection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SortDirection = null;
+            if (parseNode.GetChildNode("source") is null) { _explicitNullValueSource = default!; _explicitNullProperties?.Remove("source"); }
+            else if (parseNode.GetChildNode("source") is { } nullNodeSource && nullNodeSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Source = null;
+            if (parseNode.GetChildNode("team_id") is null) { _explicitNullValueTeamId = default!; _explicitNullProperties?.Remove("team_id"); }
+            else if (parseNode.GetChildNode("team_id") is { } nullNodeTeamId && nullNodeTeamId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamId = null;
+            if (parseNode.GetChildNode("trace_id") is null) { _explicitNullValueTraceId = default!; _explicitNullProperties?.Remove("trace_id"); }
+            else if (parseNode.GetChildNode("trace_id") is { } nullNodeTraceId && nullNodeTraceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TraceId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -37,82 +50,82 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The ID of the app.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AppId { get => _explicitNullValueAppId; set { _explicitNullValueAppId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_id"); else _explicitNullProperties?.Remove("app_id"); } }
+        public string? AppId { get => _explicitNullValueAppId; set { _explicitNullValueAppId = value; AdditionalData?.Remove("app_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_id"); else _explicitNullProperties?.Remove("app_id"); } }
         private string? _explicitNullValueAppId = default!;
 #nullable restore
 #else
-        public string AppId { get => _explicitNullValueAppId; set { _explicitNullValueAppId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_id"); else _explicitNullProperties?.Remove("app_id"); } }
+        public string AppId { get => _explicitNullValueAppId; set { _explicitNullValueAppId = value; AdditionalData?.Remove("app_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_id"); else _explicitNullProperties?.Remove("app_id"); } }
         private string _explicitNullValueAppId = default!;
 #endif
         /// <summary>The component ID of log events to be returned. Will be `FnXXXXXX` for functions,and `WfXXXXXX` for worflows.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ComponentId { get => _explicitNullValueComponentId; set { _explicitNullValueComponentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("component_id"); else _explicitNullProperties?.Remove("component_id"); } }
+        public string? ComponentId { get => _explicitNullValueComponentId; set { _explicitNullValueComponentId = value; AdditionalData?.Remove("component_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("component_id"); else _explicitNullProperties?.Remove("component_id"); } }
         private string? _explicitNullValueComponentId = default!;
 #nullable restore
 #else
-        public string ComponentId { get => _explicitNullValueComponentId; set { _explicitNullValueComponentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("component_id"); else _explicitNullProperties?.Remove("component_id"); } }
+        public string ComponentId { get => _explicitNullValueComponentId; set { _explicitNullValueComponentId = value; AdditionalData?.Remove("component_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("component_id"); else _explicitNullProperties?.Remove("component_id"); } }
         private string _explicitNullValueComponentId = default!;
 #endif
         /// <summary>The component type of log events to be returned.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminAppsActivitiesListArgumentsComponentType? ComponentType { get => _explicitNullValueComponentType; set { _explicitNullValueComponentType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("component_type"); else _explicitNullProperties?.Remove("component_type"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminAppsActivitiesListArgumentsComponentType? ComponentType { get => _explicitNullValueComponentType; set { _explicitNullValueComponentType = value; AdditionalData?.Remove("component_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("component_type"); else _explicitNullProperties?.Remove("component_type"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.AdminAppsActivitiesListArgumentsComponentType? _explicitNullValueComponentType = default!;
         /// <summary>Paginate through collections of data by setting the `cursor` parameter to a `next_cursor` attributereturned by a previous request&apos;s `response_metadata`.Default value fetches the first &quot;page&quot; of the collection.[pagination](https://docs.slack.dev/apis/web-api/pagination) for more detail.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Cursor { get => _explicitNullValueCursor; set { _explicitNullValueCursor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cursor"); else _explicitNullProperties?.Remove("cursor"); } }
+        public string? Cursor { get => _explicitNullValueCursor; set { _explicitNullValueCursor = value; AdditionalData?.Remove("cursor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cursor"); else _explicitNullProperties?.Remove("cursor"); } }
         private string? _explicitNullValueCursor = default!;
 #nullable restore
 #else
-        public string Cursor { get => _explicitNullValueCursor; set { _explicitNullValueCursor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cursor"); else _explicitNullProperties?.Remove("cursor"); } }
+        public string Cursor { get => _explicitNullValueCursor; set { _explicitNullValueCursor = value; AdditionalData?.Remove("cursor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cursor"); else _explicitNullProperties?.Remove("cursor"); } }
         private string _explicitNullValueCursor = default!;
 #endif
         /// <summary>The maximum number of items to return. Fewer than the requested number of items may be returned,even if the end of the list hasn&apos;t been reached. Must be an integer with a max value of `999`. Default is `100`.</summary>
-        public double? Limit { get => _explicitNullValueLimit; set { _explicitNullValueLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limit"); else _explicitNullProperties?.Remove("limit"); } }
+        public double? Limit { get => _explicitNullValueLimit; set { _explicitNullValueLimit = value; AdditionalData?.Remove("limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limit"); else _explicitNullProperties?.Remove("limit"); } }
         private double? _explicitNullValueLimit = default!;
         /// <summary>The event type of log events to be returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LogEventType { get => _explicitNullValueLogEventType; set { _explicitNullValueLogEventType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("log_event_type"); else _explicitNullProperties?.Remove("log_event_type"); } }
+        public string? LogEventType { get => _explicitNullValueLogEventType; set { _explicitNullValueLogEventType = value; AdditionalData?.Remove("log_event_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("log_event_type"); else _explicitNullProperties?.Remove("log_event_type"); } }
         private string? _explicitNullValueLogEventType = default!;
 #nullable restore
 #else
-        public string LogEventType { get => _explicitNullValueLogEventType; set { _explicitNullValueLogEventType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("log_event_type"); else _explicitNullProperties?.Remove("log_event_type"); } }
+        public string LogEventType { get => _explicitNullValueLogEventType; set { _explicitNullValueLogEventType = value; AdditionalData?.Remove("log_event_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("log_event_type"); else _explicitNullProperties?.Remove("log_event_type"); } }
         private string _explicitNullValueLogEventType = default!;
 #endif
         /// <summary>The latest timestamp of the log to retrieve (epoch microseconds).</summary>
-        public double? MaxDateCreated { get => _explicitNullValueMaxDateCreated; set { _explicitNullValueMaxDateCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_date_created"); else _explicitNullProperties?.Remove("max_date_created"); } }
+        public double? MaxDateCreated { get => _explicitNullValueMaxDateCreated; set { _explicitNullValueMaxDateCreated = value; AdditionalData?.Remove("max_date_created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_date_created"); else _explicitNullProperties?.Remove("max_date_created"); } }
         private double? _explicitNullValueMaxDateCreated = default!;
         /// <summary>The earliest timestamp of the log to retrieve (epoch microseconds).</summary>
-        public double? MinDateCreated { get => _explicitNullValueMinDateCreated; set { _explicitNullValueMinDateCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("min_date_created"); else _explicitNullProperties?.Remove("min_date_created"); } }
+        public double? MinDateCreated { get => _explicitNullValueMinDateCreated; set { _explicitNullValueMinDateCreated = value; AdditionalData?.Remove("min_date_created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("min_date_created"); else _explicitNullProperties?.Remove("min_date_created"); } }
         private double? _explicitNullValueMinDateCreated = default!;
         /// <summary>The minimum log level of the log events to be returned. Defaults to `info`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminAppsActivitiesListArgumentsMinLogLevel? MinLogLevel { get => _explicitNullValueMinLogLevel; set { _explicitNullValueMinLogLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("min_log_level"); else _explicitNullProperties?.Remove("min_log_level"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminAppsActivitiesListArgumentsMinLogLevel? MinLogLevel { get => _explicitNullValueMinLogLevel; set { _explicitNullValueMinLogLevel = value; AdditionalData?.Remove("min_log_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("min_log_level"); else _explicitNullProperties?.Remove("min_log_level"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.AdminAppsActivitiesListArgumentsMinLogLevel? _explicitNullValueMinLogLevel = default!;
         /// <summary>The direction you want the data sorted by (always by timestamp).</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminAppsActivitiesListArgumentsSortDirection? SortDirection { get => _explicitNullValueSortDirection; set { _explicitNullValueSortDirection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sort_direction"); else _explicitNullProperties?.Remove("sort_direction"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminAppsActivitiesListArgumentsSortDirection? SortDirection { get => _explicitNullValueSortDirection; set { _explicitNullValueSortDirection = value; AdditionalData?.Remove("sort_direction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sort_direction"); else _explicitNullProperties?.Remove("sort_direction"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.AdminAppsActivitiesListArgumentsSortDirection? _explicitNullValueSortDirection = default!;
         /// <summary>The source of log events to be returned.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminAppsActivitiesListArgumentsSource? Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminAppsActivitiesListArgumentsSource? Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; AdditionalData?.Remove("source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.AdminAppsActivitiesListArgumentsSource? _explicitNullValueSource = default!;
         /// <summary>The encoded team ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TeamId { get => _explicitNullValueTeamId; set { _explicitNullValueTeamId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_id"); else _explicitNullProperties?.Remove("team_id"); } }
+        public string? TeamId { get => _explicitNullValueTeamId; set { _explicitNullValueTeamId = value; AdditionalData?.Remove("team_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_id"); else _explicitNullProperties?.Remove("team_id"); } }
         private string? _explicitNullValueTeamId = default!;
 #nullable restore
 #else
-        public string TeamId { get => _explicitNullValueTeamId; set { _explicitNullValueTeamId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_id"); else _explicitNullProperties?.Remove("team_id"); } }
+        public string TeamId { get => _explicitNullValueTeamId; set { _explicitNullValueTeamId = value; AdditionalData?.Remove("team_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_id"); else _explicitNullProperties?.Remove("team_id"); } }
         private string _explicitNullValueTeamId = default!;
 #endif
         /// <summary>The trace ID of log events to be returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TraceId { get => _explicitNullValueTraceId; set { _explicitNullValueTraceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trace_id"); else _explicitNullProperties?.Remove("trace_id"); } }
+        public string? TraceId { get => _explicitNullValueTraceId; set { _explicitNullValueTraceId = value; AdditionalData?.Remove("trace_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trace_id"); else _explicitNullProperties?.Remove("trace_id"); } }
         private string? _explicitNullValueTraceId = default!;
 #nullable restore
 #else
-        public string TraceId { get => _explicitNullValueTraceId; set { _explicitNullValueTraceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trace_id"); else _explicitNullProperties?.Remove("trace_id"); } }
+        public string TraceId { get => _explicitNullValueTraceId; set { _explicitNullValueTraceId = value; AdditionalData?.Remove("trace_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trace_id"); else _explicitNullProperties?.Remove("trace_id"); } }
         private string _explicitNullValueTraceId = default!;
 #endif
         /// <summary>
@@ -142,15 +155,15 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "app_id", n => { AppId = n.GetStringValue(); } },
                 { "component_id", n => { ComponentId = n.GetStringValue(); } },
-                { "component_type", n => { ComponentType = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminAppsActivitiesListArgumentsComponentType>(); } },
+                { "component_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminAppsActivitiesListArgumentsComponentType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueComponentType = default; _explicitNullProperties?.Remove("component_type"); AdditionalData["component_type"] = unknown; } else { ComponentType = parsed; AdditionalData.Remove("component_type"); } } },
                 { "cursor", n => { Cursor = n.GetStringValue(); } },
                 { "limit", n => { Limit = n.GetDoubleValue(); } },
                 { "log_event_type", n => { LogEventType = n.GetStringValue(); } },
                 { "max_date_created", n => { MaxDateCreated = n.GetDoubleValue(); } },
                 { "min_date_created", n => { MinDateCreated = n.GetDoubleValue(); } },
-                { "min_log_level", n => { MinLogLevel = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminAppsActivitiesListArgumentsMinLogLevel>(); } },
-                { "sort_direction", n => { SortDirection = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminAppsActivitiesListArgumentsSortDirection>(); } },
-                { "source", n => { Source = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminAppsActivitiesListArgumentsSource>(); } },
+                { "min_log_level", n => { var parsed = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminAppsActivitiesListArgumentsMinLogLevel>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMinLogLevel = default; _explicitNullProperties?.Remove("min_log_level"); AdditionalData["min_log_level"] = unknown; } else { MinLogLevel = parsed; AdditionalData.Remove("min_log_level"); } } },
+                { "sort_direction", n => { var parsed = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminAppsActivitiesListArgumentsSortDirection>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSortDirection = default; _explicitNullProperties?.Remove("sort_direction"); AdditionalData["sort_direction"] = unknown; } else { SortDirection = parsed; AdditionalData.Remove("sort_direction"); } } },
+                { "source", n => { var parsed = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminAppsActivitiesListArgumentsSource>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSource = default; _explicitNullProperties?.Remove("source"); AdditionalData["source"] = unknown; } else { Source = parsed; AdditionalData.Remove("source"); } } },
                 { "team_id", n => { TeamId = n.GetStringValue(); } },
                 { "trace_id", n => { TraceId = n.GetStringValue(); } },
             };

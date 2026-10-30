@@ -17,27 +17,30 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("prevent_creation") is { } nullNodePreventCreation && nullNodePreventCreation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreventCreation = null;
-            if (parseNode.GetChildNode("return_im") is { } nullNodeReturnIm && nullNodeReturnIm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReturnIm = null;
-            if (parseNode.GetChildNode("users") is { } nullNodeUsers && nullNodeUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Users = null;
+            if (parseNode.GetChildNode("prevent_creation") is null) { _explicitNullValuePreventCreation = default!; _explicitNullProperties?.Remove("prevent_creation"); }
+            else if (parseNode.GetChildNode("prevent_creation") is { } nullNodePreventCreation && nullNodePreventCreation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreventCreation = null;
+            if (parseNode.GetChildNode("return_im") is null) { _explicitNullValueReturnIm = default!; _explicitNullProperties?.Remove("return_im"); }
+            else if (parseNode.GetChildNode("return_im") is { } nullNodeReturnIm && nullNodeReturnIm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReturnIm = null;
+            if (parseNode.GetChildNode("users") is null) { _explicitNullValueUsers = default!; _explicitNullProperties?.Remove("users"); }
+            else if (parseNode.GetChildNode("users") is { } nullNodeUsers && nullNodeUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Users = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Do not create a direct message or multi-person direct message.This is used to see if there is an existing dm or mpdm.</summary>
-        public bool? PreventCreation { get => _explicitNullValuePreventCreation; set { _explicitNullValuePreventCreation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prevent_creation"); else _explicitNullProperties?.Remove("prevent_creation"); } }
+        public bool? PreventCreation { get => _explicitNullValuePreventCreation; set { _explicitNullValuePreventCreation = value; AdditionalData?.Remove("prevent_creation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prevent_creation"); else _explicitNullProperties?.Remove("prevent_creation"); } }
         private bool? _explicitNullValuePreventCreation = default!;
         /// <summary>Indicates you want the full IM channel definition in the response.</summary>
-        public bool? ReturnIm { get => _explicitNullValueReturnIm; set { _explicitNullValueReturnIm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_im"); else _explicitNullProperties?.Remove("return_im"); } }
+        public bool? ReturnIm { get => _explicitNullValueReturnIm; set { _explicitNullValueReturnIm = value; AdditionalData?.Remove("return_im"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_im"); else _explicitNullProperties?.Remove("return_im"); } }
         private bool? _explicitNullValueReturnIm = default!;
         /// <summary>A comma separated list of user IDs. Up to 1000 users may be listed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Users { get => _explicitNullValueUsers; set { _explicitNullValueUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users"); else _explicitNullProperties?.Remove("users"); } }
+        public string? Users { get => _explicitNullValueUsers; set { _explicitNullValueUsers = value; AdditionalData?.Remove("users"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users"); else _explicitNullProperties?.Remove("users"); } }
         private string? _explicitNullValueUsers = default!;
 #nullable restore
 #else
-        public string Users { get => _explicitNullValueUsers; set { _explicitNullValueUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users"); else _explicitNullProperties?.Remove("users"); } }
+        public string Users { get => _explicitNullValueUsers; set { _explicitNullValueUsers = value; AdditionalData?.Remove("users"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users"); else _explicitNullProperties?.Remove("users"); } }
         private string _explicitNullValueUsers = default!;
 #endif
         /// <summary>

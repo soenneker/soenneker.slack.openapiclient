@@ -17,9 +17,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("calendar_field") is { } nullNodeCalendarField && nullNodeCalendarField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CalendarField = null;
-            if (parseNode.GetChildNode("cover_field") is { } nullNodeCoverField && nullNodeCoverField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CoverField = null;
-            if (parseNode.GetChildNode("cover_fit") is { } nullNodeCoverFit && nullNodeCoverFit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CoverFit = null;
+            if (parseNode.GetChildNode("calendar_field") is null) { _explicitNullValueCalendarField = default!; _explicitNullProperties?.Remove("calendar_field"); }
+            else if (parseNode.GetChildNode("calendar_field") is { } nullNodeCalendarField && nullNodeCalendarField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CalendarField = null;
+            if (parseNode.GetChildNode("cover_field") is null) { _explicitNullValueCoverField = default!; _explicitNullProperties?.Remove("cover_field"); }
+            else if (parseNode.GetChildNode("cover_field") is { } nullNodeCoverField && nullNodeCoverField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CoverField = null;
+            if (parseNode.GetChildNode("cover_fit") is null) { _explicitNullValueCoverFit = default!; _explicitNullProperties?.Remove("cover_fit"); }
+            else if (parseNode.GetChildNode("cover_fit") is { } nullNodeCoverFit && nullNodeCoverFit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CoverFit = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The calendar_field property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CalendarField { get => _explicitNullValueCalendarField; set { _explicitNullValueCalendarField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calendar_field"); else _explicitNullProperties?.Remove("calendar_field"); } }
+        public string? CalendarField { get => _explicitNullValueCalendarField; set { _explicitNullValueCalendarField = value; AdditionalData?.Remove("calendar_field"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calendar_field"); else _explicitNullProperties?.Remove("calendar_field"); } }
         private string? _explicitNullValueCalendarField = default!;
 #nullable restore
 #else
-        public string CalendarField { get => _explicitNullValueCalendarField; set { _explicitNullValueCalendarField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calendar_field"); else _explicitNullProperties?.Remove("calendar_field"); } }
+        public string CalendarField { get => _explicitNullValueCalendarField; set { _explicitNullValueCalendarField = value; AdditionalData?.Remove("calendar_field"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calendar_field"); else _explicitNullProperties?.Remove("calendar_field"); } }
         private string _explicitNullValueCalendarField = default!;
 #endif
         /// <summary>The cover_field property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CoverField { get => _explicitNullValueCoverField; set { _explicitNullValueCoverField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cover_field"); else _explicitNullProperties?.Remove("cover_field"); } }
+        public string? CoverField { get => _explicitNullValueCoverField; set { _explicitNullValueCoverField = value; AdditionalData?.Remove("cover_field"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cover_field"); else _explicitNullProperties?.Remove("cover_field"); } }
         private string? _explicitNullValueCoverField = default!;
 #nullable restore
 #else
-        public string CoverField { get => _explicitNullValueCoverField; set { _explicitNullValueCoverField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cover_field"); else _explicitNullProperties?.Remove("cover_field"); } }
+        public string CoverField { get => _explicitNullValueCoverField; set { _explicitNullValueCoverField = value; AdditionalData?.Remove("cover_field"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cover_field"); else _explicitNullProperties?.Remove("cover_field"); } }
         private string _explicitNullValueCoverField = default!;
 #endif
         /// <summary>The cover_fit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CoverFit { get => _explicitNullValueCoverFit; set { _explicitNullValueCoverFit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cover_fit"); else _explicitNullProperties?.Remove("cover_fit"); } }
+        public string? CoverFit { get => _explicitNullValueCoverFit; set { _explicitNullValueCoverFit = value; AdditionalData?.Remove("cover_fit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cover_fit"); else _explicitNullProperties?.Remove("cover_fit"); } }
         private string? _explicitNullValueCoverFit = default!;
 #nullable restore
 #else
-        public string CoverFit { get => _explicitNullValueCoverFit; set { _explicitNullValueCoverFit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cover_fit"); else _explicitNullProperties?.Remove("cover_fit"); } }
+        public string CoverFit { get => _explicitNullValueCoverFit; set { _explicitNullValueCoverFit = value; AdditionalData?.Remove("cover_fit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cover_fit"); else _explicitNullProperties?.Remove("cover_fit"); } }
         private string _explicitNullValueCoverFit = default!;
 #endif
         /// <summary>

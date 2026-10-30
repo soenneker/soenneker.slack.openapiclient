@@ -17,10 +17,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("app_id") is { } nullNodeAppId && nullNodeAppId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppId = null;
-            if (parseNode.GetChildNode("domain_restrictions") is { } nullNodeDomainRestrictions && nullNodeDomainRestrictions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DomainRestrictions = null;
-            if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
-            if (parseNode.GetChildNode("workflow_auth_strategy") is { } nullNodeWorkflowAuthStrategy && nullNodeWorkflowAuthStrategy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowAuthStrategy = null;
+            if (parseNode.GetChildNode("app_id") is null) { _explicitNullValueAppId = default!; _explicitNullProperties?.Remove("app_id"); }
+            else if (parseNode.GetChildNode("app_id") is { } nullNodeAppId && nullNodeAppId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppId = null;
+            if (parseNode.GetChildNode("domain_restrictions") is null) { _explicitNullValueDomainRestrictions = default!; _explicitNullProperties?.Remove("domain_restrictions"); }
+            else if (parseNode.GetChildNode("domain_restrictions") is { } nullNodeDomainRestrictions && nullNodeDomainRestrictions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DomainRestrictions = null;
+            if (parseNode.GetChildNode("token") is null) { _explicitNullValueToken = default!; _explicitNullProperties?.Remove("token"); }
+            else if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
+            if (parseNode.GetChildNode("workflow_auth_strategy") is null) { _explicitNullValueWorkflowAuthStrategy = default!; _explicitNullProperties?.Remove("workflow_auth_strategy"); }
+            else if (parseNode.GetChildNode("workflow_auth_strategy") is { } nullNodeWorkflowAuthStrategy && nullNodeWorkflowAuthStrategy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowAuthStrategy = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,35 +32,35 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The ID of the app.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AppId { get => _explicitNullValueAppId; set { _explicitNullValueAppId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_id"); else _explicitNullProperties?.Remove("app_id"); } }
+        public string? AppId { get => _explicitNullValueAppId; set { _explicitNullValueAppId = value; AdditionalData?.Remove("app_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_id"); else _explicitNullProperties?.Remove("app_id"); } }
         private string? _explicitNullValueAppId = default!;
 #nullable restore
 #else
-        public string AppId { get => _explicitNullValueAppId; set { _explicitNullValueAppId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_id"); else _explicitNullProperties?.Remove("app_id"); } }
+        public string AppId { get => _explicitNullValueAppId; set { _explicitNullValueAppId = value; AdditionalData?.Remove("app_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_id"); else _explicitNullProperties?.Remove("app_id"); } }
         private string _explicitNullValueAppId = default!;
 #endif
         /// <summary>Domain restrictions for the app.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminAppsConfigSetArgumentsDomainRestrictions? DomainRestrictions { get => _explicitNullValueDomainRestrictions; set { _explicitNullValueDomainRestrictions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain_restrictions"); else _explicitNullProperties?.Remove("domain_restrictions"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminAppsConfigSetArgumentsDomainRestrictions? DomainRestrictions { get => _explicitNullValueDomainRestrictions; set { _explicitNullValueDomainRestrictions = value; AdditionalData?.Remove("domain_restrictions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain_restrictions"); else _explicitNullProperties?.Remove("domain_restrictions"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.AdminAppsConfigSetArgumentsDomainRestrictions? _explicitNullValueDomainRestrictions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminAppsConfigSetArgumentsDomainRestrictions DomainRestrictions { get => _explicitNullValueDomainRestrictions; set { _explicitNullValueDomainRestrictions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain_restrictions"); else _explicitNullProperties?.Remove("domain_restrictions"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminAppsConfigSetArgumentsDomainRestrictions DomainRestrictions { get => _explicitNullValueDomainRestrictions; set { _explicitNullValueDomainRestrictions = value; AdditionalData?.Remove("domain_restrictions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain_restrictions"); else _explicitNullProperties?.Remove("domain_restrictions"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.AdminAppsConfigSetArgumentsDomainRestrictions _explicitNullValueDomainRestrictions = default!;
 #endif
         /// <summary>Overridable authentication token bearing required scopes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; AdditionalData?.Remove("token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
         private string? _explicitNullValueToken = default!;
 #nullable restore
 #else
-        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; AdditionalData?.Remove("token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
         private string _explicitNullValueToken = default!;
 #endif
         /// <summary>The workflow auth permission.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminAppsConfigSetArgumentsWorkflowAuthStrategy? WorkflowAuthStrategy { get => _explicitNullValueWorkflowAuthStrategy; set { _explicitNullValueWorkflowAuthStrategy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_auth_strategy"); else _explicitNullProperties?.Remove("workflow_auth_strategy"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminAppsConfigSetArgumentsWorkflowAuthStrategy? WorkflowAuthStrategy { get => _explicitNullValueWorkflowAuthStrategy; set { _explicitNullValueWorkflowAuthStrategy = value; AdditionalData?.Remove("workflow_auth_strategy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_auth_strategy"); else _explicitNullProperties?.Remove("workflow_auth_strategy"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.AdminAppsConfigSetArgumentsWorkflowAuthStrategy? _explicitNullValueWorkflowAuthStrategy = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminAppsConfigSetArguments"/> and sets the default values.
@@ -86,7 +90,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "app_id", n => { AppId = n.GetStringValue(); } },
                 { "domain_restrictions", n => { DomainRestrictions = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminAppsConfigSetArgumentsDomainRestrictions>(global::Soenneker.Slack.OpenApiClient.Models.AdminAppsConfigSetArgumentsDomainRestrictions.CreateFromDiscriminatorValue); } },
                 { "token", n => { Token = n.GetStringValue(); } },
-                { "workflow_auth_strategy", n => { WorkflowAuthStrategy = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminAppsConfigSetArgumentsWorkflowAuthStrategy>(); } },
+                { "workflow_auth_strategy", n => { var parsed = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminAppsConfigSetArgumentsWorkflowAuthStrategy>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueWorkflowAuthStrategy = default; _explicitNullProperties?.Remove("workflow_auth_strategy"); AdditionalData["workflow_auth_strategy"] = unknown; } else { WorkflowAuthStrategy = parsed; AdditionalData.Remove("workflow_auth_strategy"); } } },
             };
         }
         /// <summary>

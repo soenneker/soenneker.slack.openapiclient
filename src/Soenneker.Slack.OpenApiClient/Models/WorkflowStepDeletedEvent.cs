@@ -17,11 +17,16 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("event_ts") is { } nullNodeEventTs && nullNodeEventTs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventTs = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
-            if (parseNode.GetChildNode("workflow_draft_configuration") is { } nullNodeWorkflowDraftConfiguration && nullNodeWorkflowDraftConfiguration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowDraftConfiguration = null;
-            if (parseNode.GetChildNode("workflow_id") is { } nullNodeWorkflowId && nullNodeWorkflowId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowId = null;
-            if (parseNode.GetChildNode("workflow_published_configuration") is { } nullNodeWorkflowPublishedConfiguration && nullNodeWorkflowPublishedConfiguration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowPublishedConfiguration = null;
+            if (parseNode.GetChildNode("event_ts") is null) { _explicitNullValueEventTs = default!; _explicitNullProperties?.Remove("event_ts"); }
+            else if (parseNode.GetChildNode("event_ts") is { } nullNodeEventTs && nullNodeEventTs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventTs = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("workflow_draft_configuration") is null) { _explicitNullValueWorkflowDraftConfiguration = default!; _explicitNullProperties?.Remove("workflow_draft_configuration"); }
+            else if (parseNode.GetChildNode("workflow_draft_configuration") is { } nullNodeWorkflowDraftConfiguration && nullNodeWorkflowDraftConfiguration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowDraftConfiguration = null;
+            if (parseNode.GetChildNode("workflow_id") is null) { _explicitNullValueWorkflowId = default!; _explicitNullProperties?.Remove("workflow_id"); }
+            else if (parseNode.GetChildNode("workflow_id") is { } nullNodeWorkflowId && nullNodeWorkflowId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowId = null;
+            if (parseNode.GetChildNode("workflow_published_configuration") is null) { _explicitNullValueWorkflowPublishedConfiguration = default!; _explicitNullProperties?.Remove("workflow_published_configuration"); }
+            else if (parseNode.GetChildNode("workflow_published_configuration") is { } nullNodeWorkflowPublishedConfiguration && nullNodeWorkflowPublishedConfiguration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowPublishedConfiguration = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,44 +34,44 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The event_ts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventTs { get => _explicitNullValueEventTs; set { _explicitNullValueEventTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_ts"); else _explicitNullProperties?.Remove("event_ts"); } }
+        public string? EventTs { get => _explicitNullValueEventTs; set { _explicitNullValueEventTs = value; AdditionalData?.Remove("event_ts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_ts"); else _explicitNullProperties?.Remove("event_ts"); } }
         private string? _explicitNullValueEventTs = default!;
 #nullable restore
 #else
-        public string EventTs { get => _explicitNullValueEventTs; set { _explicitNullValueEventTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_ts"); else _explicitNullProperties?.Remove("event_ts"); } }
+        public string EventTs { get => _explicitNullValueEventTs; set { _explicitNullValueEventTs = value; AdditionalData?.Remove("event_ts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_ts"); else _explicitNullProperties?.Remove("event_ts"); } }
         private string _explicitNullValueEventTs = default!;
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepDeletedType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepDeletedType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepDeletedType? _explicitNullValueType = default!;
         /// <summary>The workflow_draft_configuration property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepDeletedEventWorkflowDraftConfiguration? WorkflowDraftConfiguration { get => _explicitNullValueWorkflowDraftConfiguration; set { _explicitNullValueWorkflowDraftConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_draft_configuration"); else _explicitNullProperties?.Remove("workflow_draft_configuration"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepDeletedEventWorkflowDraftConfiguration? WorkflowDraftConfiguration { get => _explicitNullValueWorkflowDraftConfiguration; set { _explicitNullValueWorkflowDraftConfiguration = value; AdditionalData?.Remove("workflow_draft_configuration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_draft_configuration"); else _explicitNullProperties?.Remove("workflow_draft_configuration"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepDeletedEventWorkflowDraftConfiguration? _explicitNullValueWorkflowDraftConfiguration = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepDeletedEventWorkflowDraftConfiguration WorkflowDraftConfiguration { get => _explicitNullValueWorkflowDraftConfiguration; set { _explicitNullValueWorkflowDraftConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_draft_configuration"); else _explicitNullProperties?.Remove("workflow_draft_configuration"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepDeletedEventWorkflowDraftConfiguration WorkflowDraftConfiguration { get => _explicitNullValueWorkflowDraftConfiguration; set { _explicitNullValueWorkflowDraftConfiguration = value; AdditionalData?.Remove("workflow_draft_configuration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_draft_configuration"); else _explicitNullProperties?.Remove("workflow_draft_configuration"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepDeletedEventWorkflowDraftConfiguration _explicitNullValueWorkflowDraftConfiguration = default!;
 #endif
         /// <summary>The workflow_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkflowId { get => _explicitNullValueWorkflowId; set { _explicitNullValueWorkflowId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_id"); else _explicitNullProperties?.Remove("workflow_id"); } }
+        public string? WorkflowId { get => _explicitNullValueWorkflowId; set { _explicitNullValueWorkflowId = value; AdditionalData?.Remove("workflow_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_id"); else _explicitNullProperties?.Remove("workflow_id"); } }
         private string? _explicitNullValueWorkflowId = default!;
 #nullable restore
 #else
-        public string WorkflowId { get => _explicitNullValueWorkflowId; set { _explicitNullValueWorkflowId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_id"); else _explicitNullProperties?.Remove("workflow_id"); } }
+        public string WorkflowId { get => _explicitNullValueWorkflowId; set { _explicitNullValueWorkflowId = value; AdditionalData?.Remove("workflow_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_id"); else _explicitNullProperties?.Remove("workflow_id"); } }
         private string _explicitNullValueWorkflowId = default!;
 #endif
         /// <summary>The workflow_published_configuration property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepDeletedEventWorkflowPublishedConfiguration? WorkflowPublishedConfiguration { get => _explicitNullValueWorkflowPublishedConfiguration; set { _explicitNullValueWorkflowPublishedConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_published_configuration"); else _explicitNullProperties?.Remove("workflow_published_configuration"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepDeletedEventWorkflowPublishedConfiguration? WorkflowPublishedConfiguration { get => _explicitNullValueWorkflowPublishedConfiguration; set { _explicitNullValueWorkflowPublishedConfiguration = value; AdditionalData?.Remove("workflow_published_configuration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_published_configuration"); else _explicitNullProperties?.Remove("workflow_published_configuration"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepDeletedEventWorkflowPublishedConfiguration? _explicitNullValueWorkflowPublishedConfiguration = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepDeletedEventWorkflowPublishedConfiguration WorkflowPublishedConfiguration { get => _explicitNullValueWorkflowPublishedConfiguration; set { _explicitNullValueWorkflowPublishedConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_published_configuration"); else _explicitNullProperties?.Remove("workflow_published_configuration"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepDeletedEventWorkflowPublishedConfiguration WorkflowPublishedConfiguration { get => _explicitNullValueWorkflowPublishedConfiguration; set { _explicitNullValueWorkflowPublishedConfiguration = value; AdditionalData?.Remove("workflow_published_configuration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_published_configuration"); else _explicitNullProperties?.Remove("workflow_published_configuration"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepDeletedEventWorkflowPublishedConfiguration _explicitNullValueWorkflowPublishedConfiguration = default!;
 #endif
         /// <summary>
@@ -95,7 +100,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "event_ts", n => { EventTs = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepDeletedType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepDeletedType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
                 { "workflow_draft_configuration", n => { WorkflowDraftConfiguration = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepDeletedEventWorkflowDraftConfiguration>(global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepDeletedEventWorkflowDraftConfiguration.CreateFromDiscriminatorValue); } },
                 { "workflow_id", n => { WorkflowId = n.GetStringValue(); } },
                 { "workflow_published_configuration", n => { WorkflowPublishedConfiguration = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepDeletedEventWorkflowPublishedConfiguration>(global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepDeletedEventWorkflowPublishedConfiguration.CreateFromDiscriminatorValue); } },

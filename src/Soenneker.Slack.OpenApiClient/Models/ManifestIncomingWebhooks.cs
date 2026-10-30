@@ -17,13 +17,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("incoming_webhooks_enabled") is { } nullNodeIncomingWebhooksEnabled && nullNodeIncomingWebhooksEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncomingWebhooksEnabled = null;
+            if (parseNode.GetChildNode("incoming_webhooks_enabled") is null) { _explicitNullValueIncomingWebhooksEnabled = default!; _explicitNullProperties?.Remove("incoming_webhooks_enabled"); }
+            else if (parseNode.GetChildNode("incoming_webhooks_enabled") is { } nullNodeIncomingWebhooksEnabled && nullNodeIncomingWebhooksEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncomingWebhooksEnabled = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether to [enable Incoming Webhooks](https://docs.slack.dev/messaging/sending-messages-using-incoming-webhooks) for your application or not.</summary>
-        public bool? IncomingWebhooksEnabled { get => _explicitNullValueIncomingWebhooksEnabled; set { _explicitNullValueIncomingWebhooksEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incoming_webhooks_enabled"); else _explicitNullProperties?.Remove("incoming_webhooks_enabled"); } }
+        public bool? IncomingWebhooksEnabled { get => _explicitNullValueIncomingWebhooksEnabled; set { _explicitNullValueIncomingWebhooksEnabled = value; AdditionalData?.Remove("incoming_webhooks_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incoming_webhooks_enabled"); else _explicitNullProperties?.Remove("incoming_webhooks_enabled"); } }
         private bool? _explicitNullValueIncomingWebhooksEnabled = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ManifestIncomingWebhooks"/> and sets the default values.

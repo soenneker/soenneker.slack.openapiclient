@@ -17,8 +17,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("overflow_actions") is { } nullNodeOverflowActions && nullNodeOverflowActions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverflowActions = null;
-            if (parseNode.GetChildNode("primary_actions") is { } nullNodePrimaryActions && nullNodePrimaryActions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryActions = null;
+            if (parseNode.GetChildNode("overflow_actions") is null) { _explicitNullValueOverflowActions = default!; _explicitNullProperties?.Remove("overflow_actions"); }
+            else if (parseNode.GetChildNode("overflow_actions") is { } nullNodeOverflowActions && nullNodeOverflowActions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverflowActions = null;
+            if (parseNode.GetChildNode("primary_actions") is null) { _explicitNullValuePrimaryActions = default!; _explicitNullProperties?.Remove("primary_actions"); }
+            else if (parseNode.GetChildNode("primary_actions") is { } nullNodePrimaryActions && nullNodePrimaryActions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryActions = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The overflow_actions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.EntityActionButton>? OverflowActions { get => _explicitNullValueOverflowActions; set { _explicitNullValueOverflowActions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overflow_actions"); else _explicitNullProperties?.Remove("overflow_actions"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.EntityActionButton>? OverflowActions { get => _explicitNullValueOverflowActions; set { _explicitNullValueOverflowActions = value; AdditionalData?.Remove("overflow_actions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overflow_actions"); else _explicitNullProperties?.Remove("overflow_actions"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.EntityActionButton>? _explicitNullValueOverflowActions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.EntityActionButton> OverflowActions { get => _explicitNullValueOverflowActions; set { _explicitNullValueOverflowActions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overflow_actions"); else _explicitNullProperties?.Remove("overflow_actions"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.EntityActionButton> OverflowActions { get => _explicitNullValueOverflowActions; set { _explicitNullValueOverflowActions = value; AdditionalData?.Remove("overflow_actions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overflow_actions"); else _explicitNullProperties?.Remove("overflow_actions"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.EntityActionButton> _explicitNullValueOverflowActions = default!;
 #endif
         /// <summary>The primary_actions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.EntityActionButton>? PrimaryActions { get => _explicitNullValuePrimaryActions; set { _explicitNullValuePrimaryActions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_actions"); else _explicitNullProperties?.Remove("primary_actions"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.EntityActionButton>? PrimaryActions { get => _explicitNullValuePrimaryActions; set { _explicitNullValuePrimaryActions = value; AdditionalData?.Remove("primary_actions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_actions"); else _explicitNullProperties?.Remove("primary_actions"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.EntityActionButton>? _explicitNullValuePrimaryActions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.EntityActionButton> PrimaryActions { get => _explicitNullValuePrimaryActions; set { _explicitNullValuePrimaryActions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_actions"); else _explicitNullProperties?.Remove("primary_actions"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.EntityActionButton> PrimaryActions { get => _explicitNullValuePrimaryActions; set { _explicitNullValuePrimaryActions = value; AdditionalData?.Remove("primary_actions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_actions"); else _explicitNullProperties?.Remove("primary_actions"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.EntityActionButton> _explicitNullValuePrimaryActions = default!;
 #endif
         /// <summary>

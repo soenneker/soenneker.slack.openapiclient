@@ -17,9 +17,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("display_alias") is { } nullNodeDisplayAlias && nullNodeDisplayAlias.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayAlias = null;
-            if (parseNode.GetChildNode("display_url") is { } nullNodeDisplayUrl && nullNodeDisplayUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayUrl = null;
-            if (parseNode.GetChildNode("emoji_name") is { } nullNodeEmojiName && nullNodeEmojiName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmojiName = null;
+            if (parseNode.GetChildNode("display_alias") is null) { _explicitNullValueDisplayAlias = default!; _explicitNullProperties?.Remove("display_alias"); }
+            else if (parseNode.GetChildNode("display_alias") is { } nullNodeDisplayAlias && nullNodeDisplayAlias.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayAlias = null;
+            if (parseNode.GetChildNode("display_url") is null) { _explicitNullValueDisplayUrl = default!; _explicitNullProperties?.Remove("display_url"); }
+            else if (parseNode.GetChildNode("display_url") is { } nullNodeDisplayUrl && nullNodeDisplayUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayUrl = null;
+            if (parseNode.GetChildNode("emoji_name") is null) { _explicitNullValueEmojiName = default!; _explicitNullProperties?.Remove("emoji_name"); }
+            else if (parseNode.GetChildNode("emoji_name") is { } nullNodeEmojiName && nullNodeEmojiName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmojiName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The display_alias property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisplayAlias { get => _explicitNullValueDisplayAlias; set { _explicitNullValueDisplayAlias = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_alias"); else _explicitNullProperties?.Remove("display_alias"); } }
+        public string? DisplayAlias { get => _explicitNullValueDisplayAlias; set { _explicitNullValueDisplayAlias = value; AdditionalData?.Remove("display_alias"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_alias"); else _explicitNullProperties?.Remove("display_alias"); } }
         private string? _explicitNullValueDisplayAlias = default!;
 #nullable restore
 #else
-        public string DisplayAlias { get => _explicitNullValueDisplayAlias; set { _explicitNullValueDisplayAlias = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_alias"); else _explicitNullProperties?.Remove("display_alias"); } }
+        public string DisplayAlias { get => _explicitNullValueDisplayAlias; set { _explicitNullValueDisplayAlias = value; AdditionalData?.Remove("display_alias"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_alias"); else _explicitNullProperties?.Remove("display_alias"); } }
         private string _explicitNullValueDisplayAlias = default!;
 #endif
         /// <summary>The display_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisplayUrl { get => _explicitNullValueDisplayUrl; set { _explicitNullValueDisplayUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_url"); else _explicitNullProperties?.Remove("display_url"); } }
+        public string? DisplayUrl { get => _explicitNullValueDisplayUrl; set { _explicitNullValueDisplayUrl = value; AdditionalData?.Remove("display_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_url"); else _explicitNullProperties?.Remove("display_url"); } }
         private string? _explicitNullValueDisplayUrl = default!;
 #nullable restore
 #else
-        public string DisplayUrl { get => _explicitNullValueDisplayUrl; set { _explicitNullValueDisplayUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_url"); else _explicitNullProperties?.Remove("display_url"); } }
+        public string DisplayUrl { get => _explicitNullValueDisplayUrl; set { _explicitNullValueDisplayUrl = value; AdditionalData?.Remove("display_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_url"); else _explicitNullProperties?.Remove("display_url"); } }
         private string _explicitNullValueDisplayUrl = default!;
 #endif
         /// <summary>The emoji_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmojiName { get => _explicitNullValueEmojiName; set { _explicitNullValueEmojiName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji_name"); else _explicitNullProperties?.Remove("emoji_name"); } }
+        public string? EmojiName { get => _explicitNullValueEmojiName; set { _explicitNullValueEmojiName = value; AdditionalData?.Remove("emoji_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji_name"); else _explicitNullProperties?.Remove("emoji_name"); } }
         private string? _explicitNullValueEmojiName = default!;
 #nullable restore
 #else
-        public string EmojiName { get => _explicitNullValueEmojiName; set { _explicitNullValueEmojiName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji_name"); else _explicitNullProperties?.Remove("emoji_name"); } }
+        public string EmojiName { get => _explicitNullValueEmojiName; set { _explicitNullValueEmojiName = value; AdditionalData?.Remove("emoji_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji_name"); else _explicitNullProperties?.Remove("emoji_name"); } }
         private string _explicitNullValueEmojiName = default!;
 #endif
         /// <summary>

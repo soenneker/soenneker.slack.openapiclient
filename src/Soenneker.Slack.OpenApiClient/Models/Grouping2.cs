@@ -17,8 +17,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("group_by") is { } nullNodeGroupBy && nullNodeGroupBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupBy = null;
-            if (parseNode.GetChildNode("group_by_column_id") is { } nullNodeGroupByColumnId && nullNodeGroupByColumnId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupByColumnId = null;
+            if (parseNode.GetChildNode("group_by") is null) { _explicitNullValueGroupBy = default!; _explicitNullProperties?.Remove("group_by"); }
+            else if (parseNode.GetChildNode("group_by") is { } nullNodeGroupBy && nullNodeGroupBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupBy = null;
+            if (parseNode.GetChildNode("group_by_column_id") is null) { _explicitNullValueGroupByColumnId = default!; _explicitNullProperties?.Remove("group_by_column_id"); }
+            else if (parseNode.GetChildNode("group_by_column_id") is { } nullNodeGroupByColumnId && nullNodeGroupByColumnId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupByColumnId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The group_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GroupBy { get => _explicitNullValueGroupBy; set { _explicitNullValueGroupBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_by"); else _explicitNullProperties?.Remove("group_by"); } }
+        public string? GroupBy { get => _explicitNullValueGroupBy; set { _explicitNullValueGroupBy = value; AdditionalData?.Remove("group_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_by"); else _explicitNullProperties?.Remove("group_by"); } }
         private string? _explicitNullValueGroupBy = default!;
 #nullable restore
 #else
-        public string GroupBy { get => _explicitNullValueGroupBy; set { _explicitNullValueGroupBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_by"); else _explicitNullProperties?.Remove("group_by"); } }
+        public string GroupBy { get => _explicitNullValueGroupBy; set { _explicitNullValueGroupBy = value; AdditionalData?.Remove("group_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_by"); else _explicitNullProperties?.Remove("group_by"); } }
         private string _explicitNullValueGroupBy = default!;
 #endif
         /// <summary>The group_by_column_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GroupByColumnId { get => _explicitNullValueGroupByColumnId; set { _explicitNullValueGroupByColumnId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_by_column_id"); else _explicitNullProperties?.Remove("group_by_column_id"); } }
+        public string? GroupByColumnId { get => _explicitNullValueGroupByColumnId; set { _explicitNullValueGroupByColumnId = value; AdditionalData?.Remove("group_by_column_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_by_column_id"); else _explicitNullProperties?.Remove("group_by_column_id"); } }
         private string? _explicitNullValueGroupByColumnId = default!;
 #nullable restore
 #else
-        public string GroupByColumnId { get => _explicitNullValueGroupByColumnId; set { _explicitNullValueGroupByColumnId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_by_column_id"); else _explicitNullProperties?.Remove("group_by_column_id"); } }
+        public string GroupByColumnId { get => _explicitNullValueGroupByColumnId; set { _explicitNullValueGroupByColumnId = value; AdditionalData?.Remove("group_by_column_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_by_column_id"); else _explicitNullProperties?.Remove("group_by_column_id"); } }
         private string _explicitNullValueGroupByColumnId = default!;
 #endif
         /// <summary>

@@ -56,6 +56,8 @@ return result;
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawFields) { var fields = new global::System.Collections.Generic.Dictionary<string, global::System.Action<IParseNode>>(); foreach (var entry in rawFields.GetValue()) fields[entry.Key] = _ => { }; return fields; }
+
             if(AdminConversationsCreateArgumentsMember1 != null || AdminConversationsCreateArgumentsMember2 != null)
             {
                 return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(AdminConversationsCreateArgumentsMember1, AdminConversationsCreateArgumentsMember2);
@@ -70,8 +72,11 @@ return result;
         {
             if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
             if (AdminConversationsCreateArgumentsMember1 == null && AdminConversationsCreateArgumentsMember2 == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
-            if (AdminConversationsCreateArgumentsMember1 != null && AdminConversationsCreateArgumentsMember2 == null) { if (AdminConversationsCreateArgumentsMember1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AdminConversationsCreateArgumentsMember1); return; }
-            if (AdminConversationsCreateArgumentsMember2 != null && AdminConversationsCreateArgumentsMember1 == null) { if (AdminConversationsCreateArgumentsMember2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AdminConversationsCreateArgumentsMember2); return; }
+            int selectedUnionBranches = 0;
+            if (AdminConversationsCreateArgumentsMember1 != null) selectedUnionBranches++;
+            if (AdminConversationsCreateArgumentsMember2 != null) selectedUnionBranches++;
+            if (AdminConversationsCreateArgumentsMember1 != null && selectedUnionBranches == 1) { if (AdminConversationsCreateArgumentsMember1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AdminConversationsCreateArgumentsMember1); return; }
+            if (AdminConversationsCreateArgumentsMember2 != null && selectedUnionBranches == 1) { if (AdminConversationsCreateArgumentsMember2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AdminConversationsCreateArgumentsMember2); return; }
 
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsCreateArgumentsMember1>(null, AdminConversationsCreateArgumentsMember1, AdminConversationsCreateArgumentsMember2);

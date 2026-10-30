@@ -17,8 +17,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("document_content") is { } nullNodeDocumentContent && nullNodeDocumentContent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DocumentContent = null;
-            if (parseNode.GetChildNode("operation") is { } nullNodeOperation && nullNodeOperation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operation = null;
+            if (parseNode.GetChildNode("document_content") is null) { _explicitNullValueDocumentContent = default!; _explicitNullProperties?.Remove("document_content"); }
+            else if (parseNode.GetChildNode("document_content") is { } nullNodeDocumentContent && nullNodeDocumentContent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DocumentContent = null;
+            if (parseNode.GetChildNode("operation") is null) { _explicitNullValueOperation = default!; _explicitNullProperties?.Remove("operation"); }
+            else if (parseNode.GetChildNode("operation") is { } nullNodeOperation && nullNodeOperation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operation = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Structure describing the type and contents.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.DocumentContent? DocumentContent { get => _explicitNullValueDocumentContent; set { _explicitNullValueDocumentContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("document_content"); else _explicitNullProperties?.Remove("document_content"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.DocumentContent? DocumentContent { get => _explicitNullValueDocumentContent; set { _explicitNullValueDocumentContent = value; AdditionalData?.Remove("document_content"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("document_content"); else _explicitNullProperties?.Remove("document_content"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.DocumentContent? _explicitNullValueDocumentContent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.DocumentContent DocumentContent { get => _explicitNullValueDocumentContent; set { _explicitNullValueDocumentContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("document_content"); else _explicitNullProperties?.Remove("document_content"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.DocumentContent DocumentContent { get => _explicitNullValueDocumentContent; set { _explicitNullValueDocumentContent = value; AdditionalData?.Remove("document_content"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("document_content"); else _explicitNullProperties?.Remove("document_content"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.DocumentContent _explicitNullValueDocumentContent = default!;
 #endif
         /// <summary>The operation to perform on the canvas.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.ChangeWithContentOperation? Operation { get => _explicitNullValueOperation; set { _explicitNullValueOperation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operation"); else _explicitNullProperties?.Remove("operation"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChangeWithContentOperation? Operation { get => _explicitNullValueOperation; set { _explicitNullValueOperation = value; AdditionalData?.Remove("operation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operation"); else _explicitNullProperties?.Remove("operation"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.ChangeWithContentOperation? _explicitNullValueOperation = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChangeWithContent"/> and sets the default values.
@@ -62,7 +64,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "document_content", n => { DocumentContent = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DocumentContent>(global::Soenneker.Slack.OpenApiClient.Models.DocumentContent.CreateFromDiscriminatorValue); } },
-                { "operation", n => { Operation = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ChangeWithContentOperation>(); } },
+                { "operation", n => { var parsed = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ChangeWithContentOperation>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOperation = default; _explicitNullProperties?.Remove("operation"); AdditionalData["operation"] = unknown; } else { Operation = parsed; AdditionalData.Remove("operation"); } } },
             };
         }
         /// <summary>

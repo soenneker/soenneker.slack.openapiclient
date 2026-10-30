@@ -17,7 +17,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("slack_id") is { } nullNodeSlackId && nullNodeSlackId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SlackId = null;
+            if (parseNode.GetChildNode("slack_id") is null) { _explicitNullValueSlackId = default!; _explicitNullProperties?.Remove("slack_id"); }
+            else if (parseNode.GetChildNode("slack_id") is { } nullNodeSlackId && nullNodeSlackId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SlackId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The Slack encoded user ID, e.g. U1234ABCD. Set this if you have it or know it, otherwise, set`external_id` and `display_name`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SlackId { get => _explicitNullValueSlackId; set { _explicitNullValueSlackId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("slack_id"); else _explicitNullProperties?.Remove("slack_id"); } }
+        public string? SlackId { get => _explicitNullValueSlackId; set { _explicitNullValueSlackId = value; AdditionalData?.Remove("slack_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("slack_id"); else _explicitNullProperties?.Remove("slack_id"); } }
         private string? _explicitNullValueSlackId = default!;
 #nullable restore
 #else
-        public string SlackId { get => _explicitNullValueSlackId; set { _explicitNullValueSlackId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("slack_id"); else _explicitNullProperties?.Remove("slack_id"); } }
+        public string SlackId { get => _explicitNullValueSlackId; set { _explicitNullValueSlackId = value; AdditionalData?.Remove("slack_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("slack_id"); else _explicitNullProperties?.Remove("slack_id"); } }
         private string _explicitNullValueSlackId = default!;
 #endif
         /// <summary>

@@ -17,7 +17,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("trigger_actions_on") is { } nullNodeTriggerActionsOn && nullNodeTriggerActionsOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerActionsOn = null;
+            if (parseNode.GetChildNode("trigger_actions_on") is null) { _explicitNullValueTriggerActionsOn = default!; _explicitNullProperties?.Remove("trigger_actions_on"); }
+            else if (parseNode.GetChildNode("trigger_actions_on") is { } nullNodeTriggerActionsOn && nullNodeTriggerActionsOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerActionsOn = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The trigger_actions_on property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? TriggerActionsOn { get => _explicitNullValueTriggerActionsOn; set { _explicitNullValueTriggerActionsOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trigger_actions_on"); else _explicitNullProperties?.Remove("trigger_actions_on"); } }
+        public List<string>? TriggerActionsOn { get => _explicitNullValueTriggerActionsOn; set { _explicitNullValueTriggerActionsOn = value; AdditionalData?.Remove("trigger_actions_on"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trigger_actions_on"); else _explicitNullProperties?.Remove("trigger_actions_on"); } }
         private List<string>? _explicitNullValueTriggerActionsOn = default!;
 #nullable restore
 #else
-        public List<string> TriggerActionsOn { get => _explicitNullValueTriggerActionsOn; set { _explicitNullValueTriggerActionsOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trigger_actions_on"); else _explicitNullProperties?.Remove("trigger_actions_on"); } }
+        public List<string> TriggerActionsOn { get => _explicitNullValueTriggerActionsOn; set { _explicitNullValueTriggerActionsOn = value; AdditionalData?.Remove("trigger_actions_on"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trigger_actions_on"); else _explicitNullProperties?.Remove("trigger_actions_on"); } }
         private List<string> _explicitNullValueTriggerActionsOn = default!;
 #endif
         /// <summary>

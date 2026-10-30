@@ -17,23 +17,25 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("operation") is { } nullNodeOperation && nullNodeOperation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operation = null;
-            if (parseNode.GetChildNode("section_id") is { } nullNodeSectionId && nullNodeSectionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SectionId = null;
+            if (parseNode.GetChildNode("operation") is null) { _explicitNullValueOperation = default!; _explicitNullProperties?.Remove("operation"); }
+            else if (parseNode.GetChildNode("operation") is { } nullNodeOperation && nullNodeOperation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operation = null;
+            if (parseNode.GetChildNode("section_id") is null) { _explicitNullValueSectionId = default!; _explicitNullProperties?.Remove("section_id"); }
+            else if (parseNode.GetChildNode("section_id") is { } nullNodeSectionId && nullNodeSectionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SectionId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The operation to perform on the canvas.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.DeleteOperation? Operation { get => _explicitNullValueOperation; set { _explicitNullValueOperation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operation"); else _explicitNullProperties?.Remove("operation"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.DeleteOperation? Operation { get => _explicitNullValueOperation; set { _explicitNullValueOperation = value; AdditionalData?.Remove("operation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operation"); else _explicitNullProperties?.Remove("operation"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.DeleteOperation? _explicitNullValueOperation = default!;
         /// <summary>The section of the canvas to target the operation on.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SectionId { get => _explicitNullValueSectionId; set { _explicitNullValueSectionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("section_id"); else _explicitNullProperties?.Remove("section_id"); } }
+        public string? SectionId { get => _explicitNullValueSectionId; set { _explicitNullValueSectionId = value; AdditionalData?.Remove("section_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("section_id"); else _explicitNullProperties?.Remove("section_id"); } }
         private string? _explicitNullValueSectionId = default!;
 #nullable restore
 #else
-        public string SectionId { get => _explicitNullValueSectionId; set { _explicitNullValueSectionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("section_id"); else _explicitNullProperties?.Remove("section_id"); } }
+        public string SectionId { get => _explicitNullValueSectionId; set { _explicitNullValueSectionId = value; AdditionalData?.Remove("section_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("section_id"); else _explicitNullProperties?.Remove("section_id"); } }
         private string _explicitNullValueSectionId = default!;
 #endif
         /// <summary>
@@ -61,7 +63,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "operation", n => { Operation = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.DeleteOperation>(); } },
+                { "operation", n => { var parsed = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.DeleteOperation>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOperation = default; _explicitNullProperties?.Remove("operation"); AdditionalData["operation"] = unknown; } else { Operation = parsed; AdditionalData.Remove("operation"); } } },
                 { "section_id", n => { SectionId = n.GetStringValue(); } },
             };
         }

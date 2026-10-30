@@ -17,20 +17,24 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("action_id") is { } nullNodeActionId && nullNodeActionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionId = null;
-            if (parseNode.GetChildNode("negative_button") is { } nullNodeNegativeButton && nullNodeNegativeButton.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NegativeButton = null;
-            if (parseNode.GetChildNode("positive_button") is { } nullNodePositiveButton && nullNodePositiveButton.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PositiveButton = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("action_id") is null) { _explicitNullValueActionId = default!; _explicitNullProperties?.Remove("action_id"); }
+            else if (parseNode.GetChildNode("action_id") is { } nullNodeActionId && nullNodeActionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionId = null;
+            if (parseNode.GetChildNode("negative_button") is null) { _explicitNullValueNegativeButton = default!; _explicitNullProperties?.Remove("negative_button"); }
+            else if (parseNode.GetChildNode("negative_button") is { } nullNodeNegativeButton && nullNodeNegativeButton.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NegativeButton = null;
+            if (parseNode.GetChildNode("positive_button") is null) { _explicitNullValuePositiveButton = default!; _explicitNullProperties?.Remove("positive_button"); }
+            else if (parseNode.GetChildNode("positive_button") is { } nullNodePositiveButton && nullNodePositiveButton.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PositiveButton = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>: An identifier for this action. You can use this when you receive an interaction payload to[identify the source of the action](https://docs.slack.dev/interactivity/handling-user-interaction#payloads). Should be uniqueamong all other `action_id`s in the containing block. Maximum length for this field is 255 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActionId { get => _explicitNullValueActionId; set { _explicitNullValueActionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action_id"); else _explicitNullProperties?.Remove("action_id"); } }
+        public string? ActionId { get => _explicitNullValueActionId; set { _explicitNullValueActionId = value; AdditionalData?.Remove("action_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action_id"); else _explicitNullProperties?.Remove("action_id"); } }
         private string? _explicitNullValueActionId = default!;
 #nullable restore
 #else
-        public string ActionId { get => _explicitNullValueActionId; set { _explicitNullValueActionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action_id"); else _explicitNullProperties?.Remove("action_id"); } }
+        public string ActionId { get => _explicitNullValueActionId; set { _explicitNullValueActionId = value; AdditionalData?.Remove("action_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action_id"); else _explicitNullProperties?.Remove("action_id"); } }
         private string _explicitNullValueActionId = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -38,25 +42,25 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>A button to indicate negative feedback.[Feedback buttons object fields reference](https://docs.slack.dev/reference/block-kit/block-elements/feedback-buttons-element/#button-object-fields).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.FeedbackButtonsNegativeButton? NegativeButton { get => _explicitNullValueNegativeButton; set { _explicitNullValueNegativeButton = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("negative_button"); else _explicitNullProperties?.Remove("negative_button"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.FeedbackButtonsNegativeButton? NegativeButton { get => _explicitNullValueNegativeButton; set { _explicitNullValueNegativeButton = value; AdditionalData?.Remove("negative_button"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("negative_button"); else _explicitNullProperties?.Remove("negative_button"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.FeedbackButtonsNegativeButton? _explicitNullValueNegativeButton = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.FeedbackButtonsNegativeButton NegativeButton { get => _explicitNullValueNegativeButton; set { _explicitNullValueNegativeButton = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("negative_button"); else _explicitNullProperties?.Remove("negative_button"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.FeedbackButtonsNegativeButton NegativeButton { get => _explicitNullValueNegativeButton; set { _explicitNullValueNegativeButton = value; AdditionalData?.Remove("negative_button"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("negative_button"); else _explicitNullProperties?.Remove("negative_button"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.FeedbackButtonsNegativeButton _explicitNullValueNegativeButton = default!;
 #endif
         /// <summary>A button to indicate positive feedback.[Feedback buttons object fields reference](https://docs.slack.dev/reference/block-kit/block-elements/feedback-buttons-element/#button-object-fields).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.FeedbackButtonsPositiveButton? PositiveButton { get => _explicitNullValuePositiveButton; set { _explicitNullValuePositiveButton = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("positive_button"); else _explicitNullProperties?.Remove("positive_button"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.FeedbackButtonsPositiveButton? PositiveButton { get => _explicitNullValuePositiveButton; set { _explicitNullValuePositiveButton = value; AdditionalData?.Remove("positive_button"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("positive_button"); else _explicitNullProperties?.Remove("positive_button"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.FeedbackButtonsPositiveButton? _explicitNullValuePositiveButton = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.FeedbackButtonsPositiveButton PositiveButton { get => _explicitNullValuePositiveButton; set { _explicitNullValuePositiveButton = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("positive_button"); else _explicitNullProperties?.Remove("positive_button"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.FeedbackButtonsPositiveButton PositiveButton { get => _explicitNullValuePositiveButton; set { _explicitNullValuePositiveButton = value; AdditionalData?.Remove("positive_button"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("positive_button"); else _explicitNullProperties?.Remove("positive_button"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.FeedbackButtonsPositiveButton _explicitNullValuePositiveButton = default!;
 #endif
         /// <summary>The type of block. For a feedback buttons block, `type` is always `feedback_buttons`.[Feedback buttons element reference](https://docs.slack.dev/reference/block-kit/block-elements/feedback-buttons-element).</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.FeedbackButtonsType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.FeedbackButtonsType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.FeedbackButtonsType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.FeedbackButtons"/> and sets the default values.
@@ -86,7 +90,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "action_id", n => { ActionId = n.GetStringValue(); } },
                 { "negative_button", n => { NegativeButton = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FeedbackButtonsNegativeButton>(global::Soenneker.Slack.OpenApiClient.Models.FeedbackButtonsNegativeButton.CreateFromDiscriminatorValue); } },
                 { "positive_button", n => { PositiveButton = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FeedbackButtonsPositiveButton>(global::Soenneker.Slack.OpenApiClient.Models.FeedbackButtonsPositiveButton.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.FeedbackButtonsType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.FeedbackButtonsType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>

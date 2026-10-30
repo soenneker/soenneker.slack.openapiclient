@@ -17,10 +17,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("file_id") is { } nullNodeFileId && nullNodeFileId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileId = null;
-            if (parseNode.GetChildNode("is_empty") is { } nullNodeIsEmpty && nullNodeIsEmpty.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsEmpty = null;
-            if (parseNode.GetChildNode("is_migrated") is { } nullNodeIsMigrated && nullNodeIsMigrated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsMigrated = null;
-            if (parseNode.GetChildNode("quip_thread_id") is { } nullNodeQuipThreadId && nullNodeQuipThreadId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QuipThreadId = null;
+            if (parseNode.GetChildNode("file_id") is null) { _explicitNullValueFileId = default!; _explicitNullProperties?.Remove("file_id"); }
+            else if (parseNode.GetChildNode("file_id") is { } nullNodeFileId && nullNodeFileId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileId = null;
+            if (parseNode.GetChildNode("is_empty") is null) { _explicitNullValueIsEmpty = default!; _explicitNullProperties?.Remove("is_empty"); }
+            else if (parseNode.GetChildNode("is_empty") is { } nullNodeIsEmpty && nullNodeIsEmpty.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsEmpty = null;
+            if (parseNode.GetChildNode("is_migrated") is null) { _explicitNullValueIsMigrated = default!; _explicitNullProperties?.Remove("is_migrated"); }
+            else if (parseNode.GetChildNode("is_migrated") is { } nullNodeIsMigrated && nullNodeIsMigrated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsMigrated = null;
+            if (parseNode.GetChildNode("quip_thread_id") is null) { _explicitNullValueQuipThreadId = default!; _explicitNullProperties?.Remove("quip_thread_id"); }
+            else if (parseNode.GetChildNode("quip_thread_id") is { } nullNodeQuipThreadId && nullNodeQuipThreadId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QuipThreadId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,27 +32,27 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The file_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FileId { get => _explicitNullValueFileId; set { _explicitNullValueFileId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_id"); else _explicitNullProperties?.Remove("file_id"); } }
+        public string? FileId { get => _explicitNullValueFileId; set { _explicitNullValueFileId = value; AdditionalData?.Remove("file_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_id"); else _explicitNullProperties?.Remove("file_id"); } }
         private string? _explicitNullValueFileId = default!;
 #nullable restore
 #else
-        public string FileId { get => _explicitNullValueFileId; set { _explicitNullValueFileId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_id"); else _explicitNullProperties?.Remove("file_id"); } }
+        public string FileId { get => _explicitNullValueFileId; set { _explicitNullValueFileId = value; AdditionalData?.Remove("file_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_id"); else _explicitNullProperties?.Remove("file_id"); } }
         private string _explicitNullValueFileId = default!;
 #endif
         /// <summary>The is_empty property</summary>
-        public bool? IsEmpty { get => _explicitNullValueIsEmpty; set { _explicitNullValueIsEmpty = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_empty"); else _explicitNullProperties?.Remove("is_empty"); } }
+        public bool? IsEmpty { get => _explicitNullValueIsEmpty; set { _explicitNullValueIsEmpty = value; AdditionalData?.Remove("is_empty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_empty"); else _explicitNullProperties?.Remove("is_empty"); } }
         private bool? _explicitNullValueIsEmpty = default!;
         /// <summary>The is_migrated property</summary>
-        public bool? IsMigrated { get => _explicitNullValueIsMigrated; set { _explicitNullValueIsMigrated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_migrated"); else _explicitNullProperties?.Remove("is_migrated"); } }
+        public bool? IsMigrated { get => _explicitNullValueIsMigrated; set { _explicitNullValueIsMigrated = value; AdditionalData?.Remove("is_migrated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_migrated"); else _explicitNullProperties?.Remove("is_migrated"); } }
         private bool? _explicitNullValueIsMigrated = default!;
         /// <summary>The quip_thread_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? QuipThreadId { get => _explicitNullValueQuipThreadId; set { _explicitNullValueQuipThreadId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quip_thread_id"); else _explicitNullProperties?.Remove("quip_thread_id"); } }
+        public string? QuipThreadId { get => _explicitNullValueQuipThreadId; set { _explicitNullValueQuipThreadId = value; AdditionalData?.Remove("quip_thread_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quip_thread_id"); else _explicitNullProperties?.Remove("quip_thread_id"); } }
         private string? _explicitNullValueQuipThreadId = default!;
 #nullable restore
 #else
-        public string QuipThreadId { get => _explicitNullValueQuipThreadId; set { _explicitNullValueQuipThreadId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quip_thread_id"); else _explicitNullProperties?.Remove("quip_thread_id"); } }
+        public string QuipThreadId { get => _explicitNullValueQuipThreadId; set { _explicitNullValueQuipThreadId = value; AdditionalData?.Remove("quip_thread_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quip_thread_id"); else _explicitNullProperties?.Remove("quip_thread_id"); } }
         private string _explicitNullValueQuipThreadId = default!;
 #endif
         /// <summary>

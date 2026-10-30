@@ -17,383 +17,419 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("date_email_verified") is { } nullNodeDateEmailVerified && nullNodeDateEmailVerified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateEmailVerified = null;
-            if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
-            if (parseNode.GetChildNode("email_verified") is { } nullNodeEmailVerified && nullNodeEmailVerified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailVerified = null;
-            if (parseNode.GetChildNode("error") is { } nullNodeError && nullNodeError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Error = null;
-            if (parseNode.GetChildNode("family_name") is { } nullNodeFamilyName && nullNodeFamilyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FamilyName = null;
-            if (parseNode.GetChildNode("given_name") is { } nullNodeGivenName && nullNodeGivenName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GivenName = null;
-            if (parseNode.GetChildNode("https://slack.com/enterprise_domain") is { } nullNodeHttpsSlackComEnterpriseDomain && nullNodeHttpsSlackComEnterpriseDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComEnterpriseDomain = null;
-            if (parseNode.GetChildNode("https://slack.com/enterprise_id") is { } nullNodeHttpsSlackComEnterpriseId && nullNodeHttpsSlackComEnterpriseId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComEnterpriseId = null;
-            if (parseNode.GetChildNode("https://slack.com/enterprise_name") is { } nullNodeHttpsSlackComEnterpriseName && nullNodeHttpsSlackComEnterpriseName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComEnterpriseName = null;
-            if (parseNode.GetChildNode("https://slack.com/team_domain") is { } nullNodeHttpsSlackComTeamDomain && nullNodeHttpsSlackComTeamDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComTeamDomain = null;
-            if (parseNode.GetChildNode("https://slack.com/team_id") is { } nullNodeHttpsSlackComTeamId && nullNodeHttpsSlackComTeamId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComTeamId = null;
-            if (parseNode.GetChildNode("https://slack.com/team_image_102") is { } nullNodeHttpsSlackComTeamImage102 && nullNodeHttpsSlackComTeamImage102.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComTeamImage102 = null;
-            if (parseNode.GetChildNode("https://slack.com/team_image_132") is { } nullNodeHttpsSlackComTeamImage132 && nullNodeHttpsSlackComTeamImage132.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComTeamImage132 = null;
-            if (parseNode.GetChildNode("https://slack.com/team_image_230") is { } nullNodeHttpsSlackComTeamImage230 && nullNodeHttpsSlackComTeamImage230.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComTeamImage230 = null;
-            if (parseNode.GetChildNode("https://slack.com/team_image_34") is { } nullNodeHttpsSlackComTeamImage34 && nullNodeHttpsSlackComTeamImage34.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComTeamImage34 = null;
-            if (parseNode.GetChildNode("https://slack.com/team_image_44") is { } nullNodeHttpsSlackComTeamImage44 && nullNodeHttpsSlackComTeamImage44.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComTeamImage44 = null;
-            if (parseNode.GetChildNode("https://slack.com/team_image_68") is { } nullNodeHttpsSlackComTeamImage68 && nullNodeHttpsSlackComTeamImage68.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComTeamImage68 = null;
-            if (parseNode.GetChildNode("https://slack.com/team_image_88") is { } nullNodeHttpsSlackComTeamImage88 && nullNodeHttpsSlackComTeamImage88.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComTeamImage88 = null;
-            if (parseNode.GetChildNode("https://slack.com/team_name") is { } nullNodeHttpsSlackComTeamName && nullNodeHttpsSlackComTeamName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComTeamName = null;
-            if (parseNode.GetChildNode("https://slack.com/user_id") is { } nullNodeHttpsSlackComUserId && nullNodeHttpsSlackComUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComUserId = null;
-            if (parseNode.GetChildNode("https://slack.com/user_image_1024") is { } nullNodeHttpsSlackComUserImage1024 && nullNodeHttpsSlackComUserImage1024.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComUserImage1024 = null;
-            if (parseNode.GetChildNode("https://slack.com/user_image_192") is { } nullNodeHttpsSlackComUserImage192 && nullNodeHttpsSlackComUserImage192.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComUserImage192 = null;
-            if (parseNode.GetChildNode("https://slack.com/user_image_24") is { } nullNodeHttpsSlackComUserImage24 && nullNodeHttpsSlackComUserImage24.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComUserImage24 = null;
-            if (parseNode.GetChildNode("https://slack.com/user_image_32") is { } nullNodeHttpsSlackComUserImage32 && nullNodeHttpsSlackComUserImage32.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComUserImage32 = null;
-            if (parseNode.GetChildNode("https://slack.com/user_image_48") is { } nullNodeHttpsSlackComUserImage48 && nullNodeHttpsSlackComUserImage48.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComUserImage48 = null;
-            if (parseNode.GetChildNode("https://slack.com/user_image_512") is { } nullNodeHttpsSlackComUserImage512 && nullNodeHttpsSlackComUserImage512.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComUserImage512 = null;
-            if (parseNode.GetChildNode("https://slack.com/user_image_72") is { } nullNodeHttpsSlackComUserImage72 && nullNodeHttpsSlackComUserImage72.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComUserImage72 = null;
-            if (parseNode.GetChildNode("locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("needed") is { } nullNodeNeeded && nullNodeNeeded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Needed = null;
-            if (parseNode.GetChildNode("ok") is { } nullNodeOk && nullNodeOk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ok = null;
-            if (parseNode.GetChildNode("picture") is { } nullNodePicture && nullNodePicture.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Picture = null;
-            if (parseNode.GetChildNode("provided") is { } nullNodeProvided && nullNodeProvided.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Provided = null;
-            if (parseNode.GetChildNode("response_metadata") is { } nullNodeResponseMetadata && nullNodeResponseMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResponseMetadata = null;
-            if (parseNode.GetChildNode("sub") is { } nullNodeSub && nullNodeSub.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sub = null;
-            if (parseNode.GetChildNode("warning") is { } nullNodeWarning && nullNodeWarning.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Warning = null;
+            if (parseNode.GetChildNode("date_email_verified") is null) { _explicitNullValueDateEmailVerified = default!; _explicitNullProperties?.Remove("date_email_verified"); }
+            else if (parseNode.GetChildNode("date_email_verified") is { } nullNodeDateEmailVerified && nullNodeDateEmailVerified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateEmailVerified = null;
+            if (parseNode.GetChildNode("email") is null) { _explicitNullValueEmail = default!; _explicitNullProperties?.Remove("email"); }
+            else if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("email_verified") is null) { _explicitNullValueEmailVerified = default!; _explicitNullProperties?.Remove("email_verified"); }
+            else if (parseNode.GetChildNode("email_verified") is { } nullNodeEmailVerified && nullNodeEmailVerified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailVerified = null;
+            if (parseNode.GetChildNode("error") is null) { _explicitNullValueError = default!; _explicitNullProperties?.Remove("error"); }
+            else if (parseNode.GetChildNode("error") is { } nullNodeError && nullNodeError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Error = null;
+            if (parseNode.GetChildNode("family_name") is null) { _explicitNullValueFamilyName = default!; _explicitNullProperties?.Remove("family_name"); }
+            else if (parseNode.GetChildNode("family_name") is { } nullNodeFamilyName && nullNodeFamilyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FamilyName = null;
+            if (parseNode.GetChildNode("given_name") is null) { _explicitNullValueGivenName = default!; _explicitNullProperties?.Remove("given_name"); }
+            else if (parseNode.GetChildNode("given_name") is { } nullNodeGivenName && nullNodeGivenName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GivenName = null;
+            if (parseNode.GetChildNode("https://slack.com/enterprise_domain") is null) { _explicitNullValueHttpsSlackComEnterpriseDomain = default!; _explicitNullProperties?.Remove("https://slack.com/enterprise_domain"); }
+            else if (parseNode.GetChildNode("https://slack.com/enterprise_domain") is { } nullNodeHttpsSlackComEnterpriseDomain && nullNodeHttpsSlackComEnterpriseDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComEnterpriseDomain = null;
+            if (parseNode.GetChildNode("https://slack.com/enterprise_id") is null) { _explicitNullValueHttpsSlackComEnterpriseId = default!; _explicitNullProperties?.Remove("https://slack.com/enterprise_id"); }
+            else if (parseNode.GetChildNode("https://slack.com/enterprise_id") is { } nullNodeHttpsSlackComEnterpriseId && nullNodeHttpsSlackComEnterpriseId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComEnterpriseId = null;
+            if (parseNode.GetChildNode("https://slack.com/enterprise_name") is null) { _explicitNullValueHttpsSlackComEnterpriseName = default!; _explicitNullProperties?.Remove("https://slack.com/enterprise_name"); }
+            else if (parseNode.GetChildNode("https://slack.com/enterprise_name") is { } nullNodeHttpsSlackComEnterpriseName && nullNodeHttpsSlackComEnterpriseName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComEnterpriseName = null;
+            if (parseNode.GetChildNode("https://slack.com/team_domain") is null) { _explicitNullValueHttpsSlackComTeamDomain = default!; _explicitNullProperties?.Remove("https://slack.com/team_domain"); }
+            else if (parseNode.GetChildNode("https://slack.com/team_domain") is { } nullNodeHttpsSlackComTeamDomain && nullNodeHttpsSlackComTeamDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComTeamDomain = null;
+            if (parseNode.GetChildNode("https://slack.com/team_id") is null) { _explicitNullValueHttpsSlackComTeamId = default!; _explicitNullProperties?.Remove("https://slack.com/team_id"); }
+            else if (parseNode.GetChildNode("https://slack.com/team_id") is { } nullNodeHttpsSlackComTeamId && nullNodeHttpsSlackComTeamId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComTeamId = null;
+            if (parseNode.GetChildNode("https://slack.com/team_image_102") is null) { _explicitNullValueHttpsSlackComTeamImage102 = default!; _explicitNullProperties?.Remove("https://slack.com/team_image_102"); }
+            else if (parseNode.GetChildNode("https://slack.com/team_image_102") is { } nullNodeHttpsSlackComTeamImage102 && nullNodeHttpsSlackComTeamImage102.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComTeamImage102 = null;
+            if (parseNode.GetChildNode("https://slack.com/team_image_132") is null) { _explicitNullValueHttpsSlackComTeamImage132 = default!; _explicitNullProperties?.Remove("https://slack.com/team_image_132"); }
+            else if (parseNode.GetChildNode("https://slack.com/team_image_132") is { } nullNodeHttpsSlackComTeamImage132 && nullNodeHttpsSlackComTeamImage132.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComTeamImage132 = null;
+            if (parseNode.GetChildNode("https://slack.com/team_image_230") is null) { _explicitNullValueHttpsSlackComTeamImage230 = default!; _explicitNullProperties?.Remove("https://slack.com/team_image_230"); }
+            else if (parseNode.GetChildNode("https://slack.com/team_image_230") is { } nullNodeHttpsSlackComTeamImage230 && nullNodeHttpsSlackComTeamImage230.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComTeamImage230 = null;
+            if (parseNode.GetChildNode("https://slack.com/team_image_34") is null) { _explicitNullValueHttpsSlackComTeamImage34 = default!; _explicitNullProperties?.Remove("https://slack.com/team_image_34"); }
+            else if (parseNode.GetChildNode("https://slack.com/team_image_34") is { } nullNodeHttpsSlackComTeamImage34 && nullNodeHttpsSlackComTeamImage34.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComTeamImage34 = null;
+            if (parseNode.GetChildNode("https://slack.com/team_image_44") is null) { _explicitNullValueHttpsSlackComTeamImage44 = default!; _explicitNullProperties?.Remove("https://slack.com/team_image_44"); }
+            else if (parseNode.GetChildNode("https://slack.com/team_image_44") is { } nullNodeHttpsSlackComTeamImage44 && nullNodeHttpsSlackComTeamImage44.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComTeamImage44 = null;
+            if (parseNode.GetChildNode("https://slack.com/team_image_68") is null) { _explicitNullValueHttpsSlackComTeamImage68 = default!; _explicitNullProperties?.Remove("https://slack.com/team_image_68"); }
+            else if (parseNode.GetChildNode("https://slack.com/team_image_68") is { } nullNodeHttpsSlackComTeamImage68 && nullNodeHttpsSlackComTeamImage68.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComTeamImage68 = null;
+            if (parseNode.GetChildNode("https://slack.com/team_image_88") is null) { _explicitNullValueHttpsSlackComTeamImage88 = default!; _explicitNullProperties?.Remove("https://slack.com/team_image_88"); }
+            else if (parseNode.GetChildNode("https://slack.com/team_image_88") is { } nullNodeHttpsSlackComTeamImage88 && nullNodeHttpsSlackComTeamImage88.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComTeamImage88 = null;
+            if (parseNode.GetChildNode("https://slack.com/team_name") is null) { _explicitNullValueHttpsSlackComTeamName = default!; _explicitNullProperties?.Remove("https://slack.com/team_name"); }
+            else if (parseNode.GetChildNode("https://slack.com/team_name") is { } nullNodeHttpsSlackComTeamName && nullNodeHttpsSlackComTeamName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComTeamName = null;
+            if (parseNode.GetChildNode("https://slack.com/user_id") is null) { _explicitNullValueHttpsSlackComUserId = default!; _explicitNullProperties?.Remove("https://slack.com/user_id"); }
+            else if (parseNode.GetChildNode("https://slack.com/user_id") is { } nullNodeHttpsSlackComUserId && nullNodeHttpsSlackComUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComUserId = null;
+            if (parseNode.GetChildNode("https://slack.com/user_image_1024") is null) { _explicitNullValueHttpsSlackComUserImage1024 = default!; _explicitNullProperties?.Remove("https://slack.com/user_image_1024"); }
+            else if (parseNode.GetChildNode("https://slack.com/user_image_1024") is { } nullNodeHttpsSlackComUserImage1024 && nullNodeHttpsSlackComUserImage1024.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComUserImage1024 = null;
+            if (parseNode.GetChildNode("https://slack.com/user_image_192") is null) { _explicitNullValueHttpsSlackComUserImage192 = default!; _explicitNullProperties?.Remove("https://slack.com/user_image_192"); }
+            else if (parseNode.GetChildNode("https://slack.com/user_image_192") is { } nullNodeHttpsSlackComUserImage192 && nullNodeHttpsSlackComUserImage192.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComUserImage192 = null;
+            if (parseNode.GetChildNode("https://slack.com/user_image_24") is null) { _explicitNullValueHttpsSlackComUserImage24 = default!; _explicitNullProperties?.Remove("https://slack.com/user_image_24"); }
+            else if (parseNode.GetChildNode("https://slack.com/user_image_24") is { } nullNodeHttpsSlackComUserImage24 && nullNodeHttpsSlackComUserImage24.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComUserImage24 = null;
+            if (parseNode.GetChildNode("https://slack.com/user_image_32") is null) { _explicitNullValueHttpsSlackComUserImage32 = default!; _explicitNullProperties?.Remove("https://slack.com/user_image_32"); }
+            else if (parseNode.GetChildNode("https://slack.com/user_image_32") is { } nullNodeHttpsSlackComUserImage32 && nullNodeHttpsSlackComUserImage32.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComUserImage32 = null;
+            if (parseNode.GetChildNode("https://slack.com/user_image_48") is null) { _explicitNullValueHttpsSlackComUserImage48 = default!; _explicitNullProperties?.Remove("https://slack.com/user_image_48"); }
+            else if (parseNode.GetChildNode("https://slack.com/user_image_48") is { } nullNodeHttpsSlackComUserImage48 && nullNodeHttpsSlackComUserImage48.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComUserImage48 = null;
+            if (parseNode.GetChildNode("https://slack.com/user_image_512") is null) { _explicitNullValueHttpsSlackComUserImage512 = default!; _explicitNullProperties?.Remove("https://slack.com/user_image_512"); }
+            else if (parseNode.GetChildNode("https://slack.com/user_image_512") is { } nullNodeHttpsSlackComUserImage512 && nullNodeHttpsSlackComUserImage512.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComUserImage512 = null;
+            if (parseNode.GetChildNode("https://slack.com/user_image_72") is null) { _explicitNullValueHttpsSlackComUserImage72 = default!; _explicitNullProperties?.Remove("https://slack.com/user_image_72"); }
+            else if (parseNode.GetChildNode("https://slack.com/user_image_72") is { } nullNodeHttpsSlackComUserImage72 && nullNodeHttpsSlackComUserImage72.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpsSlackComUserImage72 = null;
+            if (parseNode.GetChildNode("locale") is null) { _explicitNullValueLocale = default!; _explicitNullProperties?.Remove("locale"); }
+            else if (parseNode.GetChildNode("locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("needed") is null) { _explicitNullValueNeeded = default!; _explicitNullProperties?.Remove("needed"); }
+            else if (parseNode.GetChildNode("needed") is { } nullNodeNeeded && nullNodeNeeded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Needed = null;
+            if (parseNode.GetChildNode("ok") is null) { _explicitNullValueOk = default!; _explicitNullProperties?.Remove("ok"); }
+            else if (parseNode.GetChildNode("ok") is { } nullNodeOk && nullNodeOk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ok = null;
+            if (parseNode.GetChildNode("picture") is null) { _explicitNullValuePicture = default!; _explicitNullProperties?.Remove("picture"); }
+            else if (parseNode.GetChildNode("picture") is { } nullNodePicture && nullNodePicture.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Picture = null;
+            if (parseNode.GetChildNode("provided") is null) { _explicitNullValueProvided = default!; _explicitNullProperties?.Remove("provided"); }
+            else if (parseNode.GetChildNode("provided") is { } nullNodeProvided && nullNodeProvided.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Provided = null;
+            if (parseNode.GetChildNode("response_metadata") is null) { _explicitNullValueResponseMetadata = default!; _explicitNullProperties?.Remove("response_metadata"); }
+            else if (parseNode.GetChildNode("response_metadata") is { } nullNodeResponseMetadata && nullNodeResponseMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResponseMetadata = null;
+            if (parseNode.GetChildNode("sub") is null) { _explicitNullValueSub = default!; _explicitNullProperties?.Remove("sub"); }
+            else if (parseNode.GetChildNode("sub") is { } nullNodeSub && nullNodeSub.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sub = null;
+            if (parseNode.GetChildNode("warning") is null) { _explicitNullValueWarning = default!; _explicitNullProperties?.Remove("warning"); }
+            else if (parseNode.GetChildNode("warning") is { } nullNodeWarning && nullNodeWarning.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Warning = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The date_email_verified property</summary>
-        public double? DateEmailVerified { get => _explicitNullValueDateEmailVerified; set { _explicitNullValueDateEmailVerified = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_email_verified"); else _explicitNullProperties?.Remove("date_email_verified"); } }
+        public double? DateEmailVerified { get => _explicitNullValueDateEmailVerified; set { _explicitNullValueDateEmailVerified = value; AdditionalData?.Remove("date_email_verified"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_email_verified"); else _explicitNullProperties?.Remove("date_email_verified"); } }
         private double? _explicitNullValueDateEmailVerified = default!;
         /// <summary>The email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
         private string? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
         private string _explicitNullValueEmail = default!;
 #endif
         /// <summary>The email_verified property</summary>
-        public bool? EmailVerified { get => _explicitNullValueEmailVerified; set { _explicitNullValueEmailVerified = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_verified"); else _explicitNullProperties?.Remove("email_verified"); } }
+        public bool? EmailVerified { get => _explicitNullValueEmailVerified; set { _explicitNullValueEmailVerified = value; AdditionalData?.Remove("email_verified"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_verified"); else _explicitNullProperties?.Remove("email_verified"); } }
         private bool? _explicitNullValueEmailVerified = default!;
         /// <summary>The error property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        public string? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
         private string? _explicitNullValueError = default!;
 #nullable restore
 #else
-        public string Error { get => _explicitNullValueError; set { _explicitNullValueError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        public string Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
         private string _explicitNullValueError = default!;
 #endif
         /// <summary>The family_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FamilyName { get => _explicitNullValueFamilyName; set { _explicitNullValueFamilyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("family_name"); else _explicitNullProperties?.Remove("family_name"); } }
+        public string? FamilyName { get => _explicitNullValueFamilyName; set { _explicitNullValueFamilyName = value; AdditionalData?.Remove("family_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("family_name"); else _explicitNullProperties?.Remove("family_name"); } }
         private string? _explicitNullValueFamilyName = default!;
 #nullable restore
 #else
-        public string FamilyName { get => _explicitNullValueFamilyName; set { _explicitNullValueFamilyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("family_name"); else _explicitNullProperties?.Remove("family_name"); } }
+        public string FamilyName { get => _explicitNullValueFamilyName; set { _explicitNullValueFamilyName = value; AdditionalData?.Remove("family_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("family_name"); else _explicitNullProperties?.Remove("family_name"); } }
         private string _explicitNullValueFamilyName = default!;
 #endif
         /// <summary>The given_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GivenName { get => _explicitNullValueGivenName; set { _explicitNullValueGivenName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("given_name"); else _explicitNullProperties?.Remove("given_name"); } }
+        public string? GivenName { get => _explicitNullValueGivenName; set { _explicitNullValueGivenName = value; AdditionalData?.Remove("given_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("given_name"); else _explicitNullProperties?.Remove("given_name"); } }
         private string? _explicitNullValueGivenName = default!;
 #nullable restore
 #else
-        public string GivenName { get => _explicitNullValueGivenName; set { _explicitNullValueGivenName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("given_name"); else _explicitNullProperties?.Remove("given_name"); } }
+        public string GivenName { get => _explicitNullValueGivenName; set { _explicitNullValueGivenName = value; AdditionalData?.Remove("given_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("given_name"); else _explicitNullProperties?.Remove("given_name"); } }
         private string _explicitNullValueGivenName = default!;
 #endif
         /// <summary>The httpsSlackComEnterprise_domain property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HttpsSlackComEnterpriseDomain { get => _explicitNullValueHttpsSlackComEnterpriseDomain; set { _explicitNullValueHttpsSlackComEnterpriseDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/enterprise_domain"); else _explicitNullProperties?.Remove("https://slack.com/enterprise_domain"); } }
+        public string? HttpsSlackComEnterpriseDomain { get => _explicitNullValueHttpsSlackComEnterpriseDomain; set { _explicitNullValueHttpsSlackComEnterpriseDomain = value; AdditionalData?.Remove("https://slack.com/enterprise_domain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/enterprise_domain"); else _explicitNullProperties?.Remove("https://slack.com/enterprise_domain"); } }
         private string? _explicitNullValueHttpsSlackComEnterpriseDomain = default!;
 #nullable restore
 #else
-        public string HttpsSlackComEnterpriseDomain { get => _explicitNullValueHttpsSlackComEnterpriseDomain; set { _explicitNullValueHttpsSlackComEnterpriseDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/enterprise_domain"); else _explicitNullProperties?.Remove("https://slack.com/enterprise_domain"); } }
+        public string HttpsSlackComEnterpriseDomain { get => _explicitNullValueHttpsSlackComEnterpriseDomain; set { _explicitNullValueHttpsSlackComEnterpriseDomain = value; AdditionalData?.Remove("https://slack.com/enterprise_domain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/enterprise_domain"); else _explicitNullProperties?.Remove("https://slack.com/enterprise_domain"); } }
         private string _explicitNullValueHttpsSlackComEnterpriseDomain = default!;
 #endif
         /// <summary>The httpsSlackComEnterprise_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HttpsSlackComEnterpriseId { get => _explicitNullValueHttpsSlackComEnterpriseId; set { _explicitNullValueHttpsSlackComEnterpriseId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/enterprise_id"); else _explicitNullProperties?.Remove("https://slack.com/enterprise_id"); } }
+        public string? HttpsSlackComEnterpriseId { get => _explicitNullValueHttpsSlackComEnterpriseId; set { _explicitNullValueHttpsSlackComEnterpriseId = value; AdditionalData?.Remove("https://slack.com/enterprise_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/enterprise_id"); else _explicitNullProperties?.Remove("https://slack.com/enterprise_id"); } }
         private string? _explicitNullValueHttpsSlackComEnterpriseId = default!;
 #nullable restore
 #else
-        public string HttpsSlackComEnterpriseId { get => _explicitNullValueHttpsSlackComEnterpriseId; set { _explicitNullValueHttpsSlackComEnterpriseId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/enterprise_id"); else _explicitNullProperties?.Remove("https://slack.com/enterprise_id"); } }
+        public string HttpsSlackComEnterpriseId { get => _explicitNullValueHttpsSlackComEnterpriseId; set { _explicitNullValueHttpsSlackComEnterpriseId = value; AdditionalData?.Remove("https://slack.com/enterprise_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/enterprise_id"); else _explicitNullProperties?.Remove("https://slack.com/enterprise_id"); } }
         private string _explicitNullValueHttpsSlackComEnterpriseId = default!;
 #endif
         /// <summary>The httpsSlackComEnterprise_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HttpsSlackComEnterpriseName { get => _explicitNullValueHttpsSlackComEnterpriseName; set { _explicitNullValueHttpsSlackComEnterpriseName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/enterprise_name"); else _explicitNullProperties?.Remove("https://slack.com/enterprise_name"); } }
+        public string? HttpsSlackComEnterpriseName { get => _explicitNullValueHttpsSlackComEnterpriseName; set { _explicitNullValueHttpsSlackComEnterpriseName = value; AdditionalData?.Remove("https://slack.com/enterprise_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/enterprise_name"); else _explicitNullProperties?.Remove("https://slack.com/enterprise_name"); } }
         private string? _explicitNullValueHttpsSlackComEnterpriseName = default!;
 #nullable restore
 #else
-        public string HttpsSlackComEnterpriseName { get => _explicitNullValueHttpsSlackComEnterpriseName; set { _explicitNullValueHttpsSlackComEnterpriseName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/enterprise_name"); else _explicitNullProperties?.Remove("https://slack.com/enterprise_name"); } }
+        public string HttpsSlackComEnterpriseName { get => _explicitNullValueHttpsSlackComEnterpriseName; set { _explicitNullValueHttpsSlackComEnterpriseName = value; AdditionalData?.Remove("https://slack.com/enterprise_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/enterprise_name"); else _explicitNullProperties?.Remove("https://slack.com/enterprise_name"); } }
         private string _explicitNullValueHttpsSlackComEnterpriseName = default!;
 #endif
         /// <summary>The httpsSlackComTeam_domain property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HttpsSlackComTeamDomain { get => _explicitNullValueHttpsSlackComTeamDomain; set { _explicitNullValueHttpsSlackComTeamDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_domain"); else _explicitNullProperties?.Remove("https://slack.com/team_domain"); } }
+        public string? HttpsSlackComTeamDomain { get => _explicitNullValueHttpsSlackComTeamDomain; set { _explicitNullValueHttpsSlackComTeamDomain = value; AdditionalData?.Remove("https://slack.com/team_domain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_domain"); else _explicitNullProperties?.Remove("https://slack.com/team_domain"); } }
         private string? _explicitNullValueHttpsSlackComTeamDomain = default!;
 #nullable restore
 #else
-        public string HttpsSlackComTeamDomain { get => _explicitNullValueHttpsSlackComTeamDomain; set { _explicitNullValueHttpsSlackComTeamDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_domain"); else _explicitNullProperties?.Remove("https://slack.com/team_domain"); } }
+        public string HttpsSlackComTeamDomain { get => _explicitNullValueHttpsSlackComTeamDomain; set { _explicitNullValueHttpsSlackComTeamDomain = value; AdditionalData?.Remove("https://slack.com/team_domain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_domain"); else _explicitNullProperties?.Remove("https://slack.com/team_domain"); } }
         private string _explicitNullValueHttpsSlackComTeamDomain = default!;
 #endif
         /// <summary>The httpsSlackComTeam_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HttpsSlackComTeamId { get => _explicitNullValueHttpsSlackComTeamId; set { _explicitNullValueHttpsSlackComTeamId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_id"); else _explicitNullProperties?.Remove("https://slack.com/team_id"); } }
+        public string? HttpsSlackComTeamId { get => _explicitNullValueHttpsSlackComTeamId; set { _explicitNullValueHttpsSlackComTeamId = value; AdditionalData?.Remove("https://slack.com/team_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_id"); else _explicitNullProperties?.Remove("https://slack.com/team_id"); } }
         private string? _explicitNullValueHttpsSlackComTeamId = default!;
 #nullable restore
 #else
-        public string HttpsSlackComTeamId { get => _explicitNullValueHttpsSlackComTeamId; set { _explicitNullValueHttpsSlackComTeamId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_id"); else _explicitNullProperties?.Remove("https://slack.com/team_id"); } }
+        public string HttpsSlackComTeamId { get => _explicitNullValueHttpsSlackComTeamId; set { _explicitNullValueHttpsSlackComTeamId = value; AdditionalData?.Remove("https://slack.com/team_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_id"); else _explicitNullProperties?.Remove("https://slack.com/team_id"); } }
         private string _explicitNullValueHttpsSlackComTeamId = default!;
 #endif
         /// <summary>The httpsSlackComTeam_image_102 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HttpsSlackComTeamImage102 { get => _explicitNullValueHttpsSlackComTeamImage102; set { _explicitNullValueHttpsSlackComTeamImage102 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_image_102"); else _explicitNullProperties?.Remove("https://slack.com/team_image_102"); } }
+        public string? HttpsSlackComTeamImage102 { get => _explicitNullValueHttpsSlackComTeamImage102; set { _explicitNullValueHttpsSlackComTeamImage102 = value; AdditionalData?.Remove("https://slack.com/team_image_102"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_image_102"); else _explicitNullProperties?.Remove("https://slack.com/team_image_102"); } }
         private string? _explicitNullValueHttpsSlackComTeamImage102 = default!;
 #nullable restore
 #else
-        public string HttpsSlackComTeamImage102 { get => _explicitNullValueHttpsSlackComTeamImage102; set { _explicitNullValueHttpsSlackComTeamImage102 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_image_102"); else _explicitNullProperties?.Remove("https://slack.com/team_image_102"); } }
+        public string HttpsSlackComTeamImage102 { get => _explicitNullValueHttpsSlackComTeamImage102; set { _explicitNullValueHttpsSlackComTeamImage102 = value; AdditionalData?.Remove("https://slack.com/team_image_102"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_image_102"); else _explicitNullProperties?.Remove("https://slack.com/team_image_102"); } }
         private string _explicitNullValueHttpsSlackComTeamImage102 = default!;
 #endif
         /// <summary>The httpsSlackComTeam_image_132 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HttpsSlackComTeamImage132 { get => _explicitNullValueHttpsSlackComTeamImage132; set { _explicitNullValueHttpsSlackComTeamImage132 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_image_132"); else _explicitNullProperties?.Remove("https://slack.com/team_image_132"); } }
+        public string? HttpsSlackComTeamImage132 { get => _explicitNullValueHttpsSlackComTeamImage132; set { _explicitNullValueHttpsSlackComTeamImage132 = value; AdditionalData?.Remove("https://slack.com/team_image_132"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_image_132"); else _explicitNullProperties?.Remove("https://slack.com/team_image_132"); } }
         private string? _explicitNullValueHttpsSlackComTeamImage132 = default!;
 #nullable restore
 #else
-        public string HttpsSlackComTeamImage132 { get => _explicitNullValueHttpsSlackComTeamImage132; set { _explicitNullValueHttpsSlackComTeamImage132 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_image_132"); else _explicitNullProperties?.Remove("https://slack.com/team_image_132"); } }
+        public string HttpsSlackComTeamImage132 { get => _explicitNullValueHttpsSlackComTeamImage132; set { _explicitNullValueHttpsSlackComTeamImage132 = value; AdditionalData?.Remove("https://slack.com/team_image_132"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_image_132"); else _explicitNullProperties?.Remove("https://slack.com/team_image_132"); } }
         private string _explicitNullValueHttpsSlackComTeamImage132 = default!;
 #endif
         /// <summary>The httpsSlackComTeam_image_230 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HttpsSlackComTeamImage230 { get => _explicitNullValueHttpsSlackComTeamImage230; set { _explicitNullValueHttpsSlackComTeamImage230 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_image_230"); else _explicitNullProperties?.Remove("https://slack.com/team_image_230"); } }
+        public string? HttpsSlackComTeamImage230 { get => _explicitNullValueHttpsSlackComTeamImage230; set { _explicitNullValueHttpsSlackComTeamImage230 = value; AdditionalData?.Remove("https://slack.com/team_image_230"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_image_230"); else _explicitNullProperties?.Remove("https://slack.com/team_image_230"); } }
         private string? _explicitNullValueHttpsSlackComTeamImage230 = default!;
 #nullable restore
 #else
-        public string HttpsSlackComTeamImage230 { get => _explicitNullValueHttpsSlackComTeamImage230; set { _explicitNullValueHttpsSlackComTeamImage230 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_image_230"); else _explicitNullProperties?.Remove("https://slack.com/team_image_230"); } }
+        public string HttpsSlackComTeamImage230 { get => _explicitNullValueHttpsSlackComTeamImage230; set { _explicitNullValueHttpsSlackComTeamImage230 = value; AdditionalData?.Remove("https://slack.com/team_image_230"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_image_230"); else _explicitNullProperties?.Remove("https://slack.com/team_image_230"); } }
         private string _explicitNullValueHttpsSlackComTeamImage230 = default!;
 #endif
         /// <summary>The httpsSlackComTeam_image_34 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HttpsSlackComTeamImage34 { get => _explicitNullValueHttpsSlackComTeamImage34; set { _explicitNullValueHttpsSlackComTeamImage34 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_image_34"); else _explicitNullProperties?.Remove("https://slack.com/team_image_34"); } }
+        public string? HttpsSlackComTeamImage34 { get => _explicitNullValueHttpsSlackComTeamImage34; set { _explicitNullValueHttpsSlackComTeamImage34 = value; AdditionalData?.Remove("https://slack.com/team_image_34"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_image_34"); else _explicitNullProperties?.Remove("https://slack.com/team_image_34"); } }
         private string? _explicitNullValueHttpsSlackComTeamImage34 = default!;
 #nullable restore
 #else
-        public string HttpsSlackComTeamImage34 { get => _explicitNullValueHttpsSlackComTeamImage34; set { _explicitNullValueHttpsSlackComTeamImage34 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_image_34"); else _explicitNullProperties?.Remove("https://slack.com/team_image_34"); } }
+        public string HttpsSlackComTeamImage34 { get => _explicitNullValueHttpsSlackComTeamImage34; set { _explicitNullValueHttpsSlackComTeamImage34 = value; AdditionalData?.Remove("https://slack.com/team_image_34"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_image_34"); else _explicitNullProperties?.Remove("https://slack.com/team_image_34"); } }
         private string _explicitNullValueHttpsSlackComTeamImage34 = default!;
 #endif
         /// <summary>The httpsSlackComTeam_image_44 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HttpsSlackComTeamImage44 { get => _explicitNullValueHttpsSlackComTeamImage44; set { _explicitNullValueHttpsSlackComTeamImage44 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_image_44"); else _explicitNullProperties?.Remove("https://slack.com/team_image_44"); } }
+        public string? HttpsSlackComTeamImage44 { get => _explicitNullValueHttpsSlackComTeamImage44; set { _explicitNullValueHttpsSlackComTeamImage44 = value; AdditionalData?.Remove("https://slack.com/team_image_44"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_image_44"); else _explicitNullProperties?.Remove("https://slack.com/team_image_44"); } }
         private string? _explicitNullValueHttpsSlackComTeamImage44 = default!;
 #nullable restore
 #else
-        public string HttpsSlackComTeamImage44 { get => _explicitNullValueHttpsSlackComTeamImage44; set { _explicitNullValueHttpsSlackComTeamImage44 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_image_44"); else _explicitNullProperties?.Remove("https://slack.com/team_image_44"); } }
+        public string HttpsSlackComTeamImage44 { get => _explicitNullValueHttpsSlackComTeamImage44; set { _explicitNullValueHttpsSlackComTeamImage44 = value; AdditionalData?.Remove("https://slack.com/team_image_44"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_image_44"); else _explicitNullProperties?.Remove("https://slack.com/team_image_44"); } }
         private string _explicitNullValueHttpsSlackComTeamImage44 = default!;
 #endif
         /// <summary>The httpsSlackComTeam_image_68 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HttpsSlackComTeamImage68 { get => _explicitNullValueHttpsSlackComTeamImage68; set { _explicitNullValueHttpsSlackComTeamImage68 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_image_68"); else _explicitNullProperties?.Remove("https://slack.com/team_image_68"); } }
+        public string? HttpsSlackComTeamImage68 { get => _explicitNullValueHttpsSlackComTeamImage68; set { _explicitNullValueHttpsSlackComTeamImage68 = value; AdditionalData?.Remove("https://slack.com/team_image_68"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_image_68"); else _explicitNullProperties?.Remove("https://slack.com/team_image_68"); } }
         private string? _explicitNullValueHttpsSlackComTeamImage68 = default!;
 #nullable restore
 #else
-        public string HttpsSlackComTeamImage68 { get => _explicitNullValueHttpsSlackComTeamImage68; set { _explicitNullValueHttpsSlackComTeamImage68 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_image_68"); else _explicitNullProperties?.Remove("https://slack.com/team_image_68"); } }
+        public string HttpsSlackComTeamImage68 { get => _explicitNullValueHttpsSlackComTeamImage68; set { _explicitNullValueHttpsSlackComTeamImage68 = value; AdditionalData?.Remove("https://slack.com/team_image_68"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_image_68"); else _explicitNullProperties?.Remove("https://slack.com/team_image_68"); } }
         private string _explicitNullValueHttpsSlackComTeamImage68 = default!;
 #endif
         /// <summary>The httpsSlackComTeam_image_88 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HttpsSlackComTeamImage88 { get => _explicitNullValueHttpsSlackComTeamImage88; set { _explicitNullValueHttpsSlackComTeamImage88 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_image_88"); else _explicitNullProperties?.Remove("https://slack.com/team_image_88"); } }
+        public string? HttpsSlackComTeamImage88 { get => _explicitNullValueHttpsSlackComTeamImage88; set { _explicitNullValueHttpsSlackComTeamImage88 = value; AdditionalData?.Remove("https://slack.com/team_image_88"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_image_88"); else _explicitNullProperties?.Remove("https://slack.com/team_image_88"); } }
         private string? _explicitNullValueHttpsSlackComTeamImage88 = default!;
 #nullable restore
 #else
-        public string HttpsSlackComTeamImage88 { get => _explicitNullValueHttpsSlackComTeamImage88; set { _explicitNullValueHttpsSlackComTeamImage88 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_image_88"); else _explicitNullProperties?.Remove("https://slack.com/team_image_88"); } }
+        public string HttpsSlackComTeamImage88 { get => _explicitNullValueHttpsSlackComTeamImage88; set { _explicitNullValueHttpsSlackComTeamImage88 = value; AdditionalData?.Remove("https://slack.com/team_image_88"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_image_88"); else _explicitNullProperties?.Remove("https://slack.com/team_image_88"); } }
         private string _explicitNullValueHttpsSlackComTeamImage88 = default!;
 #endif
         /// <summary>The httpsSlackComTeam_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HttpsSlackComTeamName { get => _explicitNullValueHttpsSlackComTeamName; set { _explicitNullValueHttpsSlackComTeamName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_name"); else _explicitNullProperties?.Remove("https://slack.com/team_name"); } }
+        public string? HttpsSlackComTeamName { get => _explicitNullValueHttpsSlackComTeamName; set { _explicitNullValueHttpsSlackComTeamName = value; AdditionalData?.Remove("https://slack.com/team_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_name"); else _explicitNullProperties?.Remove("https://slack.com/team_name"); } }
         private string? _explicitNullValueHttpsSlackComTeamName = default!;
 #nullable restore
 #else
-        public string HttpsSlackComTeamName { get => _explicitNullValueHttpsSlackComTeamName; set { _explicitNullValueHttpsSlackComTeamName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_name"); else _explicitNullProperties?.Remove("https://slack.com/team_name"); } }
+        public string HttpsSlackComTeamName { get => _explicitNullValueHttpsSlackComTeamName; set { _explicitNullValueHttpsSlackComTeamName = value; AdditionalData?.Remove("https://slack.com/team_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/team_name"); else _explicitNullProperties?.Remove("https://slack.com/team_name"); } }
         private string _explicitNullValueHttpsSlackComTeamName = default!;
 #endif
         /// <summary>The httpsSlackComUser_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HttpsSlackComUserId { get => _explicitNullValueHttpsSlackComUserId; set { _explicitNullValueHttpsSlackComUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/user_id"); else _explicitNullProperties?.Remove("https://slack.com/user_id"); } }
+        public string? HttpsSlackComUserId { get => _explicitNullValueHttpsSlackComUserId; set { _explicitNullValueHttpsSlackComUserId = value; AdditionalData?.Remove("https://slack.com/user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/user_id"); else _explicitNullProperties?.Remove("https://slack.com/user_id"); } }
         private string? _explicitNullValueHttpsSlackComUserId = default!;
 #nullable restore
 #else
-        public string HttpsSlackComUserId { get => _explicitNullValueHttpsSlackComUserId; set { _explicitNullValueHttpsSlackComUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/user_id"); else _explicitNullProperties?.Remove("https://slack.com/user_id"); } }
+        public string HttpsSlackComUserId { get => _explicitNullValueHttpsSlackComUserId; set { _explicitNullValueHttpsSlackComUserId = value; AdditionalData?.Remove("https://slack.com/user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/user_id"); else _explicitNullProperties?.Remove("https://slack.com/user_id"); } }
         private string _explicitNullValueHttpsSlackComUserId = default!;
 #endif
         /// <summary>The httpsSlackComUser_image_1024 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HttpsSlackComUserImage1024 { get => _explicitNullValueHttpsSlackComUserImage1024; set { _explicitNullValueHttpsSlackComUserImage1024 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/user_image_1024"); else _explicitNullProperties?.Remove("https://slack.com/user_image_1024"); } }
+        public string? HttpsSlackComUserImage1024 { get => _explicitNullValueHttpsSlackComUserImage1024; set { _explicitNullValueHttpsSlackComUserImage1024 = value; AdditionalData?.Remove("https://slack.com/user_image_1024"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/user_image_1024"); else _explicitNullProperties?.Remove("https://slack.com/user_image_1024"); } }
         private string? _explicitNullValueHttpsSlackComUserImage1024 = default!;
 #nullable restore
 #else
-        public string HttpsSlackComUserImage1024 { get => _explicitNullValueHttpsSlackComUserImage1024; set { _explicitNullValueHttpsSlackComUserImage1024 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/user_image_1024"); else _explicitNullProperties?.Remove("https://slack.com/user_image_1024"); } }
+        public string HttpsSlackComUserImage1024 { get => _explicitNullValueHttpsSlackComUserImage1024; set { _explicitNullValueHttpsSlackComUserImage1024 = value; AdditionalData?.Remove("https://slack.com/user_image_1024"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/user_image_1024"); else _explicitNullProperties?.Remove("https://slack.com/user_image_1024"); } }
         private string _explicitNullValueHttpsSlackComUserImage1024 = default!;
 #endif
         /// <summary>The httpsSlackComUser_image_192 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HttpsSlackComUserImage192 { get => _explicitNullValueHttpsSlackComUserImage192; set { _explicitNullValueHttpsSlackComUserImage192 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/user_image_192"); else _explicitNullProperties?.Remove("https://slack.com/user_image_192"); } }
+        public string? HttpsSlackComUserImage192 { get => _explicitNullValueHttpsSlackComUserImage192; set { _explicitNullValueHttpsSlackComUserImage192 = value; AdditionalData?.Remove("https://slack.com/user_image_192"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/user_image_192"); else _explicitNullProperties?.Remove("https://slack.com/user_image_192"); } }
         private string? _explicitNullValueHttpsSlackComUserImage192 = default!;
 #nullable restore
 #else
-        public string HttpsSlackComUserImage192 { get => _explicitNullValueHttpsSlackComUserImage192; set { _explicitNullValueHttpsSlackComUserImage192 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/user_image_192"); else _explicitNullProperties?.Remove("https://slack.com/user_image_192"); } }
+        public string HttpsSlackComUserImage192 { get => _explicitNullValueHttpsSlackComUserImage192; set { _explicitNullValueHttpsSlackComUserImage192 = value; AdditionalData?.Remove("https://slack.com/user_image_192"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/user_image_192"); else _explicitNullProperties?.Remove("https://slack.com/user_image_192"); } }
         private string _explicitNullValueHttpsSlackComUserImage192 = default!;
 #endif
         /// <summary>The httpsSlackComUser_image_24 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HttpsSlackComUserImage24 { get => _explicitNullValueHttpsSlackComUserImage24; set { _explicitNullValueHttpsSlackComUserImage24 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/user_image_24"); else _explicitNullProperties?.Remove("https://slack.com/user_image_24"); } }
+        public string? HttpsSlackComUserImage24 { get => _explicitNullValueHttpsSlackComUserImage24; set { _explicitNullValueHttpsSlackComUserImage24 = value; AdditionalData?.Remove("https://slack.com/user_image_24"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/user_image_24"); else _explicitNullProperties?.Remove("https://slack.com/user_image_24"); } }
         private string? _explicitNullValueHttpsSlackComUserImage24 = default!;
 #nullable restore
 #else
-        public string HttpsSlackComUserImage24 { get => _explicitNullValueHttpsSlackComUserImage24; set { _explicitNullValueHttpsSlackComUserImage24 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/user_image_24"); else _explicitNullProperties?.Remove("https://slack.com/user_image_24"); } }
+        public string HttpsSlackComUserImage24 { get => _explicitNullValueHttpsSlackComUserImage24; set { _explicitNullValueHttpsSlackComUserImage24 = value; AdditionalData?.Remove("https://slack.com/user_image_24"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/user_image_24"); else _explicitNullProperties?.Remove("https://slack.com/user_image_24"); } }
         private string _explicitNullValueHttpsSlackComUserImage24 = default!;
 #endif
         /// <summary>The httpsSlackComUser_image_32 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HttpsSlackComUserImage32 { get => _explicitNullValueHttpsSlackComUserImage32; set { _explicitNullValueHttpsSlackComUserImage32 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/user_image_32"); else _explicitNullProperties?.Remove("https://slack.com/user_image_32"); } }
+        public string? HttpsSlackComUserImage32 { get => _explicitNullValueHttpsSlackComUserImage32; set { _explicitNullValueHttpsSlackComUserImage32 = value; AdditionalData?.Remove("https://slack.com/user_image_32"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/user_image_32"); else _explicitNullProperties?.Remove("https://slack.com/user_image_32"); } }
         private string? _explicitNullValueHttpsSlackComUserImage32 = default!;
 #nullable restore
 #else
-        public string HttpsSlackComUserImage32 { get => _explicitNullValueHttpsSlackComUserImage32; set { _explicitNullValueHttpsSlackComUserImage32 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/user_image_32"); else _explicitNullProperties?.Remove("https://slack.com/user_image_32"); } }
+        public string HttpsSlackComUserImage32 { get => _explicitNullValueHttpsSlackComUserImage32; set { _explicitNullValueHttpsSlackComUserImage32 = value; AdditionalData?.Remove("https://slack.com/user_image_32"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/user_image_32"); else _explicitNullProperties?.Remove("https://slack.com/user_image_32"); } }
         private string _explicitNullValueHttpsSlackComUserImage32 = default!;
 #endif
         /// <summary>The httpsSlackComUser_image_48 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HttpsSlackComUserImage48 { get => _explicitNullValueHttpsSlackComUserImage48; set { _explicitNullValueHttpsSlackComUserImage48 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/user_image_48"); else _explicitNullProperties?.Remove("https://slack.com/user_image_48"); } }
+        public string? HttpsSlackComUserImage48 { get => _explicitNullValueHttpsSlackComUserImage48; set { _explicitNullValueHttpsSlackComUserImage48 = value; AdditionalData?.Remove("https://slack.com/user_image_48"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/user_image_48"); else _explicitNullProperties?.Remove("https://slack.com/user_image_48"); } }
         private string? _explicitNullValueHttpsSlackComUserImage48 = default!;
 #nullable restore
 #else
-        public string HttpsSlackComUserImage48 { get => _explicitNullValueHttpsSlackComUserImage48; set { _explicitNullValueHttpsSlackComUserImage48 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/user_image_48"); else _explicitNullProperties?.Remove("https://slack.com/user_image_48"); } }
+        public string HttpsSlackComUserImage48 { get => _explicitNullValueHttpsSlackComUserImage48; set { _explicitNullValueHttpsSlackComUserImage48 = value; AdditionalData?.Remove("https://slack.com/user_image_48"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/user_image_48"); else _explicitNullProperties?.Remove("https://slack.com/user_image_48"); } }
         private string _explicitNullValueHttpsSlackComUserImage48 = default!;
 #endif
         /// <summary>The httpsSlackComUser_image_512 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HttpsSlackComUserImage512 { get => _explicitNullValueHttpsSlackComUserImage512; set { _explicitNullValueHttpsSlackComUserImage512 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/user_image_512"); else _explicitNullProperties?.Remove("https://slack.com/user_image_512"); } }
+        public string? HttpsSlackComUserImage512 { get => _explicitNullValueHttpsSlackComUserImage512; set { _explicitNullValueHttpsSlackComUserImage512 = value; AdditionalData?.Remove("https://slack.com/user_image_512"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/user_image_512"); else _explicitNullProperties?.Remove("https://slack.com/user_image_512"); } }
         private string? _explicitNullValueHttpsSlackComUserImage512 = default!;
 #nullable restore
 #else
-        public string HttpsSlackComUserImage512 { get => _explicitNullValueHttpsSlackComUserImage512; set { _explicitNullValueHttpsSlackComUserImage512 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/user_image_512"); else _explicitNullProperties?.Remove("https://slack.com/user_image_512"); } }
+        public string HttpsSlackComUserImage512 { get => _explicitNullValueHttpsSlackComUserImage512; set { _explicitNullValueHttpsSlackComUserImage512 = value; AdditionalData?.Remove("https://slack.com/user_image_512"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/user_image_512"); else _explicitNullProperties?.Remove("https://slack.com/user_image_512"); } }
         private string _explicitNullValueHttpsSlackComUserImage512 = default!;
 #endif
         /// <summary>The httpsSlackComUser_image_72 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HttpsSlackComUserImage72 { get => _explicitNullValueHttpsSlackComUserImage72; set { _explicitNullValueHttpsSlackComUserImage72 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/user_image_72"); else _explicitNullProperties?.Remove("https://slack.com/user_image_72"); } }
+        public string? HttpsSlackComUserImage72 { get => _explicitNullValueHttpsSlackComUserImage72; set { _explicitNullValueHttpsSlackComUserImage72 = value; AdditionalData?.Remove("https://slack.com/user_image_72"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/user_image_72"); else _explicitNullProperties?.Remove("https://slack.com/user_image_72"); } }
         private string? _explicitNullValueHttpsSlackComUserImage72 = default!;
 #nullable restore
 #else
-        public string HttpsSlackComUserImage72 { get => _explicitNullValueHttpsSlackComUserImage72; set { _explicitNullValueHttpsSlackComUserImage72 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/user_image_72"); else _explicitNullProperties?.Remove("https://slack.com/user_image_72"); } }
+        public string HttpsSlackComUserImage72 { get => _explicitNullValueHttpsSlackComUserImage72; set { _explicitNullValueHttpsSlackComUserImage72 = value; AdditionalData?.Remove("https://slack.com/user_image_72"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("https://slack.com/user_image_72"); else _explicitNullProperties?.Remove("https://slack.com/user_image_72"); } }
         private string _explicitNullValueHttpsSlackComUserImage72 = default!;
 #endif
         /// <summary>The locale property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
+        public string? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; AdditionalData?.Remove("locale"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
         private string? _explicitNullValueLocale = default!;
 #nullable restore
 #else
-        public string Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
+        public string Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; AdditionalData?.Remove("locale"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
         private string _explicitNullValueLocale = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The needed property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Needed { get => _explicitNullValueNeeded; set { _explicitNullValueNeeded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("needed"); else _explicitNullProperties?.Remove("needed"); } }
+        public string? Needed { get => _explicitNullValueNeeded; set { _explicitNullValueNeeded = value; AdditionalData?.Remove("needed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("needed"); else _explicitNullProperties?.Remove("needed"); } }
         private string? _explicitNullValueNeeded = default!;
 #nullable restore
 #else
-        public string Needed { get => _explicitNullValueNeeded; set { _explicitNullValueNeeded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("needed"); else _explicitNullProperties?.Remove("needed"); } }
+        public string Needed { get => _explicitNullValueNeeded; set { _explicitNullValueNeeded = value; AdditionalData?.Remove("needed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("needed"); else _explicitNullProperties?.Remove("needed"); } }
         private string _explicitNullValueNeeded = default!;
 #endif
         /// <summary>The ok property</summary>
-        public bool? Ok { get => _explicitNullValueOk; set { _explicitNullValueOk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ok"); else _explicitNullProperties?.Remove("ok"); } }
+        public bool? Ok { get => _explicitNullValueOk; set { _explicitNullValueOk = value; AdditionalData?.Remove("ok"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ok"); else _explicitNullProperties?.Remove("ok"); } }
         private bool? _explicitNullValueOk = default!;
         /// <summary>The picture property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Picture { get => _explicitNullValuePicture; set { _explicitNullValuePicture = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("picture"); else _explicitNullProperties?.Remove("picture"); } }
+        public string? Picture { get => _explicitNullValuePicture; set { _explicitNullValuePicture = value; AdditionalData?.Remove("picture"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("picture"); else _explicitNullProperties?.Remove("picture"); } }
         private string? _explicitNullValuePicture = default!;
 #nullable restore
 #else
-        public string Picture { get => _explicitNullValuePicture; set { _explicitNullValuePicture = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("picture"); else _explicitNullProperties?.Remove("picture"); } }
+        public string Picture { get => _explicitNullValuePicture; set { _explicitNullValuePicture = value; AdditionalData?.Remove("picture"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("picture"); else _explicitNullProperties?.Remove("picture"); } }
         private string _explicitNullValuePicture = default!;
 #endif
         /// <summary>The provided property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Provided { get => _explicitNullValueProvided; set { _explicitNullValueProvided = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provided"); else _explicitNullProperties?.Remove("provided"); } }
+        public string? Provided { get => _explicitNullValueProvided; set { _explicitNullValueProvided = value; AdditionalData?.Remove("provided"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provided"); else _explicitNullProperties?.Remove("provided"); } }
         private string? _explicitNullValueProvided = default!;
 #nullable restore
 #else
-        public string Provided { get => _explicitNullValueProvided; set { _explicitNullValueProvided = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provided"); else _explicitNullProperties?.Remove("provided"); } }
+        public string Provided { get => _explicitNullValueProvided; set { _explicitNullValueProvided = value; AdditionalData?.Remove("provided"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provided"); else _explicitNullProperties?.Remove("provided"); } }
         private string _explicitNullValueProvided = default!;
 #endif
         /// <summary>The response_metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata? ResponseMetadata { get => _explicitNullValueResponseMetadata; set { _explicitNullValueResponseMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response_metadata"); else _explicitNullProperties?.Remove("response_metadata"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata? ResponseMetadata { get => _explicitNullValueResponseMetadata; set { _explicitNullValueResponseMetadata = value; AdditionalData?.Remove("response_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response_metadata"); else _explicitNullProperties?.Remove("response_metadata"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata? _explicitNullValueResponseMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata ResponseMetadata { get => _explicitNullValueResponseMetadata; set { _explicitNullValueResponseMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response_metadata"); else _explicitNullProperties?.Remove("response_metadata"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata ResponseMetadata { get => _explicitNullValueResponseMetadata; set { _explicitNullValueResponseMetadata = value; AdditionalData?.Remove("response_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response_metadata"); else _explicitNullProperties?.Remove("response_metadata"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata _explicitNullValueResponseMetadata = default!;
 #endif
         /// <summary>The sub property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Sub { get => _explicitNullValueSub; set { _explicitNullValueSub = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sub"); else _explicitNullProperties?.Remove("sub"); } }
+        public string? Sub { get => _explicitNullValueSub; set { _explicitNullValueSub = value; AdditionalData?.Remove("sub"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sub"); else _explicitNullProperties?.Remove("sub"); } }
         private string? _explicitNullValueSub = default!;
 #nullable restore
 #else
-        public string Sub { get => _explicitNullValueSub; set { _explicitNullValueSub = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sub"); else _explicitNullProperties?.Remove("sub"); } }
+        public string Sub { get => _explicitNullValueSub; set { _explicitNullValueSub = value; AdditionalData?.Remove("sub"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sub"); else _explicitNullProperties?.Remove("sub"); } }
         private string _explicitNullValueSub = default!;
 #endif
         /// <summary>The warning property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Warning { get => _explicitNullValueWarning; set { _explicitNullValueWarning = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warning"); else _explicitNullProperties?.Remove("warning"); } }
+        public string? Warning { get => _explicitNullValueWarning; set { _explicitNullValueWarning = value; AdditionalData?.Remove("warning"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warning"); else _explicitNullProperties?.Remove("warning"); } }
         private string? _explicitNullValueWarning = default!;
 #nullable restore
 #else
-        public string Warning { get => _explicitNullValueWarning; set { _explicitNullValueWarning = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warning"); else _explicitNullProperties?.Remove("warning"); } }
+        public string Warning { get => _explicitNullValueWarning; set { _explicitNullValueWarning = value; AdditionalData?.Remove("warning"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warning"); else _explicitNullProperties?.Remove("warning"); } }
         private string _explicitNullValueWarning = default!;
 #endif
         /// <summary>

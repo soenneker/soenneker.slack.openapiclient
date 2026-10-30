@@ -17,94 +17,105 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("at_channel_restricted") is { } nullNodeAtChannelRestricted && nullNodeAtChannelRestricted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AtChannelRestricted = null;
-            if (parseNode.GetChildNode("at_here_restricted") is { } nullNodeAtHereRestricted && nullNodeAtHereRestricted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AtHereRestricted = null;
-            if (parseNode.GetChildNode("canvas") is { } nullNodeCanvas && nullNodeCanvas.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Canvas = null;
-            if (parseNode.GetChildNode("has_slack_connect_invite_created") is { } nullNodeHasSlackConnectInviteCreated && nullNodeHasSlackConnectInviteCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasSlackConnectInviteCreated = null;
-            if (parseNode.GetChildNode("huddles_restricted") is { } nullNodeHuddlesRestricted && nullNodeHuddlesRestricted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HuddlesRestricted = null;
-            if (parseNode.GetChildNode("is_dormant") is { } nullNodeIsDormant && nullNodeIsDormant.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsDormant = null;
-            if (parseNode.GetChildNode("meeting_notes") is { } nullNodeMeetingNotes && nullNodeMeetingNotes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MeetingNotes = null;
-            if (parseNode.GetChildNode("posting_restricted_to") is { } nullNodePostingRestrictedTo && nullNodePostingRestrictedTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostingRestrictedTo = null;
-            if (parseNode.GetChildNode("tabs") is { } nullNodeTabs && nullNodeTabs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tabs = null;
-            if (parseNode.GetChildNode("tabz") is { } nullNodeTabz && nullNodeTabz.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tabz = null;
-            if (parseNode.GetChildNode("threads_restricted_to") is { } nullNodeThreadsRestrictedTo && nullNodeThreadsRestrictedTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreadsRestrictedTo = null;
+            if (parseNode.GetChildNode("at_channel_restricted") is null) { _explicitNullValueAtChannelRestricted = default!; _explicitNullProperties?.Remove("at_channel_restricted"); }
+            else if (parseNode.GetChildNode("at_channel_restricted") is { } nullNodeAtChannelRestricted && nullNodeAtChannelRestricted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AtChannelRestricted = null;
+            if (parseNode.GetChildNode("at_here_restricted") is null) { _explicitNullValueAtHereRestricted = default!; _explicitNullProperties?.Remove("at_here_restricted"); }
+            else if (parseNode.GetChildNode("at_here_restricted") is { } nullNodeAtHereRestricted && nullNodeAtHereRestricted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AtHereRestricted = null;
+            if (parseNode.GetChildNode("canvas") is null) { _explicitNullValueCanvas = default!; _explicitNullProperties?.Remove("canvas"); }
+            else if (parseNode.GetChildNode("canvas") is { } nullNodeCanvas && nullNodeCanvas.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Canvas = null;
+            if (parseNode.GetChildNode("has_slack_connect_invite_created") is null) { _explicitNullValueHasSlackConnectInviteCreated = default!; _explicitNullProperties?.Remove("has_slack_connect_invite_created"); }
+            else if (parseNode.GetChildNode("has_slack_connect_invite_created") is { } nullNodeHasSlackConnectInviteCreated && nullNodeHasSlackConnectInviteCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasSlackConnectInviteCreated = null;
+            if (parseNode.GetChildNode("huddles_restricted") is null) { _explicitNullValueHuddlesRestricted = default!; _explicitNullProperties?.Remove("huddles_restricted"); }
+            else if (parseNode.GetChildNode("huddles_restricted") is { } nullNodeHuddlesRestricted && nullNodeHuddlesRestricted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HuddlesRestricted = null;
+            if (parseNode.GetChildNode("is_dormant") is null) { _explicitNullValueIsDormant = default!; _explicitNullProperties?.Remove("is_dormant"); }
+            else if (parseNode.GetChildNode("is_dormant") is { } nullNodeIsDormant && nullNodeIsDormant.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsDormant = null;
+            if (parseNode.GetChildNode("meeting_notes") is null) { _explicitNullValueMeetingNotes = default!; _explicitNullProperties?.Remove("meeting_notes"); }
+            else if (parseNode.GetChildNode("meeting_notes") is { } nullNodeMeetingNotes && nullNodeMeetingNotes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MeetingNotes = null;
+            if (parseNode.GetChildNode("posting_restricted_to") is null) { _explicitNullValuePostingRestrictedTo = default!; _explicitNullProperties?.Remove("posting_restricted_to"); }
+            else if (parseNode.GetChildNode("posting_restricted_to") is { } nullNodePostingRestrictedTo && nullNodePostingRestrictedTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostingRestrictedTo = null;
+            if (parseNode.GetChildNode("tabs") is null) { _explicitNullValueTabs = default!; _explicitNullProperties?.Remove("tabs"); }
+            else if (parseNode.GetChildNode("tabs") is { } nullNodeTabs && nullNodeTabs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tabs = null;
+            if (parseNode.GetChildNode("tabz") is null) { _explicitNullValueTabz = default!; _explicitNullProperties?.Remove("tabz"); }
+            else if (parseNode.GetChildNode("tabz") is { } nullNodeTabz && nullNodeTabz.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tabz = null;
+            if (parseNode.GetChildNode("threads_restricted_to") is null) { _explicitNullValueThreadsRestrictedTo = default!; _explicitNullProperties?.Remove("threads_restricted_to"); }
+            else if (parseNode.GetChildNode("threads_restricted_to") is { } nullNodeThreadsRestrictedTo && nullNodeThreadsRestrictedTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreadsRestrictedTo = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The at_channel_restricted property</summary>
-        public bool? AtChannelRestricted { get => _explicitNullValueAtChannelRestricted; set { _explicitNullValueAtChannelRestricted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("at_channel_restricted"); else _explicitNullProperties?.Remove("at_channel_restricted"); } }
+        public bool? AtChannelRestricted { get => _explicitNullValueAtChannelRestricted; set { _explicitNullValueAtChannelRestricted = value; AdditionalData?.Remove("at_channel_restricted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("at_channel_restricted"); else _explicitNullProperties?.Remove("at_channel_restricted"); } }
         private bool? _explicitNullValueAtChannelRestricted = default!;
         /// <summary>The at_here_restricted property</summary>
-        public bool? AtHereRestricted { get => _explicitNullValueAtHereRestricted; set { _explicitNullValueAtHereRestricted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("at_here_restricted"); else _explicitNullProperties?.Remove("at_here_restricted"); } }
+        public bool? AtHereRestricted { get => _explicitNullValueAtHereRestricted; set { _explicitNullValueAtHereRestricted = value; AdditionalData?.Remove("at_here_restricted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("at_here_restricted"); else _explicitNullProperties?.Remove("at_here_restricted"); } }
         private bool? _explicitNullValueAtHereRestricted = default!;
         /// <summary>The canvas property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.PropertiesCanvas? Canvas { get => _explicitNullValueCanvas; set { _explicitNullValueCanvas = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas"); else _explicitNullProperties?.Remove("canvas"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.PropertiesCanvas? Canvas { get => _explicitNullValueCanvas; set { _explicitNullValueCanvas = value; AdditionalData?.Remove("canvas"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas"); else _explicitNullProperties?.Remove("canvas"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.PropertiesCanvas? _explicitNullValueCanvas = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.PropertiesCanvas Canvas { get => _explicitNullValueCanvas; set { _explicitNullValueCanvas = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas"); else _explicitNullProperties?.Remove("canvas"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.PropertiesCanvas Canvas { get => _explicitNullValueCanvas; set { _explicitNullValueCanvas = value; AdditionalData?.Remove("canvas"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas"); else _explicitNullProperties?.Remove("canvas"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.PropertiesCanvas _explicitNullValueCanvas = default!;
 #endif
         /// <summary>The has_slack_connect_invite_created property</summary>
-        public bool? HasSlackConnectInviteCreated { get => _explicitNullValueHasSlackConnectInviteCreated; set { _explicitNullValueHasSlackConnectInviteCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_slack_connect_invite_created"); else _explicitNullProperties?.Remove("has_slack_connect_invite_created"); } }
+        public bool? HasSlackConnectInviteCreated { get => _explicitNullValueHasSlackConnectInviteCreated; set { _explicitNullValueHasSlackConnectInviteCreated = value; AdditionalData?.Remove("has_slack_connect_invite_created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_slack_connect_invite_created"); else _explicitNullProperties?.Remove("has_slack_connect_invite_created"); } }
         private bool? _explicitNullValueHasSlackConnectInviteCreated = default!;
         /// <summary>The huddles_restricted property</summary>
-        public bool? HuddlesRestricted { get => _explicitNullValueHuddlesRestricted; set { _explicitNullValueHuddlesRestricted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("huddles_restricted"); else _explicitNullProperties?.Remove("huddles_restricted"); } }
+        public bool? HuddlesRestricted { get => _explicitNullValueHuddlesRestricted; set { _explicitNullValueHuddlesRestricted = value; AdditionalData?.Remove("huddles_restricted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("huddles_restricted"); else _explicitNullProperties?.Remove("huddles_restricted"); } }
         private bool? _explicitNullValueHuddlesRestricted = default!;
         /// <summary>The is_dormant property</summary>
-        public bool? IsDormant { get => _explicitNullValueIsDormant; set { _explicitNullValueIsDormant = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_dormant"); else _explicitNullProperties?.Remove("is_dormant"); } }
+        public bool? IsDormant { get => _explicitNullValueIsDormant; set { _explicitNullValueIsDormant = value; AdditionalData?.Remove("is_dormant"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_dormant"); else _explicitNullProperties?.Remove("is_dormant"); } }
         private bool? _explicitNullValueIsDormant = default!;
         /// <summary>The meeting_notes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MeetingNotes? MeetingNotes { get => _explicitNullValueMeetingNotes; set { _explicitNullValueMeetingNotes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meeting_notes"); else _explicitNullProperties?.Remove("meeting_notes"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.MeetingNotes? MeetingNotes { get => _explicitNullValueMeetingNotes; set { _explicitNullValueMeetingNotes = value; AdditionalData?.Remove("meeting_notes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meeting_notes"); else _explicitNullProperties?.Remove("meeting_notes"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.MeetingNotes? _explicitNullValueMeetingNotes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.MeetingNotes MeetingNotes { get => _explicitNullValueMeetingNotes; set { _explicitNullValueMeetingNotes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meeting_notes"); else _explicitNullProperties?.Remove("meeting_notes"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.MeetingNotes MeetingNotes { get => _explicitNullValueMeetingNotes; set { _explicitNullValueMeetingNotes = value; AdditionalData?.Remove("meeting_notes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meeting_notes"); else _explicitNullProperties?.Remove("meeting_notes"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.MeetingNotes _explicitNullValueMeetingNotes = default!;
 #endif
         /// <summary>The posting_restricted_to property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.PostingRestrictedTo? PostingRestrictedTo { get => _explicitNullValuePostingRestrictedTo; set { _explicitNullValuePostingRestrictedTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("posting_restricted_to"); else _explicitNullProperties?.Remove("posting_restricted_to"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.PostingRestrictedTo? PostingRestrictedTo { get => _explicitNullValuePostingRestrictedTo; set { _explicitNullValuePostingRestrictedTo = value; AdditionalData?.Remove("posting_restricted_to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("posting_restricted_to"); else _explicitNullProperties?.Remove("posting_restricted_to"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.PostingRestrictedTo? _explicitNullValuePostingRestrictedTo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.PostingRestrictedTo PostingRestrictedTo { get => _explicitNullValuePostingRestrictedTo; set { _explicitNullValuePostingRestrictedTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("posting_restricted_to"); else _explicitNullProperties?.Remove("posting_restricted_to"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.PostingRestrictedTo PostingRestrictedTo { get => _explicitNullValuePostingRestrictedTo; set { _explicitNullValuePostingRestrictedTo = value; AdditionalData?.Remove("posting_restricted_to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("posting_restricted_to"); else _explicitNullProperties?.Remove("posting_restricted_to"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.PostingRestrictedTo _explicitNullValuePostingRestrictedTo = default!;
 #endif
         /// <summary>The tabs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Tab>? Tabs { get => _explicitNullValueTabs; set { _explicitNullValueTabs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tabs"); else _explicitNullProperties?.Remove("tabs"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Tab>? Tabs { get => _explicitNullValueTabs; set { _explicitNullValueTabs = value; AdditionalData?.Remove("tabs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tabs"); else _explicitNullProperties?.Remove("tabs"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.Tab>? _explicitNullValueTabs = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Tab> Tabs { get => _explicitNullValueTabs; set { _explicitNullValueTabs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tabs"); else _explicitNullProperties?.Remove("tabs"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Tab> Tabs { get => _explicitNullValueTabs; set { _explicitNullValueTabs = value; AdditionalData?.Remove("tabs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tabs"); else _explicitNullProperties?.Remove("tabs"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.Tab> _explicitNullValueTabs = default!;
 #endif
         /// <summary>The tabz property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Tab>? Tabz { get => _explicitNullValueTabz; set { _explicitNullValueTabz = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tabz"); else _explicitNullProperties?.Remove("tabz"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Tab>? Tabz { get => _explicitNullValueTabz; set { _explicitNullValueTabz = value; AdditionalData?.Remove("tabz"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tabz"); else _explicitNullProperties?.Remove("tabz"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.Tab>? _explicitNullValueTabz = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Tab> Tabz { get => _explicitNullValueTabz; set { _explicitNullValueTabz = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tabz"); else _explicitNullProperties?.Remove("tabz"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Tab> Tabz { get => _explicitNullValueTabz; set { _explicitNullValueTabz = value; AdditionalData?.Remove("tabz"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tabz"); else _explicitNullProperties?.Remove("tabz"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.Tab> _explicitNullValueTabz = default!;
 #endif
         /// <summary>The threads_restricted_to property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ThreadsRestrictedTo? ThreadsRestrictedTo { get => _explicitNullValueThreadsRestrictedTo; set { _explicitNullValueThreadsRestrictedTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads_restricted_to"); else _explicitNullProperties?.Remove("threads_restricted_to"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.ThreadsRestrictedTo? ThreadsRestrictedTo { get => _explicitNullValueThreadsRestrictedTo; set { _explicitNullValueThreadsRestrictedTo = value; AdditionalData?.Remove("threads_restricted_to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads_restricted_to"); else _explicitNullProperties?.Remove("threads_restricted_to"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.ThreadsRestrictedTo? _explicitNullValueThreadsRestrictedTo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ThreadsRestrictedTo ThreadsRestrictedTo { get => _explicitNullValueThreadsRestrictedTo; set { _explicitNullValueThreadsRestrictedTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads_restricted_to"); else _explicitNullProperties?.Remove("threads_restricted_to"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.ThreadsRestrictedTo ThreadsRestrictedTo { get => _explicitNullValueThreadsRestrictedTo; set { _explicitNullValueThreadsRestrictedTo = value; AdditionalData?.Remove("threads_restricted_to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads_restricted_to"); else _explicitNullProperties?.Remove("threads_restricted_to"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.ThreadsRestrictedTo _explicitNullValueThreadsRestrictedTo = default!;
 #endif
         /// <summary>

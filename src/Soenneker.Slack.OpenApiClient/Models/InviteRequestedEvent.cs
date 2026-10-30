@@ -17,8 +17,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("invite_request") is { } nullNodeInviteRequest && nullNodeInviteRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InviteRequest = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("invite_request") is null) { _explicitNullValueInviteRequest = default!; _explicitNullProperties?.Remove("invite_request"); }
+            else if (parseNode.GetChildNode("invite_request") is { } nullNodeInviteRequest && nullNodeInviteRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InviteRequest = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The invite_request property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.InviteRequestedEventInviteRequest? InviteRequest { get => _explicitNullValueInviteRequest; set { _explicitNullValueInviteRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invite_request"); else _explicitNullProperties?.Remove("invite_request"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.InviteRequestedEventInviteRequest? InviteRequest { get => _explicitNullValueInviteRequest; set { _explicitNullValueInviteRequest = value; AdditionalData?.Remove("invite_request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invite_request"); else _explicitNullProperties?.Remove("invite_request"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.InviteRequestedEventInviteRequest? _explicitNullValueInviteRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.InviteRequestedEventInviteRequest InviteRequest { get => _explicitNullValueInviteRequest; set { _explicitNullValueInviteRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invite_request"); else _explicitNullProperties?.Remove("invite_request"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.InviteRequestedEventInviteRequest InviteRequest { get => _explicitNullValueInviteRequest; set { _explicitNullValueInviteRequest = value; AdditionalData?.Remove("invite_request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invite_request"); else _explicitNullProperties?.Remove("invite_request"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.InviteRequestedEventInviteRequest _explicitNullValueInviteRequest = default!;
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.InviteRequestedType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.InviteRequestedType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.InviteRequestedType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.InviteRequestedEvent"/> and sets the default values.
@@ -62,7 +64,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "invite_request", n => { InviteRequest = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InviteRequestedEventInviteRequest>(global::Soenneker.Slack.OpenApiClient.Models.InviteRequestedEventInviteRequest.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.InviteRequestedType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.InviteRequestedType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>

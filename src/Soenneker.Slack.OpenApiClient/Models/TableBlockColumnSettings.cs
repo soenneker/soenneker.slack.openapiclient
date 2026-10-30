@@ -17,17 +17,19 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("align") is { } nullNodeAlign && nullNodeAlign.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Align = null;
-            if (parseNode.GetChildNode("is_wrapped") is { } nullNodeIsWrapped && nullNodeIsWrapped.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsWrapped = null;
+            if (parseNode.GetChildNode("align") is null) { _explicitNullValueAlign = default!; _explicitNullProperties?.Remove("align"); }
+            else if (parseNode.GetChildNode("align") is { } nullNodeAlign && nullNodeAlign.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Align = null;
+            if (parseNode.GetChildNode("is_wrapped") is null) { _explicitNullValueIsWrapped = default!; _explicitNullProperties?.Remove("is_wrapped"); }
+            else if (parseNode.GetChildNode("is_wrapped") is { } nullNodeIsWrapped && nullNodeIsWrapped.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsWrapped = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The alignment for items in this column. Can be left, center, or right. Defaults to left if not defined.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettingsAlign? Align { get => _explicitNullValueAlign; set { _explicitNullValueAlign = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("align"); else _explicitNullProperties?.Remove("align"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettingsAlign? Align { get => _explicitNullValueAlign; set { _explicitNullValueAlign = value; AdditionalData?.Remove("align"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("align"); else _explicitNullProperties?.Remove("align"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettingsAlign? _explicitNullValueAlign = default!;
         /// <summary>Whether the contents of this column should be wrapped or not. Defaults to false if not defined.</summary>
-        public bool? IsWrapped { get => _explicitNullValueIsWrapped; set { _explicitNullValueIsWrapped = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_wrapped"); else _explicitNullProperties?.Remove("is_wrapped"); } }
+        public bool? IsWrapped { get => _explicitNullValueIsWrapped; set { _explicitNullValueIsWrapped = value; AdditionalData?.Remove("is_wrapped"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_wrapped"); else _explicitNullProperties?.Remove("is_wrapped"); } }
         private bool? _explicitNullValueIsWrapped = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettings"/> and sets the default values.
@@ -54,7 +56,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "align", n => { Align = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettingsAlign>(); } },
+                { "align", n => { var parsed = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettingsAlign>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAlign = default; _explicitNullProperties?.Remove("align"); AdditionalData["align"] = unknown; } else { Align = parsed; AdditionalData.Remove("align"); } } },
                 { "is_wrapped", n => { IsWrapped = n.GetBoolValue(); } },
             };
         }

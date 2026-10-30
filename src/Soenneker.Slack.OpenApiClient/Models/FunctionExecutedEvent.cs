@@ -17,13 +17,20 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("bot_access_token") is { } nullNodeBotAccessToken && nullNodeBotAccessToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotAccessToken = null;
-            if (parseNode.GetChildNode("event_ts") is { } nullNodeEventTs && nullNodeEventTs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventTs = null;
-            if (parseNode.GetChildNode("function") is { } nullNodeFunction && nullNodeFunction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Function = null;
-            if (parseNode.GetChildNode("function_execution_id") is { } nullNodeFunctionExecutionId && nullNodeFunctionExecutionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FunctionExecutionId = null;
-            if (parseNode.GetChildNode("inputs") is { } nullNodeInputs && nullNodeInputs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Inputs = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
-            if (parseNode.GetChildNode("workflow_execution_id") is { } nullNodeWorkflowExecutionId && nullNodeWorkflowExecutionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecutionId = null;
+            if (parseNode.GetChildNode("bot_access_token") is null) { _explicitNullValueBotAccessToken = default!; _explicitNullProperties?.Remove("bot_access_token"); }
+            else if (parseNode.GetChildNode("bot_access_token") is { } nullNodeBotAccessToken && nullNodeBotAccessToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotAccessToken = null;
+            if (parseNode.GetChildNode("event_ts") is null) { _explicitNullValueEventTs = default!; _explicitNullProperties?.Remove("event_ts"); }
+            else if (parseNode.GetChildNode("event_ts") is { } nullNodeEventTs && nullNodeEventTs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventTs = null;
+            if (parseNode.GetChildNode("function") is null) { _explicitNullValueFunction = default!; _explicitNullProperties?.Remove("function"); }
+            else if (parseNode.GetChildNode("function") is { } nullNodeFunction && nullNodeFunction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Function = null;
+            if (parseNode.GetChildNode("function_execution_id") is null) { _explicitNullValueFunctionExecutionId = default!; _explicitNullProperties?.Remove("function_execution_id"); }
+            else if (parseNode.GetChildNode("function_execution_id") is { } nullNodeFunctionExecutionId && nullNodeFunctionExecutionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FunctionExecutionId = null;
+            if (parseNode.GetChildNode("inputs") is null) { _explicitNullValueInputs = default!; _explicitNullProperties?.Remove("inputs"); }
+            else if (parseNode.GetChildNode("inputs") is { } nullNodeInputs && nullNodeInputs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Inputs = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("workflow_execution_id") is null) { _explicitNullValueWorkflowExecutionId = default!; _explicitNullProperties?.Remove("workflow_execution_id"); }
+            else if (parseNode.GetChildNode("workflow_execution_id") is { } nullNodeWorkflowExecutionId && nullNodeWorkflowExecutionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecutionId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -31,64 +38,64 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The bot_access_token property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BotAccessToken { get => _explicitNullValueBotAccessToken; set { _explicitNullValueBotAccessToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_access_token"); else _explicitNullProperties?.Remove("bot_access_token"); } }
+        public string? BotAccessToken { get => _explicitNullValueBotAccessToken; set { _explicitNullValueBotAccessToken = value; AdditionalData?.Remove("bot_access_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_access_token"); else _explicitNullProperties?.Remove("bot_access_token"); } }
         private string? _explicitNullValueBotAccessToken = default!;
 #nullable restore
 #else
-        public string BotAccessToken { get => _explicitNullValueBotAccessToken; set { _explicitNullValueBotAccessToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_access_token"); else _explicitNullProperties?.Remove("bot_access_token"); } }
+        public string BotAccessToken { get => _explicitNullValueBotAccessToken; set { _explicitNullValueBotAccessToken = value; AdditionalData?.Remove("bot_access_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_access_token"); else _explicitNullProperties?.Remove("bot_access_token"); } }
         private string _explicitNullValueBotAccessToken = default!;
 #endif
         /// <summary>The event_ts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventTs { get => _explicitNullValueEventTs; set { _explicitNullValueEventTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_ts"); else _explicitNullProperties?.Remove("event_ts"); } }
+        public string? EventTs { get => _explicitNullValueEventTs; set { _explicitNullValueEventTs = value; AdditionalData?.Remove("event_ts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_ts"); else _explicitNullProperties?.Remove("event_ts"); } }
         private string? _explicitNullValueEventTs = default!;
 #nullable restore
 #else
-        public string EventTs { get => _explicitNullValueEventTs; set { _explicitNullValueEventTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_ts"); else _explicitNullProperties?.Remove("event_ts"); } }
+        public string EventTs { get => _explicitNullValueEventTs; set { _explicitNullValueEventTs = value; AdditionalData?.Remove("event_ts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_ts"); else _explicitNullProperties?.Remove("event_ts"); } }
         private string _explicitNullValueEventTs = default!;
 #endif
         /// <summary>The function property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.FunctionExecutedEventFunction? Function { get => _explicitNullValueFunction; set { _explicitNullValueFunction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("function"); else _explicitNullProperties?.Remove("function"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.FunctionExecutedEventFunction? Function { get => _explicitNullValueFunction; set { _explicitNullValueFunction = value; AdditionalData?.Remove("function"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("function"); else _explicitNullProperties?.Remove("function"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.FunctionExecutedEventFunction? _explicitNullValueFunction = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.FunctionExecutedEventFunction Function { get => _explicitNullValueFunction; set { _explicitNullValueFunction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("function"); else _explicitNullProperties?.Remove("function"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.FunctionExecutedEventFunction Function { get => _explicitNullValueFunction; set { _explicitNullValueFunction = value; AdditionalData?.Remove("function"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("function"); else _explicitNullProperties?.Remove("function"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.FunctionExecutedEventFunction _explicitNullValueFunction = default!;
 #endif
         /// <summary>The function_execution_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FunctionExecutionId { get => _explicitNullValueFunctionExecutionId; set { _explicitNullValueFunctionExecutionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("function_execution_id"); else _explicitNullProperties?.Remove("function_execution_id"); } }
+        public string? FunctionExecutionId { get => _explicitNullValueFunctionExecutionId; set { _explicitNullValueFunctionExecutionId = value; AdditionalData?.Remove("function_execution_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("function_execution_id"); else _explicitNullProperties?.Remove("function_execution_id"); } }
         private string? _explicitNullValueFunctionExecutionId = default!;
 #nullable restore
 #else
-        public string FunctionExecutionId { get => _explicitNullValueFunctionExecutionId; set { _explicitNullValueFunctionExecutionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("function_execution_id"); else _explicitNullProperties?.Remove("function_execution_id"); } }
+        public string FunctionExecutionId { get => _explicitNullValueFunctionExecutionId; set { _explicitNullValueFunctionExecutionId = value; AdditionalData?.Remove("function_execution_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("function_execution_id"); else _explicitNullProperties?.Remove("function_execution_id"); } }
         private string _explicitNullValueFunctionExecutionId = default!;
 #endif
         /// <summary>The inputs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.FunctionExecutedEventInputs? Inputs { get => _explicitNullValueInputs; set { _explicitNullValueInputs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputs"); else _explicitNullProperties?.Remove("inputs"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.FunctionExecutedEventInputs? Inputs { get => _explicitNullValueInputs; set { _explicitNullValueInputs = value; AdditionalData?.Remove("inputs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputs"); else _explicitNullProperties?.Remove("inputs"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.FunctionExecutedEventInputs? _explicitNullValueInputs = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.FunctionExecutedEventInputs Inputs { get => _explicitNullValueInputs; set { _explicitNullValueInputs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputs"); else _explicitNullProperties?.Remove("inputs"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.FunctionExecutedEventInputs Inputs { get => _explicitNullValueInputs; set { _explicitNullValueInputs = value; AdditionalData?.Remove("inputs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputs"); else _explicitNullProperties?.Remove("inputs"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.FunctionExecutedEventInputs _explicitNullValueInputs = default!;
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.FunctionExecutedType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.FunctionExecutedType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.FunctionExecutedType? _explicitNullValueType = default!;
         /// <summary>The workflow_execution_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkflowExecutionId { get => _explicitNullValueWorkflowExecutionId; set { _explicitNullValueWorkflowExecutionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_execution_id"); else _explicitNullProperties?.Remove("workflow_execution_id"); } }
+        public string? WorkflowExecutionId { get => _explicitNullValueWorkflowExecutionId; set { _explicitNullValueWorkflowExecutionId = value; AdditionalData?.Remove("workflow_execution_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_execution_id"); else _explicitNullProperties?.Remove("workflow_execution_id"); } }
         private string? _explicitNullValueWorkflowExecutionId = default!;
 #nullable restore
 #else
-        public string WorkflowExecutionId { get => _explicitNullValueWorkflowExecutionId; set { _explicitNullValueWorkflowExecutionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_execution_id"); else _explicitNullProperties?.Remove("workflow_execution_id"); } }
+        public string WorkflowExecutionId { get => _explicitNullValueWorkflowExecutionId; set { _explicitNullValueWorkflowExecutionId = value; AdditionalData?.Remove("workflow_execution_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_execution_id"); else _explicitNullProperties?.Remove("workflow_execution_id"); } }
         private string _explicitNullValueWorkflowExecutionId = default!;
 #endif
         /// <summary>
@@ -121,7 +128,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "function", n => { Function = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FunctionExecutedEventFunction>(global::Soenneker.Slack.OpenApiClient.Models.FunctionExecutedEventFunction.CreateFromDiscriminatorValue); } },
                 { "function_execution_id", n => { FunctionExecutionId = n.GetStringValue(); } },
                 { "inputs", n => { Inputs = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FunctionExecutedEventInputs>(global::Soenneker.Slack.OpenApiClient.Models.FunctionExecutedEventInputs.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.FunctionExecutedType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.FunctionExecutedType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
                 { "workflow_execution_id", n => { WorkflowExecutionId = n.GetStringValue(); } },
             };
         }

@@ -8,6 +8,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
     public enum PreviousUser
     #pragma warning restore CS1591
     {
+        [EnumMember(Value = "")]
+        EmptyString,
+
         [EnumMember(Value = "U00000000")]
         #pragma warning disable CS1591
         U00000000,

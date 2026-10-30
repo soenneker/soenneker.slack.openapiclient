@@ -17,8 +17,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("bot_access_token") is { } nullNodeBotAccessToken && nullNodeBotAccessToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotAccessToken = null;
-            if (parseNode.GetChildNode("bot_user_id") is { } nullNodeBotUserId && nullNodeBotUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotUserId = null;
+            if (parseNode.GetChildNode("bot_access_token") is null) { _explicitNullValueBotAccessToken = default!; _explicitNullProperties?.Remove("bot_access_token"); }
+            else if (parseNode.GetChildNode("bot_access_token") is { } nullNodeBotAccessToken && nullNodeBotAccessToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotAccessToken = null;
+            if (parseNode.GetChildNode("bot_user_id") is null) { _explicitNullValueBotUserId = default!; _explicitNullProperties?.Remove("bot_user_id"); }
+            else if (parseNode.GetChildNode("bot_user_id") is { } nullNodeBotUserId && nullNodeBotUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotUserId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The bot_access_token property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BotAccessToken { get => _explicitNullValueBotAccessToken; set { _explicitNullValueBotAccessToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_access_token"); else _explicitNullProperties?.Remove("bot_access_token"); } }
+        public string? BotAccessToken { get => _explicitNullValueBotAccessToken; set { _explicitNullValueBotAccessToken = value; AdditionalData?.Remove("bot_access_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_access_token"); else _explicitNullProperties?.Remove("bot_access_token"); } }
         private string? _explicitNullValueBotAccessToken = default!;
 #nullable restore
 #else
-        public string BotAccessToken { get => _explicitNullValueBotAccessToken; set { _explicitNullValueBotAccessToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_access_token"); else _explicitNullProperties?.Remove("bot_access_token"); } }
+        public string BotAccessToken { get => _explicitNullValueBotAccessToken; set { _explicitNullValueBotAccessToken = value; AdditionalData?.Remove("bot_access_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_access_token"); else _explicitNullProperties?.Remove("bot_access_token"); } }
         private string _explicitNullValueBotAccessToken = default!;
 #endif
         /// <summary>The bot_user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BotUserId { get => _explicitNullValueBotUserId; set { _explicitNullValueBotUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_user_id"); else _explicitNullProperties?.Remove("bot_user_id"); } }
+        public string? BotUserId { get => _explicitNullValueBotUserId; set { _explicitNullValueBotUserId = value; AdditionalData?.Remove("bot_user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_user_id"); else _explicitNullProperties?.Remove("bot_user_id"); } }
         private string? _explicitNullValueBotUserId = default!;
 #nullable restore
 #else
-        public string BotUserId { get => _explicitNullValueBotUserId; set { _explicitNullValueBotUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_user_id"); else _explicitNullProperties?.Remove("bot_user_id"); } }
+        public string BotUserId { get => _explicitNullValueBotUserId; set { _explicitNullValueBotUserId = value; AdditionalData?.Remove("bot_user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_user_id"); else _explicitNullProperties?.Remove("bot_user_id"); } }
         private string _explicitNullValueBotUserId = default!;
 #endif
         /// <summary>

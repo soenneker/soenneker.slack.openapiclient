@@ -18,8 +18,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("customizable_input_parameters") is { } nullNodeCustomizableInputParameters && nullNodeCustomizableInputParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomizableInputParameters = null;
-            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("customizable_input_parameters") is null) { _explicitNullValueCustomizableInputParameters = default!; _explicitNullProperties?.Remove("customizable_input_parameters"); }
+            else if (parseNode.GetChildNode("customizable_input_parameters") is { } nullNodeCustomizableInputParameters && nullNodeCustomizableInputParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomizableInputParameters = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>List of customizable input parameters and their values. Should match input parameters specified onthe provided trigger.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.WorkflowButtonWorkflowTriggerCustomizableInputParametersItem>? CustomizableInputParameters { get => _explicitNullValueCustomizableInputParameters; set { _explicitNullValueCustomizableInputParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customizable_input_parameters"); else _explicitNullProperties?.Remove("customizable_input_parameters"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.WorkflowButtonWorkflowTriggerCustomizableInputParametersItem>? CustomizableInputParameters { get => _explicitNullValueCustomizableInputParameters; set { _explicitNullValueCustomizableInputParameters = value; AdditionalData?.Remove("customizable_input_parameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customizable_input_parameters"); else _explicitNullProperties?.Remove("customizable_input_parameters"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.WorkflowButtonWorkflowTriggerCustomizableInputParametersItem>? _explicitNullValueCustomizableInputParameters = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.WorkflowButtonWorkflowTriggerCustomizableInputParametersItem> CustomizableInputParameters { get => _explicitNullValueCustomizableInputParameters; set { _explicitNullValueCustomizableInputParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customizable_input_parameters"); else _explicitNullProperties?.Remove("customizable_input_parameters"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.WorkflowButtonWorkflowTriggerCustomizableInputParametersItem> CustomizableInputParameters { get => _explicitNullValueCustomizableInputParameters; set { _explicitNullValueCustomizableInputParameters = value; AdditionalData?.Remove("customizable_input_parameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customizable_input_parameters"); else _explicitNullProperties?.Remove("customizable_input_parameters"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.WorkflowButtonWorkflowTriggerCustomizableInputParametersItem> _explicitNullValueCustomizableInputParameters = default!;
 #endif
         /// <summary>The trigger URL of the [link trigger](https://docs.slack.dev/tools/deno-slack-sdk/guides/creating-link-triggers/#workflow_buttons)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>

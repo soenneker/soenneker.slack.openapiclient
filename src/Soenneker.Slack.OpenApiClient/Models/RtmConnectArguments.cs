@@ -17,17 +17,19 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("batch_presence_aware") is { } nullNodeBatchPresenceAware && nullNodeBatchPresenceAware.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BatchPresenceAware = null;
-            if (parseNode.GetChildNode("presence_sub") is { } nullNodePresenceSub && nullNodePresenceSub.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PresenceSub = null;
+            if (parseNode.GetChildNode("batch_presence_aware") is null) { _explicitNullValueBatchPresenceAware = default!; _explicitNullProperties?.Remove("batch_presence_aware"); }
+            else if (parseNode.GetChildNode("batch_presence_aware") is { } nullNodeBatchPresenceAware && nullNodeBatchPresenceAware.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BatchPresenceAware = null;
+            if (parseNode.GetChildNode("presence_sub") is null) { _explicitNullValuePresenceSub = default!; _explicitNullProperties?.Remove("presence_sub"); }
+            else if (parseNode.GetChildNode("presence_sub") is { } nullNodePresenceSub && nullNodePresenceSub.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PresenceSub = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Batch presence deliveries via subscription. Enabling changes the shape of `presence_change` events.[batch presence](https://docs.slack.dev/apis/web-api/user-presence-and-status#batching).</summary>
-        public bool? BatchPresenceAware { get => _explicitNullValueBatchPresenceAware; set { _explicitNullValueBatchPresenceAware = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batch_presence_aware"); else _explicitNullProperties?.Remove("batch_presence_aware"); } }
+        public bool? BatchPresenceAware { get => _explicitNullValueBatchPresenceAware; set { _explicitNullValueBatchPresenceAware = value; AdditionalData?.Remove("batch_presence_aware"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batch_presence_aware"); else _explicitNullProperties?.Remove("batch_presence_aware"); } }
         private bool? _explicitNullValueBatchPresenceAware = default!;
         /// <summary>Only deliver presence events when requested by subscription.[deliver presence events when requested by subscription. presence subscriptions](Only).</summary>
-        public bool? PresenceSub { get => _explicitNullValuePresenceSub; set { _explicitNullValuePresenceSub = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("presence_sub"); else _explicitNullProperties?.Remove("presence_sub"); } }
+        public bool? PresenceSub { get => _explicitNullValuePresenceSub; set { _explicitNullValuePresenceSub = value; AdditionalData?.Remove("presence_sub"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("presence_sub"); else _explicitNullProperties?.Remove("presence_sub"); } }
         private bool? _explicitNullValuePresenceSub = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.RtmConnectArguments"/> and sets the default values.

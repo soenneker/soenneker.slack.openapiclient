@@ -17,11 +17,16 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("barriered_from_usergroup_ids") is { } nullNodeBarrieredFromUsergroupIds && nullNodeBarrieredFromUsergroupIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BarrieredFromUsergroupIds = null;
-            if (parseNode.GetChildNode("barrier_id") is { } nullNodeBarrierId && nullNodeBarrierId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BarrierId = null;
-            if (parseNode.GetChildNode("primary_usergroup_id") is { } nullNodePrimaryUsergroupId && nullNodePrimaryUsergroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryUsergroupId = null;
-            if (parseNode.GetChildNode("restricted_subjects") is { } nullNodeRestrictedSubjects && nullNodeRestrictedSubjects.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RestrictedSubjects = null;
-            if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
+            if (parseNode.GetChildNode("barriered_from_usergroup_ids") is null) { _explicitNullValueBarrieredFromUsergroupIds = default!; _explicitNullProperties?.Remove("barriered_from_usergroup_ids"); }
+            else if (parseNode.GetChildNode("barriered_from_usergroup_ids") is { } nullNodeBarrieredFromUsergroupIds && nullNodeBarrieredFromUsergroupIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BarrieredFromUsergroupIds = null;
+            if (parseNode.GetChildNode("barrier_id") is null) { _explicitNullValueBarrierId = default!; _explicitNullProperties?.Remove("barrier_id"); }
+            else if (parseNode.GetChildNode("barrier_id") is { } nullNodeBarrierId && nullNodeBarrierId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BarrierId = null;
+            if (parseNode.GetChildNode("primary_usergroup_id") is null) { _explicitNullValuePrimaryUsergroupId = default!; _explicitNullProperties?.Remove("primary_usergroup_id"); }
+            else if (parseNode.GetChildNode("primary_usergroup_id") is { } nullNodePrimaryUsergroupId && nullNodePrimaryUsergroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryUsergroupId = null;
+            if (parseNode.GetChildNode("restricted_subjects") is null) { _explicitNullValueRestrictedSubjects = default!; _explicitNullProperties?.Remove("restricted_subjects"); }
+            else if (parseNode.GetChildNode("restricted_subjects") is { } nullNodeRestrictedSubjects && nullNodeRestrictedSubjects.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RestrictedSubjects = null;
+            if (parseNode.GetChildNode("token") is null) { _explicitNullValueToken = default!; _explicitNullProperties?.Remove("token"); }
+            else if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,51 +34,51 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>A list of [IDP Groups](https://slack.com/help/articles/115001435788-Connect-identity-provider-groups-to-your-Enterprise-Grid-org) IDs ti associate with the barrier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? BarrieredFromUsergroupIds { get => _explicitNullValueBarrieredFromUsergroupIds; set { _explicitNullValueBarrieredFromUsergroupIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("barriered_from_usergroup_ids"); else _explicitNullProperties?.Remove("barriered_from_usergroup_ids"); } }
+        public List<string>? BarrieredFromUsergroupIds { get => _explicitNullValueBarrieredFromUsergroupIds; set { _explicitNullValueBarrieredFromUsergroupIds = value; AdditionalData?.Remove("barriered_from_usergroup_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("barriered_from_usergroup_ids"); else _explicitNullProperties?.Remove("barriered_from_usergroup_ids"); } }
         private List<string>? _explicitNullValueBarrieredFromUsergroupIds = default!;
 #nullable restore
 #else
-        public List<string> BarrieredFromUsergroupIds { get => _explicitNullValueBarrieredFromUsergroupIds; set { _explicitNullValueBarrieredFromUsergroupIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("barriered_from_usergroup_ids"); else _explicitNullProperties?.Remove("barriered_from_usergroup_ids"); } }
+        public List<string> BarrieredFromUsergroupIds { get => _explicitNullValueBarrieredFromUsergroupIds; set { _explicitNullValueBarrieredFromUsergroupIds = value; AdditionalData?.Remove("barriered_from_usergroup_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("barriered_from_usergroup_ids"); else _explicitNullProperties?.Remove("barriered_from_usergroup_ids"); } }
         private List<string> _explicitNullValueBarrieredFromUsergroupIds = default!;
 #endif
         /// <summary>The ID of the barrier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BarrierId { get => _explicitNullValueBarrierId; set { _explicitNullValueBarrierId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("barrier_id"); else _explicitNullProperties?.Remove("barrier_id"); } }
+        public string? BarrierId { get => _explicitNullValueBarrierId; set { _explicitNullValueBarrierId = value; AdditionalData?.Remove("barrier_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("barrier_id"); else _explicitNullProperties?.Remove("barrier_id"); } }
         private string? _explicitNullValueBarrierId = default!;
 #nullable restore
 #else
-        public string BarrierId { get => _explicitNullValueBarrierId; set { _explicitNullValueBarrierId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("barrier_id"); else _explicitNullProperties?.Remove("barrier_id"); } }
+        public string BarrierId { get => _explicitNullValueBarrierId; set { _explicitNullValueBarrierId = value; AdditionalData?.Remove("barrier_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("barrier_id"); else _explicitNullProperties?.Remove("barrier_id"); } }
         private string _explicitNullValueBarrierId = default!;
 #endif
         /// <summary>The ID of the primary [IDP Group](https://slack.com/help/articles/115001435788-Connect-identity-provider-groups-to-your-Enterprise-Grid-org).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrimaryUsergroupId { get => _explicitNullValuePrimaryUsergroupId; set { _explicitNullValuePrimaryUsergroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_usergroup_id"); else _explicitNullProperties?.Remove("primary_usergroup_id"); } }
+        public string? PrimaryUsergroupId { get => _explicitNullValuePrimaryUsergroupId; set { _explicitNullValuePrimaryUsergroupId = value; AdditionalData?.Remove("primary_usergroup_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_usergroup_id"); else _explicitNullProperties?.Remove("primary_usergroup_id"); } }
         private string? _explicitNullValuePrimaryUsergroupId = default!;
 #nullable restore
 #else
-        public string PrimaryUsergroupId { get => _explicitNullValuePrimaryUsergroupId; set { _explicitNullValuePrimaryUsergroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_usergroup_id"); else _explicitNullProperties?.Remove("primary_usergroup_id"); } }
+        public string PrimaryUsergroupId { get => _explicitNullValuePrimaryUsergroupId; set { _explicitNullValuePrimaryUsergroupId = value; AdditionalData?.Remove("primary_usergroup_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_usergroup_id"); else _explicitNullProperties?.Remove("primary_usergroup_id"); } }
         private string _explicitNullValuePrimaryUsergroupId = default!;
 #endif
         /// <summary>What kind of interactions are blocked by this barrier?Currently you must provide all three: `im`, `mpim`, `call`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.AdminBarriersUpdateArgumentsRestrictedSubjectsItem?>? RestrictedSubjects { get => _explicitNullValueRestrictedSubjects; set { _explicitNullValueRestrictedSubjects = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("restricted_subjects"); else _explicitNullProperties?.Remove("restricted_subjects"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.AdminBarriersUpdateArgumentsRestrictedSubjectsItem?>? RestrictedSubjects { get => _explicitNullValueRestrictedSubjects; set { _explicitNullValueRestrictedSubjects = value; AdditionalData?.Remove("restricted_subjects"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("restricted_subjects"); else _explicitNullProperties?.Remove("restricted_subjects"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.AdminBarriersUpdateArgumentsRestrictedSubjectsItem?>? _explicitNullValueRestrictedSubjects = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.AdminBarriersUpdateArgumentsRestrictedSubjectsItem?> RestrictedSubjects { get => _explicitNullValueRestrictedSubjects; set { _explicitNullValueRestrictedSubjects = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("restricted_subjects"); else _explicitNullProperties?.Remove("restricted_subjects"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.AdminBarriersUpdateArgumentsRestrictedSubjectsItem?> RestrictedSubjects { get => _explicitNullValueRestrictedSubjects; set { _explicitNullValueRestrictedSubjects = value; AdditionalData?.Remove("restricted_subjects"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("restricted_subjects"); else _explicitNullProperties?.Remove("restricted_subjects"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.AdminBarriersUpdateArgumentsRestrictedSubjectsItem?> _explicitNullValueRestrictedSubjects = default!;
 #endif
         /// <summary>Overridable authentication token bearing required scopes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; AdditionalData?.Remove("token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
         private string? _explicitNullValueToken = default!;
 #nullable restore
 #else
-        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; AdditionalData?.Remove("token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
         private string _explicitNullValueToken = default!;
 #endif
         /// <summary>

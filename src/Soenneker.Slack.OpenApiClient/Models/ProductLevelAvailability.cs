@@ -17,8 +17,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("available_to") is { } nullNodeAvailableTo && nullNodeAvailableTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvailableTo = null;
-            if (parseNode.GetChildNode("is_available") is { } nullNodeIsAvailable && nullNodeIsAvailable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAvailable = null;
+            if (parseNode.GetChildNode("available_to") is null) { _explicitNullValueAvailableTo = default!; _explicitNullProperties?.Remove("available_to"); }
+            else if (parseNode.GetChildNode("available_to") is { } nullNodeAvailableTo && nullNodeAvailableTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvailableTo = null;
+            if (parseNode.GetChildNode("is_available") is null) { _explicitNullValueIsAvailable = default!; _explicitNullProperties?.Remove("is_available"); }
+            else if (parseNode.GetChildNode("is_available") is { } nullNodeIsAvailable && nullNodeIsAvailable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAvailable = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The available_to property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AvailableTo { get => _explicitNullValueAvailableTo; set { _explicitNullValueAvailableTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("available_to"); else _explicitNullProperties?.Remove("available_to"); } }
+        public string? AvailableTo { get => _explicitNullValueAvailableTo; set { _explicitNullValueAvailableTo = value; AdditionalData?.Remove("available_to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("available_to"); else _explicitNullProperties?.Remove("available_to"); } }
         private string? _explicitNullValueAvailableTo = default!;
 #nullable restore
 #else
-        public string AvailableTo { get => _explicitNullValueAvailableTo; set { _explicitNullValueAvailableTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("available_to"); else _explicitNullProperties?.Remove("available_to"); } }
+        public string AvailableTo { get => _explicitNullValueAvailableTo; set { _explicitNullValueAvailableTo = value; AdditionalData?.Remove("available_to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("available_to"); else _explicitNullProperties?.Remove("available_to"); } }
         private string _explicitNullValueAvailableTo = default!;
 #endif
         /// <summary>The is_available property</summary>
-        public bool? IsAvailable { get => _explicitNullValueIsAvailable; set { _explicitNullValueIsAvailable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_available"); else _explicitNullProperties?.Remove("is_available"); } }
+        public bool? IsAvailable { get => _explicitNullValueIsAvailable; set { _explicitNullValueIsAvailable = value; AdditionalData?.Remove("is_available"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_available"); else _explicitNullProperties?.Remove("is_available"); } }
         private bool? _explicitNullValueIsAvailable = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ProductLevelAvailability"/> and sets the default values.

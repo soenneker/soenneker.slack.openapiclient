@@ -17,8 +17,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("media_backend_type") is { } nullNodeMediaBackendType && nullNodeMediaBackendType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaBackendType = null;
-            if (parseNode.GetChildNode("v1") is { } nullNodeV1 && nullNodeV1.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) V1 = null;
+            if (parseNode.GetChildNode("media_backend_type") is null) { _explicitNullValueMediaBackendType = default!; _explicitNullProperties?.Remove("media_backend_type"); }
+            else if (parseNode.GetChildNode("media_backend_type") is { } nullNodeMediaBackendType && nullNodeMediaBackendType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaBackendType = null;
+            if (parseNode.GetChildNode("v1") is null) { _explicitNullValueV1 = default!; _explicitNullProperties?.Remove("v1"); }
+            else if (parseNode.GetChildNode("v1") is { } nullNodeV1 && nullNodeV1.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) V1 = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The media_backend_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MediaBackendType { get => _explicitNullValueMediaBackendType; set { _explicitNullValueMediaBackendType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_backend_type"); else _explicitNullProperties?.Remove("media_backend_type"); } }
+        public string? MediaBackendType { get => _explicitNullValueMediaBackendType; set { _explicitNullValueMediaBackendType = value; AdditionalData?.Remove("media_backend_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_backend_type"); else _explicitNullProperties?.Remove("media_backend_type"); } }
         private string? _explicitNullValueMediaBackendType = default!;
 #nullable restore
 #else
-        public string MediaBackendType { get => _explicitNullValueMediaBackendType; set { _explicitNullValueMediaBackendType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_backend_type"); else _explicitNullProperties?.Remove("media_backend_type"); } }
+        public string MediaBackendType { get => _explicitNullValueMediaBackendType; set { _explicitNullValueMediaBackendType = value; AdditionalData?.Remove("media_backend_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_backend_type"); else _explicitNullProperties?.Remove("media_backend_type"); } }
         private string _explicitNullValueMediaBackendType = default!;
 #endif
         /// <summary>The v1 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.V1? V1 { get => _explicitNullValueV1; set { _explicitNullValueV1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("v1"); else _explicitNullProperties?.Remove("v1"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.V1? V1 { get => _explicitNullValueV1; set { _explicitNullValueV1 = value; AdditionalData?.Remove("v1"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("v1"); else _explicitNullProperties?.Remove("v1"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.V1? _explicitNullValueV1 = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.V1 V1 { get => _explicitNullValueV1; set { _explicitNullValueV1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("v1"); else _explicitNullProperties?.Remove("v1"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.V1 V1 { get => _explicitNullValueV1; set { _explicitNullValueV1 = value; AdditionalData?.Remove("v1"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("v1"); else _explicitNullProperties?.Remove("v1"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.V1 _explicitNullValueV1 = default!;
 #endif
         /// <summary>

@@ -17,11 +17,16 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("app_unfurl_url") is { } nullNodeAppUnfurlUrl && nullNodeAppUnfurlUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppUnfurlUrl = null;
-            if (parseNode.GetChildNode("entity_payload") is { } nullNodeEntityPayload && nullNodeEntityPayload.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EntityPayload = null;
-            if (parseNode.GetChildNode("entity_type") is { } nullNodeEntityType && nullNodeEntityType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EntityType = null;
-            if (parseNode.GetChildNode("external_ref") is { } nullNodeExternalRef && nullNodeExternalRef.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalRef = null;
-            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("app_unfurl_url") is null) { _explicitNullValueAppUnfurlUrl = default!; _explicitNullProperties?.Remove("app_unfurl_url"); }
+            else if (parseNode.GetChildNode("app_unfurl_url") is { } nullNodeAppUnfurlUrl && nullNodeAppUnfurlUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppUnfurlUrl = null;
+            if (parseNode.GetChildNode("entity_payload") is null) { _explicitNullValueEntityPayload = default!; _explicitNullProperties?.Remove("entity_payload"); }
+            else if (parseNode.GetChildNode("entity_payload") is { } nullNodeEntityPayload && nullNodeEntityPayload.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EntityPayload = null;
+            if (parseNode.GetChildNode("entity_type") is null) { _explicitNullValueEntityType = default!; _explicitNullProperties?.Remove("entity_type"); }
+            else if (parseNode.GetChildNode("entity_type") is { } nullNodeEntityType && nullNodeEntityType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EntityType = null;
+            if (parseNode.GetChildNode("external_ref") is null) { _explicitNullValueExternalRef = default!; _explicitNullProperties?.Remove("external_ref"); }
+            else if (parseNode.GetChildNode("external_ref") is { } nullNodeExternalRef && nullNodeExternalRef.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalRef = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,51 +34,51 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The exact URL posted in the source message. Required in metadata passed to `chat.unfurl`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AppUnfurlUrl { get => _explicitNullValueAppUnfurlUrl; set { _explicitNullValueAppUnfurlUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_unfurl_url"); else _explicitNullProperties?.Remove("app_unfurl_url"); } }
+        public string? AppUnfurlUrl { get => _explicitNullValueAppUnfurlUrl; set { _explicitNullValueAppUnfurlUrl = value; AdditionalData?.Remove("app_unfurl_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_unfurl_url"); else _explicitNullProperties?.Remove("app_unfurl_url"); } }
         private string? _explicitNullValueAppUnfurlUrl = default!;
 #nullable restore
 #else
-        public string AppUnfurlUrl { get => _explicitNullValueAppUnfurlUrl; set { _explicitNullValueAppUnfurlUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_unfurl_url"); else _explicitNullProperties?.Remove("app_unfurl_url"); } }
+        public string AppUnfurlUrl { get => _explicitNullValueAppUnfurlUrl; set { _explicitNullValueAppUnfurlUrl = value; AdditionalData?.Remove("app_unfurl_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_unfurl_url"); else _explicitNullProperties?.Remove("app_unfurl_url"); } }
         private string _explicitNullValueAppUnfurlUrl = default!;
 #endif
         /// <summary>Schema for the given entity type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.EntityMetadataEntityPayload? EntityPayload { get => _explicitNullValueEntityPayload; set { _explicitNullValueEntityPayload = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_payload"); else _explicitNullProperties?.Remove("entity_payload"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityMetadataEntityPayload? EntityPayload { get => _explicitNullValueEntityPayload; set { _explicitNullValueEntityPayload = value; AdditionalData?.Remove("entity_payload"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_payload"); else _explicitNullProperties?.Remove("entity_payload"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.EntityMetadataEntityPayload? _explicitNullValueEntityPayload = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.EntityMetadataEntityPayload EntityPayload { get => _explicitNullValueEntityPayload; set { _explicitNullValueEntityPayload = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_payload"); else _explicitNullProperties?.Remove("entity_payload"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityMetadataEntityPayload EntityPayload { get => _explicitNullValueEntityPayload; set { _explicitNullValueEntityPayload = value; AdditionalData?.Remove("entity_payload"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_payload"); else _explicitNullProperties?.Remove("entity_payload"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.EntityMetadataEntityPayload _explicitNullValueEntityPayload = default!;
 #endif
         /// <summary>Entity type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EntityType { get => _explicitNullValueEntityType; set { _explicitNullValueEntityType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_type"); else _explicitNullProperties?.Remove("entity_type"); } }
+        public string? EntityType { get => _explicitNullValueEntityType; set { _explicitNullValueEntityType = value; AdditionalData?.Remove("entity_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_type"); else _explicitNullProperties?.Remove("entity_type"); } }
         private string? _explicitNullValueEntityType = default!;
 #nullable restore
 #else
-        public string EntityType { get => _explicitNullValueEntityType; set { _explicitNullValueEntityType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_type"); else _explicitNullProperties?.Remove("entity_type"); } }
+        public string EntityType { get => _explicitNullValueEntityType; set { _explicitNullValueEntityType = value; AdditionalData?.Remove("entity_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_type"); else _explicitNullProperties?.Remove("entity_type"); } }
         private string _explicitNullValueEntityType = default!;
 #endif
         /// <summary>Reference (and optional type) used to identify an entity within the developer&apos;s system.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ExternalRef? ExternalRef { get => _explicitNullValueExternalRef; set { _explicitNullValueExternalRef = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_ref"); else _explicitNullProperties?.Remove("external_ref"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.ExternalRef? ExternalRef { get => _explicitNullValueExternalRef; set { _explicitNullValueExternalRef = value; AdditionalData?.Remove("external_ref"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_ref"); else _explicitNullProperties?.Remove("external_ref"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.ExternalRef? _explicitNullValueExternalRef = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ExternalRef ExternalRef { get => _explicitNullValueExternalRef; set { _explicitNullValueExternalRef = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_ref"); else _explicitNullProperties?.Remove("external_ref"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.ExternalRef ExternalRef { get => _explicitNullValueExternalRef; set { _explicitNullValueExternalRef = value; AdditionalData?.Remove("external_ref"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_ref"); else _explicitNullProperties?.Remove("external_ref"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.ExternalRef _explicitNullValueExternalRef = default!;
 #endif
         /// <summary>URL used to identify an entity within the developer&apos;s system.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>

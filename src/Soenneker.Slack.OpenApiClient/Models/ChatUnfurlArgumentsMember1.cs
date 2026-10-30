@@ -17,13 +17,20 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("channel") is { } nullNodeChannel && nullNodeChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Channel = null;
-            if (parseNode.GetChildNode("ts") is { } nullNodeTs && nullNodeTs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ts = null;
-            if (parseNode.GetChildNode("unfurls") is { } nullNodeUnfurls && nullNodeUnfurls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Unfurls = null;
-            if (parseNode.GetChildNode("user_auth_blocks") is { } nullNodeUserAuthBlocks && nullNodeUserAuthBlocks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserAuthBlocks = null;
-            if (parseNode.GetChildNode("user_auth_message") is { } nullNodeUserAuthMessage && nullNodeUserAuthMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserAuthMessage = null;
-            if (parseNode.GetChildNode("user_auth_required") is { } nullNodeUserAuthRequired && nullNodeUserAuthRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserAuthRequired = null;
-            if (parseNode.GetChildNode("user_auth_url") is { } nullNodeUserAuthUrl && nullNodeUserAuthUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserAuthUrl = null;
+            if (parseNode.GetChildNode("channel") is null) { _explicitNullValueChannel = default!; _explicitNullProperties?.Remove("channel"); }
+            else if (parseNode.GetChildNode("channel") is { } nullNodeChannel && nullNodeChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Channel = null;
+            if (parseNode.GetChildNode("ts") is null) { _explicitNullValueTs = default!; _explicitNullProperties?.Remove("ts"); }
+            else if (parseNode.GetChildNode("ts") is { } nullNodeTs && nullNodeTs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ts = null;
+            if (parseNode.GetChildNode("unfurls") is null) { _explicitNullValueUnfurls = default!; _explicitNullProperties?.Remove("unfurls"); }
+            else if (parseNode.GetChildNode("unfurls") is { } nullNodeUnfurls && nullNodeUnfurls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Unfurls = null;
+            if (parseNode.GetChildNode("user_auth_blocks") is null) { _explicitNullValueUserAuthBlocks = default!; _explicitNullProperties?.Remove("user_auth_blocks"); }
+            else if (parseNode.GetChildNode("user_auth_blocks") is { } nullNodeUserAuthBlocks && nullNodeUserAuthBlocks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserAuthBlocks = null;
+            if (parseNode.GetChildNode("user_auth_message") is null) { _explicitNullValueUserAuthMessage = default!; _explicitNullProperties?.Remove("user_auth_message"); }
+            else if (parseNode.GetChildNode("user_auth_message") is { } nullNodeUserAuthMessage && nullNodeUserAuthMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserAuthMessage = null;
+            if (parseNode.GetChildNode("user_auth_required") is null) { _explicitNullValueUserAuthRequired = default!; _explicitNullProperties?.Remove("user_auth_required"); }
+            else if (parseNode.GetChildNode("user_auth_required") is { } nullNodeUserAuthRequired && nullNodeUserAuthRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserAuthRequired = null;
+            if (parseNode.GetChildNode("user_auth_url") is null) { _explicitNullValueUserAuthUrl = default!; _explicitNullProperties?.Remove("user_auth_url"); }
+            else if (parseNode.GetChildNode("user_auth_url") is { } nullNodeUserAuthUrl && nullNodeUserAuthUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserAuthUrl = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -31,64 +38,64 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Channel ID for the message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel"); else _explicitNullProperties?.Remove("channel"); } }
+        public string? Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; AdditionalData?.Remove("channel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel"); else _explicitNullProperties?.Remove("channel"); } }
         private string? _explicitNullValueChannel = default!;
 #nullable restore
 #else
-        public string Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel"); else _explicitNullProperties?.Remove("channel"); } }
+        public string Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; AdditionalData?.Remove("channel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel"); else _explicitNullProperties?.Remove("channel"); } }
         private string _explicitNullValueChannel = default!;
 #endif
         /// <summary>Timestamp of the message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Ts { get => _explicitNullValueTs; set { _explicitNullValueTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ts"); else _explicitNullProperties?.Remove("ts"); } }
+        public string? Ts { get => _explicitNullValueTs; set { _explicitNullValueTs = value; AdditionalData?.Remove("ts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ts"); else _explicitNullProperties?.Remove("ts"); } }
         private string? _explicitNullValueTs = default!;
 #nullable restore
 #else
-        public string Ts { get => _explicitNullValueTs; set { _explicitNullValueTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ts"); else _explicitNullProperties?.Remove("ts"); } }
+        public string Ts { get => _explicitNullValueTs; set { _explicitNullValueTs = value; AdditionalData?.Remove("ts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ts"); else _explicitNullProperties?.Remove("ts"); } }
         private string _explicitNullValueTs = default!;
 #endif
         /// <summary>The unfurls property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsAllOf1AnyOf1Unfurls? Unfurls { get => _explicitNullValueUnfurls; set { _explicitNullValueUnfurls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unfurls"); else _explicitNullProperties?.Remove("unfurls"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsAllOf1AnyOf1Unfurls? Unfurls { get => _explicitNullValueUnfurls; set { _explicitNullValueUnfurls = value; AdditionalData?.Remove("unfurls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unfurls"); else _explicitNullProperties?.Remove("unfurls"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsAllOf1AnyOf1Unfurls? _explicitNullValueUnfurls = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsAllOf1AnyOf1Unfurls Unfurls { get => _explicitNullValueUnfurls; set { _explicitNullValueUnfurls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unfurls"); else _explicitNullProperties?.Remove("unfurls"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsAllOf1AnyOf1Unfurls Unfurls { get => _explicitNullValueUnfurls; set { _explicitNullValueUnfurls = value; AdditionalData?.Remove("unfurls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unfurls"); else _explicitNullProperties?.Remove("unfurls"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsAllOf1AnyOf1Unfurls _explicitNullValueUnfurls = default!;
 #endif
         /// <summary>Provide a JSON based array of structured blocks presented as URL-encoded string to send as anephemeral message to the user as invitation to authenticate further and enable full unfurling behavior.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsAllOf1UserAuthBlocksItem>? UserAuthBlocks { get => _explicitNullValueUserAuthBlocks; set { _explicitNullValueUserAuthBlocks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_auth_blocks"); else _explicitNullProperties?.Remove("user_auth_blocks"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsAllOf1UserAuthBlocksItem>? UserAuthBlocks { get => _explicitNullValueUserAuthBlocks; set { _explicitNullValueUserAuthBlocks = value; AdditionalData?.Remove("user_auth_blocks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_auth_blocks"); else _explicitNullProperties?.Remove("user_auth_blocks"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsAllOf1UserAuthBlocksItem>? _explicitNullValueUserAuthBlocks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsAllOf1UserAuthBlocksItem> UserAuthBlocks { get => _explicitNullValueUserAuthBlocks; set { _explicitNullValueUserAuthBlocks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_auth_blocks"); else _explicitNullProperties?.Remove("user_auth_blocks"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsAllOf1UserAuthBlocksItem> UserAuthBlocks { get => _explicitNullValueUserAuthBlocks; set { _explicitNullValueUserAuthBlocks = value; AdditionalData?.Remove("user_auth_blocks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_auth_blocks"); else _explicitNullProperties?.Remove("user_auth_blocks"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsAllOf1UserAuthBlocksItem> _explicitNullValueUserAuthBlocks = default!;
 #endif
         /// <summary>Provide a simply-formatted string to send as an ephemeral message to the user as invitation toauthenticate further and enable full unfurling behavior. Provides two buttons, Not now or Never ask me again.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserAuthMessage { get => _explicitNullValueUserAuthMessage; set { _explicitNullValueUserAuthMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_auth_message"); else _explicitNullProperties?.Remove("user_auth_message"); } }
+        public string? UserAuthMessage { get => _explicitNullValueUserAuthMessage; set { _explicitNullValueUserAuthMessage = value; AdditionalData?.Remove("user_auth_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_auth_message"); else _explicitNullProperties?.Remove("user_auth_message"); } }
         private string? _explicitNullValueUserAuthMessage = default!;
 #nullable restore
 #else
-        public string UserAuthMessage { get => _explicitNullValueUserAuthMessage; set { _explicitNullValueUserAuthMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_auth_message"); else _explicitNullProperties?.Remove("user_auth_message"); } }
+        public string UserAuthMessage { get => _explicitNullValueUserAuthMessage; set { _explicitNullValueUserAuthMessage = value; AdditionalData?.Remove("user_auth_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_auth_message"); else _explicitNullProperties?.Remove("user_auth_message"); } }
         private string _explicitNullValueUserAuthMessage = default!;
 #endif
         /// <summary>Set to `true` to indicate the user must install your Slack app to trigger unfurls for this domain.Defaults to `false`.</summary>
-        public bool? UserAuthRequired { get => _explicitNullValueUserAuthRequired; set { _explicitNullValueUserAuthRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_auth_required"); else _explicitNullProperties?.Remove("user_auth_required"); } }
+        public bool? UserAuthRequired { get => _explicitNullValueUserAuthRequired; set { _explicitNullValueUserAuthRequired = value; AdditionalData?.Remove("user_auth_required"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_auth_required"); else _explicitNullProperties?.Remove("user_auth_required"); } }
         private bool? _explicitNullValueUserAuthRequired = default!;
         /// <summary>Send users to this custom URL where they will complete authentication in your app to fully triggerunfurling. Value should be properly URL-encoded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserAuthUrl { get => _explicitNullValueUserAuthUrl; set { _explicitNullValueUserAuthUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_auth_url"); else _explicitNullProperties?.Remove("user_auth_url"); } }
+        public string? UserAuthUrl { get => _explicitNullValueUserAuthUrl; set { _explicitNullValueUserAuthUrl = value; AdditionalData?.Remove("user_auth_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_auth_url"); else _explicitNullProperties?.Remove("user_auth_url"); } }
         private string? _explicitNullValueUserAuthUrl = default!;
 #nullable restore
 #else
-        public string UserAuthUrl { get => _explicitNullValueUserAuthUrl; set { _explicitNullValueUserAuthUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_auth_url"); else _explicitNullProperties?.Remove("user_auth_url"); } }
+        public string UserAuthUrl { get => _explicitNullValueUserAuthUrl; set { _explicitNullValueUserAuthUrl = value; AdditionalData?.Remove("user_auth_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_auth_url"); else _explicitNullProperties?.Remove("user_auth_url"); } }
         private string _explicitNullValueUserAuthUrl = default!;
 #endif
         /// <summary>

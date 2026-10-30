@@ -17,45 +17,49 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("auto_provision") is { } nullNodeAutoProvision && nullNodeAutoProvision.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoProvision = null;
-            if (parseNode.GetChildNode("team_ids") is { } nullNodeTeamIds && nullNodeTeamIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamIds = null;
-            if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
-            if (parseNode.GetChildNode("usergroup_id") is { } nullNodeUsergroupId && nullNodeUsergroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsergroupId = null;
+            if (parseNode.GetChildNode("auto_provision") is null) { _explicitNullValueAutoProvision = default!; _explicitNullProperties?.Remove("auto_provision"); }
+            else if (parseNode.GetChildNode("auto_provision") is { } nullNodeAutoProvision && nullNodeAutoProvision.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoProvision = null;
+            if (parseNode.GetChildNode("team_ids") is null) { _explicitNullValueTeamIds = default!; _explicitNullProperties?.Remove("team_ids"); }
+            else if (parseNode.GetChildNode("team_ids") is { } nullNodeTeamIds && nullNodeTeamIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamIds = null;
+            if (parseNode.GetChildNode("token") is null) { _explicitNullValueToken = default!; _explicitNullProperties?.Remove("token"); }
+            else if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
+            if (parseNode.GetChildNode("usergroup_id") is null) { _explicitNullValueUsergroupId = default!; _explicitNullProperties?.Remove("usergroup_id"); }
+            else if (parseNode.GetChildNode("usergroup_id") is { } nullNodeUsergroupId && nullNodeUsergroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsergroupId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>When `true`, this method automatically creates new workspace accounts for the IDP group members.Defaults to `false`.</summary>
-        public bool? AutoProvision { get => _explicitNullValueAutoProvision; set { _explicitNullValueAutoProvision = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_provision"); else _explicitNullProperties?.Remove("auto_provision"); } }
+        public bool? AutoProvision { get => _explicitNullValueAutoProvision; set { _explicitNullValueAutoProvision = value; AdditionalData?.Remove("auto_provision"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_provision"); else _explicitNullProperties?.Remove("auto_provision"); } }
         private bool? _explicitNullValueAutoProvision = default!;
         /// <summary>One or more encoded team (workspace) IDs.Each workspace MUST belong to the organization associated with the token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsergroupsAddTeamsArgumentsTeamIds? TeamIds { get => _explicitNullValueTeamIds; set { _explicitNullValueTeamIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_ids"); else _explicitNullProperties?.Remove("team_ids"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsergroupsAddTeamsArgumentsTeamIds? TeamIds { get => _explicitNullValueTeamIds; set { _explicitNullValueTeamIds = value; AdditionalData?.Remove("team_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_ids"); else _explicitNullProperties?.Remove("team_ids"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.AdminUsergroupsAddTeamsArgumentsTeamIds? _explicitNullValueTeamIds = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsergroupsAddTeamsArgumentsTeamIds TeamIds { get => _explicitNullValueTeamIds; set { _explicitNullValueTeamIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_ids"); else _explicitNullProperties?.Remove("team_ids"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminUsergroupsAddTeamsArgumentsTeamIds TeamIds { get => _explicitNullValueTeamIds; set { _explicitNullValueTeamIds = value; AdditionalData?.Remove("team_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_ids"); else _explicitNullProperties?.Remove("team_ids"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.AdminUsergroupsAddTeamsArgumentsTeamIds _explicitNullValueTeamIds = default!;
 #endif
         /// <summary>Overridable authentication token bearing required scopes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; AdditionalData?.Remove("token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
         private string? _explicitNullValueToken = default!;
 #nullable restore
 #else
-        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; AdditionalData?.Remove("token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
         private string _explicitNullValueToken = default!;
 #endif
         /// <summary>ID of the IDP group to list/manage channels for.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UsergroupId { get => _explicitNullValueUsergroupId; set { _explicitNullValueUsergroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usergroup_id"); else _explicitNullProperties?.Remove("usergroup_id"); } }
+        public string? UsergroupId { get => _explicitNullValueUsergroupId; set { _explicitNullValueUsergroupId = value; AdditionalData?.Remove("usergroup_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usergroup_id"); else _explicitNullProperties?.Remove("usergroup_id"); } }
         private string? _explicitNullValueUsergroupId = default!;
 #nullable restore
 #else
-        public string UsergroupId { get => _explicitNullValueUsergroupId; set { _explicitNullValueUsergroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usergroup_id"); else _explicitNullProperties?.Remove("usergroup_id"); } }
+        public string UsergroupId { get => _explicitNullValueUsergroupId; set { _explicitNullValueUsergroupId = value; AdditionalData?.Remove("usergroup_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usergroup_id"); else _explicitNullProperties?.Remove("usergroup_id"); } }
         private string _explicitNullValueUsergroupId = default!;
 #endif
         /// <summary>

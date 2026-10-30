@@ -17,9 +17,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("bot_events") is { } nullNodeBotEvents && nullNodeBotEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotEvents = null;
-            if (parseNode.GetChildNode("request_url") is { } nullNodeRequestUrl && nullNodeRequestUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestUrl = null;
-            if (parseNode.GetChildNode("user_events") is { } nullNodeUserEvents && nullNodeUserEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserEvents = null;
+            if (parseNode.GetChildNode("bot_events") is null) { _explicitNullValueBotEvents = default!; _explicitNullProperties?.Remove("bot_events"); }
+            else if (parseNode.GetChildNode("bot_events") is { } nullNodeBotEvents && nullNodeBotEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotEvents = null;
+            if (parseNode.GetChildNode("request_url") is null) { _explicitNullValueRequestUrl = default!; _explicitNullProperties?.Remove("request_url"); }
+            else if (parseNode.GetChildNode("request_url") is { } nullNodeRequestUrl && nullNodeRequestUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestUrl = null;
+            if (parseNode.GetChildNode("user_events") is null) { _explicitNullValueUserEvents = default!; _explicitNullProperties?.Remove("user_events"); }
+            else if (parseNode.GetChildNode("user_events") is { } nullNodeUserEvents && nullNodeUserEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserEvents = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The bot_events property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? BotEvents { get => _explicitNullValueBotEvents; set { _explicitNullValueBotEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_events"); else _explicitNullProperties?.Remove("bot_events"); } }
+        public List<string>? BotEvents { get => _explicitNullValueBotEvents; set { _explicitNullValueBotEvents = value; AdditionalData?.Remove("bot_events"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_events"); else _explicitNullProperties?.Remove("bot_events"); } }
         private List<string>? _explicitNullValueBotEvents = default!;
 #nullable restore
 #else
-        public List<string> BotEvents { get => _explicitNullValueBotEvents; set { _explicitNullValueBotEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_events"); else _explicitNullProperties?.Remove("bot_events"); } }
+        public List<string> BotEvents { get => _explicitNullValueBotEvents; set { _explicitNullValueBotEvents = value; AdditionalData?.Remove("bot_events"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_events"); else _explicitNullProperties?.Remove("bot_events"); } }
         private List<string> _explicitNullValueBotEvents = default!;
 #endif
         /// <summary>The request_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RequestUrl { get => _explicitNullValueRequestUrl; set { _explicitNullValueRequestUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_url"); else _explicitNullProperties?.Remove("request_url"); } }
+        public string? RequestUrl { get => _explicitNullValueRequestUrl; set { _explicitNullValueRequestUrl = value; AdditionalData?.Remove("request_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_url"); else _explicitNullProperties?.Remove("request_url"); } }
         private string? _explicitNullValueRequestUrl = default!;
 #nullable restore
 #else
-        public string RequestUrl { get => _explicitNullValueRequestUrl; set { _explicitNullValueRequestUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_url"); else _explicitNullProperties?.Remove("request_url"); } }
+        public string RequestUrl { get => _explicitNullValueRequestUrl; set { _explicitNullValueRequestUrl = value; AdditionalData?.Remove("request_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_url"); else _explicitNullProperties?.Remove("request_url"); } }
         private string _explicitNullValueRequestUrl = default!;
 #endif
         /// <summary>The user_events property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? UserEvents { get => _explicitNullValueUserEvents; set { _explicitNullValueUserEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_events"); else _explicitNullProperties?.Remove("user_events"); } }
+        public List<string>? UserEvents { get => _explicitNullValueUserEvents; set { _explicitNullValueUserEvents = value; AdditionalData?.Remove("user_events"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_events"); else _explicitNullProperties?.Remove("user_events"); } }
         private List<string>? _explicitNullValueUserEvents = default!;
 #nullable restore
 #else
-        public List<string> UserEvents { get => _explicitNullValueUserEvents; set { _explicitNullValueUserEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_events"); else _explicitNullProperties?.Remove("user_events"); } }
+        public List<string> UserEvents { get => _explicitNullValueUserEvents; set { _explicitNullValueUserEvents = value; AdditionalData?.Remove("user_events"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_events"); else _explicitNullProperties?.Remove("user_events"); } }
         private List<string> _explicitNullValueUserEvents = default!;
 #endif
         /// <summary>

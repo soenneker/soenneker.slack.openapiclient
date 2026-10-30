@@ -17,8 +17,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("denied_by") is { } nullNodeDeniedBy && nullNodeDeniedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeniedBy = null;
-            if (parseNode.GetChildNode("invite_request") is { } nullNodeInviteRequest && nullNodeInviteRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InviteRequest = null;
+            if (parseNode.GetChildNode("denied_by") is null) { _explicitNullValueDeniedBy = default!; _explicitNullProperties?.Remove("denied_by"); }
+            else if (parseNode.GetChildNode("denied_by") is { } nullNodeDeniedBy && nullNodeDeniedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeniedBy = null;
+            if (parseNode.GetChildNode("invite_request") is null) { _explicitNullValueInviteRequest = default!; _explicitNullProperties?.Remove("invite_request"); }
+            else if (parseNode.GetChildNode("invite_request") is { } nullNodeInviteRequest && nullNodeInviteRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InviteRequest = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The denied_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.DeniedBy? DeniedBy { get => _explicitNullValueDeniedBy; set { _explicitNullValueDeniedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("denied_by"); else _explicitNullProperties?.Remove("denied_by"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.DeniedBy? DeniedBy { get => _explicitNullValueDeniedBy; set { _explicitNullValueDeniedBy = value; AdditionalData?.Remove("denied_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("denied_by"); else _explicitNullProperties?.Remove("denied_by"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.DeniedBy? _explicitNullValueDeniedBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.DeniedBy DeniedBy { get => _explicitNullValueDeniedBy; set { _explicitNullValueDeniedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("denied_by"); else _explicitNullProperties?.Remove("denied_by"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.DeniedBy DeniedBy { get => _explicitNullValueDeniedBy; set { _explicitNullValueDeniedBy = value; AdditionalData?.Remove("denied_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("denied_by"); else _explicitNullProperties?.Remove("denied_by"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.DeniedBy _explicitNullValueDeniedBy = default!;
 #endif
         /// <summary>The invite_request property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.InviteRequest2? InviteRequest { get => _explicitNullValueInviteRequest; set { _explicitNullValueInviteRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invite_request"); else _explicitNullProperties?.Remove("invite_request"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.InviteRequest2? InviteRequest { get => _explicitNullValueInviteRequest; set { _explicitNullValueInviteRequest = value; AdditionalData?.Remove("invite_request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invite_request"); else _explicitNullProperties?.Remove("invite_request"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.InviteRequest2? _explicitNullValueInviteRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.InviteRequest2 InviteRequest { get => _explicitNullValueInviteRequest; set { _explicitNullValueInviteRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invite_request"); else _explicitNullProperties?.Remove("invite_request"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.InviteRequest2 InviteRequest { get => _explicitNullValueInviteRequest; set { _explicitNullValueInviteRequest = value; AdditionalData?.Remove("invite_request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invite_request"); else _explicitNullProperties?.Remove("invite_request"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.InviteRequest2 _explicitNullValueInviteRequest = default!;
 #endif
         /// <summary>

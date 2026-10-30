@@ -56,7 +56,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
             
             
             var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
-            if (result.UserProfileChangedEventUserProfileFieldsAnyOf3 == null && result.UserProfileChangedEventUserProfileFieldsMember1 == null && result.UserProfileChangedEventUserProfileFieldsMember2 == null && unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject) result.UserProfileChangedEventUserProfileFieldsAnyOf3 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.UserProfileChangedEventUserProfileFieldsAnyOf3(), parseNode);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => ((unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject))))();
+            int matchingUnionBranches = 0;
+            if (matchesUnionBranch0) matchingUnionBranches++;
+            bool noSelectedUnionBranch = result.UserProfileChangedEventUserProfileFieldsAnyOf3 == null && result.UserProfileChangedEventUserProfileFieldsMember1 == null && result.UserProfileChangedEventUserProfileFieldsMember2 == null;
+            if (noSelectedUnionBranch && matchesUnionBranch0 && matchingUnionBranches == 1) result.UserProfileChangedEventUserProfileFieldsAnyOf3 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.UserProfileChangedEventUserProfileFieldsAnyOf3(), parseNode);
             if (result.UserProfileChangedEventUserProfileFieldsAnyOf3 == null && result.UserProfileChangedEventUserProfileFieldsMember1 == null && result.UserProfileChangedEventUserProfileFieldsMember2 == null) result.UnrecognizedValue = unionPayload;
 return result;
         }
@@ -66,6 +70,8 @@ return result;
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawFields) { var fields = new global::System.Collections.Generic.Dictionary<string, global::System.Action<IParseNode>>(); foreach (var entry in rawFields.GetValue()) fields[entry.Key] = _ => { }; return fields; }
+
             if(UserProfileChangedEventUserProfileFieldsAnyOf3 != null || UserProfileChangedEventUserProfileFieldsMember1 != null || UserProfileChangedEventUserProfileFieldsMember2 != null)
             {
                 return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(UserProfileChangedEventUserProfileFieldsAnyOf3, UserProfileChangedEventUserProfileFieldsMember1, UserProfileChangedEventUserProfileFieldsMember2);
@@ -80,9 +86,13 @@ return result;
         {
             if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
             if (UserProfileChangedEventUserProfileFieldsAnyOf3 == null && UserProfileChangedEventUserProfileFieldsMember1 == null && UserProfileChangedEventUserProfileFieldsMember2 == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
-            if (UserProfileChangedEventUserProfileFieldsAnyOf3 != null && UserProfileChangedEventUserProfileFieldsMember1 == null && UserProfileChangedEventUserProfileFieldsMember2 == null) { if (UserProfileChangedEventUserProfileFieldsAnyOf3 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, UserProfileChangedEventUserProfileFieldsAnyOf3); return; }
-            if (UserProfileChangedEventUserProfileFieldsMember1 != null && UserProfileChangedEventUserProfileFieldsAnyOf3 == null && UserProfileChangedEventUserProfileFieldsMember2 == null) { if (UserProfileChangedEventUserProfileFieldsMember1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, UserProfileChangedEventUserProfileFieldsMember1); return; }
-            if (UserProfileChangedEventUserProfileFieldsMember2 != null && UserProfileChangedEventUserProfileFieldsAnyOf3 == null && UserProfileChangedEventUserProfileFieldsMember1 == null) { if (UserProfileChangedEventUserProfileFieldsMember2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, UserProfileChangedEventUserProfileFieldsMember2); return; }
+            int selectedUnionBranches = 0;
+            if (UserProfileChangedEventUserProfileFieldsAnyOf3 != null) selectedUnionBranches++;
+            if (UserProfileChangedEventUserProfileFieldsMember1 != null) selectedUnionBranches++;
+            if (UserProfileChangedEventUserProfileFieldsMember2 != null) selectedUnionBranches++;
+            if (UserProfileChangedEventUserProfileFieldsAnyOf3 != null && selectedUnionBranches == 1) { if (UserProfileChangedEventUserProfileFieldsAnyOf3 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, UserProfileChangedEventUserProfileFieldsAnyOf3); return; }
+            if (UserProfileChangedEventUserProfileFieldsMember1 != null && selectedUnionBranches == 1) { if (UserProfileChangedEventUserProfileFieldsMember1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, UserProfileChangedEventUserProfileFieldsMember1); return; }
+            if (UserProfileChangedEventUserProfileFieldsMember2 != null && selectedUnionBranches == 1) { if (UserProfileChangedEventUserProfileFieldsMember2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, UserProfileChangedEventUserProfileFieldsMember2); return; }
 
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UserProfileChangedEventUserProfileFieldsAnyOf3>(null, UserProfileChangedEventUserProfileFieldsAnyOf3, UserProfileChangedEventUserProfileFieldsMember1, UserProfileChangedEventUserProfileFieldsMember2);

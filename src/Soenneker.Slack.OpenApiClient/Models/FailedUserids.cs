@@ -17,8 +17,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("U00000000") is { } nullNodeU00000000 && nullNodeU00000000.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) U00000000 = null;
-            if (parseNode.GetChildNode("U00000001") is { } nullNodeU00000001 && nullNodeU00000001.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) U00000001 = null;
+            if (parseNode.GetChildNode("U00000000") is null) { _explicitNullValueU00000000 = default!; _explicitNullProperties?.Remove("U00000000"); }
+            else if (parseNode.GetChildNode("U00000000") is { } nullNodeU00000000 && nullNodeU00000000.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) U00000000 = null;
+            if (parseNode.GetChildNode("U00000001") is null) { _explicitNullValueU00000001 = default!; _explicitNullProperties?.Remove("U00000001"); }
+            else if (parseNode.GetChildNode("U00000001") is { } nullNodeU00000001 && nullNodeU00000001.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) U00000001 = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The U00000000 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? U00000000 { get => _explicitNullValueU00000000; set { _explicitNullValueU00000000 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("U00000000"); else _explicitNullProperties?.Remove("U00000000"); } }
+        public string? U00000000 { get => _explicitNullValueU00000000; set { _explicitNullValueU00000000 = value; AdditionalData?.Remove("U00000000"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("U00000000"); else _explicitNullProperties?.Remove("U00000000"); } }
         private string? _explicitNullValueU00000000 = default!;
 #nullable restore
 #else
-        public string U00000000 { get => _explicitNullValueU00000000; set { _explicitNullValueU00000000 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("U00000000"); else _explicitNullProperties?.Remove("U00000000"); } }
+        public string U00000000 { get => _explicitNullValueU00000000; set { _explicitNullValueU00000000 = value; AdditionalData?.Remove("U00000000"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("U00000000"); else _explicitNullProperties?.Remove("U00000000"); } }
         private string _explicitNullValueU00000000 = default!;
 #endif
         /// <summary>The U00000001 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? U00000001 { get => _explicitNullValueU00000001; set { _explicitNullValueU00000001 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("U00000001"); else _explicitNullProperties?.Remove("U00000001"); } }
+        public string? U00000001 { get => _explicitNullValueU00000001; set { _explicitNullValueU00000001 = value; AdditionalData?.Remove("U00000001"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("U00000001"); else _explicitNullProperties?.Remove("U00000001"); } }
         private string? _explicitNullValueU00000001 = default!;
 #nullable restore
 #else
-        public string U00000001 { get => _explicitNullValueU00000001; set { _explicitNullValueU00000001 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("U00000001"); else _explicitNullProperties?.Remove("U00000001"); } }
+        public string U00000001 { get => _explicitNullValueU00000001; set { _explicitNullValueU00000001 = value; AdditionalData?.Remove("U00000001"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("U00000001"); else _explicitNullProperties?.Remove("U00000001"); } }
         private string _explicitNullValueU00000001 = default!;
 #endif
         /// <summary>

@@ -94,7 +94,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
             }
             
             var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
-            if (result.Broadcast == null && result.Channel2 == null && result.Color == null && result.Date == null && result.Emoji2 == null && result.Link == null && result.Team5 == null && result.Text2 == null && result.User5 == null && result.Usergroup2 == null && unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject) result.Text2 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.Text2(), parseNode);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => ((unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (unionPayload is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && ((!shapeMembers1.ContainsKey("emoji") || (((shapeMembers1["emoji"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedBoolean)) && ((shapeMembers1["emoji"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedBoolean literal2 && literal2.GetValue() == false) || (shapeMembers1["emoji"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedBoolean literal3 && literal3.GetValue() == true)))) && (!shapeMembers1.ContainsKey("text") || (((shapeMembers1["text"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("type") || (((shapeMembers1["type"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["type"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal8 && "mrkdwn".Equals(literal8.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["type"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal9 && "plain_text".Equals(literal9.GetValue(), global::System.StringComparison.Ordinal))))) && (!shapeMembers1.ContainsKey("verbatim") || (((shapeMembers1["verbatim"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedBoolean)) && ((shapeMembers1["verbatim"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedBoolean literal12 && literal12.GetValue() == false) || (shapeMembers1["verbatim"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedBoolean literal13 && literal13.GetValue() == true)))))))))();
+            int matchingUnionBranches = 0;
+            if (matchesUnionBranch0) matchingUnionBranches++;
+            bool noSelectedUnionBranch = result.Broadcast == null && result.Channel2 == null && result.Color == null && result.Date == null && result.Emoji2 == null && result.Link == null && result.Team5 == null && result.Text2 == null && result.User5 == null && result.Usergroup2 == null;
+            if (noSelectedUnionBranch && matchesUnionBranch0 && matchingUnionBranches == 1) result.Text2 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.Text2(), parseNode);
             if (result.Broadcast == null && result.Channel2 == null && result.Color == null && result.Date == null && result.Emoji2 == null && result.Link == null && result.Team5 == null && result.Text2 == null && result.User5 == null && result.Usergroup2 == null) result.UnrecognizedValue = unionPayload;
 return result;
         }
@@ -104,6 +108,8 @@ return result;
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawFields) { var fields = new global::System.Collections.Generic.Dictionary<string, global::System.Action<IParseNode>>(); foreach (var entry in rawFields.GetValue()) fields[entry.Key] = _ => { }; return fields; }
+
             if(Text2 != null)
             {
                 return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Text2);
@@ -118,7 +124,18 @@ return result;
         {
             if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
             if (Broadcast == null && Channel2 == null && Color == null && Date == null && Emoji2 == null && Link == null && Team5 == null && Text2 == null && User5 == null && Usergroup2 == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
-            if (Text2 != null && Broadcast == null && Channel2 == null && Color == null && Date == null && Emoji2 == null && Link == null && Team5 == null && User5 == null && Usergroup2 == null) { if (Text2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, Text2); return; }
+            int selectedUnionBranches = 0;
+            if (Broadcast != null) selectedUnionBranches++;
+            if (Channel2 != null) selectedUnionBranches++;
+            if (Color != null) selectedUnionBranches++;
+            if (Date != null) selectedUnionBranches++;
+            if (Emoji2 != null) selectedUnionBranches++;
+            if (Link != null) selectedUnionBranches++;
+            if (Team5 != null) selectedUnionBranches++;
+            if (Text2 != null) selectedUnionBranches++;
+            if (User5 != null) selectedUnionBranches++;
+            if (Usergroup2 != null) selectedUnionBranches++;
+            if (Text2 != null && selectedUnionBranches == 1) { if (Text2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, Text2); return; }
 
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(Broadcast != null)

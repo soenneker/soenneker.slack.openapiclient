@@ -18,8 +18,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("connect_domains") is { } nullNodeConnectDomains && nullNodeConnectDomains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectDomains = null;
-            if (parseNode.GetChildNode("resource_domains") is { } nullNodeResourceDomains && nullNodeResourceDomains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceDomains = null;
+            if (parseNode.GetChildNode("connect_domains") is null) { _explicitNullValueConnectDomains = default!; _explicitNullProperties?.Remove("connect_domains"); }
+            else if (parseNode.GetChildNode("connect_domains") is { } nullNodeConnectDomains && nullNodeConnectDomains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectDomains = null;
+            if (parseNode.GetChildNode("resource_domains") is null) { _explicitNullValueResourceDomains = default!; _explicitNullProperties?.Remove("resource_domains"); }
+            else if (parseNode.GetChildNode("resource_domains") is { } nullNodeResourceDomains && nullNodeResourceDomains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceDomains = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Origins the view may fetch()/XHR/WebSocket to. Accepted and stored, but not honored at render time yet.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ConnectDomains { get => _explicitNullValueConnectDomains; set { _explicitNullValueConnectDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connect_domains"); else _explicitNullProperties?.Remove("connect_domains"); } }
+        public List<string>? ConnectDomains { get => _explicitNullValueConnectDomains; set { _explicitNullValueConnectDomains = value; AdditionalData?.Remove("connect_domains"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connect_domains"); else _explicitNullProperties?.Remove("connect_domains"); } }
         private List<string>? _explicitNullValueConnectDomains = default!;
 #nullable restore
 #else
-        public List<string> ConnectDomains { get => _explicitNullValueConnectDomains; set { _explicitNullValueConnectDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connect_domains"); else _explicitNullProperties?.Remove("connect_domains"); } }
+        public List<string> ConnectDomains { get => _explicitNullValueConnectDomains; set { _explicitNullValueConnectDomains = value; AdditionalData?.Remove("connect_domains"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connect_domains"); else _explicitNullProperties?.Remove("connect_domains"); } }
         private List<string> _explicitNullValueConnectDomains = default!;
 #endif
         /// <summary>Origins the view may load scripts/styles/fonts/images/media from, merged into the curated CDN allowlist at render time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ResourceDomains { get => _explicitNullValueResourceDomains; set { _explicitNullValueResourceDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource_domains"); else _explicitNullProperties?.Remove("resource_domains"); } }
+        public List<string>? ResourceDomains { get => _explicitNullValueResourceDomains; set { _explicitNullValueResourceDomains = value; AdditionalData?.Remove("resource_domains"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource_domains"); else _explicitNullProperties?.Remove("resource_domains"); } }
         private List<string>? _explicitNullValueResourceDomains = default!;
 #nullable restore
 #else
-        public List<string> ResourceDomains { get => _explicitNullValueResourceDomains; set { _explicitNullValueResourceDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource_domains"); else _explicitNullProperties?.Remove("resource_domains"); } }
+        public List<string> ResourceDomains { get => _explicitNullValueResourceDomains; set { _explicitNullValueResourceDomains = value; AdditionalData?.Remove("resource_domains"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource_domains"); else _explicitNullProperties?.Remove("resource_domains"); } }
         private List<string> _explicitNullValueResourceDomains = default!;
 #endif
         /// <summary>

@@ -17,17 +17,19 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("is_protected") is { } nullNodeIsProtected && nullNodeIsProtected.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsProtected = null;
-            if (parseNode.GetChildNode("is_scim") is { } nullNodeIsScim && nullNodeIsScim.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsScim = null;
+            if (parseNode.GetChildNode("is_protected") is null) { _explicitNullValueIsProtected = default!; _explicitNullProperties?.Remove("is_protected"); }
+            else if (parseNode.GetChildNode("is_protected") is { } nullNodeIsProtected && nullNodeIsProtected.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsProtected = null;
+            if (parseNode.GetChildNode("is_scim") is null) { _explicitNullValueIsScim = default!; _explicitNullProperties?.Remove("is_scim"); }
+            else if (parseNode.GetChildNode("is_scim") is { } nullNodeIsScim && nullNodeIsScim.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsScim = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The is_protected property</summary>
-        public bool? IsProtected { get => _explicitNullValueIsProtected; set { _explicitNullValueIsProtected = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_protected"); else _explicitNullProperties?.Remove("is_protected"); } }
+        public bool? IsProtected { get => _explicitNullValueIsProtected; set { _explicitNullValueIsProtected = value; AdditionalData?.Remove("is_protected"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_protected"); else _explicitNullProperties?.Remove("is_protected"); } }
         private bool? _explicitNullValueIsProtected = default!;
         /// <summary>The is_scim property</summary>
-        public bool? IsScim { get => _explicitNullValueIsScim; set { _explicitNullValueIsScim = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_scim"); else _explicitNullProperties?.Remove("is_scim"); } }
+        public bool? IsScim { get => _explicitNullValueIsScim; set { _explicitNullValueIsScim = value; AdditionalData?.Remove("is_scim"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_scim"); else _explicitNullProperties?.Remove("is_scim"); } }
         private bool? _explicitNullValueIsScim = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Options2"/> and sets the default values.

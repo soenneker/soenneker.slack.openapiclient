@@ -17,34 +17,37 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("is_enabled") is { } nullNodeIsEnabled && nullNodeIsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsEnabled = null;
-            if (parseNode.GetChildNode("message_menu_options_url") is { } nullNodeMessageMenuOptionsUrl && nullNodeMessageMenuOptionsUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessageMenuOptionsUrl = null;
-            if (parseNode.GetChildNode("request_url") is { } nullNodeRequestUrl && nullNodeRequestUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestUrl = null;
+            if (parseNode.GetChildNode("is_enabled") is null) { _explicitNullValueIsEnabled = default!; _explicitNullProperties?.Remove("is_enabled"); }
+            else if (parseNode.GetChildNode("is_enabled") is { } nullNodeIsEnabled && nullNodeIsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsEnabled = null;
+            if (parseNode.GetChildNode("message_menu_options_url") is null) { _explicitNullValueMessageMenuOptionsUrl = default!; _explicitNullProperties?.Remove("message_menu_options_url"); }
+            else if (parseNode.GetChildNode("message_menu_options_url") is { } nullNodeMessageMenuOptionsUrl && nullNodeMessageMenuOptionsUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessageMenuOptionsUrl = null;
+            if (parseNode.GetChildNode("request_url") is null) { _explicitNullValueRequestUrl = default!; _explicitNullProperties?.Remove("request_url"); }
+            else if (parseNode.GetChildNode("request_url") is { } nullNodeRequestUrl && nullNodeRequestUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestUrl = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A boolean that specifies whether or not interactivity features are enabled.</summary>
-        public bool? IsEnabled { get => _explicitNullValueIsEnabled; set { _explicitNullValueIsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_enabled"); else _explicitNullProperties?.Remove("is_enabled"); } }
+        public bool? IsEnabled { get => _explicitNullValueIsEnabled; set { _explicitNullValueIsEnabled = value; AdditionalData?.Remove("is_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_enabled"); else _explicitNullProperties?.Remove("is_enabled"); } }
         private bool? _explicitNullValueIsEnabled = default!;
         /// <summary>A string containing the full https URL that acts as the [interactive Options Load URL](https://docs.slack.dev/interactivity/handling-user-interaction).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MessageMenuOptionsUrl { get => _explicitNullValueMessageMenuOptionsUrl; set { _explicitNullValueMessageMenuOptionsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message_menu_options_url"); else _explicitNullProperties?.Remove("message_menu_options_url"); } }
+        public string? MessageMenuOptionsUrl { get => _explicitNullValueMessageMenuOptionsUrl; set { _explicitNullValueMessageMenuOptionsUrl = value; AdditionalData?.Remove("message_menu_options_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message_menu_options_url"); else _explicitNullProperties?.Remove("message_menu_options_url"); } }
         private string? _explicitNullValueMessageMenuOptionsUrl = default!;
 #nullable restore
 #else
-        public string MessageMenuOptionsUrl { get => _explicitNullValueMessageMenuOptionsUrl; set { _explicitNullValueMessageMenuOptionsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message_menu_options_url"); else _explicitNullProperties?.Remove("message_menu_options_url"); } }
+        public string MessageMenuOptionsUrl { get => _explicitNullValueMessageMenuOptionsUrl; set { _explicitNullValueMessageMenuOptionsUrl = value; AdditionalData?.Remove("message_menu_options_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message_menu_options_url"); else _explicitNullProperties?.Remove("message_menu_options_url"); } }
         private string _explicitNullValueMessageMenuOptionsUrl = default!;
 #endif
         /// <summary>A string containing the full https URL that acts as the [interactive Request URL](https://docs.slack.dev/interactivity/handling-user-interaction).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RequestUrl { get => _explicitNullValueRequestUrl; set { _explicitNullValueRequestUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_url"); else _explicitNullProperties?.Remove("request_url"); } }
+        public string? RequestUrl { get => _explicitNullValueRequestUrl; set { _explicitNullValueRequestUrl = value; AdditionalData?.Remove("request_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_url"); else _explicitNullProperties?.Remove("request_url"); } }
         private string? _explicitNullValueRequestUrl = default!;
 #nullable restore
 #else
-        public string RequestUrl { get => _explicitNullValueRequestUrl; set { _explicitNullValueRequestUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_url"); else _explicitNullProperties?.Remove("request_url"); } }
+        public string RequestUrl { get => _explicitNullValueRequestUrl; set { _explicitNullValueRequestUrl = value; AdditionalData?.Remove("request_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_url"); else _explicitNullProperties?.Remove("request_url"); } }
         private string _explicitNullValueRequestUrl = default!;
 #endif
         /// <summary>

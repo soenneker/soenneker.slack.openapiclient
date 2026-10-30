@@ -74,6 +74,8 @@ return result;
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawFields) { var fields = new global::System.Collections.Generic.Dictionary<string, global::System.Action<IParseNode>>(); foreach (var entry in rawFields.GetValue()) fields[entry.Key] = _ => { }; return fields; }
+
             if(ChatUpdateArgumentsMember1 != null || ChatUpdateArgumentsMember2 != null || ChatUpdateArgumentsMember3 != null || ChatUpdateArgumentsMember4 != null)
             {
                 return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(ChatUpdateArgumentsMember1, ChatUpdateArgumentsMember2, ChatUpdateArgumentsMember3, ChatUpdateArgumentsMember4);
@@ -88,10 +90,15 @@ return result;
         {
             if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
             if (ChatUpdateArgumentsMember1 == null && ChatUpdateArgumentsMember2 == null && ChatUpdateArgumentsMember3 == null && ChatUpdateArgumentsMember4 == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
-            if (ChatUpdateArgumentsMember1 != null && ChatUpdateArgumentsMember2 == null && ChatUpdateArgumentsMember3 == null && ChatUpdateArgumentsMember4 == null) { if (ChatUpdateArgumentsMember1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ChatUpdateArgumentsMember1); return; }
-            if (ChatUpdateArgumentsMember2 != null && ChatUpdateArgumentsMember1 == null && ChatUpdateArgumentsMember3 == null && ChatUpdateArgumentsMember4 == null) { if (ChatUpdateArgumentsMember2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ChatUpdateArgumentsMember2); return; }
-            if (ChatUpdateArgumentsMember3 != null && ChatUpdateArgumentsMember1 == null && ChatUpdateArgumentsMember2 == null && ChatUpdateArgumentsMember4 == null) { if (ChatUpdateArgumentsMember3 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ChatUpdateArgumentsMember3); return; }
-            if (ChatUpdateArgumentsMember4 != null && ChatUpdateArgumentsMember1 == null && ChatUpdateArgumentsMember2 == null && ChatUpdateArgumentsMember3 == null) { if (ChatUpdateArgumentsMember4 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ChatUpdateArgumentsMember4); return; }
+            int selectedUnionBranches = 0;
+            if (ChatUpdateArgumentsMember1 != null) selectedUnionBranches++;
+            if (ChatUpdateArgumentsMember2 != null) selectedUnionBranches++;
+            if (ChatUpdateArgumentsMember3 != null) selectedUnionBranches++;
+            if (ChatUpdateArgumentsMember4 != null) selectedUnionBranches++;
+            if (ChatUpdateArgumentsMember1 != null && selectedUnionBranches == 1) { if (ChatUpdateArgumentsMember1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ChatUpdateArgumentsMember1); return; }
+            if (ChatUpdateArgumentsMember2 != null && selectedUnionBranches == 1) { if (ChatUpdateArgumentsMember2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ChatUpdateArgumentsMember2); return; }
+            if (ChatUpdateArgumentsMember3 != null && selectedUnionBranches == 1) { if (ChatUpdateArgumentsMember3 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ChatUpdateArgumentsMember3); return; }
+            if (ChatUpdateArgumentsMember4 != null && selectedUnionBranches == 1) { if (ChatUpdateArgumentsMember4 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ChatUpdateArgumentsMember4); return; }
 
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ChatUpdateArgumentsMember1>(null, ChatUpdateArgumentsMember1, ChatUpdateArgumentsMember2, ChatUpdateArgumentsMember3, ChatUpdateArgumentsMember4);

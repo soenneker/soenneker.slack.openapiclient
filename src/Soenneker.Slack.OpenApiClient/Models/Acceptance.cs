@@ -17,33 +17,40 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("accepting_team") is { } nullNodeAcceptingTeam && nullNodeAcceptingTeam.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptingTeam = null;
-            if (parseNode.GetChildNode("accepting_user") is { } nullNodeAcceptingUser && nullNodeAcceptingUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptingUser = null;
-            if (parseNode.GetChildNode("approval_status") is { } nullNodeApprovalStatus && nullNodeApprovalStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApprovalStatus = null;
-            if (parseNode.GetChildNode("date_accepted") is { } nullNodeDateAccepted && nullNodeDateAccepted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateAccepted = null;
-            if (parseNode.GetChildNode("date_invalid") is { } nullNodeDateInvalid && nullNodeDateInvalid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateInvalid = null;
-            if (parseNode.GetChildNode("date_last_updated") is { } nullNodeDateLastUpdated && nullNodeDateLastUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateLastUpdated = null;
-            if (parseNode.GetChildNode("reviews") is { } nullNodeReviews && nullNodeReviews.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reviews = null;
+            if (parseNode.GetChildNode("accepting_team") is null) { _explicitNullValueAcceptingTeam = default!; _explicitNullProperties?.Remove("accepting_team"); }
+            else if (parseNode.GetChildNode("accepting_team") is { } nullNodeAcceptingTeam && nullNodeAcceptingTeam.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptingTeam = null;
+            if (parseNode.GetChildNode("accepting_user") is null) { _explicitNullValueAcceptingUser = default!; _explicitNullProperties?.Remove("accepting_user"); }
+            else if (parseNode.GetChildNode("accepting_user") is { } nullNodeAcceptingUser && nullNodeAcceptingUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptingUser = null;
+            if (parseNode.GetChildNode("approval_status") is null) { _explicitNullValueApprovalStatus = default!; _explicitNullProperties?.Remove("approval_status"); }
+            else if (parseNode.GetChildNode("approval_status") is { } nullNodeApprovalStatus && nullNodeApprovalStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApprovalStatus = null;
+            if (parseNode.GetChildNode("date_accepted") is null) { _explicitNullValueDateAccepted = default!; _explicitNullProperties?.Remove("date_accepted"); }
+            else if (parseNode.GetChildNode("date_accepted") is { } nullNodeDateAccepted && nullNodeDateAccepted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateAccepted = null;
+            if (parseNode.GetChildNode("date_invalid") is null) { _explicitNullValueDateInvalid = default!; _explicitNullProperties?.Remove("date_invalid"); }
+            else if (parseNode.GetChildNode("date_invalid") is { } nullNodeDateInvalid && nullNodeDateInvalid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateInvalid = null;
+            if (parseNode.GetChildNode("date_last_updated") is null) { _explicitNullValueDateLastUpdated = default!; _explicitNullProperties?.Remove("date_last_updated"); }
+            else if (parseNode.GetChildNode("date_last_updated") is { } nullNodeDateLastUpdated && nullNodeDateLastUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateLastUpdated = null;
+            if (parseNode.GetChildNode("reviews") is null) { _explicitNullValueReviews = default!; _explicitNullProperties?.Remove("reviews"); }
+            else if (parseNode.GetChildNode("reviews") is { } nullNodeReviews && nullNodeReviews.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reviews = null;
         }
 
         /// <summary>The accepting_team property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.IngTeam? AcceptingTeam { get => _explicitNullValueAcceptingTeam; set { _explicitNullValueAcceptingTeam = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accepting_team"); else _explicitNullProperties?.Remove("accepting_team"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.IngTeam? AcceptingTeam { get => _explicitNullValueAcceptingTeam; set { _explicitNullValueAcceptingTeam = value; AdditionalData?.Remove("accepting_team"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accepting_team"); else _explicitNullProperties?.Remove("accepting_team"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.IngTeam? _explicitNullValueAcceptingTeam = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.IngTeam AcceptingTeam { get => _explicitNullValueAcceptingTeam; set { _explicitNullValueAcceptingTeam = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accepting_team"); else _explicitNullProperties?.Remove("accepting_team"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.IngTeam AcceptingTeam { get => _explicitNullValueAcceptingTeam; set { _explicitNullValueAcceptingTeam = value; AdditionalData?.Remove("accepting_team"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accepting_team"); else _explicitNullProperties?.Remove("accepting_team"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.IngTeam _explicitNullValueAcceptingTeam = default!;
 #endif
         /// <summary>The accepting_user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.TingUser? AcceptingUser { get => _explicitNullValueAcceptingUser; set { _explicitNullValueAcceptingUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accepting_user"); else _explicitNullProperties?.Remove("accepting_user"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.TingUser? AcceptingUser { get => _explicitNullValueAcceptingUser; set { _explicitNullValueAcceptingUser = value; AdditionalData?.Remove("accepting_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accepting_user"); else _explicitNullProperties?.Remove("accepting_user"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.TingUser? _explicitNullValueAcceptingUser = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.TingUser AcceptingUser { get => _explicitNullValueAcceptingUser; set { _explicitNullValueAcceptingUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accepting_user"); else _explicitNullProperties?.Remove("accepting_user"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.TingUser AcceptingUser { get => _explicitNullValueAcceptingUser; set { _explicitNullValueAcceptingUser = value; AdditionalData?.Remove("accepting_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accepting_user"); else _explicitNullProperties?.Remove("accepting_user"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.TingUser _explicitNullValueAcceptingUser = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -51,30 +58,30 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The approval_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ApprovalStatus { get => _explicitNullValueApprovalStatus; set { _explicitNullValueApprovalStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approval_status"); else _explicitNullProperties?.Remove("approval_status"); } }
+        public string? ApprovalStatus { get => _explicitNullValueApprovalStatus; set { _explicitNullValueApprovalStatus = value; AdditionalData?.Remove("approval_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approval_status"); else _explicitNullProperties?.Remove("approval_status"); } }
         private string? _explicitNullValueApprovalStatus = default!;
 #nullable restore
 #else
-        public string ApprovalStatus { get => _explicitNullValueApprovalStatus; set { _explicitNullValueApprovalStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approval_status"); else _explicitNullProperties?.Remove("approval_status"); } }
+        public string ApprovalStatus { get => _explicitNullValueApprovalStatus; set { _explicitNullValueApprovalStatus = value; AdditionalData?.Remove("approval_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approval_status"); else _explicitNullProperties?.Remove("approval_status"); } }
         private string _explicitNullValueApprovalStatus = default!;
 #endif
         /// <summary>The date_accepted property</summary>
-        public double? DateAccepted { get => _explicitNullValueDateAccepted; set { _explicitNullValueDateAccepted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_accepted"); else _explicitNullProperties?.Remove("date_accepted"); } }
+        public double? DateAccepted { get => _explicitNullValueDateAccepted; set { _explicitNullValueDateAccepted = value; AdditionalData?.Remove("date_accepted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_accepted"); else _explicitNullProperties?.Remove("date_accepted"); } }
         private double? _explicitNullValueDateAccepted = default!;
         /// <summary>The date_invalid property</summary>
-        public double? DateInvalid { get => _explicitNullValueDateInvalid; set { _explicitNullValueDateInvalid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_invalid"); else _explicitNullProperties?.Remove("date_invalid"); } }
+        public double? DateInvalid { get => _explicitNullValueDateInvalid; set { _explicitNullValueDateInvalid = value; AdditionalData?.Remove("date_invalid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_invalid"); else _explicitNullProperties?.Remove("date_invalid"); } }
         private double? _explicitNullValueDateInvalid = default!;
         /// <summary>The date_last_updated property</summary>
-        public double? DateLastUpdated { get => _explicitNullValueDateLastUpdated; set { _explicitNullValueDateLastUpdated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_last_updated"); else _explicitNullProperties?.Remove("date_last_updated"); } }
+        public double? DateLastUpdated { get => _explicitNullValueDateLastUpdated; set { _explicitNullValueDateLastUpdated = value; AdditionalData?.Remove("date_last_updated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_last_updated"); else _explicitNullProperties?.Remove("date_last_updated"); } }
         private double? _explicitNullValueDateLastUpdated = default!;
         /// <summary>The reviews property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Review>? Reviews { get => _explicitNullValueReviews; set { _explicitNullValueReviews = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reviews"); else _explicitNullProperties?.Remove("reviews"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Review>? Reviews { get => _explicitNullValueReviews; set { _explicitNullValueReviews = value; AdditionalData?.Remove("reviews"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reviews"); else _explicitNullProperties?.Remove("reviews"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.Review>? _explicitNullValueReviews = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Review> Reviews { get => _explicitNullValueReviews; set { _explicitNullValueReviews = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reviews"); else _explicitNullProperties?.Remove("reviews"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Review> Reviews { get => _explicitNullValueReviews; set { _explicitNullValueReviews = value; AdditionalData?.Remove("reviews"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reviews"); else _explicitNullProperties?.Remove("reviews"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.Review> _explicitNullValueReviews = default!;
 #endif
         /// <summary>

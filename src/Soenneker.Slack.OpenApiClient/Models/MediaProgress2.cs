@@ -17,21 +17,24 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("duration_ms") is { } nullNodeDurationMs && nullNodeDurationMs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DurationMs = null;
-            if (parseNode.GetChildNode("max_offset_ms") is { } nullNodeMaxOffsetMs && nullNodeMaxOffsetMs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxOffsetMs = null;
-            if (parseNode.GetChildNode("offset_ms") is { } nullNodeOffsetMs && nullNodeOffsetMs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OffsetMs = null;
+            if (parseNode.GetChildNode("duration_ms") is null) { _explicitNullValueDurationMs = default!; _explicitNullProperties?.Remove("duration_ms"); }
+            else if (parseNode.GetChildNode("duration_ms") is { } nullNodeDurationMs && nullNodeDurationMs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DurationMs = null;
+            if (parseNode.GetChildNode("max_offset_ms") is null) { _explicitNullValueMaxOffsetMs = default!; _explicitNullProperties?.Remove("max_offset_ms"); }
+            else if (parseNode.GetChildNode("max_offset_ms") is { } nullNodeMaxOffsetMs && nullNodeMaxOffsetMs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxOffsetMs = null;
+            if (parseNode.GetChildNode("offset_ms") is null) { _explicitNullValueOffsetMs = default!; _explicitNullProperties?.Remove("offset_ms"); }
+            else if (parseNode.GetChildNode("offset_ms") is { } nullNodeOffsetMs && nullNodeOffsetMs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OffsetMs = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The duration_ms property</summary>
-        public double? DurationMs { get => _explicitNullValueDurationMs; set { _explicitNullValueDurationMs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration_ms"); else _explicitNullProperties?.Remove("duration_ms"); } }
+        public double? DurationMs { get => _explicitNullValueDurationMs; set { _explicitNullValueDurationMs = value; AdditionalData?.Remove("duration_ms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration_ms"); else _explicitNullProperties?.Remove("duration_ms"); } }
         private double? _explicitNullValueDurationMs = default!;
         /// <summary>The max_offset_ms property</summary>
-        public double? MaxOffsetMs { get => _explicitNullValueMaxOffsetMs; set { _explicitNullValueMaxOffsetMs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_offset_ms"); else _explicitNullProperties?.Remove("max_offset_ms"); } }
+        public double? MaxOffsetMs { get => _explicitNullValueMaxOffsetMs; set { _explicitNullValueMaxOffsetMs = value; AdditionalData?.Remove("max_offset_ms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_offset_ms"); else _explicitNullProperties?.Remove("max_offset_ms"); } }
         private double? _explicitNullValueMaxOffsetMs = default!;
         /// <summary>The offset_ms property</summary>
-        public double? OffsetMs { get => _explicitNullValueOffsetMs; set { _explicitNullValueOffsetMs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offset_ms"); else _explicitNullProperties?.Remove("offset_ms"); } }
+        public double? OffsetMs { get => _explicitNullValueOffsetMs; set { _explicitNullValueOffsetMs = value; AdditionalData?.Remove("offset_ms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offset_ms"); else _explicitNullProperties?.Remove("offset_ms"); } }
         private double? _explicitNullValueOffsetMs = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.MediaProgress2"/> and sets the default values.

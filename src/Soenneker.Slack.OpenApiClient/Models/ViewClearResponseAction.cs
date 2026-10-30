@@ -17,13 +17,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("response_action") is { } nullNodeResponseAction && nullNodeResponseAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResponseAction = null;
+            if (parseNode.GetChildNode("response_action") is null) { _explicitNullValueResponseAction = default!; _explicitNullProperties?.Remove("response_action"); }
+            else if (parseNode.GetChildNode("response_action") is { } nullNodeResponseAction && nullNodeResponseAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResponseAction = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The response_action property</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.ClearResponseAction? ResponseAction { get => _explicitNullValueResponseAction; set { _explicitNullValueResponseAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response_action"); else _explicitNullProperties?.Remove("response_action"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.ClearResponseAction? ResponseAction { get => _explicitNullValueResponseAction; set { _explicitNullValueResponseAction = value; AdditionalData?.Remove("response_action"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response_action"); else _explicitNullProperties?.Remove("response_action"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.ClearResponseAction? _explicitNullValueResponseAction = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ViewClearResponseAction"/> and sets the default values.
@@ -50,7 +51,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "response_action", n => { ResponseAction = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ClearResponseAction>(); } },
+                { "response_action", n => { var parsed = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ClearResponseAction>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueResponseAction = default; _explicitNullProperties?.Remove("response_action"); AdditionalData["response_action"] = unknown; } else { ResponseAction = parsed; AdditionalData.Remove("response_action"); } } },
             };
         }
         /// <summary>

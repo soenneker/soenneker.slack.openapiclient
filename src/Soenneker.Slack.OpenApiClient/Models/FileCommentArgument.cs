@@ -17,7 +17,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("file_comment") is { } nullNodeFileComment && nullNodeFileComment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileComment = null;
+            if (parseNode.GetChildNode("file_comment") is null) { _explicitNullValueFileComment = default!; _explicitNullProperties?.Remove("file_comment"); }
+            else if (parseNode.GetChildNode("file_comment") is { } nullNodeFileComment && nullNodeFileComment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileComment = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Encoded file comment ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FileComment { get => _explicitNullValueFileComment; set { _explicitNullValueFileComment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_comment"); else _explicitNullProperties?.Remove("file_comment"); } }
+        public string? FileComment { get => _explicitNullValueFileComment; set { _explicitNullValueFileComment = value; AdditionalData?.Remove("file_comment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_comment"); else _explicitNullProperties?.Remove("file_comment"); } }
         private string? _explicitNullValueFileComment = default!;
 #nullable restore
 #else
-        public string FileComment { get => _explicitNullValueFileComment; set { _explicitNullValueFileComment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_comment"); else _explicitNullProperties?.Remove("file_comment"); } }
+        public string FileComment { get => _explicitNullValueFileComment; set { _explicitNullValueFileComment = value; AdditionalData?.Remove("file_comment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_comment"); else _explicitNullProperties?.Remove("file_comment"); } }
         private string _explicitNullValueFileComment = default!;
 #endif
         /// <summary>

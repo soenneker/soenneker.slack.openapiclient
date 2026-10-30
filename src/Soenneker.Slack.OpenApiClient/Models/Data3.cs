@@ -17,10 +17,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("file_id") is { } nullNodeFileId && nullNodeFileId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileId = null;
-            if (parseNode.GetChildNode("folder_bookmark_id") is { } nullNodeFolderBookmarkId && nullNodeFolderBookmarkId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FolderBookmarkId = null;
-            if (parseNode.GetChildNode("mute_edit_updates") is { } nullNodeMuteEditUpdates && nullNodeMuteEditUpdates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MuteEditUpdates = null;
-            if (parseNode.GetChildNode("shared_ts") is { } nullNodeSharedTs && nullNodeSharedTs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SharedTs = null;
+            if (parseNode.GetChildNode("file_id") is null) { _explicitNullValueFileId = default!; _explicitNullProperties?.Remove("file_id"); }
+            else if (parseNode.GetChildNode("file_id") is { } nullNodeFileId && nullNodeFileId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileId = null;
+            if (parseNode.GetChildNode("folder_bookmark_id") is null) { _explicitNullValueFolderBookmarkId = default!; _explicitNullProperties?.Remove("folder_bookmark_id"); }
+            else if (parseNode.GetChildNode("folder_bookmark_id") is { } nullNodeFolderBookmarkId && nullNodeFolderBookmarkId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FolderBookmarkId = null;
+            if (parseNode.GetChildNode("mute_edit_updates") is null) { _explicitNullValueMuteEditUpdates = default!; _explicitNullProperties?.Remove("mute_edit_updates"); }
+            else if (parseNode.GetChildNode("mute_edit_updates") is { } nullNodeMuteEditUpdates && nullNodeMuteEditUpdates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MuteEditUpdates = null;
+            if (parseNode.GetChildNode("shared_ts") is null) { _explicitNullValueSharedTs = default!; _explicitNullProperties?.Remove("shared_ts"); }
+            else if (parseNode.GetChildNode("shared_ts") is { } nullNodeSharedTs && nullNodeSharedTs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SharedTs = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,34 +32,34 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The file_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FileId { get => _explicitNullValueFileId; set { _explicitNullValueFileId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_id"); else _explicitNullProperties?.Remove("file_id"); } }
+        public string? FileId { get => _explicitNullValueFileId; set { _explicitNullValueFileId = value; AdditionalData?.Remove("file_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_id"); else _explicitNullProperties?.Remove("file_id"); } }
         private string? _explicitNullValueFileId = default!;
 #nullable restore
 #else
-        public string FileId { get => _explicitNullValueFileId; set { _explicitNullValueFileId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_id"); else _explicitNullProperties?.Remove("file_id"); } }
+        public string FileId { get => _explicitNullValueFileId; set { _explicitNullValueFileId = value; AdditionalData?.Remove("file_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_id"); else _explicitNullProperties?.Remove("file_id"); } }
         private string _explicitNullValueFileId = default!;
 #endif
         /// <summary>The folder_bookmark_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FolderBookmarkId { get => _explicitNullValueFolderBookmarkId; set { _explicitNullValueFolderBookmarkId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folder_bookmark_id"); else _explicitNullProperties?.Remove("folder_bookmark_id"); } }
+        public string? FolderBookmarkId { get => _explicitNullValueFolderBookmarkId; set { _explicitNullValueFolderBookmarkId = value; AdditionalData?.Remove("folder_bookmark_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folder_bookmark_id"); else _explicitNullProperties?.Remove("folder_bookmark_id"); } }
         private string? _explicitNullValueFolderBookmarkId = default!;
 #nullable restore
 #else
-        public string FolderBookmarkId { get => _explicitNullValueFolderBookmarkId; set { _explicitNullValueFolderBookmarkId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folder_bookmark_id"); else _explicitNullProperties?.Remove("folder_bookmark_id"); } }
+        public string FolderBookmarkId { get => _explicitNullValueFolderBookmarkId; set { _explicitNullValueFolderBookmarkId = value; AdditionalData?.Remove("folder_bookmark_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folder_bookmark_id"); else _explicitNullProperties?.Remove("folder_bookmark_id"); } }
         private string _explicitNullValueFolderBookmarkId = default!;
 #endif
         /// <summary>The mute_edit_updates property</summary>
-        public bool? MuteEditUpdates { get => _explicitNullValueMuteEditUpdates; set { _explicitNullValueMuteEditUpdates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mute_edit_updates"); else _explicitNullProperties?.Remove("mute_edit_updates"); } }
+        public bool? MuteEditUpdates { get => _explicitNullValueMuteEditUpdates; set { _explicitNullValueMuteEditUpdates = value; AdditionalData?.Remove("mute_edit_updates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mute_edit_updates"); else _explicitNullProperties?.Remove("mute_edit_updates"); } }
         private bool? _explicitNullValueMuteEditUpdates = default!;
         /// <summary>The shared_ts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SharedTs { get => _explicitNullValueSharedTs; set { _explicitNullValueSharedTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_ts"); else _explicitNullProperties?.Remove("shared_ts"); } }
+        public string? SharedTs { get => _explicitNullValueSharedTs; set { _explicitNullValueSharedTs = value; AdditionalData?.Remove("shared_ts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_ts"); else _explicitNullProperties?.Remove("shared_ts"); } }
         private string? _explicitNullValueSharedTs = default!;
 #nullable restore
 #else
-        public string SharedTs { get => _explicitNullValueSharedTs; set { _explicitNullValueSharedTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_ts"); else _explicitNullProperties?.Remove("shared_ts"); } }
+        public string SharedTs { get => _explicitNullValueSharedTs; set { _explicitNullValueSharedTs = value; AdditionalData?.Remove("shared_ts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_ts"); else _explicitNullProperties?.Remove("shared_ts"); } }
         private string _explicitNullValueSharedTs = default!;
 #endif
         /// <summary>

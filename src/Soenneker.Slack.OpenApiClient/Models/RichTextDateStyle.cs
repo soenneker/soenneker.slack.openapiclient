@@ -18,29 +18,34 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("bold") is { } nullNodeBold && nullNodeBold.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bold = null;
-            if (parseNode.GetChildNode("code") is { } nullNodeCode && nullNodeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Code = null;
-            if (parseNode.GetChildNode("italic") is { } nullNodeItalic && nullNodeItalic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Italic = null;
-            if (parseNode.GetChildNode("strike") is { } nullNodeStrike && nullNodeStrike.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Strike = null;
-            if (parseNode.GetChildNode("underline") is { } nullNodeUnderline && nullNodeUnderline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Underline = null;
+            if (parseNode.GetChildNode("bold") is null) { _explicitNullValueBold = default!; _explicitNullProperties?.Remove("bold"); }
+            else if (parseNode.GetChildNode("bold") is { } nullNodeBold && nullNodeBold.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bold = null;
+            if (parseNode.GetChildNode("code") is null) { _explicitNullValueCode = default!; _explicitNullProperties?.Remove("code"); }
+            else if (parseNode.GetChildNode("code") is { } nullNodeCode && nullNodeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Code = null;
+            if (parseNode.GetChildNode("italic") is null) { _explicitNullValueItalic = default!; _explicitNullProperties?.Remove("italic"); }
+            else if (parseNode.GetChildNode("italic") is { } nullNodeItalic && nullNodeItalic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Italic = null;
+            if (parseNode.GetChildNode("strike") is null) { _explicitNullValueStrike = default!; _explicitNullProperties?.Remove("strike"); }
+            else if (parseNode.GetChildNode("strike") is { } nullNodeStrike && nullNodeStrike.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Strike = null;
+            if (parseNode.GetChildNode("underline") is null) { _explicitNullValueUnderline = default!; _explicitNullProperties?.Remove("underline"); }
+            else if (parseNode.GetChildNode("underline") is { } nullNodeUnderline && nullNodeUnderline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Underline = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>When `true`, boldens the text in this element. Defaults to `false`.</summary>
-        public bool? Bold { get => _explicitNullValueBold; set { _explicitNullValueBold = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bold"); else _explicitNullProperties?.Remove("bold"); } }
+        public bool? Bold { get => _explicitNullValueBold; set { _explicitNullValueBold = value; AdditionalData?.Remove("bold"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bold"); else _explicitNullProperties?.Remove("bold"); } }
         private bool? _explicitNullValueBold = default!;
         /// <summary>When `true`, the text is preformatted in an inline code style. Defaults to `false.</summary>
-        public bool? Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code"); else _explicitNullProperties?.Remove("code"); } }
+        public bool? Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; AdditionalData?.Remove("code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code"); else _explicitNullProperties?.Remove("code"); } }
         private bool? _explicitNullValueCode = default!;
         /// <summary>When `true`, italicizes the text in this element. Defaults to `false`.</summary>
-        public bool? Italic { get => _explicitNullValueItalic; set { _explicitNullValueItalic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("italic"); else _explicitNullProperties?.Remove("italic"); } }
+        public bool? Italic { get => _explicitNullValueItalic; set { _explicitNullValueItalic = value; AdditionalData?.Remove("italic"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("italic"); else _explicitNullProperties?.Remove("italic"); } }
         private bool? _explicitNullValueItalic = default!;
         /// <summary>When `true`, strikes through the text in this element. Defaults to `false`.</summary>
-        public bool? Strike { get => _explicitNullValueStrike; set { _explicitNullValueStrike = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("strike"); else _explicitNullProperties?.Remove("strike"); } }
+        public bool? Strike { get => _explicitNullValueStrike; set { _explicitNullValueStrike = value; AdditionalData?.Remove("strike"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("strike"); else _explicitNullProperties?.Remove("strike"); } }
         private bool? _explicitNullValueStrike = default!;
         /// <summary>When `true`, underlines the text in this element. Defaults to `false`.</summary>
-        public bool? Underline { get => _explicitNullValueUnderline; set { _explicitNullValueUnderline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("underline"); else _explicitNullProperties?.Remove("underline"); } }
+        public bool? Underline { get => _explicitNullValueUnderline; set { _explicitNullValueUnderline = value; AdditionalData?.Remove("underline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("underline"); else _explicitNullProperties?.Remove("underline"); } }
         private bool? _explicitNullValueUnderline = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.RichTextDateStyle"/> and sets the default values.

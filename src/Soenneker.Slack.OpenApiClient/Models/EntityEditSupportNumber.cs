@@ -17,21 +17,24 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("is_decimal_allowed") is { } nullNodeIsDecimalAllowed && nullNodeIsDecimalAllowed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsDecimalAllowed = null;
-            if (parseNode.GetChildNode("max_value") is { } nullNodeMaxValue && nullNodeMaxValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxValue = null;
-            if (parseNode.GetChildNode("min_value") is { } nullNodeMinValue && nullNodeMinValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinValue = null;
+            if (parseNode.GetChildNode("is_decimal_allowed") is null) { _explicitNullValueIsDecimalAllowed = default!; _explicitNullProperties?.Remove("is_decimal_allowed"); }
+            else if (parseNode.GetChildNode("is_decimal_allowed") is { } nullNodeIsDecimalAllowed && nullNodeIsDecimalAllowed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsDecimalAllowed = null;
+            if (parseNode.GetChildNode("max_value") is null) { _explicitNullValueMaxValue = default!; _explicitNullProperties?.Remove("max_value"); }
+            else if (parseNode.GetChildNode("max_value") is { } nullNodeMaxValue && nullNodeMaxValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxValue = null;
+            if (parseNode.GetChildNode("min_value") is null) { _explicitNullValueMinValue = default!; _explicitNullProperties?.Remove("min_value"); }
+            else if (parseNode.GetChildNode("min_value") is { } nullNodeMinValue && nullNodeMinValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinValue = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The is_decimal_allowed property</summary>
-        public bool? IsDecimalAllowed { get => _explicitNullValueIsDecimalAllowed; set { _explicitNullValueIsDecimalAllowed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_decimal_allowed"); else _explicitNullProperties?.Remove("is_decimal_allowed"); } }
+        public bool? IsDecimalAllowed { get => _explicitNullValueIsDecimalAllowed; set { _explicitNullValueIsDecimalAllowed = value; AdditionalData?.Remove("is_decimal_allowed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_decimal_allowed"); else _explicitNullProperties?.Remove("is_decimal_allowed"); } }
         private bool? _explicitNullValueIsDecimalAllowed = default!;
         /// <summary>The max_value property</summary>
-        public double? MaxValue { get => _explicitNullValueMaxValue; set { _explicitNullValueMaxValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_value"); else _explicitNullProperties?.Remove("max_value"); } }
+        public double? MaxValue { get => _explicitNullValueMaxValue; set { _explicitNullValueMaxValue = value; AdditionalData?.Remove("max_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_value"); else _explicitNullProperties?.Remove("max_value"); } }
         private double? _explicitNullValueMaxValue = default!;
         /// <summary>The min_value property</summary>
-        public double? MinValue { get => _explicitNullValueMinValue; set { _explicitNullValueMinValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("min_value"); else _explicitNullProperties?.Remove("min_value"); } }
+        public double? MinValue { get => _explicitNullValueMinValue; set { _explicitNullValueMinValue = value; AdditionalData?.Remove("min_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("min_value"); else _explicitNullProperties?.Remove("min_value"); } }
         private double? _explicitNullValueMinValue = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportNumber"/> and sets the default values.

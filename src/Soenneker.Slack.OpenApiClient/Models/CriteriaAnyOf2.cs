@@ -17,8 +17,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("contains_text") is { } nullNodeContainsText && nullNodeContainsText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainsText = null;
-            if (parseNode.GetChildNode("section_types") is { } nullNodeSectionTypes && nullNodeSectionTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SectionTypes = null;
+            if (parseNode.GetChildNode("contains_text") is null) { _explicitNullValueContainsText = default!; _explicitNullProperties?.Remove("contains_text"); }
+            else if (parseNode.GetChildNode("contains_text") is { } nullNodeContainsText && nullNodeContainsText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainsText = null;
+            if (parseNode.GetChildNode("section_types") is null) { _explicitNullValueSectionTypes = default!; _explicitNullProperties?.Remove("section_types"); }
+            else if (parseNode.GetChildNode("section_types") is { } nullNodeSectionTypes && nullNodeSectionTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SectionTypes = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>Textual content that must appear in the section.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContainsText { get => _explicitNullValueContainsText; set { _explicitNullValueContainsText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contains_text"); else _explicitNullProperties?.Remove("contains_text"); } }
+        public string? ContainsText { get => _explicitNullValueContainsText; set { _explicitNullValueContainsText = value; AdditionalData?.Remove("contains_text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contains_text"); else _explicitNullProperties?.Remove("contains_text"); } }
         private string? _explicitNullValueContainsText = default!;
 #nullable restore
 #else
-        public string ContainsText { get => _explicitNullValueContainsText; set { _explicitNullValueContainsText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contains_text"); else _explicitNullProperties?.Remove("contains_text"); } }
+        public string ContainsText { get => _explicitNullValueContainsText; set { _explicitNullValueContainsText = value; AdditionalData?.Remove("contains_text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contains_text"); else _explicitNullProperties?.Remove("contains_text"); } }
         private string _explicitNullValueContainsText = default!;
 #endif
         /// <summary>List of desired section types to filter on. Minimum of 1, maximum of 3.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.SectionType?>? SectionTypes { get => _explicitNullValueSectionTypes; set { _explicitNullValueSectionTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("section_types"); else _explicitNullProperties?.Remove("section_types"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.SectionType?>? SectionTypes { get => _explicitNullValueSectionTypes; set { _explicitNullValueSectionTypes = value; AdditionalData?.Remove("section_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("section_types"); else _explicitNullProperties?.Remove("section_types"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.SectionType?>? _explicitNullValueSectionTypes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.SectionType?> SectionTypes { get => _explicitNullValueSectionTypes; set { _explicitNullValueSectionTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("section_types"); else _explicitNullProperties?.Remove("section_types"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.SectionType?> SectionTypes { get => _explicitNullValueSectionTypes; set { _explicitNullValueSectionTypes = value; AdditionalData?.Remove("section_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("section_types"); else _explicitNullProperties?.Remove("section_types"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.SectionType?> _explicitNullValueSectionTypes = default!;
 #endif
         /// <summary>

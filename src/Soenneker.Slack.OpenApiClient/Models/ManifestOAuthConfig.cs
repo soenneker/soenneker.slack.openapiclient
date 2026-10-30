@@ -17,9 +17,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("redirect_urls") is { } nullNodeRedirectUrls && nullNodeRedirectUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RedirectUrls = null;
-            if (parseNode.GetChildNode("scopes") is { } nullNodeScopes && nullNodeScopes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Scopes = null;
-            if (parseNode.GetChildNode("token_management_enabled") is { } nullNodeTokenManagementEnabled && nullNodeTokenManagementEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TokenManagementEnabled = null;
+            if (parseNode.GetChildNode("redirect_urls") is null) { _explicitNullValueRedirectUrls = default!; _explicitNullProperties?.Remove("redirect_urls"); }
+            else if (parseNode.GetChildNode("redirect_urls") is { } nullNodeRedirectUrls && nullNodeRedirectUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RedirectUrls = null;
+            if (parseNode.GetChildNode("scopes") is null) { _explicitNullValueScopes = default!; _explicitNullProperties?.Remove("scopes"); }
+            else if (parseNode.GetChildNode("scopes") is { } nullNodeScopes && nullNodeScopes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Scopes = null;
+            if (parseNode.GetChildNode("token_management_enabled") is null) { _explicitNullValueTokenManagementEnabled = default!; _explicitNullProperties?.Remove("token_management_enabled"); }
+            else if (parseNode.GetChildNode("token_management_enabled") is { } nullNodeTokenManagementEnabled && nullNodeTokenManagementEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TokenManagementEnabled = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,25 +30,25 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>An array of strings containing [OAuth redirect URLs](https://docs.slack.dev/authentication/installing-with-oauth).A maximum of 1000 redirect URLs can be included in this array.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? RedirectUrls { get => _explicitNullValueRedirectUrls; set { _explicitNullValueRedirectUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirect_urls"); else _explicitNullProperties?.Remove("redirect_urls"); } }
+        public List<string>? RedirectUrls { get => _explicitNullValueRedirectUrls; set { _explicitNullValueRedirectUrls = value; AdditionalData?.Remove("redirect_urls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirect_urls"); else _explicitNullProperties?.Remove("redirect_urls"); } }
         private List<string>? _explicitNullValueRedirectUrls = default!;
 #nullable restore
 #else
-        public List<string> RedirectUrls { get => _explicitNullValueRedirectUrls; set { _explicitNullValueRedirectUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirect_urls"); else _explicitNullProperties?.Remove("redirect_urls"); } }
+        public List<string> RedirectUrls { get => _explicitNullValueRedirectUrls; set { _explicitNullValueRedirectUrls = value; AdditionalData?.Remove("redirect_urls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirect_urls"); else _explicitNullProperties?.Remove("redirect_urls"); } }
         private List<string> _explicitNullValueRedirectUrls = default!;
 #endif
         /// <summary>A subgroup of settings that describe [permission scopes](https://docs.slack.dev/reference/scopes) configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ManifestOAuthScopes? Scopes { get => _explicitNullValueScopes; set { _explicitNullValueScopes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scopes"); else _explicitNullProperties?.Remove("scopes"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.ManifestOAuthScopes? Scopes { get => _explicitNullValueScopes; set { _explicitNullValueScopes = value; AdditionalData?.Remove("scopes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scopes"); else _explicitNullProperties?.Remove("scopes"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.ManifestOAuthScopes? _explicitNullValueScopes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ManifestOAuthScopes Scopes { get => _explicitNullValueScopes; set { _explicitNullValueScopes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scopes"); else _explicitNullProperties?.Remove("scopes"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.ManifestOAuthScopes Scopes { get => _explicitNullValueScopes; set { _explicitNullValueScopes = value; AdditionalData?.Remove("scopes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scopes"); else _explicitNullProperties?.Remove("scopes"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.ManifestOAuthScopes _explicitNullValueScopes = default!;
 #endif
         /// <summary>The token_management_enabled property</summary>
-        public bool? TokenManagementEnabled { get => _explicitNullValueTokenManagementEnabled; set { _explicitNullValueTokenManagementEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token_management_enabled"); else _explicitNullProperties?.Remove("token_management_enabled"); } }
+        public bool? TokenManagementEnabled { get => _explicitNullValueTokenManagementEnabled; set { _explicitNullValueTokenManagementEnabled = value; AdditionalData?.Remove("token_management_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token_management_enabled"); else _explicitNullProperties?.Remove("token_management_enabled"); } }
         private bool? _explicitNullValueTokenManagementEnabled = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ManifestOAuthConfig"/> and sets the default values.

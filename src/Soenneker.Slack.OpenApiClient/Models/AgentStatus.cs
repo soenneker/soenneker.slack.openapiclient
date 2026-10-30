@@ -17,10 +17,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("agent_bot_user_id") is { } nullNodeAgentBotUserId && nullNodeAgentBotUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentBotUserId = null;
-            if (parseNode.GetChildNode("date_status_processing_expire") is { } nullNodeDateStatusProcessingExpire && nullNodeDateStatusProcessingExpire.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateStatusProcessingExpire = null;
-            if (parseNode.GetChildNode("is_stoppable") is { } nullNodeIsStoppable && nullNodeIsStoppable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsStoppable = null;
-            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("agent_bot_user_id") is null) { _explicitNullValueAgentBotUserId = default!; _explicitNullProperties?.Remove("agent_bot_user_id"); }
+            else if (parseNode.GetChildNode("agent_bot_user_id") is { } nullNodeAgentBotUserId && nullNodeAgentBotUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentBotUserId = null;
+            if (parseNode.GetChildNode("date_status_processing_expire") is null) { _explicitNullValueDateStatusProcessingExpire = default!; _explicitNullProperties?.Remove("date_status_processing_expire"); }
+            else if (parseNode.GetChildNode("date_status_processing_expire") is { } nullNodeDateStatusProcessingExpire && nullNodeDateStatusProcessingExpire.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateStatusProcessingExpire = null;
+            if (parseNode.GetChildNode("is_stoppable") is null) { _explicitNullValueIsStoppable = default!; _explicitNullProperties?.Remove("is_stoppable"); }
+            else if (parseNode.GetChildNode("is_stoppable") is { } nullNodeIsStoppable && nullNodeIsStoppable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsStoppable = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,27 +32,27 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The agent_bot_user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AgentBotUserId { get => _explicitNullValueAgentBotUserId; set { _explicitNullValueAgentBotUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_bot_user_id"); else _explicitNullProperties?.Remove("agent_bot_user_id"); } }
+        public string? AgentBotUserId { get => _explicitNullValueAgentBotUserId; set { _explicitNullValueAgentBotUserId = value; AdditionalData?.Remove("agent_bot_user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_bot_user_id"); else _explicitNullProperties?.Remove("agent_bot_user_id"); } }
         private string? _explicitNullValueAgentBotUserId = default!;
 #nullable restore
 #else
-        public string AgentBotUserId { get => _explicitNullValueAgentBotUserId; set { _explicitNullValueAgentBotUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_bot_user_id"); else _explicitNullProperties?.Remove("agent_bot_user_id"); } }
+        public string AgentBotUserId { get => _explicitNullValueAgentBotUserId; set { _explicitNullValueAgentBotUserId = value; AdditionalData?.Remove("agent_bot_user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_bot_user_id"); else _explicitNullProperties?.Remove("agent_bot_user_id"); } }
         private string _explicitNullValueAgentBotUserId = default!;
 #endif
         /// <summary>The date_status_processing_expire property</summary>
-        public double? DateStatusProcessingExpire { get => _explicitNullValueDateStatusProcessingExpire; set { _explicitNullValueDateStatusProcessingExpire = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_status_processing_expire"); else _explicitNullProperties?.Remove("date_status_processing_expire"); } }
+        public double? DateStatusProcessingExpire { get => _explicitNullValueDateStatusProcessingExpire; set { _explicitNullValueDateStatusProcessingExpire = value; AdditionalData?.Remove("date_status_processing_expire"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_status_processing_expire"); else _explicitNullProperties?.Remove("date_status_processing_expire"); } }
         private double? _explicitNullValueDateStatusProcessingExpire = default!;
         /// <summary>The is_stoppable property</summary>
-        public bool? IsStoppable { get => _explicitNullValueIsStoppable; set { _explicitNullValueIsStoppable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_stoppable"); else _explicitNullProperties?.Remove("is_stoppable"); } }
+        public bool? IsStoppable { get => _explicitNullValueIsStoppable; set { _explicitNullValueIsStoppable = value; AdditionalData?.Remove("is_stoppable"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_stoppable"); else _explicitNullProperties?.Remove("is_stoppable"); } }
         private bool? _explicitNullValueIsStoppable = default!;
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public string? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private string? _explicitNullValueStatus = default!;
 #nullable restore
 #else
-        public string Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public string Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private string _explicitNullValueStatus = default!;
 #endif
         /// <summary>

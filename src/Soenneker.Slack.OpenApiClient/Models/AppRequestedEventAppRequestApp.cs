@@ -17,18 +17,30 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("additional_info") is { } nullNodeAdditionalInfo && nullNodeAdditionalInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalInfo = null;
-            if (parseNode.GetChildNode("app_directory_url") is { } nullNodeAppDirectoryUrl && nullNodeAppDirectoryUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppDirectoryUrl = null;
-            if (parseNode.GetChildNode("app_homepage_url") is { } nullNodeAppHomepageUrl && nullNodeAppHomepageUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppHomepageUrl = null;
-            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
-            if (parseNode.GetChildNode("help_url") is { } nullNodeHelpUrl && nullNodeHelpUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HelpUrl = null;
-            if (parseNode.GetChildNode("icons") is { } nullNodeIcons && nullNodeIcons.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Icons = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("is_app_directory_approved") is { } nullNodeIsAppDirectoryApproved && nullNodeIsAppDirectoryApproved.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAppDirectoryApproved = null;
-            if (parseNode.GetChildNode("is_granular_bot_app") is { } nullNodeIsGranularBotApp && nullNodeIsGranularBotApp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsGranularBotApp = null;
-            if (parseNode.GetChildNode("is_internal") is { } nullNodeIsInternal && nullNodeIsInternal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsInternal = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("privacy_policy_url") is { } nullNodePrivacyPolicyUrl && nullNodePrivacyPolicyUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivacyPolicyUrl = null;
+            if (parseNode.GetChildNode("additional_info") is null) { _explicitNullValueAdditionalInfo = default!; _explicitNullProperties?.Remove("additional_info"); }
+            else if (parseNode.GetChildNode("additional_info") is { } nullNodeAdditionalInfo && nullNodeAdditionalInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalInfo = null;
+            if (parseNode.GetChildNode("app_directory_url") is null) { _explicitNullValueAppDirectoryUrl = default!; _explicitNullProperties?.Remove("app_directory_url"); }
+            else if (parseNode.GetChildNode("app_directory_url") is { } nullNodeAppDirectoryUrl && nullNodeAppDirectoryUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppDirectoryUrl = null;
+            if (parseNode.GetChildNode("app_homepage_url") is null) { _explicitNullValueAppHomepageUrl = default!; _explicitNullProperties?.Remove("app_homepage_url"); }
+            else if (parseNode.GetChildNode("app_homepage_url") is { } nullNodeAppHomepageUrl && nullNodeAppHomepageUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppHomepageUrl = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("help_url") is null) { _explicitNullValueHelpUrl = default!; _explicitNullProperties?.Remove("help_url"); }
+            else if (parseNode.GetChildNode("help_url") is { } nullNodeHelpUrl && nullNodeHelpUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HelpUrl = null;
+            if (parseNode.GetChildNode("icons") is null) { _explicitNullValueIcons = default!; _explicitNullProperties?.Remove("icons"); }
+            else if (parseNode.GetChildNode("icons") is { } nullNodeIcons && nullNodeIcons.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Icons = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("is_app_directory_approved") is null) { _explicitNullValueIsAppDirectoryApproved = default!; _explicitNullProperties?.Remove("is_app_directory_approved"); }
+            else if (parseNode.GetChildNode("is_app_directory_approved") is { } nullNodeIsAppDirectoryApproved && nullNodeIsAppDirectoryApproved.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAppDirectoryApproved = null;
+            if (parseNode.GetChildNode("is_granular_bot_app") is null) { _explicitNullValueIsGranularBotApp = default!; _explicitNullProperties?.Remove("is_granular_bot_app"); }
+            else if (parseNode.GetChildNode("is_granular_bot_app") is { } nullNodeIsGranularBotApp && nullNodeIsGranularBotApp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsGranularBotApp = null;
+            if (parseNode.GetChildNode("is_internal") is null) { _explicitNullValueIsInternal = default!; _explicitNullProperties?.Remove("is_internal"); }
+            else if (parseNode.GetChildNode("is_internal") is { } nullNodeIsInternal && nullNodeIsInternal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsInternal = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("privacy_policy_url") is null) { _explicitNullValuePrivacyPolicyUrl = default!; _explicitNullProperties?.Remove("privacy_policy_url"); }
+            else if (parseNode.GetChildNode("privacy_policy_url") is { } nullNodePrivacyPolicyUrl && nullNodePrivacyPolicyUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivacyPolicyUrl = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -36,100 +48,100 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The additional_info property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdditionalInfo { get => _explicitNullValueAdditionalInfo; set { _explicitNullValueAdditionalInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_info"); else _explicitNullProperties?.Remove("additional_info"); } }
+        public string? AdditionalInfo { get => _explicitNullValueAdditionalInfo; set { _explicitNullValueAdditionalInfo = value; AdditionalData?.Remove("additional_info"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_info"); else _explicitNullProperties?.Remove("additional_info"); } }
         private string? _explicitNullValueAdditionalInfo = default!;
 #nullable restore
 #else
-        public string AdditionalInfo { get => _explicitNullValueAdditionalInfo; set { _explicitNullValueAdditionalInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_info"); else _explicitNullProperties?.Remove("additional_info"); } }
+        public string AdditionalInfo { get => _explicitNullValueAdditionalInfo; set { _explicitNullValueAdditionalInfo = value; AdditionalData?.Remove("additional_info"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_info"); else _explicitNullProperties?.Remove("additional_info"); } }
         private string _explicitNullValueAdditionalInfo = default!;
 #endif
         /// <summary>The app_directory_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AppDirectoryUrl { get => _explicitNullValueAppDirectoryUrl; set { _explicitNullValueAppDirectoryUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_directory_url"); else _explicitNullProperties?.Remove("app_directory_url"); } }
+        public string? AppDirectoryUrl { get => _explicitNullValueAppDirectoryUrl; set { _explicitNullValueAppDirectoryUrl = value; AdditionalData?.Remove("app_directory_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_directory_url"); else _explicitNullProperties?.Remove("app_directory_url"); } }
         private string? _explicitNullValueAppDirectoryUrl = default!;
 #nullable restore
 #else
-        public string AppDirectoryUrl { get => _explicitNullValueAppDirectoryUrl; set { _explicitNullValueAppDirectoryUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_directory_url"); else _explicitNullProperties?.Remove("app_directory_url"); } }
+        public string AppDirectoryUrl { get => _explicitNullValueAppDirectoryUrl; set { _explicitNullValueAppDirectoryUrl = value; AdditionalData?.Remove("app_directory_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_directory_url"); else _explicitNullProperties?.Remove("app_directory_url"); } }
         private string _explicitNullValueAppDirectoryUrl = default!;
 #endif
         /// <summary>The app_homepage_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AppHomepageUrl { get => _explicitNullValueAppHomepageUrl; set { _explicitNullValueAppHomepageUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_homepage_url"); else _explicitNullProperties?.Remove("app_homepage_url"); } }
+        public string? AppHomepageUrl { get => _explicitNullValueAppHomepageUrl; set { _explicitNullValueAppHomepageUrl = value; AdditionalData?.Remove("app_homepage_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_homepage_url"); else _explicitNullProperties?.Remove("app_homepage_url"); } }
         private string? _explicitNullValueAppHomepageUrl = default!;
 #nullable restore
 #else
-        public string AppHomepageUrl { get => _explicitNullValueAppHomepageUrl; set { _explicitNullValueAppHomepageUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_homepage_url"); else _explicitNullProperties?.Remove("app_homepage_url"); } }
+        public string AppHomepageUrl { get => _explicitNullValueAppHomepageUrl; set { _explicitNullValueAppHomepageUrl = value; AdditionalData?.Remove("app_homepage_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_homepage_url"); else _explicitNullProperties?.Remove("app_homepage_url"); } }
         private string _explicitNullValueAppHomepageUrl = default!;
 #endif
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The help_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HelpUrl { get => _explicitNullValueHelpUrl; set { _explicitNullValueHelpUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("help_url"); else _explicitNullProperties?.Remove("help_url"); } }
+        public string? HelpUrl { get => _explicitNullValueHelpUrl; set { _explicitNullValueHelpUrl = value; AdditionalData?.Remove("help_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("help_url"); else _explicitNullProperties?.Remove("help_url"); } }
         private string? _explicitNullValueHelpUrl = default!;
 #nullable restore
 #else
-        public string HelpUrl { get => _explicitNullValueHelpUrl; set { _explicitNullValueHelpUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("help_url"); else _explicitNullProperties?.Remove("help_url"); } }
+        public string HelpUrl { get => _explicitNullValueHelpUrl; set { _explicitNullValueHelpUrl = value; AdditionalData?.Remove("help_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("help_url"); else _explicitNullProperties?.Remove("help_url"); } }
         private string _explicitNullValueHelpUrl = default!;
 #endif
         /// <summary>The icons property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AppRequestedEventAppRequestAppIcons? Icons { get => _explicitNullValueIcons; set { _explicitNullValueIcons = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icons"); else _explicitNullProperties?.Remove("icons"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.AppRequestedEventAppRequestAppIcons? Icons { get => _explicitNullValueIcons; set { _explicitNullValueIcons = value; AdditionalData?.Remove("icons"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icons"); else _explicitNullProperties?.Remove("icons"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.AppRequestedEventAppRequestAppIcons? _explicitNullValueIcons = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.AppRequestedEventAppRequestAppIcons Icons { get => _explicitNullValueIcons; set { _explicitNullValueIcons = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icons"); else _explicitNullProperties?.Remove("icons"); } }
+        public global::Soenneker.Slack.OpenApiClient.Models.AppRequestedEventAppRequestAppIcons Icons { get => _explicitNullValueIcons; set { _explicitNullValueIcons = value; AdditionalData?.Remove("icons"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icons"); else _explicitNullProperties?.Remove("icons"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.AppRequestedEventAppRequestAppIcons _explicitNullValueIcons = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The is_app_directory_approved property</summary>
-        public bool? IsAppDirectoryApproved { get => _explicitNullValueIsAppDirectoryApproved; set { _explicitNullValueIsAppDirectoryApproved = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_app_directory_approved"); else _explicitNullProperties?.Remove("is_app_directory_approved"); } }
+        public bool? IsAppDirectoryApproved { get => _explicitNullValueIsAppDirectoryApproved; set { _explicitNullValueIsAppDirectoryApproved = value; AdditionalData?.Remove("is_app_directory_approved"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_app_directory_approved"); else _explicitNullProperties?.Remove("is_app_directory_approved"); } }
         private bool? _explicitNullValueIsAppDirectoryApproved = default!;
         /// <summary>The is_granular_bot_app property</summary>
-        public bool? IsGranularBotApp { get => _explicitNullValueIsGranularBotApp; set { _explicitNullValueIsGranularBotApp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_granular_bot_app"); else _explicitNullProperties?.Remove("is_granular_bot_app"); } }
+        public bool? IsGranularBotApp { get => _explicitNullValueIsGranularBotApp; set { _explicitNullValueIsGranularBotApp = value; AdditionalData?.Remove("is_granular_bot_app"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_granular_bot_app"); else _explicitNullProperties?.Remove("is_granular_bot_app"); } }
         private bool? _explicitNullValueIsGranularBotApp = default!;
         /// <summary>The is_internal property</summary>
-        public bool? IsInternal { get => _explicitNullValueIsInternal; set { _explicitNullValueIsInternal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_internal"); else _explicitNullProperties?.Remove("is_internal"); } }
+        public bool? IsInternal { get => _explicitNullValueIsInternal; set { _explicitNullValueIsInternal = value; AdditionalData?.Remove("is_internal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_internal"); else _explicitNullProperties?.Remove("is_internal"); } }
         private bool? _explicitNullValueIsInternal = default!;
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The privacy_policy_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrivacyPolicyUrl { get => _explicitNullValuePrivacyPolicyUrl; set { _explicitNullValuePrivacyPolicyUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacy_policy_url"); else _explicitNullProperties?.Remove("privacy_policy_url"); } }
+        public string? PrivacyPolicyUrl { get => _explicitNullValuePrivacyPolicyUrl; set { _explicitNullValuePrivacyPolicyUrl = value; AdditionalData?.Remove("privacy_policy_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacy_policy_url"); else _explicitNullProperties?.Remove("privacy_policy_url"); } }
         private string? _explicitNullValuePrivacyPolicyUrl = default!;
 #nullable restore
 #else
-        public string PrivacyPolicyUrl { get => _explicitNullValuePrivacyPolicyUrl; set { _explicitNullValuePrivacyPolicyUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacy_policy_url"); else _explicitNullProperties?.Remove("privacy_policy_url"); } }
+        public string PrivacyPolicyUrl { get => _explicitNullValuePrivacyPolicyUrl; set { _explicitNullValuePrivacyPolicyUrl = value; AdditionalData?.Remove("privacy_policy_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacy_policy_url"); else _explicitNullProperties?.Remove("privacy_policy_url"); } }
         private string _explicitNullValuePrivacyPolicyUrl = default!;
 #endif
         /// <summary>

@@ -17,8 +17,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("image_34") is { } nullNodeImage34 && nullNodeImage34.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Image34 = null;
-            if (parseNode.GetChildNode("image_default") is { } nullNodeImageDefault && nullNodeImageDefault.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageDefault = null;
+            if (parseNode.GetChildNode("image_34") is null) { _explicitNullValueImage34 = default!; _explicitNullProperties?.Remove("image_34"); }
+            else if (parseNode.GetChildNode("image_34") is { } nullNodeImage34 && nullNodeImage34.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Image34 = null;
+            if (parseNode.GetChildNode("image_default") is null) { _explicitNullValueImageDefault = default!; _explicitNullProperties?.Remove("image_default"); }
+            else if (parseNode.GetChildNode("image_default") is { } nullNodeImageDefault && nullNodeImageDefault.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageDefault = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The image_34 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Image34 { get => _explicitNullValueImage34; set { _explicitNullValueImage34 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_34"); else _explicitNullProperties?.Remove("image_34"); } }
+        public string? Image34 { get => _explicitNullValueImage34; set { _explicitNullValueImage34 = value; AdditionalData?.Remove("image_34"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_34"); else _explicitNullProperties?.Remove("image_34"); } }
         private string? _explicitNullValueImage34 = default!;
 #nullable restore
 #else
-        public string Image34 { get => _explicitNullValueImage34; set { _explicitNullValueImage34 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_34"); else _explicitNullProperties?.Remove("image_34"); } }
+        public string Image34 { get => _explicitNullValueImage34; set { _explicitNullValueImage34 = value; AdditionalData?.Remove("image_34"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_34"); else _explicitNullProperties?.Remove("image_34"); } }
         private string _explicitNullValueImage34 = default!;
 #endif
         /// <summary>The image_default property</summary>
-        public bool? ImageDefault { get => _explicitNullValueImageDefault; set { _explicitNullValueImageDefault = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_default"); else _explicitNullProperties?.Remove("image_default"); } }
+        public bool? ImageDefault { get => _explicitNullValueImageDefault; set { _explicitNullValueImageDefault = value; AdditionalData?.Remove("image_default"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_default"); else _explicitNullProperties?.Remove("image_default"); } }
         private bool? _explicitNullValueImageDefault = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.SharedChannelInviteRequestedEventTeamsInChannelItemIcon"/> and sets the default values.

@@ -17,10 +17,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("bot") is { } nullNodeBot && nullNodeBot.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bot = null;
-            if (parseNode.GetChildNode("bot_optional") is { } nullNodeBotOptional && nullNodeBotOptional.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotOptional = null;
-            if (parseNode.GetChildNode("user") is { } nullNodeUser && nullNodeUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) User = null;
-            if (parseNode.GetChildNode("user_optional") is { } nullNodeUserOptional && nullNodeUserOptional.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserOptional = null;
+            if (parseNode.GetChildNode("bot") is null) { _explicitNullValueBot = default!; _explicitNullProperties?.Remove("bot"); }
+            else if (parseNode.GetChildNode("bot") is { } nullNodeBot && nullNodeBot.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bot = null;
+            if (parseNode.GetChildNode("bot_optional") is null) { _explicitNullValueBotOptional = default!; _explicitNullProperties?.Remove("bot_optional"); }
+            else if (parseNode.GetChildNode("bot_optional") is { } nullNodeBotOptional && nullNodeBotOptional.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotOptional = null;
+            if (parseNode.GetChildNode("user") is null) { _explicitNullValueUser = default!; _explicitNullProperties?.Remove("user"); }
+            else if (parseNode.GetChildNode("user") is { } nullNodeUser && nullNodeUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) User = null;
+            if (parseNode.GetChildNode("user_optional") is null) { _explicitNullValueUserOptional = default!; _explicitNullProperties?.Remove("user_optional"); }
+            else if (parseNode.GetChildNode("user_optional") is { } nullNodeUserOptional && nullNodeUserOptional.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserOptional = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>An array of strings containing [granular bot scopes](https://docs.slack.dev/reference/scopes?token_types=Bot)to request upon app installation. A maximum of 255 scopes can included in this array.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.BotScope?>? Bot { get => _explicitNullValueBot; set { _explicitNullValueBot = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot"); else _explicitNullProperties?.Remove("bot"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.BotScope?>? Bot { get => _explicitNullValueBot; set { _explicitNullValueBot = value; AdditionalData?.Remove("bot"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot"); else _explicitNullProperties?.Remove("bot"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.BotScope?>? _explicitNullValueBot = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.BotScope?> Bot { get => _explicitNullValueBot; set { _explicitNullValueBot = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot"); else _explicitNullProperties?.Remove("bot"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.BotScope?> Bot { get => _explicitNullValueBot; set { _explicitNullValueBot = value; AdditionalData?.Remove("bot"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot"); else _explicitNullProperties?.Remove("bot"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.BotScope?> _explicitNullValueBot = default!;
 #endif
         /// <summary>An array of strings containing optional [granular bot scopes](https://docs.slack.dev/reference/scopes?token_types=Bot)to request upon app installation. A maximum of 255 scopes can included in this array.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.BotScope?>? BotOptional { get => _explicitNullValueBotOptional; set { _explicitNullValueBotOptional = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_optional"); else _explicitNullProperties?.Remove("bot_optional"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.BotScope?>? BotOptional { get => _explicitNullValueBotOptional; set { _explicitNullValueBotOptional = value; AdditionalData?.Remove("bot_optional"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_optional"); else _explicitNullProperties?.Remove("bot_optional"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.BotScope?>? _explicitNullValueBotOptional = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.BotScope?> BotOptional { get => _explicitNullValueBotOptional; set { _explicitNullValueBotOptional = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_optional"); else _explicitNullProperties?.Remove("bot_optional"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.BotScope?> BotOptional { get => _explicitNullValueBotOptional; set { _explicitNullValueBotOptional = value; AdditionalData?.Remove("bot_optional"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_optional"); else _explicitNullProperties?.Remove("bot_optional"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.BotScope?> _explicitNullValueBotOptional = default!;
 #endif
         /// <summary>An array of strings containing [user scopes](https://docs.slack.dev/reference/scopes?token_types=User)to request upon app installation. A maximum of 255 scopes can included in this array.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.UserScope?>? User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.UserScope?>? User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; AdditionalData?.Remove("user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.UserScope?>? _explicitNullValueUser = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.UserScope?> User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.UserScope?> User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; AdditionalData?.Remove("user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.UserScope?> _explicitNullValueUser = default!;
 #endif
         /// <summary>An array of strings containing optional [user scopes](https://docs.slack.dev/reference/scopes?token_types=User)to request upon app installation. A maximum of 255 scopes can included in this array.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.UserScope?>? UserOptional { get => _explicitNullValueUserOptional; set { _explicitNullValueUserOptional = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_optional"); else _explicitNullProperties?.Remove("user_optional"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.UserScope?>? UserOptional { get => _explicitNullValueUserOptional; set { _explicitNullValueUserOptional = value; AdditionalData?.Remove("user_optional"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_optional"); else _explicitNullProperties?.Remove("user_optional"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.UserScope?>? _explicitNullValueUserOptional = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.UserScope?> UserOptional { get => _explicitNullValueUserOptional; set { _explicitNullValueUserOptional = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_optional"); else _explicitNullProperties?.Remove("user_optional"); } }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.UserScope?> UserOptional { get => _explicitNullValueUserOptional; set { _explicitNullValueUserOptional = value; AdditionalData?.Remove("user_optional"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_optional"); else _explicitNullProperties?.Remove("user_optional"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.UserScope?> _explicitNullValueUserOptional = default!;
 #endif
         /// <summary>
