@@ -11,120 +11,169 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SlackConnectPrefs : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("accept_sc_invites") is { } nullNodeAcceptScInvites && nullNodeAcceptScInvites.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptScInvites = null;
+            if (parseNode.GetChildNode("allowed_canvas_sharing") is { } nullNodeAllowedCanvasSharing && nullNodeAllowedCanvasSharing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedCanvasSharing = null;
+            if (parseNode.GetChildNode("allowed_list_sharing") is { } nullNodeAllowedListSharing && nullNodeAllowedListSharing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedListSharing = null;
+            if (parseNode.GetChildNode("allowed_workspaces") is { } nullNodeAllowedWorkspaces && nullNodeAllowedWorkspaces.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedWorkspaces = null;
+            if (parseNode.GetChildNode("allow_sc_file_uploads") is { } nullNodeAllowScFileUploads && nullNodeAllowScFileUploads.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowScFileUploads = null;
+            if (parseNode.GetChildNode("approved_org_info") is { } nullNodeApprovedOrgInfo && nullNodeApprovedOrgInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApprovedOrgInfo = null;
+            if (parseNode.GetChildNode("away_team_sc_invite_permissions") is { } nullNodeAwayTeamScInvitePermissions && nullNodeAwayTeamScInvitePermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AwayTeamScInvitePermissions = null;
+            if (parseNode.GetChildNode("away_team_sc_invite_require_2fa") is { } nullNodeAwayTeamScInviteRequire2fa && nullNodeAwayTeamScInviteRequire2fa.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AwayTeamScInviteRequire2fa = null;
+            if (parseNode.GetChildNode("external_awareness_context_bar") is { } nullNodeExternalAwarenessContextBar && nullNodeExternalAwarenessContextBar.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalAwarenessContextBar = null;
+            if (parseNode.GetChildNode("profile_visibility") is { } nullNodeProfileVisibility && nullNodeProfileVisibility.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProfileVisibility = null;
+            if (parseNode.GetChildNode("require_sc_channel_for_sc_dm") is { } nullNodeRequireScChannelForScDm && nullNodeRequireScChannelForScDm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequireScChannelForScDm = null;
+            if (parseNode.GetChildNode("sc_channel_limited_access") is { } nullNodeScChannelLimitedAccess && nullNodeScChannelLimitedAccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScChannelLimitedAccess = null;
+            if (parseNode.GetChildNode("sc_mpdm_to_private") is { } nullNodeScMpdmToPrivate && nullNodeScMpdmToPrivate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScMpdmToPrivate = null;
+            if (parseNode.GetChildNode("shared_channel_invite_requested") is { } nullNodeSharedChannelInviteRequested && nullNodeSharedChannelInviteRequested.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SharedChannelInviteRequested = null;
+        }
+
         /// <summary>The accept_sc_invites property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AcceptScInvites? AcceptScInvites { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AcceptScInvites? AcceptScInvites { get => _explicitNullValueAcceptScInvites; set { _explicitNullValueAcceptScInvites = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accept_sc_invites"); else _explicitNullProperties?.Remove("accept_sc_invites"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AcceptScInvites? _explicitNullValueAcceptScInvites = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.AcceptScInvites AcceptScInvites { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AcceptScInvites AcceptScInvites { get => _explicitNullValueAcceptScInvites; set { _explicitNullValueAcceptScInvites = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accept_sc_invites"); else _explicitNullProperties?.Remove("accept_sc_invites"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AcceptScInvites _explicitNullValueAcceptScInvites = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The allowed_canvas_sharing property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads? AllowedCanvasSharing { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads? AllowedCanvasSharing { get => _explicitNullValueAllowedCanvasSharing; set { _explicitNullValueAllowedCanvasSharing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_canvas_sharing"); else _explicitNullProperties?.Remove("allowed_canvas_sharing"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads? _explicitNullValueAllowedCanvasSharing = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads AllowedCanvasSharing { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads AllowedCanvasSharing { get => _explicitNullValueAllowedCanvasSharing; set { _explicitNullValueAllowedCanvasSharing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_canvas_sharing"); else _explicitNullProperties?.Remove("allowed_canvas_sharing"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads _explicitNullValueAllowedCanvasSharing = default!;
 #endif
         /// <summary>The allowed_list_sharing property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads? AllowedListSharing { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads? AllowedListSharing { get => _explicitNullValueAllowedListSharing; set { _explicitNullValueAllowedListSharing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_list_sharing"); else _explicitNullProperties?.Remove("allowed_list_sharing"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads? _explicitNullValueAllowedListSharing = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads AllowedListSharing { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads AllowedListSharing { get => _explicitNullValueAllowedListSharing; set { _explicitNullValueAllowedListSharing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_list_sharing"); else _explicitNullProperties?.Remove("allowed_list_sharing"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads _explicitNullValueAllowedListSharing = default!;
 #endif
         /// <summary>The allowed_workspaces property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AllowedWorkspaces? AllowedWorkspaces { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AllowedWorkspaces? AllowedWorkspaces { get => _explicitNullValueAllowedWorkspaces; set { _explicitNullValueAllowedWorkspaces = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_workspaces"); else _explicitNullProperties?.Remove("allowed_workspaces"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AllowedWorkspaces? _explicitNullValueAllowedWorkspaces = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.AllowedWorkspaces AllowedWorkspaces { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AllowedWorkspaces AllowedWorkspaces { get => _explicitNullValueAllowedWorkspaces; set { _explicitNullValueAllowedWorkspaces = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_workspaces"); else _explicitNullProperties?.Remove("allowed_workspaces"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AllowedWorkspaces _explicitNullValueAllowedWorkspaces = default!;
 #endif
         /// <summary>The allow_sc_file_uploads property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads? AllowScFileUploads { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads? AllowScFileUploads { get => _explicitNullValueAllowScFileUploads; set { _explicitNullValueAllowScFileUploads = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_sc_file_uploads"); else _explicitNullProperties?.Remove("allow_sc_file_uploads"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads? _explicitNullValueAllowScFileUploads = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads AllowScFileUploads { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads AllowScFileUploads { get => _explicitNullValueAllowScFileUploads; set { _explicitNullValueAllowScFileUploads = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_sc_file_uploads"); else _explicitNullProperties?.Remove("allow_sc_file_uploads"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads _explicitNullValueAllowScFileUploads = default!;
 #endif
         /// <summary>The approved_org_info property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads? ApprovedOrgInfo { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads? ApprovedOrgInfo { get => _explicitNullValueApprovedOrgInfo; set { _explicitNullValueApprovedOrgInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approved_org_info"); else _explicitNullProperties?.Remove("approved_org_info"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads? _explicitNullValueApprovedOrgInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads ApprovedOrgInfo { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads ApprovedOrgInfo { get => _explicitNullValueApprovedOrgInfo; set { _explicitNullValueApprovedOrgInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approved_org_info"); else _explicitNullProperties?.Remove("approved_org_info"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads _explicitNullValueApprovedOrgInfo = default!;
 #endif
         /// <summary>The away_team_sc_invite_permissions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AllowedWorkspaces? AwayTeamScInvitePermissions { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AllowedWorkspaces? AwayTeamScInvitePermissions { get => _explicitNullValueAwayTeamScInvitePermissions; set { _explicitNullValueAwayTeamScInvitePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("away_team_sc_invite_permissions"); else _explicitNullProperties?.Remove("away_team_sc_invite_permissions"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AllowedWorkspaces? _explicitNullValueAwayTeamScInvitePermissions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.AllowedWorkspaces AwayTeamScInvitePermissions { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AllowedWorkspaces AwayTeamScInvitePermissions { get => _explicitNullValueAwayTeamScInvitePermissions; set { _explicitNullValueAwayTeamScInvitePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("away_team_sc_invite_permissions"); else _explicitNullProperties?.Remove("away_team_sc_invite_permissions"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AllowedWorkspaces _explicitNullValueAwayTeamScInvitePermissions = default!;
 #endif
         /// <summary>The away_team_sc_invite_require_2fa property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads? AwayTeamScInviteRequire2fa { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads? AwayTeamScInviteRequire2fa { get => _explicitNullValueAwayTeamScInviteRequire2fa; set { _explicitNullValueAwayTeamScInviteRequire2fa = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("away_team_sc_invite_require_2fa"); else _explicitNullProperties?.Remove("away_team_sc_invite_require_2fa"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads? _explicitNullValueAwayTeamScInviteRequire2fa = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads AwayTeamScInviteRequire2fa { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads AwayTeamScInviteRequire2fa { get => _explicitNullValueAwayTeamScInviteRequire2fa; set { _explicitNullValueAwayTeamScInviteRequire2fa = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("away_team_sc_invite_require_2fa"); else _explicitNullProperties?.Remove("away_team_sc_invite_require_2fa"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads _explicitNullValueAwayTeamScInviteRequire2fa = default!;
 #endif
         /// <summary>The external_awareness_context_bar property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads? ExternalAwarenessContextBar { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads? ExternalAwarenessContextBar { get => _explicitNullValueExternalAwarenessContextBar; set { _explicitNullValueExternalAwarenessContextBar = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_awareness_context_bar"); else _explicitNullProperties?.Remove("external_awareness_context_bar"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads? _explicitNullValueExternalAwarenessContextBar = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads ExternalAwarenessContextBar { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads ExternalAwarenessContextBar { get => _explicitNullValueExternalAwarenessContextBar; set { _explicitNullValueExternalAwarenessContextBar = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_awareness_context_bar"); else _explicitNullProperties?.Remove("external_awareness_context_bar"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads _explicitNullValueExternalAwarenessContextBar = default!;
 #endif
         /// <summary>The profile_visibility property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads? ProfileVisibility { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads? ProfileVisibility { get => _explicitNullValueProfileVisibility; set { _explicitNullValueProfileVisibility = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("profile_visibility"); else _explicitNullProperties?.Remove("profile_visibility"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads? _explicitNullValueProfileVisibility = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads ProfileVisibility { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads ProfileVisibility { get => _explicitNullValueProfileVisibility; set { _explicitNullValueProfileVisibility = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("profile_visibility"); else _explicitNullProperties?.Remove("profile_visibility"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads _explicitNullValueProfileVisibility = default!;
 #endif
         /// <summary>The require_sc_channel_for_sc_dm property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads? RequireScChannelForScDm { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads? RequireScChannelForScDm { get => _explicitNullValueRequireScChannelForScDm; set { _explicitNullValueRequireScChannelForScDm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("require_sc_channel_for_sc_dm"); else _explicitNullProperties?.Remove("require_sc_channel_for_sc_dm"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads? _explicitNullValueRequireScChannelForScDm = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads RequireScChannelForScDm { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads RequireScChannelForScDm { get => _explicitNullValueRequireScChannelForScDm; set { _explicitNullValueRequireScChannelForScDm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("require_sc_channel_for_sc_dm"); else _explicitNullProperties?.Remove("require_sc_channel_for_sc_dm"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads _explicitNullValueRequireScChannelForScDm = default!;
 #endif
         /// <summary>The sc_channel_limited_access property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads? ScChannelLimitedAccess { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads? ScChannelLimitedAccess { get => _explicitNullValueScChannelLimitedAccess; set { _explicitNullValueScChannelLimitedAccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sc_channel_limited_access"); else _explicitNullProperties?.Remove("sc_channel_limited_access"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads? _explicitNullValueScChannelLimitedAccess = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads ScChannelLimitedAccess { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads ScChannelLimitedAccess { get => _explicitNullValueScChannelLimitedAccess; set { _explicitNullValueScChannelLimitedAccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sc_channel_limited_access"); else _explicitNullProperties?.Remove("sc_channel_limited_access"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads _explicitNullValueScChannelLimitedAccess = default!;
 #endif
         /// <summary>The sc_mpdm_to_private property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ScMpdmToPrivate? ScMpdmToPrivate { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ScMpdmToPrivate? ScMpdmToPrivate { get => _explicitNullValueScMpdmToPrivate; set { _explicitNullValueScMpdmToPrivate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sc_mpdm_to_private"); else _explicitNullProperties?.Remove("sc_mpdm_to_private"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ScMpdmToPrivate? _explicitNullValueScMpdmToPrivate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ScMpdmToPrivate ScMpdmToPrivate { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ScMpdmToPrivate ScMpdmToPrivate { get => _explicitNullValueScMpdmToPrivate; set { _explicitNullValueScMpdmToPrivate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sc_mpdm_to_private"); else _explicitNullProperties?.Remove("sc_mpdm_to_private"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ScMpdmToPrivate _explicitNullValueScMpdmToPrivate = default!;
 #endif
         /// <summary>The shared_channel_invite_requested property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.SharedChannelInviteRequested? SharedChannelInviteRequested { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.SharedChannelInviteRequested? SharedChannelInviteRequested { get => _explicitNullValueSharedChannelInviteRequested; set { _explicitNullValueSharedChannelInviteRequested = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_channel_invite_requested"); else _explicitNullProperties?.Remove("shared_channel_invite_requested"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.SharedChannelInviteRequested? _explicitNullValueSharedChannelInviteRequested = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.SharedChannelInviteRequested SharedChannelInviteRequested { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.SharedChannelInviteRequested SharedChannelInviteRequested { get => _explicitNullValueSharedChannelInviteRequested; set { _explicitNullValueSharedChannelInviteRequested = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_channel_invite_requested"); else _explicitNullProperties?.Remove("shared_channel_invite_requested"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.SharedChannelInviteRequested _explicitNullValueSharedChannelInviteRequested = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackConnectPrefs"/> and sets the default values.
@@ -141,7 +190,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.SlackConnectPrefs CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.SlackConnectPrefs();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.SlackConnectPrefs(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -188,6 +237,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads>("sc_channel_limited_access", ScChannelLimitedAccess);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ScMpdmToPrivate>("sc_mpdm_to_private", ScMpdmToPrivate);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SharedChannelInviteRequested>("shared_channel_invite_requested", SharedChannelInviteRequested);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

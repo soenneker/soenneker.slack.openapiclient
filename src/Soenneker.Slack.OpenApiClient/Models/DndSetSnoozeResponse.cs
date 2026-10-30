@@ -11,58 +11,90 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DndSetSnoozeResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("error") is { } nullNodeError && nullNodeError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Error = null;
+            if (parseNode.GetChildNode("needed") is { } nullNodeNeeded && nullNodeNeeded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Needed = null;
+            if (parseNode.GetChildNode("ok") is { } nullNodeOk && nullNodeOk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ok = null;
+            if (parseNode.GetChildNode("provided") is { } nullNodeProvided && nullNodeProvided.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Provided = null;
+            if (parseNode.GetChildNode("response_metadata") is { } nullNodeResponseMetadata && nullNodeResponseMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResponseMetadata = null;
+            if (parseNode.GetChildNode("snooze_enabled") is { } nullNodeSnoozeEnabled && nullNodeSnoozeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SnoozeEnabled = null;
+            if (parseNode.GetChildNode("snooze_endtime") is { } nullNodeSnoozeEndtime && nullNodeSnoozeEndtime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SnoozeEndtime = null;
+            if (parseNode.GetChildNode("snooze_is_indefinite") is { } nullNodeSnoozeIsIndefinite && nullNodeSnoozeIsIndefinite.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SnoozeIsIndefinite = null;
+            if (parseNode.GetChildNode("snooze_remaining") is { } nullNodeSnoozeRemaining && nullNodeSnoozeRemaining.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SnoozeRemaining = null;
+            if (parseNode.GetChildNode("warning") is { } nullNodeWarning && nullNodeWarning.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Warning = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The error property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Error { get; set; }
+        public string? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        private string? _explicitNullValueError = default!;
 #nullable restore
 #else
-        public string Error { get; set; }
+        public string Error { get => _explicitNullValueError; set { _explicitNullValueError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        private string _explicitNullValueError = default!;
 #endif
         /// <summary>The needed property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Needed { get; set; }
+        public string? Needed { get => _explicitNullValueNeeded; set { _explicitNullValueNeeded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("needed"); else _explicitNullProperties?.Remove("needed"); } }
+        private string? _explicitNullValueNeeded = default!;
 #nullable restore
 #else
-        public string Needed { get; set; }
+        public string Needed { get => _explicitNullValueNeeded; set { _explicitNullValueNeeded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("needed"); else _explicitNullProperties?.Remove("needed"); } }
+        private string _explicitNullValueNeeded = default!;
 #endif
         /// <summary>The ok property</summary>
-        public bool? Ok { get; set; }
+        public bool? Ok { get => _explicitNullValueOk; set { _explicitNullValueOk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ok"); else _explicitNullProperties?.Remove("ok"); } }
+        private bool? _explicitNullValueOk = default!;
         /// <summary>The provided property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Provided { get; set; }
+        public string? Provided { get => _explicitNullValueProvided; set { _explicitNullValueProvided = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provided"); else _explicitNullProperties?.Remove("provided"); } }
+        private string? _explicitNullValueProvided = default!;
 #nullable restore
 #else
-        public string Provided { get; set; }
+        public string Provided { get => _explicitNullValueProvided; set { _explicitNullValueProvided = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provided"); else _explicitNullProperties?.Remove("provided"); } }
+        private string _explicitNullValueProvided = default!;
 #endif
         /// <summary>The response_metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata? ResponseMetadata { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata? ResponseMetadata { get => _explicitNullValueResponseMetadata; set { _explicitNullValueResponseMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response_metadata"); else _explicitNullProperties?.Remove("response_metadata"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata? _explicitNullValueResponseMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata ResponseMetadata { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata ResponseMetadata { get => _explicitNullValueResponseMetadata; set { _explicitNullValueResponseMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response_metadata"); else _explicitNullProperties?.Remove("response_metadata"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata _explicitNullValueResponseMetadata = default!;
 #endif
         /// <summary>The snooze_enabled property</summary>
-        public bool? SnoozeEnabled { get; set; }
+        public bool? SnoozeEnabled { get => _explicitNullValueSnoozeEnabled; set { _explicitNullValueSnoozeEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("snooze_enabled"); else _explicitNullProperties?.Remove("snooze_enabled"); } }
+        private bool? _explicitNullValueSnoozeEnabled = default!;
         /// <summary>The snooze_endtime property</summary>
-        public double? SnoozeEndtime { get; set; }
+        public double? SnoozeEndtime { get => _explicitNullValueSnoozeEndtime; set { _explicitNullValueSnoozeEndtime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("snooze_endtime"); else _explicitNullProperties?.Remove("snooze_endtime"); } }
+        private double? _explicitNullValueSnoozeEndtime = default!;
         /// <summary>The snooze_is_indefinite property</summary>
-        public bool? SnoozeIsIndefinite { get; set; }
+        public bool? SnoozeIsIndefinite { get => _explicitNullValueSnoozeIsIndefinite; set { _explicitNullValueSnoozeIsIndefinite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("snooze_is_indefinite"); else _explicitNullProperties?.Remove("snooze_is_indefinite"); } }
+        private bool? _explicitNullValueSnoozeIsIndefinite = default!;
         /// <summary>The snooze_remaining property</summary>
-        public double? SnoozeRemaining { get; set; }
+        public double? SnoozeRemaining { get => _explicitNullValueSnoozeRemaining; set { _explicitNullValueSnoozeRemaining = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("snooze_remaining"); else _explicitNullProperties?.Remove("snooze_remaining"); } }
+        private double? _explicitNullValueSnoozeRemaining = default!;
         /// <summary>The warning property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Warning { get; set; }
+        public string? Warning { get => _explicitNullValueWarning; set { _explicitNullValueWarning = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warning"); else _explicitNullProperties?.Remove("warning"); } }
+        private string? _explicitNullValueWarning = default!;
 #nullable restore
 #else
-        public string Warning { get; set; }
+        public string Warning { get => _explicitNullValueWarning; set { _explicitNullValueWarning = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warning"); else _explicitNullProperties?.Remove("warning"); } }
+        private string _explicitNullValueWarning = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.DndSetSnoozeResponse"/> and sets the default values.
@@ -79,7 +111,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.DndSetSnoozeResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.DndSetSnoozeResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.DndSetSnoozeResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -118,6 +150,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteBoolValue("snooze_is_indefinite", SnoozeIsIndefinite);
             writer.WriteDoubleValue("snooze_remaining", SnoozeRemaining);
             writer.WriteStringValue("warning", Warning);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

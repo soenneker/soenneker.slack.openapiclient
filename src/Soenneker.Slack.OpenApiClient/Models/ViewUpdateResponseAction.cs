@@ -11,18 +11,30 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ViewUpdateResponseAction : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("response_action") is { } nullNodeResponseAction && nullNodeResponseAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResponseAction = null;
+            if (parseNode.GetChildNode("view") is { } nullNodeView && nullNodeView.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) View = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The response_action property</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.UpdateResponseAction? ResponseAction { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.UpdateResponseAction? ResponseAction { get => _explicitNullValueResponseAction; set { _explicitNullValueResponseAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response_action"); else _explicitNullProperties?.Remove("response_action"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.UpdateResponseAction? _explicitNullValueResponseAction = default!;
         /// <summary>The view property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.View7? View { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.View7? View { get => _explicitNullValueView; set { _explicitNullValueView = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view"); else _explicitNullProperties?.Remove("view"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.View7? _explicitNullValueView = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.View7 View { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.View7 View { get => _explicitNullValueView; set { _explicitNullValueView = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view"); else _explicitNullProperties?.Remove("view"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.View7 _explicitNullValueView = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ViewUpdateResponseAction"/> and sets the default values.
@@ -39,7 +51,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.ViewUpdateResponseAction CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.ViewUpdateResponseAction();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.ViewUpdateResponseAction(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -62,6 +74,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.UpdateResponseAction>("response_action", ResponseAction);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.View7>("view", View);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

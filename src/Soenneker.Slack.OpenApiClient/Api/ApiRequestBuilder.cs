@@ -1330,6 +1330,7 @@ namespace Soenneker.Slack.OpenApiClient.Api
             get => new global::Soenneker.Slack.OpenApiClient.Api.MigrationExchange.MigrationExchangeRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The oauthAccess property</summary>
+        [Obsolete("")]
         public global::Soenneker.Slack.OpenApiClient.Api.OauthAccess.OauthAccessRequestBuilder OauthAccess
         {
             get => new global::Soenneker.Slack.OpenApiClient.Api.OauthAccess.OauthAccessRequestBuilder(PathParameters, RequestAdapter);
@@ -1495,16 +1496,19 @@ namespace Soenneker.Slack.OpenApiClient.Api
             get => new global::Soenneker.Slack.OpenApiClient.Api.SlackListsUpdate.SlackListsUpdateRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The starsAdd property</summary>
+        [Obsolete("")]
         public global::Soenneker.Slack.OpenApiClient.Api.StarsAdd.StarsAddRequestBuilder StarsAdd
         {
             get => new global::Soenneker.Slack.OpenApiClient.Api.StarsAdd.StarsAddRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The starsList property</summary>
+        [Obsolete("")]
         public global::Soenneker.Slack.OpenApiClient.Api.StarsList.StarsListRequestBuilder StarsList
         {
             get => new global::Soenneker.Slack.OpenApiClient.Api.StarsList.StarsListRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The starsRemove property</summary>
+        [Obsolete("")]
         public global::Soenneker.Slack.OpenApiClient.Api.StarsRemove.StarsRemoveRequestBuilder StarsRemove
         {
             get => new global::Soenneker.Slack.OpenApiClient.Api.StarsRemove.StarsRemoveRequestBuilder(PathParameters, RequestAdapter);

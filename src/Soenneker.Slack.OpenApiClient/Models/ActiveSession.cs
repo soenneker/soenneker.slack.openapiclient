@@ -11,42 +11,63 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ActiveSession : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("created") is { } nullNodeCreated && nullNodeCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Created = null;
+            if (parseNode.GetChildNode("recent") is { } nullNodeRecent && nullNodeRecent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Recent = null;
+            if (parseNode.GetChildNode("session_id") is { } nullNodeSessionId && nullNodeSessionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionId = null;
+            if (parseNode.GetChildNode("team_id") is { } nullNodeTeamId && nullNodeTeamId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamId = null;
+            if (parseNode.GetChildNode("user_id") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The created property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Created? Created { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Created? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Created? _explicitNullValueCreated = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Created Created { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Created Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Created _explicitNullValueCreated = default!;
 #endif
         /// <summary>The recent property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Created? Recent { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Created? Recent { get => _explicitNullValueRecent; set { _explicitNullValueRecent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recent"); else _explicitNullProperties?.Remove("recent"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Created? _explicitNullValueRecent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Created Recent { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Created Recent { get => _explicitNullValueRecent; set { _explicitNullValueRecent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recent"); else _explicitNullProperties?.Remove("recent"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Created _explicitNullValueRecent = default!;
 #endif
         /// <summary>The session_id property</summary>
-        public double? SessionId { get; set; }
+        public double? SessionId { get => _explicitNullValueSessionId; set { _explicitNullValueSessionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_id"); else _explicitNullProperties?.Remove("session_id"); } }
+        private double? _explicitNullValueSessionId = default!;
         /// <summary>The team_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TeamId { get; set; }
+        public string? TeamId { get => _explicitNullValueTeamId; set { _explicitNullValueTeamId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_id"); else _explicitNullProperties?.Remove("team_id"); } }
+        private string? _explicitNullValueTeamId = default!;
 #nullable restore
 #else
-        public string TeamId { get; set; }
+        public string TeamId { get => _explicitNullValueTeamId; set { _explicitNullValueTeamId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_id"); else _explicitNullProperties?.Remove("team_id"); } }
+        private string _explicitNullValueTeamId = default!;
 #endif
         /// <summary>The user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserId { get; set; }
+        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        private string? _explicitNullValueUserId = default!;
 #nullable restore
 #else
-        public string UserId { get; set; }
+        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        private string _explicitNullValueUserId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ActiveSession"/> and sets the default values.
@@ -63,7 +84,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.ActiveSession CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.ActiveSession();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.ActiveSession(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,6 +113,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("session_id", SessionId);
             writer.WriteStringValue("team_id", TeamId);
             writer.WriteStringValue("user_id", UserId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

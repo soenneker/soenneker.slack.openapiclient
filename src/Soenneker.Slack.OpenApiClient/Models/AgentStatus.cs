@@ -11,28 +11,45 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AgentStatus : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("agent_bot_user_id") is { } nullNodeAgentBotUserId && nullNodeAgentBotUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentBotUserId = null;
+            if (parseNode.GetChildNode("date_status_processing_expire") is { } nullNodeDateStatusProcessingExpire && nullNodeDateStatusProcessingExpire.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateStatusProcessingExpire = null;
+            if (parseNode.GetChildNode("is_stoppable") is { } nullNodeIsStoppable && nullNodeIsStoppable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsStoppable = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The agent_bot_user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AgentBotUserId { get; set; }
+        public string? AgentBotUserId { get => _explicitNullValueAgentBotUserId; set { _explicitNullValueAgentBotUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_bot_user_id"); else _explicitNullProperties?.Remove("agent_bot_user_id"); } }
+        private string? _explicitNullValueAgentBotUserId = default!;
 #nullable restore
 #else
-        public string AgentBotUserId { get; set; }
+        public string AgentBotUserId { get => _explicitNullValueAgentBotUserId; set { _explicitNullValueAgentBotUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_bot_user_id"); else _explicitNullProperties?.Remove("agent_bot_user_id"); } }
+        private string _explicitNullValueAgentBotUserId = default!;
 #endif
         /// <summary>The date_status_processing_expire property</summary>
-        public double? DateStatusProcessingExpire { get; set; }
+        public double? DateStatusProcessingExpire { get => _explicitNullValueDateStatusProcessingExpire; set { _explicitNullValueDateStatusProcessingExpire = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_status_processing_expire"); else _explicitNullProperties?.Remove("date_status_processing_expire"); } }
+        private double? _explicitNullValueDateStatusProcessingExpire = default!;
         /// <summary>The is_stoppable property</summary>
-        public bool? IsStoppable { get; set; }
+        public bool? IsStoppable { get => _explicitNullValueIsStoppable; set { _explicitNullValueIsStoppable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_stoppable"); else _explicitNullProperties?.Remove("is_stoppable"); } }
+        private bool? _explicitNullValueIsStoppable = default!;
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Status { get; set; }
+        public string? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private string? _explicitNullValueStatus = default!;
 #nullable restore
 #else
-        public string Status { get; set; }
+        public string Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private string _explicitNullValueStatus = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.AgentStatus"/> and sets the default values.
@@ -49,7 +66,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.AgentStatus CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.AgentStatus();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.AgentStatus(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +93,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("date_status_processing_expire", DateStatusProcessingExpire);
             writer.WriteBoolValue("is_stoppable", IsStoppable);
             writer.WriteStringValue("status", Status);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

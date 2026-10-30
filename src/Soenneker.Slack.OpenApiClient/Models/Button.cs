@@ -11,60 +11,89 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class Button : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("accessibility_label") is { } nullNodeAccessibilityLabel && nullNodeAccessibilityLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessibilityLabel = null;
+            if (parseNode.GetChildNode("action_id") is { } nullNodeActionId && nullNodeActionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionId = null;
+            if (parseNode.GetChildNode("confirm") is { } nullNodeConfirm && nullNodeConfirm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Confirm = null;
+            if (parseNode.GetChildNode("style") is { } nullNodeStyle && nullNodeStyle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Style = null;
+            if (parseNode.GetChildNode("text") is { } nullNodeText && nullNodeText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Text = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
+        }
+
         /// <summary>A label for longer descriptive text about a button element. This label will be read out by screenreaders instead of the button `text` object. Maximum length for this field is 75 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccessibilityLabel { get; set; }
+        public string? AccessibilityLabel { get => _explicitNullValueAccessibilityLabel; set { _explicitNullValueAccessibilityLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessibility_label"); else _explicitNullProperties?.Remove("accessibility_label"); } }
+        private string? _explicitNullValueAccessibilityLabel = default!;
 #nullable restore
 #else
-        public string AccessibilityLabel { get; set; }
+        public string AccessibilityLabel { get => _explicitNullValueAccessibilityLabel; set { _explicitNullValueAccessibilityLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessibility_label"); else _explicitNullProperties?.Remove("accessibility_label"); } }
+        private string _explicitNullValueAccessibilityLabel = default!;
 #endif
         /// <summary>: An identifier for this action. You can use this when you receive an interaction payload to[identify the source of the action](https://docs.slack.dev/interactivity/handling-user-interaction#payloads). Should be uniqueamong all other `action_id`s in the containing block. Maximum length for this field is 255 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActionId { get; set; }
+        public string? ActionId { get => _explicitNullValueActionId; set { _explicitNullValueActionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action_id"); else _explicitNullProperties?.Remove("action_id"); } }
+        private string? _explicitNullValueActionId = default!;
 #nullable restore
 #else
-        public string ActionId { get; set; }
+        public string ActionId { get => _explicitNullValueActionId; set { _explicitNullValueActionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action_id"); else _explicitNullProperties?.Remove("action_id"); } }
+        private string _explicitNullValueActionId = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A [Confirm](Confirm) object that defines an optional confirmation dialog after the element is interactedwith.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog? Confirm { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog? Confirm { get => _explicitNullValueConfirm; set { _explicitNullValueConfirm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirm"); else _explicitNullProperties?.Remove("confirm"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog? _explicitNullValueConfirm = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog Confirm { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog Confirm { get => _explicitNullValueConfirm; set { _explicitNullValueConfirm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirm"); else _explicitNullProperties?.Remove("confirm"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog _explicitNullValueConfirm = default!;
 #endif
         /// <summary>Decorates buttons with alternative visual color schemes. Use this option with restraint.`primary` gives buttons a green outline and text, ideal for affirmation or confirmation actions. `primary` shouldonly be used for one button within a set.`danger` gives buttons a red outline and text, and should be used when the action is destructive. Use `danger` evenmore sparingly than primary.If you don&apos;t include this field, the default button style will be used.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.ButtonStyle? Style { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ButtonStyle? Style { get => _explicitNullValueStyle; set { _explicitNullValueStyle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("style"); else _explicitNullProperties?.Remove("style"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ButtonStyle? _explicitNullValueStyle = default!;
         /// <summary>A [PlainTextElement](PlainTextElement) that defines the button&apos;s text. `text` may truncate with ~30 characters.Maximum length for the text in this field is 75 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Text { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Text { get => _explicitNullValueText; set { _explicitNullValueText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text"); else _explicitNullProperties?.Remove("text"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? _explicitNullValueText = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement Text { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement Text { get => _explicitNullValueText; set { _explicitNullValueText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text"); else _explicitNullProperties?.Remove("text"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement _explicitNullValueText = default!;
 #endif
         /// <summary>The type of element. In this case `type` is always `button`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.ButtonType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ButtonType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ButtonType? _explicitNullValueType = default!;
         /// <summary>A URL to load in the user&apos;s browser when the button is clicked. Maximum length for this field is 3000characters. If you&apos;re using `url`, you&apos;ll still receive an [interaction payload](https://docs.slack.dev/interactivity/handling-user-interaction#payloads)and will need to send an [acknowledgement response](https://docs.slack.dev/interactivity/handling-user-interaction#acknowledgment_response).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>The value to send along with the [interaction payload](https://docs.slack.dev/interactivity/handling-user-interaction#payloads).Maximum length for this field is 2000 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Value { get; set; }
+        public string? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        private string? _explicitNullValueValue = default!;
 #nullable restore
 #else
-        public string Value { get; set; }
+        public string Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        private string _explicitNullValueValue = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Button"/> and sets the default values.
@@ -81,7 +110,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.Button CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.Button();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.Button(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -116,6 +145,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ButtonType>("type", Type);
             writer.WriteStringValue("url", Url);
             writer.WriteStringValue("value", Value);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

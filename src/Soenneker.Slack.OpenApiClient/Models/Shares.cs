@@ -11,24 +11,37 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class Shares : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("private") is { } nullNodePrivate && nullNodePrivate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Private = null;
+            if (parseNode.GetChildNode("public") is { } nullNodePublic && nullNodePublic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Public = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The private property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.SharesPrivateProperty? Private { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.SharesPrivateProperty? Private { get => _explicitNullValuePrivate; set { _explicitNullValuePrivate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("private"); else _explicitNullProperties?.Remove("private"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.SharesPrivateProperty? _explicitNullValuePrivate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.SharesPrivateProperty Private { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.SharesPrivateProperty Private { get => _explicitNullValuePrivate; set { _explicitNullValuePrivate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("private"); else _explicitNullProperties?.Remove("private"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.SharesPrivateProperty _explicitNullValuePrivate = default!;
 #endif
         /// <summary>The public property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.SharesPublicProperty? Public { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.SharesPublicProperty? Public { get => _explicitNullValuePublic; set { _explicitNullValuePublic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("public"); else _explicitNullProperties?.Remove("public"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.SharesPublicProperty? _explicitNullValuePublic = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.SharesPublicProperty Public { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.SharesPublicProperty Public { get => _explicitNullValuePublic; set { _explicitNullValuePublic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("public"); else _explicitNullProperties?.Remove("public"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.SharesPublicProperty _explicitNullValuePublic = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Shares"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.Shares CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.Shares();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.Shares(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SharesPrivateProperty>("private", Private);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SharesPublicProperty>("public", Public);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

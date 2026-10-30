@@ -11,120 +11,169 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AgentsConversationsSetViewArguments : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("access_level") is { } nullNodeAccessLevel && nullNodeAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessLevel = null;
+            if (parseNode.GetChildNode("agent_content_hash") is { } nullNodeAgentContentHash && nullNodeAgentContentHash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentContentHash = null;
+            if (parseNode.GetChildNode("base_branch") is { } nullNodeBaseBranch && nullNodeBaseBranch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BaseBranch = null;
+            if (parseNode.GetChildNode("blocks") is { } nullNodeBlocks && nullNodeBlocks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Blocks = null;
+            if (parseNode.GetChildNode("canvas_id") is { } nullNodeCanvasId && nullNodeCanvasId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanvasId = null;
+            if (parseNode.GetChildNode("channel_id") is { } nullNodeChannelId && nullNodeChannelId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelId = null;
+            if (parseNode.GetChildNode("content") is { } nullNodeContent && nullNodeContent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Content = null;
+            if (parseNode.GetChildNode("csp") is { } nullNodeCsp && nullNodeCsp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Csp = null;
+            if (parseNode.GetChildNode("head_branch") is { } nullNodeHeadBranch && nullNodeHeadBranch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HeadBranch = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("pr_url") is { } nullNodePrUrl && nullNodePrUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrUrl = null;
+            if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("view_key") is { } nullNodeViewKey && nullNodeViewKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ViewKey = null;
+        }
+
         /// <summary>For canvas views: access level granted to the channel for the canvas tab. Defaults to `write`. Use`comment` to grant channel members comment access (read and comment, no editing) so the agent remains the sole author of the canvas text.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccessLevel { get; set; }
+        public string? AccessLevel { get => _explicitNullValueAccessLevel; set { _explicitNullValueAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access_level"); else _explicitNullProperties?.Remove("access_level"); } }
+        private string? _explicitNullValueAccessLevel = default!;
 #nullable restore
 #else
-        public string AccessLevel { get; set; }
+        public string AccessLevel { get => _explicitNullValueAccessLevel; set { _explicitNullValueAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access_level"); else _explicitNullProperties?.Remove("access_level"); } }
+        private string _explicitNullValueAccessLevel = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>For canvas views: hash of the canvas-derived markdown the agent last wrote, recorded so the agent canlater detect human edits to the canvas. Opaque to the server.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AgentContentHash { get; set; }
+        public string? AgentContentHash { get => _explicitNullValueAgentContentHash; set { _explicitNullValueAgentContentHash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_content_hash"); else _explicitNullProperties?.Remove("agent_content_hash"); } }
+        private string? _explicitNullValueAgentContentHash = default!;
 #nullable restore
 #else
-        public string AgentContentHash { get; set; }
+        public string AgentContentHash { get => _explicitNullValueAgentContentHash; set { _explicitNullValueAgentContentHash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_content_hash"); else _explicitNullProperties?.Remove("agent_content_hash"); } }
+        private string _explicitNullValueAgentContentHash = default!;
 #endif
         /// <summary>For diff views: base branch name for display purposes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BaseBranch { get; set; }
+        public string? BaseBranch { get => _explicitNullValueBaseBranch; set { _explicitNullValueBaseBranch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("base_branch"); else _explicitNullProperties?.Remove("base_branch"); } }
+        private string? _explicitNullValueBaseBranch = default!;
 #nullable restore
 #else
-        public string BaseBranch { get; set; }
+        public string BaseBranch { get => _explicitNullValueBaseBranch; set { _explicitNullValueBaseBranch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("base_branch"); else _explicitNullProperties?.Remove("base_branch"); } }
+        private string _explicitNullValueBaseBranch = default!;
 #endif
         /// <summary>Block Kit blocks to render in the view tab. Required when `type` is `block_kit`; ignored otherwise.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetViewArgumentsBlocksItem>? Blocks { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetViewArgumentsBlocksItem>? Blocks { get => _explicitNullValueBlocks; set { _explicitNullValueBlocks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blocks"); else _explicitNullProperties?.Remove("blocks"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetViewArgumentsBlocksItem>? _explicitNullValueBlocks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetViewArgumentsBlocksItem> Blocks { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetViewArgumentsBlocksItem> Blocks { get => _explicitNullValueBlocks; set { _explicitNullValueBlocks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blocks"); else _explicitNullProperties?.Remove("blocks"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetViewArgumentsBlocksItem> _explicitNullValueBlocks = default!;
 #endif
         /// <summary>Encoded ID of the canvas to attach as the view. Required when `type` is `canvas`; ignored otherwise.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CanvasId { get; set; }
+        public string? CanvasId { get => _explicitNullValueCanvasId; set { _explicitNullValueCanvasId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas_id"); else _explicitNullProperties?.Remove("canvas_id"); } }
+        private string? _explicitNullValueCanvasId = default!;
 #nullable restore
 #else
-        public string CanvasId { get; set; }
+        public string CanvasId { get => _explicitNullValueCanvasId; set { _explicitNullValueCanvasId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas_id"); else _explicitNullProperties?.Remove("canvas_id"); } }
+        private string _explicitNullValueCanvasId = default!;
 #endif
         /// <summary>ID of the code channel to render the view in.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChannelId { get; set; }
+        public string? ChannelId { get => _explicitNullValueChannelId; set { _explicitNullValueChannelId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_id"); else _explicitNullProperties?.Remove("channel_id"); } }
+        private string? _explicitNullValueChannelId = default!;
 #nullable restore
 #else
-        public string ChannelId { get; set; }
+        public string ChannelId { get => _explicitNullValueChannelId; set { _explicitNullValueChannelId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_id"); else _explicitNullProperties?.Remove("channel_id"); } }
+        private string _explicitNullValueChannelId = default!;
 #endif
         /// <summary>View content. For `html`, a full self-contained HTML document; for `diff`, raw unified diff text.Capped at 1,000,000 bytes — larger content returns content_too_large. The cap is enforced by the handler (not schema maxLength) so the documented error code actually surfaces instead of a generic argument-validation failure. Required when type is html or diff.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Content { get; set; }
+        public string? Content { get => _explicitNullValueContent; set { _explicitNullValueContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content"); else _explicitNullProperties?.Remove("content"); } }
+        private string? _explicitNullValueContent = default!;
 #nullable restore
 #else
-        public string Content { get; set; }
+        public string Content { get => _explicitNullValueContent; set { _explicitNullValueContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content"); else _explicitNullProperties?.Remove("content"); } }
+        private string _explicitNullValueContent = default!;
 #endif
         /// <summary>Content-Security-Policy domain declarations for the view. Domains are validated server-side(https-only, no private/internal hosts) and persisted. Only resource_domains is honored at render time today; connect_domains is accepted and stored for forward-compatibility but NOT honored yet.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetViewArgumentsCsp? Csp { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetViewArgumentsCsp? Csp { get => _explicitNullValueCsp; set { _explicitNullValueCsp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("csp"); else _explicitNullProperties?.Remove("csp"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetViewArgumentsCsp? _explicitNullValueCsp = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetViewArgumentsCsp Csp { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetViewArgumentsCsp Csp { get => _explicitNullValueCsp; set { _explicitNullValueCsp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("csp"); else _explicitNullProperties?.Remove("csp"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetViewArgumentsCsp _explicitNullValueCsp = default!;
 #endif
         /// <summary>For diff views: head branch name for display purposes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HeadBranch { get; set; }
+        public string? HeadBranch { get => _explicitNullValueHeadBranch; set { _explicitNullValueHeadBranch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("head_branch"); else _explicitNullProperties?.Remove("head_branch"); } }
+        private string? _explicitNullValueHeadBranch = default!;
 #nullable restore
 #else
-        public string HeadBranch { get; set; }
+        public string HeadBranch { get => _explicitNullValueHeadBranch; set { _explicitNullValueHeadBranch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("head_branch"); else _explicitNullProperties?.Remove("head_branch"); } }
+        private string _explicitNullValueHeadBranch = default!;
 #endif
         /// <summary>Display label for the view tab (`name` wins if both aresupplied). Defaults to the last path segment of `view_key`, stripped of any .html/.htm extension.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>For pull_request views: the pull request&apos;s URL. Required when `type` is `pull_request`; ignored otherwise.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrUrl { get; set; }
+        public string? PrUrl { get => _explicitNullValuePrUrl; set { _explicitNullValuePrUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pr_url"); else _explicitNullProperties?.Remove("pr_url"); } }
+        private string? _explicitNullValuePrUrl = default!;
 #nullable restore
 #else
-        public string PrUrl { get; set; }
+        public string PrUrl { get => _explicitNullValuePrUrl; set { _explicitNullValuePrUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pr_url"); else _explicitNullProperties?.Remove("pr_url"); } }
+        private string _explicitNullValuePrUrl = default!;
 #endif
         /// <summary>Overridable authentication token bearing required scopes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Token { get; set; }
+        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private string? _explicitNullValueToken = default!;
 #nullable restore
 #else
-        public string Token { get; set; }
+        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private string _explicitNullValueToken = default!;
 #endif
         /// <summary>The kind of view to create or update. Defaults to `html`. Determines which other arguments arerequired: `html` and `diff` require `content`, `block_kit` requires `blocks`, `canvas` requires `canvas_id`,`pull_request` requires `pr_url`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get; set; }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string _explicitNullValueType = default!;
 #endif
         /// <summary>Agent-assigned stable identity for the view (e.g. the source file path on the agent&apos;s machine). Used asthe upsert key: calls with the same `view_key` update the same view. Required for html, block_kit, and canvas views; ignored for diff (a diff view is a per-channel singleton).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ViewKey { get; set; }
+        public string? ViewKey { get => _explicitNullValueViewKey; set { _explicitNullValueViewKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view_key"); else _explicitNullProperties?.Remove("view_key"); } }
+        private string? _explicitNullValueViewKey = default!;
 #nullable restore
 #else
-        public string ViewKey { get; set; }
+        public string ViewKey { get => _explicitNullValueViewKey; set { _explicitNullValueViewKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view_key"); else _explicitNullProperties?.Remove("view_key"); } }
+        private string _explicitNullValueViewKey = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetViewArguments"/> and sets the default values.
@@ -141,7 +190,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetViewArguments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetViewArguments();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetViewArguments(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -188,6 +237,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("token", Token);
             writer.WriteStringValue("type", Type);
             writer.WriteStringValue("view_key", ViewKey);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

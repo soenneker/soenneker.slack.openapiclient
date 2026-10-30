@@ -12,24 +12,37 @@ namespace Soenneker.Slack.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AgentsConversationsSetPropertiesArgumentsCodeChannel : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("context_bar_items") is { } nullNodeContextBarItems && nullNodeContextBarItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContextBarItems = null;
+            if (parseNode.GetChildNode("summary_message") is { } nullNodeSummaryMessage && nullNodeSummaryMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SummaryMessage = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Items displayed in the channel context bar. Maximum 5 items. The array replaces the current set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetPropertiesArgumentsCodeChannelContextBarItemsItem>? ContextBarItems { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetPropertiesArgumentsCodeChannelContextBarItemsItem>? ContextBarItems { get => _explicitNullValueContextBarItems; set { _explicitNullValueContextBarItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("context_bar_items"); else _explicitNullProperties?.Remove("context_bar_items"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetPropertiesArgumentsCodeChannelContextBarItemsItem>? _explicitNullValueContextBarItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetPropertiesArgumentsCodeChannelContextBarItemsItem> ContextBarItems { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetPropertiesArgumentsCodeChannelContextBarItemsItem> ContextBarItems { get => _explicitNullValueContextBarItems; set { _explicitNullValueContextBarItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("context_bar_items"); else _explicitNullProperties?.Remove("context_bar_items"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetPropertiesArgumentsCodeChannelContextBarItemsItem> _explicitNullValueContextBarItems = default!;
 #endif
         /// <summary>Records which message in the channel represents the current session summary.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetPropertiesArgumentsCodeChannelSummaryMessage? SummaryMessage { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetPropertiesArgumentsCodeChannelSummaryMessage? SummaryMessage { get => _explicitNullValueSummaryMessage; set { _explicitNullValueSummaryMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summary_message"); else _explicitNullProperties?.Remove("summary_message"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetPropertiesArgumentsCodeChannelSummaryMessage? _explicitNullValueSummaryMessage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetPropertiesArgumentsCodeChannelSummaryMessage SummaryMessage { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetPropertiesArgumentsCodeChannelSummaryMessage SummaryMessage { get => _explicitNullValueSummaryMessage; set { _explicitNullValueSummaryMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summary_message"); else _explicitNullProperties?.Remove("summary_message"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetPropertiesArgumentsCodeChannelSummaryMessage _explicitNullValueSummaryMessage = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetPropertiesArgumentsCodeChannel"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetPropertiesArgumentsCodeChannel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetPropertiesArgumentsCodeChannel();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetPropertiesArgumentsCodeChannel(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetPropertiesArgumentsCodeChannelContextBarItemsItem>("context_bar_items", ContextBarItems);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsSetPropertiesArgumentsCodeChannelSummaryMessage>("summary_message", SummaryMessage);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

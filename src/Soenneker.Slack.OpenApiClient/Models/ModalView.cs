@@ -11,71 +11,105 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ModalView : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("blocks") is { } nullNodeBlocks && nullNodeBlocks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Blocks = null;
+            if (parseNode.GetChildNode("callback_id") is { } nullNodeCallbackId && nullNodeCallbackId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallbackId = null;
+            if (parseNode.GetChildNode("clear_on_close") is { } nullNodeClearOnClose && nullNodeClearOnClose.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClearOnClose = null;
+            if (parseNode.GetChildNode("close") is { } nullNodeClose && nullNodeClose.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Close = null;
+            if (parseNode.GetChildNode("external_id") is { } nullNodeExternalId && nullNodeExternalId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalId = null;
+            if (parseNode.GetChildNode("notify_on_close") is { } nullNodeNotifyOnClose && nullNodeNotifyOnClose.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotifyOnClose = null;
+            if (parseNode.GetChildNode("private_metadata") is { } nullNodePrivateMetadata && nullNodePrivateMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivateMetadata = null;
+            if (parseNode.GetChildNode("submit") is { } nullNodeSubmit && nullNodeSubmit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Submit = null;
+            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of [AnyBlock](AnyBlock) that defines the content of the view. Max of 100 blocks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.AnyBlock>? Blocks { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.AnyBlock>? Blocks { get => _explicitNullValueBlocks; set { _explicitNullValueBlocks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blocks"); else _explicitNullProperties?.Remove("blocks"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.AnyBlock>? _explicitNullValueBlocks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.AnyBlock> Blocks { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.AnyBlock> Blocks { get => _explicitNullValueBlocks; set { _explicitNullValueBlocks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blocks"); else _explicitNullProperties?.Remove("blocks"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.AnyBlock> _explicitNullValueBlocks = default!;
 #endif
         /// <summary>An identifier to recognize interactions and submissions of this particular view. Don&apos;t use this tostore sensitive information (use `private_metadata` instead). Maximum length of 255 characters.[Handling and responding to interactions](https://docs.slack.dev/surfaces/modals#interactions).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallbackId { get; set; }
+        public string? CallbackId { get => _explicitNullValueCallbackId; set { _explicitNullValueCallbackId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callback_id"); else _explicitNullProperties?.Remove("callback_id"); } }
+        private string? _explicitNullValueCallbackId = default!;
 #nullable restore
 #else
-        public string CallbackId { get; set; }
+        public string CallbackId { get => _explicitNullValueCallbackId; set { _explicitNullValueCallbackId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callback_id"); else _explicitNullProperties?.Remove("callback_id"); } }
+        private string _explicitNullValueCallbackId = default!;
 #endif
         /// <summary>When set to `true`, clicking on the close button will clear all views in a modal and close it.Defaults to `false`.</summary>
-        public bool? ClearOnClose { get; set; }
+        public bool? ClearOnClose { get => _explicitNullValueClearOnClose; set { _explicitNullValueClearOnClose = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clear_on_close"); else _explicitNullProperties?.Remove("clear_on_close"); } }
+        private bool? _explicitNullValueClearOnClose = default!;
         /// <summary>An optional [PlainTextElement](PlainTextElement) that defines the text displayed in the close button at thebottom-right of the view. Maximum length of 24 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Close { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Close { get => _explicitNullValueClose; set { _explicitNullValueClose = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("close"); else _explicitNullProperties?.Remove("close"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? _explicitNullValueClose = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement Close { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement Close { get => _explicitNullValueClose; set { _explicitNullValueClose = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("close"); else _explicitNullProperties?.Remove("close"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement _explicitNullValueClose = default!;
 #endif
         /// <summary>A custom identifier that must be unique for all views on a per-team basis.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalId { get; set; }
+        public string? ExternalId { get => _explicitNullValueExternalId; set { _explicitNullValueExternalId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_id"); else _explicitNullProperties?.Remove("external_id"); } }
+        private string? _explicitNullValueExternalId = default!;
 #nullable restore
 #else
-        public string ExternalId { get; set; }
+        public string ExternalId { get => _explicitNullValueExternalId; set { _explicitNullValueExternalId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_id"); else _explicitNullProperties?.Remove("external_id"); } }
+        private string _explicitNullValueExternalId = default!;
 #endif
         /// <summary>Indicates whether Slack will send your app a[`view_closed`](https://docs.slack.dev/reference/interaction-payloads/view-interactions-payload#view_closed) event when a userclicks the close button. Defaults to `false`.</summary>
-        public bool? NotifyOnClose { get; set; }
+        public bool? NotifyOnClose { get => _explicitNullValueNotifyOnClose; set { _explicitNullValueNotifyOnClose = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notify_on_close"); else _explicitNullProperties?.Remove("notify_on_close"); } }
+        private bool? _explicitNullValueNotifyOnClose = default!;
         /// <summary>String that will be sent to your app in[`view_submission`](https://docs.slack.dev/reference/interaction-payloads/view-interactions-payload#view_submission) and[`block_actions`](https://docs.slack.dev/reference/interaction-payloads/block_actions-payload) events.Maximum length of 3000 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrivateMetadata { get; set; }
+        public string? PrivateMetadata { get => _explicitNullValuePrivateMetadata; set { _explicitNullValuePrivateMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("private_metadata"); else _explicitNullProperties?.Remove("private_metadata"); } }
+        private string? _explicitNullValuePrivateMetadata = default!;
 #nullable restore
 #else
-        public string PrivateMetadata { get; set; }
+        public string PrivateMetadata { get => _explicitNullValuePrivateMetadata; set { _explicitNullValuePrivateMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("private_metadata"); else _explicitNullProperties?.Remove("private_metadata"); } }
+        private string _explicitNullValuePrivateMetadata = default!;
 #endif
         /// <summary>An optional [PlainTextElement](PlainTextElement) that defines the text displayed in the submit button at thebottom-right of the view. `submit` is required when an input block is within the `blocks` array. Max length of 24characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Submit { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Submit { get => _explicitNullValueSubmit; set { _explicitNullValueSubmit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("submit"); else _explicitNullProperties?.Remove("submit"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? _explicitNullValueSubmit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement Submit { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement Submit { get => _explicitNullValueSubmit; set { _explicitNullValueSubmit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("submit"); else _explicitNullProperties?.Remove("submit"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement _explicitNullValueSubmit = default!;
 #endif
         /// <summary>The title that appears in the top-left of the modal. Must be a [PlainTextElement](PlainTextElement) with amaximum length of 24 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Title { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement Title { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement _explicitNullValueTitle = default!;
 #endif
         /// <summary>The type of view. Set to `modal` for modals.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.ModalType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ModalType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ModalType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ModalView"/> and sets the default values.
         /// </summary>
@@ -91,7 +125,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.ModalView CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.ModalView();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.ModalView(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -130,6 +164,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>("submit", Submit);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>("title", Title);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ModalType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

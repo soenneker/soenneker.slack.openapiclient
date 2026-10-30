@@ -11,61 +11,90 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class StaticSelect : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("action_id") is { } nullNodeActionId && nullNodeActionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionId = null;
+            if (parseNode.GetChildNode("confirm") is { } nullNodeConfirm && nullNodeConfirm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Confirm = null;
+            if (parseNode.GetChildNode("focus_on_load") is { } nullNodeFocusOnLoad && nullNodeFocusOnLoad.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FocusOnLoad = null;
+            if (parseNode.GetChildNode("initial_option") is { } nullNodeInitialOption && nullNodeInitialOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InitialOption = null;
+            if (parseNode.GetChildNode("option_groups") is { } nullNodeOptionGroups && nullNodeOptionGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptionGroups = null;
+            if (parseNode.GetChildNode("options") is { } nullNodeOptions && nullNodeOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Options = null;
+            if (parseNode.GetChildNode("placeholder") is { } nullNodePlaceholder && nullNodePlaceholder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Placeholder = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>: An identifier for this action. You can use this when you receive an interaction payload to[identify the source of the action](https://docs.slack.dev/interactivity/handling-user-interaction#payloads). Should be uniqueamong all other `action_id`s in the containing block. Maximum length for this field is 255 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActionId { get; set; }
+        public string? ActionId { get => _explicitNullValueActionId; set { _explicitNullValueActionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action_id"); else _explicitNullProperties?.Remove("action_id"); } }
+        private string? _explicitNullValueActionId = default!;
 #nullable restore
 #else
-        public string ActionId { get; set; }
+        public string ActionId { get => _explicitNullValueActionId; set { _explicitNullValueActionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action_id"); else _explicitNullProperties?.Remove("action_id"); } }
+        private string _explicitNullValueActionId = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A [Confirm](Confirm) object that defines an optional confirmation dialog after the element is interactedwith.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog? Confirm { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog? Confirm { get => _explicitNullValueConfirm; set { _explicitNullValueConfirm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirm"); else _explicitNullProperties?.Remove("confirm"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog? _explicitNullValueConfirm = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog Confirm { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog Confirm { get => _explicitNullValueConfirm; set { _explicitNullValueConfirm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirm"); else _explicitNullProperties?.Remove("confirm"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog _explicitNullValueConfirm = default!;
 #endif
         /// <summary>Indicates whether the element will be set to auto focus within the[`view` object](https://docs.slack.dev/surfaces/modals). Only one element can be set to `true`.Defaults to `false`.</summary>
-        public bool? FocusOnLoad { get; set; }
+        public bool? FocusOnLoad { get => _explicitNullValueFocusOnLoad; set { _explicitNullValueFocusOnLoad = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("focus_on_load"); else _explicitNullProperties?.Remove("focus_on_load"); } }
+        private bool? _explicitNullValueFocusOnLoad = default!;
         /// <summary>A single option that exactly matches one of the options within `options` or `option_groups`.This option will be selected when the menu initially loads.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextOption? InitialOption { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextOption? InitialOption { get => _explicitNullValueInitialOption; set { _explicitNullValueInitialOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initial_option"); else _explicitNullProperties?.Remove("initial_option"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.PlainTextOption? _explicitNullValueInitialOption = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextOption InitialOption { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextOption InitialOption { get => _explicitNullValueInitialOption; set { _explicitNullValueInitialOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initial_option"); else _explicitNullProperties?.Remove("initial_option"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.PlainTextOption _explicitNullValueInitialOption = default!;
 #endif
         /// <summary>An array of option group objects. Maximum number of option groups is 100. If `options` is specified,this field should not be.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.StaticSelectOptionGroupsItem>? OptionGroups { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.StaticSelectOptionGroupsItem>? OptionGroups { get => _explicitNullValueOptionGroups; set { _explicitNullValueOptionGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("option_groups"); else _explicitNullProperties?.Remove("option_groups"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.StaticSelectOptionGroupsItem>? _explicitNullValueOptionGroups = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.StaticSelectOptionGroupsItem> OptionGroups { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.StaticSelectOptionGroupsItem> OptionGroups { get => _explicitNullValueOptionGroups; set { _explicitNullValueOptionGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("option_groups"); else _explicitNullProperties?.Remove("option_groups"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.StaticSelectOptionGroupsItem> _explicitNullValueOptionGroups = default!;
 #endif
         /// <summary>An array of [PlainTextOption](PlainTextOption). Maximum number of options is 100. If `option_groups` isspecified, this field should not be.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.PlainTextOption>? Options { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.PlainTextOption>? Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.PlainTextOption>? _explicitNullValueOptions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.PlainTextOption> Options { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.PlainTextOption> Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.PlainTextOption> _explicitNullValueOptions = default!;
 #endif
         /// <summary>A [PlainTextElement](PlainTextElement) object that defines the placeholder text shown on the element. Maximumlength for the `text` field in this object is 150 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Placeholder { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Placeholder { get => _explicitNullValuePlaceholder; set { _explicitNullValuePlaceholder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placeholder"); else _explicitNullProperties?.Remove("placeholder"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? _explicitNullValuePlaceholder = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement Placeholder { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement Placeholder { get => _explicitNullValuePlaceholder; set { _explicitNullValuePlaceholder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placeholder"); else _explicitNullProperties?.Remove("placeholder"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement _explicitNullValuePlaceholder = default!;
 #endif
         /// <summary>The type of element. In this case `type` is always `static_select`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.StaticSelectType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.StaticSelectType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.StaticSelectType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.StaticSelect"/> and sets the default values.
         /// </summary>
@@ -81,7 +110,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.StaticSelect CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.StaticSelect();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.StaticSelect(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -116,6 +145,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.PlainTextOption>("options", Options);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>("placeholder", Placeholder);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.StaticSelectType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

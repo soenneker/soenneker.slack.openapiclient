@@ -11,57 +11,87 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdminConversationsSearchArguments : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("connected_team_ids") is { } nullNodeConnectedTeamIds && nullNodeConnectedTeamIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectedTeamIds = null;
+            if (parseNode.GetChildNode("cursor") is { } nullNodeCursor && nullNodeCursor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cursor = null;
+            if (parseNode.GetChildNode("limit") is { } nullNodeLimit && nullNodeLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Limit = null;
+            if (parseNode.GetChildNode("query") is { } nullNodeQuery && nullNodeQuery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Query = null;
+            if (parseNode.GetChildNode("search_channel_types") is { } nullNodeSearchChannelTypes && nullNodeSearchChannelTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchChannelTypes = null;
+            if (parseNode.GetChildNode("sort") is { } nullNodeSort && nullNodeSort.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sort = null;
+            if (parseNode.GetChildNode("sort_dir") is { } nullNodeSortDir && nullNodeSortDir.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SortDir = null;
+            if (parseNode.GetChildNode("team_ids") is { } nullNodeTeamIds && nullNodeTeamIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamIds = null;
+            if (parseNode.GetChildNode("total_count_only") is { } nullNodeTotalCountOnly && nullNodeTotalCountOnly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCountOnly = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Array of encoded team IDs, signifying the external orgs to search through.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ConnectedTeamIds { get; set; }
+        public List<string>? ConnectedTeamIds { get => _explicitNullValueConnectedTeamIds; set { _explicitNullValueConnectedTeamIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connected_team_ids"); else _explicitNullProperties?.Remove("connected_team_ids"); } }
+        private List<string>? _explicitNullValueConnectedTeamIds = default!;
 #nullable restore
 #else
-        public List<string> ConnectedTeamIds { get; set; }
+        public List<string> ConnectedTeamIds { get => _explicitNullValueConnectedTeamIds; set { _explicitNullValueConnectedTeamIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connected_team_ids"); else _explicitNullProperties?.Remove("connected_team_ids"); } }
+        private List<string> _explicitNullValueConnectedTeamIds = default!;
 #endif
         /// <summary>Paginate through collections of data by setting the `cursor` parameter to a `next_cursor` attributereturned by a previous request&apos;s `response_metadata`.Default value fetches the first &quot;page&quot; of the collection.[pagination](https://docs.slack.dev/apis/web-api/pagination) for more detail.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Cursor { get; set; }
+        public string? Cursor { get => _explicitNullValueCursor; set { _explicitNullValueCursor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cursor"); else _explicitNullProperties?.Remove("cursor"); } }
+        private string? _explicitNullValueCursor = default!;
 #nullable restore
 #else
-        public string Cursor { get; set; }
+        public string Cursor { get => _explicitNullValueCursor; set { _explicitNullValueCursor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cursor"); else _explicitNullProperties?.Remove("cursor"); } }
+        private string _explicitNullValueCursor = default!;
 #endif
         /// <summary>The maximum number of items to return. Fewer than the requested number of items may be returned,even if the end of the list hasn&apos;t been reached. Must be an integer with a max value of `999`. Default is `100`.</summary>
-        public double? Limit { get; set; }
+        public double? Limit { get => _explicitNullValueLimit; set { _explicitNullValueLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limit"); else _explicitNullProperties?.Remove("limit"); } }
+        private double? _explicitNullValueLimit = default!;
         /// <summary>Name of the channel to query by.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Query { get; set; }
+        public string? Query { get => _explicitNullValueQuery; set { _explicitNullValueQuery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("query"); else _explicitNullProperties?.Remove("query"); } }
+        private string? _explicitNullValueQuery = default!;
 #nullable restore
 #else
-        public string Query { get; set; }
+        public string Query { get => _explicitNullValueQuery; set { _explicitNullValueQuery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("query"); else _explicitNullProperties?.Remove("query"); } }
+        private string _explicitNullValueQuery = default!;
 #endif
         /// <summary>The type of channels to include or exclude in the search. For example `private` will searchprivate channels, while `private_exclude` will exclude them.[Full list of channel types](https://docs.slack.dev/reference/methods/admin.conversations.search#types).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.ChannelType?>? SearchChannelTypes { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.ChannelType?>? SearchChannelTypes { get => _explicitNullValueSearchChannelTypes; set { _explicitNullValueSearchChannelTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("search_channel_types"); else _explicitNullProperties?.Remove("search_channel_types"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.ChannelType?>? _explicitNullValueSearchChannelTypes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.ChannelType?> SearchChannelTypes { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.ChannelType?> SearchChannelTypes { get => _explicitNullValueSearchChannelTypes; set { _explicitNullValueSearchChannelTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("search_channel_types"); else _explicitNullProperties?.Remove("search_channel_types"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.ChannelType?> _explicitNullValueSearchChannelTypes = default!;
 #endif
         /// <summary>Possible values are:- `relevant`: search ranking based on what we think is closest,- `name`: alphabetical,- `member_count`: number of users in the channel,- `created`: date channel was created.Defaults to `member_count`.You can optionally pair this with the `sort_dir` argument to change how it is sorted.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSearchArgumentsSort? Sort { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSearchArgumentsSort? Sort { get => _explicitNullValueSort; set { _explicitNullValueSort = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sort"); else _explicitNullProperties?.Remove("sort"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSearchArgumentsSort? _explicitNullValueSort = default!;
         /// <summary>Change sort direction to ascending (`asc`) or descending (`desc`). Defaults to `desc`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSearchArgumentsSortDir? SortDir { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSearchArgumentsSortDir? SortDir { get => _explicitNullValueSortDir; set { _explicitNullValueSortDir = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sort_dir"); else _explicitNullProperties?.Remove("sort_dir"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSearchArgumentsSortDir? _explicitNullValueSortDir = default!;
         /// <summary>A list of team IDs (must include at least one ID).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? TeamIds { get; set; }
+        public List<string>? TeamIds { get => _explicitNullValueTeamIds; set { _explicitNullValueTeamIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_ids"); else _explicitNullProperties?.Remove("team_ids"); } }
+        private List<string>? _explicitNullValueTeamIds = default!;
 #nullable restore
 #else
-        public List<string> TeamIds { get; set; }
+        public List<string> TeamIds { get => _explicitNullValueTeamIds; set { _explicitNullValueTeamIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_ids"); else _explicitNullProperties?.Remove("team_ids"); } }
+        private List<string> _explicitNullValueTeamIds = default!;
 #endif
         /// <summary>Only return the total count of channels.Omits channel data and allows access for admins without channel manager permissions. Defaults to `false`.</summary>
-        public bool? TotalCountOnly { get; set; }
+        public bool? TotalCountOnly { get => _explicitNullValueTotalCountOnly; set { _explicitNullValueTotalCountOnly = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_count_only"); else _explicitNullProperties?.Remove("total_count_only"); } }
+        private bool? _explicitNullValueTotalCountOnly = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSearchArguments"/> and sets the default values.
         /// </summary>
@@ -77,7 +107,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSearchArguments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSearchArguments();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSearchArguments(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -114,6 +144,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsSearchArgumentsSortDir>("sort_dir", SortDir);
             writer.WriteCollectionOfPrimitiveValues<string>("team_ids", TeamIds);
             writer.WriteBoolValue("total_count_only", TotalCountOnly);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

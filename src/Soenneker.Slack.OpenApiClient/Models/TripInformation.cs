@@ -11,48 +11,70 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TripInformation : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("channel_id") is { } nullNodeChannelId && nullNodeChannelId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelId = null;
+            if (parseNode.GetChildNode("list_id") is { } nullNodeListId && nullNodeListId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ListId = null;
+            if (parseNode.GetChildNode("message_ts") is { } nullNodeMessageTs && nullNodeMessageTs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessageTs = null;
+            if (parseNode.GetChildNode("reaction") is { } nullNodeReaction && nullNodeReaction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reaction = null;
+            if (parseNode.GetChildNode("user_id") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The channel_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChannelId { get; set; }
+        public string? ChannelId { get => _explicitNullValueChannelId; set { _explicitNullValueChannelId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_id"); else _explicitNullProperties?.Remove("channel_id"); } }
+        private string? _explicitNullValueChannelId = default!;
 #nullable restore
 #else
-        public string ChannelId { get; set; }
+        public string ChannelId { get => _explicitNullValueChannelId; set { _explicitNullValueChannelId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_id"); else _explicitNullProperties?.Remove("channel_id"); } }
+        private string _explicitNullValueChannelId = default!;
 #endif
         /// <summary>The list_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ListId { get; set; }
+        public string? ListId { get => _explicitNullValueListId; set { _explicitNullValueListId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("list_id"); else _explicitNullProperties?.Remove("list_id"); } }
+        private string? _explicitNullValueListId = default!;
 #nullable restore
 #else
-        public string ListId { get; set; }
+        public string ListId { get => _explicitNullValueListId; set { _explicitNullValueListId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("list_id"); else _explicitNullProperties?.Remove("list_id"); } }
+        private string _explicitNullValueListId = default!;
 #endif
         /// <summary>The message_ts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MessageTs { get; set; }
+        public string? MessageTs { get => _explicitNullValueMessageTs; set { _explicitNullValueMessageTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message_ts"); else _explicitNullProperties?.Remove("message_ts"); } }
+        private string? _explicitNullValueMessageTs = default!;
 #nullable restore
 #else
-        public string MessageTs { get; set; }
+        public string MessageTs { get => _explicitNullValueMessageTs; set { _explicitNullValueMessageTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message_ts"); else _explicitNullProperties?.Remove("message_ts"); } }
+        private string _explicitNullValueMessageTs = default!;
 #endif
         /// <summary>The reaction property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Reaction { get; set; }
+        public string? Reaction { get => _explicitNullValueReaction; set { _explicitNullValueReaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reaction"); else _explicitNullProperties?.Remove("reaction"); } }
+        private string? _explicitNullValueReaction = default!;
 #nullable restore
 #else
-        public string Reaction { get; set; }
+        public string Reaction { get => _explicitNullValueReaction; set { _explicitNullValueReaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reaction"); else _explicitNullProperties?.Remove("reaction"); } }
+        private string _explicitNullValueReaction = default!;
 #endif
         /// <summary>The user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserId { get; set; }
+        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        private string? _explicitNullValueUserId = default!;
 #nullable restore
 #else
-        public string UserId { get; set; }
+        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        private string _explicitNullValueUserId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.TripInformation"/> and sets the default values.
@@ -69,7 +91,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.TripInformation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.TripInformation();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.TripInformation(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +120,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("message_ts", MessageTs);
             writer.WriteStringValue("reaction", Reaction);
             writer.WriteStringValue("user_id", UserId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

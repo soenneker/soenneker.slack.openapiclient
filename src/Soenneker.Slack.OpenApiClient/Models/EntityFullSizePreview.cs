@@ -11,34 +11,52 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class EntityFullSizePreview : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("error") is { } nullNodeError && nullNodeError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Error = null;
+            if (parseNode.GetChildNode("is_supported") is { } nullNodeIsSupported && nullNodeIsSupported.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsSupported = null;
+            if (parseNode.GetChildNode("mime_type") is { } nullNodeMimeType && nullNodeMimeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MimeType = null;
+            if (parseNode.GetChildNode("preview_url") is { } nullNodePreviewUrl && nullNodePreviewUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviewUrl = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The error property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.EntityFullSizePreviewError? Error { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityFullSizePreviewError? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.EntityFullSizePreviewError? _explicitNullValueError = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.EntityFullSizePreviewError Error { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityFullSizePreviewError Error { get => _explicitNullValueError; set { _explicitNullValueError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.EntityFullSizePreviewError _explicitNullValueError = default!;
 #endif
         /// <summary>The is_supported property</summary>
-        public bool? IsSupported { get; set; }
+        public bool? IsSupported { get => _explicitNullValueIsSupported; set { _explicitNullValueIsSupported = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_supported"); else _explicitNullProperties?.Remove("is_supported"); } }
+        private bool? _explicitNullValueIsSupported = default!;
         /// <summary>The mime_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MimeType { get; set; }
+        public string? MimeType { get => _explicitNullValueMimeType; set { _explicitNullValueMimeType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mime_type"); else _explicitNullProperties?.Remove("mime_type"); } }
+        private string? _explicitNullValueMimeType = default!;
 #nullable restore
 #else
-        public string MimeType { get; set; }
+        public string MimeType { get => _explicitNullValueMimeType; set { _explicitNullValueMimeType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mime_type"); else _explicitNullProperties?.Remove("mime_type"); } }
+        private string _explicitNullValueMimeType = default!;
 #endif
         /// <summary>The preview_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreviewUrl { get; set; }
+        public string? PreviewUrl { get => _explicitNullValuePreviewUrl; set { _explicitNullValuePreviewUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preview_url"); else _explicitNullProperties?.Remove("preview_url"); } }
+        private string? _explicitNullValuePreviewUrl = default!;
 #nullable restore
 #else
-        public string PreviewUrl { get; set; }
+        public string PreviewUrl { get => _explicitNullValuePreviewUrl; set { _explicitNullValuePreviewUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preview_url"); else _explicitNullProperties?.Remove("preview_url"); } }
+        private string _explicitNullValuePreviewUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.EntityFullSizePreview"/> and sets the default values.
@@ -55,7 +73,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.EntityFullSizePreview CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.EntityFullSizePreview();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.EntityFullSizePreview(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +100,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteBoolValue("is_supported", IsSupported);
             writer.WriteStringValue("mime_type", MimeType);
             writer.WriteStringValue("preview_url", PreviewUrl);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

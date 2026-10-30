@@ -11,34 +11,52 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class WorkflowUnpublishedEvent : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("event_ts") is { } nullNodeEventTs && nullNodeEventTs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventTs = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("workflow_draft_configuration") is { } nullNodeWorkflowDraftConfiguration && nullNodeWorkflowDraftConfiguration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowDraftConfiguration = null;
+            if (parseNode.GetChildNode("workflow_id") is { } nullNodeWorkflowId && nullNodeWorkflowId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The event_ts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventTs { get; set; }
+        public string? EventTs { get => _explicitNullValueEventTs; set { _explicitNullValueEventTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_ts"); else _explicitNullProperties?.Remove("event_ts"); } }
+        private string? _explicitNullValueEventTs = default!;
 #nullable restore
 #else
-        public string EventTs { get; set; }
+        public string EventTs { get => _explicitNullValueEventTs; set { _explicitNullValueEventTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_ts"); else _explicitNullProperties?.Remove("event_ts"); } }
+        private string _explicitNullValueEventTs = default!;
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowUnpublishedType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowUnpublishedType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.WorkflowUnpublishedType? _explicitNullValueType = default!;
         /// <summary>The workflow_draft_configuration property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowUnpublishedEventWorkflowDraftConfiguration? WorkflowDraftConfiguration { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowUnpublishedEventWorkflowDraftConfiguration? WorkflowDraftConfiguration { get => _explicitNullValueWorkflowDraftConfiguration; set { _explicitNullValueWorkflowDraftConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_draft_configuration"); else _explicitNullProperties?.Remove("workflow_draft_configuration"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.WorkflowUnpublishedEventWorkflowDraftConfiguration? _explicitNullValueWorkflowDraftConfiguration = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowUnpublishedEventWorkflowDraftConfiguration WorkflowDraftConfiguration { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowUnpublishedEventWorkflowDraftConfiguration WorkflowDraftConfiguration { get => _explicitNullValueWorkflowDraftConfiguration; set { _explicitNullValueWorkflowDraftConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_draft_configuration"); else _explicitNullProperties?.Remove("workflow_draft_configuration"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.WorkflowUnpublishedEventWorkflowDraftConfiguration _explicitNullValueWorkflowDraftConfiguration = default!;
 #endif
         /// <summary>The workflow_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkflowId { get; set; }
+        public string? WorkflowId { get => _explicitNullValueWorkflowId; set { _explicitNullValueWorkflowId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_id"); else _explicitNullProperties?.Remove("workflow_id"); } }
+        private string? _explicitNullValueWorkflowId = default!;
 #nullable restore
 #else
-        public string WorkflowId { get; set; }
+        public string WorkflowId { get => _explicitNullValueWorkflowId; set { _explicitNullValueWorkflowId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_id"); else _explicitNullProperties?.Remove("workflow_id"); } }
+        private string _explicitNullValueWorkflowId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.WorkflowUnpublishedEvent"/> and sets the default values.
@@ -55,7 +73,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.WorkflowUnpublishedEvent CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.WorkflowUnpublishedEvent();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.WorkflowUnpublishedEvent(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +100,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.WorkflowUnpublishedType>("type", Type);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WorkflowUnpublishedEventWorkflowDraftConfiguration>("workflow_draft_configuration", WorkflowDraftConfiguration);
             writer.WriteStringValue("workflow_id", WorkflowId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

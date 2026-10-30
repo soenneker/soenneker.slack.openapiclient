@@ -11,32 +11,48 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdminConversationsBulkMoveArguments : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("channel_ids") is { } nullNodeChannelIds && nullNodeChannelIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelIds = null;
+            if (parseNode.GetChildNode("target_team_id") is { } nullNodeTargetTeamId && nullNodeTargetTeamId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetTeamId = null;
+            if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of channel IDs (must include at least one ID).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ChannelIds { get; set; }
+        public List<string>? ChannelIds { get => _explicitNullValueChannelIds; set { _explicitNullValueChannelIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_ids"); else _explicitNullProperties?.Remove("channel_ids"); } }
+        private List<string>? _explicitNullValueChannelIds = default!;
 #nullable restore
 #else
-        public List<string> ChannelIds { get; set; }
+        public List<string> ChannelIds { get => _explicitNullValueChannelIds; set { _explicitNullValueChannelIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_ids"); else _explicitNullProperties?.Remove("channel_ids"); } }
+        private List<string> _explicitNullValueChannelIds = default!;
 #endif
         /// <summary>Target team ID to move channels to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TargetTeamId { get; set; }
+        public string? TargetTeamId { get => _explicitNullValueTargetTeamId; set { _explicitNullValueTargetTeamId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_team_id"); else _explicitNullProperties?.Remove("target_team_id"); } }
+        private string? _explicitNullValueTargetTeamId = default!;
 #nullable restore
 #else
-        public string TargetTeamId { get; set; }
+        public string TargetTeamId { get => _explicitNullValueTargetTeamId; set { _explicitNullValueTargetTeamId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_team_id"); else _explicitNullProperties?.Remove("target_team_id"); } }
+        private string _explicitNullValueTargetTeamId = default!;
 #endif
         /// <summary>Overridable authentication token bearing required scopes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Token { get; set; }
+        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private string? _explicitNullValueToken = default!;
 #nullable restore
 #else
-        public string Token { get; set; }
+        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private string _explicitNullValueToken = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsBulkMoveArguments"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsBulkMoveArguments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsBulkMoveArguments();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsBulkMoveArguments(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("channel_ids", ChannelIds);
             writer.WriteStringValue("target_team_id", TargetTeamId);
             writer.WriteStringValue("token", Token);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

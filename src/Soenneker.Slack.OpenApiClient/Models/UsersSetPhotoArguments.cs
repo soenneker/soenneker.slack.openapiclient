@@ -11,30 +11,49 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UsersSetPhotoArguments : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("crop_w") is { } nullNodeCropW && nullNodeCropW.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CropW = null;
+            if (parseNode.GetChildNode("crop_x") is { } nullNodeCropX && nullNodeCropX.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CropX = null;
+            if (parseNode.GetChildNode("crop_y") is { } nullNodeCropY && nullNodeCropY.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CropY = null;
+            if (parseNode.GetChildNode("image") is { } nullNodeImage && nullNodeImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Image = null;
+            if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Width/height of crop box (always square).</summary>
-        public double? CropW { get; set; }
+        public double? CropW { get => _explicitNullValueCropW; set { _explicitNullValueCropW = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crop_w"); else _explicitNullProperties?.Remove("crop_w"); } }
+        private double? _explicitNullValueCropW = default!;
         /// <summary>X coordinate of top-left corner of crop box.</summary>
-        public double? CropX { get; set; }
+        public double? CropX { get => _explicitNullValueCropX; set { _explicitNullValueCropX = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crop_x"); else _explicitNullProperties?.Remove("crop_x"); } }
+        private double? _explicitNullValueCropX = default!;
         /// <summary>Y coordinate of top-left corner of crop box.</summary>
-        public double? CropY { get; set; }
+        public double? CropY { get => _explicitNullValueCropY; set { _explicitNullValueCropY = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crop_y"); else _explicitNullProperties?.Remove("crop_y"); } }
+        private double? _explicitNullValueCropY = default!;
         /// <summary>Image file contents.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public byte[]? Image { get; set; }
+        public byte[]? Image { get => _explicitNullValueImage; set { _explicitNullValueImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image"); else _explicitNullProperties?.Remove("image"); } }
+        private byte[]? _explicitNullValueImage = default!;
 #nullable restore
 #else
-        public byte[] Image { get; set; }
+        public byte[] Image { get => _explicitNullValueImage; set { _explicitNullValueImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image"); else _explicitNullProperties?.Remove("image"); } }
+        private byte[] _explicitNullValueImage = default!;
 #endif
         /// <summary>Overridable authentication token bearing required scopes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Token { get; set; }
+        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private string? _explicitNullValueToken = default!;
 #nullable restore
 #else
-        public string Token { get; set; }
+        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private string _explicitNullValueToken = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.UsersSetPhotoArguments"/> and sets the default values.
@@ -51,7 +70,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.UsersSetPhotoArguments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.UsersSetPhotoArguments();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.UsersSetPhotoArguments(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -80,6 +99,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("crop_y", CropY);
             writer.WriteByteArrayValue("image", Image);
             writer.WriteStringValue("token", Token);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

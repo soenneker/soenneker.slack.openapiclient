@@ -11,50 +11,79 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SearchMessagesArguments : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("count") is { } nullNodeCount && nullNodeCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Count = null;
+            if (parseNode.GetChildNode("cursor") is { } nullNodeCursor && nullNodeCursor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cursor = null;
+            if (parseNode.GetChildNode("highlight") is { } nullNodeHighlight && nullNodeHighlight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Highlight = null;
+            if (parseNode.GetChildNode("page") is { } nullNodePage && nullNodePage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Page = null;
+            if (parseNode.GetChildNode("query") is { } nullNodeQuery && nullNodeQuery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Query = null;
+            if (parseNode.GetChildNode("sort") is { } nullNodeSort && nullNodeSort.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sort = null;
+            if (parseNode.GetChildNode("sort_dir") is { } nullNodeSortDir && nullNodeSortDir.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SortDir = null;
+            if (parseNode.GetChildNode("team_id") is { } nullNodeTeamId && nullNodeTeamId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamId = null;
+            if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Number of items to return per page. Defaults to `20`</summary>
-        public double? Count { get; set; }
+        public double? Count { get => _explicitNullValueCount; set { _explicitNullValueCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count"); else _explicitNullProperties?.Remove("count"); } }
+        private double? _explicitNullValueCount = default!;
         /// <summary>Paginate through collections of data by setting the `cursor` parameter to `*` for the first &quot;page&quot;or a `next_cursor` attribute returned by a previous request&apos;s `response_metadata`.Use the `count` parameter to set the number of items to return per page rather than `limit`.[pagination](https://docs.slack.dev/apis/web-api/pagination) for more detail.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Cursor { get; set; }
+        public string? Cursor { get => _explicitNullValueCursor; set { _explicitNullValueCursor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cursor"); else _explicitNullProperties?.Remove("cursor"); } }
+        private string? _explicitNullValueCursor = default!;
 #nullable restore
 #else
-        public string Cursor { get; set; }
+        public string Cursor { get => _explicitNullValueCursor; set { _explicitNullValueCursor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cursor"); else _explicitNullProperties?.Remove("cursor"); } }
+        private string _explicitNullValueCursor = default!;
 #endif
         /// <summary>Set to `true` to enable query highlight markers. Defaults to `false`.[`search.messages` Usage info](https://docs.slack.dev/reference/methods/search.messages) for details.</summary>
-        public bool? Highlight { get; set; }
+        public bool? Highlight { get => _explicitNullValueHighlight; set { _explicitNullValueHighlight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("highlight"); else _explicitNullProperties?.Remove("highlight"); } }
+        private bool? _explicitNullValueHighlight = default!;
         /// <summary>Page number of results to return. Defaults to `1`.</summary>
-        public double? Page { get; set; }
+        public double? Page { get => _explicitNullValuePage; set { _explicitNullValuePage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page"); else _explicitNullProperties?.Remove("page"); } }
+        private double? _explicitNullValuePage = default!;
         /// <summary>Search query.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Query { get; set; }
+        public string? Query { get => _explicitNullValueQuery; set { _explicitNullValueQuery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("query"); else _explicitNullProperties?.Remove("query"); } }
+        private string? _explicitNullValueQuery = default!;
 #nullable restore
 #else
-        public string Query { get; set; }
+        public string Query { get => _explicitNullValueQuery; set { _explicitNullValueQuery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("query"); else _explicitNullProperties?.Remove("query"); } }
+        private string _explicitNullValueQuery = default!;
 #endif
         /// <summary>Return matches sorted by either `score` or `timestamp`. Defaults to `score`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.SearchMessagesArgumentsSort? Sort { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.SearchMessagesArgumentsSort? Sort { get => _explicitNullValueSort; set { _explicitNullValueSort = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sort"); else _explicitNullProperties?.Remove("sort"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.SearchMessagesArgumentsSort? _explicitNullValueSort = default!;
         /// <summary>Change sort direction to ascending (`asc`) or descending (`desc`). Defaults to `desc`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.SearchMessagesArgumentsSortDir? SortDir { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.SearchMessagesArgumentsSortDir? SortDir { get => _explicitNullValueSortDir; set { _explicitNullValueSortDir = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sort_dir"); else _explicitNullProperties?.Remove("sort_dir"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.SearchMessagesArgumentsSortDir? _explicitNullValueSortDir = default!;
         /// <summary>If using an org token, `team_id` is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TeamId { get; set; }
+        public string? TeamId { get => _explicitNullValueTeamId; set { _explicitNullValueTeamId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_id"); else _explicitNullProperties?.Remove("team_id"); } }
+        private string? _explicitNullValueTeamId = default!;
 #nullable restore
 #else
-        public string TeamId { get; set; }
+        public string TeamId { get => _explicitNullValueTeamId; set { _explicitNullValueTeamId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_id"); else _explicitNullProperties?.Remove("team_id"); } }
+        private string _explicitNullValueTeamId = default!;
 #endif
         /// <summary>Overridable authentication token bearing required scopes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Token { get; set; }
+        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private string? _explicitNullValueToken = default!;
 #nullable restore
 #else
-        public string Token { get; set; }
+        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private string _explicitNullValueToken = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.SearchMessagesArguments"/> and sets the default values.
@@ -71,7 +100,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.SearchMessagesArguments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.SearchMessagesArguments();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.SearchMessagesArguments(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -108,6 +137,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.SearchMessagesArgumentsSortDir>("sort_dir", SortDir);
             writer.WriteStringValue("team_id", TeamId);
             writer.WriteStringValue("token", Token);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

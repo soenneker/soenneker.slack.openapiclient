@@ -12,24 +12,37 @@ namespace Soenneker.Slack.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AdminAppsConfigSetArgumentsDomainRestrictions : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("emails") is { } nullNodeEmails && nullNodeEmails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Emails = null;
+            if (parseNode.GetChildNode("urls") is { } nullNodeUrls && nullNodeUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Urls = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Sets emails for connector authorization.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Emails { get; set; }
+        public List<string>? Emails { get => _explicitNullValueEmails; set { _explicitNullValueEmails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emails"); else _explicitNullProperties?.Remove("emails"); } }
+        private List<string>? _explicitNullValueEmails = default!;
 #nullable restore
 #else
-        public List<string> Emails { get; set; }
+        public List<string> Emails { get => _explicitNullValueEmails; set { _explicitNullValueEmails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emails"); else _explicitNullProperties?.Remove("emails"); } }
+        private List<string> _explicitNullValueEmails = default!;
 #endif
         /// <summary>Sets allowed URLs for the app.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Urls { get; set; }
+        public List<string>? Urls { get => _explicitNullValueUrls; set { _explicitNullValueUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("urls"); else _explicitNullProperties?.Remove("urls"); } }
+        private List<string>? _explicitNullValueUrls = default!;
 #nullable restore
 #else
-        public List<string> Urls { get; set; }
+        public List<string> Urls { get => _explicitNullValueUrls; set { _explicitNullValueUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("urls"); else _explicitNullProperties?.Remove("urls"); } }
+        private List<string> _explicitNullValueUrls = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminAppsConfigSetArgumentsDomainRestrictions"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.AdminAppsConfigSetArgumentsDomainRestrictions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.AdminAppsConfigSetArgumentsDomainRestrictions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.AdminAppsConfigSetArgumentsDomainRestrictions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("emails", Emails);
             writer.WriteCollectionOfPrimitiveValues<string>("urls", Urls);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

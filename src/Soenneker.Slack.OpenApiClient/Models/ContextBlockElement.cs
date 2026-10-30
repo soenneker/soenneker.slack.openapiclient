@@ -12,7 +12,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ContextBlockElement : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ContextBlockElementAnyOf3"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -54,11 +59,22 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Slack.OpenApiClient.Models.ContextBlockElement();
-            result.ContextBlockElementAnyOf3 = new global::Soenneker.Slack.OpenApiClient.Models.ContextBlockElementAnyOf3();
-            result.ContextBlockElementAnyOf4 = new global::Soenneker.Slack.OpenApiClient.Models.ContextBlockElementAnyOf4();
-            result.MrkdwnElement = new global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement();
-            result.PlainTextElement = new global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement();
-            return result;
+            
+            
+            
+            
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("plain_text".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("text") != null))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("mrkdwn".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("text") != null))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("image".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("alt_text") != null && parseNode.GetChildNode("image_url") != null))();
+            bool matchesUnionBranch3 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("image".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("alt_text") != null && parseNode.GetChildNode("slack_file") != null))();
+            if (result.ContextBlockElementAnyOf3 == null && result.ContextBlockElementAnyOf4 == null && result.MrkdwnElement == null && result.PlainTextElement == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3) result.PlainTextElement = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement(), parseNode);
+            if (result.ContextBlockElementAnyOf3 == null && result.ContextBlockElementAnyOf4 == null && result.MrkdwnElement == null && result.PlainTextElement == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2 && !matchesUnionBranch3) result.MrkdwnElement = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement(), parseNode);
+            if (result.ContextBlockElementAnyOf3 == null && result.ContextBlockElementAnyOf4 == null && result.MrkdwnElement == null && result.PlainTextElement == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch3) result.ContextBlockElementAnyOf3 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.ContextBlockElementAnyOf3(), parseNode);
+            if (result.ContextBlockElementAnyOf3 == null && result.ContextBlockElementAnyOf4 == null && result.MrkdwnElement == null && result.PlainTextElement == null && matchesUnionBranch3 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2) result.ContextBlockElementAnyOf4 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.ContextBlockElementAnyOf4(), parseNode);
+            if (result.ContextBlockElementAnyOf3 == null && result.ContextBlockElementAnyOf4 == null && result.MrkdwnElement == null && result.PlainTextElement == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,13 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (ContextBlockElementAnyOf3 == null && ContextBlockElementAnyOf4 == null && MrkdwnElement == null && PlainTextElement == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (ContextBlockElementAnyOf3 != null && ContextBlockElementAnyOf4 == null && MrkdwnElement == null && PlainTextElement == null) { if (ContextBlockElementAnyOf3 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ContextBlockElementAnyOf3); return; }
+            if (ContextBlockElementAnyOf4 != null && ContextBlockElementAnyOf3 == null && MrkdwnElement == null && PlainTextElement == null) { if (ContextBlockElementAnyOf4 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ContextBlockElementAnyOf4); return; }
+            if (MrkdwnElement != null && ContextBlockElementAnyOf3 == null && ContextBlockElementAnyOf4 == null && PlainTextElement == null) { if (MrkdwnElement is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, MrkdwnElement); return; }
+            if (PlainTextElement != null && ContextBlockElementAnyOf3 == null && ContextBlockElementAnyOf4 == null && MrkdwnElement == null) { if (PlainTextElement is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, PlainTextElement); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ContextBlockElementAnyOf3>(null, ContextBlockElementAnyOf3, ContextBlockElementAnyOf4, MrkdwnElement, PlainTextElement);
         }

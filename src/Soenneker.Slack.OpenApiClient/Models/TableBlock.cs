@@ -11,35 +11,53 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TableBlock : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("block_id") is { } nullNodeBlockId && nullNodeBlockId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockId = null;
+            if (parseNode.GetChildNode("column_settings") is { } nullNodeColumnSettings && nullNodeColumnSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ColumnSettings = null;
+            if (parseNode.GetChildNode("rows") is { } nullNodeRows && nullNodeRows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rows = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string acting as a unique identifier for a block. If not specified, a `block_id` will be generated.You can use this `block_id` when you receive an interaction payload to[identify the source of the action](https://docs.slack.dev/interactivity/handling-user-interaction#payloads).Maximum length for this field is 255 characters. `block_id` should be unique for each message and each iteration ofa message. If a message is updated, use a new `block_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BlockId { get; set; }
+        public string? BlockId { get => _explicitNullValueBlockId; set { _explicitNullValueBlockId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("block_id"); else _explicitNullProperties?.Remove("block_id"); } }
+        private string? _explicitNullValueBlockId = default!;
 #nullable restore
 #else
-        public string BlockId { get; set; }
+        public string BlockId { get => _explicitNullValueBlockId; set { _explicitNullValueBlockId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("block_id"); else _explicitNullProperties?.Remove("block_id"); } }
+        private string _explicitNullValueBlockId = default!;
 #endif
         /// <summary>An array describing column behavior. If there are fewer items in the column_settings array than there are columns in the table, then the items in the the column_settings array will describe the same number of columns in the table as there are in the array itself. Any additional columns will have the default behavior. Maximum 20 items.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettings>? ColumnSettings { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettings>? ColumnSettings { get => _explicitNullValueColumnSettings; set { _explicitNullValueColumnSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("column_settings"); else _explicitNullProperties?.Remove("column_settings"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettings>? _explicitNullValueColumnSettings = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettings> ColumnSettings { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettings> ColumnSettings { get => _explicitNullValueColumnSettings; set { _explicitNullValueColumnSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("column_settings"); else _explicitNullProperties?.Remove("column_settings"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettings> _explicitNullValueColumnSettings = default!;
 #endif
         /// <summary>An array consisting of table rows. Maximum 100 rows. Each row object is an array with a max of 20 table cells. Table cells can have a type of rich_text, raw_text, or raw_number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Rows { get; set; }
+        public UntypedNode? Rows { get => _explicitNullValueRows; set { _explicitNullValueRows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rows"); else _explicitNullProperties?.Remove("rows"); } }
+        private UntypedNode? _explicitNullValueRows = default!;
 #nullable restore
 #else
-        public UntypedNode Rows { get; set; }
+        public UntypedNode Rows { get => _explicitNullValueRows; set { _explicitNullValueRows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rows"); else _explicitNullProperties?.Remove("rows"); } }
+        private UntypedNode _explicitNullValueRows = default!;
 #endif
         /// <summary>The type of block. For a table block, `type` is always `table`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.TableType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.TableType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.TableType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.TableBlock"/> and sets the default values.
         /// </summary>
@@ -55,7 +73,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.TableBlock CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.TableBlock();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.TableBlock(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +100,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettings>("column_settings", ColumnSettings);
             writer.WriteObjectValue<UntypedNode>("rows", Rows);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.TableType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

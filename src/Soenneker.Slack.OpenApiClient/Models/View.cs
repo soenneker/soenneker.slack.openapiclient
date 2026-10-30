@@ -11,44 +11,67 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class View : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("content_version") is { } nullNodeContentVersion && nullNodeContentVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentVersion = null;
+            if (parseNode.GetChildNode("date_added") is { } nullNodeDateAdded && nullNodeDateAdded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateAdded = null;
+            if (parseNode.GetChildNode("file_id") is { } nullNodeFileId && nullNodeFileId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileId = null;
+            if (parseNode.GetChildNode("label") is { } nullNodeLabel && nullNodeLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Label = null;
+            if (parseNode.GetChildNode("view_id") is { } nullNodeViewId && nullNodeViewId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ViewId = null;
+            if (parseNode.GetChildNode("view_key") is { } nullNodeViewKey && nullNodeViewKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ViewKey = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The content_version property</summary>
-        public double? ContentVersion { get; set; }
+        public double? ContentVersion { get => _explicitNullValueContentVersion; set { _explicitNullValueContentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content_version"); else _explicitNullProperties?.Remove("content_version"); } }
+        private double? _explicitNullValueContentVersion = default!;
         /// <summary>The date_added property</summary>
-        public double? DateAdded { get; set; }
+        public double? DateAdded { get => _explicitNullValueDateAdded; set { _explicitNullValueDateAdded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_added"); else _explicitNullProperties?.Remove("date_added"); } }
+        private double? _explicitNullValueDateAdded = default!;
         /// <summary>The file_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FileId { get; set; }
+        public string? FileId { get => _explicitNullValueFileId; set { _explicitNullValueFileId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_id"); else _explicitNullProperties?.Remove("file_id"); } }
+        private string? _explicitNullValueFileId = default!;
 #nullable restore
 #else
-        public string FileId { get; set; }
+        public string FileId { get => _explicitNullValueFileId; set { _explicitNullValueFileId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_id"); else _explicitNullProperties?.Remove("file_id"); } }
+        private string _explicitNullValueFileId = default!;
 #endif
         /// <summary>The label property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Label { get; set; }
+        public string? Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        private string? _explicitNullValueLabel = default!;
 #nullable restore
 #else
-        public string Label { get; set; }
+        public string Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        private string _explicitNullValueLabel = default!;
 #endif
         /// <summary>The view_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ViewId { get; set; }
+        public string? ViewId { get => _explicitNullValueViewId; set { _explicitNullValueViewId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view_id"); else _explicitNullProperties?.Remove("view_id"); } }
+        private string? _explicitNullValueViewId = default!;
 #nullable restore
 #else
-        public string ViewId { get; set; }
+        public string ViewId { get => _explicitNullValueViewId; set { _explicitNullValueViewId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view_id"); else _explicitNullProperties?.Remove("view_id"); } }
+        private string _explicitNullValueViewId = default!;
 #endif
         /// <summary>The view_key property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ViewKey { get; set; }
+        public string? ViewKey { get => _explicitNullValueViewKey; set { _explicitNullValueViewKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view_key"); else _explicitNullProperties?.Remove("view_key"); } }
+        private string? _explicitNullValueViewKey = default!;
 #nullable restore
 #else
-        public string ViewKey { get; set; }
+        public string ViewKey { get => _explicitNullValueViewKey; set { _explicitNullValueViewKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view_key"); else _explicitNullProperties?.Remove("view_key"); } }
+        private string _explicitNullValueViewKey = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.View"/> and sets the default values.
@@ -65,7 +88,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.View CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.View();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.View(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -96,6 +119,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("view_id", ViewId);
             writer.WriteStringValue("view_key", ViewKey);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

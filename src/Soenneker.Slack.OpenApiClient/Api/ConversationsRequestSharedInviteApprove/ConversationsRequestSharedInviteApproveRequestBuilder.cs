@@ -51,7 +51,7 @@ namespace Soenneker.Slack.OpenApiClient.Api.ConversationsRequestSharedInviteAppr
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Slack.OpenApiClient.Models.ConversationsRequestSharedInviteApproveResponse>(requestInfo, global::Soenneker.Slack.OpenApiClient.Models.ConversationsRequestSharedInviteApproveResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Slack.OpenApiClient.Models.ConversationsRequestSharedInviteApproveResponse>(requestInfo, global::Soenneker.Slack.OpenApiClient.Models.ConversationsRequestSharedInviteApproveResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Approves a request to add an external user to a channel and sends them a Slack Connect invite.

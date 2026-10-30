@@ -11,40 +11,59 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ManifestEventSubscriptions : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("bot_events") is { } nullNodeBotEvents && nullNodeBotEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotEvents = null;
+            if (parseNode.GetChildNode("metadata_subscriptions") is { } nullNodeMetadataSubscriptions && nullNodeMetadataSubscriptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MetadataSubscriptions = null;
+            if (parseNode.GetChildNode("request_url") is { } nullNodeRequestUrl && nullNodeRequestUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestUrl = null;
+            if (parseNode.GetChildNode("user_events") is { } nullNodeUserEvents && nullNodeUserEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserEvents = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of strings matching the event types you want to the app to subscribe to.A maximum of 100 event types can be used.[Event types](https://docs.slack.dev/reference/events).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.ManifestEvent?>? BotEvents { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.ManifestEvent?>? BotEvents { get => _explicitNullValueBotEvents; set { _explicitNullValueBotEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_events"); else _explicitNullProperties?.Remove("bot_events"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.ManifestEvent?>? _explicitNullValueBotEvents = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.ManifestEvent?> BotEvents { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.ManifestEvent?> BotEvents { get => _explicitNullValueBotEvents; set { _explicitNullValueBotEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_events"); else _explicitNullProperties?.Remove("bot_events"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.ManifestEvent?> _explicitNullValueBotEvents = default!;
 #endif
         /// <summary>An array describing [message metadata](https://docs.slack.dev/messaging/message-metadata) eventtypes the app subscribes to. Between 1 and 20 subscriptions can be included in this array.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.ManifestMetadataSubscription>? MetadataSubscriptions { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.ManifestMetadataSubscription>? MetadataSubscriptions { get => _explicitNullValueMetadataSubscriptions; set { _explicitNullValueMetadataSubscriptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata_subscriptions"); else _explicitNullProperties?.Remove("metadata_subscriptions"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.ManifestMetadataSubscription>? _explicitNullValueMetadataSubscriptions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.ManifestMetadataSubscription> MetadataSubscriptions { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.ManifestMetadataSubscription> MetadataSubscriptions { get => _explicitNullValueMetadataSubscriptions; set { _explicitNullValueMetadataSubscriptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata_subscriptions"); else _explicitNullProperties?.Remove("metadata_subscriptions"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.ManifestMetadataSubscription> _explicitNullValueMetadataSubscriptions = default!;
 #endif
         /// <summary>A string containing the full `https` URL that acts as the[Events API request URL](https://docs.slack.dev/apis/events-api/using-http-request-urls).If set, you&apos;ll need to manually verify the Request URL in the App Manifest section of App Management.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RequestUrl { get; set; }
+        public string? RequestUrl { get => _explicitNullValueRequestUrl; set { _explicitNullValueRequestUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_url"); else _explicitNullProperties?.Remove("request_url"); } }
+        private string? _explicitNullValueRequestUrl = default!;
 #nullable restore
 #else
-        public string RequestUrl { get; set; }
+        public string RequestUrl { get => _explicitNullValueRequestUrl; set { _explicitNullValueRequestUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_url"); else _explicitNullProperties?.Remove("request_url"); } }
+        private string _explicitNullValueRequestUrl = default!;
 #endif
         /// <summary>An array of strings matching the event types you want to the app to subscribe to onbehalf of authorized users. A maximum of 100 event types can be used.[Event types](https://docs.slack.dev/reference/events).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.ManifestEvent?>? UserEvents { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.ManifestEvent?>? UserEvents { get => _explicitNullValueUserEvents; set { _explicitNullValueUserEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_events"); else _explicitNullProperties?.Remove("user_events"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.ManifestEvent?>? _explicitNullValueUserEvents = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.ManifestEvent?> UserEvents { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.ManifestEvent?> UserEvents { get => _explicitNullValueUserEvents; set { _explicitNullValueUserEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_events"); else _explicitNullProperties?.Remove("user_events"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.ManifestEvent?> _explicitNullValueUserEvents = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ManifestEventSubscriptions"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.ManifestEventSubscriptions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.ManifestEventSubscriptions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.ManifestEventSubscriptions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ManifestMetadataSubscription>("metadata_subscriptions", MetadataSubscriptions);
             writer.WriteStringValue("request_url", RequestUrl);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Slack.OpenApiClient.Models.ManifestEvent>("user_events", UserEvents);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

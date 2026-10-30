@@ -11,32 +11,48 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class EntityIconField : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("alt_text") is { } nullNodeAltText && nullNodeAltText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AltText = null;
+            if (parseNode.GetChildNode("slack_file") is { } nullNodeSlackFile && nullNodeSlackFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SlackFile = null;
+            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The alt_text property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AltText { get; set; }
+        public string? AltText { get => _explicitNullValueAltText; set { _explicitNullValueAltText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alt_text"); else _explicitNullProperties?.Remove("alt_text"); } }
+        private string? _explicitNullValueAltText = default!;
 #nullable restore
 #else
-        public string AltText { get; set; }
+        public string AltText { get => _explicitNullValueAltText; set { _explicitNullValueAltText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alt_text"); else _explicitNullProperties?.Remove("alt_text"); } }
+        private string _explicitNullValueAltText = default!;
 #endif
         /// <summary>The slack_file property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.EntityIconFieldSlackFile? SlackFile { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityIconFieldSlackFile? SlackFile { get => _explicitNullValueSlackFile; set { _explicitNullValueSlackFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("slack_file"); else _explicitNullProperties?.Remove("slack_file"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.EntityIconFieldSlackFile? _explicitNullValueSlackFile = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.EntityIconFieldSlackFile SlackFile { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityIconFieldSlackFile SlackFile { get => _explicitNullValueSlackFile; set { _explicitNullValueSlackFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("slack_file"); else _explicitNullProperties?.Remove("slack_file"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.EntityIconFieldSlackFile _explicitNullValueSlackFile = default!;
 #endif
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.EntityIconField"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.EntityIconField CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.EntityIconField();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.EntityIconField(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("alt_text", AltText);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityIconFieldSlackFile>("slack_file", SlackFile);
             writer.WriteStringValue("url", Url);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

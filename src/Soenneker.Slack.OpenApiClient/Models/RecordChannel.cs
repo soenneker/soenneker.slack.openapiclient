@@ -11,40 +11,59 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class RecordChannel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("record_id") is { } nullNodeRecordId && nullNodeRecordId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordId = null;
+            if (parseNode.GetChildNode("record_label") is { } nullNodeRecordLabel && nullNodeRecordLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordLabel = null;
+            if (parseNode.GetChildNode("record_label_plural") is { } nullNodeRecordLabelPlural && nullNodeRecordLabelPlural.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordLabelPlural = null;
+            if (parseNode.GetChildNode("record_type") is { } nullNodeRecordType && nullNodeRecordType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The record_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RecordId { get; set; }
+        public string? RecordId { get => _explicitNullValueRecordId; set { _explicitNullValueRecordId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("record_id"); else _explicitNullProperties?.Remove("record_id"); } }
+        private string? _explicitNullValueRecordId = default!;
 #nullable restore
 #else
-        public string RecordId { get; set; }
+        public string RecordId { get => _explicitNullValueRecordId; set { _explicitNullValueRecordId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("record_id"); else _explicitNullProperties?.Remove("record_id"); } }
+        private string _explicitNullValueRecordId = default!;
 #endif
         /// <summary>The record_label property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RecordLabel { get; set; }
+        public string? RecordLabel { get => _explicitNullValueRecordLabel; set { _explicitNullValueRecordLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("record_label"); else _explicitNullProperties?.Remove("record_label"); } }
+        private string? _explicitNullValueRecordLabel = default!;
 #nullable restore
 #else
-        public string RecordLabel { get; set; }
+        public string RecordLabel { get => _explicitNullValueRecordLabel; set { _explicitNullValueRecordLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("record_label"); else _explicitNullProperties?.Remove("record_label"); } }
+        private string _explicitNullValueRecordLabel = default!;
 #endif
         /// <summary>The record_label_plural property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RecordLabelPlural { get; set; }
+        public string? RecordLabelPlural { get => _explicitNullValueRecordLabelPlural; set { _explicitNullValueRecordLabelPlural = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("record_label_plural"); else _explicitNullProperties?.Remove("record_label_plural"); } }
+        private string? _explicitNullValueRecordLabelPlural = default!;
 #nullable restore
 #else
-        public string RecordLabelPlural { get; set; }
+        public string RecordLabelPlural { get => _explicitNullValueRecordLabelPlural; set { _explicitNullValueRecordLabelPlural = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("record_label_plural"); else _explicitNullProperties?.Remove("record_label_plural"); } }
+        private string _explicitNullValueRecordLabelPlural = default!;
 #endif
         /// <summary>The record_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RecordType { get; set; }
+        public string? RecordType { get => _explicitNullValueRecordType; set { _explicitNullValueRecordType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("record_type"); else _explicitNullProperties?.Remove("record_type"); } }
+        private string? _explicitNullValueRecordType = default!;
 #nullable restore
 #else
-        public string RecordType { get; set; }
+        public string RecordType { get => _explicitNullValueRecordType; set { _explicitNullValueRecordType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("record_type"); else _explicitNullProperties?.Remove("record_type"); } }
+        private string _explicitNullValueRecordType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.RecordChannel"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.RecordChannel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.RecordChannel();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.RecordChannel(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("record_label", RecordLabel);
             writer.WriteStringValue("record_label_plural", RecordLabelPlural);
             writer.WriteStringValue("record_type", RecordType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

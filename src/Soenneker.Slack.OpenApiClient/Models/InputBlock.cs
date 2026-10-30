@@ -11,47 +11,72 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class InputBlock : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("block_id") is { } nullNodeBlockId && nullNodeBlockId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockId = null;
+            if (parseNode.GetChildNode("dispatch_action") is { } nullNodeDispatchAction && nullNodeDispatchAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DispatchAction = null;
+            if (parseNode.GetChildNode("element") is { } nullNodeElement && nullNodeElement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Element = null;
+            if (parseNode.GetChildNode("hint") is { } nullNodeHint && nullNodeHint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hint = null;
+            if (parseNode.GetChildNode("label") is { } nullNodeLabel && nullNodeLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Label = null;
+            if (parseNode.GetChildNode("optional") is { } nullNodeOptional && nullNodeOptional.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Optional = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string acting as a unique identifier for a block. If not specified, a `block_id` will be generated.You can use this `block_id` when you receive an interaction payload to[identify the source of the action](https://docs.slack.dev/interactivity/handling-user-interaction#payloads).Maximum length for this field is 255 characters. `block_id` should be unique for each message and each iteration ofa message. If a message is updated, use a new `block_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BlockId { get; set; }
+        public string? BlockId { get => _explicitNullValueBlockId; set { _explicitNullValueBlockId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("block_id"); else _explicitNullProperties?.Remove("block_id"); } }
+        private string? _explicitNullValueBlockId = default!;
 #nullable restore
 #else
-        public string BlockId { get; set; }
+        public string BlockId { get => _explicitNullValueBlockId; set { _explicitNullValueBlockId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("block_id"); else _explicitNullProperties?.Remove("block_id"); } }
+        private string _explicitNullValueBlockId = default!;
 #endif
         /// <summary>A boolean that indicates whether or not the use of elements in this block should dispatch a[block_actions payload](https://docs.slack.dev/reference/interaction-payloads/block_actions-payload). Defaults to `false`.</summary>
-        public bool? DispatchAction { get; set; }
+        public bool? DispatchAction { get => _explicitNullValueDispatchAction; set { _explicitNullValueDispatchAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dispatch_action"); else _explicitNullProperties?.Remove("dispatch_action"); } }
+        private bool? _explicitNullValueDispatchAction = default!;
         /// <summary>A block element.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.InputBlockElement? Element { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.InputBlockElement? Element { get => _explicitNullValueElement; set { _explicitNullValueElement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("element"); else _explicitNullProperties?.Remove("element"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.InputBlockElement? _explicitNullValueElement = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.InputBlockElement Element { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.InputBlockElement Element { get => _explicitNullValueElement; set { _explicitNullValueElement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("element"); else _explicitNullProperties?.Remove("element"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.InputBlockElement _explicitNullValueElement = default!;
 #endif
         /// <summary>An optional hint that appears below an input element in a lighter grey. It must be a[object](PlainTextElement). Maximum length for the `text` in this field is 2000 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Hint { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Hint { get => _explicitNullValueHint; set { _explicitNullValueHint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hint"); else _explicitNullProperties?.Remove("hint"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? _explicitNullValueHint = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement Hint { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement Hint { get => _explicitNullValueHint; set { _explicitNullValueHint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hint"); else _explicitNullProperties?.Remove("hint"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement _explicitNullValueHint = default!;
 #endif
         /// <summary>A label that appears above an input element in the form of a [PlainTextElement](PlainTextElement) object.Maximum length for the text in this field is 2000 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Label { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? _explicitNullValueLabel = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement Label { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement _explicitNullValueLabel = default!;
 #endif
         /// <summary>A boolean that indicates whether the input element may be empty when a user submits the modal.Defaults to `false`.</summary>
-        public bool? Optional { get; set; }
+        public bool? Optional { get => _explicitNullValueOptional; set { _explicitNullValueOptional = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("optional"); else _explicitNullProperties?.Remove("optional"); } }
+        private bool? _explicitNullValueOptional = default!;
         /// <summary>The type of block. For an input block, `type` is always `input`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.InputType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.InputType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.InputType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.InputBlock"/> and sets the default values.
         /// </summary>
@@ -67,7 +92,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.InputBlock CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.InputBlock();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.InputBlock(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -100,6 +125,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>("label", Label);
             writer.WriteBoolValue("optional", Optional);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.InputType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,40 +11,59 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CanvasesAccessDeleteArguments : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("canvas_id") is { } nullNodeCanvasId && nullNodeCanvasId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanvasId = null;
+            if (parseNode.GetChildNode("channel_ids") is { } nullNodeChannelIds && nullNodeChannelIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelIds = null;
+            if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
+            if (parseNode.GetChildNode("user_ids") is { } nullNodeUserIds && nullNodeUserIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserIds = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Encoded ID of the canvas.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CanvasId { get; set; }
+        public string? CanvasId { get => _explicitNullValueCanvasId; set { _explicitNullValueCanvasId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas_id"); else _explicitNullProperties?.Remove("canvas_id"); } }
+        private string? _explicitNullValueCanvasId = default!;
 #nullable restore
 #else
-        public string CanvasId { get; set; }
+        public string CanvasId { get => _explicitNullValueCanvasId; set { _explicitNullValueCanvasId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas_id"); else _explicitNullProperties?.Remove("canvas_id"); } }
+        private string _explicitNullValueCanvasId = default!;
 #endif
         /// <summary>An array of channel IDs (must include at least one ID).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ChannelIds { get; set; }
+        public List<string>? ChannelIds { get => _explicitNullValueChannelIds; set { _explicitNullValueChannelIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_ids"); else _explicitNullProperties?.Remove("channel_ids"); } }
+        private List<string>? _explicitNullValueChannelIds = default!;
 #nullable restore
 #else
-        public List<string> ChannelIds { get; set; }
+        public List<string> ChannelIds { get => _explicitNullValueChannelIds; set { _explicitNullValueChannelIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_ids"); else _explicitNullProperties?.Remove("channel_ids"); } }
+        private List<string> _explicitNullValueChannelIds = default!;
 #endif
         /// <summary>Overridable authentication token bearing required scopes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Token { get; set; }
+        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private string? _explicitNullValueToken = default!;
 #nullable restore
 #else
-        public string Token { get; set; }
+        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private string _explicitNullValueToken = default!;
 #endif
         /// <summary>List of encoded user IDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? UserIds { get; set; }
+        public List<string>? UserIds { get => _explicitNullValueUserIds; set { _explicitNullValueUserIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_ids"); else _explicitNullProperties?.Remove("user_ids"); } }
+        private List<string>? _explicitNullValueUserIds = default!;
 #nullable restore
 #else
-        public List<string> UserIds { get; set; }
+        public List<string> UserIds { get => _explicitNullValueUserIds; set { _explicitNullValueUserIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_ids"); else _explicitNullProperties?.Remove("user_ids"); } }
+        private List<string> _explicitNullValueUserIds = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.CanvasesAccessDeleteArguments"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.CanvasesAccessDeleteArguments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.CanvasesAccessDeleteArguments();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.CanvasesAccessDeleteArguments(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("channel_ids", ChannelIds);
             writer.WriteStringValue("token", Token);
             writer.WriteCollectionOfPrimitiveValues<string>("user_ids", UserIds);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,48 +11,70 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class Features : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("app_home") is { } nullNodeAppHome && nullNodeAppHome.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppHome = null;
+            if (parseNode.GetChildNode("bot_user") is { } nullNodeBotUser && nullNodeBotUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotUser = null;
+            if (parseNode.GetChildNode("shortcuts") is { } nullNodeShortcuts && nullNodeShortcuts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shortcuts = null;
+            if (parseNode.GetChildNode("slash_commands") is { } nullNodeSlashCommands && nullNodeSlashCommands.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SlashCommands = null;
+            if (parseNode.GetChildNode("unfurl_domains") is { } nullNodeUnfurlDomains && nullNodeUnfurlDomains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnfurlDomains = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The app_home property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.AppHome? AppHome { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AppHome? AppHome { get => _explicitNullValueAppHome; set { _explicitNullValueAppHome = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_home"); else _explicitNullProperties?.Remove("app_home"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AppHome? _explicitNullValueAppHome = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.AppHome AppHome { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AppHome AppHome { get => _explicitNullValueAppHome; set { _explicitNullValueAppHome = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_home"); else _explicitNullProperties?.Remove("app_home"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AppHome _explicitNullValueAppHome = default!;
 #endif
         /// <summary>The bot_user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.BotUser? BotUser { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.BotUser? BotUser { get => _explicitNullValueBotUser; set { _explicitNullValueBotUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_user"); else _explicitNullProperties?.Remove("bot_user"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.BotUser? _explicitNullValueBotUser = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.BotUser BotUser { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.BotUser BotUser { get => _explicitNullValueBotUser; set { _explicitNullValueBotUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_user"); else _explicitNullProperties?.Remove("bot_user"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.BotUser _explicitNullValueBotUser = default!;
 #endif
         /// <summary>The shortcuts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Shortcut>? Shortcuts { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Shortcut>? Shortcuts { get => _explicitNullValueShortcuts; set { _explicitNullValueShortcuts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shortcuts"); else _explicitNullProperties?.Remove("shortcuts"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.Shortcut>? _explicitNullValueShortcuts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Shortcut> Shortcuts { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Shortcut> Shortcuts { get => _explicitNullValueShortcuts; set { _explicitNullValueShortcuts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shortcuts"); else _explicitNullProperties?.Remove("shortcuts"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.Shortcut> _explicitNullValueShortcuts = default!;
 #endif
         /// <summary>The slash_commands property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.SlashCommand>? SlashCommands { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.SlashCommand>? SlashCommands { get => _explicitNullValueSlashCommands; set { _explicitNullValueSlashCommands = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("slash_commands"); else _explicitNullProperties?.Remove("slash_commands"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.SlashCommand>? _explicitNullValueSlashCommands = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.SlashCommand> SlashCommands { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.SlashCommand> SlashCommands { get => _explicitNullValueSlashCommands; set { _explicitNullValueSlashCommands = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("slash_commands"); else _explicitNullProperties?.Remove("slash_commands"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.SlashCommand> _explicitNullValueSlashCommands = default!;
 #endif
         /// <summary>The unfurl_domains property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? UnfurlDomains { get; set; }
+        public List<string>? UnfurlDomains { get => _explicitNullValueUnfurlDomains; set { _explicitNullValueUnfurlDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unfurl_domains"); else _explicitNullProperties?.Remove("unfurl_domains"); } }
+        private List<string>? _explicitNullValueUnfurlDomains = default!;
 #nullable restore
 #else
-        public List<string> UnfurlDomains { get; set; }
+        public List<string> UnfurlDomains { get => _explicitNullValueUnfurlDomains; set { _explicitNullValueUnfurlDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unfurl_domains"); else _explicitNullProperties?.Remove("unfurl_domains"); } }
+        private List<string> _explicitNullValueUnfurlDomains = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Features"/> and sets the default values.
@@ -69,7 +91,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.Features CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.Features();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.Features(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +120,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Shortcut>("shortcuts", Shortcuts);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SlashCommand>("slash_commands", SlashCommands);
             writer.WriteCollectionOfPrimitiveValues<string>("unfurl_domains", UnfurlDomains);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

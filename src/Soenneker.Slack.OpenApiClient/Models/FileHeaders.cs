@@ -11,40 +11,59 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class FileHeaders : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("date") is { } nullNodeDate && nullNodeDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Date = null;
+            if (parseNode.GetChildNode("in_reply_to") is { } nullNodeInReplyTo && nullNodeInReplyTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InReplyTo = null;
+            if (parseNode.GetChildNode("message_id") is { } nullNodeMessageId && nullNodeMessageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessageId = null;
+            if (parseNode.GetChildNode("reply_to") is { } nullNodeReplyTo && nullNodeReplyTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReplyTo = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The date property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Date { get; set; }
+        public string? Date { get => _explicitNullValueDate; set { _explicitNullValueDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date"); else _explicitNullProperties?.Remove("date"); } }
+        private string? _explicitNullValueDate = default!;
 #nullable restore
 #else
-        public string Date { get; set; }
+        public string Date { get => _explicitNullValueDate; set { _explicitNullValueDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date"); else _explicitNullProperties?.Remove("date"); } }
+        private string _explicitNullValueDate = default!;
 #endif
         /// <summary>The in_reply_to property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InReplyTo { get; set; }
+        public string? InReplyTo { get => _explicitNullValueInReplyTo; set { _explicitNullValueInReplyTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("in_reply_to"); else _explicitNullProperties?.Remove("in_reply_to"); } }
+        private string? _explicitNullValueInReplyTo = default!;
 #nullable restore
 #else
-        public string InReplyTo { get; set; }
+        public string InReplyTo { get => _explicitNullValueInReplyTo; set { _explicitNullValueInReplyTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("in_reply_to"); else _explicitNullProperties?.Remove("in_reply_to"); } }
+        private string _explicitNullValueInReplyTo = default!;
 #endif
         /// <summary>The message_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MessageId { get; set; }
+        public string? MessageId { get => _explicitNullValueMessageId; set { _explicitNullValueMessageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message_id"); else _explicitNullProperties?.Remove("message_id"); } }
+        private string? _explicitNullValueMessageId = default!;
 #nullable restore
 #else
-        public string MessageId { get; set; }
+        public string MessageId { get => _explicitNullValueMessageId; set { _explicitNullValueMessageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message_id"); else _explicitNullProperties?.Remove("message_id"); } }
+        private string _explicitNullValueMessageId = default!;
 #endif
         /// <summary>The reply_to property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReplyTo { get; set; }
+        public string? ReplyTo { get => _explicitNullValueReplyTo; set { _explicitNullValueReplyTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reply_to"); else _explicitNullProperties?.Remove("reply_to"); } }
+        private string? _explicitNullValueReplyTo = default!;
 #nullable restore
 #else
-        public string ReplyTo { get; set; }
+        public string ReplyTo { get => _explicitNullValueReplyTo; set { _explicitNullValueReplyTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reply_to"); else _explicitNullProperties?.Remove("reply_to"); } }
+        private string _explicitNullValueReplyTo = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.FileHeaders"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.FileHeaders CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.FileHeaders();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.FileHeaders(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("in_reply_to", InReplyTo);
             writer.WriteStringValue("message_id", MessageId);
             writer.WriteStringValue("reply_to", ReplyTo);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

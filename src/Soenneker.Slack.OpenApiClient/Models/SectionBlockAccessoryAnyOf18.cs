@@ -11,27 +11,42 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SectionBlockAccessoryAnyOf18 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("alt_text") is { } nullNodeAltText && nullNodeAltText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AltText = null;
+            if (parseNode.GetChildNode("image_url") is { } nullNodeImageUrl && nullNodeImageUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageUrl = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A plain-text summary of the image. This should not contain any markup.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AltText { get; set; }
+        public string? AltText { get => _explicitNullValueAltText; set { _explicitNullValueAltText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alt_text"); else _explicitNullProperties?.Remove("alt_text"); } }
+        private string? _explicitNullValueAltText = default!;
 #nullable restore
 #else
-        public string AltText { get; set; }
+        public string AltText { get => _explicitNullValueAltText; set { _explicitNullValueAltText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alt_text"); else _explicitNullProperties?.Remove("alt_text"); } }
+        private string _explicitNullValueAltText = default!;
 #endif
         /// <summary>The URL of the image to be displayed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImageUrl { get; set; }
+        public string? ImageUrl { get => _explicitNullValueImageUrl; set { _explicitNullValueImageUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_url"); else _explicitNullProperties?.Remove("image_url"); } }
+        private string? _explicitNullValueImageUrl = default!;
 #nullable restore
 #else
-        public string ImageUrl { get; set; }
+        public string ImageUrl { get => _explicitNullValueImageUrl; set { _explicitNullValueImageUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_url"); else _explicitNullProperties?.Remove("image_url"); } }
+        private string _explicitNullValueImageUrl = default!;
 #endif
         /// <summary>The type of element. In this case `type` is always `image`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.ImageType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ImageType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ImageType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.SectionBlockAccessoryAnyOf18"/> and sets the default values.
         /// </summary>
@@ -47,7 +62,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.SectionBlockAccessoryAnyOf18 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.SectionBlockAccessoryAnyOf18();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.SectionBlockAccessoryAnyOf18(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +87,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("alt_text", AltText);
             writer.WriteStringValue("image_url", ImageUrl);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ImageType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

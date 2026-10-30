@@ -12,7 +12,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AdminAnalyticsGetFileArguments : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.MemberArgs"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -46,10 +51,19 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Slack.OpenApiClient.Models.AdminAnalyticsGetFileArguments();
-            result.MemberArgs = new global::Soenneker.Slack.OpenApiClient.Models.MemberArgs();
-            result.PublicChannelWithDate = new global::Soenneker.Slack.OpenApiClient.Models.PublicChannelWithDate();
-            result.PublicChannelWithMetadata = new global::Soenneker.Slack.OpenApiClient.Models.PublicChannelWithMetadata();
-            return result;
+            
+            
+            
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("member".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("date") != null))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("public_channel".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("date") != null))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("metadata_only") != null && parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag2 && ("public_channel".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal)))))();
+            if (result.MemberArgs == null && result.PublicChannelWithDate == null && result.PublicChannelWithMetadata == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2) result.MemberArgs = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.MemberArgs(), parseNode);
+            if (result.MemberArgs == null && result.PublicChannelWithDate == null && result.PublicChannelWithMetadata == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2) result.PublicChannelWithDate = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.PublicChannelWithDate(), parseNode);
+            if (result.MemberArgs == null && result.PublicChannelWithDate == null && result.PublicChannelWithMetadata == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1) result.PublicChannelWithMetadata = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.PublicChannelWithMetadata(), parseNode);
+            if (result.MemberArgs == null && result.PublicChannelWithDate == null && result.PublicChannelWithMetadata == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +83,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (MemberArgs == null && PublicChannelWithDate == null && PublicChannelWithMetadata == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (MemberArgs != null && PublicChannelWithDate == null && PublicChannelWithMetadata == null) { if (MemberArgs is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, MemberArgs); return; }
+            if (PublicChannelWithDate != null && MemberArgs == null && PublicChannelWithMetadata == null) { if (PublicChannelWithDate is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, PublicChannelWithDate); return; }
+            if (PublicChannelWithMetadata != null && MemberArgs == null && PublicChannelWithDate == null) { if (PublicChannelWithMetadata is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, PublicChannelWithMetadata); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MemberArgs>(null, MemberArgs, PublicChannelWithDate, PublicChannelWithMetadata);
         }

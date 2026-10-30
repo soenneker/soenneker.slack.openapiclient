@@ -51,7 +51,7 @@ namespace Soenneker.Slack.OpenApiClient.Api.OauthV2Exchange
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Slack.OpenApiClient.Models.OAuthV2ExchangeResponse>(requestInfo, global::Soenneker.Slack.OpenApiClient.Models.OAuthV2ExchangeResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Slack.OpenApiClient.Models.OAuthV2ExchangeResponse>(requestInfo, global::Soenneker.Slack.OpenApiClient.Models.OAuthV2ExchangeResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Exchanges a legacy access token for a new expiring access token and refresh token.

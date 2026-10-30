@@ -11,56 +11,86 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class InviteRequest4 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("channel") is { } nullNodeChannel && nullNodeChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Channel = null;
+            if (parseNode.GetChildNode("date_created") is { } nullNodeDateCreated && nullNodeDateCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateCreated = null;
+            if (parseNode.GetChildNode("date_last_updated") is { } nullNodeDateLastUpdated && nullNodeDateLastUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateLastUpdated = null;
+            if (parseNode.GetChildNode("expires_at") is { } nullNodeExpiresAt && nullNodeExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresAt = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("inviting_team") is { } nullNodeInvitingTeam && nullNodeInvitingTeam.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvitingTeam = null;
+            if (parseNode.GetChildNode("inviting_user") is { } nullNodeInvitingUser && nullNodeInvitingUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvitingUser = null;
+            if (parseNode.GetChildNode("is_external_limited") is { } nullNodeIsExternalLimited && nullNodeIsExternalLimited.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsExternalLimited = null;
+            if (parseNode.GetChildNode("target_user") is { } nullNodeTargetUser && nullNodeTargetUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetUser = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The channel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel11? Channel { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Channel11? Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel"); else _explicitNullProperties?.Remove("channel"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Channel11? _explicitNullValueChannel = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel11 Channel { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Channel11 Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel"); else _explicitNullProperties?.Remove("channel"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Channel11 _explicitNullValueChannel = default!;
 #endif
         /// <summary>The date_created property</summary>
-        public double? DateCreated { get; set; }
+        public double? DateCreated { get => _explicitNullValueDateCreated; set { _explicitNullValueDateCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_created"); else _explicitNullProperties?.Remove("date_created"); } }
+        private double? _explicitNullValueDateCreated = default!;
         /// <summary>The date_last_updated property</summary>
-        public double? DateLastUpdated { get; set; }
+        public double? DateLastUpdated { get => _explicitNullValueDateLastUpdated; set { _explicitNullValueDateLastUpdated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_last_updated"); else _explicitNullProperties?.Remove("date_last_updated"); } }
+        private double? _explicitNullValueDateLastUpdated = default!;
         /// <summary>The expires_at property</summary>
-        public double? ExpiresAt { get; set; }
+        public double? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
+        private double? _explicitNullValueExpiresAt = default!;
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The inviting_team property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Team6? InvitingTeam { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Team6? InvitingTeam { get => _explicitNullValueInvitingTeam; set { _explicitNullValueInvitingTeam = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inviting_team"); else _explicitNullProperties?.Remove("inviting_team"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Team6? _explicitNullValueInvitingTeam = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Team6 InvitingTeam { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Team6 InvitingTeam { get => _explicitNullValueInvitingTeam; set { _explicitNullValueInvitingTeam = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inviting_team"); else _explicitNullProperties?.Remove("inviting_team"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Team6 _explicitNullValueInvitingTeam = default!;
 #endif
         /// <summary>The inviting_user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.InvitingUser? InvitingUser { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.InvitingUser? InvitingUser { get => _explicitNullValueInvitingUser; set { _explicitNullValueInvitingUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inviting_user"); else _explicitNullProperties?.Remove("inviting_user"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.InvitingUser? _explicitNullValueInvitingUser = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.InvitingUser InvitingUser { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.InvitingUser InvitingUser { get => _explicitNullValueInvitingUser; set { _explicitNullValueInvitingUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inviting_user"); else _explicitNullProperties?.Remove("inviting_user"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.InvitingUser _explicitNullValueInvitingUser = default!;
 #endif
         /// <summary>The is_external_limited property</summary>
-        public bool? IsExternalLimited { get; set; }
+        public bool? IsExternalLimited { get => _explicitNullValueIsExternalLimited; set { _explicitNullValueIsExternalLimited = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_external_limited"); else _explicitNullProperties?.Remove("is_external_limited"); } }
+        private bool? _explicitNullValueIsExternalLimited = default!;
         /// <summary>The target_user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.TargetUser? TargetUser { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.TargetUser? TargetUser { get => _explicitNullValueTargetUser; set { _explicitNullValueTargetUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_user"); else _explicitNullProperties?.Remove("target_user"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.TargetUser? _explicitNullValueTargetUser = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.TargetUser TargetUser { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.TargetUser TargetUser { get => _explicitNullValueTargetUser; set { _explicitNullValueTargetUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_user"); else _explicitNullProperties?.Remove("target_user"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.TargetUser _explicitNullValueTargetUser = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.InviteRequest4"/> and sets the default values.
@@ -77,7 +107,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.InviteRequest4 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.InviteRequest4();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.InviteRequest4(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -114,6 +144,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InvitingUser>("inviting_user", InvitingUser);
             writer.WriteBoolValue("is_external_limited", IsExternalLimited);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.TargetUser>("target_user", TargetUser);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

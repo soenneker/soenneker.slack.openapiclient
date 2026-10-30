@@ -12,56 +12,81 @@ namespace Soenneker.Slack.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EntityMetadataEntityPayload : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("actions") is { } nullNodeActions && nullNodeActions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Actions = null;
+            if (parseNode.GetChildNode("attributes") is { } nullNodeAttributes && nullNodeAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attributes = null;
+            if (parseNode.GetChildNode("custom_fields") is { } nullNodeCustomFields && nullNodeCustomFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFields = null;
+            if (parseNode.GetChildNode("display_order") is { } nullNodeDisplayOrder && nullNodeDisplayOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayOrder = null;
+            if (parseNode.GetChildNode("fields") is { } nullNodeFields && nullNodeFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fields = null;
+            if (parseNode.GetChildNode("slack_file") is { } nullNodeSlackFile && nullNodeSlackFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SlackFile = null;
+        }
+
         /// <summary>The actions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.EntityMetadataEntityPayloadActions? Actions { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityMetadataEntityPayloadActions? Actions { get => _explicitNullValueActions; set { _explicitNullValueActions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actions"); else _explicitNullProperties?.Remove("actions"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.EntityMetadataEntityPayloadActions? _explicitNullValueActions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.EntityMetadataEntityPayloadActions Actions { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityMetadataEntityPayloadActions Actions { get => _explicitNullValueActions; set { _explicitNullValueActions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actions"); else _explicitNullProperties?.Remove("actions"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.EntityMetadataEntityPayloadActions _explicitNullValueActions = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The attributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.EntityAttributes? Attributes { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityAttributes? Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributes"); else _explicitNullProperties?.Remove("attributes"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.EntityAttributes? _explicitNullValueAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.EntityAttributes Attributes { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityAttributes Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributes"); else _explicitNullProperties?.Remove("attributes"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.EntityAttributes _explicitNullValueAttributes = default!;
 #endif
         /// <summary>The custom_fields property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.EntityCustomField>? CustomFields { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.EntityCustomField>? CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.EntityCustomField>? _explicitNullValueCustomFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.EntityCustomField> CustomFields { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.EntityCustomField> CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.EntityCustomField> _explicitNullValueCustomFields = default!;
 #endif
         /// <summary>The display_order property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? DisplayOrder { get; set; }
+        public List<string>? DisplayOrder { get => _explicitNullValueDisplayOrder; set { _explicitNullValueDisplayOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_order"); else _explicitNullProperties?.Remove("display_order"); } }
+        private List<string>? _explicitNullValueDisplayOrder = default!;
 #nullable restore
 #else
-        public List<string> DisplayOrder { get; set; }
+        public List<string> DisplayOrder { get => _explicitNullValueDisplayOrder; set { _explicitNullValueDisplayOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_order"); else _explicitNullProperties?.Remove("display_order"); } }
+        private List<string> _explicitNullValueDisplayOrder = default!;
 #endif
         /// <summary>The fields property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.EntityMetadataEntityPayloadFields? Fields { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityMetadataEntityPayloadFields? Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.EntityMetadataEntityPayloadFields? _explicitNullValueFields = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.EntityMetadataEntityPayloadFields Fields { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.EntityMetadataEntityPayloadFields Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.EntityMetadataEntityPayloadFields _explicitNullValueFields = default!;
 #endif
         /// <summary>The slack_file property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.FileEntitySlackFile? SlackFile { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.FileEntitySlackFile? SlackFile { get => _explicitNullValueSlackFile; set { _explicitNullValueSlackFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("slack_file"); else _explicitNullProperties?.Remove("slack_file"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.FileEntitySlackFile? _explicitNullValueSlackFile = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.FileEntitySlackFile SlackFile { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.FileEntitySlackFile SlackFile { get => _explicitNullValueSlackFile; set { _explicitNullValueSlackFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("slack_file"); else _explicitNullProperties?.Remove("slack_file"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.FileEntitySlackFile _explicitNullValueSlackFile = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.EntityMetadataEntityPayload"/> and sets the default values.
@@ -78,7 +103,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.EntityMetadataEntityPayload CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.EntityMetadataEntityPayload();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.EntityMetadataEntityPayload(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -109,6 +134,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("display_order", DisplayOrder);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityMetadataEntityPayloadFields>("fields", Fields);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FileEntitySlackFile>("slack_file", SlackFile);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

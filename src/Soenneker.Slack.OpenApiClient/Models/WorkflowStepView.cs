@@ -11,45 +11,68 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class WorkflowStepView : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("blocks") is { } nullNodeBlocks && nullNodeBlocks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Blocks = null;
+            if (parseNode.GetChildNode("callback_id") is { } nullNodeCallbackId && nullNodeCallbackId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallbackId = null;
+            if (parseNode.GetChildNode("external_id") is { } nullNodeExternalId && nullNodeExternalId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalId = null;
+            if (parseNode.GetChildNode("private_metadata") is { } nullNodePrivateMetadata && nullNodePrivateMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivateMetadata = null;
+            if (parseNode.GetChildNode("submit_disabled") is { } nullNodeSubmitDisabled && nullNodeSubmitDisabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubmitDisabled = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of [AnyBlock](AnyBlock) that defines the content of the view. Max of 100 blocks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.AnyBlock>? Blocks { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.AnyBlock>? Blocks { get => _explicitNullValueBlocks; set { _explicitNullValueBlocks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blocks"); else _explicitNullProperties?.Remove("blocks"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.AnyBlock>? _explicitNullValueBlocks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.AnyBlock> Blocks { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.AnyBlock> Blocks { get => _explicitNullValueBlocks; set { _explicitNullValueBlocks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blocks"); else _explicitNullProperties?.Remove("blocks"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.AnyBlock> _explicitNullValueBlocks = default!;
 #endif
         /// <summary>An identifier to recognize interactions and submissions of this particular view. Don&apos;t use this tostore sensitive information (use `private_metadata` instead). Maximum length of 255 characters.[Handling and responding to interactions](https://docs.slack.dev/surfaces/modals#interactions).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallbackId { get; set; }
+        public string? CallbackId { get => _explicitNullValueCallbackId; set { _explicitNullValueCallbackId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callback_id"); else _explicitNullProperties?.Remove("callback_id"); } }
+        private string? _explicitNullValueCallbackId = default!;
 #nullable restore
 #else
-        public string CallbackId { get; set; }
+        public string CallbackId { get => _explicitNullValueCallbackId; set { _explicitNullValueCallbackId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callback_id"); else _explicitNullProperties?.Remove("callback_id"); } }
+        private string _explicitNullValueCallbackId = default!;
 #endif
         /// <summary>A custom identifier that must be unique for all views on a per-team basis.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalId { get; set; }
+        public string? ExternalId { get => _explicitNullValueExternalId; set { _explicitNullValueExternalId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_id"); else _explicitNullProperties?.Remove("external_id"); } }
+        private string? _explicitNullValueExternalId = default!;
 #nullable restore
 #else
-        public string ExternalId { get; set; }
+        public string ExternalId { get => _explicitNullValueExternalId; set { _explicitNullValueExternalId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_id"); else _explicitNullProperties?.Remove("external_id"); } }
+        private string _explicitNullValueExternalId = default!;
 #endif
         /// <summary>String that will be sent to your app in[`view_submission`](https://docs.slack.dev/reference/interaction-payloads/view-interactions-payload#view_submission) and[`block_actions`](https://docs.slack.dev/reference/interaction-payloads/block_actions-payload) events.Maximum length of 3000 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrivateMetadata { get; set; }
+        public string? PrivateMetadata { get => _explicitNullValuePrivateMetadata; set { _explicitNullValuePrivateMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("private_metadata"); else _explicitNullProperties?.Remove("private_metadata"); } }
+        private string? _explicitNullValuePrivateMetadata = default!;
 #nullable restore
 #else
-        public string PrivateMetadata { get; set; }
+        public string PrivateMetadata { get => _explicitNullValuePrivateMetadata; set { _explicitNullValuePrivateMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("private_metadata"); else _explicitNullProperties?.Remove("private_metadata"); } }
+        private string _explicitNullValuePrivateMetadata = default!;
 #endif
         /// <summary>When set to `true`, disables the submit button until the user has completed one or more inputs.Defaults to `false`.</summary>
-        public bool? SubmitDisabled { get; set; }
+        public bool? SubmitDisabled { get => _explicitNullValueSubmitDisabled; set { _explicitNullValueSubmitDisabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("submit_disabled"); else _explicitNullProperties?.Remove("submit_disabled"); } }
+        private bool? _explicitNullValueSubmitDisabled = default!;
         /// <summary>The type property</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepView"/> and sets the default values.
         /// </summary>
@@ -65,7 +88,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepView CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepView();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepView(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -96,6 +119,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("private_metadata", PrivateMetadata);
             writer.WriteBoolValue("submit_disabled", SubmitDisabled);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

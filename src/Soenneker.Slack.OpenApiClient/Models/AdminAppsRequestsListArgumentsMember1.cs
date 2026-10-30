@@ -11,29 +11,46 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdminAppsRequestsListArgumentsMember1 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("certified") is { } nullNodeCertified && nullNodeCertified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Certified = null;
+            if (parseNode.GetChildNode("cursor") is { } nullNodeCursor && nullNodeCursor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cursor = null;
+            if (parseNode.GetChildNode("enterprise_id") is { } nullNodeEnterpriseId && nullNodeEnterpriseId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnterpriseId = null;
+            if (parseNode.GetChildNode("limit") is { } nullNodeLimit && nullNodeLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Limit = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Include certified apps. Defaults to `false`.</summary>
-        public bool? Certified { get; set; }
+        public bool? Certified { get => _explicitNullValueCertified; set { _explicitNullValueCertified = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("certified"); else _explicitNullProperties?.Remove("certified"); } }
+        private bool? _explicitNullValueCertified = default!;
         /// <summary>Paginate through collections of data by setting the `cursor` parameter to a `next_cursor` attributereturned by a previous request&apos;s `response_metadata`.Default value fetches the first &quot;page&quot; of the collection.[pagination](https://docs.slack.dev/apis/web-api/pagination) for more detail.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Cursor { get; set; }
+        public string? Cursor { get => _explicitNullValueCursor; set { _explicitNullValueCursor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cursor"); else _explicitNullProperties?.Remove("cursor"); } }
+        private string? _explicitNullValueCursor = default!;
 #nullable restore
 #else
-        public string Cursor { get; set; }
+        public string Cursor { get => _explicitNullValueCursor; set { _explicitNullValueCursor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cursor"); else _explicitNullProperties?.Remove("cursor"); } }
+        private string _explicitNullValueCursor = default!;
 #endif
         /// <summary>The ID of the enterprise.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EnterpriseId { get; set; }
+        public string? EnterpriseId { get => _explicitNullValueEnterpriseId; set { _explicitNullValueEnterpriseId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enterprise_id"); else _explicitNullProperties?.Remove("enterprise_id"); } }
+        private string? _explicitNullValueEnterpriseId = default!;
 #nullable restore
 #else
-        public string EnterpriseId { get; set; }
+        public string EnterpriseId { get => _explicitNullValueEnterpriseId; set { _explicitNullValueEnterpriseId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enterprise_id"); else _explicitNullProperties?.Remove("enterprise_id"); } }
+        private string _explicitNullValueEnterpriseId = default!;
 #endif
         /// <summary>The maximum number of items to return. Fewer than the requested number of items may be returned,even if the end of the list hasn&apos;t been reached. Must be an integer with a max value of `999`. Default is `100`.</summary>
-        public double? Limit { get; set; }
+        public double? Limit { get => _explicitNullValueLimit; set { _explicitNullValueLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limit"); else _explicitNullProperties?.Remove("limit"); } }
+        private double? _explicitNullValueLimit = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRequestsListArgumentsMember1"/> and sets the default values.
         /// </summary>
@@ -49,7 +66,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRequestsListArgumentsMember1 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRequestsListArgumentsMember1();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRequestsListArgumentsMember1(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +93,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("cursor", Cursor);
             writer.WriteStringValue("enterprise_id", EnterpriseId);
             writer.WriteDoubleValue("limit", Limit);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

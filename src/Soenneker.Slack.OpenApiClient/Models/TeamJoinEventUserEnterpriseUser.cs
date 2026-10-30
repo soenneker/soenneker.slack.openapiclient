@@ -11,44 +11,67 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TeamJoinEventUserEnterpriseUser : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("enterprise_id") is { } nullNodeEnterpriseId && nullNodeEnterpriseId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnterpriseId = null;
+            if (parseNode.GetChildNode("enterprise_name") is { } nullNodeEnterpriseName && nullNodeEnterpriseName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnterpriseName = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("is_admin") is { } nullNodeIsAdmin && nullNodeIsAdmin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAdmin = null;
+            if (parseNode.GetChildNode("is_owner") is { } nullNodeIsOwner && nullNodeIsOwner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsOwner = null;
+            if (parseNode.GetChildNode("teams") is { } nullNodeTeams && nullNodeTeams.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Teams = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The enterprise_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EnterpriseId { get; set; }
+        public string? EnterpriseId { get => _explicitNullValueEnterpriseId; set { _explicitNullValueEnterpriseId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enterprise_id"); else _explicitNullProperties?.Remove("enterprise_id"); } }
+        private string? _explicitNullValueEnterpriseId = default!;
 #nullable restore
 #else
-        public string EnterpriseId { get; set; }
+        public string EnterpriseId { get => _explicitNullValueEnterpriseId; set { _explicitNullValueEnterpriseId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enterprise_id"); else _explicitNullProperties?.Remove("enterprise_id"); } }
+        private string _explicitNullValueEnterpriseId = default!;
 #endif
         /// <summary>The enterprise_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EnterpriseName { get; set; }
+        public string? EnterpriseName { get => _explicitNullValueEnterpriseName; set { _explicitNullValueEnterpriseName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enterprise_name"); else _explicitNullProperties?.Remove("enterprise_name"); } }
+        private string? _explicitNullValueEnterpriseName = default!;
 #nullable restore
 #else
-        public string EnterpriseName { get; set; }
+        public string EnterpriseName { get => _explicitNullValueEnterpriseName; set { _explicitNullValueEnterpriseName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enterprise_name"); else _explicitNullProperties?.Remove("enterprise_name"); } }
+        private string _explicitNullValueEnterpriseName = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The is_admin property</summary>
-        public bool? IsAdmin { get; set; }
+        public bool? IsAdmin { get => _explicitNullValueIsAdmin; set { _explicitNullValueIsAdmin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_admin"); else _explicitNullProperties?.Remove("is_admin"); } }
+        private bool? _explicitNullValueIsAdmin = default!;
         /// <summary>The is_owner property</summary>
-        public bool? IsOwner { get; set; }
+        public bool? IsOwner { get => _explicitNullValueIsOwner; set { _explicitNullValueIsOwner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_owner"); else _explicitNullProperties?.Remove("is_owner"); } }
+        private bool? _explicitNullValueIsOwner = default!;
         /// <summary>The teams property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Teams { get; set; }
+        public List<string>? Teams { get => _explicitNullValueTeams; set { _explicitNullValueTeams = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("teams"); else _explicitNullProperties?.Remove("teams"); } }
+        private List<string>? _explicitNullValueTeams = default!;
 #nullable restore
 #else
-        public List<string> Teams { get; set; }
+        public List<string> Teams { get => _explicitNullValueTeams; set { _explicitNullValueTeams = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("teams"); else _explicitNullProperties?.Remove("teams"); } }
+        private List<string> _explicitNullValueTeams = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.TeamJoinEventUserEnterpriseUser"/> and sets the default values.
@@ -65,7 +88,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.TeamJoinEventUserEnterpriseUser CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.TeamJoinEventUserEnterpriseUser();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.TeamJoinEventUserEnterpriseUser(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -96,6 +119,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteBoolValue("is_admin", IsAdmin);
             writer.WriteBoolValue("is_owner", IsOwner);
             writer.WriteCollectionOfPrimitiveValues<string>("teams", Teams);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

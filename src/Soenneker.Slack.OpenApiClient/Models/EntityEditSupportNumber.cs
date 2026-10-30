@@ -11,15 +11,28 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class EntityEditSupportNumber : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("is_decimal_allowed") is { } nullNodeIsDecimalAllowed && nullNodeIsDecimalAllowed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsDecimalAllowed = null;
+            if (parseNode.GetChildNode("max_value") is { } nullNodeMaxValue && nullNodeMaxValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxValue = null;
+            if (parseNode.GetChildNode("min_value") is { } nullNodeMinValue && nullNodeMinValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinValue = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The is_decimal_allowed property</summary>
-        public bool? IsDecimalAllowed { get; set; }
+        public bool? IsDecimalAllowed { get => _explicitNullValueIsDecimalAllowed; set { _explicitNullValueIsDecimalAllowed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_decimal_allowed"); else _explicitNullProperties?.Remove("is_decimal_allowed"); } }
+        private bool? _explicitNullValueIsDecimalAllowed = default!;
         /// <summary>The max_value property</summary>
-        public double? MaxValue { get; set; }
+        public double? MaxValue { get => _explicitNullValueMaxValue; set { _explicitNullValueMaxValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_value"); else _explicitNullProperties?.Remove("max_value"); } }
+        private double? _explicitNullValueMaxValue = default!;
         /// <summary>The min_value property</summary>
-        public double? MinValue { get; set; }
+        public double? MinValue { get => _explicitNullValueMinValue; set { _explicitNullValueMinValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("min_value"); else _explicitNullProperties?.Remove("min_value"); } }
+        private double? _explicitNullValueMinValue = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportNumber"/> and sets the default values.
         /// </summary>
@@ -35,7 +48,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportNumber CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportNumber();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportNumber(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,6 +73,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteBoolValue("is_decimal_allowed", IsDecimalAllowed);
             writer.WriteDoubleValue("max_value", MaxValue);
             writer.WriteDoubleValue("min_value", MinValue);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

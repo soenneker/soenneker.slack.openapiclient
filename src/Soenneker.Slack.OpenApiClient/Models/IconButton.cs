@@ -11,66 +11,96 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class IconButton : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("accessibility_label") is { } nullNodeAccessibilityLabel && nullNodeAccessibilityLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessibilityLabel = null;
+            if (parseNode.GetChildNode("action_id") is { } nullNodeActionId && nullNodeActionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionId = null;
+            if (parseNode.GetChildNode("confirm") is { } nullNodeConfirm && nullNodeConfirm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Confirm = null;
+            if (parseNode.GetChildNode("icon") is { } nullNodeIcon && nullNodeIcon.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Icon = null;
+            if (parseNode.GetChildNode("text") is { } nullNodeText && nullNodeText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Text = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
+            if (parseNode.GetChildNode("visible_to_user_ids") is { } nullNodeVisibleToUserIds && nullNodeVisibleToUserIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisibleToUserIds = null;
+        }
+
         /// <summary>A label for longer descriptive text about a button element. This label will be read out by screen readers instead of the button `text` object. Maximum length for this field is 75 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccessibilityLabel { get; set; }
+        public string? AccessibilityLabel { get => _explicitNullValueAccessibilityLabel; set { _explicitNullValueAccessibilityLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessibility_label"); else _explicitNullProperties?.Remove("accessibility_label"); } }
+        private string? _explicitNullValueAccessibilityLabel = default!;
 #nullable restore
 #else
-        public string AccessibilityLabel { get; set; }
+        public string AccessibilityLabel { get => _explicitNullValueAccessibilityLabel; set { _explicitNullValueAccessibilityLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessibility_label"); else _explicitNullProperties?.Remove("accessibility_label"); } }
+        private string _explicitNullValueAccessibilityLabel = default!;
 #endif
         /// <summary>: An identifier for this action. You can use this when you receive an interaction payload to[identify the source of the action](https://docs.slack.dev/interactivity/handling-user-interaction#payloads). Should be uniqueamong all other `action_id`s in the containing block. Maximum length for this field is 255 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActionId { get; set; }
+        public string? ActionId { get => _explicitNullValueActionId; set { _explicitNullValueActionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action_id"); else _explicitNullProperties?.Remove("action_id"); } }
+        private string? _explicitNullValueActionId = default!;
 #nullable restore
 #else
-        public string ActionId { get; set; }
+        public string ActionId { get => _explicitNullValueActionId; set { _explicitNullValueActionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action_id"); else _explicitNullProperties?.Remove("action_id"); } }
+        private string _explicitNullValueActionId = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A [Confirm](Confirm) object that defines an optional confirmation dialog after the element is interactedwith.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog? Confirm { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog? Confirm { get => _explicitNullValueConfirm; set { _explicitNullValueConfirm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirm"); else _explicitNullProperties?.Remove("confirm"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog? _explicitNullValueConfirm = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog Confirm { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog Confirm { get => _explicitNullValueConfirm; set { _explicitNullValueConfirm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirm"); else _explicitNullProperties?.Remove("confirm"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ConfirmationDialog _explicitNullValueConfirm = default!;
 #endif
         /// <summary>The icon to show.e.g. `trash`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Icon { get; set; }
+        public string? Icon { get => _explicitNullValueIcon; set { _explicitNullValueIcon = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icon"); else _explicitNullProperties?.Remove("icon"); } }
+        private string? _explicitNullValueIcon = default!;
 #nullable restore
 #else
-        public string Icon { get; set; }
+        public string Icon { get => _explicitNullValueIcon; set { _explicitNullValueIcon = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icon"); else _explicitNullProperties?.Remove("icon"); } }
+        private string _explicitNullValueIcon = default!;
 #endif
         /// <summary>Defines an object containing some text.[Text object reference](https://docs.slack.dev/reference/block-kit/composition-objects/text-object).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Text { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Text { get => _explicitNullValueText; set { _explicitNullValueText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text"); else _explicitNullProperties?.Remove("text"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? _explicitNullValueText = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement Text { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement Text { get => _explicitNullValueText; set { _explicitNullValueText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text"); else _explicitNullProperties?.Remove("text"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement _explicitNullValueText = default!;
 #endif
         /// <summary>The type of element. In this case `type` is always `icon_button`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.IconButtonType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.IconButtonType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.IconButtonType? _explicitNullValueType = default!;
         /// <summary>The button value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Value { get; set; }
+        public string? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        private string? _explicitNullValueValue = default!;
 #nullable restore
 #else
-        public string Value { get; set; }
+        public string Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        private string _explicitNullValueValue = default!;
 #endif
         /// <summary>User IDs for which the icon appears.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? VisibleToUserIds { get; set; }
+        public List<string>? VisibleToUserIds { get => _explicitNullValueVisibleToUserIds; set { _explicitNullValueVisibleToUserIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visible_to_user_ids"); else _explicitNullProperties?.Remove("visible_to_user_ids"); } }
+        private List<string>? _explicitNullValueVisibleToUserIds = default!;
 #nullable restore
 #else
-        public List<string> VisibleToUserIds { get; set; }
+        public List<string> VisibleToUserIds { get => _explicitNullValueVisibleToUserIds; set { _explicitNullValueVisibleToUserIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visible_to_user_ids"); else _explicitNullProperties?.Remove("visible_to_user_ids"); } }
+        private List<string> _explicitNullValueVisibleToUserIds = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.IconButton"/> and sets the default values.
@@ -87,7 +117,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.IconButton CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.IconButton();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.IconButton(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -122,6 +152,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.IconButtonType>("type", Type);
             writer.WriteStringValue("value", Value);
             writer.WriteCollectionOfPrimitiveValues<string>("visible_to_user_ids", VisibleToUserIds);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

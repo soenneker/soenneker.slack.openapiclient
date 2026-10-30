@@ -11,31 +11,50 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class Recording : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("can_record_summary") is { } nullNodeCanRecordSummary && nullNodeCanRecordSummary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanRecordSummary = null;
+            if (parseNode.GetChildNode("notetaking") is { } nullNodeNotetaking && nullNodeNotetaking.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Notetaking = null;
+            if (parseNode.GetChildNode("summary") is { } nullNodeSummary && nullNodeSummary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Summary = null;
+            if (parseNode.GetChildNode("summary_status") is { } nullNodeSummaryStatus && nullNodeSummaryStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SummaryStatus = null;
+            if (parseNode.GetChildNode("transcript") is { } nullNodeTranscript && nullNodeTranscript.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transcript = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The can_record_summary property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CanRecordSummary { get; set; }
+        public string? CanRecordSummary { get => _explicitNullValueCanRecordSummary; set { _explicitNullValueCanRecordSummary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_record_summary"); else _explicitNullProperties?.Remove("can_record_summary"); } }
+        private string? _explicitNullValueCanRecordSummary = default!;
 #nullable restore
 #else
-        public string CanRecordSummary { get; set; }
+        public string CanRecordSummary { get => _explicitNullValueCanRecordSummary; set { _explicitNullValueCanRecordSummary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_record_summary"); else _explicitNullProperties?.Remove("can_record_summary"); } }
+        private string _explicitNullValueCanRecordSummary = default!;
 #endif
         /// <summary>The notetaking property</summary>
-        public bool? Notetaking { get; set; }
+        public bool? Notetaking { get => _explicitNullValueNotetaking; set { _explicitNullValueNotetaking = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notetaking"); else _explicitNullProperties?.Remove("notetaking"); } }
+        private bool? _explicitNullValueNotetaking = default!;
         /// <summary>The summary property</summary>
-        public bool? Summary { get; set; }
+        public bool? Summary { get => _explicitNullValueSummary; set { _explicitNullValueSummary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summary"); else _explicitNullProperties?.Remove("summary"); } }
+        private bool? _explicitNullValueSummary = default!;
         /// <summary>The summary_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SummaryStatus { get; set; }
+        public string? SummaryStatus { get => _explicitNullValueSummaryStatus; set { _explicitNullValueSummaryStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summary_status"); else _explicitNullProperties?.Remove("summary_status"); } }
+        private string? _explicitNullValueSummaryStatus = default!;
 #nullable restore
 #else
-        public string SummaryStatus { get; set; }
+        public string SummaryStatus { get => _explicitNullValueSummaryStatus; set { _explicitNullValueSummaryStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summary_status"); else _explicitNullProperties?.Remove("summary_status"); } }
+        private string _explicitNullValueSummaryStatus = default!;
 #endif
         /// <summary>The transcript property</summary>
-        public bool? Transcript { get; set; }
+        public bool? Transcript { get => _explicitNullValueTranscript; set { _explicitNullValueTranscript = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcript"); else _explicitNullProperties?.Remove("transcript"); } }
+        private bool? _explicitNullValueTranscript = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Recording"/> and sets the default values.
         /// </summary>
@@ -51,7 +70,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.Recording CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.Recording();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.Recording(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -80,6 +99,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteBoolValue("summary", Summary);
             writer.WriteStringValue("summary_status", SummaryStatus);
             writer.WriteBoolValue("transcript", Transcript);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -51,7 +51,7 @@ namespace Soenneker.Slack.OpenApiClient.Api.CanvasesAccessDelete
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Slack.OpenApiClient.Models.CanvasesAccessDeleteResponse>(requestInfo, global::Soenneker.Slack.OpenApiClient.Models.CanvasesAccessDeleteResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Slack.OpenApiClient.Models.CanvasesAccessDeleteResponse>(requestInfo, global::Soenneker.Slack.OpenApiClient.Models.CanvasesAccessDeleteResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Remove access to a canvas for specified entities.

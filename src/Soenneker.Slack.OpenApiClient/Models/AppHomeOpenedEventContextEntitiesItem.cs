@@ -12,7 +12,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AppHomeOpenedEventContextEntitiesItem : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.AppHomeOpenedEventContextEntitiesItemSlackTypesCanvasId"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,21 +62,32 @@ namespace Soenneker.Slack.OpenApiClient.Models
             var result = new global::Soenneker.Slack.OpenApiClient.Models.AppHomeOpenedEventContextEntitiesItem();
             if("slack#/types/canvas_id".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.AppHomeOpenedEventContextEntitiesItemSlackTypesCanvasId = new global::Soenneker.Slack.OpenApiClient.Models.AppHomeOpenedEventContextEntitiesItemSlackTypesCanvasId();
+                
             }
             else if("slack#/types/channel_id".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.AppHomeOpenedEventContextEntitiesItemSlackTypesChannelId = new global::Soenneker.Slack.OpenApiClient.Models.AppHomeOpenedEventContextEntitiesItemSlackTypesChannelId();
+                
             }
             else if("slack#/types/list_id".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.AppHomeOpenedEventContextEntitiesItemSlackTypesListId = new global::Soenneker.Slack.OpenApiClient.Models.AppHomeOpenedEventContextEntitiesItemSlackTypesListId();
+                
             }
             else if("slack#/types/message_context".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.AppHomeOpenedEventContextEntitiesItemSlackTypesMessageContext = new global::Soenneker.Slack.OpenApiClient.Models.AppHomeOpenedEventContextEntitiesItemSlackTypesMessageContext();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("slack#/types/channel_id".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("value") != null))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("slack#/types/canvas_id".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("value") != null))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("slack#/types/list_id".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("value") != null))();
+            bool matchesUnionBranch3 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("slack#/types/message_context".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("value") != null))();
+            if (result.AppHomeOpenedEventContextEntitiesItemSlackTypesCanvasId == null && result.AppHomeOpenedEventContextEntitiesItemSlackTypesChannelId == null && result.AppHomeOpenedEventContextEntitiesItemSlackTypesListId == null && result.AppHomeOpenedEventContextEntitiesItemSlackTypesMessageContext == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3) result.AppHomeOpenedEventContextEntitiesItemSlackTypesChannelId = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.AppHomeOpenedEventContextEntitiesItemSlackTypesChannelId(), parseNode);
+            if (result.AppHomeOpenedEventContextEntitiesItemSlackTypesCanvasId == null && result.AppHomeOpenedEventContextEntitiesItemSlackTypesChannelId == null && result.AppHomeOpenedEventContextEntitiesItemSlackTypesListId == null && result.AppHomeOpenedEventContextEntitiesItemSlackTypesMessageContext == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2 && !matchesUnionBranch3) result.AppHomeOpenedEventContextEntitiesItemSlackTypesCanvasId = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.AppHomeOpenedEventContextEntitiesItemSlackTypesCanvasId(), parseNode);
+            if (result.AppHomeOpenedEventContextEntitiesItemSlackTypesCanvasId == null && result.AppHomeOpenedEventContextEntitiesItemSlackTypesChannelId == null && result.AppHomeOpenedEventContextEntitiesItemSlackTypesListId == null && result.AppHomeOpenedEventContextEntitiesItemSlackTypesMessageContext == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch3) result.AppHomeOpenedEventContextEntitiesItemSlackTypesListId = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.AppHomeOpenedEventContextEntitiesItemSlackTypesListId(), parseNode);
+            if (result.AppHomeOpenedEventContextEntitiesItemSlackTypesCanvasId == null && result.AppHomeOpenedEventContextEntitiesItemSlackTypesChannelId == null && result.AppHomeOpenedEventContextEntitiesItemSlackTypesListId == null && result.AppHomeOpenedEventContextEntitiesItemSlackTypesMessageContext == null && matchesUnionBranch3 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2) result.AppHomeOpenedEventContextEntitiesItemSlackTypesMessageContext = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.AppHomeOpenedEventContextEntitiesItemSlackTypesMessageContext(), parseNode);
+            if (result.AppHomeOpenedEventContextEntitiesItemSlackTypesCanvasId == null && result.AppHomeOpenedEventContextEntitiesItemSlackTypesChannelId == null && result.AppHomeOpenedEventContextEntitiesItemSlackTypesListId == null && result.AppHomeOpenedEventContextEntitiesItemSlackTypesMessageContext == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -103,21 +119,32 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (AppHomeOpenedEventContextEntitiesItemSlackTypesCanvasId == null && AppHomeOpenedEventContextEntitiesItemSlackTypesChannelId == null && AppHomeOpenedEventContextEntitiesItemSlackTypesListId == null && AppHomeOpenedEventContextEntitiesItemSlackTypesMessageContext == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (AppHomeOpenedEventContextEntitiesItemSlackTypesCanvasId != null && AppHomeOpenedEventContextEntitiesItemSlackTypesChannelId == null && AppHomeOpenedEventContextEntitiesItemSlackTypesListId == null && AppHomeOpenedEventContextEntitiesItemSlackTypesMessageContext == null) { if (AppHomeOpenedEventContextEntitiesItemSlackTypesCanvasId is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AppHomeOpenedEventContextEntitiesItemSlackTypesCanvasId); return; }
+            if (AppHomeOpenedEventContextEntitiesItemSlackTypesChannelId != null && AppHomeOpenedEventContextEntitiesItemSlackTypesCanvasId == null && AppHomeOpenedEventContextEntitiesItemSlackTypesListId == null && AppHomeOpenedEventContextEntitiesItemSlackTypesMessageContext == null) { if (AppHomeOpenedEventContextEntitiesItemSlackTypesChannelId is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AppHomeOpenedEventContextEntitiesItemSlackTypesChannelId); return; }
+            if (AppHomeOpenedEventContextEntitiesItemSlackTypesListId != null && AppHomeOpenedEventContextEntitiesItemSlackTypesCanvasId == null && AppHomeOpenedEventContextEntitiesItemSlackTypesChannelId == null && AppHomeOpenedEventContextEntitiesItemSlackTypesMessageContext == null) { if (AppHomeOpenedEventContextEntitiesItemSlackTypesListId is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AppHomeOpenedEventContextEntitiesItemSlackTypesListId); return; }
+            if (AppHomeOpenedEventContextEntitiesItemSlackTypesMessageContext != null && AppHomeOpenedEventContextEntitiesItemSlackTypesCanvasId == null && AppHomeOpenedEventContextEntitiesItemSlackTypesChannelId == null && AppHomeOpenedEventContextEntitiesItemSlackTypesListId == null) { if (AppHomeOpenedEventContextEntitiesItemSlackTypesMessageContext is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AppHomeOpenedEventContextEntitiesItemSlackTypesMessageContext); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(AppHomeOpenedEventContextEntitiesItemSlackTypesCanvasId != null)
             {
+                if (AppHomeOpenedEventContextEntitiesItemSlackTypesCanvasId is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AppHomeOpenedEventContextEntitiesItemSlackTypesCanvasId>(null, AppHomeOpenedEventContextEntitiesItemSlackTypesCanvasId);
             }
             else if(AppHomeOpenedEventContextEntitiesItemSlackTypesChannelId != null)
             {
+                if (AppHomeOpenedEventContextEntitiesItemSlackTypesChannelId is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AppHomeOpenedEventContextEntitiesItemSlackTypesChannelId>(null, AppHomeOpenedEventContextEntitiesItemSlackTypesChannelId);
             }
             else if(AppHomeOpenedEventContextEntitiesItemSlackTypesListId != null)
             {
+                if (AppHomeOpenedEventContextEntitiesItemSlackTypesListId is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AppHomeOpenedEventContextEntitiesItemSlackTypesListId>(null, AppHomeOpenedEventContextEntitiesItemSlackTypesListId);
             }
             else if(AppHomeOpenedEventContextEntitiesItemSlackTypesMessageContext != null)
             {
+                if (AppHomeOpenedEventContextEntitiesItemSlackTypesMessageContext is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AppHomeOpenedEventContextEntitiesItemSlackTypesMessageContext>(null, AppHomeOpenedEventContextEntitiesItemSlackTypesMessageContext);
             }
         }

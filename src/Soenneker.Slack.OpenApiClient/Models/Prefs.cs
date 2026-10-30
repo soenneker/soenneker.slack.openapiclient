@@ -11,56 +11,81 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class Prefs : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("can_huddle") is { } nullNodeCanHuddle && nullNodeCanHuddle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanHuddle = null;
+            if (parseNode.GetChildNode("can_thread") is { } nullNodeCanThread && nullNodeCanThread.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanThread = null;
+            if (parseNode.GetChildNode("enable_at_channel") is { } nullNodeEnableAtChannel && nullNodeEnableAtChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableAtChannel = null;
+            if (parseNode.GetChildNode("enable_at_here") is { } nullNodeEnableAtHere && nullNodeEnableAtHere.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableAtHere = null;
+            if (parseNode.GetChildNode("membership_limit") is { } nullNodeMembershipLimit && nullNodeMembershipLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MembershipLimit = null;
+            if (parseNode.GetChildNode("who_can_post") is { } nullNodeWhoCanPost && nullNodeWhoCanPost.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhoCanPost = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The can_huddle property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.CanHuddle? CanHuddle { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.CanHuddle? CanHuddle { get => _explicitNullValueCanHuddle; set { _explicitNullValueCanHuddle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_huddle"); else _explicitNullProperties?.Remove("can_huddle"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.CanHuddle? _explicitNullValueCanHuddle = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.CanHuddle CanHuddle { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.CanHuddle CanHuddle { get => _explicitNullValueCanHuddle; set { _explicitNullValueCanHuddle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_huddle"); else _explicitNullProperties?.Remove("can_huddle"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.CanHuddle _explicitNullValueCanHuddle = default!;
 #endif
         /// <summary>The can_thread property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.CanThread? CanThread { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.CanThread? CanThread { get => _explicitNullValueCanThread; set { _explicitNullValueCanThread = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_thread"); else _explicitNullProperties?.Remove("can_thread"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.CanThread? _explicitNullValueCanThread = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.CanThread CanThread { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.CanThread CanThread { get => _explicitNullValueCanThread; set { _explicitNullValueCanThread = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_thread"); else _explicitNullProperties?.Remove("can_thread"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.CanThread _explicitNullValueCanThread = default!;
 #endif
         /// <summary>The enable_at_channel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.CanHuddle? EnableAtChannel { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.CanHuddle? EnableAtChannel { get => _explicitNullValueEnableAtChannel; set { _explicitNullValueEnableAtChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enable_at_channel"); else _explicitNullProperties?.Remove("enable_at_channel"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.CanHuddle? _explicitNullValueEnableAtChannel = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.CanHuddle EnableAtChannel { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.CanHuddle EnableAtChannel { get => _explicitNullValueEnableAtChannel; set { _explicitNullValueEnableAtChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enable_at_channel"); else _explicitNullProperties?.Remove("enable_at_channel"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.CanHuddle _explicitNullValueEnableAtChannel = default!;
 #endif
         /// <summary>The enable_at_here property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.CanHuddle? EnableAtHere { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.CanHuddle? EnableAtHere { get => _explicitNullValueEnableAtHere; set { _explicitNullValueEnableAtHere = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enable_at_here"); else _explicitNullProperties?.Remove("enable_at_here"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.CanHuddle? _explicitNullValueEnableAtHere = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.CanHuddle EnableAtHere { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.CanHuddle EnableAtHere { get => _explicitNullValueEnableAtHere; set { _explicitNullValueEnableAtHere = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enable_at_here"); else _explicitNullProperties?.Remove("enable_at_here"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.CanHuddle _explicitNullValueEnableAtHere = default!;
 #endif
         /// <summary>The membership_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MembershipLimit? MembershipLimit { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.MembershipLimit? MembershipLimit { get => _explicitNullValueMembershipLimit; set { _explicitNullValueMembershipLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("membership_limit"); else _explicitNullProperties?.Remove("membership_limit"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.MembershipLimit? _explicitNullValueMembershipLimit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.MembershipLimit MembershipLimit { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.MembershipLimit MembershipLimit { get => _explicitNullValueMembershipLimit; set { _explicitNullValueMembershipLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("membership_limit"); else _explicitNullProperties?.Remove("membership_limit"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.MembershipLimit _explicitNullValueMembershipLimit = default!;
 #endif
         /// <summary>The who_can_post property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.CanThread? WhoCanPost { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.CanThread? WhoCanPost { get => _explicitNullValueWhoCanPost; set { _explicitNullValueWhoCanPost = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("who_can_post"); else _explicitNullProperties?.Remove("who_can_post"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.CanThread? _explicitNullValueWhoCanPost = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.CanThread WhoCanPost { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.CanThread WhoCanPost { get => _explicitNullValueWhoCanPost; set { _explicitNullValueWhoCanPost = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("who_can_post"); else _explicitNullProperties?.Remove("who_can_post"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.CanThread _explicitNullValueWhoCanPost = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Prefs"/> and sets the default values.
@@ -77,7 +102,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.Prefs CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.Prefs();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.Prefs(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -108,6 +133,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.CanHuddle>("enable_at_here", EnableAtHere);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MembershipLimit>("membership_limit", MembershipLimit);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.CanThread>("who_can_post", WhoCanPost);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,32 +12,48 @@ namespace Soenneker.Slack.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ChatUnfurlMetadataMetadata : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("entities") is { } nullNodeEntities && nullNodeEntities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Entities = null;
+            if (parseNode.GetChildNode("event_payload") is { } nullNodeEventPayload && nullNodeEventPayload.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventPayload = null;
+            if (parseNode.GetChildNode("event_type") is { } nullNodeEventType && nullNodeEventType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The entities property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.EntityMetadata>? Entities { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.EntityMetadata>? Entities { get => _explicitNullValueEntities; set { _explicitNullValueEntities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entities"); else _explicitNullProperties?.Remove("entities"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.EntityMetadata>? _explicitNullValueEntities = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.EntityMetadata> Entities { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.EntityMetadata> Entities { get => _explicitNullValueEntities; set { _explicitNullValueEntities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entities"); else _explicitNullProperties?.Remove("entities"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.EntityMetadata> _explicitNullValueEntities = default!;
 #endif
         /// <summary>A free-form object containing whatever data your application wishes to attach to messages.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlMetadataMetadataEventPayload? EventPayload { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlMetadataMetadataEventPayload? EventPayload { get => _explicitNullValueEventPayload; set { _explicitNullValueEventPayload = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_payload"); else _explicitNullProperties?.Remove("event_payload"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlMetadataMetadataEventPayload? _explicitNullValueEventPayload = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlMetadataMetadataEventPayload EventPayload { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlMetadataMetadataEventPayload EventPayload { get => _explicitNullValueEventPayload; set { _explicitNullValueEventPayload = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_payload"); else _explicitNullProperties?.Remove("event_payload"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlMetadataMetadataEventPayload _explicitNullValueEventPayload = default!;
 #endif
         /// <summary>A human readable alphanumeric string representing your application&apos;s metadata event.The value of this field may appear in the UI to developers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventType { get; set; }
+        public string? EventType { get => _explicitNullValueEventType; set { _explicitNullValueEventType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_type"); else _explicitNullProperties?.Remove("event_type"); } }
+        private string? _explicitNullValueEventType = default!;
 #nullable restore
 #else
-        public string EventType { get; set; }
+        public string EventType { get => _explicitNullValueEventType; set { _explicitNullValueEventType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_type"); else _explicitNullProperties?.Remove("event_type"); } }
+        private string _explicitNullValueEventType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlMetadataMetadata"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlMetadataMetadata CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlMetadataMetadata();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlMetadataMetadata(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.EntityMetadata>("entities", Entities);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlMetadataMetadataEventPayload>("event_payload", EventPayload);
             writer.WriteStringValue("event_type", EventType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

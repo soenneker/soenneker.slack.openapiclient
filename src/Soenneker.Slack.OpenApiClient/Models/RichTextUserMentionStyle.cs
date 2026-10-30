@@ -12,19 +12,36 @@ namespace Soenneker.Slack.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RichTextUserMentionStyle : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("bold") is { } nullNodeBold && nullNodeBold.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bold = null;
+            if (parseNode.GetChildNode("code") is { } nullNodeCode && nullNodeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Code = null;
+            if (parseNode.GetChildNode("italic") is { } nullNodeItalic && nullNodeItalic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Italic = null;
+            if (parseNode.GetChildNode("strike") is { } nullNodeStrike && nullNodeStrike.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Strike = null;
+            if (parseNode.GetChildNode("underline") is { } nullNodeUnderline && nullNodeUnderline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Underline = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>When `true`, boldens the text in this element. Defaults to `false`.</summary>
-        public bool? Bold { get; set; }
+        public bool? Bold { get => _explicitNullValueBold; set { _explicitNullValueBold = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bold"); else _explicitNullProperties?.Remove("bold"); } }
+        private bool? _explicitNullValueBold = default!;
         /// <summary>When `true`, the text is preformatted in an inline code style. Defaults to `false.</summary>
-        public bool? Code { get; set; }
+        public bool? Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code"); else _explicitNullProperties?.Remove("code"); } }
+        private bool? _explicitNullValueCode = default!;
         /// <summary>When `true`, italicizes the text in this element. Defaults to `false`.</summary>
-        public bool? Italic { get; set; }
+        public bool? Italic { get => _explicitNullValueItalic; set { _explicitNullValueItalic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("italic"); else _explicitNullProperties?.Remove("italic"); } }
+        private bool? _explicitNullValueItalic = default!;
         /// <summary>When `true`, strikes through the text in this element. Defaults to `false`.</summary>
-        public bool? Strike { get; set; }
+        public bool? Strike { get => _explicitNullValueStrike; set { _explicitNullValueStrike = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("strike"); else _explicitNullProperties?.Remove("strike"); } }
+        private bool? _explicitNullValueStrike = default!;
         /// <summary>When `true`, underlines the text in this element. Defaults to `false`.</summary>
-        public bool? Underline { get; set; }
+        public bool? Underline { get => _explicitNullValueUnderline; set { _explicitNullValueUnderline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("underline"); else _explicitNullProperties?.Remove("underline"); } }
+        private bool? _explicitNullValueUnderline = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyle"/> and sets the default values.
         /// </summary>
@@ -40,7 +57,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyle CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyle();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMentionStyle(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +86,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteBoolValue("italic", Italic);
             writer.WriteBoolValue("strike", Strike);
             writer.WriteBoolValue("underline", Underline);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,35 +11,53 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class Files2 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("matches") is { } nullNodeMatches && nullNodeMatches.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Matches = null;
+            if (parseNode.GetChildNode("pagination") is { } nullNodePagination && nullNodePagination.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pagination = null;
+            if (parseNode.GetChildNode("paging") is { } nullNodePaging && nullNodePaging.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Paging = null;
+            if (parseNode.GetChildNode("total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The matches property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Match>? Matches { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Match>? Matches { get => _explicitNullValueMatches; set { _explicitNullValueMatches = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matches"); else _explicitNullProperties?.Remove("matches"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.Match>? _explicitNullValueMatches = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Match> Matches { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Match> Matches { get => _explicitNullValueMatches; set { _explicitNullValueMatches = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matches"); else _explicitNullProperties?.Remove("matches"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.Match> _explicitNullValueMatches = default!;
 #endif
         /// <summary>The pagination property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Pagination? Pagination { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Pagination? Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Pagination? _explicitNullValuePagination = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Pagination Pagination { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Pagination Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Pagination _explicitNullValuePagination = default!;
 #endif
         /// <summary>The paging property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Paging? Paging { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Paging? Paging { get => _explicitNullValuePaging; set { _explicitNullValuePaging = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paging"); else _explicitNullProperties?.Remove("paging"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Paging? _explicitNullValuePaging = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Paging Paging { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Paging Paging { get => _explicitNullValuePaging; set { _explicitNullValuePaging = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paging"); else _explicitNullProperties?.Remove("paging"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Paging _explicitNullValuePaging = default!;
 #endif
         /// <summary>The total property</summary>
-        public double? Total { get; set; }
+        public double? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
+        private double? _explicitNullValueTotal = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Files2"/> and sets the default values.
         /// </summary>
@@ -55,7 +73,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.Files2 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.Files2();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.Files2(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +100,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Pagination>("pagination", Pagination);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Paging>("paging", Paging);
             writer.WriteDoubleValue("total", Total);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

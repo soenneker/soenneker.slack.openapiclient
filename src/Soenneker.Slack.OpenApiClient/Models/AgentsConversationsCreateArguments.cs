@@ -11,58 +11,85 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AgentsConversationsCreateArguments : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("is_private") is { } nullNodeIsPrivate && nullNodeIsPrivate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPrivate = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("origin_channel_id") is { } nullNodeOriginChannelId && nullNodeOriginChannelId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginChannelId = null;
+            if (parseNode.GetChildNode("origin_message_ts") is { } nullNodeOriginMessageTs && nullNodeOriginMessageTs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginMessageTs = null;
+            if (parseNode.GetChildNode("session_id") is { } nullNodeSessionId && nullNodeSessionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionId = null;
+            if (parseNode.GetChildNode("team_id") is { } nullNodeTeamId && nullNodeTeamId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamId = null;
+            if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Create a private channel instead of a public one.</summary>
-        public bool? IsPrivate { get; set; }
+        public bool? IsPrivate { get => _explicitNullValueIsPrivate; set { _explicitNullValueIsPrivate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_private"); else _explicitNullProperties?.Remove("is_private"); } }
+        private bool? _explicitNullValueIsPrivate = default!;
         /// <summary>A friendly display name for the code channel. Optional when `origin_channel_id` and `origin_message_ts`are provided — in that case the channel is named from the origin message and re-titled automatically. Required when no origin link is given.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The channel ID where the agent session was initiated from. Must be provided together with`origin_message_ts`. The channel must be accessible to the calling user and must not be externally shared (Slack Connect). When `team_id` is omitted with an org token, the channel is created in the same workspace as this origin channel.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginChannelId { get; set; }
+        public string? OriginChannelId { get => _explicitNullValueOriginChannelId; set { _explicitNullValueOriginChannelId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("origin_channel_id"); else _explicitNullProperties?.Remove("origin_channel_id"); } }
+        private string? _explicitNullValueOriginChannelId = default!;
 #nullable restore
 #else
-        public string OriginChannelId { get; set; }
+        public string OriginChannelId { get => _explicitNullValueOriginChannelId; set { _explicitNullValueOriginChannelId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("origin_channel_id"); else _explicitNullProperties?.Remove("origin_channel_id"); } }
+        private string _explicitNullValueOriginChannelId = default!;
 #endif
         /// <summary>The message timestamp in the origin channel that started the agent session. Must be provided togetherwith `origin_channel_id`. The author of this message is automatically invited to the newly created code channel.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginMessageTs { get; set; }
+        public string? OriginMessageTs { get => _explicitNullValueOriginMessageTs; set { _explicitNullValueOriginMessageTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("origin_message_ts"); else _explicitNullProperties?.Remove("origin_message_ts"); } }
+        private string? _explicitNullValueOriginMessageTs = default!;
 #nullable restore
 #else
-        public string OriginMessageTs { get; set; }
+        public string OriginMessageTs { get => _explicitNullValueOriginMessageTs; set { _explicitNullValueOriginMessageTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("origin_message_ts"); else _explicitNullProperties?.Remove("origin_message_ts"); } }
+        private string _explicitNullValueOriginMessageTs = default!;
 #endif
         /// <summary>An opaque identifier for the agent session. When provided, the call is idempotent: if a channel alreadyexists for this `session_id`, it is returned instead of creating a new one.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SessionId { get; set; }
+        public string? SessionId { get => _explicitNullValueSessionId; set { _explicitNullValueSessionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_id"); else _explicitNullProperties?.Remove("session_id"); } }
+        private string? _explicitNullValueSessionId = default!;
 #nullable restore
 #else
-        public string SessionId { get; set; }
+        public string SessionId { get => _explicitNullValueSessionId; set { _explicitNullValueSessionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_id"); else _explicitNullProperties?.Remove("session_id"); } }
+        private string _explicitNullValueSessionId = default!;
 #endif
         /// <summary>Encoded team ID to create the channel in. Required for org tokens when `origin_channel_id` is notprovided. When omitted, the workspace is derived from the origin channel.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TeamId { get; set; }
+        public string? TeamId { get => _explicitNullValueTeamId; set { _explicitNullValueTeamId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_id"); else _explicitNullProperties?.Remove("team_id"); } }
+        private string? _explicitNullValueTeamId = default!;
 #nullable restore
 #else
-        public string TeamId { get; set; }
+        public string TeamId { get => _explicitNullValueTeamId; set { _explicitNullValueTeamId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_id"); else _explicitNullProperties?.Remove("team_id"); } }
+        private string _explicitNullValueTeamId = default!;
 #endif
         /// <summary>Overridable authentication token bearing required scopes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Token { get; set; }
+        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private string? _explicitNullValueToken = default!;
 #nullable restore
 #else
-        public string Token { get; set; }
+        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private string _explicitNullValueToken = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsCreateArguments"/> and sets the default values.
@@ -79,7 +106,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsCreateArguments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsCreateArguments();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.AgentsConversationsCreateArguments(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -112,6 +139,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("session_id", SessionId);
             writer.WriteStringValue("team_id", TeamId);
             writer.WriteStringValue("token", Token);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

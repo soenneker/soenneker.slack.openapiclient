@@ -12,7 +12,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ChatScheduleMessageArguments : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -86,15 +91,18 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArguments();
-            result.ChatScheduleMessageArgumentsMember1 = new global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember1();
-            result.ChatScheduleMessageArgumentsMember2 = new global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember2();
-            result.ChatScheduleMessageArgumentsMember3 = new global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember3();
-            result.ChatScheduleMessageArgumentsMember4 = new global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember4();
-            result.ChatScheduleMessageArgumentsMember5 = new global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember5();
-            result.ChatScheduleMessageArgumentsMember6 = new global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember6();
-            result.ChatScheduleMessageArgumentsMember7 = new global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember7();
-            result.ChatScheduleMessageArgumentsMember8 = new global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember8();
-            return result;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            if (result.ChatScheduleMessageArgumentsMember1 == null && result.ChatScheduleMessageArgumentsMember2 == null && result.ChatScheduleMessageArgumentsMember3 == null && result.ChatScheduleMessageArgumentsMember4 == null && result.ChatScheduleMessageArgumentsMember5 == null && result.ChatScheduleMessageArgumentsMember6 == null && result.ChatScheduleMessageArgumentsMember7 == null && result.ChatScheduleMessageArgumentsMember8 == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -114,6 +122,17 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (ChatScheduleMessageArgumentsMember1 == null && ChatScheduleMessageArgumentsMember2 == null && ChatScheduleMessageArgumentsMember3 == null && ChatScheduleMessageArgumentsMember4 == null && ChatScheduleMessageArgumentsMember5 == null && ChatScheduleMessageArgumentsMember6 == null && ChatScheduleMessageArgumentsMember7 == null && ChatScheduleMessageArgumentsMember8 == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (ChatScheduleMessageArgumentsMember1 != null && ChatScheduleMessageArgumentsMember2 == null && ChatScheduleMessageArgumentsMember3 == null && ChatScheduleMessageArgumentsMember4 == null && ChatScheduleMessageArgumentsMember5 == null && ChatScheduleMessageArgumentsMember6 == null && ChatScheduleMessageArgumentsMember7 == null && ChatScheduleMessageArgumentsMember8 == null) { if (ChatScheduleMessageArgumentsMember1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ChatScheduleMessageArgumentsMember1); return; }
+            if (ChatScheduleMessageArgumentsMember2 != null && ChatScheduleMessageArgumentsMember1 == null && ChatScheduleMessageArgumentsMember3 == null && ChatScheduleMessageArgumentsMember4 == null && ChatScheduleMessageArgumentsMember5 == null && ChatScheduleMessageArgumentsMember6 == null && ChatScheduleMessageArgumentsMember7 == null && ChatScheduleMessageArgumentsMember8 == null) { if (ChatScheduleMessageArgumentsMember2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ChatScheduleMessageArgumentsMember2); return; }
+            if (ChatScheduleMessageArgumentsMember3 != null && ChatScheduleMessageArgumentsMember1 == null && ChatScheduleMessageArgumentsMember2 == null && ChatScheduleMessageArgumentsMember4 == null && ChatScheduleMessageArgumentsMember5 == null && ChatScheduleMessageArgumentsMember6 == null && ChatScheduleMessageArgumentsMember7 == null && ChatScheduleMessageArgumentsMember8 == null) { if (ChatScheduleMessageArgumentsMember3 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ChatScheduleMessageArgumentsMember3); return; }
+            if (ChatScheduleMessageArgumentsMember4 != null && ChatScheduleMessageArgumentsMember1 == null && ChatScheduleMessageArgumentsMember2 == null && ChatScheduleMessageArgumentsMember3 == null && ChatScheduleMessageArgumentsMember5 == null && ChatScheduleMessageArgumentsMember6 == null && ChatScheduleMessageArgumentsMember7 == null && ChatScheduleMessageArgumentsMember8 == null) { if (ChatScheduleMessageArgumentsMember4 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ChatScheduleMessageArgumentsMember4); return; }
+            if (ChatScheduleMessageArgumentsMember5 != null && ChatScheduleMessageArgumentsMember1 == null && ChatScheduleMessageArgumentsMember2 == null && ChatScheduleMessageArgumentsMember3 == null && ChatScheduleMessageArgumentsMember4 == null && ChatScheduleMessageArgumentsMember6 == null && ChatScheduleMessageArgumentsMember7 == null && ChatScheduleMessageArgumentsMember8 == null) { if (ChatScheduleMessageArgumentsMember5 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ChatScheduleMessageArgumentsMember5); return; }
+            if (ChatScheduleMessageArgumentsMember6 != null && ChatScheduleMessageArgumentsMember1 == null && ChatScheduleMessageArgumentsMember2 == null && ChatScheduleMessageArgumentsMember3 == null && ChatScheduleMessageArgumentsMember4 == null && ChatScheduleMessageArgumentsMember5 == null && ChatScheduleMessageArgumentsMember7 == null && ChatScheduleMessageArgumentsMember8 == null) { if (ChatScheduleMessageArgumentsMember6 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ChatScheduleMessageArgumentsMember6); return; }
+            if (ChatScheduleMessageArgumentsMember7 != null && ChatScheduleMessageArgumentsMember1 == null && ChatScheduleMessageArgumentsMember2 == null && ChatScheduleMessageArgumentsMember3 == null && ChatScheduleMessageArgumentsMember4 == null && ChatScheduleMessageArgumentsMember5 == null && ChatScheduleMessageArgumentsMember6 == null && ChatScheduleMessageArgumentsMember8 == null) { if (ChatScheduleMessageArgumentsMember7 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ChatScheduleMessageArgumentsMember7); return; }
+            if (ChatScheduleMessageArgumentsMember8 != null && ChatScheduleMessageArgumentsMember1 == null && ChatScheduleMessageArgumentsMember2 == null && ChatScheduleMessageArgumentsMember3 == null && ChatScheduleMessageArgumentsMember4 == null && ChatScheduleMessageArgumentsMember5 == null && ChatScheduleMessageArgumentsMember6 == null && ChatScheduleMessageArgumentsMember7 == null) { if (ChatScheduleMessageArgumentsMember8 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ChatScheduleMessageArgumentsMember8); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ChatScheduleMessageArgumentsMember1>(null, ChatScheduleMessageArgumentsMember1, ChatScheduleMessageArgumentsMember2, ChatScheduleMessageArgumentsMember3, ChatScheduleMessageArgumentsMember4, ChatScheduleMessageArgumentsMember5, ChatScheduleMessageArgumentsMember6, ChatScheduleMessageArgumentsMember7, ChatScheduleMessageArgumentsMember8);
         }

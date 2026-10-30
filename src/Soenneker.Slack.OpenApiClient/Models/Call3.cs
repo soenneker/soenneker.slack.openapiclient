@@ -11,74 +11,107 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class Call3 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("channels") is { } nullNodeChannels && nullNodeChannels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Channels = null;
+            if (parseNode.GetChildNode("date_start") is { } nullNodeDateStart && nullNodeDateStart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateStart = null;
+            if (parseNode.GetChildNode("desktop_app_join_url") is { } nullNodeDesktopAppJoinUrl && nullNodeDesktopAppJoinUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DesktopAppJoinUrl = null;
+            if (parseNode.GetChildNode("external_display_id") is { } nullNodeExternalDisplayId && nullNodeExternalDisplayId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalDisplayId = null;
+            if (parseNode.GetChildNode("external_unique_id") is { } nullNodeExternalUniqueId && nullNodeExternalUniqueId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalUniqueId = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("join_url") is { } nullNodeJoinUrl && nullNodeJoinUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JoinUrl = null;
+            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+            if (parseNode.GetChildNode("users") is { } nullNodeUsers && nullNodeUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Users = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The channels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Channels { get; set; }
+        public List<string>? Channels { get => _explicitNullValueChannels; set { _explicitNullValueChannels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channels"); else _explicitNullProperties?.Remove("channels"); } }
+        private List<string>? _explicitNullValueChannels = default!;
 #nullable restore
 #else
-        public List<string> Channels { get; set; }
+        public List<string> Channels { get => _explicitNullValueChannels; set { _explicitNullValueChannels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channels"); else _explicitNullProperties?.Remove("channels"); } }
+        private List<string> _explicitNullValueChannels = default!;
 #endif
         /// <summary>The date_start property</summary>
-        public double? DateStart { get; set; }
+        public double? DateStart { get => _explicitNullValueDateStart; set { _explicitNullValueDateStart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_start"); else _explicitNullProperties?.Remove("date_start"); } }
+        private double? _explicitNullValueDateStart = default!;
         /// <summary>The desktop_app_join_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DesktopAppJoinUrl { get; set; }
+        public string? DesktopAppJoinUrl { get => _explicitNullValueDesktopAppJoinUrl; set { _explicitNullValueDesktopAppJoinUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("desktop_app_join_url"); else _explicitNullProperties?.Remove("desktop_app_join_url"); } }
+        private string? _explicitNullValueDesktopAppJoinUrl = default!;
 #nullable restore
 #else
-        public string DesktopAppJoinUrl { get; set; }
+        public string DesktopAppJoinUrl { get => _explicitNullValueDesktopAppJoinUrl; set { _explicitNullValueDesktopAppJoinUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("desktop_app_join_url"); else _explicitNullProperties?.Remove("desktop_app_join_url"); } }
+        private string _explicitNullValueDesktopAppJoinUrl = default!;
 #endif
         /// <summary>The external_display_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalDisplayId { get; set; }
+        public string? ExternalDisplayId { get => _explicitNullValueExternalDisplayId; set { _explicitNullValueExternalDisplayId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_display_id"); else _explicitNullProperties?.Remove("external_display_id"); } }
+        private string? _explicitNullValueExternalDisplayId = default!;
 #nullable restore
 #else
-        public string ExternalDisplayId { get; set; }
+        public string ExternalDisplayId { get => _explicitNullValueExternalDisplayId; set { _explicitNullValueExternalDisplayId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_display_id"); else _explicitNullProperties?.Remove("external_display_id"); } }
+        private string _explicitNullValueExternalDisplayId = default!;
 #endif
         /// <summary>The external_unique_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalUniqueId { get; set; }
+        public string? ExternalUniqueId { get => _explicitNullValueExternalUniqueId; set { _explicitNullValueExternalUniqueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_unique_id"); else _explicitNullProperties?.Remove("external_unique_id"); } }
+        private string? _explicitNullValueExternalUniqueId = default!;
 #nullable restore
 #else
-        public string ExternalUniqueId { get; set; }
+        public string ExternalUniqueId { get => _explicitNullValueExternalUniqueId; set { _explicitNullValueExternalUniqueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_unique_id"); else _explicitNullProperties?.Remove("external_unique_id"); } }
+        private string _explicitNullValueExternalUniqueId = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The join_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? JoinUrl { get; set; }
+        public string? JoinUrl { get => _explicitNullValueJoinUrl; set { _explicitNullValueJoinUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("join_url"); else _explicitNullProperties?.Remove("join_url"); } }
+        private string? _explicitNullValueJoinUrl = default!;
 #nullable restore
 #else
-        public string JoinUrl { get; set; }
+        public string JoinUrl { get => _explicitNullValueJoinUrl; set { _explicitNullValueJoinUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("join_url"); else _explicitNullProperties?.Remove("join_url"); } }
+        private string _explicitNullValueJoinUrl = default!;
 #endif
         /// <summary>The title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get; set; }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get; set; }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>The users property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.User4>? Users { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.User4>? Users { get => _explicitNullValueUsers; set { _explicitNullValueUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users"); else _explicitNullProperties?.Remove("users"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.User4>? _explicitNullValueUsers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.User4> Users { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.User4> Users { get => _explicitNullValueUsers; set { _explicitNullValueUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users"); else _explicitNullProperties?.Remove("users"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.User4> _explicitNullValueUsers = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Call3"/> and sets the default values.
@@ -95,7 +128,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.Call3 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.Call3();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.Call3(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -132,6 +165,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("join_url", JoinUrl);
             writer.WriteStringValue("title", Title);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.User4>("users", Users);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

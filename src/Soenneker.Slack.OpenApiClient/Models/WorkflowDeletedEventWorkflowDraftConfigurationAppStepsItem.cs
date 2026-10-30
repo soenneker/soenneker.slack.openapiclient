@@ -11,32 +11,48 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class WorkflowDeletedEventWorkflowDraftConfigurationAppStepsItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("app_id") is { } nullNodeAppId && nullNodeAppId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppId = null;
+            if (parseNode.GetChildNode("callback_id") is { } nullNodeCallbackId && nullNodeCallbackId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallbackId = null;
+            if (parseNode.GetChildNode("workflow_step_id") is { } nullNodeWorkflowStepId && nullNodeWorkflowStepId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowStepId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The app_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AppId { get; set; }
+        public string? AppId { get => _explicitNullValueAppId; set { _explicitNullValueAppId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_id"); else _explicitNullProperties?.Remove("app_id"); } }
+        private string? _explicitNullValueAppId = default!;
 #nullable restore
 #else
-        public string AppId { get; set; }
+        public string AppId { get => _explicitNullValueAppId; set { _explicitNullValueAppId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_id"); else _explicitNullProperties?.Remove("app_id"); } }
+        private string _explicitNullValueAppId = default!;
 #endif
         /// <summary>The callback_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallbackId { get; set; }
+        public string? CallbackId { get => _explicitNullValueCallbackId; set { _explicitNullValueCallbackId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callback_id"); else _explicitNullProperties?.Remove("callback_id"); } }
+        private string? _explicitNullValueCallbackId = default!;
 #nullable restore
 #else
-        public string CallbackId { get; set; }
+        public string CallbackId { get => _explicitNullValueCallbackId; set { _explicitNullValueCallbackId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callback_id"); else _explicitNullProperties?.Remove("callback_id"); } }
+        private string _explicitNullValueCallbackId = default!;
 #endif
         /// <summary>The workflow_step_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkflowStepId { get; set; }
+        public string? WorkflowStepId { get => _explicitNullValueWorkflowStepId; set { _explicitNullValueWorkflowStepId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_step_id"); else _explicitNullProperties?.Remove("workflow_step_id"); } }
+        private string? _explicitNullValueWorkflowStepId = default!;
 #nullable restore
 #else
-        public string WorkflowStepId { get; set; }
+        public string WorkflowStepId { get => _explicitNullValueWorkflowStepId; set { _explicitNullValueWorkflowStepId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_step_id"); else _explicitNullProperties?.Remove("workflow_step_id"); } }
+        private string _explicitNullValueWorkflowStepId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.WorkflowDeletedEventWorkflowDraftConfigurationAppStepsItem"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.WorkflowDeletedEventWorkflowDraftConfigurationAppStepsItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.WorkflowDeletedEventWorkflowDraftConfigurationAppStepsItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.WorkflowDeletedEventWorkflowDraftConfigurationAppStepsItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("app_id", AppId);
             writer.WriteStringValue("callback_id", CallbackId);
             writer.WriteStringValue("workflow_step_id", WorkflowStepId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

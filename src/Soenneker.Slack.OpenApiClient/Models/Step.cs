@@ -11,35 +11,53 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class Step : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("function_id") is { } nullNodeFunctionId && nullNodeFunctionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FunctionId = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("inputs") is { } nullNodeInputs && nullNodeInputs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Inputs = null;
+            if (parseNode.GetChildNode("is_pristine") is { } nullNodeIsPristine && nullNodeIsPristine.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPristine = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The function_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FunctionId { get; set; }
+        public string? FunctionId { get => _explicitNullValueFunctionId; set { _explicitNullValueFunctionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("function_id"); else _explicitNullProperties?.Remove("function_id"); } }
+        private string? _explicitNullValueFunctionId = default!;
 #nullable restore
 #else
-        public string FunctionId { get; set; }
+        public string FunctionId { get => _explicitNullValueFunctionId; set { _explicitNullValueFunctionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("function_id"); else _explicitNullProperties?.Remove("function_id"); } }
+        private string _explicitNullValueFunctionId = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The inputs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.StepInputsProperty? Inputs { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.StepInputsProperty? Inputs { get => _explicitNullValueInputs; set { _explicitNullValueInputs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputs"); else _explicitNullProperties?.Remove("inputs"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.StepInputsProperty? _explicitNullValueInputs = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.StepInputsProperty Inputs { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.StepInputsProperty Inputs { get => _explicitNullValueInputs; set { _explicitNullValueInputs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputs"); else _explicitNullProperties?.Remove("inputs"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.StepInputsProperty _explicitNullValueInputs = default!;
 #endif
         /// <summary>The is_pristine property</summary>
-        public bool? IsPristine { get; set; }
+        public bool? IsPristine { get => _explicitNullValueIsPristine; set { _explicitNullValueIsPristine = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_pristine"); else _explicitNullProperties?.Remove("is_pristine"); } }
+        private bool? _explicitNullValueIsPristine = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Step"/> and sets the default values.
         /// </summary>
@@ -55,7 +73,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.Step CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.Step();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.Step(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +100,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.StepInputsProperty>("inputs", Inputs);
             writer.WriteBoolValue("is_pristine", IsPristine);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

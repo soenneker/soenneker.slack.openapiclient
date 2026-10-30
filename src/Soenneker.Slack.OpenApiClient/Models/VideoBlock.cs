@@ -11,90 +11,129 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class VideoBlock : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("alt_text") is { } nullNodeAltText && nullNodeAltText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AltText = null;
+            if (parseNode.GetChildNode("author_name") is { } nullNodeAuthorName && nullNodeAuthorName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthorName = null;
+            if (parseNode.GetChildNode("block_id") is { } nullNodeBlockId && nullNodeBlockId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockId = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("provider_icon_url") is { } nullNodeProviderIconUrl && nullNodeProviderIconUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProviderIconUrl = null;
+            if (parseNode.GetChildNode("provider_name") is { } nullNodeProviderName && nullNodeProviderName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProviderName = null;
+            if (parseNode.GetChildNode("thumbnail_url") is { } nullNodeThumbnailUrl && nullNodeThumbnailUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThumbnailUrl = null;
+            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+            if (parseNode.GetChildNode("title_url") is { } nullNodeTitleUrl && nullNodeTitleUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TitleUrl = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("video_url") is { } nullNodeVideoUrl && nullNodeVideoUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoUrl = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A tooltip for the video. Required for accessibility.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AltText { get; set; }
+        public string? AltText { get => _explicitNullValueAltText; set { _explicitNullValueAltText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alt_text"); else _explicitNullProperties?.Remove("alt_text"); } }
+        private string? _explicitNullValueAltText = default!;
 #nullable restore
 #else
-        public string AltText { get; set; }
+        public string AltText { get => _explicitNullValueAltText; set { _explicitNullValueAltText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alt_text"); else _explicitNullProperties?.Remove("alt_text"); } }
+        private string _explicitNullValueAltText = default!;
 #endif
         /// <summary>Author name to be displayed. Must be less than 50 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuthorName { get; set; }
+        public string? AuthorName { get => _explicitNullValueAuthorName; set { _explicitNullValueAuthorName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author_name"); else _explicitNullProperties?.Remove("author_name"); } }
+        private string? _explicitNullValueAuthorName = default!;
 #nullable restore
 #else
-        public string AuthorName { get; set; }
+        public string AuthorName { get => _explicitNullValueAuthorName; set { _explicitNullValueAuthorName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author_name"); else _explicitNullProperties?.Remove("author_name"); } }
+        private string _explicitNullValueAuthorName = default!;
 #endif
         /// <summary>A string acting as a unique identifier for a block. If not specified, a `block_id` will be generated.You can use this `block_id` when you receive an interaction payload to[identify the source of the action](https://docs.slack.dev/interactivity/handling-user-interaction#payloads).Maximum length for this field is 255 characters. `block_id` should be unique for each message and each iteration ofa message. If a message is updated, use a new `block_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BlockId { get; set; }
+        public string? BlockId { get => _explicitNullValueBlockId; set { _explicitNullValueBlockId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("block_id"); else _explicitNullProperties?.Remove("block_id"); } }
+        private string? _explicitNullValueBlockId = default!;
 #nullable restore
 #else
-        public string BlockId { get; set; }
+        public string BlockId { get => _explicitNullValueBlockId; set { _explicitNullValueBlockId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("block_id"); else _explicitNullProperties?.Remove("block_id"); } }
+        private string _explicitNullValueBlockId = default!;
 #endif
         /// <summary>Description for video using a [PlainTextElement](PlainTextElement) object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Description { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement Description { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement _explicitNullValueDescription = default!;
 #endif
         /// <summary>Icon for the video provider, e.g. YouTube icon.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProviderIconUrl { get; set; }
+        public string? ProviderIconUrl { get => _explicitNullValueProviderIconUrl; set { _explicitNullValueProviderIconUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provider_icon_url"); else _explicitNullProperties?.Remove("provider_icon_url"); } }
+        private string? _explicitNullValueProviderIconUrl = default!;
 #nullable restore
 #else
-        public string ProviderIconUrl { get; set; }
+        public string ProviderIconUrl { get => _explicitNullValueProviderIconUrl; set { _explicitNullValueProviderIconUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provider_icon_url"); else _explicitNullProperties?.Remove("provider_icon_url"); } }
+        private string _explicitNullValueProviderIconUrl = default!;
 #endif
         /// <summary>The originating application or domain of the video, e.g. YouTube.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProviderName { get; set; }
+        public string? ProviderName { get => _explicitNullValueProviderName; set { _explicitNullValueProviderName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provider_name"); else _explicitNullProperties?.Remove("provider_name"); } }
+        private string? _explicitNullValueProviderName = default!;
 #nullable restore
 #else
-        public string ProviderName { get; set; }
+        public string ProviderName { get => _explicitNullValueProviderName; set { _explicitNullValueProviderName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provider_name"); else _explicitNullProperties?.Remove("provider_name"); } }
+        private string _explicitNullValueProviderName = default!;
 #endif
         /// <summary>The thumbnail image URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ThumbnailUrl { get; set; }
+        public string? ThumbnailUrl { get => _explicitNullValueThumbnailUrl; set { _explicitNullValueThumbnailUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumbnail_url"); else _explicitNullProperties?.Remove("thumbnail_url"); } }
+        private string? _explicitNullValueThumbnailUrl = default!;
 #nullable restore
 #else
-        public string ThumbnailUrl { get; set; }
+        public string ThumbnailUrl { get => _explicitNullValueThumbnailUrl; set { _explicitNullValueThumbnailUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumbnail_url"); else _explicitNullProperties?.Remove("thumbnail_url"); } }
+        private string _explicitNullValueThumbnailUrl = default!;
 #endif
         /// <summary>Video title as a [PlainTextElement](PlainTextElement) object. `text` within must be less than 200 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Title { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement Title { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement _explicitNullValueTitle = default!;
 #endif
         /// <summary>Hyperlink for the title text. Must correspond to the non-embeddable URL for the video.Must go to an HTTPS URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TitleUrl { get; set; }
+        public string? TitleUrl { get => _explicitNullValueTitleUrl; set { _explicitNullValueTitleUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title_url"); else _explicitNullProperties?.Remove("title_url"); } }
+        private string? _explicitNullValueTitleUrl = default!;
 #nullable restore
 #else
-        public string TitleUrl { get; set; }
+        public string TitleUrl { get => _explicitNullValueTitleUrl; set { _explicitNullValueTitleUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title_url"); else _explicitNullProperties?.Remove("title_url"); } }
+        private string _explicitNullValueTitleUrl = default!;
 #endif
         /// <summary>The type of block. For a video block, `type` is always `video`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.VideoType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.VideoType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.VideoType? _explicitNullValueType = default!;
         /// <summary>The URL to be embedded. Must match any existing[unfurl domains](https://docs.slack.dev/messaging/unfurling-links-in-messages) within the appand point to a HTTPS URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VideoUrl { get; set; }
+        public string? VideoUrl { get => _explicitNullValueVideoUrl; set { _explicitNullValueVideoUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_url"); else _explicitNullProperties?.Remove("video_url"); } }
+        private string? _explicitNullValueVideoUrl = default!;
 #nullable restore
 #else
-        public string VideoUrl { get; set; }
+        public string VideoUrl { get => _explicitNullValueVideoUrl; set { _explicitNullValueVideoUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_url"); else _explicitNullProperties?.Remove("video_url"); } }
+        private string _explicitNullValueVideoUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.VideoBlock"/> and sets the default values.
@@ -111,7 +150,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.VideoBlock CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.VideoBlock();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.VideoBlock(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -152,6 +191,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("title_url", TitleUrl);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.VideoType>("type", Type);
             writer.WriteStringValue("video_url", VideoUrl);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,38 +11,60 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdminConversationsLookupArguments : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("cursor") is { } nullNodeCursor && nullNodeCursor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cursor = null;
+            if (parseNode.GetChildNode("last_message_activity_before") is { } nullNodeLastMessageActivityBefore && nullNodeLastMessageActivityBefore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastMessageActivityBefore = null;
+            if (parseNode.GetChildNode("limit") is { } nullNodeLimit && nullNodeLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Limit = null;
+            if (parseNode.GetChildNode("max_member_count") is { } nullNodeMaxMemberCount && nullNodeMaxMemberCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxMemberCount = null;
+            if (parseNode.GetChildNode("team_ids") is { } nullNodeTeamIds && nullNodeTeamIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamIds = null;
+            if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Paginate through collections of data by setting the `cursor` parameter to a `next_cursor` attributereturned by a previous request&apos;s `response_metadata`.Default value fetches the first &quot;page&quot; of the collection.[pagination](https://docs.slack.dev/apis/web-api/pagination) for more detail.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Cursor { get; set; }
+        public string? Cursor { get => _explicitNullValueCursor; set { _explicitNullValueCursor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cursor"); else _explicitNullProperties?.Remove("cursor"); } }
+        private string? _explicitNullValueCursor = default!;
 #nullable restore
 #else
-        public string Cursor { get; set; }
+        public string Cursor { get => _explicitNullValueCursor; set { _explicitNullValueCursor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cursor"); else _explicitNullProperties?.Remove("cursor"); } }
+        private string _explicitNullValueCursor = default!;
 #endif
         /// <summary>UNIX timestamp to filter by public channels where the most recent messagewas sent before this parameter.</summary>
-        public double? LastMessageActivityBefore { get; set; }
+        public double? LastMessageActivityBefore { get => _explicitNullValueLastMessageActivityBefore; set { _explicitNullValueLastMessageActivityBefore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_message_activity_before"); else _explicitNullProperties?.Remove("last_message_activity_before"); } }
+        private double? _explicitNullValueLastMessageActivityBefore = default!;
         /// <summary>The maximum number of items to return. Fewer than the requested number of items may be returned,even if the end of the list hasn&apos;t been reached. Must be an integer with a max value of `999`. Default is `100`.</summary>
-        public double? Limit { get; set; }
+        public double? Limit { get => _explicitNullValueLimit; set { _explicitNullValueLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limit"); else _explicitNullProperties?.Remove("limit"); } }
+        private double? _explicitNullValueLimit = default!;
         /// <summary>Filter by public channels with member count equal to or less than the specified number.</summary>
-        public double? MaxMemberCount { get; set; }
+        public double? MaxMemberCount { get => _explicitNullValueMaxMemberCount; set { _explicitNullValueMaxMemberCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_member_count"); else _explicitNullProperties?.Remove("max_member_count"); } }
+        private double? _explicitNullValueMaxMemberCount = default!;
         /// <summary>A list of team IDs (must include at least one ID).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? TeamIds { get; set; }
+        public List<string>? TeamIds { get => _explicitNullValueTeamIds; set { _explicitNullValueTeamIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_ids"); else _explicitNullProperties?.Remove("team_ids"); } }
+        private List<string>? _explicitNullValueTeamIds = default!;
 #nullable restore
 #else
-        public List<string> TeamIds { get; set; }
+        public List<string> TeamIds { get => _explicitNullValueTeamIds; set { _explicitNullValueTeamIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_ids"); else _explicitNullProperties?.Remove("team_ids"); } }
+        private List<string> _explicitNullValueTeamIds = default!;
 #endif
         /// <summary>Overridable authentication token bearing required scopes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Token { get; set; }
+        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private string? _explicitNullValueToken = default!;
 #nullable restore
 #else
-        public string Token { get; set; }
+        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private string _explicitNullValueToken = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsLookupArguments"/> and sets the default values.
@@ -59,7 +81,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsLookupArguments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsLookupArguments();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.AdminConversationsLookupArguments(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -90,6 +112,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("max_member_count", MaxMemberCount);
             writer.WriteCollectionOfPrimitiveValues<string>("team_ids", TeamIds);
             writer.WriteStringValue("token", Token);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

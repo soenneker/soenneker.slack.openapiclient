@@ -11,59 +11,91 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SubteamMembersChangedEvent : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("added_users") is { } nullNodeAddedUsers && nullNodeAddedUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddedUsers = null;
+            if (parseNode.GetChildNode("added_users_count") is { } nullNodeAddedUsersCount && nullNodeAddedUsersCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddedUsersCount = null;
+            if (parseNode.GetChildNode("date_previous_update") is { } nullNodeDatePreviousUpdate && nullNodeDatePreviousUpdate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DatePreviousUpdate = null;
+            if (parseNode.GetChildNode("date_update") is { } nullNodeDateUpdate && nullNodeDateUpdate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateUpdate = null;
+            if (parseNode.GetChildNode("event_ts") is { } nullNodeEventTs && nullNodeEventTs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventTs = null;
+            if (parseNode.GetChildNode("removed_users") is { } nullNodeRemovedUsers && nullNodeRemovedUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RemovedUsers = null;
+            if (parseNode.GetChildNode("removed_users_count") is { } nullNodeRemovedUsersCount && nullNodeRemovedUsersCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RemovedUsersCount = null;
+            if (parseNode.GetChildNode("subteam_id") is { } nullNodeSubteamId && nullNodeSubteamId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubteamId = null;
+            if (parseNode.GetChildNode("team_id") is { } nullNodeTeamId && nullNodeTeamId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamId = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>The added_users property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AddedUsers { get; set; }
+        public List<string>? AddedUsers { get => _explicitNullValueAddedUsers; set { _explicitNullValueAddedUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("added_users"); else _explicitNullProperties?.Remove("added_users"); } }
+        private List<string>? _explicitNullValueAddedUsers = default!;
 #nullable restore
 #else
-        public List<string> AddedUsers { get; set; }
+        public List<string> AddedUsers { get => _explicitNullValueAddedUsers; set { _explicitNullValueAddedUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("added_users"); else _explicitNullProperties?.Remove("added_users"); } }
+        private List<string> _explicitNullValueAddedUsers = default!;
 #endif
         /// <summary>The added_users_count property</summary>
-        public double? AddedUsersCount { get; set; }
+        public double? AddedUsersCount { get => _explicitNullValueAddedUsersCount; set { _explicitNullValueAddedUsersCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("added_users_count"); else _explicitNullProperties?.Remove("added_users_count"); } }
+        private double? _explicitNullValueAddedUsersCount = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The date_previous_update property</summary>
-        public double? DatePreviousUpdate { get; set; }
+        public double? DatePreviousUpdate { get => _explicitNullValueDatePreviousUpdate; set { _explicitNullValueDatePreviousUpdate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_previous_update"); else _explicitNullProperties?.Remove("date_previous_update"); } }
+        private double? _explicitNullValueDatePreviousUpdate = default!;
         /// <summary>The date_update property</summary>
-        public double? DateUpdate { get; set; }
+        public double? DateUpdate { get => _explicitNullValueDateUpdate; set { _explicitNullValueDateUpdate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_update"); else _explicitNullProperties?.Remove("date_update"); } }
+        private double? _explicitNullValueDateUpdate = default!;
         /// <summary>The event_ts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventTs { get; set; }
+        public string? EventTs { get => _explicitNullValueEventTs; set { _explicitNullValueEventTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_ts"); else _explicitNullProperties?.Remove("event_ts"); } }
+        private string? _explicitNullValueEventTs = default!;
 #nullable restore
 #else
-        public string EventTs { get; set; }
+        public string EventTs { get => _explicitNullValueEventTs; set { _explicitNullValueEventTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_ts"); else _explicitNullProperties?.Remove("event_ts"); } }
+        private string _explicitNullValueEventTs = default!;
 #endif
         /// <summary>The removed_users property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? RemovedUsers { get; set; }
+        public List<string>? RemovedUsers { get => _explicitNullValueRemovedUsers; set { _explicitNullValueRemovedUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("removed_users"); else _explicitNullProperties?.Remove("removed_users"); } }
+        private List<string>? _explicitNullValueRemovedUsers = default!;
 #nullable restore
 #else
-        public List<string> RemovedUsers { get; set; }
+        public List<string> RemovedUsers { get => _explicitNullValueRemovedUsers; set { _explicitNullValueRemovedUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("removed_users"); else _explicitNullProperties?.Remove("removed_users"); } }
+        private List<string> _explicitNullValueRemovedUsers = default!;
 #endif
         /// <summary>The removed_users_count property</summary>
-        public double? RemovedUsersCount { get; set; }
+        public double? RemovedUsersCount { get => _explicitNullValueRemovedUsersCount; set { _explicitNullValueRemovedUsersCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("removed_users_count"); else _explicitNullProperties?.Remove("removed_users_count"); } }
+        private double? _explicitNullValueRemovedUsersCount = default!;
         /// <summary>The subteam_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubteamId { get; set; }
+        public string? SubteamId { get => _explicitNullValueSubteamId; set { _explicitNullValueSubteamId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subteam_id"); else _explicitNullProperties?.Remove("subteam_id"); } }
+        private string? _explicitNullValueSubteamId = default!;
 #nullable restore
 #else
-        public string SubteamId { get; set; }
+        public string SubteamId { get => _explicitNullValueSubteamId; set { _explicitNullValueSubteamId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subteam_id"); else _explicitNullProperties?.Remove("subteam_id"); } }
+        private string _explicitNullValueSubteamId = default!;
 #endif
         /// <summary>The team_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TeamId { get; set; }
+        public string? TeamId { get => _explicitNullValueTeamId; set { _explicitNullValueTeamId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_id"); else _explicitNullProperties?.Remove("team_id"); } }
+        private string? _explicitNullValueTeamId = default!;
 #nullable restore
 #else
-        public string TeamId { get; set; }
+        public string TeamId { get => _explicitNullValueTeamId; set { _explicitNullValueTeamId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_id"); else _explicitNullProperties?.Remove("team_id"); } }
+        private string _explicitNullValueTeamId = default!;
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.SubteamMembersChangedType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.SubteamMembersChangedType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.SubteamMembersChangedType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.SubteamMembersChangedEvent"/> and sets the default values.
         /// </summary>
@@ -79,7 +111,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.SubteamMembersChangedEvent CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.SubteamMembersChangedEvent();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.SubteamMembersChangedEvent(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -118,6 +150,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("subteam_id", SubteamId);
             writer.WriteStringValue("team_id", TeamId);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.SubteamMembersChangedType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

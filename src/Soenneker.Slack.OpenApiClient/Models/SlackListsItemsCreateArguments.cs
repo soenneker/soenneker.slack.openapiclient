@@ -11,48 +11,70 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SlackListsItemsCreateArguments : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("duplicated_item_id") is { } nullNodeDuplicatedItemId && nullNodeDuplicatedItemId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuplicatedItemId = null;
+            if (parseNode.GetChildNode("initial_fields") is { } nullNodeInitialFields && nullNodeInitialFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InitialFields = null;
+            if (parseNode.GetChildNode("list_id") is { } nullNodeListId && nullNodeListId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ListId = null;
+            if (parseNode.GetChildNode("parent_item_id") is { } nullNodeParentItemId && nullNodeParentItemId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentItemId = null;
+            if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>ID of the record to make a copy of.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DuplicatedItemId { get; set; }
+        public string? DuplicatedItemId { get => _explicitNullValueDuplicatedItemId; set { _explicitNullValueDuplicatedItemId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duplicated_item_id"); else _explicitNullProperties?.Remove("duplicated_item_id"); } }
+        private string? _explicitNullValueDuplicatedItemId = default!;
 #nullable restore
 #else
-        public string DuplicatedItemId { get; set; }
+        public string DuplicatedItemId { get => _explicitNullValueDuplicatedItemId; set { _explicitNullValueDuplicatedItemId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duplicated_item_id"); else _explicitNullProperties?.Remove("duplicated_item_id"); } }
+        private string _explicitNullValueDuplicatedItemId = default!;
 #endif
         /// <summary>Initial item data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemField>? InitialFields { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemField>? InitialFields { get => _explicitNullValueInitialFields; set { _explicitNullValueInitialFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initial_fields"); else _explicitNullProperties?.Remove("initial_fields"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemField>? _explicitNullValueInitialFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemField> InitialFields { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemField> InitialFields { get => _explicitNullValueInitialFields; set { _explicitNullValueInitialFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initial_fields"); else _explicitNullProperties?.Remove("initial_fields"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemField> _explicitNullValueInitialFields = default!;
 #endif
         /// <summary>Encoded ID of the List.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ListId { get; set; }
+        public string? ListId { get => _explicitNullValueListId; set { _explicitNullValueListId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("list_id"); else _explicitNullProperties?.Remove("list_id"); } }
+        private string? _explicitNullValueListId = default!;
 #nullable restore
 #else
-        public string ListId { get; set; }
+        public string ListId { get => _explicitNullValueListId; set { _explicitNullValueListId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("list_id"); else _explicitNullProperties?.Remove("list_id"); } }
+        private string _explicitNullValueListId = default!;
 #endif
         /// <summary>ID of the parent record for this subtask.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ParentItemId { get; set; }
+        public string? ParentItemId { get => _explicitNullValueParentItemId; set { _explicitNullValueParentItemId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_item_id"); else _explicitNullProperties?.Remove("parent_item_id"); } }
+        private string? _explicitNullValueParentItemId = default!;
 #nullable restore
 #else
-        public string ParentItemId { get; set; }
+        public string ParentItemId { get => _explicitNullValueParentItemId; set { _explicitNullValueParentItemId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_item_id"); else _explicitNullProperties?.Remove("parent_item_id"); } }
+        private string _explicitNullValueParentItemId = default!;
 #endif
         /// <summary>Overridable authentication token bearing required scopes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Token { get; set; }
+        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private string? _explicitNullValueToken = default!;
 #nullable restore
 #else
-        public string Token { get; set; }
+        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private string _explicitNullValueToken = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemsCreateArguments"/> and sets the default values.
@@ -69,7 +91,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemsCreateArguments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemsCreateArguments();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemsCreateArguments(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +120,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("list_id", ListId);
             writer.WriteStringValue("parent_item_id", ParentItemId);
             writer.WriteStringValue("token", Token);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

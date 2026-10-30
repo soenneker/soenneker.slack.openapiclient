@@ -51,7 +51,7 @@ namespace Soenneker.Slack.OpenApiClient.Api.AdminAppsRestrict
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRestrictResponse>(requestInfo, global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRestrictResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRestrictResponse>(requestInfo, global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRestrictResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Restrict an app for installation on a workspace.

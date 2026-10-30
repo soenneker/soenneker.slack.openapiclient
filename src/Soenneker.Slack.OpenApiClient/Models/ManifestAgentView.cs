@@ -11,32 +11,48 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ManifestAgentView : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("actions") is { } nullNodeActions && nullNodeActions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Actions = null;
+            if (parseNode.GetChildNode("agent_description") is { } nullNodeAgentDescription && nullNodeAgentDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentDescription = null;
+            if (parseNode.GetChildNode("suggested_prompts") is { } nullNodeSuggestedPrompts && nullNodeSuggestedPrompts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuggestedPrompts = null;
+        }
+
         /// <summary>Quick actions surfaced in the agent UI.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.ManifestAgentAction>? Actions { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.ManifestAgentAction>? Actions { get => _explicitNullValueActions; set { _explicitNullValueActions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actions"); else _explicitNullProperties?.Remove("actions"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.ManifestAgentAction>? _explicitNullValueActions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.ManifestAgentAction> Actions { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.ManifestAgentAction> Actions { get => _explicitNullValueActions; set { _explicitNullValueActions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actions"); else _explicitNullProperties?.Remove("actions"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.ManifestAgentAction> _explicitNullValueActions = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A description specific to the agent, used to communicate to end users what agent functionality theapp provides. Maximum length is 300 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AgentDescription { get; set; }
+        public string? AgentDescription { get => _explicitNullValueAgentDescription; set { _explicitNullValueAgentDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_description"); else _explicitNullProperties?.Remove("agent_description"); } }
+        private string? _explicitNullValueAgentDescription = default!;
 #nullable restore
 #else
-        public string AgentDescription { get; set; }
+        public string AgentDescription { get => _explicitNullValueAgentDescription; set { _explicitNullValueAgentDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_description"); else _explicitNullProperties?.Remove("agent_description"); } }
+        private string _explicitNullValueAgentDescription = default!;
 #endif
         /// <summary>An array of pre-written prompts designed to guide users when interacting with the agent. A maximum of4 suggested prompts can be included in this array.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.ManifestSuggestedPrompt>? SuggestedPrompts { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.ManifestSuggestedPrompt>? SuggestedPrompts { get => _explicitNullValueSuggestedPrompts; set { _explicitNullValueSuggestedPrompts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggested_prompts"); else _explicitNullProperties?.Remove("suggested_prompts"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.ManifestSuggestedPrompt>? _explicitNullValueSuggestedPrompts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.ManifestSuggestedPrompt> SuggestedPrompts { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.ManifestSuggestedPrompt> SuggestedPrompts { get => _explicitNullValueSuggestedPrompts; set { _explicitNullValueSuggestedPrompts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggested_prompts"); else _explicitNullProperties?.Remove("suggested_prompts"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.ManifestSuggestedPrompt> _explicitNullValueSuggestedPrompts = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ManifestAgentView"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.ManifestAgentView CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.ManifestAgentView();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.ManifestAgentView(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ManifestAgentAction>("actions", Actions);
             writer.WriteStringValue("agent_description", AgentDescription);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ManifestSuggestedPrompt>("suggested_prompts", SuggestedPrompts);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

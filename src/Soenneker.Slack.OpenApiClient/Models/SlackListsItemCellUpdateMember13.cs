@@ -11,32 +11,48 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SlackListsItemCellUpdateMember13 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("column_id") is { } nullNodeColumnId && nullNodeColumnId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ColumnId = null;
+            if (parseNode.GetChildNode("row_id") is { } nullNodeRowId && nullNodeRowId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RowId = null;
+            if (parseNode.GetChildNode("select") is { } nullNodeSelect && nullNodeSelect.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Select = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The column_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ColumnId { get; set; }
+        public string? ColumnId { get => _explicitNullValueColumnId; set { _explicitNullValueColumnId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("column_id"); else _explicitNullProperties?.Remove("column_id"); } }
+        private string? _explicitNullValueColumnId = default!;
 #nullable restore
 #else
-        public string ColumnId { get; set; }
+        public string ColumnId { get => _explicitNullValueColumnId; set { _explicitNullValueColumnId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("column_id"); else _explicitNullProperties?.Remove("column_id"); } }
+        private string _explicitNullValueColumnId = default!;
 #endif
         /// <summary>The ID of the row to update.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RowId { get; set; }
+        public string? RowId { get => _explicitNullValueRowId; set { _explicitNullValueRowId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("row_id"); else _explicitNullProperties?.Remove("row_id"); } }
+        private string? _explicitNullValueRowId = default!;
 #nullable restore
 #else
-        public string RowId { get; set; }
+        public string RowId { get => _explicitNullValueRowId; set { _explicitNullValueRowId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("row_id"); else _explicitNullProperties?.Remove("row_id"); } }
+        private string _explicitNullValueRowId = default!;
 #endif
         /// <summary>The select property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Select { get; set; }
+        public List<string>? Select { get => _explicitNullValueSelect; set { _explicitNullValueSelect = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("select"); else _explicitNullProperties?.Remove("select"); } }
+        private List<string>? _explicitNullValueSelect = default!;
 #nullable restore
 #else
-        public List<string> Select { get; set; }
+        public List<string> Select { get => _explicitNullValueSelect; set { _explicitNullValueSelect = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("select"); else _explicitNullProperties?.Remove("select"); } }
+        private List<string> _explicitNullValueSelect = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember13"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember13 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember13();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember13(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("column_id", ColumnId);
             writer.WriteStringValue("row_id", RowId);
             writer.WriteCollectionOfPrimitiveValues<string>("select", Select);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

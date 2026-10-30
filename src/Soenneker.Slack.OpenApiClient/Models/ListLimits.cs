@@ -11,31 +11,60 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ListLimits : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("archived_row_count") is { } nullNodeArchivedRowCount && nullNodeArchivedRowCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArchivedRowCount = null;
+            if (parseNode.GetChildNode("column_count") is { } nullNodeColumnCount && nullNodeColumnCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ColumnCount = null;
+            if (parseNode.GetChildNode("column_count_limit") is { } nullNodeColumnCountLimit && nullNodeColumnCountLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ColumnCountLimit = null;
+            if (parseNode.GetChildNode("max_attachments_per_cell") is { } nullNodeMaxAttachmentsPerCell && nullNodeMaxAttachmentsPerCell.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxAttachmentsPerCell = null;
+            if (parseNode.GetChildNode("over_column_maximum") is { } nullNodeOverColumnMaximum && nullNodeOverColumnMaximum.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverColumnMaximum = null;
+            if (parseNode.GetChildNode("over_row_maximum") is { } nullNodeOverRowMaximum && nullNodeOverRowMaximum.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverRowMaximum = null;
+            if (parseNode.GetChildNode("over_view_maximum") is { } nullNodeOverViewMaximum && nullNodeOverViewMaximum.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverViewMaximum = null;
+            if (parseNode.GetChildNode("row_count") is { } nullNodeRowCount && nullNodeRowCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RowCount = null;
+            if (parseNode.GetChildNode("row_count_limit") is { } nullNodeRowCountLimit && nullNodeRowCountLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RowCountLimit = null;
+            if (parseNode.GetChildNode("view_count") is { } nullNodeViewCount && nullNodeViewCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ViewCount = null;
+            if (parseNode.GetChildNode("view_count_limit") is { } nullNodeViewCountLimit && nullNodeViewCountLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ViewCountLimit = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The archived_row_count property</summary>
-        public double? ArchivedRowCount { get; set; }
+        public double? ArchivedRowCount { get => _explicitNullValueArchivedRowCount; set { _explicitNullValueArchivedRowCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("archived_row_count"); else _explicitNullProperties?.Remove("archived_row_count"); } }
+        private double? _explicitNullValueArchivedRowCount = default!;
         /// <summary>The column_count property</summary>
-        public double? ColumnCount { get; set; }
+        public double? ColumnCount { get => _explicitNullValueColumnCount; set { _explicitNullValueColumnCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("column_count"); else _explicitNullProperties?.Remove("column_count"); } }
+        private double? _explicitNullValueColumnCount = default!;
         /// <summary>The column_count_limit property</summary>
-        public double? ColumnCountLimit { get; set; }
+        public double? ColumnCountLimit { get => _explicitNullValueColumnCountLimit; set { _explicitNullValueColumnCountLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("column_count_limit"); else _explicitNullProperties?.Remove("column_count_limit"); } }
+        private double? _explicitNullValueColumnCountLimit = default!;
         /// <summary>The max_attachments_per_cell property</summary>
-        public double? MaxAttachmentsPerCell { get; set; }
+        public double? MaxAttachmentsPerCell { get => _explicitNullValueMaxAttachmentsPerCell; set { _explicitNullValueMaxAttachmentsPerCell = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_attachments_per_cell"); else _explicitNullProperties?.Remove("max_attachments_per_cell"); } }
+        private double? _explicitNullValueMaxAttachmentsPerCell = default!;
         /// <summary>The over_column_maximum property</summary>
-        public bool? OverColumnMaximum { get; set; }
+        public bool? OverColumnMaximum { get => _explicitNullValueOverColumnMaximum; set { _explicitNullValueOverColumnMaximum = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("over_column_maximum"); else _explicitNullProperties?.Remove("over_column_maximum"); } }
+        private bool? _explicitNullValueOverColumnMaximum = default!;
         /// <summary>The over_row_maximum property</summary>
-        public bool? OverRowMaximum { get; set; }
+        public bool? OverRowMaximum { get => _explicitNullValueOverRowMaximum; set { _explicitNullValueOverRowMaximum = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("over_row_maximum"); else _explicitNullProperties?.Remove("over_row_maximum"); } }
+        private bool? _explicitNullValueOverRowMaximum = default!;
         /// <summary>The over_view_maximum property</summary>
-        public bool? OverViewMaximum { get; set; }
+        public bool? OverViewMaximum { get => _explicitNullValueOverViewMaximum; set { _explicitNullValueOverViewMaximum = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("over_view_maximum"); else _explicitNullProperties?.Remove("over_view_maximum"); } }
+        private bool? _explicitNullValueOverViewMaximum = default!;
         /// <summary>The row_count property</summary>
-        public double? RowCount { get; set; }
+        public double? RowCount { get => _explicitNullValueRowCount; set { _explicitNullValueRowCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("row_count"); else _explicitNullProperties?.Remove("row_count"); } }
+        private double? _explicitNullValueRowCount = default!;
         /// <summary>The row_count_limit property</summary>
-        public double? RowCountLimit { get; set; }
+        public double? RowCountLimit { get => _explicitNullValueRowCountLimit; set { _explicitNullValueRowCountLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("row_count_limit"); else _explicitNullProperties?.Remove("row_count_limit"); } }
+        private double? _explicitNullValueRowCountLimit = default!;
         /// <summary>The view_count property</summary>
-        public double? ViewCount { get; set; }
+        public double? ViewCount { get => _explicitNullValueViewCount; set { _explicitNullValueViewCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view_count"); else _explicitNullProperties?.Remove("view_count"); } }
+        private double? _explicitNullValueViewCount = default!;
         /// <summary>The view_count_limit property</summary>
-        public double? ViewCountLimit { get; set; }
+        public double? ViewCountLimit { get => _explicitNullValueViewCountLimit; set { _explicitNullValueViewCountLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view_count_limit"); else _explicitNullProperties?.Remove("view_count_limit"); } }
+        private double? _explicitNullValueViewCountLimit = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ListLimits"/> and sets the default values.
         /// </summary>
@@ -51,7 +80,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.ListLimits CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.ListLimits();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.ListLimits(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,6 +121,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("row_count_limit", RowCountLimit);
             writer.WriteDoubleValue("view_count", ViewCount);
             writer.WriteDoubleValue("view_count_limit", ViewCountLimit);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

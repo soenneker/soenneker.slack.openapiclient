@@ -11,40 +11,59 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ListMetadata10 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("integrations") is { } nullNodeIntegrations && nullNodeIntegrations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Integrations = null;
+            if (parseNode.GetChildNode("schema") is { } nullNodeSchema && nullNodeSchema.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Schema = null;
+            if (parseNode.GetChildNode("subtask_schema") is { } nullNodeSubtaskSchema && nullNodeSubtaskSchema.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubtaskSchema = null;
+            if (parseNode.GetChildNode("views") is { } nullNodeViews && nullNodeViews.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Views = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The integrations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Integrations { get; set; }
+        public List<string>? Integrations { get => _explicitNullValueIntegrations; set { _explicitNullValueIntegrations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("integrations"); else _explicitNullProperties?.Remove("integrations"); } }
+        private List<string>? _explicitNullValueIntegrations = default!;
 #nullable restore
 #else
-        public List<string> Integrations { get; set; }
+        public List<string> Integrations { get => _explicitNullValueIntegrations; set { _explicitNullValueIntegrations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("integrations"); else _explicitNullProperties?.Remove("integrations"); } }
+        private List<string> _explicitNullValueIntegrations = default!;
 #endif
         /// <summary>The schema property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Schema4>? Schema { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Schema4>? Schema { get => _explicitNullValueSchema; set { _explicitNullValueSchema = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schema"); else _explicitNullProperties?.Remove("schema"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.Schema4>? _explicitNullValueSchema = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Schema4> Schema { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Schema4> Schema { get => _explicitNullValueSchema; set { _explicitNullValueSchema = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schema"); else _explicitNullProperties?.Remove("schema"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.Schema4> _explicitNullValueSchema = default!;
 #endif
         /// <summary>The subtask_schema property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.SubtaskSchema>? SubtaskSchema { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.SubtaskSchema>? SubtaskSchema { get => _explicitNullValueSubtaskSchema; set { _explicitNullValueSubtaskSchema = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subtask_schema"); else _explicitNullProperties?.Remove("subtask_schema"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.SubtaskSchema>? _explicitNullValueSubtaskSchema = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.SubtaskSchema> SubtaskSchema { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.SubtaskSchema> SubtaskSchema { get => _explicitNullValueSubtaskSchema; set { _explicitNullValueSubtaskSchema = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subtask_schema"); else _explicitNullProperties?.Remove("subtask_schema"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.SubtaskSchema> _explicitNullValueSubtaskSchema = default!;
 #endif
         /// <summary>The views property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.View5>? Views { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.View5>? Views { get => _explicitNullValueViews; set { _explicitNullValueViews = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("views"); else _explicitNullProperties?.Remove("views"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.View5>? _explicitNullValueViews = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.View5> Views { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.View5> Views { get => _explicitNullValueViews; set { _explicitNullValueViews = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("views"); else _explicitNullProperties?.Remove("views"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.View5> _explicitNullValueViews = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ListMetadata10"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.ListMetadata10 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.ListMetadata10();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.ListMetadata10(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Schema4>("schema", Schema);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SubtaskSchema>("subtask_schema", SubtaskSchema);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.View5>("views", Views);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

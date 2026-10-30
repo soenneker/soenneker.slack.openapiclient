@@ -11,32 +11,48 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class BlocksValidateArguments : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("blocks") is { } nullNodeBlocks && nullNodeBlocks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Blocks = null;
+            if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
+            if (parseNode.GetChildNode("view") is { } nullNodeView && nullNodeView.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) View = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of blocks to validate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.BlocksValidateArgumentsBlocksItem>? Blocks { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.BlocksValidateArgumentsBlocksItem>? Blocks { get => _explicitNullValueBlocks; set { _explicitNullValueBlocks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blocks"); else _explicitNullProperties?.Remove("blocks"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.BlocksValidateArgumentsBlocksItem>? _explicitNullValueBlocks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.BlocksValidateArgumentsBlocksItem> Blocks { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.BlocksValidateArgumentsBlocksItem> Blocks { get => _explicitNullValueBlocks; set { _explicitNullValueBlocks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blocks"); else _explicitNullProperties?.Remove("blocks"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.BlocksValidateArgumentsBlocksItem> _explicitNullValueBlocks = default!;
 #endif
         /// <summary>A message payload to validate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.BlocksValidateArgumentsMessage? Message { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.BlocksValidateArgumentsMessage? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.BlocksValidateArgumentsMessage? _explicitNullValueMessage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.BlocksValidateArgumentsMessage Message { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.BlocksValidateArgumentsMessage Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.BlocksValidateArgumentsMessage _explicitNullValueMessage = default!;
 #endif
         /// <summary>A view payload to validate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.BlocksValidateArgumentsView? View { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.BlocksValidateArgumentsView? View { get => _explicitNullValueView; set { _explicitNullValueView = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view"); else _explicitNullProperties?.Remove("view"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.BlocksValidateArgumentsView? _explicitNullValueView = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.BlocksValidateArgumentsView View { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.BlocksValidateArgumentsView View { get => _explicitNullValueView; set { _explicitNullValueView = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view"); else _explicitNullProperties?.Remove("view"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.BlocksValidateArgumentsView _explicitNullValueView = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.BlocksValidateArguments"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.BlocksValidateArguments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.BlocksValidateArguments();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.BlocksValidateArguments(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.BlocksValidateArgumentsBlocksItem>("blocks", Blocks);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BlocksValidateArgumentsMessage>("message", Message);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BlocksValidateArgumentsView>("view", View);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

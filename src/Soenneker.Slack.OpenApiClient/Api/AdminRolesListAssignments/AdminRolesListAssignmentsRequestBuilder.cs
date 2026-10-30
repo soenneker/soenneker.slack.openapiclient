@@ -51,7 +51,7 @@ namespace Soenneker.Slack.OpenApiClient.Api.AdminRolesListAssignments
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Slack.OpenApiClient.Models.AdminRolesListAssignmentsResponse>(requestInfo, global::Soenneker.Slack.OpenApiClient.Models.AdminRolesListAssignmentsResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Slack.OpenApiClient.Models.AdminRolesListAssignmentsResponse>(requestInfo, global::Soenneker.Slack.OpenApiClient.Models.AdminRolesListAssignmentsResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Lists assignments for all roles across entities. Options to scope results by any combination of roles or entities.

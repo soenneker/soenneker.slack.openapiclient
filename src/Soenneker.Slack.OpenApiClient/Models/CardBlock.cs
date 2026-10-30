@@ -11,67 +11,97 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CardBlock : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("actions") is { } nullNodeActions && nullNodeActions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Actions = null;
+            if (parseNode.GetChildNode("block_id") is { } nullNodeBlockId && nullNodeBlockId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockId = null;
+            if (parseNode.GetChildNode("body") is { } nullNodeBody && nullNodeBody.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Body = null;
+            if (parseNode.GetChildNode("hero_image") is { } nullNodeHeroImage && nullNodeHeroImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HeroImage = null;
+            if (parseNode.GetChildNode("icon") is { } nullNodeIcon && nullNodeIcon.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Icon = null;
+            if (parseNode.GetChildNode("subtitle") is { } nullNodeSubtitle && nullNodeSubtitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subtitle = null;
+            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>An array of [Button](Button) elements displayed at the bottom of the card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Button>? Actions { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Button>? Actions { get => _explicitNullValueActions; set { _explicitNullValueActions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actions"); else _explicitNullProperties?.Remove("actions"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.Button>? _explicitNullValueActions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Button> Actions { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Button> Actions { get => _explicitNullValueActions; set { _explicitNullValueActions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actions"); else _explicitNullProperties?.Remove("actions"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.Button> _explicitNullValueActions = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string acting as a unique identifier for a block. If not specified, a `block_id` will be generated.You can use this `block_id` when you receive an interaction payload to[identify the source of the action](https://docs.slack.dev/interactivity/handling-user-interaction#payloads).Maximum length for this field is 255 characters. `block_id` should be unique for each message and each iteration ofa message. If a message is updated, use a new `block_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BlockId { get; set; }
+        public string? BlockId { get => _explicitNullValueBlockId; set { _explicitNullValueBlockId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("block_id"); else _explicitNullProperties?.Remove("block_id"); } }
+        private string? _explicitNullValueBlockId = default!;
 #nullable restore
 #else
-        public string BlockId { get; set; }
+        public string BlockId { get => _explicitNullValueBlockId; set { _explicitNullValueBlockId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("block_id"); else _explicitNullProperties?.Remove("block_id"); } }
+        private string _explicitNullValueBlockId = default!;
 #endif
         /// <summary>The body text of the card in the form of a [MrkdwnElement](MrkdwnElement).Maximum length for the text in this field is 200 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement? Body { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement? Body { get => _explicitNullValueBody; set { _explicitNullValueBody = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("body"); else _explicitNullProperties?.Remove("body"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement? _explicitNullValueBody = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement Body { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement Body { get => _explicitNullValueBody; set { _explicitNullValueBody = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("body"); else _explicitNullProperties?.Remove("body"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement _explicitNullValueBody = default!;
 #endif
         /// <summary>A top banner image for the card in the form of an [ImageElement](ImageElement).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.CardBlockHeroImage? HeroImage { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.CardBlockHeroImage? HeroImage { get => _explicitNullValueHeroImage; set { _explicitNullValueHeroImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hero_image"); else _explicitNullProperties?.Remove("hero_image"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.CardBlockHeroImage? _explicitNullValueHeroImage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.CardBlockHeroImage HeroImage { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.CardBlockHeroImage HeroImage { get => _explicitNullValueHeroImage; set { _explicitNullValueHeroImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hero_image"); else _explicitNullProperties?.Remove("hero_image"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.CardBlockHeroImage _explicitNullValueHeroImage = default!;
 #endif
         /// <summary>A small icon displayed next to the title and subtitle in the form of an [ImageElement](ImageElement).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.CardBlockIcon? Icon { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.CardBlockIcon? Icon { get => _explicitNullValueIcon; set { _explicitNullValueIcon = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icon"); else _explicitNullProperties?.Remove("icon"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.CardBlockIcon? _explicitNullValueIcon = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.CardBlockIcon Icon { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.CardBlockIcon Icon { get => _explicitNullValueIcon; set { _explicitNullValueIcon = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icon"); else _explicitNullProperties?.Remove("icon"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.CardBlockIcon _explicitNullValueIcon = default!;
 #endif
         /// <summary>The subtitle of the card in the form of a [MrkdwnElement](MrkdwnElement).Maximum length for the text in this field is 150 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement? Subtitle { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement? Subtitle { get => _explicitNullValueSubtitle; set { _explicitNullValueSubtitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subtitle"); else _explicitNullProperties?.Remove("subtitle"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement? _explicitNullValueSubtitle = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement Subtitle { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement Subtitle { get => _explicitNullValueSubtitle; set { _explicitNullValueSubtitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subtitle"); else _explicitNullProperties?.Remove("subtitle"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement _explicitNullValueSubtitle = default!;
 #endif
         /// <summary>The title of the card in the form of a [MrkdwnElement](MrkdwnElement).Maximum length for the text in this field is 150 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement? Title { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement Title { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement _explicitNullValueTitle = default!;
 #endif
         /// <summary>The type of block. For a card block, `type` is always `card`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.CardType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.CardType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.CardType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.CardBlock"/> and sets the default values.
         /// </summary>
@@ -87,7 +117,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.CardBlock CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.CardBlock();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.CardBlock(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -122,6 +152,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement>("subtitle", Subtitle);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MrkdwnElement>("title", Title);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.CardType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

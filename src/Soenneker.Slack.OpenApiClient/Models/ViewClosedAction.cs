@@ -11,62 +11,93 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ViewClosedAction : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("api_app_id") is { } nullNodeApiAppId && nullNodeApiAppId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApiAppId = null;
+            if (parseNode.GetChildNode("enterprise") is { } nullNodeEnterprise && nullNodeEnterprise.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enterprise = null;
+            if (parseNode.GetChildNode("is_cleared") is { } nullNodeIsCleared && nullNodeIsCleared.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsCleared = null;
+            if (parseNode.GetChildNode("is_enterprise_install") is { } nullNodeIsEnterpriseInstall && nullNodeIsEnterpriseInstall.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsEnterpriseInstall = null;
+            if (parseNode.GetChildNode("team") is { } nullNodeTeam && nullNodeTeam.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Team = null;
+            if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("user") is { } nullNodeUser && nullNodeUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) User = null;
+            if (parseNode.GetChildNode("view") is { } nullNodeView && nullNodeView.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) View = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The api_app_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ApiAppId { get; set; }
+        public string? ApiAppId { get => _explicitNullValueApiAppId; set { _explicitNullValueApiAppId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_app_id"); else _explicitNullProperties?.Remove("api_app_id"); } }
+        private string? _explicitNullValueApiAppId = default!;
 #nullable restore
 #else
-        public string ApiAppId { get; set; }
+        public string ApiAppId { get => _explicitNullValueApiAppId; set { _explicitNullValueApiAppId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_app_id"); else _explicitNullProperties?.Remove("api_app_id"); } }
+        private string _explicitNullValueApiAppId = default!;
 #endif
         /// <summary>The enterprise property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ViewClosedActionEnterprise? Enterprise { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ViewClosedActionEnterprise? Enterprise { get => _explicitNullValueEnterprise; set { _explicitNullValueEnterprise = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enterprise"); else _explicitNullProperties?.Remove("enterprise"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ViewClosedActionEnterprise? _explicitNullValueEnterprise = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ViewClosedActionEnterprise Enterprise { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ViewClosedActionEnterprise Enterprise { get => _explicitNullValueEnterprise; set { _explicitNullValueEnterprise = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enterprise"); else _explicitNullProperties?.Remove("enterprise"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ViewClosedActionEnterprise _explicitNullValueEnterprise = default!;
 #endif
         /// <summary>The is_cleared property</summary>
-        public bool? IsCleared { get; set; }
+        public bool? IsCleared { get => _explicitNullValueIsCleared; set { _explicitNullValueIsCleared = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_cleared"); else _explicitNullProperties?.Remove("is_cleared"); } }
+        private bool? _explicitNullValueIsCleared = default!;
         /// <summary>The is_enterprise_install property</summary>
-        public bool? IsEnterpriseInstall { get; set; }
+        public bool? IsEnterpriseInstall { get => _explicitNullValueIsEnterpriseInstall; set { _explicitNullValueIsEnterpriseInstall = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_enterprise_install"); else _explicitNullProperties?.Remove("is_enterprise_install"); } }
+        private bool? _explicitNullValueIsEnterpriseInstall = default!;
         /// <summary>The team property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ViewClosedActionTeam? Team { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ViewClosedActionTeam? Team { get => _explicitNullValueTeam; set { _explicitNullValueTeam = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team"); else _explicitNullProperties?.Remove("team"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ViewClosedActionTeam? _explicitNullValueTeam = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ViewClosedActionTeam Team { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ViewClosedActionTeam Team { get => _explicitNullValueTeam; set { _explicitNullValueTeam = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team"); else _explicitNullProperties?.Remove("team"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ViewClosedActionTeam _explicitNullValueTeam = default!;
 #endif
         /// <summary>The token property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Token { get; set; }
+        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private string? _explicitNullValueToken = default!;
 #nullable restore
 #else
-        public string Token { get; set; }
+        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private string _explicitNullValueToken = default!;
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.ViewClosedType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ViewClosedType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ViewClosedType? _explicitNullValueType = default!;
         /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ViewClosedActionUser? User { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ViewClosedActionUser? User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ViewClosedActionUser? _explicitNullValueUser = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ViewClosedActionUser User { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ViewClosedActionUser User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ViewClosedActionUser _explicitNullValueUser = default!;
 #endif
         /// <summary>The view property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ViewOutput? View { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ViewOutput? View { get => _explicitNullValueView; set { _explicitNullValueView = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view"); else _explicitNullProperties?.Remove("view"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ViewOutput? _explicitNullValueView = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ViewOutput View { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ViewOutput View { get => _explicitNullValueView; set { _explicitNullValueView = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view"); else _explicitNullProperties?.Remove("view"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ViewOutput _explicitNullValueView = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ViewClosedAction"/> and sets the default values.
@@ -83,7 +114,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.ViewClosedAction CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.ViewClosedAction();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.ViewClosedAction(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -120,6 +151,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ViewClosedType>("type", Type);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ViewClosedActionUser>("user", User);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ViewOutput>("view", View);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

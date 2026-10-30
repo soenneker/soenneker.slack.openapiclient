@@ -11,18 +11,30 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SlackListsItemFieldCheckbox : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("checkbox") is { } nullNodeCheckbox && nullNodeCheckbox.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Checkbox = null;
+            if (parseNode.GetChildNode("column_id") is { } nullNodeColumnId && nullNodeColumnId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ColumnId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The checkbox property</summary>
-        public bool? Checkbox { get; set; }
+        public bool? Checkbox { get => _explicitNullValueCheckbox; set { _explicitNullValueCheckbox = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkbox"); else _explicitNullProperties?.Remove("checkbox"); } }
+        private bool? _explicitNullValueCheckbox = default!;
         /// <summary>The column_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ColumnId { get; set; }
+        public string? ColumnId { get => _explicitNullValueColumnId; set { _explicitNullValueColumnId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("column_id"); else _explicitNullProperties?.Remove("column_id"); } }
+        private string? _explicitNullValueColumnId = default!;
 #nullable restore
 #else
-        public string ColumnId { get; set; }
+        public string ColumnId { get => _explicitNullValueColumnId; set { _explicitNullValueColumnId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("column_id"); else _explicitNullProperties?.Remove("column_id"); } }
+        private string _explicitNullValueColumnId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemFieldCheckbox"/> and sets the default values.
@@ -39,7 +51,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemFieldCheckbox CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemFieldCheckbox();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemFieldCheckbox(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -62,6 +74,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("checkbox", Checkbox);
             writer.WriteStringValue("column_id", ColumnId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

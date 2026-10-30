@@ -11,32 +11,48 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SlackListsItemCellUpdateMember12 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("column_id") is { } nullNodeColumnId && nullNodeColumnId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ColumnId = null;
+            if (parseNode.GetChildNode("rich_text") is { } nullNodeRichText && nullNodeRichText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RichText = null;
+            if (parseNode.GetChildNode("row_id") is { } nullNodeRowId && nullNodeRowId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RowId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The column_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ColumnId { get; set; }
+        public string? ColumnId { get => _explicitNullValueColumnId; set { _explicitNullValueColumnId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("column_id"); else _explicitNullProperties?.Remove("column_id"); } }
+        private string? _explicitNullValueColumnId = default!;
 #nullable restore
 #else
-        public string ColumnId { get; set; }
+        public string ColumnId { get => _explicitNullValueColumnId; set { _explicitNullValueColumnId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("column_id"); else _explicitNullProperties?.Remove("column_id"); } }
+        private string _explicitNullValueColumnId = default!;
 #endif
         /// <summary>The rich_text property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock>? RichText { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock>? RichText { get => _explicitNullValueRichText; set { _explicitNullValueRichText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rich_text"); else _explicitNullProperties?.Remove("rich_text"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock>? _explicitNullValueRichText = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock> RichText { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock> RichText { get => _explicitNullValueRichText; set { _explicitNullValueRichText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rich_text"); else _explicitNullProperties?.Remove("rich_text"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock> _explicitNullValueRichText = default!;
 #endif
         /// <summary>The ID of the row to update.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RowId { get; set; }
+        public string? RowId { get => _explicitNullValueRowId; set { _explicitNullValueRowId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("row_id"); else _explicitNullProperties?.Remove("row_id"); } }
+        private string? _explicitNullValueRowId = default!;
 #nullable restore
 #else
-        public string RowId { get; set; }
+        public string RowId { get => _explicitNullValueRowId; set { _explicitNullValueRowId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("row_id"); else _explicitNullProperties?.Remove("row_id"); } }
+        private string _explicitNullValueRowId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember12"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember12 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember12();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.SlackListsItemCellUpdateMember12(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("column_id", ColumnId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock>("rich_text", RichText);
             writer.WriteStringValue("row_id", RowId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

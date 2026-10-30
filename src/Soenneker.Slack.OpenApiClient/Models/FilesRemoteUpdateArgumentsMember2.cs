@@ -11,56 +11,81 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class FilesRemoteUpdateArgumentsMember2 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("external_id") is { } nullNodeExternalId && nullNodeExternalId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalId = null;
+            if (parseNode.GetChildNode("external_url") is { } nullNodeExternalUrl && nullNodeExternalUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalUrl = null;
+            if (parseNode.GetChildNode("filetype") is { } nullNodeFiletype && nullNodeFiletype.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Filetype = null;
+            if (parseNode.GetChildNode("indexable_file_contents") is { } nullNodeIndexableFileContents && nullNodeIndexableFileContents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IndexableFileContents = null;
+            if (parseNode.GetChildNode("preview_image") is { } nullNodePreviewImage && nullNodePreviewImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviewImage = null;
+            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Creator defined GUID for the file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalId { get; set; }
+        public string? ExternalId { get => _explicitNullValueExternalId; set { _explicitNullValueExternalId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_id"); else _explicitNullProperties?.Remove("external_id"); } }
+        private string? _explicitNullValueExternalId = default!;
 #nullable restore
 #else
-        public string ExternalId { get; set; }
+        public string ExternalId { get => _explicitNullValueExternalId; set { _explicitNullValueExternalId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_id"); else _explicitNullProperties?.Remove("external_id"); } }
+        private string _explicitNullValueExternalId = default!;
 #endif
         /// <summary>URL of the remote file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalUrl { get; set; }
+        public string? ExternalUrl { get => _explicitNullValueExternalUrl; set { _explicitNullValueExternalUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_url"); else _explicitNullProperties?.Remove("external_url"); } }
+        private string? _explicitNullValueExternalUrl = default!;
 #nullable restore
 #else
-        public string ExternalUrl { get; set; }
+        public string ExternalUrl { get => _explicitNullValueExternalUrl; set { _explicitNullValueExternalUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_url"); else _explicitNullProperties?.Remove("external_url"); } }
+        private string _explicitNullValueExternalUrl = default!;
 #endif
         /// <summary>A file type identifier.[File types](https://docs.slack.dev/reference/objects/file-object) for a complete list of supported file types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Filetype { get; set; }
+        public string? Filetype { get => _explicitNullValueFiletype; set { _explicitNullValueFiletype = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filetype"); else _explicitNullProperties?.Remove("filetype"); } }
+        private string? _explicitNullValueFiletype = default!;
 #nullable restore
 #else
-        public string Filetype { get; set; }
+        public string Filetype { get => _explicitNullValueFiletype; set { _explicitNullValueFiletype = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filetype"); else _explicitNullProperties?.Remove("filetype"); } }
+        private string _explicitNullValueFiletype = default!;
 #endif
         /// <summary>A text file (txt, pdf, doc, etc.) containing textual search terms that are used to improve discoveryof the remote file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public byte[]? IndexableFileContents { get; set; }
+        public byte[]? IndexableFileContents { get => _explicitNullValueIndexableFileContents; set { _explicitNullValueIndexableFileContents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("indexable_file_contents"); else _explicitNullProperties?.Remove("indexable_file_contents"); } }
+        private byte[]? _explicitNullValueIndexableFileContents = default!;
 #nullable restore
 #else
-        public byte[] IndexableFileContents { get; set; }
+        public byte[] IndexableFileContents { get => _explicitNullValueIndexableFileContents; set { _explicitNullValueIndexableFileContents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("indexable_file_contents"); else _explicitNullProperties?.Remove("indexable_file_contents"); } }
+        private byte[] _explicitNullValueIndexableFileContents = default!;
 #endif
         /// <summary>Preview of the document.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public byte[]? PreviewImage { get; set; }
+        public byte[]? PreviewImage { get => _explicitNullValuePreviewImage; set { _explicitNullValuePreviewImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preview_image"); else _explicitNullProperties?.Remove("preview_image"); } }
+        private byte[]? _explicitNullValuePreviewImage = default!;
 #nullable restore
 #else
-        public byte[] PreviewImage { get; set; }
+        public byte[] PreviewImage { get => _explicitNullValuePreviewImage; set { _explicitNullValuePreviewImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preview_image"); else _explicitNullProperties?.Remove("preview_image"); } }
+        private byte[] _explicitNullValuePreviewImage = default!;
 #endif
         /// <summary>Title of the file being shared.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get; set; }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get; set; }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteUpdateArgumentsMember2"/> and sets the default values.
@@ -77,7 +102,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteUpdateArgumentsMember2 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteUpdateArgumentsMember2();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteUpdateArgumentsMember2(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -108,6 +133,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteByteArrayValue("indexable_file_contents", IndexableFileContents);
             writer.WriteByteArrayValue("preview_image", PreviewImage);
             writer.WriteStringValue("title", Title);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

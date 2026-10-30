@@ -11,28 +11,45 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class Canvas : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("file_id") is { } nullNodeFileId && nullNodeFileId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileId = null;
+            if (parseNode.GetChildNode("is_empty") is { } nullNodeIsEmpty && nullNodeIsEmpty.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsEmpty = null;
+            if (parseNode.GetChildNode("is_migrated") is { } nullNodeIsMigrated && nullNodeIsMigrated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsMigrated = null;
+            if (parseNode.GetChildNode("quip_thread_id") is { } nullNodeQuipThreadId && nullNodeQuipThreadId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QuipThreadId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The file_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FileId { get; set; }
+        public string? FileId { get => _explicitNullValueFileId; set { _explicitNullValueFileId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_id"); else _explicitNullProperties?.Remove("file_id"); } }
+        private string? _explicitNullValueFileId = default!;
 #nullable restore
 #else
-        public string FileId { get; set; }
+        public string FileId { get => _explicitNullValueFileId; set { _explicitNullValueFileId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_id"); else _explicitNullProperties?.Remove("file_id"); } }
+        private string _explicitNullValueFileId = default!;
 #endif
         /// <summary>The is_empty property</summary>
-        public bool? IsEmpty { get; set; }
+        public bool? IsEmpty { get => _explicitNullValueIsEmpty; set { _explicitNullValueIsEmpty = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_empty"); else _explicitNullProperties?.Remove("is_empty"); } }
+        private bool? _explicitNullValueIsEmpty = default!;
         /// <summary>The is_migrated property</summary>
-        public bool? IsMigrated { get; set; }
+        public bool? IsMigrated { get => _explicitNullValueIsMigrated; set { _explicitNullValueIsMigrated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_migrated"); else _explicitNullProperties?.Remove("is_migrated"); } }
+        private bool? _explicitNullValueIsMigrated = default!;
         /// <summary>The quip_thread_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? QuipThreadId { get; set; }
+        public string? QuipThreadId { get => _explicitNullValueQuipThreadId; set { _explicitNullValueQuipThreadId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quip_thread_id"); else _explicitNullProperties?.Remove("quip_thread_id"); } }
+        private string? _explicitNullValueQuipThreadId = default!;
 #nullable restore
 #else
-        public string QuipThreadId { get; set; }
+        public string QuipThreadId { get => _explicitNullValueQuipThreadId; set { _explicitNullValueQuipThreadId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quip_thread_id"); else _explicitNullProperties?.Remove("quip_thread_id"); } }
+        private string _explicitNullValueQuipThreadId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Canvas"/> and sets the default values.
@@ -49,7 +66,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.Canvas CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.Canvas();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.Canvas(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +93,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteBoolValue("is_empty", IsEmpty);
             writer.WriteBoolValue("is_migrated", IsMigrated);
             writer.WriteStringValue("quip_thread_id", QuipThreadId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

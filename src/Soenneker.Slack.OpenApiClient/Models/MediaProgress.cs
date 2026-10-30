@@ -11,17 +11,32 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class MediaProgress : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("duration_ms") is { } nullNodeDurationMs && nullNodeDurationMs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DurationMs = null;
+            if (parseNode.GetChildNode("max_offset_ms") is { } nullNodeMaxOffsetMs && nullNodeMaxOffsetMs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxOffsetMs = null;
+            if (parseNode.GetChildNode("media_watched") is { } nullNodeMediaWatched && nullNodeMediaWatched.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaWatched = null;
+            if (parseNode.GetChildNode("offset_ms") is { } nullNodeOffsetMs && nullNodeOffsetMs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OffsetMs = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The duration_ms property</summary>
-        public double? DurationMs { get; set; }
+        public double? DurationMs { get => _explicitNullValueDurationMs; set { _explicitNullValueDurationMs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration_ms"); else _explicitNullProperties?.Remove("duration_ms"); } }
+        private double? _explicitNullValueDurationMs = default!;
         /// <summary>The max_offset_ms property</summary>
-        public double? MaxOffsetMs { get; set; }
+        public double? MaxOffsetMs { get => _explicitNullValueMaxOffsetMs; set { _explicitNullValueMaxOffsetMs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_offset_ms"); else _explicitNullProperties?.Remove("max_offset_ms"); } }
+        private double? _explicitNullValueMaxOffsetMs = default!;
         /// <summary>The media_watched property</summary>
-        public bool? MediaWatched { get; set; }
+        public bool? MediaWatched { get => _explicitNullValueMediaWatched; set { _explicitNullValueMediaWatched = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_watched"); else _explicitNullProperties?.Remove("media_watched"); } }
+        private bool? _explicitNullValueMediaWatched = default!;
         /// <summary>The offset_ms property</summary>
-        public double? OffsetMs { get; set; }
+        public double? OffsetMs { get => _explicitNullValueOffsetMs; set { _explicitNullValueOffsetMs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offset_ms"); else _explicitNullProperties?.Remove("offset_ms"); } }
+        private double? _explicitNullValueOffsetMs = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.MediaProgress"/> and sets the default values.
         /// </summary>
@@ -37,7 +52,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.MediaProgress CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.MediaProgress();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.MediaProgress(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -64,6 +79,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("max_offset_ms", MaxOffsetMs);
             writer.WriteBoolValue("media_watched", MediaWatched);
             writer.WriteDoubleValue("offset_ms", OffsetMs);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

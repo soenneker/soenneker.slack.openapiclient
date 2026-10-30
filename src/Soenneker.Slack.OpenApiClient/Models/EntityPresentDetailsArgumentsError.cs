@@ -12,48 +12,70 @@ namespace Soenneker.Slack.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EntityPresentDetailsArgumentsError : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("actions") is { } nullNodeActions && nullNodeActions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Actions = null;
+            if (parseNode.GetChildNode("custom_message") is { } nullNodeCustomMessage && nullNodeCustomMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomMessage = null;
+            if (parseNode.GetChildNode("custom_title") is { } nullNodeCustomTitle && nullNodeCustomTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomTitle = null;
+            if (parseNode.GetChildNode("message_format") is { } nullNodeMessageFormat && nullNodeMessageFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessageFormat = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+        }
+
         /// <summary>Set of action buttons to be shown in case of a specific error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.EntityActionButton>? Actions { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.EntityActionButton>? Actions { get => _explicitNullValueActions; set { _explicitNullValueActions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actions"); else _explicitNullProperties?.Remove("actions"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.EntityActionButton>? _explicitNullValueActions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.EntityActionButton> Actions { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.EntityActionButton> Actions { get => _explicitNullValueActions; set { _explicitNullValueActions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actions"); else _explicitNullProperties?.Remove("actions"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.EntityActionButton> _explicitNullValueActions = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If status is &apos;custom&apos;, you can use this field to provide a message to the client.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomMessage { get; set; }
+        public string? CustomMessage { get => _explicitNullValueCustomMessage; set { _explicitNullValueCustomMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_message"); else _explicitNullProperties?.Remove("custom_message"); } }
+        private string? _explicitNullValueCustomMessage = default!;
 #nullable restore
 #else
-        public string CustomMessage { get; set; }
+        public string CustomMessage { get => _explicitNullValueCustomMessage; set { _explicitNullValueCustomMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_message"); else _explicitNullProperties?.Remove("custom_message"); } }
+        private string _explicitNullValueCustomMessage = default!;
 #endif
         /// <summary>If status is &apos;custom&apos;, you can use this field to provide a title to the client.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomTitle { get; set; }
+        public string? CustomTitle { get => _explicitNullValueCustomTitle; set { _explicitNullValueCustomTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_title"); else _explicitNullProperties?.Remove("custom_title"); } }
+        private string? _explicitNullValueCustomTitle = default!;
 #nullable restore
 #else
-        public string CustomTitle { get; set; }
+        public string CustomTitle { get => _explicitNullValueCustomTitle; set { _explicitNullValueCustomTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_title"); else _explicitNullProperties?.Remove("custom_title"); } }
+        private string _explicitNullValueCustomTitle = default!;
 #endif
         /// <summary>String format, eg. &apos;markdown&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MessageFormat { get; set; }
+        public string? MessageFormat { get => _explicitNullValueMessageFormat; set { _explicitNullValueMessageFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message_format"); else _explicitNullProperties?.Remove("message_format"); } }
+        private string? _explicitNullValueMessageFormat = default!;
 #nullable restore
 #else
-        public string MessageFormat { get; set; }
+        public string MessageFormat { get => _explicitNullValueMessageFormat; set { _explicitNullValueMessageFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message_format"); else _explicitNullProperties?.Remove("message_format"); } }
+        private string _explicitNullValueMessageFormat = default!;
 #endif
         /// <summary>Error status indicating why the entity could not be presented.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Status { get; set; }
+        public string? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private string? _explicitNullValueStatus = default!;
 #nullable restore
 #else
-        public string Status { get; set; }
+        public string Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private string _explicitNullValueStatus = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.EntityPresentDetailsArgumentsError"/> and sets the default values.
@@ -70,7 +92,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.EntityPresentDetailsArgumentsError CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.EntityPresentDetailsArgumentsError();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.EntityPresentDetailsArgumentsError(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,6 +121,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("custom_title", CustomTitle);
             writer.WriteStringValue("message_format", MessageFormat);
             writer.WriteStringValue("status", Status);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

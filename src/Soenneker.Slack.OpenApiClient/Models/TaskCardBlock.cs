@@ -11,61 +11,90 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TaskCardBlock : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("block_id") is { } nullNodeBlockId && nullNodeBlockId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockId = null;
+            if (parseNode.GetChildNode("details") is { } nullNodeDetails && nullNodeDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Details = null;
+            if (parseNode.GetChildNode("output") is { } nullNodeOutput && nullNodeOutput.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Output = null;
+            if (parseNode.GetChildNode("sources") is { } nullNodeSources && nullNodeSources.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sources = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("task_id") is { } nullNodeTaskId && nullNodeTaskId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskId = null;
+            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A string acting as a unique identifier for a block. If not specified, a `block_id` will be generated.You can use this `block_id` when you receive an interaction payload to[identify the source of the action](https://docs.slack.dev/interactivity/handling-user-interaction#payloads).Maximum length for this field is 255 characters. `block_id` should be unique for each message and each iteration ofa message. If a message is updated, use a new `block_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BlockId { get; set; }
+        public string? BlockId { get => _explicitNullValueBlockId; set { _explicitNullValueBlockId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("block_id"); else _explicitNullProperties?.Remove("block_id"); } }
+        private string? _explicitNullValueBlockId = default!;
 #nullable restore
 #else
-        public string BlockId { get; set; }
+        public string BlockId { get => _explicitNullValueBlockId; set { _explicitNullValueBlockId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("block_id"); else _explicitNullProperties?.Remove("block_id"); } }
+        private string _explicitNullValueBlockId = default!;
 #endif
         /// <summary>Details of the task in the form of a single &quot;rich_text&quot; entity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock? Details { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock? Details { get => _explicitNullValueDetails; set { _explicitNullValueDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details"); else _explicitNullProperties?.Remove("details"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock? _explicitNullValueDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock Details { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock Details { get => _explicitNullValueDetails; set { _explicitNullValueDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details"); else _explicitNullProperties?.Remove("details"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock _explicitNullValueDetails = default!;
 #endif
         /// <summary>Output of the task in the form of a single &quot;rich_text&quot; entity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock? Output { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock? Output { get => _explicitNullValueOutput; set { _explicitNullValueOutput = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("output"); else _explicitNullProperties?.Remove("output"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock? _explicitNullValueOutput = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock Output { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock Output { get => _explicitNullValueOutput; set { _explicitNullValueOutput = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("output"); else _explicitNullProperties?.Remove("output"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.RichTextBlock _explicitNullValueOutput = default!;
 #endif
         /// <summary>Array of URL source elements used to generate a response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.UrlSourceElement>? Sources { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.UrlSourceElement>? Sources { get => _explicitNullValueSources; set { _explicitNullValueSources = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sources"); else _explicitNullProperties?.Remove("sources"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.UrlSourceElement>? _explicitNullValueSources = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.UrlSourceElement> Sources { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.UrlSourceElement> Sources { get => _explicitNullValueSources; set { _explicitNullValueSources = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sources"); else _explicitNullProperties?.Remove("sources"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.UrlSourceElement> _explicitNullValueSources = default!;
 #endif
         /// <summary>The state of a task. Can be &quot;pending&quot;, &quot;in_progress&quot;, &quot;complete&quot;, or &quot;error&quot;.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.TaskCardBlockStatus? Status { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.TaskCardBlockStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.TaskCardBlockStatus? _explicitNullValueStatus = default!;
         /// <summary>ID for the task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaskId { get; set; }
+        public string? TaskId { get => _explicitNullValueTaskId; set { _explicitNullValueTaskId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("task_id"); else _explicitNullProperties?.Remove("task_id"); } }
+        private string? _explicitNullValueTaskId = default!;
 #nullable restore
 #else
-        public string TaskId { get; set; }
+        public string TaskId { get => _explicitNullValueTaskId; set { _explicitNullValueTaskId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("task_id"); else _explicitNullProperties?.Remove("task_id"); } }
+        private string _explicitNullValueTaskId = default!;
 #endif
         /// <summary>Title of the task in plain text.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get; set; }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get; set; }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>The type of block. For this block, type will always be `task_card`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.TaskCardType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.TaskCardType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.TaskCardType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.TaskCardBlock"/> and sets the default values.
         /// </summary>
@@ -81,7 +110,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.TaskCardBlock CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.TaskCardBlock();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.TaskCardBlock(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -116,6 +145,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("task_id", TaskId);
             writer.WriteStringValue("title", Title);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.TaskCardType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

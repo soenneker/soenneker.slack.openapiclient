@@ -12,7 +12,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AdminAnalyticsGetFileResponseAllOf2FileDataItem : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminAnalyticsMemberDetails"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -46,10 +51,19 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Slack.OpenApiClient.Models.AdminAnalyticsGetFileResponseAllOf2FileDataItem();
-            result.AdminAnalyticsMemberDetails = new global::Soenneker.Slack.OpenApiClient.Models.AdminAnalyticsMemberDetails();
-            result.AdminAnalyticsPublicChannelDetails = new global::Soenneker.Slack.OpenApiClient.Models.AdminAnalyticsPublicChannelDetails();
-            result.AdminAnalyticsPublicChannelMetadataDetails = new global::Soenneker.Slack.OpenApiClient.Models.AdminAnalyticsPublicChannelMetadataDetails();
-            return result;
+            
+            
+            
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("enterprise_id") != null && parseNode.GetChildNode("team_id") != null && parseNode.GetChildNode("date") != null && parseNode.GetChildNode("user_id") != null && parseNode.GetChildNode("email_address") != null && parseNode.GetChildNode("is_guest") != null && parseNode.GetChildNode("is_billable_seat") != null && parseNode.GetChildNode("is_active") != null && parseNode.GetChildNode("is_active_ios") != null && parseNode.GetChildNode("is_active_android") != null && parseNode.GetChildNode("is_active_desktop") != null && parseNode.GetChildNode("reactions_added_count") != null && parseNode.GetChildNode("messages_posted_count") != null && parseNode.GetChildNode("channel_messages_posted_count") != null && parseNode.GetChildNode("files_added_count") != null && parseNode.GetChildNode("is_active_apps") != null && parseNode.GetChildNode("is_active_workflows") != null && parseNode.GetChildNode("is_active_slack_connect") != null && parseNode.GetChildNode("total_calls_count") != null && parseNode.GetChildNode("slack_calls_count") != null && parseNode.GetChildNode("slack_huddles_count") != null && parseNode.GetChildNode("search_count") != null && parseNode.GetChildNode("date_claimed") != null))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("enterprise_id") != null && parseNode.GetChildNode("originating_team") != null && parseNode.GetChildNode("channel_id") != null && parseNode.GetChildNode("date_created") != null && parseNode.GetChildNode("date_last_active") != null && parseNode.GetChildNode("total_members_count") != null && parseNode.GetChildNode("full_members_count") != null && parseNode.GetChildNode("guest_member_count") != null && parseNode.GetChildNode("messages_posted_count") != null && parseNode.GetChildNode("messages_posted_by_members_count") != null && parseNode.GetChildNode("members_who_viewed_count") != null && parseNode.GetChildNode("members_who_posted_count") != null && parseNode.GetChildNode("reactions_added_count") != null && parseNode.GetChildNode("visibility") != null && parseNode.GetChildNode("channel_type") != null && parseNode.GetChildNode("is_shared_externally") != null && parseNode.GetChildNode("shared_with") != null && parseNode.GetChildNode("externally_shared_with_organizations") != null && parseNode.GetChildNode("date") != null))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("channel_id") != null && parseNode.GetChildNode("name") != null && parseNode.GetChildNode("topic") != null && parseNode.GetChildNode("description") != null && parseNode.GetChildNode("date") != null))();
+            if (result.AdminAnalyticsMemberDetails == null && result.AdminAnalyticsPublicChannelDetails == null && result.AdminAnalyticsPublicChannelMetadataDetails == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2) result.AdminAnalyticsMemberDetails = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.AdminAnalyticsMemberDetails(), parseNode);
+            if (result.AdminAnalyticsMemberDetails == null && result.AdminAnalyticsPublicChannelDetails == null && result.AdminAnalyticsPublicChannelMetadataDetails == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2) result.AdminAnalyticsPublicChannelDetails = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.AdminAnalyticsPublicChannelDetails(), parseNode);
+            if (result.AdminAnalyticsMemberDetails == null && result.AdminAnalyticsPublicChannelDetails == null && result.AdminAnalyticsPublicChannelMetadataDetails == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1) result.AdminAnalyticsPublicChannelMetadataDetails = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.AdminAnalyticsPublicChannelMetadataDetails(), parseNode);
+            if (result.AdminAnalyticsMemberDetails == null && result.AdminAnalyticsPublicChannelDetails == null && result.AdminAnalyticsPublicChannelMetadataDetails == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +83,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (AdminAnalyticsMemberDetails == null && AdminAnalyticsPublicChannelDetails == null && AdminAnalyticsPublicChannelMetadataDetails == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (AdminAnalyticsMemberDetails != null && AdminAnalyticsPublicChannelDetails == null && AdminAnalyticsPublicChannelMetadataDetails == null) { if (AdminAnalyticsMemberDetails is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AdminAnalyticsMemberDetails); return; }
+            if (AdminAnalyticsPublicChannelDetails != null && AdminAnalyticsMemberDetails == null && AdminAnalyticsPublicChannelMetadataDetails == null) { if (AdminAnalyticsPublicChannelDetails is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AdminAnalyticsPublicChannelDetails); return; }
+            if (AdminAnalyticsPublicChannelMetadataDetails != null && AdminAnalyticsMemberDetails == null && AdminAnalyticsPublicChannelDetails == null) { if (AdminAnalyticsPublicChannelMetadataDetails is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AdminAnalyticsPublicChannelMetadataDetails); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminAnalyticsMemberDetails>(null, AdminAnalyticsMemberDetails, AdminAnalyticsPublicChannelDetails, AdminAnalyticsPublicChannelMetadataDetails);
         }

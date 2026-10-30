@@ -51,7 +51,7 @@ namespace Soenneker.Slack.OpenApiClient.Api.AppsConnectionsOpen
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Slack.OpenApiClient.Models.AppsConnectionsOpenResponse>(requestInfo, global::Soenneker.Slack.OpenApiClient.Models.AppsConnectionsOpenResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Slack.OpenApiClient.Models.AppsConnectionsOpenResponse>(requestInfo, global::Soenneker.Slack.OpenApiClient.Models.AppsConnectionsOpenResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Generate a temporary Socket Mode WebSocket URL that your app can connect to in order to receive events and interactive payloads over.

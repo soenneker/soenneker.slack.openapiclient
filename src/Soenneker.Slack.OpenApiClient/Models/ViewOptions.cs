@@ -11,32 +11,48 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ViewOptions : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("calendar_field") is { } nullNodeCalendarField && nullNodeCalendarField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CalendarField = null;
+            if (parseNode.GetChildNode("cover_field") is { } nullNodeCoverField && nullNodeCoverField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CoverField = null;
+            if (parseNode.GetChildNode("cover_fit") is { } nullNodeCoverFit && nullNodeCoverFit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CoverFit = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The calendar_field property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CalendarField { get; set; }
+        public string? CalendarField { get => _explicitNullValueCalendarField; set { _explicitNullValueCalendarField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calendar_field"); else _explicitNullProperties?.Remove("calendar_field"); } }
+        private string? _explicitNullValueCalendarField = default!;
 #nullable restore
 #else
-        public string CalendarField { get; set; }
+        public string CalendarField { get => _explicitNullValueCalendarField; set { _explicitNullValueCalendarField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calendar_field"); else _explicitNullProperties?.Remove("calendar_field"); } }
+        private string _explicitNullValueCalendarField = default!;
 #endif
         /// <summary>The cover_field property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CoverField { get; set; }
+        public string? CoverField { get => _explicitNullValueCoverField; set { _explicitNullValueCoverField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cover_field"); else _explicitNullProperties?.Remove("cover_field"); } }
+        private string? _explicitNullValueCoverField = default!;
 #nullable restore
 #else
-        public string CoverField { get; set; }
+        public string CoverField { get => _explicitNullValueCoverField; set { _explicitNullValueCoverField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cover_field"); else _explicitNullProperties?.Remove("cover_field"); } }
+        private string _explicitNullValueCoverField = default!;
 #endif
         /// <summary>The cover_fit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CoverFit { get; set; }
+        public string? CoverFit { get => _explicitNullValueCoverFit; set { _explicitNullValueCoverFit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cover_fit"); else _explicitNullProperties?.Remove("cover_fit"); } }
+        private string? _explicitNullValueCoverFit = default!;
 #nullable restore
 #else
-        public string CoverFit { get; set; }
+        public string CoverFit { get => _explicitNullValueCoverFit; set { _explicitNullValueCoverFit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cover_fit"); else _explicitNullProperties?.Remove("cover_fit"); } }
+        private string _explicitNullValueCoverFit = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ViewOptions"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.ViewOptions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.ViewOptions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.ViewOptions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("calendar_field", CalendarField);
             writer.WriteStringValue("cover_field", CoverField);
             writer.WriteStringValue("cover_fit", CoverFit);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,21 +11,40 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DndUpdatedEventDndStatus : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("dnd_enabled") is { } nullNodeDndEnabled && nullNodeDndEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DndEnabled = null;
+            if (parseNode.GetChildNode("next_dnd_end_ts") is { } nullNodeNextDndEndTs && nullNodeNextDndEndTs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextDndEndTs = null;
+            if (parseNode.GetChildNode("next_dnd_start_ts") is { } nullNodeNextDndStartTs && nullNodeNextDndStartTs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextDndStartTs = null;
+            if (parseNode.GetChildNode("snooze_enabled") is { } nullNodeSnoozeEnabled && nullNodeSnoozeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SnoozeEnabled = null;
+            if (parseNode.GetChildNode("snooze_endtime") is { } nullNodeSnoozeEndtime && nullNodeSnoozeEndtime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SnoozeEndtime = null;
+            if (parseNode.GetChildNode("snooze_remaining") is { } nullNodeSnoozeRemaining && nullNodeSnoozeRemaining.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SnoozeRemaining = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The dnd_enabled property</summary>
-        public bool? DndEnabled { get; set; }
+        public bool? DndEnabled { get => _explicitNullValueDndEnabled; set { _explicitNullValueDndEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dnd_enabled"); else _explicitNullProperties?.Remove("dnd_enabled"); } }
+        private bool? _explicitNullValueDndEnabled = default!;
         /// <summary>The next_dnd_end_ts property</summary>
-        public double? NextDndEndTs { get; set; }
+        public double? NextDndEndTs { get => _explicitNullValueNextDndEndTs; set { _explicitNullValueNextDndEndTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_dnd_end_ts"); else _explicitNullProperties?.Remove("next_dnd_end_ts"); } }
+        private double? _explicitNullValueNextDndEndTs = default!;
         /// <summary>The next_dnd_start_ts property</summary>
-        public double? NextDndStartTs { get; set; }
+        public double? NextDndStartTs { get => _explicitNullValueNextDndStartTs; set { _explicitNullValueNextDndStartTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_dnd_start_ts"); else _explicitNullProperties?.Remove("next_dnd_start_ts"); } }
+        private double? _explicitNullValueNextDndStartTs = default!;
         /// <summary>The snooze_enabled property</summary>
-        public bool? SnoozeEnabled { get; set; }
+        public bool? SnoozeEnabled { get => _explicitNullValueSnoozeEnabled; set { _explicitNullValueSnoozeEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("snooze_enabled"); else _explicitNullProperties?.Remove("snooze_enabled"); } }
+        private bool? _explicitNullValueSnoozeEnabled = default!;
         /// <summary>The snooze_endtime property</summary>
-        public double? SnoozeEndtime { get; set; }
+        public double? SnoozeEndtime { get => _explicitNullValueSnoozeEndtime; set { _explicitNullValueSnoozeEndtime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("snooze_endtime"); else _explicitNullProperties?.Remove("snooze_endtime"); } }
+        private double? _explicitNullValueSnoozeEndtime = default!;
         /// <summary>The snooze_remaining property</summary>
-        public double? SnoozeRemaining { get; set; }
+        public double? SnoozeRemaining { get => _explicitNullValueSnoozeRemaining; set { _explicitNullValueSnoozeRemaining = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("snooze_remaining"); else _explicitNullProperties?.Remove("snooze_remaining"); } }
+        private double? _explicitNullValueSnoozeRemaining = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.DndUpdatedEventDndStatus"/> and sets the default values.
         /// </summary>
@@ -41,7 +60,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.DndUpdatedEventDndStatus CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.DndUpdatedEventDndStatus();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.DndUpdatedEventDndStatus(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +91,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteBoolValue("snooze_enabled", SnoozeEnabled);
             writer.WriteDoubleValue("snooze_endtime", SnoozeEndtime);
             writer.WriteDoubleValue("snooze_remaining", SnoozeRemaining);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,26 +11,41 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ManifestInteractivity : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("is_enabled") is { } nullNodeIsEnabled && nullNodeIsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsEnabled = null;
+            if (parseNode.GetChildNode("message_menu_options_url") is { } nullNodeMessageMenuOptionsUrl && nullNodeMessageMenuOptionsUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessageMenuOptionsUrl = null;
+            if (parseNode.GetChildNode("request_url") is { } nullNodeRequestUrl && nullNodeRequestUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestUrl = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A boolean that specifies whether or not interactivity features are enabled.</summary>
-        public bool? IsEnabled { get; set; }
+        public bool? IsEnabled { get => _explicitNullValueIsEnabled; set { _explicitNullValueIsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_enabled"); else _explicitNullProperties?.Remove("is_enabled"); } }
+        private bool? _explicitNullValueIsEnabled = default!;
         /// <summary>A string containing the full https URL that acts as the [interactive Options Load URL](https://docs.slack.dev/interactivity/handling-user-interaction).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MessageMenuOptionsUrl { get; set; }
+        public string? MessageMenuOptionsUrl { get => _explicitNullValueMessageMenuOptionsUrl; set { _explicitNullValueMessageMenuOptionsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message_menu_options_url"); else _explicitNullProperties?.Remove("message_menu_options_url"); } }
+        private string? _explicitNullValueMessageMenuOptionsUrl = default!;
 #nullable restore
 #else
-        public string MessageMenuOptionsUrl { get; set; }
+        public string MessageMenuOptionsUrl { get => _explicitNullValueMessageMenuOptionsUrl; set { _explicitNullValueMessageMenuOptionsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message_menu_options_url"); else _explicitNullProperties?.Remove("message_menu_options_url"); } }
+        private string _explicitNullValueMessageMenuOptionsUrl = default!;
 #endif
         /// <summary>A string containing the full https URL that acts as the [interactive Request URL](https://docs.slack.dev/interactivity/handling-user-interaction).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RequestUrl { get; set; }
+        public string? RequestUrl { get => _explicitNullValueRequestUrl; set { _explicitNullValueRequestUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_url"); else _explicitNullProperties?.Remove("request_url"); } }
+        private string? _explicitNullValueRequestUrl = default!;
 #nullable restore
 #else
-        public string RequestUrl { get; set; }
+        public string RequestUrl { get => _explicitNullValueRequestUrl; set { _explicitNullValueRequestUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_url"); else _explicitNullProperties?.Remove("request_url"); } }
+        private string _explicitNullValueRequestUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ManifestInteractivity"/> and sets the default values.
@@ -47,7 +62,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.ManifestInteractivity CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.ManifestInteractivity();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.ManifestInteractivity(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +87,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteBoolValue("is_enabled", IsEnabled);
             writer.WriteStringValue("message_menu_options_url", MessageMenuOptionsUrl);
             writer.WriteStringValue("request_url", RequestUrl);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

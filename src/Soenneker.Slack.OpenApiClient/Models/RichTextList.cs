@@ -11,25 +11,43 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class RichTextList : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("border") is { } nullNodeBorder && nullNodeBorder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Border = null;
+            if (parseNode.GetChildNode("elements") is { } nullNodeElements && nullNodeElements.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Elements = null;
+            if (parseNode.GetChildNode("indent") is { } nullNodeIndent && nullNodeIndent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Indent = null;
+            if (parseNode.GetChildNode("style") is { } nullNodeStyle && nullNodeStyle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Style = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether to render a quote-block-like border on the inline side of the list. `0` renders no borderwhile `1` renders a border.</summary>
-        public double? Border { get; set; }
+        public double? Border { get => _explicitNullValueBorder; set { _explicitNullValueBorder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("border"); else _explicitNullProperties?.Remove("border"); } }
+        private double? _explicitNullValueBorder = default!;
         /// <summary>An array of [RichTextSection](RichTextSection) elements comprising each list item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.RichTextSection>? Elements { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.RichTextSection>? Elements { get => _explicitNullValueElements; set { _explicitNullValueElements = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elements"); else _explicitNullProperties?.Remove("elements"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.RichTextSection>? _explicitNullValueElements = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.RichTextSection> Elements { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.RichTextSection> Elements { get => _explicitNullValueElements; set { _explicitNullValueElements = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elements"); else _explicitNullProperties?.Remove("elements"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.RichTextSection> _explicitNullValueElements = default!;
 #endif
         /// <summary>The style of the list points. Can be a number from `0` (default) to `8`. Yields a different characteror characters rendered as the list points. Also affected by the `style` property.</summary>
-        public double? Indent { get; set; }
+        public double? Indent { get => _explicitNullValueIndent; set { _explicitNullValueIndent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("indent"); else _explicitNullProperties?.Remove("indent"); } }
+        private double? _explicitNullValueIndent = default!;
         /// <summary>The type of list. Can be either `bullet` (the list points are all rendered the same way) or `ordered`(the list points increase numerically from 1).</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextListStyle? Style { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.RichTextListStyle? Style { get => _explicitNullValueStyle; set { _explicitNullValueStyle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("style"); else _explicitNullProperties?.Remove("style"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.RichTextListStyle? _explicitNullValueStyle = default!;
         /// <summary>The type of element. In this case `type` is always `rich_text_list`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.RichTextListType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.RichTextListType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.RichTextListType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.RichTextList"/> and sets the default values.
         /// </summary>
@@ -45,7 +63,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.RichTextList CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.RichTextList();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.RichTextList(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -74,6 +92,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("indent", Indent);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextListStyle>("style", Style);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextListType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

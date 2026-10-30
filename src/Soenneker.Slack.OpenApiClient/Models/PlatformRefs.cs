@@ -11,32 +11,48 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PlatformRefs : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("bot_created_by") is { } nullNodeBotCreatedBy && nullNodeBotCreatedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotCreatedBy = null;
+            if (parseNode.GetChildNode("bot_deleted_by") is { } nullNodeBotDeletedBy && nullNodeBotDeletedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotDeletedBy = null;
+            if (parseNode.GetChildNode("bot_updated_by") is { } nullNodeBotUpdatedBy && nullNodeBotUpdatedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotUpdatedBy = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The bot_created_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BotCreatedBy { get; set; }
+        public string? BotCreatedBy { get => _explicitNullValueBotCreatedBy; set { _explicitNullValueBotCreatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_created_by"); else _explicitNullProperties?.Remove("bot_created_by"); } }
+        private string? _explicitNullValueBotCreatedBy = default!;
 #nullable restore
 #else
-        public string BotCreatedBy { get; set; }
+        public string BotCreatedBy { get => _explicitNullValueBotCreatedBy; set { _explicitNullValueBotCreatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_created_by"); else _explicitNullProperties?.Remove("bot_created_by"); } }
+        private string _explicitNullValueBotCreatedBy = default!;
 #endif
         /// <summary>The bot_deleted_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BotDeletedBy { get; set; }
+        public string? BotDeletedBy { get => _explicitNullValueBotDeletedBy; set { _explicitNullValueBotDeletedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_deleted_by"); else _explicitNullProperties?.Remove("bot_deleted_by"); } }
+        private string? _explicitNullValueBotDeletedBy = default!;
 #nullable restore
 #else
-        public string BotDeletedBy { get; set; }
+        public string BotDeletedBy { get => _explicitNullValueBotDeletedBy; set { _explicitNullValueBotDeletedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_deleted_by"); else _explicitNullProperties?.Remove("bot_deleted_by"); } }
+        private string _explicitNullValueBotDeletedBy = default!;
 #endif
         /// <summary>The bot_updated_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BotUpdatedBy { get; set; }
+        public string? BotUpdatedBy { get => _explicitNullValueBotUpdatedBy; set { _explicitNullValueBotUpdatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_updated_by"); else _explicitNullProperties?.Remove("bot_updated_by"); } }
+        private string? _explicitNullValueBotUpdatedBy = default!;
 #nullable restore
 #else
-        public string BotUpdatedBy { get; set; }
+        public string BotUpdatedBy { get => _explicitNullValueBotUpdatedBy; set { _explicitNullValueBotUpdatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_updated_by"); else _explicitNullProperties?.Remove("bot_updated_by"); } }
+        private string _explicitNullValueBotUpdatedBy = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.PlatformRefs"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.PlatformRefs CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.PlatformRefs();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.PlatformRefs(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("bot_created_by", BotCreatedBy);
             writer.WriteStringValue("bot_deleted_by", BotDeletedBy);
             writer.WriteStringValue("bot_updated_by", BotUpdatedBy);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

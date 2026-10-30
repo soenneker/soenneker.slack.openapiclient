@@ -11,55 +11,83 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AcceptScInvites : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("accept_in_workspace_ids") is { } nullNodeAcceptInWorkspaceIds && nullNodeAcceptInWorkspaceIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptInWorkspaceIds = null;
+            if (parseNode.GetChildNode("accept_private") is { } nullNodeAcceptPrivate && nullNodeAcceptPrivate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptPrivate = null;
+            if (parseNode.GetChildNode("actor") is { } nullNodeActor && nullNodeActor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Actor = null;
+            if (parseNode.GetChildNode("date_update") is { } nullNodeDateUpdate && nullNodeDateUpdate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateUpdate = null;
+            if (parseNode.GetChildNode("invalid_workspace_ids") is { } nullNodeInvalidWorkspaceIds && nullNodeInvalidWorkspaceIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvalidWorkspaceIds = null;
+            if (parseNode.GetChildNode("source") is { } nullNodeSource && nullNodeSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Source = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("use_allowed_workspaces") is { } nullNodeUseAllowedWorkspaces && nullNodeUseAllowedWorkspaces.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseAllowedWorkspaces = null;
+        }
+
         /// <summary>The accept_in_workspace_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AcceptInWorkspaceIds { get; set; }
+        public List<string>? AcceptInWorkspaceIds { get => _explicitNullValueAcceptInWorkspaceIds; set { _explicitNullValueAcceptInWorkspaceIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accept_in_workspace_ids"); else _explicitNullProperties?.Remove("accept_in_workspace_ids"); } }
+        private List<string>? _explicitNullValueAcceptInWorkspaceIds = default!;
 #nullable restore
 #else
-        public List<string> AcceptInWorkspaceIds { get; set; }
+        public List<string> AcceptInWorkspaceIds { get => _explicitNullValueAcceptInWorkspaceIds; set { _explicitNullValueAcceptInWorkspaceIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accept_in_workspace_ids"); else _explicitNullProperties?.Remove("accept_in_workspace_ids"); } }
+        private List<string> _explicitNullValueAcceptInWorkspaceIds = default!;
 #endif
         /// <summary>The accept_private property</summary>
-        public bool? AcceptPrivate { get; set; }
+        public bool? AcceptPrivate { get => _explicitNullValueAcceptPrivate; set { _explicitNullValueAcceptPrivate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accept_private"); else _explicitNullProperties?.Remove("accept_private"); } }
+        private bool? _explicitNullValueAcceptPrivate = default!;
         /// <summary>The actor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Actor { get; set; }
+        public string? Actor { get => _explicitNullValueActor; set { _explicitNullValueActor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actor"); else _explicitNullProperties?.Remove("actor"); } }
+        private string? _explicitNullValueActor = default!;
 #nullable restore
 #else
-        public string Actor { get; set; }
+        public string Actor { get => _explicitNullValueActor; set { _explicitNullValueActor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actor"); else _explicitNullProperties?.Remove("actor"); } }
+        private string _explicitNullValueActor = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The date_update property</summary>
-        public double? DateUpdate { get; set; }
+        public double? DateUpdate { get => _explicitNullValueDateUpdate; set { _explicitNullValueDateUpdate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_update"); else _explicitNullProperties?.Remove("date_update"); } }
+        private double? _explicitNullValueDateUpdate = default!;
         /// <summary>The invalid_workspace_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? InvalidWorkspaceIds { get; set; }
+        public List<string>? InvalidWorkspaceIds { get => _explicitNullValueInvalidWorkspaceIds; set { _explicitNullValueInvalidWorkspaceIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invalid_workspace_ids"); else _explicitNullProperties?.Remove("invalid_workspace_ids"); } }
+        private List<string>? _explicitNullValueInvalidWorkspaceIds = default!;
 #nullable restore
 #else
-        public List<string> InvalidWorkspaceIds { get; set; }
+        public List<string> InvalidWorkspaceIds { get => _explicitNullValueInvalidWorkspaceIds; set { _explicitNullValueInvalidWorkspaceIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invalid_workspace_ids"); else _explicitNullProperties?.Remove("invalid_workspace_ids"); } }
+        private List<string> _explicitNullValueInvalidWorkspaceIds = default!;
 #endif
         /// <summary>The source property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Source { get; set; }
+        public string? Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
+        private string? _explicitNullValueSource = default!;
 #nullable restore
 #else
-        public string Source { get; set; }
+        public string Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
+        private string _explicitNullValueSource = default!;
 #endif
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get; set; }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string _explicitNullValueType = default!;
 #endif
         /// <summary>The use_allowed_workspaces property</summary>
-        public bool? UseAllowedWorkspaces { get; set; }
+        public bool? UseAllowedWorkspaces { get => _explicitNullValueUseAllowedWorkspaces; set { _explicitNullValueUseAllowedWorkspaces = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_allowed_workspaces"); else _explicitNullProperties?.Remove("use_allowed_workspaces"); } }
+        private bool? _explicitNullValueUseAllowedWorkspaces = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.AcceptScInvites"/> and sets the default values.
         /// </summary>
@@ -75,7 +103,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.AcceptScInvites CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.AcceptScInvites();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.AcceptScInvites(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -110,6 +138,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("source", Source);
             writer.WriteStringValue("type", Type);
             writer.WriteBoolValue("use_allowed_workspaces", UseAllowedWorkspaces);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

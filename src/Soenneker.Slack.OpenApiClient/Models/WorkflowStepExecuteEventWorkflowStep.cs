@@ -11,56 +11,81 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class WorkflowStepExecuteEventWorkflowStep : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("inputs") is { } nullNodeInputs && nullNodeInputs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Inputs = null;
+            if (parseNode.GetChildNode("outputs") is { } nullNodeOutputs && nullNodeOutputs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Outputs = null;
+            if (parseNode.GetChildNode("step_id") is { } nullNodeStepId && nullNodeStepId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StepId = null;
+            if (parseNode.GetChildNode("workflow_id") is { } nullNodeWorkflowId && nullNodeWorkflowId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowId = null;
+            if (parseNode.GetChildNode("workflow_instance_id") is { } nullNodeWorkflowInstanceId && nullNodeWorkflowInstanceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowInstanceId = null;
+            if (parseNode.GetChildNode("workflow_step_execute_id") is { } nullNodeWorkflowStepExecuteId && nullNodeWorkflowStepExecuteId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowStepExecuteId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The inputs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepExecuteEventWorkflowStepInputsProperty? Inputs { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepExecuteEventWorkflowStepInputsProperty? Inputs { get => _explicitNullValueInputs; set { _explicitNullValueInputs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputs"); else _explicitNullProperties?.Remove("inputs"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepExecuteEventWorkflowStepInputsProperty? _explicitNullValueInputs = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepExecuteEventWorkflowStepInputsProperty Inputs { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepExecuteEventWorkflowStepInputsProperty Inputs { get => _explicitNullValueInputs; set { _explicitNullValueInputs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputs"); else _explicitNullProperties?.Remove("inputs"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepExecuteEventWorkflowStepInputsProperty _explicitNullValueInputs = default!;
 #endif
         /// <summary>The outputs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepExecuteEventWorkflowStepOutputsItem>? Outputs { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepExecuteEventWorkflowStepOutputsItem>? Outputs { get => _explicitNullValueOutputs; set { _explicitNullValueOutputs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outputs"); else _explicitNullProperties?.Remove("outputs"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepExecuteEventWorkflowStepOutputsItem>? _explicitNullValueOutputs = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepExecuteEventWorkflowStepOutputsItem> Outputs { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepExecuteEventWorkflowStepOutputsItem> Outputs { get => _explicitNullValueOutputs; set { _explicitNullValueOutputs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outputs"); else _explicitNullProperties?.Remove("outputs"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepExecuteEventWorkflowStepOutputsItem> _explicitNullValueOutputs = default!;
 #endif
         /// <summary>The step_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StepId { get; set; }
+        public string? StepId { get => _explicitNullValueStepId; set { _explicitNullValueStepId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("step_id"); else _explicitNullProperties?.Remove("step_id"); } }
+        private string? _explicitNullValueStepId = default!;
 #nullable restore
 #else
-        public string StepId { get; set; }
+        public string StepId { get => _explicitNullValueStepId; set { _explicitNullValueStepId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("step_id"); else _explicitNullProperties?.Remove("step_id"); } }
+        private string _explicitNullValueStepId = default!;
 #endif
         /// <summary>The workflow_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkflowId { get; set; }
+        public string? WorkflowId { get => _explicitNullValueWorkflowId; set { _explicitNullValueWorkflowId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_id"); else _explicitNullProperties?.Remove("workflow_id"); } }
+        private string? _explicitNullValueWorkflowId = default!;
 #nullable restore
 #else
-        public string WorkflowId { get; set; }
+        public string WorkflowId { get => _explicitNullValueWorkflowId; set { _explicitNullValueWorkflowId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_id"); else _explicitNullProperties?.Remove("workflow_id"); } }
+        private string _explicitNullValueWorkflowId = default!;
 #endif
         /// <summary>The workflow_instance_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkflowInstanceId { get; set; }
+        public string? WorkflowInstanceId { get => _explicitNullValueWorkflowInstanceId; set { _explicitNullValueWorkflowInstanceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_instance_id"); else _explicitNullProperties?.Remove("workflow_instance_id"); } }
+        private string? _explicitNullValueWorkflowInstanceId = default!;
 #nullable restore
 #else
-        public string WorkflowInstanceId { get; set; }
+        public string WorkflowInstanceId { get => _explicitNullValueWorkflowInstanceId; set { _explicitNullValueWorkflowInstanceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_instance_id"); else _explicitNullProperties?.Remove("workflow_instance_id"); } }
+        private string _explicitNullValueWorkflowInstanceId = default!;
 #endif
         /// <summary>The workflow_step_execute_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkflowStepExecuteId { get; set; }
+        public string? WorkflowStepExecuteId { get => _explicitNullValueWorkflowStepExecuteId; set { _explicitNullValueWorkflowStepExecuteId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_step_execute_id"); else _explicitNullProperties?.Remove("workflow_step_execute_id"); } }
+        private string? _explicitNullValueWorkflowStepExecuteId = default!;
 #nullable restore
 #else
-        public string WorkflowStepExecuteId { get; set; }
+        public string WorkflowStepExecuteId { get => _explicitNullValueWorkflowStepExecuteId; set { _explicitNullValueWorkflowStepExecuteId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_step_execute_id"); else _explicitNullProperties?.Remove("workflow_step_execute_id"); } }
+        private string _explicitNullValueWorkflowStepExecuteId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepExecuteEventWorkflowStep"/> and sets the default values.
@@ -77,7 +102,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepExecuteEventWorkflowStep CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepExecuteEventWorkflowStep();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.WorkflowStepExecuteEventWorkflowStep(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -108,6 +133,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("workflow_id", WorkflowId);
             writer.WriteStringValue("workflow_instance_id", WorkflowInstanceId);
             writer.WriteStringValue("workflow_step_execute_id", WorkflowStepExecuteId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,51 +11,80 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PlainTextInput : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("action_id") is { } nullNodeActionId && nullNodeActionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionId = null;
+            if (parseNode.GetChildNode("dispatch_action_config") is { } nullNodeDispatchActionConfig && nullNodeDispatchActionConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DispatchActionConfig = null;
+            if (parseNode.GetChildNode("focus_on_load") is { } nullNodeFocusOnLoad && nullNodeFocusOnLoad.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FocusOnLoad = null;
+            if (parseNode.GetChildNode("initial_value") is { } nullNodeInitialValue && nullNodeInitialValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InitialValue = null;
+            if (parseNode.GetChildNode("max_length") is { } nullNodeMaxLength && nullNodeMaxLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxLength = null;
+            if (parseNode.GetChildNode("min_length") is { } nullNodeMinLength && nullNodeMinLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinLength = null;
+            if (parseNode.GetChildNode("multiline") is { } nullNodeMultiline && nullNodeMultiline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Multiline = null;
+            if (parseNode.GetChildNode("placeholder") is { } nullNodePlaceholder && nullNodePlaceholder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Placeholder = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>: An identifier for this action. You can use this when you receive an interaction payload to[identify the source of the action](https://docs.slack.dev/interactivity/handling-user-interaction#payloads). Should be uniqueamong all other `action_id`s in the containing block. Maximum length for this field is 255 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActionId { get; set; }
+        public string? ActionId { get => _explicitNullValueActionId; set { _explicitNullValueActionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action_id"); else _explicitNullProperties?.Remove("action_id"); } }
+        private string? _explicitNullValueActionId = default!;
 #nullable restore
 #else
-        public string ActionId { get; set; }
+        public string ActionId { get => _explicitNullValueActionId; set { _explicitNullValueActionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action_id"); else _explicitNullProperties?.Remove("action_id"); } }
+        private string _explicitNullValueActionId = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A [DispatchActionConfig](DispatchActionConfig) object that determines when during text input the element returns a[`block_actions` payload](https://docs.slack.dev/reference/interaction-payloads/block_actions-payload).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.DispatchActionConfig? DispatchActionConfig { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.DispatchActionConfig? DispatchActionConfig { get => _explicitNullValueDispatchActionConfig; set { _explicitNullValueDispatchActionConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dispatch_action_config"); else _explicitNullProperties?.Remove("dispatch_action_config"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.DispatchActionConfig? _explicitNullValueDispatchActionConfig = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.DispatchActionConfig DispatchActionConfig { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.DispatchActionConfig DispatchActionConfig { get => _explicitNullValueDispatchActionConfig; set { _explicitNullValueDispatchActionConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dispatch_action_config"); else _explicitNullProperties?.Remove("dispatch_action_config"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.DispatchActionConfig _explicitNullValueDispatchActionConfig = default!;
 #endif
         /// <summary>Indicates whether the element will be set to auto focus within the[`view` object](https://docs.slack.dev/surfaces/modals). Only one element can be set to `true`.Defaults to `false`.</summary>
-        public bool? FocusOnLoad { get; set; }
+        public bool? FocusOnLoad { get => _explicitNullValueFocusOnLoad; set { _explicitNullValueFocusOnLoad = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("focus_on_load"); else _explicitNullProperties?.Remove("focus_on_load"); } }
+        private bool? _explicitNullValueFocusOnLoad = default!;
         /// <summary>The initial value in the plain-text input when it is loaded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InitialValue { get; set; }
+        public string? InitialValue { get => _explicitNullValueInitialValue; set { _explicitNullValueInitialValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initial_value"); else _explicitNullProperties?.Remove("initial_value"); } }
+        private string? _explicitNullValueInitialValue = default!;
 #nullable restore
 #else
-        public string InitialValue { get; set; }
+        public string InitialValue { get => _explicitNullValueInitialValue; set { _explicitNullValueInitialValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initial_value"); else _explicitNullProperties?.Remove("initial_value"); } }
+        private string _explicitNullValueInitialValue = default!;
 #endif
         /// <summary>The maximum length of input that the user can provide. If the user provides more,they will receive an error.</summary>
-        public double? MaxLength { get; set; }
+        public double? MaxLength { get => _explicitNullValueMaxLength; set { _explicitNullValueMaxLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_length"); else _explicitNullProperties?.Remove("max_length"); } }
+        private double? _explicitNullValueMaxLength = default!;
         /// <summary>The minimum length of input that the user must provide. If the user provides less, they will receivean error. Maximum value is 3000.</summary>
-        public double? MinLength { get; set; }
+        public double? MinLength { get => _explicitNullValueMinLength; set { _explicitNullValueMinLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("min_length"); else _explicitNullProperties?.Remove("min_length"); } }
+        private double? _explicitNullValueMinLength = default!;
         /// <summary>Indicates whether the input will be a single line (`false`) or a larger textarea (`true`).Defaults to `false`.</summary>
-        public bool? Multiline { get; set; }
+        public bool? Multiline { get => _explicitNullValueMultiline; set { _explicitNullValueMultiline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multiline"); else _explicitNullProperties?.Remove("multiline"); } }
+        private bool? _explicitNullValueMultiline = default!;
         /// <summary>A [PlainTextElement](PlainTextElement) object that defines the placeholder text shown on the element. Maximumlength for the `text` field in this object is 150 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Placeholder { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? Placeholder { get => _explicitNullValuePlaceholder; set { _explicitNullValuePlaceholder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placeholder"); else _explicitNullProperties?.Remove("placeholder"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement? _explicitNullValuePlaceholder = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement Placeholder { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement Placeholder { get => _explicitNullValuePlaceholder; set { _explicitNullValuePlaceholder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placeholder"); else _explicitNullProperties?.Remove("placeholder"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement _explicitNullValuePlaceholder = default!;
 #endif
         /// <summary>The type of element. In this case `type` is always `plain_text_input`.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextInputType? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextInputType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.PlainTextInputType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.PlainTextInput"/> and sets the default values.
         /// </summary>
@@ -71,7 +100,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.PlainTextInput CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.PlainTextInput();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.PlainTextInput(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -108,6 +137,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteBoolValue("multiline", Multiline);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElement>("placeholder", Placeholder);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextInputType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

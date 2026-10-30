@@ -11,70 +11,104 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class InviteRequestedEventInviteRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("channel_ids") is { } nullNodeChannelIds && nullNodeChannelIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelIds = null;
+            if (parseNode.GetChildNode("date_created") is { } nullNodeDateCreated && nullNodeDateCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateCreated = null;
+            if (parseNode.GetChildNode("date_expire") is { } nullNodeDateExpire && nullNodeDateExpire.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateExpire = null;
+            if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("invite_type") is { } nullNodeInviteType && nullNodeInviteType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InviteType = null;
+            if (parseNode.GetChildNode("real_name") is { } nullNodeRealName && nullNodeRealName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RealName = null;
+            if (parseNode.GetChildNode("requester_ids") is { } nullNodeRequesterIds && nullNodeRequesterIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequesterIds = null;
+            if (parseNode.GetChildNode("request_reason") is { } nullNodeRequestReason && nullNodeRequestReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestReason = null;
+            if (parseNode.GetChildNode("team") is { } nullNodeTeam && nullNodeTeam.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Team = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The channel_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ChannelIds { get; set; }
+        public List<string>? ChannelIds { get => _explicitNullValueChannelIds; set { _explicitNullValueChannelIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_ids"); else _explicitNullProperties?.Remove("channel_ids"); } }
+        private List<string>? _explicitNullValueChannelIds = default!;
 #nullable restore
 #else
-        public List<string> ChannelIds { get; set; }
+        public List<string> ChannelIds { get => _explicitNullValueChannelIds; set { _explicitNullValueChannelIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_ids"); else _explicitNullProperties?.Remove("channel_ids"); } }
+        private List<string> _explicitNullValueChannelIds = default!;
 #endif
         /// <summary>The date_created property</summary>
-        public double? DateCreated { get; set; }
+        public double? DateCreated { get => _explicitNullValueDateCreated; set { _explicitNullValueDateCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_created"); else _explicitNullProperties?.Remove("date_created"); } }
+        private double? _explicitNullValueDateCreated = default!;
         /// <summary>The date_expire property</summary>
-        public double? DateExpire { get; set; }
+        public double? DateExpire { get => _explicitNullValueDateExpire; set { _explicitNullValueDateExpire = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_expire"); else _explicitNullProperties?.Remove("date_expire"); } }
+        private double? _explicitNullValueDateExpire = default!;
         /// <summary>The email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Email { get; set; }
+        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public string Email { get; set; }
+        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string _explicitNullValueEmail = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The invite_type property</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.InviteRequestedEventInviteRequestInviteType? InviteType { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.InviteRequestedEventInviteRequestInviteType? InviteType { get => _explicitNullValueInviteType; set { _explicitNullValueInviteType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invite_type"); else _explicitNullProperties?.Remove("invite_type"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.InviteRequestedEventInviteRequestInviteType? _explicitNullValueInviteType = default!;
         /// <summary>The real_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RealName { get; set; }
+        public string? RealName { get => _explicitNullValueRealName; set { _explicitNullValueRealName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("real_name"); else _explicitNullProperties?.Remove("real_name"); } }
+        private string? _explicitNullValueRealName = default!;
 #nullable restore
 #else
-        public string RealName { get; set; }
+        public string RealName { get => _explicitNullValueRealName; set { _explicitNullValueRealName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("real_name"); else _explicitNullProperties?.Remove("real_name"); } }
+        private string _explicitNullValueRealName = default!;
 #endif
         /// <summary>The requester_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? RequesterIds { get; set; }
+        public List<string>? RequesterIds { get => _explicitNullValueRequesterIds; set { _explicitNullValueRequesterIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requester_ids"); else _explicitNullProperties?.Remove("requester_ids"); } }
+        private List<string>? _explicitNullValueRequesterIds = default!;
 #nullable restore
 #else
-        public List<string> RequesterIds { get; set; }
+        public List<string> RequesterIds { get => _explicitNullValueRequesterIds; set { _explicitNullValueRequesterIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requester_ids"); else _explicitNullProperties?.Remove("requester_ids"); } }
+        private List<string> _explicitNullValueRequesterIds = default!;
 #endif
         /// <summary>The request_reason property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RequestReason { get; set; }
+        public string? RequestReason { get => _explicitNullValueRequestReason; set { _explicitNullValueRequestReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_reason"); else _explicitNullProperties?.Remove("request_reason"); } }
+        private string? _explicitNullValueRequestReason = default!;
 #nullable restore
 #else
-        public string RequestReason { get; set; }
+        public string RequestReason { get => _explicitNullValueRequestReason; set { _explicitNullValueRequestReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_reason"); else _explicitNullProperties?.Remove("request_reason"); } }
+        private string _explicitNullValueRequestReason = default!;
 #endif
         /// <summary>The team property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.InviteRequestedEventInviteRequestTeam? Team { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.InviteRequestedEventInviteRequestTeam? Team { get => _explicitNullValueTeam; set { _explicitNullValueTeam = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team"); else _explicitNullProperties?.Remove("team"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.InviteRequestedEventInviteRequestTeam? _explicitNullValueTeam = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.InviteRequestedEventInviteRequestTeam Team { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.InviteRequestedEventInviteRequestTeam Team { get => _explicitNullValueTeam; set { _explicitNullValueTeam = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team"); else _explicitNullProperties?.Remove("team"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.InviteRequestedEventInviteRequestTeam _explicitNullValueTeam = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.InviteRequestedEventInviteRequest"/> and sets the default values.
@@ -91,7 +125,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.InviteRequestedEventInviteRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.InviteRequestedEventInviteRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.InviteRequestedEventInviteRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -130,6 +164,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("requester_ids", RequesterIds);
             writer.WriteStringValue("request_reason", RequestReason);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.InviteRequestedEventInviteRequestTeam>("team", Team);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

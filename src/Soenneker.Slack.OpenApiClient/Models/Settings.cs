@@ -11,81 +11,120 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class Settings : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("allowed_ip_address_ranges") is { } nullNodeAllowedIpAddressRanges && nullNodeAllowedIpAddressRanges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedIpAddressRanges = null;
+            if (parseNode.GetChildNode("background_color") is { } nullNodeBackgroundColor && nullNodeBackgroundColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BackgroundColor = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("event_subscriptions") is { } nullNodeEventSubscriptions && nullNodeEventSubscriptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventSubscriptions = null;
+            if (parseNode.GetChildNode("function_runtime") is { } nullNodeFunctionRuntime && nullNodeFunctionRuntime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FunctionRuntime = null;
+            if (parseNode.GetChildNode("hermes_app_type") is { } nullNodeHermesAppType && nullNodeHermesAppType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HermesAppType = null;
+            if (parseNode.GetChildNode("interactivity") is { } nullNodeInteractivity && nullNodeInteractivity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Interactivity = null;
+            if (parseNode.GetChildNode("is_mcp_enabled") is { } nullNodeIsMcpEnabled && nullNodeIsMcpEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsMcpEnabled = null;
+            if (parseNode.GetChildNode("long_description") is { } nullNodeLongDescription && nullNodeLongDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LongDescription = null;
+            if (parseNode.GetChildNode("org_deploy_enabled") is { } nullNodeOrgDeployEnabled && nullNodeOrgDeployEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrgDeployEnabled = null;
+            if (parseNode.GetChildNode("socket_mode_enabled") is { } nullNodeSocketModeEnabled && nullNodeSocketModeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SocketModeEnabled = null;
+            if (parseNode.GetChildNode("token_rotation_enabled") is { } nullNodeTokenRotationEnabled && nullNodeTokenRotationEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TokenRotationEnabled = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The allowed_ip_address_ranges property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AllowedIpAddressRanges { get; set; }
+        public List<string>? AllowedIpAddressRanges { get => _explicitNullValueAllowedIpAddressRanges; set { _explicitNullValueAllowedIpAddressRanges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_ip_address_ranges"); else _explicitNullProperties?.Remove("allowed_ip_address_ranges"); } }
+        private List<string>? _explicitNullValueAllowedIpAddressRanges = default!;
 #nullable restore
 #else
-        public List<string> AllowedIpAddressRanges { get; set; }
+        public List<string> AllowedIpAddressRanges { get => _explicitNullValueAllowedIpAddressRanges; set { _explicitNullValueAllowedIpAddressRanges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_ip_address_ranges"); else _explicitNullProperties?.Remove("allowed_ip_address_ranges"); } }
+        private List<string> _explicitNullValueAllowedIpAddressRanges = default!;
 #endif
         /// <summary>The background_color property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BackgroundColor { get; set; }
+        public string? BackgroundColor { get => _explicitNullValueBackgroundColor; set { _explicitNullValueBackgroundColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("background_color"); else _explicitNullProperties?.Remove("background_color"); } }
+        private string? _explicitNullValueBackgroundColor = default!;
 #nullable restore
 #else
-        public string BackgroundColor { get; set; }
+        public string BackgroundColor { get => _explicitNullValueBackgroundColor; set { _explicitNullValueBackgroundColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("background_color"); else _explicitNullProperties?.Remove("background_color"); } }
+        private string _explicitNullValueBackgroundColor = default!;
 #endif
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The event_subscriptions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.EventSubscriptions? EventSubscriptions { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.EventSubscriptions? EventSubscriptions { get => _explicitNullValueEventSubscriptions; set { _explicitNullValueEventSubscriptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_subscriptions"); else _explicitNullProperties?.Remove("event_subscriptions"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.EventSubscriptions? _explicitNullValueEventSubscriptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.EventSubscriptions EventSubscriptions { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.EventSubscriptions EventSubscriptions { get => _explicitNullValueEventSubscriptions; set { _explicitNullValueEventSubscriptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_subscriptions"); else _explicitNullProperties?.Remove("event_subscriptions"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.EventSubscriptions _explicitNullValueEventSubscriptions = default!;
 #endif
         /// <summary>The function_runtime property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FunctionRuntime { get; set; }
+        public string? FunctionRuntime { get => _explicitNullValueFunctionRuntime; set { _explicitNullValueFunctionRuntime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("function_runtime"); else _explicitNullProperties?.Remove("function_runtime"); } }
+        private string? _explicitNullValueFunctionRuntime = default!;
 #nullable restore
 #else
-        public string FunctionRuntime { get; set; }
+        public string FunctionRuntime { get => _explicitNullValueFunctionRuntime; set { _explicitNullValueFunctionRuntime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("function_runtime"); else _explicitNullProperties?.Remove("function_runtime"); } }
+        private string _explicitNullValueFunctionRuntime = default!;
 #endif
         /// <summary>The hermes_app_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HermesAppType { get; set; }
+        public string? HermesAppType { get => _explicitNullValueHermesAppType; set { _explicitNullValueHermesAppType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hermes_app_type"); else _explicitNullProperties?.Remove("hermes_app_type"); } }
+        private string? _explicitNullValueHermesAppType = default!;
 #nullable restore
 #else
-        public string HermesAppType { get; set; }
+        public string HermesAppType { get => _explicitNullValueHermesAppType; set { _explicitNullValueHermesAppType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hermes_app_type"); else _explicitNullProperties?.Remove("hermes_app_type"); } }
+        private string _explicitNullValueHermesAppType = default!;
 #endif
         /// <summary>The interactivity property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Interactivity? Interactivity { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Interactivity? Interactivity { get => _explicitNullValueInteractivity; set { _explicitNullValueInteractivity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interactivity"); else _explicitNullProperties?.Remove("interactivity"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Interactivity? _explicitNullValueInteractivity = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Interactivity Interactivity { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Interactivity Interactivity { get => _explicitNullValueInteractivity; set { _explicitNullValueInteractivity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interactivity"); else _explicitNullProperties?.Remove("interactivity"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Interactivity _explicitNullValueInteractivity = default!;
 #endif
         /// <summary>The is_mcp_enabled property</summary>
-        public bool? IsMcpEnabled { get; set; }
+        public bool? IsMcpEnabled { get => _explicitNullValueIsMcpEnabled; set { _explicitNullValueIsMcpEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_mcp_enabled"); else _explicitNullProperties?.Remove("is_mcp_enabled"); } }
+        private bool? _explicitNullValueIsMcpEnabled = default!;
         /// <summary>The long_description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LongDescription { get; set; }
+        public string? LongDescription { get => _explicitNullValueLongDescription; set { _explicitNullValueLongDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("long_description"); else _explicitNullProperties?.Remove("long_description"); } }
+        private string? _explicitNullValueLongDescription = default!;
 #nullable restore
 #else
-        public string LongDescription { get; set; }
+        public string LongDescription { get => _explicitNullValueLongDescription; set { _explicitNullValueLongDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("long_description"); else _explicitNullProperties?.Remove("long_description"); } }
+        private string _explicitNullValueLongDescription = default!;
 #endif
         /// <summary>The org_deploy_enabled property</summary>
-        public bool? OrgDeployEnabled { get; set; }
+        public bool? OrgDeployEnabled { get => _explicitNullValueOrgDeployEnabled; set { _explicitNullValueOrgDeployEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("org_deploy_enabled"); else _explicitNullProperties?.Remove("org_deploy_enabled"); } }
+        private bool? _explicitNullValueOrgDeployEnabled = default!;
         /// <summary>The socket_mode_enabled property</summary>
-        public bool? SocketModeEnabled { get; set; }
+        public bool? SocketModeEnabled { get => _explicitNullValueSocketModeEnabled; set { _explicitNullValueSocketModeEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("socket_mode_enabled"); else _explicitNullProperties?.Remove("socket_mode_enabled"); } }
+        private bool? _explicitNullValueSocketModeEnabled = default!;
         /// <summary>The token_rotation_enabled property</summary>
-        public bool? TokenRotationEnabled { get; set; }
+        public bool? TokenRotationEnabled { get => _explicitNullValueTokenRotationEnabled; set { _explicitNullValueTokenRotationEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token_rotation_enabled"); else _explicitNullProperties?.Remove("token_rotation_enabled"); } }
+        private bool? _explicitNullValueTokenRotationEnabled = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Settings"/> and sets the default values.
         /// </summary>
@@ -101,7 +140,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.Settings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.Settings();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.Settings(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -144,6 +183,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteBoolValue("org_deploy_enabled", OrgDeployEnabled);
             writer.WriteBoolValue("socket_mode_enabled", SocketModeEnabled);
             writer.WriteBoolValue("token_rotation_enabled", TokenRotationEnabled);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

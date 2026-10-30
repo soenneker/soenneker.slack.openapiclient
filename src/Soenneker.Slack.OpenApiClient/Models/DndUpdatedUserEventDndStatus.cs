@@ -11,15 +11,28 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DndUpdatedUserEventDndStatus : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("dnd_enabled") is { } nullNodeDndEnabled && nullNodeDndEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DndEnabled = null;
+            if (parseNode.GetChildNode("next_dnd_end_ts") is { } nullNodeNextDndEndTs && nullNodeNextDndEndTs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextDndEndTs = null;
+            if (parseNode.GetChildNode("next_dnd_start_ts") is { } nullNodeNextDndStartTs && nullNodeNextDndStartTs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextDndStartTs = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The dnd_enabled property</summary>
-        public bool? DndEnabled { get; set; }
+        public bool? DndEnabled { get => _explicitNullValueDndEnabled; set { _explicitNullValueDndEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dnd_enabled"); else _explicitNullProperties?.Remove("dnd_enabled"); } }
+        private bool? _explicitNullValueDndEnabled = default!;
         /// <summary>The next_dnd_end_ts property</summary>
-        public double? NextDndEndTs { get; set; }
+        public double? NextDndEndTs { get => _explicitNullValueNextDndEndTs; set { _explicitNullValueNextDndEndTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_dnd_end_ts"); else _explicitNullProperties?.Remove("next_dnd_end_ts"); } }
+        private double? _explicitNullValueNextDndEndTs = default!;
         /// <summary>The next_dnd_start_ts property</summary>
-        public double? NextDndStartTs { get; set; }
+        public double? NextDndStartTs { get => _explicitNullValueNextDndStartTs; set { _explicitNullValueNextDndStartTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_dnd_start_ts"); else _explicitNullProperties?.Remove("next_dnd_start_ts"); } }
+        private double? _explicitNullValueNextDndStartTs = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.DndUpdatedUserEventDndStatus"/> and sets the default values.
         /// </summary>
@@ -35,7 +48,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.DndUpdatedUserEventDndStatus CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.DndUpdatedUserEventDndStatus();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.DndUpdatedUserEventDndStatus(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,6 +73,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteBoolValue("dnd_enabled", DndEnabled);
             writer.WriteDoubleValue("next_dnd_end_ts", NextDndEndTs);
             writer.WriteDoubleValue("next_dnd_start_ts", NextDndStartTs);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

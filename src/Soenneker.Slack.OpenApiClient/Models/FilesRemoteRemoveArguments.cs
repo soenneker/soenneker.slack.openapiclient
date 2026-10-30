@@ -12,7 +12,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FilesRemoteRemoveArguments : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteRemoveArgumentsAnyOf1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -38,9 +43,16 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteRemoveArguments();
-            result.FilesRemoteRemoveArgumentsAnyOf1 = new global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteRemoveArgumentsAnyOf1();
-            result.FilesRemoteRemoveArgumentsAnyOf2 = new global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteRemoveArgumentsAnyOf2();
-            return result;
+            
+            
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("file") != null))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("external_id") != null))();
+            if (result.FilesRemoteRemoveArgumentsAnyOf1 == null && result.FilesRemoteRemoveArgumentsAnyOf2 == null && matchesUnionBranch0 && !matchesUnionBranch1) result.FilesRemoteRemoveArgumentsAnyOf1 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteRemoveArgumentsAnyOf1(), parseNode);
+            if (result.FilesRemoteRemoveArgumentsAnyOf1 == null && result.FilesRemoteRemoveArgumentsAnyOf2 == null && matchesUnionBranch1 && !matchesUnionBranch0) result.FilesRemoteRemoveArgumentsAnyOf2 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteRemoveArgumentsAnyOf2(), parseNode);
+            if (result.FilesRemoteRemoveArgumentsAnyOf1 == null && result.FilesRemoteRemoveArgumentsAnyOf2 == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,6 +72,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (FilesRemoteRemoveArgumentsAnyOf1 == null && FilesRemoteRemoveArgumentsAnyOf2 == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (FilesRemoteRemoveArgumentsAnyOf1 != null && FilesRemoteRemoveArgumentsAnyOf2 == null) { if (FilesRemoteRemoveArgumentsAnyOf1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, FilesRemoteRemoveArgumentsAnyOf1); return; }
+            if (FilesRemoteRemoveArgumentsAnyOf2 != null && FilesRemoteRemoveArgumentsAnyOf1 == null) { if (FilesRemoteRemoveArgumentsAnyOf2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, FilesRemoteRemoveArgumentsAnyOf2); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FilesRemoteRemoveArgumentsAnyOf1>(null, FilesRemoteRemoveArgumentsAnyOf1, FilesRemoteRemoveArgumentsAnyOf2);
         }

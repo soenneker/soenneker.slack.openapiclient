@@ -11,42 +11,63 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdminTeamsCreateArguments : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("team_description") is { } nullNodeTeamDescription && nullNodeTeamDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamDescription = null;
+            if (parseNode.GetChildNode("team_discoverability") is { } nullNodeTeamDiscoverability && nullNodeTeamDiscoverability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamDiscoverability = null;
+            if (parseNode.GetChildNode("team_domain") is { } nullNodeTeamDomain && nullNodeTeamDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamDomain = null;
+            if (parseNode.GetChildNode("team_name") is { } nullNodeTeamName && nullNodeTeamName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamName = null;
+            if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Description for the team.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TeamDescription { get; set; }
+        public string? TeamDescription { get => _explicitNullValueTeamDescription; set { _explicitNullValueTeamDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_description"); else _explicitNullProperties?.Remove("team_description"); } }
+        private string? _explicitNullValueTeamDescription = default!;
 #nullable restore
 #else
-        public string TeamDescription { get; set; }
+        public string TeamDescription { get => _explicitNullValueTeamDescription; set { _explicitNullValueTeamDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_description"); else _explicitNullProperties?.Remove("team_description"); } }
+        private string _explicitNullValueTeamDescription = default!;
 #endif
         /// <summary>Who can join the team.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.AdminTeamsCreateArgumentsTeamDiscoverability? TeamDiscoverability { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AdminTeamsCreateArgumentsTeamDiscoverability? TeamDiscoverability { get => _explicitNullValueTeamDiscoverability; set { _explicitNullValueTeamDiscoverability = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_discoverability"); else _explicitNullProperties?.Remove("team_discoverability"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AdminTeamsCreateArgumentsTeamDiscoverability? _explicitNullValueTeamDiscoverability = default!;
         /// <summary>Team domain (for example, slacksoftballteam). Domains are limited to 21 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TeamDomain { get; set; }
+        public string? TeamDomain { get => _explicitNullValueTeamDomain; set { _explicitNullValueTeamDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_domain"); else _explicitNullProperties?.Remove("team_domain"); } }
+        private string? _explicitNullValueTeamDomain = default!;
 #nullable restore
 #else
-        public string TeamDomain { get; set; }
+        public string TeamDomain { get => _explicitNullValueTeamDomain; set { _explicitNullValueTeamDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_domain"); else _explicitNullProperties?.Remove("team_domain"); } }
+        private string _explicitNullValueTeamDomain = default!;
 #endif
         /// <summary>Team name (for example, Slack Softball Team).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TeamName { get; set; }
+        public string? TeamName { get => _explicitNullValueTeamName; set { _explicitNullValueTeamName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_name"); else _explicitNullProperties?.Remove("team_name"); } }
+        private string? _explicitNullValueTeamName = default!;
 #nullable restore
 #else
-        public string TeamName { get; set; }
+        public string TeamName { get => _explicitNullValueTeamName; set { _explicitNullValueTeamName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_name"); else _explicitNullProperties?.Remove("team_name"); } }
+        private string _explicitNullValueTeamName = default!;
 #endif
         /// <summary>Overridable authentication token bearing required scopes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Token { get; set; }
+        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private string? _explicitNullValueToken = default!;
 #nullable restore
 #else
-        public string Token { get; set; }
+        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private string _explicitNullValueToken = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminTeamsCreateArguments"/> and sets the default values.
@@ -63,7 +84,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.AdminTeamsCreateArguments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.AdminTeamsCreateArguments();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.AdminTeamsCreateArguments(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,6 +113,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("team_domain", TeamDomain);
             writer.WriteStringValue("team_name", TeamName);
             writer.WriteStringValue("token", Token);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

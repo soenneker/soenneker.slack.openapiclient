@@ -11,15 +11,28 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ManifestAppHome : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("home_tab_enabled") is { } nullNodeHomeTabEnabled && nullNodeHomeTabEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HomeTabEnabled = null;
+            if (parseNode.GetChildNode("messages_tab_enabled") is { } nullNodeMessagesTabEnabled && nullNodeMessagesTabEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessagesTabEnabled = null;
+            if (parseNode.GetChildNode("messages_tab_read_only_enabled") is { } nullNodeMessagesTabReadOnlyEnabled && nullNodeMessagesTabReadOnlyEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessagesTabReadOnlyEnabled = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A boolean that specifies whether or not the [Home tab](https://docs.slack.dev/surfaces/app-home#home-tab) is enabled.[Home tab](https://docs.slack.dev/surfaces/app-home#home-tab).</summary>
-        public bool? HomeTabEnabled { get; set; }
+        public bool? HomeTabEnabled { get => _explicitNullValueHomeTabEnabled; set { _explicitNullValueHomeTabEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("home_tab_enabled"); else _explicitNullProperties?.Remove("home_tab_enabled"); } }
+        private bool? _explicitNullValueHomeTabEnabled = default!;
         /// <summary>A boolean that specifies whether or not the Messages tab in your App Home is enabled.[Message tab](https://docs.slack.dev/surfaces/app-home#messages-tab).</summary>
-        public bool? MessagesTabEnabled { get; set; }
+        public bool? MessagesTabEnabled { get => _explicitNullValueMessagesTabEnabled; set { _explicitNullValueMessagesTabEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messages_tab_enabled"); else _explicitNullProperties?.Remove("messages_tab_enabled"); } }
+        private bool? _explicitNullValueMessagesTabEnabled = default!;
         /// <summary>A boolean that specifies whether or not the users can send messages to your app in the[Messages tab](https://docs.slack.dev/surfaces/app-home#messages-tab)of your App Home.[Messages tab](https://docs.slack.dev/surfaces/app-home#messages-tab).</summary>
-        public bool? MessagesTabReadOnlyEnabled { get; set; }
+        public bool? MessagesTabReadOnlyEnabled { get => _explicitNullValueMessagesTabReadOnlyEnabled; set { _explicitNullValueMessagesTabReadOnlyEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messages_tab_read_only_enabled"); else _explicitNullProperties?.Remove("messages_tab_read_only_enabled"); } }
+        private bool? _explicitNullValueMessagesTabReadOnlyEnabled = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ManifestAppHome"/> and sets the default values.
         /// </summary>
@@ -35,7 +48,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.ManifestAppHome CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.ManifestAppHome();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.ManifestAppHome(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,6 +73,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteBoolValue("home_tab_enabled", HomeTabEnabled);
             writer.WriteBoolValue("messages_tab_enabled", MessagesTabEnabled);
             writer.WriteBoolValue("messages_tab_read_only_enabled", MessagesTabReadOnlyEnabled);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

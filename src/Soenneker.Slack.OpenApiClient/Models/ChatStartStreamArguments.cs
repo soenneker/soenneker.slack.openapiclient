@@ -11,96 +11,136 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ChatStartStreamArguments : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("channel") is { } nullNodeChannel && nullNodeChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Channel = null;
+            if (parseNode.GetChildNode("chunks") is { } nullNodeChunks && nullNodeChunks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Chunks = null;
+            if (parseNode.GetChildNode("icon_emoji") is { } nullNodeIconEmoji && nullNodeIconEmoji.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IconEmoji = null;
+            if (parseNode.GetChildNode("icon_url") is { } nullNodeIconUrl && nullNodeIconUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IconUrl = null;
+            if (parseNode.GetChildNode("markdown_text") is { } nullNodeMarkdownText && nullNodeMarkdownText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MarkdownText = null;
+            if (parseNode.GetChildNode("recipient_team_id") is { } nullNodeRecipientTeamId && nullNodeRecipientTeamId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecipientTeamId = null;
+            if (parseNode.GetChildNode("recipient_user_id") is { } nullNodeRecipientUserId && nullNodeRecipientUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecipientUserId = null;
+            if (parseNode.GetChildNode("task_display_mode") is { } nullNodeTaskDisplayMode && nullNodeTaskDisplayMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskDisplayMode = null;
+            if (parseNode.GetChildNode("thread_ts") is { } nullNodeThreadTs && nullNodeThreadTs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreadTs = null;
+            if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
+            if (parseNode.GetChildNode("username") is { } nullNodeUsername && nullNodeUsername.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Username = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Channel ID for the message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Channel { get; set; }
+        public string? Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel"); else _explicitNullProperties?.Remove("channel"); } }
+        private string? _explicitNullValueChannel = default!;
 #nullable restore
 #else
-        public string Channel { get; set; }
+        public string Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel"); else _explicitNullProperties?.Remove("channel"); } }
+        private string _explicitNullValueChannel = default!;
 #endif
         /// <summary>An array of [chunk objects](https://docs.slack.dev/messaging/sending-and-scheduling-messages#text-streaming) to start the stream with.Either `markdown_text` or `chunks` is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.AnyChunk>? Chunks { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.AnyChunk>? Chunks { get => _explicitNullValueChunks; set { _explicitNullValueChunks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chunks"); else _explicitNullProperties?.Remove("chunks"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.AnyChunk>? _explicitNullValueChunks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.AnyChunk> Chunks { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.AnyChunk> Chunks { get => _explicitNullValueChunks; set { _explicitNullValueChunks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chunks"); else _explicitNullProperties?.Remove("chunks"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.AnyChunk> _explicitNullValueChunks = default!;
 #endif
         /// <summary>Emoji to use as the icon for this message. Overrides `icon_url`.e.g. `:chart_with_upwards_trend:`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IconEmoji { get; set; }
+        public string? IconEmoji { get => _explicitNullValueIconEmoji; set { _explicitNullValueIconEmoji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icon_emoji"); else _explicitNullProperties?.Remove("icon_emoji"); } }
+        private string? _explicitNullValueIconEmoji = default!;
 #nullable restore
 #else
-        public string IconEmoji { get; set; }
+        public string IconEmoji { get => _explicitNullValueIconEmoji; set { _explicitNullValueIconEmoji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icon_emoji"); else _explicitNullProperties?.Remove("icon_emoji"); } }
+        private string _explicitNullValueIconEmoji = default!;
 #endif
         /// <summary>Image URL to use as the icon for this message.e.g. `http://lorempixel.com/48/48`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IconUrl { get; set; }
+        public string? IconUrl { get => _explicitNullValueIconUrl; set { _explicitNullValueIconUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icon_url"); else _explicitNullProperties?.Remove("icon_url"); } }
+        private string? _explicitNullValueIconUrl = default!;
 #nullable restore
 #else
-        public string IconUrl { get; set; }
+        public string IconUrl { get => _explicitNullValueIconUrl; set { _explicitNullValueIconUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icon_url"); else _explicitNullProperties?.Remove("icon_url"); } }
+        private string _explicitNullValueIconUrl = default!;
 #endif
         /// <summary>Accepts message text formatted in markdown. This argument should not be used in conjunction with `blocks` or `text`. Limit this field to 12,000 characters.e.g. `**This is bold text**`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MarkdownText { get; set; }
+        public string? MarkdownText { get => _explicitNullValueMarkdownText; set { _explicitNullValueMarkdownText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("markdown_text"); else _explicitNullProperties?.Remove("markdown_text"); } }
+        private string? _explicitNullValueMarkdownText = default!;
 #nullable restore
 #else
-        public string MarkdownText { get; set; }
+        public string MarkdownText { get => _explicitNullValueMarkdownText; set { _explicitNullValueMarkdownText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("markdown_text"); else _explicitNullProperties?.Remove("markdown_text"); } }
+        private string _explicitNullValueMarkdownText = default!;
 #endif
         /// <summary>The ID of the team that is associated with `recipient_user_id`.This is required when starting a streaming conversation outside of a DM.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RecipientTeamId { get; set; }
+        public string? RecipientTeamId { get => _explicitNullValueRecipientTeamId; set { _explicitNullValueRecipientTeamId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient_team_id"); else _explicitNullProperties?.Remove("recipient_team_id"); } }
+        private string? _explicitNullValueRecipientTeamId = default!;
 #nullable restore
 #else
-        public string RecipientTeamId { get; set; }
+        public string RecipientTeamId { get => _explicitNullValueRecipientTeamId; set { _explicitNullValueRecipientTeamId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient_team_id"); else _explicitNullProperties?.Remove("recipient_team_id"); } }
+        private string _explicitNullValueRecipientTeamId = default!;
 #endif
         /// <summary>The ID of the user to receive the streaming conversation messages.This is required when starting a streaming conversation outside of a DM.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RecipientUserId { get; set; }
+        public string? RecipientUserId { get => _explicitNullValueRecipientUserId; set { _explicitNullValueRecipientUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient_user_id"); else _explicitNullProperties?.Remove("recipient_user_id"); } }
+        private string? _explicitNullValueRecipientUserId = default!;
 #nullable restore
 #else
-        public string RecipientUserId { get; set; }
+        public string RecipientUserId { get => _explicitNullValueRecipientUserId; set { _explicitNullValueRecipientUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient_user_id"); else _explicitNullProperties?.Remove("recipient_user_id"); } }
+        private string _explicitNullValueRecipientUserId = default!;
 #endif
         /// <summary>Specifies how tasks are displayed in the message. A &quot;timeline&quot; displays individual tasks with text and &quot;plan&quot; displays all tasks together.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaskDisplayMode { get; set; }
+        public string? TaskDisplayMode { get => _explicitNullValueTaskDisplayMode; set { _explicitNullValueTaskDisplayMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("task_display_mode"); else _explicitNullProperties?.Remove("task_display_mode"); } }
+        private string? _explicitNullValueTaskDisplayMode = default!;
 #nullable restore
 #else
-        public string TaskDisplayMode { get; set; }
+        public string TaskDisplayMode { get => _explicitNullValueTaskDisplayMode; set { _explicitNullValueTaskDisplayMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("task_display_mode"); else _explicitNullProperties?.Remove("task_display_mode"); } }
+        private string _explicitNullValueTaskDisplayMode = default!;
 #endif
         /// <summary>Provide another message&apos;s `ts` value to post this message in a thread. Avoid using a reply&apos;s `ts`value; use its parent&apos;s value instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ThreadTs { get; set; }
+        public string? ThreadTs { get => _explicitNullValueThreadTs; set { _explicitNullValueThreadTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thread_ts"); else _explicitNullProperties?.Remove("thread_ts"); } }
+        private string? _explicitNullValueThreadTs = default!;
 #nullable restore
 #else
-        public string ThreadTs { get; set; }
+        public string ThreadTs { get => _explicitNullValueThreadTs; set { _explicitNullValueThreadTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thread_ts"); else _explicitNullProperties?.Remove("thread_ts"); } }
+        private string _explicitNullValueThreadTs = default!;
 #endif
         /// <summary>Overridable authentication token bearing required scopes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Token { get; set; }
+        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private string? _explicitNullValueToken = default!;
 #nullable restore
 #else
-        public string Token { get; set; }
+        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private string _explicitNullValueToken = default!;
 #endif
         /// <summary>The bot&apos;s username to display.e.g. `My Bot`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Username { get; set; }
+        public string? Username { get => _explicitNullValueUsername; set { _explicitNullValueUsername = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("username"); else _explicitNullProperties?.Remove("username"); } }
+        private string? _explicitNullValueUsername = default!;
 #nullable restore
 #else
-        public string Username { get; set; }
+        public string Username { get => _explicitNullValueUsername; set { _explicitNullValueUsername = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("username"); else _explicitNullProperties?.Remove("username"); } }
+        private string _explicitNullValueUsername = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatStartStreamArguments"/> and sets the default values.
@@ -117,7 +157,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.ChatStartStreamArguments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.ChatStartStreamArguments();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.ChatStartStreamArguments(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -158,6 +198,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("thread_ts", ThreadTs);
             writer.WriteStringValue("token", Token);
             writer.WriteStringValue("username", Username);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

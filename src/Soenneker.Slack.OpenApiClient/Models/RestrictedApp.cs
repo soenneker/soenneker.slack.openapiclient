@@ -11,34 +11,52 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class RestrictedApp : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("app") is { } nullNodeApp && nullNodeApp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) App = null;
+            if (parseNode.GetChildNode("date_updated") is { } nullNodeDateUpdated && nullNodeDateUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateUpdated = null;
+            if (parseNode.GetChildNode("last_resolved_by") is { } nullNodeLastResolvedBy && nullNodeLastResolvedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastResolvedBy = null;
+            if (parseNode.GetChildNode("scopes") is { } nullNodeScopes && nullNodeScopes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Scopes = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The app property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.App? App { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.App? App { get => _explicitNullValueApp; set { _explicitNullValueApp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app"); else _explicitNullProperties?.Remove("app"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.App? _explicitNullValueApp = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.App App { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.App App { get => _explicitNullValueApp; set { _explicitNullValueApp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app"); else _explicitNullProperties?.Remove("app"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.App _explicitNullValueApp = default!;
 #endif
         /// <summary>The date_updated property</summary>
-        public double? DateUpdated { get; set; }
+        public double? DateUpdated { get => _explicitNullValueDateUpdated; set { _explicitNullValueDateUpdated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_updated"); else _explicitNullProperties?.Remove("date_updated"); } }
+        private double? _explicitNullValueDateUpdated = default!;
         /// <summary>The last_resolved_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.LastResolvedBy? LastResolvedBy { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.LastResolvedBy? LastResolvedBy { get => _explicitNullValueLastResolvedBy; set { _explicitNullValueLastResolvedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_resolved_by"); else _explicitNullProperties?.Remove("last_resolved_by"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.LastResolvedBy? _explicitNullValueLastResolvedBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.LastResolvedBy LastResolvedBy { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.LastResolvedBy LastResolvedBy { get => _explicitNullValueLastResolvedBy; set { _explicitNullValueLastResolvedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_resolved_by"); else _explicitNullProperties?.Remove("last_resolved_by"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.LastResolvedBy _explicitNullValueLastResolvedBy = default!;
 #endif
         /// <summary>The scopes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Scope>? Scopes { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Scope>? Scopes { get => _explicitNullValueScopes; set { _explicitNullValueScopes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scopes"); else _explicitNullProperties?.Remove("scopes"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.Scope>? _explicitNullValueScopes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Scope> Scopes { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Scope> Scopes { get => _explicitNullValueScopes; set { _explicitNullValueScopes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scopes"); else _explicitNullProperties?.Remove("scopes"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.Scope> _explicitNullValueScopes = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.RestrictedApp"/> and sets the default values.
@@ -55,7 +73,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.RestrictedApp CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.RestrictedApp();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.RestrictedApp(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +100,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("date_updated", DateUpdated);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.LastResolvedBy>("last_resolved_by", LastResolvedBy);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Scope>("scopes", Scopes);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

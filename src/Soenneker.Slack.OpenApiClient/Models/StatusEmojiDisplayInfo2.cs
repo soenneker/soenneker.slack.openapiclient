@@ -11,32 +11,48 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class StatusEmojiDisplayInfo2 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("display_alias") is { } nullNodeDisplayAlias && nullNodeDisplayAlias.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayAlias = null;
+            if (parseNode.GetChildNode("display_url") is { } nullNodeDisplayUrl && nullNodeDisplayUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayUrl = null;
+            if (parseNode.GetChildNode("emoji_name") is { } nullNodeEmojiName && nullNodeEmojiName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmojiName = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The display_alias property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisplayAlias { get; set; }
+        public string? DisplayAlias { get => _explicitNullValueDisplayAlias; set { _explicitNullValueDisplayAlias = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_alias"); else _explicitNullProperties?.Remove("display_alias"); } }
+        private string? _explicitNullValueDisplayAlias = default!;
 #nullable restore
 #else
-        public string DisplayAlias { get; set; }
+        public string DisplayAlias { get => _explicitNullValueDisplayAlias; set { _explicitNullValueDisplayAlias = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_alias"); else _explicitNullProperties?.Remove("display_alias"); } }
+        private string _explicitNullValueDisplayAlias = default!;
 #endif
         /// <summary>The display_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisplayUrl { get; set; }
+        public string? DisplayUrl { get => _explicitNullValueDisplayUrl; set { _explicitNullValueDisplayUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_url"); else _explicitNullProperties?.Remove("display_url"); } }
+        private string? _explicitNullValueDisplayUrl = default!;
 #nullable restore
 #else
-        public string DisplayUrl { get; set; }
+        public string DisplayUrl { get => _explicitNullValueDisplayUrl; set { _explicitNullValueDisplayUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_url"); else _explicitNullProperties?.Remove("display_url"); } }
+        private string _explicitNullValueDisplayUrl = default!;
 #endif
         /// <summary>The emoji_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmojiName { get; set; }
+        public string? EmojiName { get => _explicitNullValueEmojiName; set { _explicitNullValueEmojiName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji_name"); else _explicitNullProperties?.Remove("emoji_name"); } }
+        private string? _explicitNullValueEmojiName = default!;
 #nullable restore
 #else
-        public string EmojiName { get; set; }
+        public string EmojiName { get => _explicitNullValueEmojiName; set { _explicitNullValueEmojiName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji_name"); else _explicitNullProperties?.Remove("emoji_name"); } }
+        private string _explicitNullValueEmojiName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.StatusEmojiDisplayInfo2"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.StatusEmojiDisplayInfo2 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.StatusEmojiDisplayInfo2();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.StatusEmojiDisplayInfo2(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("display_alias", DisplayAlias);
             writer.WriteStringValue("display_url", DisplayUrl);
             writer.WriteStringValue("emoji_name", EmojiName);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

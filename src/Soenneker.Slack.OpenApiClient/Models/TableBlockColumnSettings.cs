@@ -11,13 +11,24 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TableBlockColumnSettings : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("align") is { } nullNodeAlign && nullNodeAlign.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Align = null;
+            if (parseNode.GetChildNode("is_wrapped") is { } nullNodeIsWrapped && nullNodeIsWrapped.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsWrapped = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The alignment for items in this column. Can be left, center, or right. Defaults to left if not defined.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettingsAlign? Align { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettingsAlign? Align { get => _explicitNullValueAlign; set { _explicitNullValueAlign = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("align"); else _explicitNullProperties?.Remove("align"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettingsAlign? _explicitNullValueAlign = default!;
         /// <summary>Whether the contents of this column should be wrapped or not. Defaults to false if not defined.</summary>
-        public bool? IsWrapped { get; set; }
+        public bool? IsWrapped { get => _explicitNullValueIsWrapped; set { _explicitNullValueIsWrapped = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_wrapped"); else _explicitNullProperties?.Remove("is_wrapped"); } }
+        private bool? _explicitNullValueIsWrapped = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettings"/> and sets the default values.
         /// </summary>
@@ -33,7 +44,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettings();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettings(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -56,6 +67,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.TableBlockColumnSettingsAlign>("align", Align);
             writer.WriteBoolValue("is_wrapped", IsWrapped);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

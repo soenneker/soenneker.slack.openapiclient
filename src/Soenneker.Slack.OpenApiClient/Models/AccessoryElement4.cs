@@ -11,33 +11,54 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AccessoryElement4 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("border") is { } nullNodeBorder && nullNodeBorder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Border = null;
+            if (parseNode.GetChildNode("elements") is { } nullNodeElements && nullNodeElements.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Elements = null;
+            if (parseNode.GetChildNode("indent") is { } nullNodeIndent && nullNodeIndent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Indent = null;
+            if (parseNode.GetChildNode("offset") is { } nullNodeOffset && nullNodeOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Offset = null;
+            if (parseNode.GetChildNode("style") is { } nullNodeStyle && nullNodeStyle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Style = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The border property</summary>
-        public double? Border { get; set; }
+        public double? Border { get => _explicitNullValueBorder; set { _explicitNullValueBorder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("border"); else _explicitNullProperties?.Remove("border"); } }
+        private double? _explicitNullValueBorder = default!;
         /// <summary>The elements property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement3>? Elements { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement3>? Elements { get => _explicitNullValueElements; set { _explicitNullValueElements = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elements"); else _explicitNullProperties?.Remove("elements"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement3>? _explicitNullValueElements = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement3> Elements { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement3> Elements { get => _explicitNullValueElements; set { _explicitNullValueElements = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elements"); else _explicitNullProperties?.Remove("elements"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement3> _explicitNullValueElements = default!;
 #endif
         /// <summary>The indent property</summary>
-        public double? Indent { get; set; }
+        public double? Indent { get => _explicitNullValueIndent; set { _explicitNullValueIndent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("indent"); else _explicitNullProperties?.Remove("indent"); } }
+        private double? _explicitNullValueIndent = default!;
         /// <summary>The offset property</summary>
-        public double? Offset { get; set; }
+        public double? Offset { get => _explicitNullValueOffset; set { _explicitNullValueOffset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offset"); else _explicitNullProperties?.Remove("offset"); } }
+        private double? _explicitNullValueOffset = default!;
         /// <summary>The style property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Style { get; set; }
+        public string? Style { get => _explicitNullValueStyle; set { _explicitNullValueStyle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("style"); else _explicitNullProperties?.Remove("style"); } }
+        private string? _explicitNullValueStyle = default!;
 #nullable restore
 #else
-        public string Style { get; set; }
+        public string Style { get => _explicitNullValueStyle; set { _explicitNullValueStyle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("style"); else _explicitNullProperties?.Remove("style"); } }
+        private string _explicitNullValueStyle = default!;
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.AccessoryElement4Type? Type { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.AccessoryElement4Type? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.AccessoryElement4Type? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.AccessoryElement4"/> and sets the default values.
         /// </summary>
@@ -53,7 +74,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.AccessoryElement4 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.AccessoryElement4();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.AccessoryElement4(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -84,6 +105,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("offset", Offset);
             writer.WriteStringValue("style", Style);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AccessoryElement4Type>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

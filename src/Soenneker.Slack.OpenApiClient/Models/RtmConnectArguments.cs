@@ -11,13 +11,24 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class RtmConnectArguments : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("batch_presence_aware") is { } nullNodeBatchPresenceAware && nullNodeBatchPresenceAware.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BatchPresenceAware = null;
+            if (parseNode.GetChildNode("presence_sub") is { } nullNodePresenceSub && nullNodePresenceSub.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PresenceSub = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Batch presence deliveries via subscription. Enabling changes the shape of `presence_change` events.[batch presence](https://docs.slack.dev/apis/web-api/user-presence-and-status#batching).</summary>
-        public bool? BatchPresenceAware { get; set; }
+        public bool? BatchPresenceAware { get => _explicitNullValueBatchPresenceAware; set { _explicitNullValueBatchPresenceAware = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batch_presence_aware"); else _explicitNullProperties?.Remove("batch_presence_aware"); } }
+        private bool? _explicitNullValueBatchPresenceAware = default!;
         /// <summary>Only deliver presence events when requested by subscription.[deliver presence events when requested by subscription. presence subscriptions](Only).</summary>
-        public bool? PresenceSub { get; set; }
+        public bool? PresenceSub { get => _explicitNullValuePresenceSub; set { _explicitNullValuePresenceSub = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("presence_sub"); else _explicitNullProperties?.Remove("presence_sub"); } }
+        private bool? _explicitNullValuePresenceSub = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.RtmConnectArguments"/> and sets the default values.
         /// </summary>
@@ -33,7 +44,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.RtmConnectArguments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.RtmConnectArguments();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.RtmConnectArguments(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -56,6 +67,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("batch_presence_aware", BatchPresenceAware);
             writer.WriteBoolValue("presence_sub", PresenceSub);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,23 +11,44 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class Style2 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("bold") is { } nullNodeBold && nullNodeBold.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bold = null;
+            if (parseNode.GetChildNode("client_highlight") is { } nullNodeClientHighlight && nullNodeClientHighlight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientHighlight = null;
+            if (parseNode.GetChildNode("code") is { } nullNodeCode && nullNodeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Code = null;
+            if (parseNode.GetChildNode("highlight") is { } nullNodeHighlight && nullNodeHighlight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Highlight = null;
+            if (parseNode.GetChildNode("italic") is { } nullNodeItalic && nullNodeItalic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Italic = null;
+            if (parseNode.GetChildNode("strike") is { } nullNodeStrike && nullNodeStrike.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Strike = null;
+            if (parseNode.GetChildNode("unlink") is { } nullNodeUnlink && nullNodeUnlink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Unlink = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The bold property</summary>
-        public bool? Bold { get; set; }
+        public bool? Bold { get => _explicitNullValueBold; set { _explicitNullValueBold = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bold"); else _explicitNullProperties?.Remove("bold"); } }
+        private bool? _explicitNullValueBold = default!;
         /// <summary>The client_highlight property</summary>
-        public bool? ClientHighlight { get; set; }
+        public bool? ClientHighlight { get => _explicitNullValueClientHighlight; set { _explicitNullValueClientHighlight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_highlight"); else _explicitNullProperties?.Remove("client_highlight"); } }
+        private bool? _explicitNullValueClientHighlight = default!;
         /// <summary>The code property</summary>
-        public bool? Code { get; set; }
+        public bool? Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code"); else _explicitNullProperties?.Remove("code"); } }
+        private bool? _explicitNullValueCode = default!;
         /// <summary>The highlight property</summary>
-        public bool? Highlight { get; set; }
+        public bool? Highlight { get => _explicitNullValueHighlight; set { _explicitNullValueHighlight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("highlight"); else _explicitNullProperties?.Remove("highlight"); } }
+        private bool? _explicitNullValueHighlight = default!;
         /// <summary>The italic property</summary>
-        public bool? Italic { get; set; }
+        public bool? Italic { get => _explicitNullValueItalic; set { _explicitNullValueItalic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("italic"); else _explicitNullProperties?.Remove("italic"); } }
+        private bool? _explicitNullValueItalic = default!;
         /// <summary>The strike property</summary>
-        public bool? Strike { get; set; }
+        public bool? Strike { get => _explicitNullValueStrike; set { _explicitNullValueStrike = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("strike"); else _explicitNullProperties?.Remove("strike"); } }
+        private bool? _explicitNullValueStrike = default!;
         /// <summary>The unlink property</summary>
-        public bool? Unlink { get; set; }
+        public bool? Unlink { get => _explicitNullValueUnlink; set { _explicitNullValueUnlink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unlink"); else _explicitNullProperties?.Remove("unlink"); } }
+        private bool? _explicitNullValueUnlink = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Style2"/> and sets the default values.
         /// </summary>
@@ -43,7 +64,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.Style2 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.Style2();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.Style2(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +97,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteBoolValue("italic", Italic);
             writer.WriteBoolValue("strike", Strike);
             writer.WriteBoolValue("unlink", Unlink);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

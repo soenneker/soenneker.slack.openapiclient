@@ -12,7 +12,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RichTextElement : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.RichTextBroadcastMention"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -105,45 +110,68 @@ namespace Soenneker.Slack.OpenApiClient.Models
             var result = new global::Soenneker.Slack.OpenApiClient.Models.RichTextElement();
             if("broadcast".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.RichTextBroadcastMention = new global::Soenneker.Slack.OpenApiClient.Models.RichTextBroadcastMention();
+                
             }
             else if("channel".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.RichTextChannelMention = new global::Soenneker.Slack.OpenApiClient.Models.RichTextChannelMention();
+                
             }
             else if("color".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.RichTextColor = new global::Soenneker.Slack.OpenApiClient.Models.RichTextColor();
+                
             }
             else if("date".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.RichTextDate = new global::Soenneker.Slack.OpenApiClient.Models.RichTextDate();
+                
             }
             else if("emoji".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.RichTextEmoji = new global::Soenneker.Slack.OpenApiClient.Models.RichTextEmoji();
+                
             }
             else if("link".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.RichTextLink = new global::Soenneker.Slack.OpenApiClient.Models.RichTextLink();
+                
             }
             else if("team".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.RichTextTeamMention = new global::Soenneker.Slack.OpenApiClient.Models.RichTextTeamMention();
+                
             }
             else if("text".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.RichTextText = new global::Soenneker.Slack.OpenApiClient.Models.RichTextText();
+                
             }
             else if("user".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.RichTextUserMention = new global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMention();
+                
             }
             else if("usergroup".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.RichTextUsergroupMention = new global::Soenneker.Slack.OpenApiClient.Models.RichTextUsergroupMention();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("broadcast".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("range") != null && (parseNode.GetChildNode("range")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag3 && ("everyone".Equals(tag3.GetValue(), global::System.StringComparison.Ordinal) || "here".Equals(tag3.GetValue(), global::System.StringComparison.Ordinal) || "channel".Equals(tag3.GetValue(), global::System.StringComparison.Ordinal)))))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("color".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("value") != null))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("channel".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("channel_id") != null))();
+            bool matchesUnionBranch3 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("date".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("timestamp") != null && parseNode.GetChildNode("format") != null))();
+            bool matchesUnionBranch4 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("emoji".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("name") != null))();
+            bool matchesUnionBranch5 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("link".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("url") != null))();
+            bool matchesUnionBranch6 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("team".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("team_id") != null))();
+            bool matchesUnionBranch7 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("text".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("text") != null))();
+            bool matchesUnionBranch8 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("user".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("user_id") != null))();
+            bool matchesUnionBranch9 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("usergroup".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("usergroup_id") != null))();
+            if (result.RichTextBroadcastMention == null && result.RichTextChannelMention == null && result.RichTextColor == null && result.RichTextDate == null && result.RichTextEmoji == null && result.RichTextLink == null && result.RichTextTeamMention == null && result.RichTextText == null && result.RichTextUsergroupMention == null && result.RichTextUserMention == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch8 && !matchesUnionBranch9) result.RichTextBroadcastMention = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.RichTextBroadcastMention(), parseNode);
+            if (result.RichTextBroadcastMention == null && result.RichTextChannelMention == null && result.RichTextColor == null && result.RichTextDate == null && result.RichTextEmoji == null && result.RichTextLink == null && result.RichTextTeamMention == null && result.RichTextText == null && result.RichTextUsergroupMention == null && result.RichTextUserMention == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch8 && !matchesUnionBranch9) result.RichTextColor = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.RichTextColor(), parseNode);
+            if (result.RichTextBroadcastMention == null && result.RichTextChannelMention == null && result.RichTextColor == null && result.RichTextDate == null && result.RichTextEmoji == null && result.RichTextLink == null && result.RichTextTeamMention == null && result.RichTextText == null && result.RichTextUsergroupMention == null && result.RichTextUserMention == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch8 && !matchesUnionBranch9) result.RichTextChannelMention = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.RichTextChannelMention(), parseNode);
+            if (result.RichTextBroadcastMention == null && result.RichTextChannelMention == null && result.RichTextColor == null && result.RichTextDate == null && result.RichTextEmoji == null && result.RichTextLink == null && result.RichTextTeamMention == null && result.RichTextText == null && result.RichTextUsergroupMention == null && result.RichTextUserMention == null && matchesUnionBranch3 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch8 && !matchesUnionBranch9) result.RichTextDate = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.RichTextDate(), parseNode);
+            if (result.RichTextBroadcastMention == null && result.RichTextChannelMention == null && result.RichTextColor == null && result.RichTextDate == null && result.RichTextEmoji == null && result.RichTextLink == null && result.RichTextTeamMention == null && result.RichTextText == null && result.RichTextUsergroupMention == null && result.RichTextUserMention == null && matchesUnionBranch4 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch8 && !matchesUnionBranch9) result.RichTextEmoji = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.RichTextEmoji(), parseNode);
+            if (result.RichTextBroadcastMention == null && result.RichTextChannelMention == null && result.RichTextColor == null && result.RichTextDate == null && result.RichTextEmoji == null && result.RichTextLink == null && result.RichTextTeamMention == null && result.RichTextText == null && result.RichTextUsergroupMention == null && result.RichTextUserMention == null && matchesUnionBranch5 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch8 && !matchesUnionBranch9) result.RichTextLink = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.RichTextLink(), parseNode);
+            if (result.RichTextBroadcastMention == null && result.RichTextChannelMention == null && result.RichTextColor == null && result.RichTextDate == null && result.RichTextEmoji == null && result.RichTextLink == null && result.RichTextTeamMention == null && result.RichTextText == null && result.RichTextUsergroupMention == null && result.RichTextUserMention == null && matchesUnionBranch6 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch7 && !matchesUnionBranch8 && !matchesUnionBranch9) result.RichTextTeamMention = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.RichTextTeamMention(), parseNode);
+            if (result.RichTextBroadcastMention == null && result.RichTextChannelMention == null && result.RichTextColor == null && result.RichTextDate == null && result.RichTextEmoji == null && result.RichTextLink == null && result.RichTextTeamMention == null && result.RichTextText == null && result.RichTextUsergroupMention == null && result.RichTextUserMention == null && matchesUnionBranch7 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch8 && !matchesUnionBranch9) result.RichTextText = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.RichTextText(), parseNode);
+            if (result.RichTextBroadcastMention == null && result.RichTextChannelMention == null && result.RichTextColor == null && result.RichTextDate == null && result.RichTextEmoji == null && result.RichTextLink == null && result.RichTextTeamMention == null && result.RichTextText == null && result.RichTextUsergroupMention == null && result.RichTextUserMention == null && matchesUnionBranch8 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch9) result.RichTextUserMention = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMention(), parseNode);
+            if (result.RichTextBroadcastMention == null && result.RichTextChannelMention == null && result.RichTextColor == null && result.RichTextDate == null && result.RichTextEmoji == null && result.RichTextLink == null && result.RichTextTeamMention == null && result.RichTextText == null && result.RichTextUsergroupMention == null && result.RichTextUserMention == null && matchesUnionBranch9 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch8) result.RichTextUsergroupMention = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.RichTextUsergroupMention(), parseNode);
+            if (result.RichTextBroadcastMention == null && result.RichTextChannelMention == null && result.RichTextColor == null && result.RichTextDate == null && result.RichTextEmoji == null && result.RichTextLink == null && result.RichTextTeamMention == null && result.RichTextText == null && result.RichTextUsergroupMention == null && result.RichTextUserMention == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -199,45 +227,68 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (RichTextBroadcastMention == null && RichTextChannelMention == null && RichTextColor == null && RichTextDate == null && RichTextEmoji == null && RichTextLink == null && RichTextTeamMention == null && RichTextText == null && RichTextUsergroupMention == null && RichTextUserMention == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (RichTextBroadcastMention != null && RichTextChannelMention == null && RichTextColor == null && RichTextDate == null && RichTextEmoji == null && RichTextLink == null && RichTextTeamMention == null && RichTextText == null && RichTextUsergroupMention == null && RichTextUserMention == null) { if (RichTextBroadcastMention is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, RichTextBroadcastMention); return; }
+            if (RichTextChannelMention != null && RichTextBroadcastMention == null && RichTextColor == null && RichTextDate == null && RichTextEmoji == null && RichTextLink == null && RichTextTeamMention == null && RichTextText == null && RichTextUsergroupMention == null && RichTextUserMention == null) { if (RichTextChannelMention is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, RichTextChannelMention); return; }
+            if (RichTextColor != null && RichTextBroadcastMention == null && RichTextChannelMention == null && RichTextDate == null && RichTextEmoji == null && RichTextLink == null && RichTextTeamMention == null && RichTextText == null && RichTextUsergroupMention == null && RichTextUserMention == null) { if (RichTextColor is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, RichTextColor); return; }
+            if (RichTextDate != null && RichTextBroadcastMention == null && RichTextChannelMention == null && RichTextColor == null && RichTextEmoji == null && RichTextLink == null && RichTextTeamMention == null && RichTextText == null && RichTextUsergroupMention == null && RichTextUserMention == null) { if (RichTextDate is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, RichTextDate); return; }
+            if (RichTextEmoji != null && RichTextBroadcastMention == null && RichTextChannelMention == null && RichTextColor == null && RichTextDate == null && RichTextLink == null && RichTextTeamMention == null && RichTextText == null && RichTextUsergroupMention == null && RichTextUserMention == null) { if (RichTextEmoji is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, RichTextEmoji); return; }
+            if (RichTextLink != null && RichTextBroadcastMention == null && RichTextChannelMention == null && RichTextColor == null && RichTextDate == null && RichTextEmoji == null && RichTextTeamMention == null && RichTextText == null && RichTextUsergroupMention == null && RichTextUserMention == null) { if (RichTextLink is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, RichTextLink); return; }
+            if (RichTextTeamMention != null && RichTextBroadcastMention == null && RichTextChannelMention == null && RichTextColor == null && RichTextDate == null && RichTextEmoji == null && RichTextLink == null && RichTextText == null && RichTextUsergroupMention == null && RichTextUserMention == null) { if (RichTextTeamMention is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, RichTextTeamMention); return; }
+            if (RichTextText != null && RichTextBroadcastMention == null && RichTextChannelMention == null && RichTextColor == null && RichTextDate == null && RichTextEmoji == null && RichTextLink == null && RichTextTeamMention == null && RichTextUsergroupMention == null && RichTextUserMention == null) { if (RichTextText is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, RichTextText); return; }
+            if (RichTextUserMention != null && RichTextBroadcastMention == null && RichTextChannelMention == null && RichTextColor == null && RichTextDate == null && RichTextEmoji == null && RichTextLink == null && RichTextTeamMention == null && RichTextText == null && RichTextUsergroupMention == null) { if (RichTextUserMention is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, RichTextUserMention); return; }
+            if (RichTextUsergroupMention != null && RichTextBroadcastMention == null && RichTextChannelMention == null && RichTextColor == null && RichTextDate == null && RichTextEmoji == null && RichTextLink == null && RichTextTeamMention == null && RichTextText == null && RichTextUserMention == null) { if (RichTextUsergroupMention is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, RichTextUsergroupMention); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(RichTextBroadcastMention != null)
             {
+                if (RichTextBroadcastMention is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextBroadcastMention>(null, RichTextBroadcastMention);
             }
             else if(RichTextChannelMention != null)
             {
+                if (RichTextChannelMention is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextChannelMention>(null, RichTextChannelMention);
             }
             else if(RichTextColor != null)
             {
+                if (RichTextColor is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextColor>(null, RichTextColor);
             }
             else if(RichTextDate != null)
             {
+                if (RichTextDate is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextDate>(null, RichTextDate);
             }
             else if(RichTextEmoji != null)
             {
+                if (RichTextEmoji is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextEmoji>(null, RichTextEmoji);
             }
             else if(RichTextLink != null)
             {
+                if (RichTextLink is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextLink>(null, RichTextLink);
             }
             else if(RichTextTeamMention != null)
             {
+                if (RichTextTeamMention is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextTeamMention>(null, RichTextTeamMention);
             }
             else if(RichTextText != null)
             {
+                if (RichTextText is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextText>(null, RichTextText);
             }
             else if(RichTextUsergroupMention != null)
             {
+                if (RichTextUsergroupMention is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextUsergroupMention>(null, RichTextUsergroupMention);
             }
             else if(RichTextUserMention != null)
             {
+                if (RichTextUserMention is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RichTextUserMention>(null, RichTextUserMention);
             }
         }

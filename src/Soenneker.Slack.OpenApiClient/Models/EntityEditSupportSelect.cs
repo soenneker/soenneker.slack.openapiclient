@@ -11,36 +11,56 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class EntityEditSupportSelect : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("current_value") is { } nullNodeCurrentValue && nullNodeCurrentValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentValue = null;
+            if (parseNode.GetChildNode("current_values") is { } nullNodeCurrentValues && nullNodeCurrentValues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentValues = null;
+            if (parseNode.GetChildNode("fetch_options_dynamically") is { } nullNodeFetchOptionsDynamically && nullNodeFetchOptionsDynamically.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FetchOptionsDynamically = null;
+            if (parseNode.GetChildNode("min_query_length") is { } nullNodeMinQueryLength && nullNodeMinQueryLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinQueryLength = null;
+            if (parseNode.GetChildNode("static_options") is { } nullNodeStaticOptions && nullNodeStaticOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StaticOptions = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The current_value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CurrentValue { get; set; }
+        public string? CurrentValue { get => _explicitNullValueCurrentValue; set { _explicitNullValueCurrentValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_value"); else _explicitNullProperties?.Remove("current_value"); } }
+        private string? _explicitNullValueCurrentValue = default!;
 #nullable restore
 #else
-        public string CurrentValue { get; set; }
+        public string CurrentValue { get => _explicitNullValueCurrentValue; set { _explicitNullValueCurrentValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_value"); else _explicitNullProperties?.Remove("current_value"); } }
+        private string _explicitNullValueCurrentValue = default!;
 #endif
         /// <summary>The current_values property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? CurrentValues { get; set; }
+        public List<string>? CurrentValues { get => _explicitNullValueCurrentValues; set { _explicitNullValueCurrentValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_values"); else _explicitNullProperties?.Remove("current_values"); } }
+        private List<string>? _explicitNullValueCurrentValues = default!;
 #nullable restore
 #else
-        public List<string> CurrentValues { get; set; }
+        public List<string> CurrentValues { get => _explicitNullValueCurrentValues; set { _explicitNullValueCurrentValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_values"); else _explicitNullProperties?.Remove("current_values"); } }
+        private List<string> _explicitNullValueCurrentValues = default!;
 #endif
         /// <summary>The fetch_options_dynamically property</summary>
-        public bool? FetchOptionsDynamically { get; set; }
+        public bool? FetchOptionsDynamically { get => _explicitNullValueFetchOptionsDynamically; set { _explicitNullValueFetchOptionsDynamically = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fetch_options_dynamically"); else _explicitNullProperties?.Remove("fetch_options_dynamically"); } }
+        private bool? _explicitNullValueFetchOptionsDynamically = default!;
         /// <summary>The min_query_length property</summary>
-        public double? MinQueryLength { get; set; }
+        public double? MinQueryLength { get => _explicitNullValueMinQueryLength; set { _explicitNullValueMinQueryLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("min_query_length"); else _explicitNullProperties?.Remove("min_query_length"); } }
+        private double? _explicitNullValueMinQueryLength = default!;
         /// <summary>The static_options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Option>? StaticOptions { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Option>? StaticOptions { get => _explicitNullValueStaticOptions; set { _explicitNullValueStaticOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("static_options"); else _explicitNullProperties?.Remove("static_options"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.Option>? _explicitNullValueStaticOptions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Option> StaticOptions { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Option> StaticOptions { get => _explicitNullValueStaticOptions; set { _explicitNullValueStaticOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("static_options"); else _explicitNullProperties?.Remove("static_options"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.Option> _explicitNullValueStaticOptions = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportSelect"/> and sets the default values.
@@ -57,7 +77,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportSelect CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportSelect();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupportSelect(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -86,6 +106,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteBoolValue("fetch_options_dynamically", FetchOptionsDynamically);
             writer.WriteDoubleValue("min_query_length", MinQueryLength);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Option>("static_options", StaticOptions);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

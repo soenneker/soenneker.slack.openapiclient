@@ -11,29 +11,46 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class InvitePayload : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("channel") is { } nullNodeChannel && nullNodeChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Channel = null;
+            if (parseNode.GetChildNode("invite_type") is { } nullNodeInviteType && nullNodeInviteType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InviteType = null;
+            if (parseNode.GetChildNode("is_external_limited") is { } nullNodeIsExternalLimited && nullNodeIsExternalLimited.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsExternalLimited = null;
+            if (parseNode.GetChildNode("is_sponsored") is { } nullNodeIsSponsored && nullNodeIsSponsored.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsSponsored = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The channel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel9? Channel { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Channel9? Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel"); else _explicitNullProperties?.Remove("channel"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Channel9? _explicitNullValueChannel = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel9 Channel { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.Channel9 Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel"); else _explicitNullProperties?.Remove("channel"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Channel9 _explicitNullValueChannel = default!;
 #endif
         /// <summary>The invite_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InviteType { get; set; }
+        public string? InviteType { get => _explicitNullValueInviteType; set { _explicitNullValueInviteType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invite_type"); else _explicitNullProperties?.Remove("invite_type"); } }
+        private string? _explicitNullValueInviteType = default!;
 #nullable restore
 #else
-        public string InviteType { get; set; }
+        public string InviteType { get => _explicitNullValueInviteType; set { _explicitNullValueInviteType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invite_type"); else _explicitNullProperties?.Remove("invite_type"); } }
+        private string _explicitNullValueInviteType = default!;
 #endif
         /// <summary>The is_external_limited property</summary>
-        public bool? IsExternalLimited { get; set; }
+        public bool? IsExternalLimited { get => _explicitNullValueIsExternalLimited; set { _explicitNullValueIsExternalLimited = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_external_limited"); else _explicitNullProperties?.Remove("is_external_limited"); } }
+        private bool? _explicitNullValueIsExternalLimited = default!;
         /// <summary>The is_sponsored property</summary>
-        public bool? IsSponsored { get; set; }
+        public bool? IsSponsored { get => _explicitNullValueIsSponsored; set { _explicitNullValueIsSponsored = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_sponsored"); else _explicitNullProperties?.Remove("is_sponsored"); } }
+        private bool? _explicitNullValueIsSponsored = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.InvitePayload"/> and sets the default values.
         /// </summary>
@@ -49,7 +66,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.InvitePayload CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.InvitePayload();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.InvitePayload(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +93,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("invite_type", InviteType);
             writer.WriteBoolValue("is_external_limited", IsExternalLimited);
             writer.WriteBoolValue("is_sponsored", IsSponsored);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

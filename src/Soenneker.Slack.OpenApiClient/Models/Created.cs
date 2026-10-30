@@ -11,48 +11,70 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class Created : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("device_hardware") is { } nullNodeDeviceHardware && nullNodeDeviceHardware.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeviceHardware = null;
+            if (parseNode.GetChildNode("ip") is { } nullNodeIp && nullNodeIp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ip = null;
+            if (parseNode.GetChildNode("os") is { } nullNodeOs && nullNodeOs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Os = null;
+            if (parseNode.GetChildNode("os_version") is { } nullNodeOsVersion && nullNodeOsVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OsVersion = null;
+            if (parseNode.GetChildNode("slack_client_version") is { } nullNodeSlackClientVersion && nullNodeSlackClientVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SlackClientVersion = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The device_hardware property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DeviceHardware { get; set; }
+        public string? DeviceHardware { get => _explicitNullValueDeviceHardware; set { _explicitNullValueDeviceHardware = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_hardware"); else _explicitNullProperties?.Remove("device_hardware"); } }
+        private string? _explicitNullValueDeviceHardware = default!;
 #nullable restore
 #else
-        public string DeviceHardware { get; set; }
+        public string DeviceHardware { get => _explicitNullValueDeviceHardware; set { _explicitNullValueDeviceHardware = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_hardware"); else _explicitNullProperties?.Remove("device_hardware"); } }
+        private string _explicitNullValueDeviceHardware = default!;
 #endif
         /// <summary>The ip property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Ip { get; set; }
+        public string? Ip { get => _explicitNullValueIp; set { _explicitNullValueIp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip"); else _explicitNullProperties?.Remove("ip"); } }
+        private string? _explicitNullValueIp = default!;
 #nullable restore
 #else
-        public string Ip { get; set; }
+        public string Ip { get => _explicitNullValueIp; set { _explicitNullValueIp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip"); else _explicitNullProperties?.Remove("ip"); } }
+        private string _explicitNullValueIp = default!;
 #endif
         /// <summary>The os property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Os { get; set; }
+        public string? Os { get => _explicitNullValueOs; set { _explicitNullValueOs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("os"); else _explicitNullProperties?.Remove("os"); } }
+        private string? _explicitNullValueOs = default!;
 #nullable restore
 #else
-        public string Os { get; set; }
+        public string Os { get => _explicitNullValueOs; set { _explicitNullValueOs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("os"); else _explicitNullProperties?.Remove("os"); } }
+        private string _explicitNullValueOs = default!;
 #endif
         /// <summary>The os_version property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OsVersion { get; set; }
+        public string? OsVersion { get => _explicitNullValueOsVersion; set { _explicitNullValueOsVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("os_version"); else _explicitNullProperties?.Remove("os_version"); } }
+        private string? _explicitNullValueOsVersion = default!;
 #nullable restore
 #else
-        public string OsVersion { get; set; }
+        public string OsVersion { get => _explicitNullValueOsVersion; set { _explicitNullValueOsVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("os_version"); else _explicitNullProperties?.Remove("os_version"); } }
+        private string _explicitNullValueOsVersion = default!;
 #endif
         /// <summary>The slack_client_version property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SlackClientVersion { get; set; }
+        public string? SlackClientVersion { get => _explicitNullValueSlackClientVersion; set { _explicitNullValueSlackClientVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("slack_client_version"); else _explicitNullProperties?.Remove("slack_client_version"); } }
+        private string? _explicitNullValueSlackClientVersion = default!;
 #nullable restore
 #else
-        public string SlackClientVersion { get; set; }
+        public string SlackClientVersion { get => _explicitNullValueSlackClientVersion; set { _explicitNullValueSlackClientVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("slack_client_version"); else _explicitNullProperties?.Remove("slack_client_version"); } }
+        private string _explicitNullValueSlackClientVersion = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Created"/> and sets the default values.
@@ -69,7 +91,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.Created CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.Created();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.Created(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +120,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("os", Os);
             writer.WriteStringValue("os_version", OsVersion);
             writer.WriteStringValue("slack_client_version", SlackClientVersion);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -51,7 +51,7 @@ namespace Soenneker.Slack.OpenApiClient.Api.AdminFunctionsPermissionsSet
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Slack.OpenApiClient.Models.AdminFunctionsPermissionsSetResponse>(requestInfo, global::Soenneker.Slack.OpenApiClient.Models.AdminFunctionsPermissionsSetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Slack.OpenApiClient.Models.AdminFunctionsPermissionsSetResponse>(requestInfo, global::Soenneker.Slack.OpenApiClient.Models.AdminFunctionsPermissionsSetResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Set the visibility of a Slack function and define the users or workspaces if it is set to named_entities.

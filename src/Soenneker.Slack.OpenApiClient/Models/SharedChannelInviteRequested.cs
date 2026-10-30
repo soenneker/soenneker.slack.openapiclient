@@ -11,52 +11,78 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SharedChannelInviteRequested : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("actor") is { } nullNodeActor && nullNodeActor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Actor = null;
+            if (parseNode.GetChildNode("approval_destination") is { } nullNodeApprovalDestination && nullNodeApprovalDestination.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApprovalDestination = null;
+            if (parseNode.GetChildNode("date_update") is { } nullNodeDateUpdate && nullNodeDateUpdate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateUpdate = null;
+            if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+            if (parseNode.GetChildNode("source") is { } nullNodeSource && nullNodeSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Source = null;
+            if (parseNode.GetChildNode("usergroup_exclude") is { } nullNodeUsergroupExclude && nullNodeUsergroupExclude.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsergroupExclude = null;
+            if (parseNode.GetChildNode("usergroup_include") is { } nullNodeUsergroupInclude && nullNodeUsergroupInclude.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsergroupInclude = null;
+        }
+
         /// <summary>The actor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Actor { get; set; }
+        public string? Actor { get => _explicitNullValueActor; set { _explicitNullValueActor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actor"); else _explicitNullProperties?.Remove("actor"); } }
+        private string? _explicitNullValueActor = default!;
 #nullable restore
 #else
-        public string Actor { get; set; }
+        public string Actor { get => _explicitNullValueActor; set { _explicitNullValueActor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actor"); else _explicitNullProperties?.Remove("actor"); } }
+        private string _explicitNullValueActor = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The approval_destination property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ApprovalDestination? ApprovalDestination { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ApprovalDestination? ApprovalDestination { get => _explicitNullValueApprovalDestination; set { _explicitNullValueApprovalDestination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approval_destination"); else _explicitNullProperties?.Remove("approval_destination"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ApprovalDestination? _explicitNullValueApprovalDestination = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ApprovalDestination ApprovalDestination { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ApprovalDestination ApprovalDestination { get => _explicitNullValueApprovalDestination; set { _explicitNullValueApprovalDestination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approval_destination"); else _explicitNullProperties?.Remove("approval_destination"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ApprovalDestination _explicitNullValueApprovalDestination = default!;
 #endif
         /// <summary>The date_update property</summary>
-        public double? DateUpdate { get; set; }
+        public double? DateUpdate { get => _explicitNullValueDateUpdate; set { _explicitNullValueDateUpdate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_update"); else _explicitNullProperties?.Remove("date_update"); } }
+        private double? _explicitNullValueDateUpdate = default!;
         /// <summary>The enabled property</summary>
-        public bool? Enabled { get; set; }
+        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
+        private bool? _explicitNullValueEnabled = default!;
         /// <summary>The source property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Source { get; set; }
+        public string? Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
+        private string? _explicitNullValueSource = default!;
 #nullable restore
 #else
-        public string Source { get; set; }
+        public string Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
+        private string _explicitNullValueSource = default!;
 #endif
         /// <summary>The usergroup_exclude property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.UsergroupClude? UsergroupExclude { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.UsergroupClude? UsergroupExclude { get => _explicitNullValueUsergroupExclude; set { _explicitNullValueUsergroupExclude = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usergroup_exclude"); else _explicitNullProperties?.Remove("usergroup_exclude"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.UsergroupClude? _explicitNullValueUsergroupExclude = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.UsergroupClude UsergroupExclude { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.UsergroupClude UsergroupExclude { get => _explicitNullValueUsergroupExclude; set { _explicitNullValueUsergroupExclude = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usergroup_exclude"); else _explicitNullProperties?.Remove("usergroup_exclude"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.UsergroupClude _explicitNullValueUsergroupExclude = default!;
 #endif
         /// <summary>The usergroup_include property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.UsergroupClude? UsergroupInclude { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.UsergroupClude? UsergroupInclude { get => _explicitNullValueUsergroupInclude; set { _explicitNullValueUsergroupInclude = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usergroup_include"); else _explicitNullProperties?.Remove("usergroup_include"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.UsergroupClude? _explicitNullValueUsergroupInclude = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.UsergroupClude UsergroupInclude { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.UsergroupClude UsergroupInclude { get => _explicitNullValueUsergroupInclude; set { _explicitNullValueUsergroupInclude = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usergroup_include"); else _explicitNullProperties?.Remove("usergroup_include"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.UsergroupClude _explicitNullValueUsergroupInclude = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.SharedChannelInviteRequested"/> and sets the default values.
@@ -73,7 +99,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.SharedChannelInviteRequested CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.SharedChannelInviteRequested();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.SharedChannelInviteRequested(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -106,6 +132,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("source", Source);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UsergroupClude>("usergroup_exclude", UsergroupExclude);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UsergroupClude>("usergroup_include", UsergroupInclude);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

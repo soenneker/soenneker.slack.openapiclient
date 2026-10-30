@@ -12,7 +12,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AdminAppsRestrictArguments : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRestrictArgumentsAnyOf1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -54,11 +59,22 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRestrictArguments();
-            result.AdminAppsRestrictArgumentsAnyOf1 = new global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRestrictArgumentsAnyOf1();
-            result.AdminAppsRestrictArgumentsAnyOf2 = new global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRestrictArgumentsAnyOf2();
-            result.AdminAppsRestrictArgumentsAnyOf3 = new global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRestrictArgumentsAnyOf3();
-            result.AdminAppsRestrictArgumentsAnyOf4 = new global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRestrictArgumentsAnyOf4();
-            return result;
+            
+            
+            
+            
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("app_id") != null && parseNode.GetChildNode("enterprise_id") != null))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("app_id") != null && parseNode.GetChildNode("team_id") != null))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("request_id") != null && parseNode.GetChildNode("enterprise_id") != null))();
+            bool matchesUnionBranch3 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("request_id") != null && parseNode.GetChildNode("team_id") != null))();
+            if (result.AdminAppsRestrictArgumentsAnyOf1 == null && result.AdminAppsRestrictArgumentsAnyOf2 == null && result.AdminAppsRestrictArgumentsAnyOf3 == null && result.AdminAppsRestrictArgumentsAnyOf4 == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3) result.AdminAppsRestrictArgumentsAnyOf1 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRestrictArgumentsAnyOf1(), parseNode);
+            if (result.AdminAppsRestrictArgumentsAnyOf1 == null && result.AdminAppsRestrictArgumentsAnyOf2 == null && result.AdminAppsRestrictArgumentsAnyOf3 == null && result.AdminAppsRestrictArgumentsAnyOf4 == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2 && !matchesUnionBranch3) result.AdminAppsRestrictArgumentsAnyOf2 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRestrictArgumentsAnyOf2(), parseNode);
+            if (result.AdminAppsRestrictArgumentsAnyOf1 == null && result.AdminAppsRestrictArgumentsAnyOf2 == null && result.AdminAppsRestrictArgumentsAnyOf3 == null && result.AdminAppsRestrictArgumentsAnyOf4 == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch3) result.AdminAppsRestrictArgumentsAnyOf3 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRestrictArgumentsAnyOf3(), parseNode);
+            if (result.AdminAppsRestrictArgumentsAnyOf1 == null && result.AdminAppsRestrictArgumentsAnyOf2 == null && result.AdminAppsRestrictArgumentsAnyOf3 == null && result.AdminAppsRestrictArgumentsAnyOf4 == null && matchesUnionBranch3 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2) result.AdminAppsRestrictArgumentsAnyOf4 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRestrictArgumentsAnyOf4(), parseNode);
+            if (result.AdminAppsRestrictArgumentsAnyOf1 == null && result.AdminAppsRestrictArgumentsAnyOf2 == null && result.AdminAppsRestrictArgumentsAnyOf3 == null && result.AdminAppsRestrictArgumentsAnyOf4 == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,13 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (AdminAppsRestrictArgumentsAnyOf1 == null && AdminAppsRestrictArgumentsAnyOf2 == null && AdminAppsRestrictArgumentsAnyOf3 == null && AdminAppsRestrictArgumentsAnyOf4 == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (AdminAppsRestrictArgumentsAnyOf1 != null && AdminAppsRestrictArgumentsAnyOf2 == null && AdminAppsRestrictArgumentsAnyOf3 == null && AdminAppsRestrictArgumentsAnyOf4 == null) { if (AdminAppsRestrictArgumentsAnyOf1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AdminAppsRestrictArgumentsAnyOf1); return; }
+            if (AdminAppsRestrictArgumentsAnyOf2 != null && AdminAppsRestrictArgumentsAnyOf1 == null && AdminAppsRestrictArgumentsAnyOf3 == null && AdminAppsRestrictArgumentsAnyOf4 == null) { if (AdminAppsRestrictArgumentsAnyOf2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AdminAppsRestrictArgumentsAnyOf2); return; }
+            if (AdminAppsRestrictArgumentsAnyOf3 != null && AdminAppsRestrictArgumentsAnyOf1 == null && AdminAppsRestrictArgumentsAnyOf2 == null && AdminAppsRestrictArgumentsAnyOf4 == null) { if (AdminAppsRestrictArgumentsAnyOf3 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AdminAppsRestrictArgumentsAnyOf3); return; }
+            if (AdminAppsRestrictArgumentsAnyOf4 != null && AdminAppsRestrictArgumentsAnyOf1 == null && AdminAppsRestrictArgumentsAnyOf2 == null && AdminAppsRestrictArgumentsAnyOf3 == null) { if (AdminAppsRestrictArgumentsAnyOf4 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AdminAppsRestrictArgumentsAnyOf4); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AdminAppsRestrictArgumentsAnyOf1>(null, AdminAppsRestrictArgumentsAnyOf1, AdminAppsRestrictArgumentsAnyOf2, AdminAppsRestrictArgumentsAnyOf3, AdminAppsRestrictArgumentsAnyOf4);
         }

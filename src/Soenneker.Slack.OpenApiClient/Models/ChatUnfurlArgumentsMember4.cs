@@ -11,52 +11,78 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ChatUnfurlArgumentsMember4 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("source") is { } nullNodeSource && nullNodeSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Source = null;
+            if (parseNode.GetChildNode("unfurl_id") is { } nullNodeUnfurlId && nullNodeUnfurlId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnfurlId = null;
+            if (parseNode.GetChildNode("user_auth_blocks") is { } nullNodeUserAuthBlocks && nullNodeUserAuthBlocks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserAuthBlocks = null;
+            if (parseNode.GetChildNode("user_auth_message") is { } nullNodeUserAuthMessage && nullNodeUserAuthMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserAuthMessage = null;
+            if (parseNode.GetChildNode("user_auth_required") is { } nullNodeUserAuthRequired && nullNodeUserAuthRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserAuthRequired = null;
+            if (parseNode.GetChildNode("user_auth_url") is { } nullNodeUserAuthUrl && nullNodeUserAuthUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserAuthUrl = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Unfurl metadata featuring an array of entities to attach to the message based on URLs featured in the message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlMetadataMetadata? Metadata { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlMetadataMetadata? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlMetadataMetadata? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlMetadataMetadata Metadata { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlMetadataMetadata Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlMetadataMetadata _explicitNullValueMetadata = default!;
 #endif
         /// <summary>The source of the link to unfurl. The source may either be `composer`, when the link is inside themessage composer, or `conversations_history`, when the link has been posted to a conversation.</summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.SourceAndUnfurlIdSource? Source { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.SourceAndUnfurlIdSource? Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.SourceAndUnfurlIdSource? _explicitNullValueSource = default!;
         /// <summary>The ID of the link to unfurl. Both `unfurl_id` and `source` must be provided together, or `channel`and `ts` must be provided together.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UnfurlId { get; set; }
+        public string? UnfurlId { get => _explicitNullValueUnfurlId; set { _explicitNullValueUnfurlId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unfurl_id"); else _explicitNullProperties?.Remove("unfurl_id"); } }
+        private string? _explicitNullValueUnfurlId = default!;
 #nullable restore
 #else
-        public string UnfurlId { get; set; }
+        public string UnfurlId { get => _explicitNullValueUnfurlId; set { _explicitNullValueUnfurlId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unfurl_id"); else _explicitNullProperties?.Remove("unfurl_id"); } }
+        private string _explicitNullValueUnfurlId = default!;
 #endif
         /// <summary>Provide a JSON based array of structured blocks presented as URL-encoded string to send as anephemeral message to the user as invitation to authenticate further and enable full unfurling behavior.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsAllOf1UserAuthBlocksItem>? UserAuthBlocks { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsAllOf1UserAuthBlocksItem>? UserAuthBlocks { get => _explicitNullValueUserAuthBlocks; set { _explicitNullValueUserAuthBlocks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_auth_blocks"); else _explicitNullProperties?.Remove("user_auth_blocks"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsAllOf1UserAuthBlocksItem>? _explicitNullValueUserAuthBlocks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsAllOf1UserAuthBlocksItem> UserAuthBlocks { get; set; }
+        public List<global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsAllOf1UserAuthBlocksItem> UserAuthBlocks { get => _explicitNullValueUserAuthBlocks; set { _explicitNullValueUserAuthBlocks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_auth_blocks"); else _explicitNullProperties?.Remove("user_auth_blocks"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsAllOf1UserAuthBlocksItem> _explicitNullValueUserAuthBlocks = default!;
 #endif
         /// <summary>Provide a simply-formatted string to send as an ephemeral message to the user as invitation toauthenticate further and enable full unfurling behavior. Provides two buttons, Not now or Never ask me again.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserAuthMessage { get; set; }
+        public string? UserAuthMessage { get => _explicitNullValueUserAuthMessage; set { _explicitNullValueUserAuthMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_auth_message"); else _explicitNullProperties?.Remove("user_auth_message"); } }
+        private string? _explicitNullValueUserAuthMessage = default!;
 #nullable restore
 #else
-        public string UserAuthMessage { get; set; }
+        public string UserAuthMessage { get => _explicitNullValueUserAuthMessage; set { _explicitNullValueUserAuthMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_auth_message"); else _explicitNullProperties?.Remove("user_auth_message"); } }
+        private string _explicitNullValueUserAuthMessage = default!;
 #endif
         /// <summary>Set to `true` to indicate the user must install your Slack app to trigger unfurls for this domain.Defaults to `false`.</summary>
-        public bool? UserAuthRequired { get; set; }
+        public bool? UserAuthRequired { get => _explicitNullValueUserAuthRequired; set { _explicitNullValueUserAuthRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_auth_required"); else _explicitNullProperties?.Remove("user_auth_required"); } }
+        private bool? _explicitNullValueUserAuthRequired = default!;
         /// <summary>Send users to this custom URL where they will complete authentication in your app to fully triggerunfurling. Value should be properly URL-encoded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserAuthUrl { get; set; }
+        public string? UserAuthUrl { get => _explicitNullValueUserAuthUrl; set { _explicitNullValueUserAuthUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_auth_url"); else _explicitNullProperties?.Remove("user_auth_url"); } }
+        private string? _explicitNullValueUserAuthUrl = default!;
 #nullable restore
 #else
-        public string UserAuthUrl { get; set; }
+        public string UserAuthUrl { get => _explicitNullValueUserAuthUrl; set { _explicitNullValueUserAuthUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_auth_url"); else _explicitNullProperties?.Remove("user_auth_url"); } }
+        private string _explicitNullValueUserAuthUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsMember4"/> and sets the default values.
@@ -73,7 +99,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsMember4 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsMember4();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.ChatUnfurlArgumentsMember4(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -106,6 +132,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("user_auth_message", UserAuthMessage);
             writer.WriteBoolValue("user_auth_required", UserAuthRequired);
             writer.WriteStringValue("user_auth_url", UserAuthUrl);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

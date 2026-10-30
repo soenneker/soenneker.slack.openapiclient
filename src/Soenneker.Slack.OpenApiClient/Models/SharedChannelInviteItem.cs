@@ -11,52 +11,78 @@ namespace Soenneker.Slack.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SharedChannelInviteItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("date_created") is { } nullNodeDateCreated && nullNodeDateCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateCreated = null;
+            if (parseNode.GetChildNode("date_invalid") is { } nullNodeDateInvalid && nullNodeDateInvalid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateInvalid = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("inviting_team") is { } nullNodeInvitingTeam && nullNodeInvitingTeam.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvitingTeam = null;
+            if (parseNode.GetChildNode("inviting_user") is { } nullNodeInvitingUser && nullNodeInvitingUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvitingUser = null;
+            if (parseNode.GetChildNode("recipient_email") is { } nullNodeRecipientEmail && nullNodeRecipientEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecipientEmail = null;
+            if (parseNode.GetChildNode("recipient_user_id") is { } nullNodeRecipientUserId && nullNodeRecipientUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecipientUserId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The date_created property</summary>
-        public double? DateCreated { get; set; }
+        public double? DateCreated { get => _explicitNullValueDateCreated; set { _explicitNullValueDateCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_created"); else _explicitNullProperties?.Remove("date_created"); } }
+        private double? _explicitNullValueDateCreated = default!;
         /// <summary>The date_invalid property</summary>
-        public double? DateInvalid { get; set; }
+        public double? DateInvalid { get => _explicitNullValueDateInvalid; set { _explicitNullValueDateInvalid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_invalid"); else _explicitNullProperties?.Remove("date_invalid"); } }
+        private double? _explicitNullValueDateInvalid = default!;
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The inviting_team property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.SharedChannelTeamItem? InvitingTeam { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.SharedChannelTeamItem? InvitingTeam { get => _explicitNullValueInvitingTeam; set { _explicitNullValueInvitingTeam = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inviting_team"); else _explicitNullProperties?.Remove("inviting_team"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.SharedChannelTeamItem? _explicitNullValueInvitingTeam = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.SharedChannelTeamItem InvitingTeam { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.SharedChannelTeamItem InvitingTeam { get => _explicitNullValueInvitingTeam; set { _explicitNullValueInvitingTeam = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inviting_team"); else _explicitNullProperties?.Remove("inviting_team"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.SharedChannelTeamItem _explicitNullValueInvitingTeam = default!;
 #endif
         /// <summary>The inviting_user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.SharedChannelUserItem? InvitingUser { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.SharedChannelUserItem? InvitingUser { get => _explicitNullValueInvitingUser; set { _explicitNullValueInvitingUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inviting_user"); else _explicitNullProperties?.Remove("inviting_user"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.SharedChannelUserItem? _explicitNullValueInvitingUser = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.SharedChannelUserItem InvitingUser { get; set; }
+        public global::Soenneker.Slack.OpenApiClient.Models.SharedChannelUserItem InvitingUser { get => _explicitNullValueInvitingUser; set { _explicitNullValueInvitingUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inviting_user"); else _explicitNullProperties?.Remove("inviting_user"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.SharedChannelUserItem _explicitNullValueInvitingUser = default!;
 #endif
         /// <summary>The recipient_email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RecipientEmail { get; set; }
+        public string? RecipientEmail { get => _explicitNullValueRecipientEmail; set { _explicitNullValueRecipientEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient_email"); else _explicitNullProperties?.Remove("recipient_email"); } }
+        private string? _explicitNullValueRecipientEmail = default!;
 #nullable restore
 #else
-        public string RecipientEmail { get; set; }
+        public string RecipientEmail { get => _explicitNullValueRecipientEmail; set { _explicitNullValueRecipientEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient_email"); else _explicitNullProperties?.Remove("recipient_email"); } }
+        private string _explicitNullValueRecipientEmail = default!;
 #endif
         /// <summary>The recipient_user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RecipientUserId { get; set; }
+        public string? RecipientUserId { get => _explicitNullValueRecipientUserId; set { _explicitNullValueRecipientUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient_user_id"); else _explicitNullProperties?.Remove("recipient_user_id"); } }
+        private string? _explicitNullValueRecipientUserId = default!;
 #nullable restore
 #else
-        public string RecipientUserId { get; set; }
+        public string RecipientUserId { get => _explicitNullValueRecipientUserId; set { _explicitNullValueRecipientUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient_user_id"); else _explicitNullProperties?.Remove("recipient_user_id"); } }
+        private string _explicitNullValueRecipientUserId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.SharedChannelInviteItem"/> and sets the default values.
@@ -73,7 +99,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static global::Soenneker.Slack.OpenApiClient.Models.SharedChannelInviteItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.SharedChannelInviteItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.SharedChannelInviteItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -106,6 +132,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SharedChannelUserItem>("inviting_user", InvitingUser);
             writer.WriteStringValue("recipient_email", RecipientEmail);
             writer.WriteStringValue("recipient_user_id", RecipientUserId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

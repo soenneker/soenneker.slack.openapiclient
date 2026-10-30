@@ -12,6 +12,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
     public partial class WebhookMessageMetadataUpdatedRequest : global::Soenneker.Slack.OpenApiClient.Models.EnvelopedEvent, IParsable
     #pragma warning restore CS1591
     {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            base.CaptureExplicitNulls(parseNode);
+        }
+
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -20,7 +28,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public static new global::Soenneker.Slack.OpenApiClient.Models.WebhookMessageMetadataUpdatedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Slack.OpenApiClient.Models.WebhookMessageMetadataUpdatedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.WebhookMessageMetadataUpdatedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -39,7 +47,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public override void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            base.Serialize(writer);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

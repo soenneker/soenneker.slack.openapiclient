@@ -12,7 +12,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AppRequestedEventPreviousResolutionScopesTokenType : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf2"/></summary>
         public global::Soenneker.Slack.OpenApiClient.Models.AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf2? AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf2 { get; set; }
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf3"/></summary>
@@ -36,22 +41,25 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Slack.OpenApiClient.Models.AppRequestedEventPreviousResolutionScopesTokenType();
-            if(parseNode.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf2>() is global::Soenneker.Slack.OpenApiClient.Models.AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf2 appRequestedEventPreviousResolutionScopesTokenTypeAnyOf2Value)
+            if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue0 && ("user".Equals(unionEnumValue0.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf2>() is global::Soenneker.Slack.OpenApiClient.Models.AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf2 appRequestedEventPreviousResolutionScopesTokenTypeAnyOf2Value)
             {
                 result.AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf2 = appRequestedEventPreviousResolutionScopesTokenTypeAnyOf2Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf3>() is global::Soenneker.Slack.OpenApiClient.Models.AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf3 appRequestedEventPreviousResolutionScopesTokenTypeAnyOf3Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue1 && ("bot".Equals(unionEnumValue1.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf3>() is global::Soenneker.Slack.OpenApiClient.Models.AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf3 appRequestedEventPreviousResolutionScopesTokenTypeAnyOf3Value)
             {
                 result.AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf3 = appRequestedEventPreviousResolutionScopesTokenTypeAnyOf3Value;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf4>() is global::Soenneker.Slack.OpenApiClient.Models.AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf4 appRequestedEventPreviousResolutionScopesTokenTypeAnyOf4Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue2 && ("app".Equals(unionEnumValue2.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf4>() is global::Soenneker.Slack.OpenApiClient.Models.AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf4 appRequestedEventPreviousResolutionScopesTokenTypeAnyOf4Value)
             {
                 result.AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf4 = appRequestedEventPreviousResolutionScopesTokenTypeAnyOf4Value;
             }
             else {
-                result.AppRequestedEventPreviousResolutionScopesTokenTypeMember1 = new global::Soenneker.Slack.OpenApiClient.Models.AppRequestedEventPreviousResolutionScopesTokenTypeMember1();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            if (result.AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf2 == null && result.AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf3 == null && result.AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf4 == null && result.AppRequestedEventPreviousResolutionScopesTokenTypeMember1 == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -71,6 +79,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf2 == null && AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf3 == null && AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf4 == null && AppRequestedEventPreviousResolutionScopesTokenTypeMember1 == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (AppRequestedEventPreviousResolutionScopesTokenTypeMember1 != null && AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf2 == null && AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf3 == null && AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf4 == null) { if (AppRequestedEventPreviousResolutionScopesTokenTypeMember1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AppRequestedEventPreviousResolutionScopesTokenTypeMember1); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf2 != null)
             {
@@ -85,6 +97,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf4>(null, AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf4);
             }
             else {
+                if (AppRequestedEventPreviousResolutionScopesTokenTypeMember1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AppRequestedEventPreviousResolutionScopesTokenTypeMember1>(null, AppRequestedEventPreviousResolutionScopesTokenTypeMember1);
             }
         }

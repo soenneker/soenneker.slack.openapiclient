@@ -51,7 +51,7 @@ namespace Soenneker.Slack.OpenApiClient.Api.AdminUsersUnsupportedVersionsExport
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Slack.OpenApiClient.Models.AdminUsersUnsupportedVersionsExportResponse>(requestInfo, global::Soenneker.Slack.OpenApiClient.Models.AdminUsersUnsupportedVersionsExportResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Slack.OpenApiClient.Models.AdminUsersUnsupportedVersionsExportResponse>(requestInfo, global::Soenneker.Slack.OpenApiClient.Models.AdminUsersUnsupportedVersionsExportResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Ask Slackbot to send you an export listing all workspace members using unsupported software, presented as a zipped CSV file.
