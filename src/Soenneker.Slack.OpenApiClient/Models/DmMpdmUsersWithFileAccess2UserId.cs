@@ -8,7 +8,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
     public enum DmMpdmUsersWithFileAccess2UserId
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "")]
+        [global::System.Runtime.Serialization.EnumMember(Value = "")]
         EmptyString,
 
         [EnumMember(Value = "U00000000")]

@@ -120,6 +120,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "edit", n => { Edit = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupport>(global::Soenneker.Slack.OpenApiClient.Models.EntityEditSupport.CreateFromDiscriminatorValue); } },
                 { "tag_color", n => { TagColor = n.GetStringValue(); } },
                 { "entity_ref", n => { EntityRef = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EntityRefField>(global::Soenneker.Slack.OpenApiClient.Models.EntityRefField.CreateFromDiscriminatorValue); } },
+
             };
         }
         /// <summary>
