@@ -9,7 +9,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class GenericMessageEventAppContextEntitiesItemGenericMessageEventAppContextEntitiesItemSlackTypesCanvasId : global::Soenneker.Slack.OpenApiClient.Models.GenericMessageEventAppContextEntitiesItem, IParsable
+    public partial class GenericMessageEventAppContextEntitiesItemSlackTypesMessageContextVariant : global::Soenneker.Slack.OpenApiClient.Models.GenericMessageEventAppContextEntitiesItem, IParsable
     #pragma warning restore CS1591
     {
         // Track explicitly assigned nulls separately from absent properties.
@@ -49,22 +49,22 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
-        private string? _explicitNullValueValue = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.GenericMessageEventAppContextEntitiesItemAllOf2AnyOf4Value? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.GenericMessageEventAppContextEntitiesItemAllOf2AnyOf4Value? _explicitNullValueValue = default!;
 #nullable restore
 #else
-        public string Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
-        private string _explicitNullValueValue = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.GenericMessageEventAppContextEntitiesItemAllOf2AnyOf4Value Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.GenericMessageEventAppContextEntitiesItemAllOf2AnyOf4Value _explicitNullValueValue = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Slack.OpenApiClient.Models.GenericMessageEventAppContextEntitiesItemGenericMessageEventAppContextEntitiesItemSlackTypesCanvasId"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Slack.OpenApiClient.Models.GenericMessageEventAppContextEntitiesItemSlackTypesMessageContextVariant"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Slack.OpenApiClient.Models.GenericMessageEventAppContextEntitiesItemGenericMessageEventAppContextEntitiesItemSlackTypesCanvasId CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static new global::Soenneker.Slack.OpenApiClient.Models.GenericMessageEventAppContextEntitiesItemSlackTypesMessageContextVariant CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.GenericMessageEventAppContextEntitiesItemGenericMessageEventAppContextEntitiesItemSlackTypesCanvasId(), parseNode);
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.GenericMessageEventAppContextEntitiesItemSlackTypesMessageContextVariant(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,7 +76,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "enterprise_id", n => { EnterpriseId = n.GetStringValue(); } },
                 { "team_id", n => { TeamId = n.GetStringValue(); } },
-                { "value", n => { Value = n.GetStringValue(); } },
+                { "value", n => { Value = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.GenericMessageEventAppContextEntitiesItemAllOf2AnyOf4Value>(global::Soenneker.Slack.OpenApiClient.Models.GenericMessageEventAppContextEntitiesItemAllOf2AnyOf4Value.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -89,7 +89,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             base.Serialize(writer);
             writer.WriteStringValue("enterprise_id", EnterpriseId);
             writer.WriteStringValue("team_id", TeamId);
-            writer.WriteStringValue("value", Value);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.GenericMessageEventAppContextEntitiesItemAllOf2AnyOf4Value>("value", Value);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             
         }
     }

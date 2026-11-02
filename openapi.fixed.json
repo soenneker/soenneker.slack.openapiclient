@@ -90042,10 +90042,10 @@
         "discriminator": {
           "propertyName": "type",
           "mapping": {
-            "slack#/types/channel_id": "#/components/schemas/AppHomeOpenedEventContextEntitiesItemAppHomeOpenedEventContextEntitiesItemSlackTypesChannelId",
-            "slack#/types/canvas_id": "#/components/schemas/AppHomeOpenedEventContextEntitiesItemAppHomeOpenedEventContextEntitiesItemSlackTypesCanvasId",
-            "slack#/types/list_id": "#/components/schemas/AppHomeOpenedEventContextEntitiesItemAppHomeOpenedEventContextEntitiesItemSlackTypesListId",
-            "slack#/types/message_context": "#/components/schemas/AppHomeOpenedEventContextEntitiesItemAppHomeOpenedEventContextEntitiesItemSlackTypesMessageContext"
+            "slack#/types/channel_id": "#/components/schemas/AppHomeOpenedEventContextEntitiesItemSlackTypesChannelIdVariant",
+            "slack#/types/canvas_id": "#/components/schemas/AppHomeOpenedEventContextEntitiesItemSlackTypesCanvasIdVariant",
+            "slack#/types/list_id": "#/components/schemas/AppHomeOpenedEventContextEntitiesItemSlackTypesListIdVariant",
+            "slack#/types/message_context": "#/components/schemas/AppHomeOpenedEventContextEntitiesItemSlackTypesMessageContextVariant"
           }
         },
         "x-client-original-tagged-union": {
@@ -90188,10 +90188,10 @@
         "discriminator": {
           "propertyName": "type",
           "mapping": {
-            "slack#/types/channel_id": "#/components/schemas/AppContextChangedEventContextEntitiesItemAppContextChangedEventContextEntitiesItemSlackTypesChannelId",
-            "slack#/types/canvas_id": "#/components/schemas/AppContextChangedEventContextEntitiesItemAppContextChangedEventContextEntitiesItemSlackTypesCanvasId",
-            "slack#/types/list_id": "#/components/schemas/AppContextChangedEventContextEntitiesItemAppContextChangedEventContextEntitiesItemSlackTypesListId",
-            "slack#/types/message_context": "#/components/schemas/AppContextChangedEventContextEntitiesItemAppContextChangedEventContextEntitiesItemSlackTypesMessageContext"
+            "slack#/types/channel_id": "#/components/schemas/AppContextChangedEventContextEntitiesItemSlackTypesChannelIdVariant",
+            "slack#/types/canvas_id": "#/components/schemas/AppContextChangedEventContextEntitiesItemSlackTypesCanvasIdVariant",
+            "slack#/types/list_id": "#/components/schemas/AppContextChangedEventContextEntitiesItemSlackTypesListIdVariant",
+            "slack#/types/message_context": "#/components/schemas/AppContextChangedEventContextEntitiesItemSlackTypesMessageContextVariant"
           }
         },
         "x-client-original-tagged-union": {
@@ -90313,10 +90313,10 @@
         "discriminator": {
           "propertyName": "type",
           "mapping": {
-            "slack#/types/channel_id": "#/components/schemas/GenericMessageEventAppContextEntitiesItemGenericMessageEventAppContextEntitiesItemSlackTypesChannelId",
-            "slack#/types/canvas_id": "#/components/schemas/GenericMessageEventAppContextEntitiesItemGenericMessageEventAppContextEntitiesItemSlackTypesCanvasId",
-            "slack#/types/list_id": "#/components/schemas/GenericMessageEventAppContextEntitiesItemGenericMessageEventAppContextEntitiesItemSlackTypesListId",
-            "slack#/types/message_context": "#/components/schemas/GenericMessageEventAppContextEntitiesItemGenericMessageEventAppContextEntitiesItemSlackTypesMessageContext"
+            "slack#/types/channel_id": "#/components/schemas/GenericMessageEventAppContextEntitiesItemSlackTypesChannelIdVariant",
+            "slack#/types/canvas_id": "#/components/schemas/GenericMessageEventAppContextEntitiesItemSlackTypesCanvasIdVariant",
+            "slack#/types/list_id": "#/components/schemas/GenericMessageEventAppContextEntitiesItemSlackTypesListIdVariant",
+            "slack#/types/message_context": "#/components/schemas/GenericMessageEventAppContextEntitiesItemSlackTypesMessageContextVariant"
           }
         },
         "x-client-original-tagged-union": {
@@ -113734,7 +113734,7 @@
           }
         ]
       },
-      "AppHomeOpenedEventContextEntitiesItemAppHomeOpenedEventContextEntitiesItemSlackTypesChannelId": {
+      "AppHomeOpenedEventContextEntitiesItemSlackTypesChannelIdVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/AppHomeOpenedEventContextEntitiesItem"
@@ -113762,7 +113762,7 @@
           }
         ]
       },
-      "AppHomeOpenedEventContextEntitiesItemAppHomeOpenedEventContextEntitiesItemSlackTypesCanvasId": {
+      "AppHomeOpenedEventContextEntitiesItemSlackTypesCanvasIdVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/AppHomeOpenedEventContextEntitiesItem"
@@ -113790,7 +113790,7 @@
           }
         ]
       },
-      "AppHomeOpenedEventContextEntitiesItemAppHomeOpenedEventContextEntitiesItemSlackTypesListId": {
+      "AppHomeOpenedEventContextEntitiesItemSlackTypesListIdVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/AppHomeOpenedEventContextEntitiesItem"
@@ -113818,7 +113818,7 @@
           }
         ]
       },
-      "AppHomeOpenedEventContextEntitiesItemAppHomeOpenedEventContextEntitiesItemSlackTypesMessageContext": {
+      "AppHomeOpenedEventContextEntitiesItemSlackTypesMessageContextVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/AppHomeOpenedEventContextEntitiesItem"
@@ -113846,7 +113846,7 @@
           }
         ]
       },
-      "AppContextChangedEventContextEntitiesItemAppContextChangedEventContextEntitiesItemSlackTypesChannelId": {
+      "AppContextChangedEventContextEntitiesItemSlackTypesChannelIdVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/AppContextChangedEventContextEntitiesItem"
@@ -113874,7 +113874,7 @@
           }
         ]
       },
-      "AppContextChangedEventContextEntitiesItemAppContextChangedEventContextEntitiesItemSlackTypesCanvasId": {
+      "AppContextChangedEventContextEntitiesItemSlackTypesCanvasIdVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/AppContextChangedEventContextEntitiesItem"
@@ -113902,7 +113902,7 @@
           }
         ]
       },
-      "AppContextChangedEventContextEntitiesItemAppContextChangedEventContextEntitiesItemSlackTypesListId": {
+      "AppContextChangedEventContextEntitiesItemSlackTypesListIdVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/AppContextChangedEventContextEntitiesItem"
@@ -113930,7 +113930,7 @@
           }
         ]
       },
-      "AppContextChangedEventContextEntitiesItemAppContextChangedEventContextEntitiesItemSlackTypesMessageContext": {
+      "AppContextChangedEventContextEntitiesItemSlackTypesMessageContextVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/AppContextChangedEventContextEntitiesItem"
@@ -113958,7 +113958,7 @@
           }
         ]
       },
-      "GenericMessageEventAppContextEntitiesItemGenericMessageEventAppContextEntitiesItemSlackTypesChannelId": {
+      "GenericMessageEventAppContextEntitiesItemSlackTypesChannelIdVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/GenericMessageEventAppContextEntitiesItem"
@@ -113986,7 +113986,7 @@
           }
         ]
       },
-      "GenericMessageEventAppContextEntitiesItemGenericMessageEventAppContextEntitiesItemSlackTypesCanvasId": {
+      "GenericMessageEventAppContextEntitiesItemSlackTypesCanvasIdVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/GenericMessageEventAppContextEntitiesItem"
@@ -114014,7 +114014,7 @@
           }
         ]
       },
-      "GenericMessageEventAppContextEntitiesItemGenericMessageEventAppContextEntitiesItemSlackTypesListId": {
+      "GenericMessageEventAppContextEntitiesItemSlackTypesListIdVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/GenericMessageEventAppContextEntitiesItem"
@@ -114042,7 +114042,7 @@
           }
         ]
       },
-      "GenericMessageEventAppContextEntitiesItemGenericMessageEventAppContextEntitiesItemSlackTypesMessageContext": {
+      "GenericMessageEventAppContextEntitiesItemSlackTypesMessageContextVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/GenericMessageEventAppContextEntitiesItem"

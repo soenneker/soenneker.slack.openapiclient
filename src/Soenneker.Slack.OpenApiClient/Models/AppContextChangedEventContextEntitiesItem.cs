@@ -51,10 +51,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
             var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
             return mappingValue switch
             {
-                "slack#/types/canvas_id" => new global::Soenneker.Slack.OpenApiClient.Models.AppContextChangedEventContextEntitiesItemAppContextChangedEventContextEntitiesItemSlackTypesCanvasId(),
-                "slack#/types/channel_id" => new global::Soenneker.Slack.OpenApiClient.Models.AppContextChangedEventContextEntitiesItemAppContextChangedEventContextEntitiesItemSlackTypesChannelId(),
-                "slack#/types/list_id" => new global::Soenneker.Slack.OpenApiClient.Models.AppContextChangedEventContextEntitiesItemAppContextChangedEventContextEntitiesItemSlackTypesListId(),
-                "slack#/types/message_context" => new global::Soenneker.Slack.OpenApiClient.Models.AppContextChangedEventContextEntitiesItemAppContextChangedEventContextEntitiesItemSlackTypesMessageContext(),
+                "slack#/types/canvas_id" => new global::Soenneker.Slack.OpenApiClient.Models.AppContextChangedEventContextEntitiesItemSlackTypesCanvasIdVariant(),
+                "slack#/types/channel_id" => new global::Soenneker.Slack.OpenApiClient.Models.AppContextChangedEventContextEntitiesItemSlackTypesChannelIdVariant(),
+                "slack#/types/list_id" => new global::Soenneker.Slack.OpenApiClient.Models.AppContextChangedEventContextEntitiesItemSlackTypesListIdVariant(),
+                "slack#/types/message_context" => new global::Soenneker.Slack.OpenApiClient.Models.AppContextChangedEventContextEntitiesItemSlackTypesMessageContextVariant(),
                 _ => new global::Soenneker.Slack.OpenApiClient.Models.AppContextChangedEventContextEntitiesItem(),
             };
         }
