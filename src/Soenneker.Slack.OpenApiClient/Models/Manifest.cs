@@ -33,7 +33,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A group of settings that describe parts of an app&apos;s appearance within Slack. If you&apos;re distributingthe app via the Slack Marketplace, read our [listing guidelines](https://docs.slack.dev/slack-marketplace/distributing-your-app-in-the-slack-marketplace) to pick the best values for these settings.</summary>
+        /// <summary>A group of settings that describe parts of an app&apos;s appearance within Slack. If you&apos;re distributingthe app via the Slack Marketplace, read our [listing guidelines](https://docs.slack.dev/slack-marketplace/slack-marketplace-app-guidelines-and-requirements) to pick the best values for these settings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Slack.OpenApiClient.Models.ManifestDisplayInformation? DisplayInformation { get => _explicitNullValueDisplayInformation; set { _explicitNullValueDisplayInformation = value; AdditionalData?.Remove("display_information"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_information"); else _explicitNullProperties?.Remove("display_information"); } }

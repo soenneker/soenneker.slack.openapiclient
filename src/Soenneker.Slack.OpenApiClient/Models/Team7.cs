@@ -47,6 +47,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
             else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
             if (parseNode.GetChildNode("pay_prod_cur") is null) { _explicitNullValuePayProdCur = default!; _explicitNullProperties?.Remove("pay_prod_cur"); }
             else if (parseNode.GetChildNode("pay_prod_cur") is { } nullNodePayProdCur && nullNodePayProdCur.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayProdCur = null;
+            if (parseNode.GetChildNode("slackbot_availability") is null) { _explicitNullValueSlackbotAvailability = default!; _explicitNullProperties?.Remove("slackbot_availability"); }
+            else if (parseNode.GetChildNode("slackbot_availability") is { } nullNodeSlackbotAvailability && nullNodeSlackbotAvailability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SlackbotAvailability = null;
             if (parseNode.GetChildNode("sso_provider") is null) { _explicitNullValueSsoProvider = default!; _explicitNullProperties?.Remove("sso_provider"); }
             else if (parseNode.GetChildNode("sso_provider") is { } nullNodeSsoProvider && nullNodeSsoProvider.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SsoProvider = null;
             if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
@@ -184,6 +186,16 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string PayProdCur { get => _explicitNullValuePayProdCur; set { _explicitNullValuePayProdCur = value; AdditionalData?.Remove("pay_prod_cur"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pay_prod_cur"); else _explicitNullProperties?.Remove("pay_prod_cur"); } }
         private string _explicitNullValuePayProdCur = default!;
 #endif
+        /// <summary>The slackbot_availability property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SlackbotAvailability { get => _explicitNullValueSlackbotAvailability; set { _explicitNullValueSlackbotAvailability = value; AdditionalData?.Remove("slackbot_availability"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("slackbot_availability"); else _explicitNullProperties?.Remove("slackbot_availability"); } }
+        private string? _explicitNullValueSlackbotAvailability = default!;
+#nullable restore
+#else
+        public string SlackbotAvailability { get => _explicitNullValueSlackbotAvailability; set { _explicitNullValueSlackbotAvailability = value; AdditionalData?.Remove("slackbot_availability"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("slackbot_availability"); else _explicitNullProperties?.Remove("slackbot_availability"); } }
+        private string _explicitNullValueSlackbotAvailability = default!;
+#endif
         /// <summary>The sso_provider property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -244,6 +256,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "locale", n => { Locale = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "pay_prod_cur", n => { PayProdCur = n.GetStringValue(); } },
+                { "slackbot_availability", n => { SlackbotAvailability = n.GetStringValue(); } },
                 { "sso_provider", n => { SsoProvider = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SsoProvider>(global::Soenneker.Slack.OpenApiClient.Models.SsoProvider.CreateFromDiscriminatorValue); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
@@ -270,6 +283,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("locale", Locale);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("pay_prod_cur", PayProdCur);
+            writer.WriteStringValue("slackbot_availability", SlackbotAvailability);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SsoProvider>("sso_provider", SsoProvider);
             writer.WriteStringValue("url", Url);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

@@ -356,6 +356,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
         #pragma warning disable CS1591
         UserChange,
         #pragma warning restore CS1591
+        [EnumMember(Value = "user_connection")]
+        #pragma warning disable CS1591
+        UserConnection,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "user_connection_status_requested")]
+        #pragma warning disable CS1591
+        UserConnectionStatusRequested,
+        #pragma warning restore CS1591
         [EnumMember(Value = "user_huddle_changed")]
         #pragma warning disable CS1591
         UserHuddleChanged,

@@ -64,6 +64,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         #pragma warning disable CS1591
         ChatColonWritePublic,
         #pragma warning restore CS1591
+        [EnumMember(Value = "code_channels:manage")]
+        #pragma warning disable CS1591
+        CodeChannelsColonManage,
+        #pragma warning restore CS1591
         [EnumMember(Value = "commands")]
         #pragma warning disable CS1591
         Commands,

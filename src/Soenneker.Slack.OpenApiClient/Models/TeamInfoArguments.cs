@@ -19,6 +19,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if (parseNode.GetChildNode("domain") is null) { _explicitNullValueDomain = default!; _explicitNullProperties?.Remove("domain"); }
             else if (parseNode.GetChildNode("domain") is { } nullNodeDomain && nullNodeDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Domain = null;
+            if (parseNode.GetChildNode("include_slackbot_availability") is null) { _explicitNullValueIncludeSlackbotAvailability = default!; _explicitNullProperties?.Remove("include_slackbot_availability"); }
+            else if (parseNode.GetChildNode("include_slackbot_availability") is { } nullNodeIncludeSlackbotAvailability && nullNodeIncludeSlackbotAvailability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeSlackbotAvailability = null;
             if (parseNode.GetChildNode("team") is null) { _explicitNullValueTeam = default!; _explicitNullProperties?.Remove("team"); }
             else if (parseNode.GetChildNode("team") is { } nullNodeTeam && nullNodeTeam.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Team = null;
         }
@@ -35,6 +37,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; AdditionalData?.Remove("domain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
         private string _explicitNullValueDomain = default!;
 #endif
+        /// <summary>Include advisory Slackbot availability for the caller&apos;s own workspace or organization.Defaults to false. Requires the existing `team:read` scope.[`team.info` API reference](https://docs.slack.dev/reference/methods/team.info).</summary>
+        public bool? IncludeSlackbotAvailability { get => _explicitNullValueIncludeSlackbotAvailability; set { _explicitNullValueIncludeSlackbotAvailability = value; AdditionalData?.Remove("include_slackbot_availability"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("include_slackbot_availability"); else _explicitNullProperties?.Remove("include_slackbot_availability"); } }
+        private bool? _explicitNullValueIncludeSlackbotAvailability = default!;
         /// <summary>Team to get info about; if omitted, will return information about the current team.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -71,6 +76,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "domain", n => { Domain = n.GetStringValue(); } },
+                { "include_slackbot_availability", n => { IncludeSlackbotAvailability = n.GetBoolValue(); } },
                 { "team", n => { Team = n.GetStringValue(); } },
             };
         }
@@ -82,6 +88,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("domain", Domain);
+            writer.WriteBoolValue("include_slackbot_availability", IncludeSlackbotAvailability);
             writer.WriteStringValue("team", Team);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

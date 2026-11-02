@@ -147,12 +147,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The close property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElementOutput? Close { get => _explicitNullValueClose; set { _explicitNullValueClose = value; AdditionalData?.Remove("close"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("close"); else _explicitNullProperties?.Remove("close"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.PlainTextElementOutput? _explicitNullValueClose = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.ViewOutputClose? Close { get => _explicitNullValueClose; set { _explicitNullValueClose = value; AdditionalData?.Remove("close"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("close"); else _explicitNullProperties?.Remove("close"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ViewOutputClose? _explicitNullValueClose = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElementOutput Close { get => _explicitNullValueClose; set { _explicitNullValueClose = value; AdditionalData?.Remove("close"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("close"); else _explicitNullProperties?.Remove("close"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.PlainTextElementOutput _explicitNullValueClose = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.ViewOutputClose Close { get => _explicitNullValueClose; set { _explicitNullValueClose = value; AdditionalData?.Remove("close"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("close"); else _explicitNullProperties?.Remove("close"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ViewOutputClose _explicitNullValueClose = default!;
 #endif
         /// <summary>The entity_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -260,12 +260,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The submit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElementOutput? Submit { get => _explicitNullValueSubmit; set { _explicitNullValueSubmit = value; AdditionalData?.Remove("submit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("submit"); else _explicitNullProperties?.Remove("submit"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.PlainTextElementOutput? _explicitNullValueSubmit = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.ViewOutputClose? Submit { get => _explicitNullValueSubmit; set { _explicitNullValueSubmit = value; AdditionalData?.Remove("submit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("submit"); else _explicitNullProperties?.Remove("submit"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ViewOutputClose? _explicitNullValueSubmit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.PlainTextElementOutput Submit { get => _explicitNullValueSubmit; set { _explicitNullValueSubmit = value; AdditionalData?.Remove("submit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("submit"); else _explicitNullProperties?.Remove("submit"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.PlainTextElementOutput _explicitNullValueSubmit = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.ViewOutputClose Submit { get => _explicitNullValueSubmit; set { _explicitNullValueSubmit = value; AdditionalData?.Remove("submit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("submit"); else _explicitNullProperties?.Remove("submit"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ViewOutputClose _explicitNullValueSubmit = default!;
 #endif
         /// <summary>The team_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -340,7 +340,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "callback_id", n => { CallbackId = n.GetStringValue(); } },
                 { "channel", n => { Channel = n.GetStringValue(); } },
                 { "clear_on_close", n => { ClearOnClose = n.GetBoolValue(); } },
-                { "close", n => { Close = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElementOutput>(global::Soenneker.Slack.OpenApiClient.Models.PlainTextElementOutput.CreateFromDiscriminatorValue); } },
+                { "close", n => { Close = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ViewOutputClose>(global::Soenneker.Slack.OpenApiClient.Models.ViewOutputClose.CreateFromDiscriminatorValue); } },
                 { "entity_url", n => { EntityUrl = n.GetStringValue(); } },
                 { "external_id", n => { ExternalId = n.GetStringValue(); } },
                 { "external_ref", n => { ExternalRef = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ViewOutputExternalRef>(global::Soenneker.Slack.OpenApiClient.Models.ViewOutputExternalRef.CreateFromDiscriminatorValue); } },
@@ -352,7 +352,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "private_metadata", n => { PrivateMetadata = n.GetStringValue(); } },
                 { "root_view_id", n => { RootViewId = n.GetStringValue(); } },
                 { "state", n => { State = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ViewOutputState>(global::Soenneker.Slack.OpenApiClient.Models.ViewOutputState.CreateFromDiscriminatorValue); } },
-                { "submit", n => { Submit = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElementOutput>(global::Soenneker.Slack.OpenApiClient.Models.PlainTextElementOutput.CreateFromDiscriminatorValue); } },
+                { "submit", n => { Submit = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ViewOutputClose>(global::Soenneker.Slack.OpenApiClient.Models.ViewOutputClose.CreateFromDiscriminatorValue); } },
                 { "team_id", n => { TeamId = n.GetStringValue(); } },
                 { "thread_ts", n => { ThreadTs = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElementOutput>(global::Soenneker.Slack.OpenApiClient.Models.PlainTextElementOutput.CreateFromDiscriminatorValue); } },
@@ -374,7 +374,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("callback_id", CallbackId);
             writer.WriteStringValue("channel", Channel);
             writer.WriteBoolValue("clear_on_close", ClearOnClose);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElementOutput>("close", Close);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ViewOutputClose>("close", Close);
             writer.WriteStringValue("entity_url", EntityUrl);
             writer.WriteStringValue("external_id", ExternalId);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ViewOutputExternalRef>("external_ref", ExternalRef);
@@ -386,7 +386,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("private_metadata", PrivateMetadata);
             writer.WriteStringValue("root_view_id", RootViewId);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ViewOutputState>("state", State);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElementOutput>("submit", Submit);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ViewOutputClose>("submit", Submit);
             writer.WriteStringValue("team_id", TeamId);
             writer.WriteStringValue("thread_ts", ThreadTs);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PlainTextElementOutput>("title", Title);

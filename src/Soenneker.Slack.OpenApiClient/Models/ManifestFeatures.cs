@@ -25,12 +25,16 @@ namespace Soenneker.Slack.OpenApiClient.Models
             else if (parseNode.GetChildNode("assistant_view") is { } nullNodeAssistantView && nullNodeAssistantView.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssistantView = null;
             if (parseNode.GetChildNode("bot_user") is null) { _explicitNullValueBotUser = default!; _explicitNullProperties?.Remove("bot_user"); }
             else if (parseNode.GetChildNode("bot_user") is { } nullNodeBotUser && nullNodeBotUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotUser = null;
+            if (parseNode.GetChildNode("code_channels") is null) { _explicitNullValueCodeChannels = default!; _explicitNullProperties?.Remove("code_channels"); }
+            else if (parseNode.GetChildNode("code_channels") is { } nullNodeCodeChannels && nullNodeCodeChannels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CodeChannels = null;
             if (parseNode.GetChildNode("shortcuts") is null) { _explicitNullValueShortcuts = default!; _explicitNullProperties?.Remove("shortcuts"); }
             else if (parseNode.GetChildNode("shortcuts") is { } nullNodeShortcuts && nullNodeShortcuts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shortcuts = null;
             if (parseNode.GetChildNode("slash_commands") is null) { _explicitNullValueSlashCommands = default!; _explicitNullProperties?.Remove("slash_commands"); }
             else if (parseNode.GetChildNode("slash_commands") is { } nullNodeSlashCommands && nullNodeSlashCommands.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SlashCommands = null;
             if (parseNode.GetChildNode("unfurl_domains") is null) { _explicitNullValueUnfurlDomains = default!; _explicitNullProperties?.Remove("unfurl_domains"); }
             else if (parseNode.GetChildNode("unfurl_domains") is { } nullNodeUnfurlDomains && nullNodeUnfurlDomains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnfurlDomains = null;
+            if (parseNode.GetChildNode("user_connections") is null) { _explicitNullValueUserConnections = default!; _explicitNullProperties?.Remove("user_connections"); }
+            else if (parseNode.GetChildNode("user_connections") is { } nullNodeUserConnections && nullNodeUserConnections.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserConnections = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -75,6 +79,16 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.ManifestBotUser BotUser { get => _explicitNullValueBotUser; set { _explicitNullValueBotUser = value; AdditionalData?.Remove("bot_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_user"); else _explicitNullProperties?.Remove("bot_user"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.ManifestBotUser _explicitNullValueBotUser = default!;
 #endif
+        /// <summary>A subgroup of settings that describe [code channels](https://docs.slack.dev/ai/slack-code)configuration.[Enabling code channels](https://docs.slack.dev/ai/slack-code#enabling-code-channels).</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ManifestCodeChannels? CodeChannels { get => _explicitNullValueCodeChannels; set { _explicitNullValueCodeChannels = value; AdditionalData?.Remove("code_channels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code_channels"); else _explicitNullProperties?.Remove("code_channels"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ManifestCodeChannels? _explicitNullValueCodeChannels = default!;
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ManifestCodeChannels CodeChannels { get => _explicitNullValueCodeChannels; set { _explicitNullValueCodeChannels = value; AdditionalData?.Remove("code_channels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code_channels"); else _explicitNullProperties?.Remove("code_channels"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ManifestCodeChannels _explicitNullValueCodeChannels = default!;
+#endif
         /// <summary>An array of settings groups that describe [shortcuts](https://docs.slack.dev/interactivity/implementing-shortcuts)configuration. A maximum of 10 shortcuts can be included in this array.[Shortcuts](https://docs.slack.dev/interactivity/implementing-shortcuts).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -105,6 +119,16 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public List<string> UnfurlDomains { get => _explicitNullValueUnfurlDomains; set { _explicitNullValueUnfurlDomains = value; AdditionalData?.Remove("unfurl_domains"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unfurl_domains"); else _explicitNullProperties?.Remove("unfurl_domains"); } }
         private List<string> _explicitNullValueUnfurlDomains = default!;
 #endif
+        /// <summary>A subgroup of settings that describe [standardized app authentication](https://docs.slack.dev/authentication/standardized-auth)configuration.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ManifestUserConnections? UserConnections { get => _explicitNullValueUserConnections; set { _explicitNullValueUserConnections = value; AdditionalData?.Remove("user_connections"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_connections"); else _explicitNullProperties?.Remove("user_connections"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ManifestUserConnections? _explicitNullValueUserConnections = default!;
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ManifestUserConnections UserConnections { get => _explicitNullValueUserConnections; set { _explicitNullValueUserConnections = value; AdditionalData?.Remove("user_connections"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_connections"); else _explicitNullProperties?.Remove("user_connections"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ManifestUserConnections _explicitNullValueUserConnections = default!;
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.ManifestFeatures"/> and sets the default values.
         /// </summary>
@@ -134,9 +158,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "app_home", n => { AppHome = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestAppHome>(global::Soenneker.Slack.OpenApiClient.Models.ManifestAppHome.CreateFromDiscriminatorValue); } },
                 { "assistant_view", n => { AssistantView = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestAssistantView>(global::Soenneker.Slack.OpenApiClient.Models.ManifestAssistantView.CreateFromDiscriminatorValue); } },
                 { "bot_user", n => { BotUser = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestBotUser>(global::Soenneker.Slack.OpenApiClient.Models.ManifestBotUser.CreateFromDiscriminatorValue); } },
+                { "code_channels", n => { CodeChannels = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestCodeChannels>(global::Soenneker.Slack.OpenApiClient.Models.ManifestCodeChannels.CreateFromDiscriminatorValue); } },
                 { "shortcuts", n => { Shortcuts = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ManifestShortcut>(global::Soenneker.Slack.OpenApiClient.Models.ManifestShortcut.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "slash_commands", n => { SlashCommands = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ManifestSlashCommand>(global::Soenneker.Slack.OpenApiClient.Models.ManifestSlashCommand.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "unfurl_domains", n => { UnfurlDomains = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "user_connections", n => { UserConnections = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestUserConnections>(global::Soenneker.Slack.OpenApiClient.Models.ManifestUserConnections.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -150,9 +176,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestAppHome>("app_home", AppHome);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestAssistantView>("assistant_view", AssistantView);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestBotUser>("bot_user", BotUser);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestCodeChannels>("code_channels", CodeChannels);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ManifestShortcut>("shortcuts", Shortcuts);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ManifestSlashCommand>("slash_commands", SlashCommands);
             writer.WriteCollectionOfPrimitiveValues<string>("unfurl_domains", UnfurlDomains);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ManifestUserConnections>("user_connections", UserConnections);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

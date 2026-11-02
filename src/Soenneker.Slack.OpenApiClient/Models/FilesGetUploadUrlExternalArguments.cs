@@ -19,6 +19,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if (parseNode.GetChildNode("alt_text") is null) { _explicitNullValueAltText = default!; _explicitNullProperties?.Remove("alt_text"); }
             else if (parseNode.GetChildNode("alt_text") is { } nullNodeAltText && nullNodeAltText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AltText = null;
+            if (parseNode.GetChildNode("alt_txt") is null) { _explicitNullValueAltTxt = default!; _explicitNullProperties?.Remove("alt_txt"); }
+            else if (parseNode.GetChildNode("alt_txt") is { } nullNodeAltTxt && nullNodeAltTxt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AltTxt = null;
             if (parseNode.GetChildNode("filename") is null) { _explicitNullValueFilename = default!; _explicitNullProperties?.Remove("filename"); }
             else if (parseNode.GetChildNode("filename") is { } nullNodeFilename && nullNodeFilename.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Filename = null;
             if (parseNode.GetChildNode("length") is null) { _explicitNullValueLength = default!; _explicitNullProperties?.Remove("length"); }
@@ -31,7 +33,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Description of image for screen-reader.</summary>
+        /// <summary>The alt_text property</summary>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AltText { get => _explicitNullValueAltText; set { _explicitNullValueAltText = value; AdditionalData?.Remove("alt_text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alt_text"); else _explicitNullProperties?.Remove("alt_text"); } }
@@ -40,6 +43,16 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public string AltText { get => _explicitNullValueAltText; set { _explicitNullValueAltText = value; AdditionalData?.Remove("alt_text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alt_text"); else _explicitNullProperties?.Remove("alt_text"); } }
         private string _explicitNullValueAltText = default!;
+#endif
+        /// <summary>Description of image for screen-reader.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AltTxt { get => _explicitNullValueAltTxt; set { _explicitNullValueAltTxt = value; AdditionalData?.Remove("alt_txt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alt_txt"); else _explicitNullProperties?.Remove("alt_txt"); } }
+        private string? _explicitNullValueAltTxt = default!;
+#nullable restore
+#else
+        public string AltTxt { get => _explicitNullValueAltTxt; set { _explicitNullValueAltTxt = value; AdditionalData?.Remove("alt_txt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alt_txt"); else _explicitNullProperties?.Remove("alt_txt"); } }
+        private string _explicitNullValueAltTxt = default!;
 #endif
         /// <summary>Name of the file being uploaded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -100,6 +113,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "alt_text", n => { AltText = n.GetStringValue(); } },
+                { "alt_txt", n => { AltTxt = n.GetStringValue(); } },
                 { "filename", n => { Filename = n.GetStringValue(); } },
                 { "length", n => { Length = n.GetDoubleValue(); } },
                 { "snippet_type", n => { SnippetType = n.GetStringValue(); } },
@@ -114,6 +128,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("alt_text", AltText);
+            writer.WriteStringValue("alt_txt", AltTxt);
             writer.WriteStringValue("filename", Filename);
             writer.WriteDoubleValue("length", Length);
             writer.WriteStringValue("snippet_type", SnippetType);

@@ -118,6 +118,8 @@ using Soenneker.Slack.OpenApiClient.Api.AppsManifestExport;
 using Soenneker.Slack.OpenApiClient.Api.AppsManifestUpdate;
 using Soenneker.Slack.OpenApiClient.Api.AppsManifestValidate;
 using Soenneker.Slack.OpenApiClient.Api.AppsUninstall;
+using Soenneker.Slack.OpenApiClient.Api.AppsUserConnectionBulkUpdate;
+using Soenneker.Slack.OpenApiClient.Api.AppsUserConnectionRequestAuth;
 using Soenneker.Slack.OpenApiClient.Api.AppsUserConnectionUpdate;
 using Soenneker.Slack.OpenApiClient.Api.AssistantThreadsSetStatus;
 using Soenneker.Slack.OpenApiClient.Api.AssistantThreadsSetSuggestedPrompts;
@@ -142,6 +144,7 @@ using Soenneker.Slack.OpenApiClient.Api.CanvasesAccessSet;
 using Soenneker.Slack.OpenApiClient.Api.CanvasesCreate;
 using Soenneker.Slack.OpenApiClient.Api.CanvasesDelete;
 using Soenneker.Slack.OpenApiClient.Api.CanvasesEdit;
+using Soenneker.Slack.OpenApiClient.Api.CanvasesGetContent;
 using Soenneker.Slack.OpenApiClient.Api.CanvasesSectionsLookup;
 using Soenneker.Slack.OpenApiClient.Api.ChatAppendStream;
 using Soenneker.Slack.OpenApiClient.Api.ChatDelete;
@@ -874,6 +877,16 @@ namespace Soenneker.Slack.OpenApiClient.Api
         {
             get => new global::Soenneker.Slack.OpenApiClient.Api.AppsUninstall.AppsUninstallRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The appsUserConnectionBulkUpdate property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.AppsUserConnectionBulkUpdate.AppsUserConnectionBulkUpdateRequestBuilder AppsUserConnectionBulkUpdate
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.AppsUserConnectionBulkUpdate.AppsUserConnectionBulkUpdateRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The appsUserConnectionRequestAuth property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.AppsUserConnectionRequestAuth.AppsUserConnectionRequestAuthRequestBuilder AppsUserConnectionRequestAuth
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.AppsUserConnectionRequestAuth.AppsUserConnectionRequestAuthRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The appsUserConnectionUpdate property</summary>
         public global::Soenneker.Slack.OpenApiClient.Api.AppsUserConnectionUpdate.AppsUserConnectionUpdateRequestBuilder AppsUserConnectionUpdate
         {
@@ -993,6 +1006,11 @@ namespace Soenneker.Slack.OpenApiClient.Api
         public global::Soenneker.Slack.OpenApiClient.Api.CanvasesEdit.CanvasesEditRequestBuilder CanvasesEdit
         {
             get => new global::Soenneker.Slack.OpenApiClient.Api.CanvasesEdit.CanvasesEditRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The canvasesGetContent property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.CanvasesGetContent.CanvasesGetContentRequestBuilder CanvasesGetContent
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.CanvasesGetContent.CanvasesGetContentRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The canvasesSectionsLookup property</summary>
         public global::Soenneker.Slack.OpenApiClient.Api.CanvasesSectionsLookup.CanvasesSectionsLookupRequestBuilder CanvasesSectionsLookup
