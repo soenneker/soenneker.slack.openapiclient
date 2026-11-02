@@ -58,6 +58,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
             }
             
             var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool? matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject ? (bool?)null : (bool?)false;
+            int matchingUnionBranches = 0;
+            if (matchesUnionBranch0 != false) matchingUnionBranches++;
+            bool noSelectedUnionBranch = result.AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf2 == null && result.AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf3 == null && result.AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf4 == null && result.AppRequestedEventPreviousResolutionScopesTokenTypeMember1 == null;
+            if (noSelectedUnionBranch && matchesUnionBranch0 == true && matchingUnionBranches == 1) result.AppRequestedEventPreviousResolutionScopesTokenTypeMember1 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.AppRequestedEventPreviousResolutionScopesTokenTypeMember1(), parseNode);
             if (result.AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf2 == null && result.AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf3 == null && result.AppRequestedEventPreviousResolutionScopesTokenTypeAnyOf4 == null && result.AppRequestedEventPreviousResolutionScopesTokenTypeMember1 == null) result.UnrecognizedValue = unionPayload;
 return result;
         }

@@ -58,6 +58,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
             }
             
             var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool? matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject ? (bool?)null : (bool?)false;
+            int matchingUnionBranches = 0;
+            if (matchesUnionBranch0 != false) matchingUnionBranches++;
+            bool noSelectedUnionBranch = result.AppRequestedEventScopesTokenTypeAnyOf2 == null && result.AppRequestedEventScopesTokenTypeAnyOf3 == null && result.AppRequestedEventScopesTokenTypeAnyOf4 == null && result.AppRequestedEventScopesTokenTypeMember1 == null;
+            if (noSelectedUnionBranch && matchesUnionBranch0 == true && matchingUnionBranches == 1) result.AppRequestedEventScopesTokenTypeMember1 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.AppRequestedEventScopesTokenTypeMember1(), parseNode);
             if (result.AppRequestedEventScopesTokenTypeAnyOf2 == null && result.AppRequestedEventScopesTokenTypeAnyOf3 == null && result.AppRequestedEventScopesTokenTypeAnyOf4 == null && result.AppRequestedEventScopesTokenTypeMember1 == null) result.UnrecognizedValue = unionPayload;
 return result;
         }
