@@ -9,6 +9,9 @@ using Soenneker.Slack.OpenApiClient.Api.AdminAppsApprovedList;
 using Soenneker.Slack.OpenApiClient.Api.AdminAppsClearResolution;
 using Soenneker.Slack.OpenApiClient.Api.AdminAppsConfigLookup;
 using Soenneker.Slack.OpenApiClient.Api.AdminAppsConfigSet;
+using Soenneker.Slack.OpenApiClient.Api.AdminAppsMcpServersList;
+using Soenneker.Slack.OpenApiClient.Api.AdminAppsMcpServersPermissionsList;
+using Soenneker.Slack.OpenApiClient.Api.AdminAppsMcpServersPermissionsSet;
 using Soenneker.Slack.OpenApiClient.Api.AdminAppsRequestsCancel;
 using Soenneker.Slack.OpenApiClient.Api.AdminAppsRequestsList;
 using Soenneker.Slack.OpenApiClient.Api.AdminAppsRestrict;
@@ -62,6 +65,10 @@ using Soenneker.Slack.OpenApiClient.Api.AdminInviteRequestsList;
 using Soenneker.Slack.OpenApiClient.Api.AdminRolesAddAssignments;
 using Soenneker.Slack.OpenApiClient.Api.AdminRolesListAssignments;
 using Soenneker.Slack.OpenApiClient.Api.AdminRolesRemoveAssignments;
+using Soenneker.Slack.OpenApiClient.Api.AdminSlackbotSkillsList;
+using Soenneker.Slack.OpenApiClient.Api.AdminSlackbotSkillsPublish;
+using Soenneker.Slack.OpenApiClient.Api.AdminSlackbotSkillsSetAutoEnabled;
+using Soenneker.Slack.OpenApiClient.Api.AdminSlackbotSkillsUnpublish;
 using Soenneker.Slack.OpenApiClient.Api.AdminTeamsAdminsList;
 using Soenneker.Slack.OpenApiClient.Api.AdminTeamsCreate;
 using Soenneker.Slack.OpenApiClient.Api.AdminTeamsList;
@@ -245,6 +252,13 @@ using Soenneker.Slack.OpenApiClient.Api.SlackListsItemsInfo;
 using Soenneker.Slack.OpenApiClient.Api.SlackListsItemsList;
 using Soenneker.Slack.OpenApiClient.Api.SlackListsItemsUpdate;
 using Soenneker.Slack.OpenApiClient.Api.SlackListsUpdate;
+using Soenneker.Slack.OpenApiClient.Api.SlackbotSkillsCreate;
+using Soenneker.Slack.OpenApiClient.Api.SlackbotSkillsDelete;
+using Soenneker.Slack.OpenApiClient.Api.SlackbotSkillsInfo;
+using Soenneker.Slack.OpenApiClient.Api.SlackbotSkillsLibraryAdd;
+using Soenneker.Slack.OpenApiClient.Api.SlackbotSkillsLibraryRemove;
+using Soenneker.Slack.OpenApiClient.Api.SlackbotSkillsList;
+using Soenneker.Slack.OpenApiClient.Api.SlackbotSkillsUpdate;
 using Soenneker.Slack.OpenApiClient.Api.StarsAdd;
 using Soenneker.Slack.OpenApiClient.Api.StarsList;
 using Soenneker.Slack.OpenApiClient.Api.StarsRemove;
@@ -331,6 +345,21 @@ namespace Soenneker.Slack.OpenApiClient.Api
         public global::Soenneker.Slack.OpenApiClient.Api.AdminAppsConfigSet.AdminAppsConfigSetRequestBuilder AdminAppsConfigSet
         {
             get => new global::Soenneker.Slack.OpenApiClient.Api.AdminAppsConfigSet.AdminAppsConfigSetRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The adminAppsMcpServersList property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.AdminAppsMcpServersList.AdminAppsMcpServersListRequestBuilder AdminAppsMcpServersList
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.AdminAppsMcpServersList.AdminAppsMcpServersListRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The adminAppsMcpServersPermissionsList property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.AdminAppsMcpServersPermissionsList.AdminAppsMcpServersPermissionsListRequestBuilder AdminAppsMcpServersPermissionsList
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.AdminAppsMcpServersPermissionsList.AdminAppsMcpServersPermissionsListRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The adminAppsMcpServersPermissionsSet property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.AdminAppsMcpServersPermissionsSet.AdminAppsMcpServersPermissionsSetRequestBuilder AdminAppsMcpServersPermissionsSet
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.AdminAppsMcpServersPermissionsSet.AdminAppsMcpServersPermissionsSetRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The adminAppsRequestsCancel property</summary>
         public global::Soenneker.Slack.OpenApiClient.Api.AdminAppsRequestsCancel.AdminAppsRequestsCancelRequestBuilder AdminAppsRequestsCancel
@@ -596,6 +625,26 @@ namespace Soenneker.Slack.OpenApiClient.Api
         public global::Soenneker.Slack.OpenApiClient.Api.AdminRolesRemoveAssignments.AdminRolesRemoveAssignmentsRequestBuilder AdminRolesRemoveAssignments
         {
             get => new global::Soenneker.Slack.OpenApiClient.Api.AdminRolesRemoveAssignments.AdminRolesRemoveAssignmentsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The adminSlackbotSkillsList property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.AdminSlackbotSkillsList.AdminSlackbotSkillsListRequestBuilder AdminSlackbotSkillsList
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.AdminSlackbotSkillsList.AdminSlackbotSkillsListRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The adminSlackbotSkillsPublish property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.AdminSlackbotSkillsPublish.AdminSlackbotSkillsPublishRequestBuilder AdminSlackbotSkillsPublish
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.AdminSlackbotSkillsPublish.AdminSlackbotSkillsPublishRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The adminSlackbotSkillsSetAutoEnabled property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.AdminSlackbotSkillsSetAutoEnabled.AdminSlackbotSkillsSetAutoEnabledRequestBuilder AdminSlackbotSkillsSetAutoEnabled
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.AdminSlackbotSkillsSetAutoEnabled.AdminSlackbotSkillsSetAutoEnabledRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The adminSlackbotSkillsUnpublish property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.AdminSlackbotSkillsUnpublish.AdminSlackbotSkillsUnpublishRequestBuilder AdminSlackbotSkillsUnpublish
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.AdminSlackbotSkillsUnpublish.AdminSlackbotSkillsUnpublishRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The adminTeamsAdminsList property</summary>
         public global::Soenneker.Slack.OpenApiClient.Api.AdminTeamsAdminsList.AdminTeamsAdminsListRequestBuilder AdminTeamsAdminsList
@@ -1452,6 +1501,41 @@ namespace Soenneker.Slack.OpenApiClient.Api
         public global::Soenneker.Slack.OpenApiClient.Api.SearchMessages.SearchMessagesRequestBuilder SearchMessages
         {
             get => new global::Soenneker.Slack.OpenApiClient.Api.SearchMessages.SearchMessagesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The slackbotSkillsCreate property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.SlackbotSkillsCreate.SlackbotSkillsCreateRequestBuilder SlackbotSkillsCreate
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.SlackbotSkillsCreate.SlackbotSkillsCreateRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The slackbotSkillsDelete property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.SlackbotSkillsDelete.SlackbotSkillsDeleteRequestBuilder SlackbotSkillsDelete
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.SlackbotSkillsDelete.SlackbotSkillsDeleteRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The slackbotSkillsInfo property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.SlackbotSkillsInfo.SlackbotSkillsInfoRequestBuilder SlackbotSkillsInfo
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.SlackbotSkillsInfo.SlackbotSkillsInfoRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The slackbotSkillsLibraryAdd property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.SlackbotSkillsLibraryAdd.SlackbotSkillsLibraryAddRequestBuilder SlackbotSkillsLibraryAdd
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.SlackbotSkillsLibraryAdd.SlackbotSkillsLibraryAddRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The slackbotSkillsLibraryRemove property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.SlackbotSkillsLibraryRemove.SlackbotSkillsLibraryRemoveRequestBuilder SlackbotSkillsLibraryRemove
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.SlackbotSkillsLibraryRemove.SlackbotSkillsLibraryRemoveRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The slackbotSkillsList property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.SlackbotSkillsList.SlackbotSkillsListRequestBuilder SlackbotSkillsList
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.SlackbotSkillsList.SlackbotSkillsListRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The slackbotSkillsUpdate property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.SlackbotSkillsUpdate.SlackbotSkillsUpdateRequestBuilder SlackbotSkillsUpdate
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.SlackbotSkillsUpdate.SlackbotSkillsUpdateRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The slackListsAccessDelete property</summary>
         public global::Soenneker.Slack.OpenApiClient.Api.SlackListsAccessDelete.SlackListsAccessDeleteRequestBuilder SlackListsAccessDelete

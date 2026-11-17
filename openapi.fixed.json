@@ -3,7 +3,7 @@
   "info": {
     "title": "Slack Web API \u0026 Events API (Strict SDK Generation)",
     "description": "Generated 100% offline directly from the TypeScript AST of the official Node SDK. See the generator repo for details: https://github.com/connectstrata/slack-openapi-generator",
-    "version": "2026-11-09"
+    "version": "2026-11-16"
   },
   "servers": [
     {
@@ -262,6 +262,116 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/AdminAppsConfigSetResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin.apps.mcp.servers.list": {
+      "post": {
+        "tags": [
+          "admin"
+        ],
+        "summary": "List third-party app MCP servers approved for an organization.",
+        "description": "List third-party app MCP servers approved for an organization.",
+        "operationId": "AdminAppsMcpServersList",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdminAppsMcpServersListArguments"
+              }
+            }
+          },
+          "x-client-original-alternative-form-content": {
+            "schema": {
+              "$ref": "#/components/schemas/AdminAppsMcpServersListArguments"
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response. Returns a strongly-typed \u0060AdminAppsMcpServersListResponse\u0060 object. Note: Slack API errors also return HTTP 200 with \u0060ok: false\u0060 and an \u0060error\u0060 field.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminAppsMcpServersListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin.apps.mcp.servers.permissions.list": {
+      "post": {
+        "tags": [
+          "admin"
+        ],
+        "summary": "List MCP servers for an app with their access control permissions.",
+        "description": "List MCP servers for an app with their access control permissions.",
+        "operationId": "AdminAppsMcpServersPermissionsList",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdminAppsMcpServersPermissionsListArguments"
+              }
+            }
+          },
+          "required": true,
+          "x-client-original-alternative-form-content": {
+            "schema": {
+              "$ref": "#/components/schemas/AdminAppsMcpServersPermissionsListArguments"
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response. Returns a strongly-typed \u0060AdminAppsMcpServersPermissionsListResponse\u0060 object. Note: Slack API errors also return HTTP 200 with \u0060ok: false\u0060 and an \u0060error\u0060 field.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminAppsMcpServersPermissionsListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin.apps.mcp.servers.permissions.set": {
+      "post": {
+        "tags": [
+          "admin"
+        ],
+        "summary": "Set the access control permission for who can use an MCP server.",
+        "description": "Set the access control permission for who can use an MCP server.",
+        "operationId": "AdminAppsMcpServersPermissionsSet",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdminAppsMcpServersPermissionsSetArguments"
+              }
+            }
+          },
+          "required": true,
+          "x-client-original-alternative-form-content": {
+            "schema": {
+              "$ref": "#/components/schemas/AdminAppsMcpServersPermissionsSetArguments"
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response. Returns a strongly-typed \u0060AdminAppsMcpServersPermissionsSetResponse\u0060 object. Note: Slack API errors also return HTTP 200 with \u0060ok: false\u0060 and an \u0060error\u0060 field.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminAppsMcpServersPermissionsSetResponse"
                 }
               }
             }
@@ -2218,6 +2328,153 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/AdminRolesRemoveAssignmentsResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin.slackbot.skills.list": {
+      "post": {
+        "tags": [
+          "admin"
+        ],
+        "summary": "Lists metadata for Slackbot skills owned by an organization.",
+        "description": "Lists metadata for Slackbot skills owned by an organization.",
+        "operationId": "AdminSlackbotSkillsList",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdminSlackbotSkillsListArguments"
+              }
+            }
+          },
+          "x-client-original-alternative-form-content": {
+            "schema": {
+              "$ref": "#/components/schemas/AdminSlackbotSkillsListArguments"
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response. Returns a strongly-typed \u0060AdminSlackbotSkillsListResponse\u0060 object. Note: Slack API errors also return HTTP 200 with \u0060ok: false\u0060 and an \u0060error\u0060 field.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminSlackbotSkillsListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin.slackbot.skills.publish": {
+      "post": {
+        "tags": [
+          "admin"
+        ],
+        "summary": "Publishes Slackbot skills to an organization\u0027s catalog.",
+        "description": "Publishes Slackbot skills to an organization\u0027s catalog.",
+        "operationId": "AdminSlackbotSkillsPublish",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdminSlackbotSkillsPublishArguments"
+              }
+            }
+          },
+          "required": true,
+          "x-client-original-alternative-form-content": {
+            "schema": {
+              "$ref": "#/components/schemas/AdminSlackbotSkillsPublishArguments"
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response. Returns a strongly-typed \u0060AdminSlackbotSkillsPublishResponse\u0060 object. Note: Slack API errors also return HTTP 200 with \u0060ok: false\u0060 and an \u0060error\u0060 field.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminSlackbotSkillsPublishResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin.slackbot.skills.setAutoEnabled": {
+      "post": {
+        "tags": [
+          "admin"
+        ],
+        "summary": "Sets who a Slackbot skill is automatically turned on for.",
+        "description": "Sets who a Slackbot skill is automatically turned on for.",
+        "operationId": "AdminSlackbotSkillsSetAutoEnabled",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdminSlackbotSkillsSetAutoEnabledArguments"
+              }
+            }
+          },
+          "required": true,
+          "x-client-original-alternative-form-content": {
+            "schema": {
+              "$ref": "#/components/schemas/AdminSlackbotSkillsSetAutoEnabledArguments"
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response. Returns a strongly-typed \u0060AdminSlackbotSkillsSetAutoEnabledResponse\u0060 object. Note: Slack API errors also return HTTP 200 with \u0060ok: false\u0060 and an \u0060error\u0060 field.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminSlackbotSkillsSetAutoEnabledResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin.slackbot.skills.unpublish": {
+      "post": {
+        "tags": [
+          "admin"
+        ],
+        "summary": "Removes Slackbot skills from the org catalog, preserving access, libraries, and deployments.",
+        "description": "Removes Slackbot skills from the org catalog, preserving access, libraries, and deployments.",
+        "operationId": "AdminSlackbotSkillsUnpublish",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdminSlackbotSkillsUnpublishArguments"
+              }
+            }
+          },
+          "required": true,
+          "x-client-original-alternative-form-content": {
+            "schema": {
+              "$ref": "#/components/schemas/AdminSlackbotSkillsUnpublishArguments"
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response. Returns a strongly-typed \u0060AdminSlackbotSkillsUnpublishResponse\u0060 object. Note: Slack API errors also return HTTP 200 with \u0060ok: false\u0060 and an \u0060error\u0060 field.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminSlackbotSkillsUnpublishResponse"
                 }
               }
             }
@@ -8539,6 +8796,264 @@
         }
       }
     },
+    "/api/slackbot.skills.create": {
+      "post": {
+        "tags": [
+          "slackbot"
+        ],
+        "summary": "Creates a skill from markdown instructions, or turns an existing canvas the caller owns into a skill.",
+        "description": "Creates a skill from markdown instructions, or turns an existing canvas the caller owns into a skill.",
+        "operationId": "SlackbotSkillsCreate",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SlackbotSkillsCreateArguments"
+              }
+            }
+          },
+          "required": true,
+          "x-client-original-alternative-form-content": {
+            "schema": {
+              "$ref": "#/components/schemas/SlackbotSkillsCreateArguments"
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response. Returns a strongly-typed \u0060SlackbotSkillsCreateResponse\u0060 object. Note: Slack API errors also return HTTP 200 with \u0060ok: false\u0060 and an \u0060error\u0060 field.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SlackbotSkillsCreateResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/slackbot.skills.delete": {
+      "post": {
+        "tags": [
+          "slackbot"
+        ],
+        "summary": "Deletes a Slackbot skill and its canvas, and removes it from every library, skill set, and the org catalog.",
+        "description": "Deletes a Slackbot skill and its canvas, and removes it from every library, skill set, and the org catalog.",
+        "operationId": "SlackbotSkillsDelete",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SlackbotSkillsDeleteArguments"
+              }
+            }
+          },
+          "required": true,
+          "x-client-original-alternative-form-content": {
+            "schema": {
+              "$ref": "#/components/schemas/SlackbotSkillsDeleteArguments"
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response. Returns a strongly-typed \u0060SlackbotSkillsDeleteResponse\u0060 object. Note: Slack API errors also return HTTP 200 with \u0060ok: false\u0060 and an \u0060error\u0060 field.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SlackbotSkillsDeleteResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/slackbot.skills.info": {
+      "post": {
+        "tags": [
+          "slackbot"
+        ],
+        "summary": "Returns one Slackbot skill, including its instructions.",
+        "description": "Returns one Slackbot skill, including its instructions.",
+        "operationId": "SlackbotSkillsInfo",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SlackbotSkillsInfoArguments"
+              }
+            }
+          },
+          "required": true,
+          "x-client-original-alternative-form-content": {
+            "schema": {
+              "$ref": "#/components/schemas/SlackbotSkillsInfoArguments"
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response. Returns a strongly-typed \u0060SlackbotSkillsInfoResponse\u0060 object. Note: Slack API errors also return HTTP 200 with \u0060ok: false\u0060 and an \u0060error\u0060 field.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SlackbotSkillsInfoResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/slackbot.skills.library.add": {
+      "post": {
+        "tags": [
+          "slackbot"
+        ],
+        "summary": "Turns a skill on in the caller\u0027s Slackbot library.",
+        "description": "Turns a skill on in the caller\u0027s Slackbot library.",
+        "operationId": "SlackbotSkillsLibraryAdd",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SlackbotSkillsLibraryAddArguments"
+              }
+            }
+          },
+          "required": true,
+          "x-client-original-alternative-form-content": {
+            "schema": {
+              "$ref": "#/components/schemas/SlackbotSkillsLibraryAddArguments"
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response. Returns a strongly-typed \u0060SlackbotSkillsLibraryAddResponse\u0060 object. Note: Slack API errors also return HTTP 200 with \u0060ok: false\u0060 and an \u0060error\u0060 field.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SlackbotSkillsLibraryAddResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/slackbot.skills.library.remove": {
+      "post": {
+        "tags": [
+          "slackbot"
+        ],
+        "summary": "Turns a skill off in the caller\u0027s Slackbot library.",
+        "description": "Turns a skill off in the caller\u0027s Slackbot library.",
+        "operationId": "SlackbotSkillsLibraryRemove",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SlackbotSkillsLibraryRemoveArguments"
+              }
+            }
+          },
+          "required": true,
+          "x-client-original-alternative-form-content": {
+            "schema": {
+              "$ref": "#/components/schemas/SlackbotSkillsLibraryRemoveArguments"
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response. Returns a strongly-typed \u0060SlackbotSkillsLibraryRemoveResponse\u0060 object. Note: Slack API errors also return HTTP 200 with \u0060ok: false\u0060 and an \u0060error\u0060 field.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SlackbotSkillsLibraryRemoveResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/slackbot.skills.list": {
+      "post": {
+        "tags": [
+          "slackbot"
+        ],
+        "summary": "Lists Slackbot skills from the caller\u0027s point of view. Instructions are not included.",
+        "description": "Lists Slackbot skills from the caller\u0027s point of view. Instructions are not included.",
+        "operationId": "SlackbotSkillsList",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SlackbotSkillsListArguments"
+              }
+            }
+          },
+          "x-client-original-alternative-form-content": {
+            "schema": {
+              "$ref": "#/components/schemas/SlackbotSkillsListArguments"
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response. Returns a strongly-typed \u0060SlackbotSkillsListResponse\u0060 object. Note: Slack API errors also return HTTP 200 with \u0060ok: false\u0060 and an \u0060error\u0060 field.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SlackbotSkillsListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/slackbot.skills.update": {
+      "post": {
+        "tags": [
+          "slackbot"
+        ],
+        "summary": "Changes a Slackbot skill\u0027s instructions or metadata.",
+        "description": "Changes a Slackbot skill\u0027s instructions or metadata.",
+        "operationId": "SlackbotSkillsUpdate",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SlackbotSkillsUpdateArguments"
+              }
+            }
+          },
+          "required": true,
+          "x-client-original-alternative-form-content": {
+            "schema": {
+              "$ref": "#/components/schemas/SlackbotSkillsUpdateArguments"
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response. Returns a strongly-typed \u0060SlackbotSkillsUpdateResponse\u0060 object. Note: Slack API errors also return HTTP 200 with \u0060ok: false\u0060 and an \u0060error\u0060 field.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SlackbotSkillsUpdateResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/slackLists.access.delete": {
       "post": {
         "tags": [
@@ -11161,6 +11676,18 @@
           }
         ]
       },
+      "AppId": {
+        "required": [
+          "app_id"
+        ],
+        "type": "object",
+        "properties": {
+          "app_id": {
+            "type": "string",
+            "description": "The ID of the app."
+          }
+        }
+      },
       "AdminAppsApproveResponse": {
         "required": [
           "ok"
@@ -11600,6 +12127,223 @@
           },
           "provided": {
             "type": "string"
+          },
+          "warning": {
+            "type": "string"
+          }
+        }
+      },
+      "AdminAppsMcpServersListArguments": {
+        "$ref": "#/components/schemas/CursorPaginationEnabled"
+      },
+      "AdminAppsMcpServersListResponse": {
+        "required": [
+          "ok"
+        ],
+        "type": "object",
+        "properties": {
+          "ok": {
+            "$ref": "#/components/schemas/AdminAppsMcpServersListResponseOk"
+          },
+          "response_metadata": {
+            "$ref": "#/components/schemas/AdminAppsMcpServersListResponseResponseMetadata"
+          },
+          "error": {
+            "type": "string"
+          },
+          "needed": {
+            "type": "string"
+          },
+          "provided": {
+            "type": "string"
+          },
+          "servers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Server"
+            }
+          },
+          "warning": {
+            "type": "string"
+          }
+        }
+      },
+      "Server": {
+        "type": "object",
+        "properties": {
+          "app_id": {
+            "type": "string"
+          },
+          "app_name": {
+            "type": "string"
+          },
+          "auth_type": {
+            "type": "string"
+          },
+          "server_id": {
+            "type": "string"
+          },
+          "server_name": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        }
+      },
+      "AdminAppsMcpServersPermissionsListArguments": {
+        "$ref": "#/components/schemas/AppId"
+      },
+      "AdminAppsMcpServersPermissionsListResponse": {
+        "required": [
+          "ok"
+        ],
+        "type": "object",
+        "properties": {
+          "ok": {
+            "$ref": "#/components/schemas/AdminAppsMcpServersPermissionsListResponseOk"
+          },
+          "response_metadata": {
+            "$ref": "#/components/schemas/WebApiCallResultResponseMetadata"
+          },
+          "error": {
+            "type": "string"
+          },
+          "needed": {
+            "type": "string"
+          },
+          "provided": {
+            "type": "string"
+          },
+          "servers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Server2"
+            }
+          },
+          "warning": {
+            "type": "string"
+          }
+        }
+      },
+      "Server2": {
+        "type": "object",
+        "properties": {
+          "is_inherited": {
+            "$ref": "#/components/schemas/Server2IsInherited"
+          },
+          "permission_type": {
+            "type": "string"
+          },
+          "server_id": {
+            "type": "string"
+          },
+          "server_name": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "user_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "usergroup_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "AdminAppsMcpServersPermissionsSetArguments": {
+        "required": [
+          "server_id",
+          "permission_type",
+          "app_id"
+        ],
+        "type": "object",
+        "properties": {
+          "server_id": {
+            "type": "string",
+            "description": "Encoded ID of the MCP server."
+          },
+          "permission_type": {
+            "$ref": "#/components/schemas/AdminAppsMcpServersPermissionsSetArgumentsPermissionType"
+          },
+          "user_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of user IDs to set for named_entities or named_entities_exclude."
+          },
+          "usergroup_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of encoded usergroup IDs."
+          },
+          "app_id": {
+            "type": "string",
+            "description": "The ID of the app."
+          },
+          "token": {
+            "type": "string",
+            "description": "Overridable authentication token bearing required scopes."
+          }
+        }
+      },
+      "AdminAppsMcpServersPermissionsSetResponse": {
+        "required": [
+          "ok"
+        ],
+        "type": "object",
+        "properties": {
+          "ok": {
+            "$ref": "#/components/schemas/AdminAppsMcpServersPermissionsSetResponseOk"
+          },
+          "response_metadata": {
+            "$ref": "#/components/schemas/WebApiCallResultResponseMetadata"
+          },
+          "error": {
+            "type": "string"
+          },
+          "is_inherited": {
+            "$ref": "#/components/schemas/AdminAppsMcpServersPermissionsSetResponseAllOf2IsInherited"
+          },
+          "needed": {
+            "type": "string"
+          },
+          "permission_type": {
+            "type": "string"
+          },
+          "provided": {
+            "type": "string"
+          },
+          "server_id": {
+            "type": "string"
+          },
+          "server_name": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "user_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "usergroup_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "warning": {
             "type": "string"
@@ -15301,6 +16045,312 @@
           },
           "error": {
             "type": "string"
+          },
+          "needed": {
+            "type": "string"
+          },
+          "provided": {
+            "type": "string"
+          },
+          "warning": {
+            "type": "string"
+          }
+        }
+      },
+      "AdminSlackbotSkillsListArguments": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "$ref": "#/components/schemas/AdminSlackbotSkillsListArgumentsCategory"
+          },
+          "cursor": {
+            "type": "string",
+            "description": "Continuation from the previous page. Keep all filters and sorting unchanged. Pages can be empty\nwhile a continuation remains; continue until next_cursor is empty. Changes during traversal may move results;\npagination is not a snapshot."
+          },
+          "limit": {
+            "type": "number",
+            "description": "The maximum number of skills to return. Fewer may be returned even when more remain."
+          },
+          "creator_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Only return skills created by these users. Accepts U or W user IDs."
+          },
+          "publish_status": {
+            "$ref": "#/components/schemas/AdminSlackbotSkillsListArgumentsPublishStatus"
+          },
+          "auto_enabled_status": {
+            "$ref": "#/components/schemas/AdminSlackbotSkillsListArgumentsAutoEnabledStatus"
+          },
+          "sort": {
+            "$ref": "#/components/schemas/AdminSlackbotSkillsListArgumentsSort"
+          },
+          "sort_dir": {
+            "$ref": "#/components/schemas/AdminSlackbotSkillsListArgumentsSortDir"
+          }
+        }
+      },
+      "AdminSlackbotSkillsListResponse": {
+        "required": [
+          "ok"
+        ],
+        "type": "object",
+        "properties": {
+          "ok": {
+            "$ref": "#/components/schemas/AdminSlackbotSkillsListResponseOk"
+          },
+          "response_metadata": {
+            "$ref": "#/components/schemas/AdminSlackbotSkillsListResponseResponseMetadata"
+          },
+          "error": {
+            "type": "string"
+          },
+          "needed": {
+            "type": "string"
+          },
+          "provided": {
+            "type": "string"
+          },
+          "skills": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Skill"
+            }
+          },
+          "warning": {
+            "type": "string"
+          }
+        }
+      },
+      "Skill": {
+        "type": "object",
+        "properties": {
+          "auto_enabled": {
+            "$ref": "#/components/schemas/AutoEnabled"
+          },
+          "category": {
+            "type": "string"
+          },
+          "creator_id": {
+            "type": "string"
+          },
+          "date_created": {
+            "type": "number"
+          },
+          "date_updated": {
+            "type": "number"
+          },
+          "description": {
+            "type": "string"
+          },
+          "display_name": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "is_official": {
+            "$ref": "#/components/schemas/SkillIsOfficial"
+          },
+          "library_count": {
+            "type": "number"
+          },
+          "usage_count": {
+            "type": "number"
+          },
+          "visibility": {
+            "type": "string"
+          }
+        }
+      },
+      "AutoEnabled": {
+        "type": "object",
+        "properties": {
+          "permission_type": {
+            "type": "string"
+          },
+          "usergroup_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "AdminSlackbotSkillsPublishArguments": {
+        "required": [
+          "skill_ids"
+        ],
+        "type": "object",
+        "properties": {
+          "skill_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "One to 50 skill IDs. Successful items are not rolled back if other items fail."
+          },
+          "token": {
+            "type": "string",
+            "description": "Overridable authentication token bearing required scopes."
+          }
+        }
+      },
+      "AdminSlackbotSkillsPublishResponse": {
+        "required": [
+          "ok"
+        ],
+        "type": "object",
+        "properties": {
+          "ok": {
+            "$ref": "#/components/schemas/AdminSlackbotSkillsPublishResponseOk"
+          },
+          "response_metadata": {
+            "$ref": "#/components/schemas/AdminSlackbotSkillsPublishResponseResponseMetadata"
+          },
+          "error": {
+            "type": "string"
+          },
+          "failed_skills": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FailedSkill"
+            }
+          },
+          "needed": {
+            "type": "string"
+          },
+          "provided": {
+            "type": "string"
+          },
+          "warning": {
+            "type": "string"
+          }
+        }
+      },
+      "FailedSkill": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string"
+          },
+          "skill_id": {
+            "type": "string"
+          }
+        }
+      },
+      "AdminSlackbotSkillsSetAutoEnabledArguments": {
+        "required": [
+          "skill_id",
+          "permission_type"
+        ],
+        "type": "object",
+        "properties": {
+          "skill_id": {
+            "type": "string",
+            "description": "Canvas skill to deploy."
+          },
+          "permission_type": {
+            "$ref": "#/components/schemas/AdminSlackbotSkillsSetAutoEnabledArgumentsPermissionType"
+          },
+          "usergroup_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "One to 100 user groups for named_entities. Duplicates count toward the input limit and are stored\nonce. Omit for other permission types."
+          },
+          "token": {
+            "type": "string",
+            "description": "Overridable authentication token bearing required scopes."
+          }
+        }
+      },
+      "AdminSlackbotSkillsSetAutoEnabledResponse": {
+        "required": [
+          "ok"
+        ],
+        "type": "object",
+        "properties": {
+          "ok": {
+            "$ref": "#/components/schemas/AdminSlackbotSkillsSetAutoEnabledResponseOk"
+          },
+          "response_metadata": {
+            "$ref": "#/components/schemas/AdminSlackbotSkillsSetAutoEnabledResponseResponseMetadata"
+          },
+          "error": {
+            "type": "string"
+          },
+          "invalid_usergroup_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "needed": {
+            "type": "string"
+          },
+          "permission_type": {
+            "type": "string"
+          },
+          "provided": {
+            "type": "string"
+          },
+          "skill_id": {
+            "type": "string"
+          },
+          "usergroup_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "warning": {
+            "type": "string"
+          }
+        }
+      },
+      "AdminSlackbotSkillsUnpublishArguments": {
+        "required": [
+          "skill_ids"
+        ],
+        "type": "object",
+        "properties": {
+          "skill_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "One to 50 skill IDs. Successful items are not rolled back if other items fail."
+          },
+          "token": {
+            "type": "string",
+            "description": "Overridable authentication token bearing required scopes."
+          }
+        }
+      },
+      "AdminSlackbotSkillsUnpublishResponse": {
+        "required": [
+          "ok"
+        ],
+        "type": "object",
+        "properties": {
+          "ok": {
+            "$ref": "#/components/schemas/AdminSlackbotSkillsUnpublishResponseOk"
+          },
+          "response_metadata": {
+            "$ref": "#/components/schemas/AdminSlackbotSkillsUnpublishResponseResponseMetadata"
+          },
+          "error": {
+            "type": "string"
+          },
+          "failed_skills": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FailedSkill"
+            }
           },
           "needed": {
             "type": "string"
@@ -61455,6 +62505,478 @@
           }
         }
       },
+      "SlackbotSkillsCreateArguments": {
+        "required": [
+          "display_name"
+        ],
+        "type": "object",
+        "properties": {
+          "display_name": {
+            "type": "string",
+            "description": "Human-readable label. Max 255 characters; not unique."
+          },
+          "instructions": {
+            "type": "string",
+            "description": "Markdown body of the skill. Send exactly one of \u0060instructions\u0060 or \u0060canvas_id\u0060."
+          },
+          "canvas_id": {
+            "type": "string",
+            "description": "Canvas the caller owns to turn into a skill. Send exactly one of \u0060instructions\u0060 or \u0060canvas_id\u0060."
+          },
+          "description": {
+            "type": "string",
+            "description": "When Slackbot should use the skill. Max 400 characters."
+          },
+          "category": {
+            "$ref": "#/components/schemas/SlackbotSkillsCreateArgumentsCategory"
+          },
+          "example_prompt": {
+            "type": "string",
+            "description": "Max 200 characters. May contain \u0060{skill}\u0060, which becomes the skill mention."
+          },
+          "mcp_servers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SlackbotSkillsCreateArgumentsMcpServersItem"
+            },
+            "description": "Apps the skill needs, capped at the caller\u0027s MCP server limit. Declaring an app doesn\u0027t grant\naccess to it."
+          },
+          "token": {
+            "type": "string",
+            "description": "Overridable authentication token bearing required scopes."
+          }
+        }
+      },
+      "SlackbotSkillsCreateResponse": {
+        "required": [
+          "ok"
+        ],
+        "type": "object",
+        "properties": {
+          "ok": {
+            "$ref": "#/components/schemas/SlackbotSkillsCreateResponseOk"
+          },
+          "response_metadata": {
+            "$ref": "#/components/schemas/SlackbotSkillsCreateResponseResponseMetadata"
+          },
+          "error": {
+            "type": "string"
+          },
+          "invalid_mcp_servers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvalidmcpServer"
+            }
+          },
+          "needed": {
+            "type": "string"
+          },
+          "provided": {
+            "type": "string"
+          },
+          "skill": {
+            "$ref": "#/components/schemas/Skill2"
+          },
+          "warning": {
+            "type": "string"
+          }
+        }
+      },
+      "InvalidmcpServer": {
+        "type": "object",
+        "properties": {
+          "app_id": {
+            "type": "string"
+          },
+          "server_id": {
+            "type": "string"
+          },
+          "service_type": {
+            "type": "string"
+          }
+        }
+      },
+      "Skill2": {
+        "type": "object",
+        "properties": {
+          "access": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "creator_id": {
+            "type": "string"
+          },
+          "date_created": {
+            "type": "number"
+          },
+          "date_updated": {
+            "type": "number"
+          },
+          "description": {
+            "type": "string"
+          },
+          "display_name": {
+            "type": "string"
+          },
+          "example_prompt": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "instructions": {
+            "type": "string"
+          },
+          "is_official": {
+            "$ref": "#/components/schemas/Skill2IsOfficial"
+          },
+          "library_count": {
+            "type": "number"
+          },
+          "mcp_servers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/McpServer"
+            }
+          },
+          "name": {
+            "type": "string"
+          },
+          "permalink": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "usage_count": {
+            "type": "number"
+          },
+          "visibility": {
+            "type": "string"
+          }
+        }
+      },
+      "McpServer": {
+        "type": "object",
+        "properties": {
+          "app_id": {
+            "type": "string"
+          },
+          "display_name": {
+            "type": "string"
+          },
+          "is_available": {
+            "$ref": "#/components/schemas/McpServerIsAvailable"
+          },
+          "server_id": {
+            "type": "string"
+          },
+          "service_type": {
+            "type": "string"
+          }
+        }
+      },
+      "SlackbotSkillsDeleteArguments": {
+        "required": [
+          "skill_id"
+        ],
+        "type": "object",
+        "properties": {
+          "skill_id": {
+            "type": "string",
+            "description": "Skill to delete."
+          },
+          "token": {
+            "type": "string",
+            "description": "Overridable authentication token bearing required scopes."
+          }
+        }
+      },
+      "SlackbotSkillsDeleteResponse": {
+        "required": [
+          "ok"
+        ],
+        "type": "object",
+        "properties": {
+          "ok": {
+            "$ref": "#/components/schemas/SlackbotSkillsDeleteResponseOk"
+          },
+          "response_metadata": {
+            "$ref": "#/components/schemas/SlackbotSkillsDeleteResponseResponseMetadata"
+          },
+          "error": {
+            "type": "string"
+          },
+          "needed": {
+            "type": "string"
+          },
+          "provided": {
+            "type": "string"
+          },
+          "warning": {
+            "type": "string"
+          }
+        }
+      },
+      "SlackbotSkillsInfoArguments": {
+        "required": [
+          "skill_id"
+        ],
+        "type": "object",
+        "properties": {
+          "skill_id": {
+            "type": "string",
+            "description": "Skill to fetch: a canvas file ID or a \u0060builtin:\u0060 reference."
+          },
+          "token": {
+            "type": "string",
+            "description": "Overridable authentication token bearing required scopes."
+          }
+        }
+      },
+      "SlackbotSkillsInfoResponse": {
+        "required": [
+          "ok"
+        ],
+        "type": "object",
+        "properties": {
+          "ok": {
+            "$ref": "#/components/schemas/SlackbotSkillsInfoResponseOk"
+          },
+          "response_metadata": {
+            "$ref": "#/components/schemas/SlackbotSkillsInfoResponseResponseMetadata"
+          },
+          "error": {
+            "type": "string"
+          },
+          "needed": {
+            "type": "string"
+          },
+          "provided": {
+            "type": "string"
+          },
+          "skill": {
+            "$ref": "#/components/schemas/Skill2"
+          },
+          "warning": {
+            "type": "string"
+          }
+        }
+      },
+      "SlackbotSkillsLibraryAddArguments": {
+        "required": [
+          "skill_id"
+        ],
+        "type": "object",
+        "properties": {
+          "skill_id": {
+            "type": "string",
+            "description": "Skill to turn on for the caller."
+          },
+          "token": {
+            "type": "string",
+            "description": "Overridable authentication token bearing required scopes."
+          }
+        }
+      },
+      "SlackbotSkillsLibraryAddResponse": {
+        "required": [
+          "ok"
+        ],
+        "type": "object",
+        "properties": {
+          "ok": {
+            "$ref": "#/components/schemas/SlackbotSkillsLibraryAddResponseOk"
+          },
+          "response_metadata": {
+            "$ref": "#/components/schemas/SlackbotSkillsLibraryAddResponseResponseMetadata"
+          },
+          "error": {
+            "type": "string"
+          },
+          "needed": {
+            "type": "string"
+          },
+          "provided": {
+            "type": "string"
+          },
+          "warning": {
+            "type": "string"
+          }
+        }
+      },
+      "SlackbotSkillsLibraryRemoveArguments": {
+        "required": [
+          "skill_id"
+        ],
+        "type": "object",
+        "properties": {
+          "skill_id": {
+            "type": "string",
+            "description": "Skill to turn off for the caller."
+          },
+          "token": {
+            "type": "string",
+            "description": "Overridable authentication token bearing required scopes."
+          }
+        }
+      },
+      "SlackbotSkillsLibraryRemoveResponse": {
+        "required": [
+          "ok"
+        ],
+        "type": "object",
+        "properties": {
+          "ok": {
+            "$ref": "#/components/schemas/SlackbotSkillsLibraryRemoveResponseOk"
+          },
+          "response_metadata": {
+            "$ref": "#/components/schemas/SlackbotSkillsLibraryRemoveResponseResponseMetadata"
+          },
+          "error": {
+            "type": "string"
+          },
+          "needed": {
+            "type": "string"
+          },
+          "provided": {
+            "type": "string"
+          },
+          "warning": {
+            "type": "string"
+          }
+        }
+      },
+      "SlackbotSkillsListArguments": {
+        "type": "object",
+        "properties": {
+          "filter": {
+            "$ref": "#/components/schemas/SlackbotSkillsListArgumentsFilter"
+          },
+          "category": {
+            "$ref": "#/components/schemas/SlackbotSkillsListArgumentsCategory"
+          },
+          "cursor": {
+            "type": "string",
+            "description": "Paginate through collections of data by setting the \u0060cursor\u0060 parameter to a \u0060next_cursor\u0060\nattribute returned by a previous request\u0027s \u0060response_metadata\u0060. Must be used with the same \u0060filter\u0060 and\n\u0060category\u0060."
+          },
+          "limit": {
+            "type": "number",
+            "description": "The maximum number of skills to return. Fewer may be returned even when more remain."
+          }
+        }
+      },
+      "SlackbotSkillsListResponse": {
+        "required": [
+          "ok"
+        ],
+        "type": "object",
+        "properties": {
+          "ok": {
+            "$ref": "#/components/schemas/SlackbotSkillsListResponseOk"
+          },
+          "response_metadata": {
+            "$ref": "#/components/schemas/SlackbotSkillsListResponseResponseMetadata"
+          },
+          "error": {
+            "type": "string"
+          },
+          "needed": {
+            "type": "string"
+          },
+          "provided": {
+            "type": "string"
+          },
+          "skills": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Skill2"
+            }
+          },
+          "warning": {
+            "type": "string"
+          }
+        }
+      },
+      "SlackbotSkillsUpdateArguments": {
+        "required": [
+          "skill_id"
+        ],
+        "type": "object",
+        "properties": {
+          "skill_id": {
+            "type": "string",
+            "description": "Skill to change."
+          },
+          "display_name": {
+            "type": "string",
+            "description": "Human-readable label. Max 255 characters."
+          },
+          "instructions": {
+            "type": "string",
+            "description": "Markdown that replaces the whole document."
+          },
+          "description": {
+            "type": "string",
+            "description": "When Slackbot should use the skill. Max 400 characters. Send an empty string to clear."
+          },
+          "category": {
+            "$ref": "#/components/schemas/SlackbotSkillsUpdateArgumentsCategory"
+          },
+          "example_prompt": {
+            "type": "string",
+            "description": "Max 200 characters. May contain \u0060{skill}\u0060. Send an empty string to clear."
+          },
+          "mcp_servers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SlackbotSkillsUpdateArgumentsMcpServersItem"
+            },
+            "description": "Apps the skill needs. Replaces the whole list; send \u0060[]\u0060 to clear."
+          },
+          "token": {
+            "type": "string",
+            "description": "Overridable authentication token bearing required scopes."
+          }
+        }
+      },
+      "SlackbotSkillsUpdateResponse": {
+        "required": [
+          "ok"
+        ],
+        "type": "object",
+        "properties": {
+          "ok": {
+            "$ref": "#/components/schemas/SlackbotSkillsUpdateResponseOk"
+          },
+          "response_metadata": {
+            "$ref": "#/components/schemas/SlackbotSkillsUpdateResponseResponseMetadata"
+          },
+          "error": {
+            "type": "string"
+          },
+          "invalid_mcp_servers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvalidmcpServer"
+            }
+          },
+          "needed": {
+            "type": "string"
+          },
+          "provided": {
+            "type": "string"
+          },
+          "skill": {
+            "$ref": "#/components/schemas/Skill2"
+          },
+          "warning": {
+            "type": "string"
+          }
+        }
+      },
       "SlackListsAccessDeleteArguments": {
         "required": [
           "list_id"
@@ -76090,6 +77612,13 @@
         ],
         "type": "boolean"
       },
+      "Server2IsInherited": {
+        "enum": [
+          false,
+          true
+        ],
+        "type": "boolean"
+      },
       "AppRequestIsUserAppCollaborator": {
         "enum": [
           false,
@@ -76340,6 +77869,13 @@
         "type": "boolean"
       },
       "InvitePreferencesIsUltraRestricted": {
+        "enum": [
+          false,
+          true
+        ],
+        "type": "boolean"
+      },
+      "SkillIsOfficial": {
         "enum": [
           false,
           true
@@ -88133,6 +89669,20 @@
           ]
         }
       },
+      "Skill2IsOfficial": {
+        "enum": [
+          false,
+          true
+        ],
+        "type": "boolean"
+      },
+      "McpServerIsAvailable": {
+        "enum": [
+          false,
+          true
+        ],
+        "type": "boolean"
+      },
       "SlackListsCreateArgumentsIncludeCopiedListRecords": {
         "description": "Boolean indicating whether to include records when a List is copied.",
         "enum": [
@@ -92622,6 +94172,13 @@
           }
         ]
       },
+      "AdminAppsMcpServersPermissionsSetResponseAllOf2IsInherited": {
+        "enum": [
+          false,
+          true
+        ],
+        "type": "boolean"
+      },
       "AdminConversationsGetCustomRetentionResponseAllOf2IsPolicyEnabled": {
         "enum": [
           false,
@@ -93940,6 +95497,40 @@
           }
         },
         "description": "Error response preventing flexpane data from being returned."
+      },
+      "SlackbotSkillsCreateArgumentsMcpServersItem": {
+        "required": [
+          "service_type"
+        ],
+        "type": "object",
+        "properties": {
+          "service_type": {
+            "type": "string"
+          },
+          "app_id": {
+            "type": "string"
+          },
+          "server_id": {
+            "type": "string"
+          }
+        }
+      },
+      "SlackbotSkillsUpdateArgumentsMcpServersItem": {
+        "required": [
+          "service_type"
+        ],
+        "type": "object",
+        "properties": {
+          "service_type": {
+            "type": "string"
+          },
+          "app_id": {
+            "type": "string"
+          },
+          "server_id": {
+            "type": "string"
+          }
+        }
       },
       "SlackListsItemFieldLinkLinkItem": {
         "required": [
@@ -99460,6 +101051,62 @@
         ],
         "type": "boolean"
       },
+      "AdminAppsMcpServersListResponseOk": {
+        "enum": [
+          false,
+          true
+        ],
+        "type": "boolean"
+      },
+      "AdminAppsMcpServersListResponseResponseMetadata": {
+        "type": "object",
+        "properties": {
+          "messages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "next_cursor": {
+            "type": "string"
+          },
+          "warnings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "scopes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "acceptedScopes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "retryAfter": {
+            "type": "number"
+          }
+        }
+      },
+      "AdminAppsMcpServersPermissionsListResponseOk": {
+        "enum": [
+          false,
+          true
+        ],
+        "type": "boolean"
+      },
+      "AdminAppsMcpServersPermissionsSetResponseOk": {
+        "enum": [
+          false,
+          true
+        ],
+        "type": "boolean"
+      },
       "AdminAppsRequestsCancelResponseOk": {
         "enum": [
           false,
@@ -100808,6 +102455,174 @@
           true
         ],
         "type": "boolean"
+      },
+      "AdminSlackbotSkillsListResponseOk": {
+        "enum": [
+          false,
+          true
+        ],
+        "type": "boolean"
+      },
+      "AdminSlackbotSkillsListResponseResponseMetadata": {
+        "type": "object",
+        "properties": {
+          "messages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "next_cursor": {
+            "type": "string"
+          },
+          "warnings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "scopes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "acceptedScopes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "retryAfter": {
+            "type": "number"
+          }
+        }
+      },
+      "AdminSlackbotSkillsPublishResponseOk": {
+        "enum": [
+          false,
+          true
+        ],
+        "type": "boolean"
+      },
+      "AdminSlackbotSkillsPublishResponseResponseMetadata": {
+        "type": "object",
+        "properties": {
+          "messages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "warnings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "next_cursor": {
+            "type": "string"
+          },
+          "scopes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "acceptedScopes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "retryAfter": {
+            "type": "number"
+          }
+        }
+      },
+      "AdminSlackbotSkillsSetAutoEnabledResponseOk": {
+        "enum": [
+          false,
+          true
+        ],
+        "type": "boolean"
+      },
+      "AdminSlackbotSkillsSetAutoEnabledResponseResponseMetadata": {
+        "type": "object",
+        "properties": {
+          "messages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "warnings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "next_cursor": {
+            "type": "string"
+          },
+          "scopes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "acceptedScopes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "retryAfter": {
+            "type": "number"
+          }
+        }
+      },
+      "AdminSlackbotSkillsUnpublishResponseOk": {
+        "enum": [
+          false,
+          true
+        ],
+        "type": "boolean"
+      },
+      "AdminSlackbotSkillsUnpublishResponseResponseMetadata": {
+        "type": "object",
+        "properties": {
+          "messages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "warnings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "next_cursor": {
+            "type": "string"
+          },
+          "scopes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "acceptedScopes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "retryAfter": {
+            "type": "number"
+          }
+        }
       },
       "AdminTeamsAdminsListResponseOk": {
         "enum": [
@@ -104133,6 +105948,300 @@
         ],
         "type": "boolean"
       },
+      "SlackbotSkillsCreateResponseOk": {
+        "enum": [
+          false,
+          true
+        ],
+        "type": "boolean"
+      },
+      "SlackbotSkillsCreateResponseResponseMetadata": {
+        "type": "object",
+        "properties": {
+          "messages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "warnings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "next_cursor": {
+            "type": "string"
+          },
+          "scopes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "acceptedScopes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "retryAfter": {
+            "type": "number"
+          }
+        }
+      },
+      "SlackbotSkillsDeleteResponseOk": {
+        "enum": [
+          false,
+          true
+        ],
+        "type": "boolean"
+      },
+      "SlackbotSkillsDeleteResponseResponseMetadata": {
+        "type": "object",
+        "properties": {
+          "messages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "warnings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "next_cursor": {
+            "type": "string"
+          },
+          "scopes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "acceptedScopes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "retryAfter": {
+            "type": "number"
+          }
+        }
+      },
+      "SlackbotSkillsInfoResponseOk": {
+        "enum": [
+          false,
+          true
+        ],
+        "type": "boolean"
+      },
+      "SlackbotSkillsInfoResponseResponseMetadata": {
+        "type": "object",
+        "properties": {
+          "messages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "warnings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "next_cursor": {
+            "type": "string"
+          },
+          "scopes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "acceptedScopes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "retryAfter": {
+            "type": "number"
+          }
+        }
+      },
+      "SlackbotSkillsLibraryAddResponseOk": {
+        "enum": [
+          false,
+          true
+        ],
+        "type": "boolean"
+      },
+      "SlackbotSkillsLibraryAddResponseResponseMetadata": {
+        "type": "object",
+        "properties": {
+          "messages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "warnings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "next_cursor": {
+            "type": "string"
+          },
+          "scopes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "acceptedScopes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "retryAfter": {
+            "type": "number"
+          }
+        }
+      },
+      "SlackbotSkillsLibraryRemoveResponseOk": {
+        "enum": [
+          false,
+          true
+        ],
+        "type": "boolean"
+      },
+      "SlackbotSkillsLibraryRemoveResponseResponseMetadata": {
+        "type": "object",
+        "properties": {
+          "messages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "warnings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "next_cursor": {
+            "type": "string"
+          },
+          "scopes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "acceptedScopes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "retryAfter": {
+            "type": "number"
+          }
+        }
+      },
+      "SlackbotSkillsListResponseOk": {
+        "enum": [
+          false,
+          true
+        ],
+        "type": "boolean"
+      },
+      "SlackbotSkillsListResponseResponseMetadata": {
+        "type": "object",
+        "properties": {
+          "messages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "next_cursor": {
+            "type": "string"
+          },
+          "warnings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "scopes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "acceptedScopes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "retryAfter": {
+            "type": "number"
+          }
+        }
+      },
+      "SlackbotSkillsUpdateResponseOk": {
+        "enum": [
+          false,
+          true
+        ],
+        "type": "boolean"
+      },
+      "SlackbotSkillsUpdateResponseResponseMetadata": {
+        "type": "object",
+        "properties": {
+          "messages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "warnings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "next_cursor": {
+            "type": "string"
+          },
+          "scopes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "acceptedScopes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "retryAfter": {
+            "type": "number"
+          }
+        }
+      },
       "SlackListsAccessDeleteResponseOk": {
         "enum": [
           false,
@@ -107005,6 +109114,38 @@
           ]
         }
       },
+      "AdminAppsMcpServersPermissionsSetArgumentsPermissionType": {
+        "enum": [
+          "everyone",
+          "named_entities",
+          "named_entities_exclude",
+          "no_one"
+        ],
+        "type": "string",
+        "description": "The type of permission that defines who can use this MCP server.",
+        "x-ms-enum": {
+          "name": "AdminAppsMcpServersPermissionsSetArgumentsPermissionType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "everyone",
+              "name": "Everyone"
+            },
+            {
+              "value": "named_entities",
+              "name": "NamedEntities"
+            },
+            {
+              "value": "named_entities_exclude",
+              "name": "NamedEntitiesExclude"
+            },
+            {
+              "value": "no_one",
+              "name": "NoOne"
+            }
+          ]
+        }
+      },
       "UserEntityType": {
         "enum": [
           "USER"
@@ -107110,9 +109251,9 @@
       "AdminFunctionsPermissionsSetArgumentsVisibility": {
         "enum": [
           "everyone",
-          "app_collaborators",
           "named_entities",
-          "no_one"
+          "no_one",
+          "app_collaborators"
         ],
         "type": "string",
         "description": "The function visibility.",
@@ -107125,8 +109266,210 @@
               "name": "Everyone"
             },
             {
+              "value": "named_entities",
+              "name": "NamedEntities"
+            },
+            {
+              "value": "no_one",
+              "name": "NoOne"
+            },
+            {
               "value": "app_collaborators",
               "name": "AppCollaborators"
+            }
+          ]
+        }
+      },
+      "AdminSlackbotSkillsListArgumentsCategory": {
+        "enum": [
+          "communication",
+          "customer_support",
+          "data_and_analytics",
+          "engineering",
+          "other",
+          "product_management",
+          "productivity",
+          "professional_development",
+          "project_management",
+          "sales",
+          "system",
+          "team_management"
+        ],
+        "type": "string",
+        "description": "Only return skills in this category.",
+        "x-ms-enum": {
+          "name": "AdminSlackbotSkillsListArgumentsCategory",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "communication",
+              "name": "Communication"
+            },
+            {
+              "value": "customer_support",
+              "name": "CustomerSupport"
+            },
+            {
+              "value": "data_and_analytics",
+              "name": "DataAndAnalytics"
+            },
+            {
+              "value": "engineering",
+              "name": "Engineering"
+            },
+            {
+              "value": "other",
+              "name": "Other"
+            },
+            {
+              "value": "product_management",
+              "name": "ProductManagement"
+            },
+            {
+              "value": "productivity",
+              "name": "Productivity"
+            },
+            {
+              "value": "professional_development",
+              "name": "ProfessionalDevelopment"
+            },
+            {
+              "value": "project_management",
+              "name": "ProjectManagement"
+            },
+            {
+              "value": "sales",
+              "name": "Sales"
+            },
+            {
+              "value": "system",
+              "name": "System"
+            },
+            {
+              "value": "team_management",
+              "name": "TeamManagement"
+            }
+          ]
+        }
+      },
+      "AdminSlackbotSkillsListArgumentsPublishStatus": {
+        "enum": [
+          "all",
+          "published",
+          "unpublished"
+        ],
+        "type": "string",
+        "description": "Filter by publication to the org catalog.",
+        "x-ms-enum": {
+          "name": "AdminSlackbotSkillsListArgumentsPublishStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "all",
+              "name": "All"
+            },
+            {
+              "value": "published",
+              "name": "Published"
+            },
+            {
+              "value": "unpublished",
+              "name": "Unpublished"
+            }
+          ]
+        }
+      },
+      "AdminSlackbotSkillsListArgumentsAutoEnabledStatus": {
+        "enum": [
+          "all",
+          "disabled",
+          "enabled"
+        ],
+        "type": "string",
+        "description": "Filter by org deployment, independently of publication.",
+        "x-ms-enum": {
+          "name": "AdminSlackbotSkillsListArgumentsAutoEnabledStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "all",
+              "name": "All"
+            },
+            {
+              "value": "disabled",
+              "name": "Disabled"
+            },
+            {
+              "value": "enabled",
+              "name": "Enabled"
+            }
+          ]
+        }
+      },
+      "AdminSlackbotSkillsListArgumentsSort": {
+        "enum": [
+          "name",
+          "date_updated",
+          "usage_count"
+        ],
+        "type": "string",
+        "description": "Sort across the inventory. Name uses case-insensitive ordering. Unedited skills use their creation\ndate for date_updated sorting.",
+        "x-ms-enum": {
+          "name": "AdminSlackbotSkillsListArgumentsSort",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "name",
+              "name": "Name"
+            },
+            {
+              "value": "date_updated",
+              "name": "DateUpdated"
+            },
+            {
+              "value": "usage_count",
+              "name": "UsageCount"
+            }
+          ]
+        }
+      },
+      "AdminSlackbotSkillsListArgumentsSortDir": {
+        "enum": [
+          "asc",
+          "desc"
+        ],
+        "type": "string",
+        "description": "Sort direction; file ID breaks ties.",
+        "x-ms-enum": {
+          "name": "AdminSlackbotSkillsListArgumentsSortDir",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "asc",
+              "name": "Asc"
+            },
+            {
+              "value": "desc",
+              "name": "Desc"
+            }
+          ]
+        }
+      },
+      "AdminSlackbotSkillsSetAutoEnabledArgumentsPermissionType": {
+        "enum": [
+          "everyone",
+          "named_entities",
+          "no_one"
+        ],
+        "type": "string",
+        "description": "Deployment audience.",
+        "x-ms-enum": {
+          "name": "AdminSlackbotSkillsSetAutoEnabledArgumentsPermissionType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "everyone",
+              "name": "Everyone"
             },
             {
               "value": "named_entities",
@@ -109302,6 +111645,254 @@
           ]
         }
       },
+      "SlackbotSkillsCreateArgumentsCategory": {
+        "enum": [
+          "communication",
+          "customer_support",
+          "data_and_analytics",
+          "engineering",
+          "other",
+          "product_management",
+          "productivity",
+          "professional_development",
+          "project_management",
+          "sales",
+          "system",
+          "team_management"
+        ],
+        "type": "string",
+        "description": "One of the skill categories.",
+        "x-ms-enum": {
+          "name": "SlackbotSkillsCreateArgumentsCategory",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "communication",
+              "name": "Communication"
+            },
+            {
+              "value": "customer_support",
+              "name": "CustomerSupport"
+            },
+            {
+              "value": "data_and_analytics",
+              "name": "DataAndAnalytics"
+            },
+            {
+              "value": "engineering",
+              "name": "Engineering"
+            },
+            {
+              "value": "other",
+              "name": "Other"
+            },
+            {
+              "value": "product_management",
+              "name": "ProductManagement"
+            },
+            {
+              "value": "productivity",
+              "name": "Productivity"
+            },
+            {
+              "value": "professional_development",
+              "name": "ProfessionalDevelopment"
+            },
+            {
+              "value": "project_management",
+              "name": "ProjectManagement"
+            },
+            {
+              "value": "sales",
+              "name": "Sales"
+            },
+            {
+              "value": "system",
+              "name": "System"
+            },
+            {
+              "value": "team_management",
+              "name": "TeamManagement"
+            }
+          ]
+        }
+      },
+      "SlackbotSkillsListArgumentsFilter": {
+        "enum": [
+          "catalog",
+          "library",
+          "owned"
+        ],
+        "type": "string",
+        "description": "\u0060library\u0060: skills enabled for the caller, including auto-enabled skills and skills from skill\nsets. \u0060owned\u0060: skills the caller created. \u0060catalog\u0060: the organization\u0027s official skills.",
+        "x-ms-enum": {
+          "name": "SlackbotSkillsListArgumentsFilter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "catalog",
+              "name": "Catalog"
+            },
+            {
+              "value": "library",
+              "name": "Library"
+            },
+            {
+              "value": "owned",
+              "name": "Owned"
+            }
+          ]
+        }
+      },
+      "SlackbotSkillsListArgumentsCategory": {
+        "enum": [
+          "communication",
+          "customer_support",
+          "data_and_analytics",
+          "engineering",
+          "other",
+          "product_management",
+          "productivity",
+          "professional_development",
+          "project_management",
+          "sales",
+          "system",
+          "team_management"
+        ],
+        "type": "string",
+        "description": "Only return skills in this category.",
+        "x-ms-enum": {
+          "name": "SlackbotSkillsListArgumentsCategory",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "communication",
+              "name": "Communication"
+            },
+            {
+              "value": "customer_support",
+              "name": "CustomerSupport"
+            },
+            {
+              "value": "data_and_analytics",
+              "name": "DataAndAnalytics"
+            },
+            {
+              "value": "engineering",
+              "name": "Engineering"
+            },
+            {
+              "value": "other",
+              "name": "Other"
+            },
+            {
+              "value": "product_management",
+              "name": "ProductManagement"
+            },
+            {
+              "value": "productivity",
+              "name": "Productivity"
+            },
+            {
+              "value": "professional_development",
+              "name": "ProfessionalDevelopment"
+            },
+            {
+              "value": "project_management",
+              "name": "ProjectManagement"
+            },
+            {
+              "value": "sales",
+              "name": "Sales"
+            },
+            {
+              "value": "system",
+              "name": "System"
+            },
+            {
+              "value": "team_management",
+              "name": "TeamManagement"
+            }
+          ]
+        }
+      },
+      "SlackbotSkillsUpdateArgumentsCategory": {
+        "enum": [
+          "",
+          "communication",
+          "customer_support",
+          "data_and_analytics",
+          "engineering",
+          "other",
+          "product_management",
+          "productivity",
+          "professional_development",
+          "project_management",
+          "sales",
+          "system",
+          "team_management"
+        ],
+        "type": "string",
+        "description": "One of the skill categories. Send an empty string to clear.",
+        "x-ms-enum": {
+          "name": "SlackbotSkillsUpdateArgumentsCategory",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "",
+              "name": "EnumValue"
+            },
+            {
+              "value": "communication",
+              "name": "Communication"
+            },
+            {
+              "value": "customer_support",
+              "name": "CustomerSupport"
+            },
+            {
+              "value": "data_and_analytics",
+              "name": "DataAndAnalytics"
+            },
+            {
+              "value": "engineering",
+              "name": "Engineering"
+            },
+            {
+              "value": "other",
+              "name": "Other"
+            },
+            {
+              "value": "product_management",
+              "name": "ProductManagement"
+            },
+            {
+              "value": "productivity",
+              "name": "Productivity"
+            },
+            {
+              "value": "professional_development",
+              "name": "ProfessionalDevelopment"
+            },
+            {
+              "value": "project_management",
+              "name": "ProjectManagement"
+            },
+            {
+              "value": "sales",
+              "name": "Sales"
+            },
+            {
+              "value": "system",
+              "name": "System"
+            },
+            {
+              "value": "team_management",
+              "name": "TeamManagement"
+            }
+          ]
+        }
+      },
       "TeamExternalTeamsListArgumentsConnectionStatusFilter": {
         "enum": [
           "CONNECTED",
@@ -109437,10 +112028,10 @@
       },
       "TeamIntegrationLogsArgumentsChangeType": {
         "enum": [
+          "disabled",
+          "enabled",
           "added",
           "removed",
-          "enabled",
-          "disabled",
           "updated"
         ],
         "type": "string",
@@ -109450,20 +112041,20 @@
           "modelAsString": false,
           "values": [
             {
-              "value": "added",
-              "name": "Added"
-            },
-            {
-              "value": "removed",
-              "name": "Removed"
+              "value": "disabled",
+              "name": "Disabled"
             },
             {
               "value": "enabled",
               "name": "Enabled"
             },
             {
-              "value": "disabled",
-              "name": "Disabled"
+              "value": "added",
+              "name": "Added"
+            },
+            {
+              "value": "removed",
+              "name": "Removed"
             },
             {
               "value": "updated",
@@ -117596,18 +120187,6 @@
         }
       }
     },
-    "AppId": {
-      "required": [
-        "app_id"
-      ],
-      "type": "object",
-      "properties": {
-        "app_id": {
-          "type": "string",
-          "description": "The ID of the app."
-        }
-      }
-    },
     "EnterpriseId": {
       "required": [
         "enterprise_id"
@@ -117687,6 +120266,20 @@
           "items": {
             "type": "string"
           }
+        }
+      }
+    },
+    "ResponseMetadata4": {
+      "type": "object",
+      "properties": {
+        "messages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "next_cursor": {
+          "type": "string"
         }
       }
     },
@@ -117839,20 +120432,6 @@
     "RecordStringUnknown": {
       "type": "object",
       "additionalProperties": {}
-    },
-    "ResponseMetadata4": {
-      "type": "object",
-      "properties": {
-        "messages": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "next_cursor": {
-          "type": "string"
-        }
-      }
     },
     "Errors": {
       "type": "object"
@@ -120356,6 +122935,108 @@
         }
       }
     },
+    "AdminAppsMcpServersListResponseAllOf2": {
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string"
+        },
+        "needed": {
+          "type": "string"
+        },
+        "ok": {
+          "$ref": "#/components/schemas/AdminAppsMcpServersListResponseAllOf2Ok"
+        },
+        "provided": {
+          "type": "string"
+        },
+        "response_metadata": {
+          "$ref": "#/components/schemas/ResponseMetadata4"
+        },
+        "servers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/Server"
+          }
+        },
+        "warning": {
+          "type": "string"
+        }
+      }
+    },
+    "AdminAppsMcpServersPermissionsListResponseAllOf2": {
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string"
+        },
+        "needed": {
+          "type": "string"
+        },
+        "ok": {
+          "$ref": "#/components/schemas/AdminAppsMcpServersPermissionsListResponseAllOf2Ok"
+        },
+        "provided": {
+          "type": "string"
+        },
+        "servers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/Server2"
+          }
+        },
+        "warning": {
+          "type": "string"
+        }
+      }
+    },
+    "AdminAppsMcpServersPermissionsSetResponseAllOf2": {
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string"
+        },
+        "is_inherited": {
+          "$ref": "#/components/schemas/AdminAppsMcpServersPermissionsSetResponseAllOf2IsInherited"
+        },
+        "needed": {
+          "type": "string"
+        },
+        "ok": {
+          "$ref": "#/components/schemas/AdminAppsMcpServersPermissionsSetResponseAllOf2Ok"
+        },
+        "permission_type": {
+          "type": "string"
+        },
+        "provided": {
+          "type": "string"
+        },
+        "server_id": {
+          "type": "string"
+        },
+        "server_name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "user_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "usergroup_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "warning": {
+          "type": "string"
+        }
+      }
+    },
     "AdminAppsRequestsCancelResponseAllOf2": {
       "type": "object",
       "properties": {
@@ -121667,6 +124348,134 @@
         },
         "provided": {
           "type": "string"
+        },
+        "warning": {
+          "type": "string"
+        }
+      }
+    },
+    "AdminSlackbotSkillsListResponseAllOf2": {
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string"
+        },
+        "needed": {
+          "type": "string"
+        },
+        "ok": {
+          "$ref": "#/components/schemas/AdminSlackbotSkillsListResponseAllOf2Ok"
+        },
+        "provided": {
+          "type": "string"
+        },
+        "response_metadata": {
+          "$ref": "#/components/schemas/ResponseMetadata4"
+        },
+        "skills": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/Skill"
+          }
+        },
+        "warning": {
+          "type": "string"
+        }
+      }
+    },
+    "AdminSlackbotSkillsPublishResponseAllOf2": {
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string"
+        },
+        "failed_skills": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/FailedSkill"
+          }
+        },
+        "needed": {
+          "type": "string"
+        },
+        "ok": {
+          "$ref": "#/components/schemas/AdminSlackbotSkillsPublishResponseAllOf2Ok"
+        },
+        "provided": {
+          "type": "string"
+        },
+        "response_metadata": {
+          "$ref": "#/components/schemas/ResponseMetadata"
+        },
+        "warning": {
+          "type": "string"
+        }
+      }
+    },
+    "AdminSlackbotSkillsSetAutoEnabledResponseAllOf2": {
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string"
+        },
+        "invalid_usergroup_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "needed": {
+          "type": "string"
+        },
+        "ok": {
+          "$ref": "#/components/schemas/AdminSlackbotSkillsSetAutoEnabledResponseAllOf2Ok"
+        },
+        "permission_type": {
+          "type": "string"
+        },
+        "provided": {
+          "type": "string"
+        },
+        "response_metadata": {
+          "$ref": "#/components/schemas/ResponseMetadata"
+        },
+        "skill_id": {
+          "type": "string"
+        },
+        "usergroup_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "warning": {
+          "type": "string"
+        }
+      }
+    },
+    "AdminSlackbotSkillsUnpublishResponseAllOf2": {
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string"
+        },
+        "failed_skills": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/FailedSkill"
+          }
+        },
+        "needed": {
+          "type": "string"
+        },
+        "ok": {
+          "$ref": "#/components/schemas/AdminSlackbotSkillsUnpublishResponseAllOf2Ok"
+        },
+        "provided": {
+          "type": "string"
+        },
+        "response_metadata": {
+          "$ref": "#/components/schemas/ResponseMetadata"
         },
         "warning": {
           "type": "string"
@@ -127042,6 +129851,194 @@
         }
       ]
     },
+    "SlackbotSkillsCreateResponseAllOf2": {
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string"
+        },
+        "invalid_mcp_servers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/InvalidmcpServer"
+          }
+        },
+        "needed": {
+          "type": "string"
+        },
+        "ok": {
+          "$ref": "#/components/schemas/SlackbotSkillsCreateResponseAllOf2Ok"
+        },
+        "provided": {
+          "type": "string"
+        },
+        "response_metadata": {
+          "$ref": "#/components/schemas/ResponseMetadata"
+        },
+        "skill": {
+          "$ref": "#/components/schemas/Skill2"
+        },
+        "warning": {
+          "type": "string"
+        }
+      }
+    },
+    "SlackbotSkillsDeleteResponseAllOf2": {
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string"
+        },
+        "needed": {
+          "type": "string"
+        },
+        "ok": {
+          "$ref": "#/components/schemas/SlackbotSkillsDeleteResponseAllOf2Ok"
+        },
+        "provided": {
+          "type": "string"
+        },
+        "response_metadata": {
+          "$ref": "#/components/schemas/ResponseMetadata"
+        },
+        "warning": {
+          "type": "string"
+        }
+      }
+    },
+    "SlackbotSkillsInfoResponseAllOf2": {
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string"
+        },
+        "needed": {
+          "type": "string"
+        },
+        "ok": {
+          "$ref": "#/components/schemas/SlackbotSkillsInfoResponseAllOf2Ok"
+        },
+        "provided": {
+          "type": "string"
+        },
+        "response_metadata": {
+          "$ref": "#/components/schemas/ResponseMetadata"
+        },
+        "skill": {
+          "$ref": "#/components/schemas/Skill2"
+        },
+        "warning": {
+          "type": "string"
+        }
+      }
+    },
+    "SlackbotSkillsLibraryAddResponseAllOf2": {
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string"
+        },
+        "needed": {
+          "type": "string"
+        },
+        "ok": {
+          "$ref": "#/components/schemas/SlackbotSkillsLibraryAddResponseAllOf2Ok"
+        },
+        "provided": {
+          "type": "string"
+        },
+        "response_metadata": {
+          "$ref": "#/components/schemas/ResponseMetadata"
+        },
+        "warning": {
+          "type": "string"
+        }
+      }
+    },
+    "SlackbotSkillsLibraryRemoveResponseAllOf2": {
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string"
+        },
+        "needed": {
+          "type": "string"
+        },
+        "ok": {
+          "$ref": "#/components/schemas/SlackbotSkillsLibraryRemoveResponseAllOf2Ok"
+        },
+        "provided": {
+          "type": "string"
+        },
+        "response_metadata": {
+          "$ref": "#/components/schemas/ResponseMetadata"
+        },
+        "warning": {
+          "type": "string"
+        }
+      }
+    },
+    "SlackbotSkillsListResponseAllOf2": {
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string"
+        },
+        "needed": {
+          "type": "string"
+        },
+        "ok": {
+          "$ref": "#/components/schemas/SlackbotSkillsListResponseAllOf2Ok"
+        },
+        "provided": {
+          "type": "string"
+        },
+        "response_metadata": {
+          "$ref": "#/components/schemas/ResponseMetadata4"
+        },
+        "skills": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/Skill2"
+          }
+        },
+        "warning": {
+          "type": "string"
+        }
+      }
+    },
+    "SlackbotSkillsUpdateResponseAllOf2": {
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string"
+        },
+        "invalid_mcp_servers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/InvalidmcpServer"
+          }
+        },
+        "needed": {
+          "type": "string"
+        },
+        "ok": {
+          "$ref": "#/components/schemas/SlackbotSkillsUpdateResponseAllOf2Ok"
+        },
+        "provided": {
+          "type": "string"
+        },
+        "response_metadata": {
+          "$ref": "#/components/schemas/ResponseMetadata"
+        },
+        "skill": {
+          "$ref": "#/components/schemas/Skill2"
+        },
+        "warning": {
+          "type": "string"
+        }
+      }
+    },
     "SlackListsAccessDeleteResponseAllOf2": {
       "type": "object",
       "properties": {
@@ -128593,6 +131590,27 @@
       ],
       "type": "boolean"
     },
+    "AdminAppsMcpServersListResponseAllOf2Ok": {
+      "enum": [
+        false,
+        true
+      ],
+      "type": "boolean"
+    },
+    "AdminAppsMcpServersPermissionsListResponseAllOf2Ok": {
+      "enum": [
+        false,
+        true
+      ],
+      "type": "boolean"
+    },
+    "AdminAppsMcpServersPermissionsSetResponseAllOf2Ok": {
+      "enum": [
+        false,
+        true
+      ],
+      "type": "boolean"
+    },
     "AdminAppsRequestsCancelResponseAllOf2Ok": {
       "enum": [
         false,
@@ -128958,6 +131976,34 @@
       "type": "boolean"
     },
     "AdminRolesRemoveAssignmentsResponseAllOf2Ok": {
+      "enum": [
+        false,
+        true
+      ],
+      "type": "boolean"
+    },
+    "AdminSlackbotSkillsListResponseAllOf2Ok": {
+      "enum": [
+        false,
+        true
+      ],
+      "type": "boolean"
+    },
+    "AdminSlackbotSkillsPublishResponseAllOf2Ok": {
+      "enum": [
+        false,
+        true
+      ],
+      "type": "boolean"
+    },
+    "AdminSlackbotSkillsSetAutoEnabledResponseAllOf2Ok": {
+      "enum": [
+        false,
+        true
+      ],
+      "type": "boolean"
+    },
+    "AdminSlackbotSkillsUnpublishResponseAllOf2Ok": {
       "enum": [
         false,
         true
@@ -130461,6 +133507,55 @@
       "type": "boolean"
     },
     "SearchMessagesResponseAllOf2Ok": {
+      "enum": [
+        false,
+        true
+      ],
+      "type": "boolean"
+    },
+    "SlackbotSkillsCreateResponseAllOf2Ok": {
+      "enum": [
+        false,
+        true
+      ],
+      "type": "boolean"
+    },
+    "SlackbotSkillsDeleteResponseAllOf2Ok": {
+      "enum": [
+        false,
+        true
+      ],
+      "type": "boolean"
+    },
+    "SlackbotSkillsInfoResponseAllOf2Ok": {
+      "enum": [
+        false,
+        true
+      ],
+      "type": "boolean"
+    },
+    "SlackbotSkillsLibraryAddResponseAllOf2Ok": {
+      "enum": [
+        false,
+        true
+      ],
+      "type": "boolean"
+    },
+    "SlackbotSkillsLibraryRemoveResponseAllOf2Ok": {
+      "enum": [
+        false,
+        true
+      ],
+      "type": "boolean"
+    },
+    "SlackbotSkillsListResponseAllOf2Ok": {
+      "enum": [
+        false,
+        true
+      ],
+      "type": "boolean"
+    },
+    "SlackbotSkillsUpdateResponseAllOf2Ok": {
       "enum": [
         false,
         true
@@ -135921,6 +139016,18 @@
       ],
       "type": "boolean"
     },
+    "Server2IsInheritedAnyOf1": {
+      "enum": [
+        false
+      ],
+      "type": "boolean"
+    },
+    "Server2IsInheritedAnyOf2": {
+      "enum": [
+        true
+      ],
+      "type": "boolean"
+    },
     "AppRequestIsUserAppCollaboratorAnyOf1": {
       "enum": [
         false
@@ -136360,6 +139467,18 @@
       "type": "boolean"
     },
     "InvitePreferencesIsUltraRestrictedAnyOf2": {
+      "enum": [
+        true
+      ],
+      "type": "boolean"
+    },
+    "SkillIsOfficialAnyOf1": {
+      "enum": [
+        false
+      ],
+      "type": "boolean"
+    },
+    "SkillIsOfficialAnyOf2": {
       "enum": [
         true
       ],
@@ -151586,6 +154705,30 @@
       ],
       "type": "boolean"
     },
+    "Skill2IsOfficialAnyOf1": {
+      "enum": [
+        false
+      ],
+      "type": "boolean"
+    },
+    "Skill2IsOfficialAnyOf2": {
+      "enum": [
+        true
+      ],
+      "type": "boolean"
+    },
+    "McpServerIsAvailableAnyOf1": {
+      "enum": [
+        false
+      ],
+      "type": "boolean"
+    },
+    "McpServerIsAvailableAnyOf2": {
+      "enum": [
+        true
+      ],
+      "type": "boolean"
+    },
     "SlackListsCreateArgumentsIncludeCopiedListRecordsAnyOf1": {
       "enum": [
         false
@@ -155390,6 +158533,54 @@
       ],
       "type": "boolean"
     },
+    "AdminAppsMcpServersListResponseAllOf2OkAnyOf1": {
+      "enum": [
+        false
+      ],
+      "type": "boolean"
+    },
+    "AdminAppsMcpServersListResponseAllOf2OkAnyOf2": {
+      "enum": [
+        true
+      ],
+      "type": "boolean"
+    },
+    "AdminAppsMcpServersPermissionsListResponseAllOf2OkAnyOf1": {
+      "enum": [
+        false
+      ],
+      "type": "boolean"
+    },
+    "AdminAppsMcpServersPermissionsListResponseAllOf2OkAnyOf2": {
+      "enum": [
+        true
+      ],
+      "type": "boolean"
+    },
+    "AdminAppsMcpServersPermissionsSetResponseAllOf2IsInheritedAnyOf1": {
+      "enum": [
+        false
+      ],
+      "type": "boolean"
+    },
+    "AdminAppsMcpServersPermissionsSetResponseAllOf2IsInheritedAnyOf2": {
+      "enum": [
+        true
+      ],
+      "type": "boolean"
+    },
+    "AdminAppsMcpServersPermissionsSetResponseAllOf2OkAnyOf1": {
+      "enum": [
+        false
+      ],
+      "type": "boolean"
+    },
+    "AdminAppsMcpServersPermissionsSetResponseAllOf2OkAnyOf2": {
+      "enum": [
+        true
+      ],
+      "type": "boolean"
+    },
     "AdminAppsRequestsCancelResponseAllOf2OkAnyOf1": {
       "enum": [
         false
@@ -156045,6 +159236,54 @@
       "type": "boolean"
     },
     "AdminRolesRemoveAssignmentsResponseAllOf2OkAnyOf2": {
+      "enum": [
+        true
+      ],
+      "type": "boolean"
+    },
+    "AdminSlackbotSkillsListResponseAllOf2OkAnyOf1": {
+      "enum": [
+        false
+      ],
+      "type": "boolean"
+    },
+    "AdminSlackbotSkillsListResponseAllOf2OkAnyOf2": {
+      "enum": [
+        true
+      ],
+      "type": "boolean"
+    },
+    "AdminSlackbotSkillsPublishResponseAllOf2OkAnyOf1": {
+      "enum": [
+        false
+      ],
+      "type": "boolean"
+    },
+    "AdminSlackbotSkillsPublishResponseAllOf2OkAnyOf2": {
+      "enum": [
+        true
+      ],
+      "type": "boolean"
+    },
+    "AdminSlackbotSkillsSetAutoEnabledResponseAllOf2OkAnyOf1": {
+      "enum": [
+        false
+      ],
+      "type": "boolean"
+    },
+    "AdminSlackbotSkillsSetAutoEnabledResponseAllOf2OkAnyOf2": {
+      "enum": [
+        true
+      ],
+      "type": "boolean"
+    },
+    "AdminSlackbotSkillsUnpublishResponseAllOf2OkAnyOf1": {
+      "enum": [
+        false
+      ],
+      "type": "boolean"
+    },
+    "AdminSlackbotSkillsUnpublishResponseAllOf2OkAnyOf2": {
       "enum": [
         true
       ],
@@ -158529,6 +161768,90 @@
       "type": "boolean"
     },
     "SearchMessagesResponseAllOf2OkAnyOf2": {
+      "enum": [
+        true
+      ],
+      "type": "boolean"
+    },
+    "SlackbotSkillsCreateResponseAllOf2OkAnyOf1": {
+      "enum": [
+        false
+      ],
+      "type": "boolean"
+    },
+    "SlackbotSkillsCreateResponseAllOf2OkAnyOf2": {
+      "enum": [
+        true
+      ],
+      "type": "boolean"
+    },
+    "SlackbotSkillsDeleteResponseAllOf2OkAnyOf1": {
+      "enum": [
+        false
+      ],
+      "type": "boolean"
+    },
+    "SlackbotSkillsDeleteResponseAllOf2OkAnyOf2": {
+      "enum": [
+        true
+      ],
+      "type": "boolean"
+    },
+    "SlackbotSkillsInfoResponseAllOf2OkAnyOf1": {
+      "enum": [
+        false
+      ],
+      "type": "boolean"
+    },
+    "SlackbotSkillsInfoResponseAllOf2OkAnyOf2": {
+      "enum": [
+        true
+      ],
+      "type": "boolean"
+    },
+    "SlackbotSkillsLibraryAddResponseAllOf2OkAnyOf1": {
+      "enum": [
+        false
+      ],
+      "type": "boolean"
+    },
+    "SlackbotSkillsLibraryAddResponseAllOf2OkAnyOf2": {
+      "enum": [
+        true
+      ],
+      "type": "boolean"
+    },
+    "SlackbotSkillsLibraryRemoveResponseAllOf2OkAnyOf1": {
+      "enum": [
+        false
+      ],
+      "type": "boolean"
+    },
+    "SlackbotSkillsLibraryRemoveResponseAllOf2OkAnyOf2": {
+      "enum": [
+        true
+      ],
+      "type": "boolean"
+    },
+    "SlackbotSkillsListResponseAllOf2OkAnyOf1": {
+      "enum": [
+        false
+      ],
+      "type": "boolean"
+    },
+    "SlackbotSkillsListResponseAllOf2OkAnyOf2": {
+      "enum": [
+        true
+      ],
+      "type": "boolean"
+    },
+    "SlackbotSkillsUpdateResponseAllOf2OkAnyOf1": {
+      "enum": [
+        false
+      ],
+      "type": "boolean"
+    },
+    "SlackbotSkillsUpdateResponseAllOf2OkAnyOf2": {
       "enum": [
         true
       ],

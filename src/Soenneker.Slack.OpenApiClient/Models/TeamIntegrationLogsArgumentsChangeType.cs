@@ -7,6 +7,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum TeamIntegrationLogsArgumentsChangeType
     {
+        [EnumMember(Value = "disabled")]
+        #pragma warning disable CS1591
+        Disabled,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "enabled")]
+        #pragma warning disable CS1591
+        Enabled,
+        #pragma warning restore CS1591
         [EnumMember(Value = "added")]
         #pragma warning disable CS1591
         Added,
@@ -14,14 +22,6 @@ namespace Soenneker.Slack.OpenApiClient.Models
         [EnumMember(Value = "removed")]
         #pragma warning disable CS1591
         Removed,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "enabled")]
-        #pragma warning disable CS1591
-        Enabled,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "disabled")]
-        #pragma warning disable CS1591
-        Disabled,
         #pragma warning restore CS1591
         [EnumMember(Value = "updated")]
         #pragma warning disable CS1591

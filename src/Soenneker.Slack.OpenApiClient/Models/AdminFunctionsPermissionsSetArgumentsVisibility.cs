@@ -11,10 +11,6 @@ namespace Soenneker.Slack.OpenApiClient.Models
         #pragma warning disable CS1591
         Everyone,
         #pragma warning restore CS1591
-        [EnumMember(Value = "app_collaborators")]
-        #pragma warning disable CS1591
-        AppCollaborators,
-        #pragma warning restore CS1591
         [EnumMember(Value = "named_entities")]
         #pragma warning disable CS1591
         NamedEntities,
@@ -22,6 +18,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         [EnumMember(Value = "no_one")]
         #pragma warning disable CS1591
         NoOne,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "app_collaborators")]
+        #pragma warning disable CS1591
+        AppCollaborators,
         #pragma warning restore CS1591
     }
 }
