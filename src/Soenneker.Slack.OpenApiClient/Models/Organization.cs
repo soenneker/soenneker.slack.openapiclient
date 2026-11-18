@@ -170,7 +170,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(14)
             {
                 { "canvas", n => { Canvas = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Canvas2>(global::Soenneker.Slack.OpenApiClient.Models.Canvas2.CreateFromDiscriminatorValue); } },
                 { "connected_workspaces", n => { ConnectedWorkspaces = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ConnectedWorkspace>(global::Soenneker.Slack.OpenApiClient.Models.ConnectedWorkspace.CreateFromDiscriminatorValue)?.AsList(); } },

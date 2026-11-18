@@ -143,7 +143,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(10)
             {
                 { "canvas", n => { Canvas = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Canvas>(global::Soenneker.Slack.OpenApiClient.Models.Canvas.CreateFromDiscriminatorValue); } },
                 { "has_slack_connect_invite_created", n => { HasSlackConnectInviteCreated = n.GetBoolValue(); } },

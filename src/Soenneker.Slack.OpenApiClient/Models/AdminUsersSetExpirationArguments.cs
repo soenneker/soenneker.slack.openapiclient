@@ -85,7 +85,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "expiration_ts", n => { ExpirationTs = n.GetDoubleValue(); } },
                 { "team_id", n => { TeamId = n.GetStringValue(); } },

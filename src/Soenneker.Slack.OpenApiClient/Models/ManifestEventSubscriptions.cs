@@ -92,7 +92,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "bot_events", n => { BotEvents = n.GetCollectionOfEnumValues<global::Soenneker.Slack.OpenApiClient.Models.ManifestEvent>()?.AsList(); } },
                 { "metadata_subscriptions", n => { MetadataSubscriptions = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ManifestMetadataSubscription>(global::Soenneker.Slack.OpenApiClient.Models.ManifestMetadataSubscription.CreateFromDiscriminatorValue)?.AsList(); } },

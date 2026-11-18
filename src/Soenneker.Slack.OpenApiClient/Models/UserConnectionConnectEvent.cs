@@ -90,7 +90,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "event_ts", n => { EventTs = n.GetStringValue(); } },
                 { "subtype", n => { var parsed = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ConnectSubtype>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSubtype = default; _explicitNullProperties?.Remove("subtype"); AdditionalData["subtype"] = unknown; } else { Subtype = parsed; AdditionalData.Remove("subtype"); } } },

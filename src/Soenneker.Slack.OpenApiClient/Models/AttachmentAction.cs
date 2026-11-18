@@ -172,7 +172,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(13)
             {
                 { "confirm", n => { Confirm = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Confirmation>(global::Soenneker.Slack.OpenApiClient.Models.Confirmation.CreateFromDiscriminatorValue); } },
                 { "data_source", n => { var parsed = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AttachmentActionDataSource>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDataSource = default; _explicitNullProperties?.Remove("data_source"); AdditionalData["data_source"] = unknown; } else { DataSource = parsed; AdditionalData.Remove("data_source"); } } },

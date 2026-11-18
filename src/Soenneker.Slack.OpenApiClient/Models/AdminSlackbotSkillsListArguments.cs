@@ -98,7 +98,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "auto_enabled_status", n => { var parsed = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminSlackbotSkillsListArgumentsAutoEnabledStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAutoEnabledStatus = default; _explicitNullProperties?.Remove("auto_enabled_status"); AdditionalData["auto_enabled_status"] = unknown; } else { AutoEnabledStatus = parsed; AdditionalData.Remove("auto_enabled_status"); } } },
                 { "category", n => { var parsed = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.AdminSlackbotSkillsListArgumentsCategory>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCategory = default; _explicitNullProperties?.Remove("category"); AdditionalData["category"] = unknown; } else { Category = parsed; AdditionalData.Remove("category"); } } },

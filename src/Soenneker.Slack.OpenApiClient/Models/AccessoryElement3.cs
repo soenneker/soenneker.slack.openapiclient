@@ -88,7 +88,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "border", n => { Border = n.GetDoubleValue(); } },
                 { "elements", n => { Elements = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement2>(global::Soenneker.Slack.OpenApiClient.Models.PurpleElement2.CreateFromDiscriminatorValue)?.AsList(); } },

@@ -114,7 +114,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(7)
             {
                 { "agent_session", n => { AgentSession = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AgentSession3>(global::Soenneker.Slack.OpenApiClient.Models.AgentSession3.CreateFromDiscriminatorValue); } },
                 { "code_channel", n => { CodeChannel = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.CodeChannel>(global::Soenneker.Slack.OpenApiClient.Models.CodeChannel.CreateFromDiscriminatorValue); } },

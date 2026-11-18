@@ -114,7 +114,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(7)
             {
                 { "accepting_user", n => { AcceptingUser = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.SharedChannelUserItem>(global::Soenneker.Slack.OpenApiClient.Models.SharedChannelUserItem.CreateFromDiscriminatorValue); } },
                 { "approval_required", n => { ApprovalRequired = n.GetBoolValue(); } },

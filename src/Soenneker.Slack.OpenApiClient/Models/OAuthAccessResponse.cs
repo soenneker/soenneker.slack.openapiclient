@@ -253,7 +253,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(18)
             {
                 { "access_token", n => { AccessToken = n.GetStringValue(); } },
                 { "authorizing_user", n => { AuthorizingUser = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User7>(global::Soenneker.Slack.OpenApiClient.Models.User7.CreateFromDiscriminatorValue); } },

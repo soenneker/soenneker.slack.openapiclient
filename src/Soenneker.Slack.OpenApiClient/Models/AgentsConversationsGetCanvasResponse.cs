@@ -162,7 +162,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(11)
             {
                 { "canvas_id", n => { CanvasId = n.GetStringValue(); } },
                 { "comments", n => { Comments = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Comment>(global::Soenneker.Slack.OpenApiClient.Models.Comment.CreateFromDiscriminatorValue)?.AsList(); } },

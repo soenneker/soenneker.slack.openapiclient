@@ -239,7 +239,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(18)
             {
                 { "access_token", n => { AccessToken = n.GetStringValue(); } },
                 { "app_id", n => { AppId = n.GetStringValue(); } },

@@ -116,7 +116,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "can_huddle", n => { CanHuddle = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.CanHuddle>(global::Soenneker.Slack.OpenApiClient.Models.CanHuddle.CreateFromDiscriminatorValue); } },
                 { "can_thread", n => { CanThread = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.CanThread>(global::Soenneker.Slack.OpenApiClient.Models.CanThread.CreateFromDiscriminatorValue); } },

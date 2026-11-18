@@ -176,7 +176,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(11)
             {
                 { "channel", n => { Channel = n.GetStringValue(); } },
                 { "chunks", n => { Chunks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AnyChunk>(global::Soenneker.Slack.OpenApiClient.Models.AnyChunk.CreateFromDiscriminatorValue)?.AsList(); } },

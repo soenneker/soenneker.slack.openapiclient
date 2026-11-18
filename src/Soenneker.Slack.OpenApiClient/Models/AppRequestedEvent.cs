@@ -131,7 +131,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(9)
             {
                 { "app_request", n => { AppRequest = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AppRequestedEventAppRequest>(global::Soenneker.Slack.OpenApiClient.Models.AppRequestedEventAppRequest.CreateFromDiscriminatorValue); } },
                 { "date_created", n => { DateCreated = n.GetDoubleValue(); } },

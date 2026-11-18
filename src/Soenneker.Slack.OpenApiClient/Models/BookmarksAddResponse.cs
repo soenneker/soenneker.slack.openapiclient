@@ -121,7 +121,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(7)
             {
                 { "bookmark", n => { Bookmark = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Bookmark>(global::Soenneker.Slack.OpenApiClient.Models.Bookmark.CreateFromDiscriminatorValue); } },
                 { "error", n => { Error = n.GetStringValue(); } },

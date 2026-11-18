@@ -212,7 +212,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(14)
             {
                 { "accept_sc_invites", n => { AcceptScInvites = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AcceptScInvites>(global::Soenneker.Slack.OpenApiClient.Models.AcceptScInvites.CreateFromDiscriminatorValue); } },
                 { "allow_sc_file_uploads", n => { AllowScFileUploads = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads>(global::Soenneker.Slack.OpenApiClient.Models.AllowScFileUploads.CreateFromDiscriminatorValue); } },
