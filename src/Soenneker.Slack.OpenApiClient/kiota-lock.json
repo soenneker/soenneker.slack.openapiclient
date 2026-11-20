@@ -2,7 +2,7 @@
   "descriptionHash": "EB86C7225A6ACD18892BC9CDCC250830BB95D6784594288938A9BDE359C233DB926E84177972C90080A1765DC9462C1D44A53131F95321676305A628C341C86B",
   "descriptionLocation": "../../openapi.fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.38.0",
+  "kiotaVersion": "1.39.0",
   "clientClassName": "SlackOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Slack.OpenApiClient",
