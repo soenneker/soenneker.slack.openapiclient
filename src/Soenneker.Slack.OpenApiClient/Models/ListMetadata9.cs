@@ -80,12 +80,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The description_blocks property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.TitleBlockElement3>? DescriptionBlocks { get => _explicitNullValueDescriptionBlocks; set { _explicitNullValueDescriptionBlocks = value; AdditionalData?.Remove("description_blocks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description_blocks"); else _explicitNullProperties?.Remove("description_blocks"); } }
-        private List<global::Soenneker.Slack.OpenApiClient.Models.TitleBlockElement3>? _explicitNullValueDescriptionBlocks = default!;
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Block4>? DescriptionBlocks { get => _explicitNullValueDescriptionBlocks; set { _explicitNullValueDescriptionBlocks = value; AdditionalData?.Remove("description_blocks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description_blocks"); else _explicitNullProperties?.Remove("description_blocks"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.Block4>? _explicitNullValueDescriptionBlocks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.TitleBlockElement3> DescriptionBlocks { get => _explicitNullValueDescriptionBlocks; set { _explicitNullValueDescriptionBlocks = value; AdditionalData?.Remove("description_blocks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description_blocks"); else _explicitNullProperties?.Remove("description_blocks"); } }
-        private List<global::Soenneker.Slack.OpenApiClient.Models.TitleBlockElement3> _explicitNullValueDescriptionBlocks = default!;
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Block4> DescriptionBlocks { get => _explicitNullValueDescriptionBlocks; set { _explicitNullValueDescriptionBlocks = value; AdditionalData?.Remove("description_blocks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description_blocks"); else _explicitNullProperties?.Remove("description_blocks"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.Block4> _explicitNullValueDescriptionBlocks = default!;
 #endif
         /// <summary>The icon property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -191,7 +191,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "creation_source", n => { CreationSource = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.CreationSource>(global::Soenneker.Slack.OpenApiClient.Models.CreationSource.CreateFromDiscriminatorValue); } },
                 { "default_view", n => { DefaultView = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "description_blocks", n => { DescriptionBlocks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.TitleBlockElement3>(global::Soenneker.Slack.OpenApiClient.Models.TitleBlockElement3.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "description_blocks", n => { DescriptionBlocks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Block4>(global::Soenneker.Slack.OpenApiClient.Models.Block4.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "icon", n => { Icon = n.GetStringValue(); } },
                 { "icon_team_id", n => { IconTeamId = n.GetStringValue(); } },
                 { "icon_url", n => { IconUrl = n.GetStringValue(); } },
@@ -213,7 +213,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.CreationSource>("creation_source", CreationSource);
             writer.WriteStringValue("default_view", DefaultView);
             writer.WriteStringValue("description", Description);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.TitleBlockElement3>("description_blocks", DescriptionBlocks);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Block4>("description_blocks", DescriptionBlocks);
             writer.WriteStringValue("icon", Icon);
             writer.WriteStringValue("icon_team_id", IconTeamId);
             writer.WriteStringValue("icon_url", IconUrl);

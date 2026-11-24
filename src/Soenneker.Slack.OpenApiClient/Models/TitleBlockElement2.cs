@@ -96,12 +96,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The accessory property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Accessory6? Accessory { get => _explicitNullValueAccessory; set { _explicitNullValueAccessory = value; AdditionalData?.Remove("accessory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessory"); else _explicitNullProperties?.Remove("accessory"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.Accessory6? _explicitNullValueAccessory = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.Accessory7? Accessory { get => _explicitNullValueAccessory; set { _explicitNullValueAccessory = value; AdditionalData?.Remove("accessory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessory"); else _explicitNullProperties?.Remove("accessory"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Accessory7? _explicitNullValueAccessory = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Accessory6 Accessory { get => _explicitNullValueAccessory; set { _explicitNullValueAccessory = value; AdditionalData?.Remove("accessory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessory"); else _explicitNullProperties?.Remove("accessory"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.Accessory6 _explicitNullValueAccessory = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.Accessory7 Accessory { get => _explicitNullValueAccessory; set { _explicitNullValueAccessory = value; AdditionalData?.Remove("accessory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessory"); else _explicitNullProperties?.Remove("accessory"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Accessory7 _explicitNullValueAccessory = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -198,12 +198,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The elements property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Accessory6>? Elements { get => _explicitNullValueElements; set { _explicitNullValueElements = value; AdditionalData?.Remove("elements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elements"); else _explicitNullProperties?.Remove("elements"); } }
-        private List<global::Soenneker.Slack.OpenApiClient.Models.Accessory6>? _explicitNullValueElements = default!;
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Accessory7>? Elements { get => _explicitNullValueElements; set { _explicitNullValueElements = value; AdditionalData?.Remove("elements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elements"); else _explicitNullProperties?.Remove("elements"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.Accessory7>? _explicitNullValueElements = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.Accessory6> Elements { get => _explicitNullValueElements; set { _explicitNullValueElements = value; AdditionalData?.Remove("elements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elements"); else _explicitNullProperties?.Remove("elements"); } }
-        private List<global::Soenneker.Slack.OpenApiClient.Models.Accessory6> _explicitNullValueElements = default!;
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Accessory7> Elements { get => _explicitNullValueElements; set { _explicitNullValueElements = value; AdditionalData?.Remove("elements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elements"); else _explicitNullProperties?.Remove("elements"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.Accessory7> _explicitNullValueElements = default!;
 #endif
         /// <summary>The expand property</summary>
         public bool? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; AdditionalData?.Remove("expand"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
@@ -434,7 +434,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>(37)
             {
-                { "accessory", n => { Accessory = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Accessory6>(global::Soenneker.Slack.OpenApiClient.Models.Accessory6.CreateFromDiscriminatorValue); } },
+                { "accessory", n => { Accessory = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Accessory7>(global::Soenneker.Slack.OpenApiClient.Models.Accessory7.CreateFromDiscriminatorValue); } },
                 { "alt_text", n => { AltText = n.GetStringValue(); } },
                 { "app_collaborators", n => { AppCollaborators = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "app_id", n => { AppId = n.GetStringValue(); } },
@@ -444,7 +444,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "button_label", n => { ButtonLabel = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Block2Description>(global::Soenneker.Slack.OpenApiClient.Models.Block2Description.CreateFromDiscriminatorValue); } },
                 { "developer_trace_id", n => { DeveloperTraceId = n.GetStringValue(); } },
-                { "elements", n => { Elements = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Accessory6>(global::Soenneker.Slack.OpenApiClient.Models.Accessory6.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "elements", n => { Elements = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Accessory7>(global::Soenneker.Slack.OpenApiClient.Models.Accessory7.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "expand", n => { Expand = n.GetBoolValue(); } },
                 { "fallback", n => { Fallback = n.GetStringValue(); } },
                 { "fields", n => { Fields = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Text2>(global::Soenneker.Slack.OpenApiClient.Models.Text2.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -480,7 +480,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Accessory6>("accessory", Accessory);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Accessory7>("accessory", Accessory);
             writer.WriteStringValue("alt_text", AltText);
             writer.WriteCollectionOfPrimitiveValues<string>("app_collaborators", AppCollaborators);
             writer.WriteStringValue("app_id", AppId);
@@ -490,7 +490,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("button_label", ButtonLabel);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Block2Description>("description", Description);
             writer.WriteStringValue("developer_trace_id", DeveloperTraceId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Accessory6>("elements", Elements);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Accessory7>("elements", Elements);
             writer.WriteBoolValue("expand", Expand);
             writer.WriteStringValue("fallback", Fallback);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Text2>("fields", Fields);

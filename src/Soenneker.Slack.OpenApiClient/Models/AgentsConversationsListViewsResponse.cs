@@ -27,6 +27,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
             else if (parseNode.GetChildNode("provided") is { } nullNodeProvided && nullNodeProvided.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Provided = null;
             if (parseNode.GetChildNode("response_metadata") is null) { _explicitNullValueResponseMetadata = default!; _explicitNullProperties?.Remove("response_metadata"); }
             else if (parseNode.GetChildNode("response_metadata") is { } nullNodeResponseMetadata && nullNodeResponseMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResponseMetadata = null;
+            if (parseNode.GetChildNode("session_views") is null) { _explicitNullValueSessionViews = default!; _explicitNullProperties?.Remove("session_views"); }
+            else if (parseNode.GetChildNode("session_views") is { } nullNodeSessionViews && nullNodeSessionViews.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionViews = null;
             if (parseNode.GetChildNode("views") is null) { _explicitNullValueViews = default!; _explicitNullProperties?.Remove("views"); }
             else if (parseNode.GetChildNode("views") is { } nullNodeViews && nullNodeViews.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Views = null;
             if (parseNode.GetChildNode("warning") is null) { _explicitNullValueWarning = default!; _explicitNullProperties?.Remove("warning"); }
@@ -78,6 +80,16 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata ResponseMetadata { get => _explicitNullValueResponseMetadata; set { _explicitNullValueResponseMetadata = value; AdditionalData?.Remove("response_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response_metadata"); else _explicitNullProperties?.Remove("response_metadata"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata _explicitNullValueResponseMetadata = default!;
 #endif
+        /// <summary>The session_views property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Slack.OpenApiClient.Models.SessionView>? SessionViews { get => _explicitNullValueSessionViews; set { _explicitNullValueSessionViews = value; AdditionalData?.Remove("session_views"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_views"); else _explicitNullProperties?.Remove("session_views"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.SessionView>? _explicitNullValueSessionViews = default!;
+#nullable restore
+#else
+        public List<global::Soenneker.Slack.OpenApiClient.Models.SessionView> SessionViews { get => _explicitNullValueSessionViews; set { _explicitNullValueSessionViews = value; AdditionalData?.Remove("session_views"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_views"); else _explicitNullProperties?.Remove("session_views"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.SessionView> _explicitNullValueSessionViews = default!;
+#endif
         /// <summary>The views property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -121,13 +133,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(7)
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "error", n => { Error = n.GetStringValue(); } },
                 { "needed", n => { Needed = n.GetStringValue(); } },
                 { "ok", n => { Ok = n.GetBoolValue(); } },
                 { "provided", n => { Provided = n.GetStringValue(); } },
                 { "response_metadata", n => { ResponseMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>(global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata.CreateFromDiscriminatorValue); } },
+                { "session_views", n => { SessionViews = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SessionView>(global::Soenneker.Slack.OpenApiClient.Models.SessionView.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "views", n => { Views = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.View>(global::Soenneker.Slack.OpenApiClient.Models.View.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "warning", n => { Warning = n.GetStringValue(); } },
             };
@@ -144,6 +157,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteBoolValue("ok", Ok);
             writer.WriteStringValue("provided", Provided);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.WebApiCallResultResponseMetadata>("response_metadata", ResponseMetadata);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SessionView>("session_views", SessionViews);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.View>("views", Views);
             writer.WriteStringValue("warning", Warning);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

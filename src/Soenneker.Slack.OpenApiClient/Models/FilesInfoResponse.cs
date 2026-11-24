@@ -27,6 +27,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
             else if (parseNode.GetChildNode("content_highlight_html") is { } nullNodeContentHighlightHtml && nullNodeContentHighlightHtml.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentHighlightHtml = null;
             if (parseNode.GetChildNode("content_highlight_html_truncated") is null) { _explicitNullValueContentHighlightHtmlTruncated = default!; _explicitNullProperties?.Remove("content_highlight_html_truncated"); }
             else if (parseNode.GetChildNode("content_highlight_html_truncated") is { } nullNodeContentHighlightHtmlTruncated && nullNodeContentHighlightHtmlTruncated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentHighlightHtmlTruncated = null;
+            if (parseNode.GetChildNode("content_html") is null) { _explicitNullValueContentHtml = default!; _explicitNullProperties?.Remove("content_html"); }
+            else if (parseNode.GetChildNode("content_html") is { } nullNodeContentHtml && nullNodeContentHtml.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentHtml = null;
             if (parseNode.GetChildNode("error") is null) { _explicitNullValueError = default!; _explicitNullProperties?.Remove("error"); }
             else if (parseNode.GetChildNode("error") is { } nullNodeError && nullNodeError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Error = null;
             if (parseNode.GetChildNode("file") is null) { _explicitNullValueFile = default!; _explicitNullProperties?.Remove("file"); }
@@ -92,6 +94,16 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The content_highlight_html_truncated property</summary>
         public bool? ContentHighlightHtmlTruncated { get => _explicitNullValueContentHighlightHtmlTruncated; set { _explicitNullValueContentHighlightHtmlTruncated = value; AdditionalData?.Remove("content_highlight_html_truncated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content_highlight_html_truncated"); else _explicitNullProperties?.Remove("content_highlight_html_truncated"); } }
         private bool? _explicitNullValueContentHighlightHtmlTruncated = default!;
+        /// <summary>The content_html property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ContentHtml { get => _explicitNullValueContentHtml; set { _explicitNullValueContentHtml = value; AdditionalData?.Remove("content_html"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content_html"); else _explicitNullProperties?.Remove("content_html"); } }
+        private string? _explicitNullValueContentHtml = default!;
+#nullable restore
+#else
+        public string ContentHtml { get => _explicitNullValueContentHtml; set { _explicitNullValueContentHtml = value; AdditionalData?.Remove("content_html"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content_html"); else _explicitNullProperties?.Remove("content_html"); } }
+        private string _explicitNullValueContentHtml = default!;
+#endif
         /// <summary>The error property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -105,12 +117,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The file property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.File5? File { get => _explicitNullValueFile; set { _explicitNullValueFile = value; AdditionalData?.Remove("file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file"); else _explicitNullProperties?.Remove("file"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.File5? _explicitNullValueFile = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.File6? File { get => _explicitNullValueFile; set { _explicitNullValueFile = value; AdditionalData?.Remove("file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file"); else _explicitNullProperties?.Remove("file"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.File6? _explicitNullValueFile = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.File5 File { get => _explicitNullValueFile; set { _explicitNullValueFile = value; AdditionalData?.Remove("file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file"); else _explicitNullProperties?.Remove("file"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.File5 _explicitNullValueFile = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.File6 File { get => _explicitNullValueFile; set { _explicitNullValueFile = value; AdditionalData?.Remove("file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file"); else _explicitNullProperties?.Remove("file"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.File6 _explicitNullValueFile = default!;
 #endif
         /// <summary>The is_truncated property</summary>
         public bool? IsTruncated { get => _explicitNullValueIsTruncated; set { _explicitNullValueIsTruncated = value; AdditionalData?.Remove("is_truncated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_truncated"); else _explicitNullProperties?.Remove("is_truncated"); } }
@@ -191,15 +203,16 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(14)
+            return new Dictionary<string, Action<IParseNode>>(15)
             {
                 { "comments", n => { Comments = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Comment3>(global::Soenneker.Slack.OpenApiClient.Models.Comment3.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "content", n => { Content = n.GetStringValue(); } },
                 { "content_highlight_css", n => { ContentHighlightCss = n.GetStringValue(); } },
                 { "content_highlight_html", n => { ContentHighlightHtml = n.GetStringValue(); } },
                 { "content_highlight_html_truncated", n => { ContentHighlightHtmlTruncated = n.GetBoolValue(); } },
+                { "content_html", n => { ContentHtml = n.GetStringValue(); } },
                 { "error", n => { Error = n.GetStringValue(); } },
-                { "file", n => { File = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.File5>(global::Soenneker.Slack.OpenApiClient.Models.File5.CreateFromDiscriminatorValue); } },
+                { "file", n => { File = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.File6>(global::Soenneker.Slack.OpenApiClient.Models.File6.CreateFromDiscriminatorValue); } },
                 { "is_truncated", n => { IsTruncated = n.GetBoolValue(); } },
                 { "needed", n => { Needed = n.GetStringValue(); } },
                 { "ok", n => { Ok = n.GetBoolValue(); } },
@@ -221,8 +234,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("content_highlight_css", ContentHighlightCss);
             writer.WriteStringValue("content_highlight_html", ContentHighlightHtml);
             writer.WriteBoolValue("content_highlight_html_truncated", ContentHighlightHtmlTruncated);
+            writer.WriteStringValue("content_html", ContentHtml);
             writer.WriteStringValue("error", Error);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.File5>("file", File);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.File6>("file", File);
             writer.WriteBoolValue("is_truncated", IsTruncated);
             writer.WriteStringValue("needed", Needed);
             writer.WriteBoolValue("ok", Ok);

@@ -27,16 +27,48 @@ namespace Soenneker.Slack.OpenApiClient.Models
             else if (parseNode.GetChildNode("original_w") is { } nullNodeOriginalW && nullNodeOriginalW.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalW = null;
             if (parseNode.GetChildNode("rotation") is null) { _explicitNullValueRotation = default!; _explicitNullProperties?.Remove("rotation"); }
             else if (parseNode.GetChildNode("rotation") is { } nullNodeRotation && nullNodeRotation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rotation = null;
+            if (parseNode.GetChildNode("thumb_1024") is null) { _explicitNullValueThumb1024 = default!; _explicitNullProperties?.Remove("thumb_1024"); }
+            else if (parseNode.GetChildNode("thumb_1024") is { } nullNodeThumb1024 && nullNodeThumb1024.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Thumb1024 = null;
+            if (parseNode.GetChildNode("thumb_1024_h") is null) { _explicitNullValueThumb1024H = default!; _explicitNullProperties?.Remove("thumb_1024_h"); }
+            else if (parseNode.GetChildNode("thumb_1024_h") is { } nullNodeThumb1024H && nullNodeThumb1024H.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Thumb1024H = null;
+            if (parseNode.GetChildNode("thumb_1024_w") is null) { _explicitNullValueThumb1024W = default!; _explicitNullProperties?.Remove("thumb_1024_w"); }
+            else if (parseNode.GetChildNode("thumb_1024_w") is { } nullNodeThumb1024W && nullNodeThumb1024W.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Thumb1024W = null;
             if (parseNode.GetChildNode("thumb_160") is null) { _explicitNullValueThumb160 = default!; _explicitNullProperties?.Remove("thumb_160"); }
             else if (parseNode.GetChildNode("thumb_160") is { } nullNodeThumb160 && nullNodeThumb160.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Thumb160 = null;
+            if (parseNode.GetChildNode("thumb_360") is null) { _explicitNullValueThumb360 = default!; _explicitNullProperties?.Remove("thumb_360"); }
+            else if (parseNode.GetChildNode("thumb_360") is { } nullNodeThumb360 && nullNodeThumb360.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Thumb360 = null;
             if (parseNode.GetChildNode("thumb_360_h") is null) { _explicitNullValueThumb360H = default!; _explicitNullProperties?.Remove("thumb_360_h"); }
             else if (parseNode.GetChildNode("thumb_360_h") is { } nullNodeThumb360H && nullNodeThumb360H.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Thumb360H = null;
             if (parseNode.GetChildNode("thumb_360_w") is null) { _explicitNullValueThumb360W = default!; _explicitNullProperties?.Remove("thumb_360_w"); }
             else if (parseNode.GetChildNode("thumb_360_w") is { } nullNodeThumb360W && nullNodeThumb360W.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Thumb360W = null;
+            if (parseNode.GetChildNode("thumb_480") is null) { _explicitNullValueThumb480 = default!; _explicitNullProperties?.Remove("thumb_480"); }
+            else if (parseNode.GetChildNode("thumb_480") is { } nullNodeThumb480 && nullNodeThumb480.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Thumb480 = null;
+            if (parseNode.GetChildNode("thumb_480_h") is null) { _explicitNullValueThumb480H = default!; _explicitNullProperties?.Remove("thumb_480_h"); }
+            else if (parseNode.GetChildNode("thumb_480_h") is { } nullNodeThumb480H && nullNodeThumb480H.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Thumb480H = null;
+            if (parseNode.GetChildNode("thumb_480_w") is null) { _explicitNullValueThumb480W = default!; _explicitNullProperties?.Remove("thumb_480_w"); }
+            else if (parseNode.GetChildNode("thumb_480_w") is { } nullNodeThumb480W && nullNodeThumb480W.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Thumb480W = null;
             if (parseNode.GetChildNode("thumb_64") is null) { _explicitNullValueThumb64 = default!; _explicitNullProperties?.Remove("thumb_64"); }
             else if (parseNode.GetChildNode("thumb_64") is { } nullNodeThumb64 && nullNodeThumb64.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Thumb64 = null;
+            if (parseNode.GetChildNode("thumb_720") is null) { _explicitNullValueThumb720 = default!; _explicitNullProperties?.Remove("thumb_720"); }
+            else if (parseNode.GetChildNode("thumb_720") is { } nullNodeThumb720 && nullNodeThumb720.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Thumb720 = null;
+            if (parseNode.GetChildNode("thumb_720_h") is null) { _explicitNullValueThumb720H = default!; _explicitNullProperties?.Remove("thumb_720_h"); }
+            else if (parseNode.GetChildNode("thumb_720_h") is { } nullNodeThumb720H && nullNodeThumb720H.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Thumb720H = null;
+            if (parseNode.GetChildNode("thumb_720_w") is null) { _explicitNullValueThumb720W = default!; _explicitNullProperties?.Remove("thumb_720_w"); }
+            else if (parseNode.GetChildNode("thumb_720_w") is { } nullNodeThumb720W && nullNodeThumb720W.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Thumb720W = null;
             if (parseNode.GetChildNode("thumb_80") is null) { _explicitNullValueThumb80 = default!; _explicitNullProperties?.Remove("thumb_80"); }
             else if (parseNode.GetChildNode("thumb_80") is { } nullNodeThumb80 && nullNodeThumb80.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Thumb80 = null;
+            if (parseNode.GetChildNode("thumb_800") is null) { _explicitNullValueThumb800 = default!; _explicitNullProperties?.Remove("thumb_800"); }
+            else if (parseNode.GetChildNode("thumb_800") is { } nullNodeThumb800 && nullNodeThumb800.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Thumb800 = null;
+            if (parseNode.GetChildNode("thumb_800_h") is null) { _explicitNullValueThumb800H = default!; _explicitNullProperties?.Remove("thumb_800_h"); }
+            else if (parseNode.GetChildNode("thumb_800_h") is { } nullNodeThumb800H && nullNodeThumb800H.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Thumb800H = null;
+            if (parseNode.GetChildNode("thumb_800_w") is null) { _explicitNullValueThumb800W = default!; _explicitNullProperties?.Remove("thumb_800_w"); }
+            else if (parseNode.GetChildNode("thumb_800_w") is { } nullNodeThumb800W && nullNodeThumb800W.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Thumb800W = null;
+            if (parseNode.GetChildNode("thumb_960") is null) { _explicitNullValueThumb960 = default!; _explicitNullProperties?.Remove("thumb_960"); }
+            else if (parseNode.GetChildNode("thumb_960") is { } nullNodeThumb960 && nullNodeThumb960.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Thumb960 = null;
+            if (parseNode.GetChildNode("thumb_960_h") is null) { _explicitNullValueThumb960H = default!; _explicitNullProperties?.Remove("thumb_960_h"); }
+            else if (parseNode.GetChildNode("thumb_960_h") is { } nullNodeThumb960H && nullNodeThumb960H.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Thumb960H = null;
+            if (parseNode.GetChildNode("thumb_960_w") is null) { _explicitNullValueThumb960W = default!; _explicitNullProperties?.Remove("thumb_960_w"); }
+            else if (parseNode.GetChildNode("thumb_960_w") is { } nullNodeThumb960W && nullNodeThumb960W.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Thumb960W = null;
             if (parseNode.GetChildNode("thumb_tiny") is null) { _explicitNullValueThumbTiny = default!; _explicitNullProperties?.Remove("thumb_tiny"); }
             else if (parseNode.GetChildNode("thumb_tiny") is { } nullNodeThumbTiny && nullNodeThumbTiny.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThumbTiny = null;
         }
@@ -72,21 +104,69 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The rotation property</summary>
         public double? Rotation { get => _explicitNullValueRotation; set { _explicitNullValueRotation = value; AdditionalData?.Remove("rotation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rotation"); else _explicitNullProperties?.Remove("rotation"); } }
         private double? _explicitNullValueRotation = default!;
+        /// <summary>The thumb_1024 property</summary>
+        public bool? Thumb1024 { get => _explicitNullValueThumb1024; set { _explicitNullValueThumb1024 = value; AdditionalData?.Remove("thumb_1024"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumb_1024"); else _explicitNullProperties?.Remove("thumb_1024"); } }
+        private bool? _explicitNullValueThumb1024 = default!;
+        /// <summary>The thumb_1024_h property</summary>
+        public double? Thumb1024H { get => _explicitNullValueThumb1024H; set { _explicitNullValueThumb1024H = value; AdditionalData?.Remove("thumb_1024_h"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumb_1024_h"); else _explicitNullProperties?.Remove("thumb_1024_h"); } }
+        private double? _explicitNullValueThumb1024H = default!;
+        /// <summary>The thumb_1024_w property</summary>
+        public double? Thumb1024W { get => _explicitNullValueThumb1024W; set { _explicitNullValueThumb1024W = value; AdditionalData?.Remove("thumb_1024_w"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumb_1024_w"); else _explicitNullProperties?.Remove("thumb_1024_w"); } }
+        private double? _explicitNullValueThumb1024W = default!;
         /// <summary>The thumb_160 property</summary>
         public bool? Thumb160 { get => _explicitNullValueThumb160; set { _explicitNullValueThumb160 = value; AdditionalData?.Remove("thumb_160"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumb_160"); else _explicitNullProperties?.Remove("thumb_160"); } }
         private bool? _explicitNullValueThumb160 = default!;
+        /// <summary>The thumb_360 property</summary>
+        public bool? Thumb360 { get => _explicitNullValueThumb360; set { _explicitNullValueThumb360 = value; AdditionalData?.Remove("thumb_360"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumb_360"); else _explicitNullProperties?.Remove("thumb_360"); } }
+        private bool? _explicitNullValueThumb360 = default!;
         /// <summary>The thumb_360_h property</summary>
         public double? Thumb360H { get => _explicitNullValueThumb360H; set { _explicitNullValueThumb360H = value; AdditionalData?.Remove("thumb_360_h"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumb_360_h"); else _explicitNullProperties?.Remove("thumb_360_h"); } }
         private double? _explicitNullValueThumb360H = default!;
         /// <summary>The thumb_360_w property</summary>
         public double? Thumb360W { get => _explicitNullValueThumb360W; set { _explicitNullValueThumb360W = value; AdditionalData?.Remove("thumb_360_w"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumb_360_w"); else _explicitNullProperties?.Remove("thumb_360_w"); } }
         private double? _explicitNullValueThumb360W = default!;
+        /// <summary>The thumb_480 property</summary>
+        public bool? Thumb480 { get => _explicitNullValueThumb480; set { _explicitNullValueThumb480 = value; AdditionalData?.Remove("thumb_480"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumb_480"); else _explicitNullProperties?.Remove("thumb_480"); } }
+        private bool? _explicitNullValueThumb480 = default!;
+        /// <summary>The thumb_480_h property</summary>
+        public double? Thumb480H { get => _explicitNullValueThumb480H; set { _explicitNullValueThumb480H = value; AdditionalData?.Remove("thumb_480_h"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumb_480_h"); else _explicitNullProperties?.Remove("thumb_480_h"); } }
+        private double? _explicitNullValueThumb480H = default!;
+        /// <summary>The thumb_480_w property</summary>
+        public double? Thumb480W { get => _explicitNullValueThumb480W; set { _explicitNullValueThumb480W = value; AdditionalData?.Remove("thumb_480_w"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumb_480_w"); else _explicitNullProperties?.Remove("thumb_480_w"); } }
+        private double? _explicitNullValueThumb480W = default!;
         /// <summary>The thumb_64 property</summary>
         public bool? Thumb64 { get => _explicitNullValueThumb64; set { _explicitNullValueThumb64 = value; AdditionalData?.Remove("thumb_64"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumb_64"); else _explicitNullProperties?.Remove("thumb_64"); } }
         private bool? _explicitNullValueThumb64 = default!;
+        /// <summary>The thumb_720 property</summary>
+        public bool? Thumb720 { get => _explicitNullValueThumb720; set { _explicitNullValueThumb720 = value; AdditionalData?.Remove("thumb_720"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumb_720"); else _explicitNullProperties?.Remove("thumb_720"); } }
+        private bool? _explicitNullValueThumb720 = default!;
+        /// <summary>The thumb_720_h property</summary>
+        public double? Thumb720H { get => _explicitNullValueThumb720H; set { _explicitNullValueThumb720H = value; AdditionalData?.Remove("thumb_720_h"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumb_720_h"); else _explicitNullProperties?.Remove("thumb_720_h"); } }
+        private double? _explicitNullValueThumb720H = default!;
+        /// <summary>The thumb_720_w property</summary>
+        public double? Thumb720W { get => _explicitNullValueThumb720W; set { _explicitNullValueThumb720W = value; AdditionalData?.Remove("thumb_720_w"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumb_720_w"); else _explicitNullProperties?.Remove("thumb_720_w"); } }
+        private double? _explicitNullValueThumb720W = default!;
         /// <summary>The thumb_80 property</summary>
         public bool? Thumb80 { get => _explicitNullValueThumb80; set { _explicitNullValueThumb80 = value; AdditionalData?.Remove("thumb_80"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumb_80"); else _explicitNullProperties?.Remove("thumb_80"); } }
         private bool? _explicitNullValueThumb80 = default!;
+        /// <summary>The thumb_800 property</summary>
+        public bool? Thumb800 { get => _explicitNullValueThumb800; set { _explicitNullValueThumb800 = value; AdditionalData?.Remove("thumb_800"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumb_800"); else _explicitNullProperties?.Remove("thumb_800"); } }
+        private bool? _explicitNullValueThumb800 = default!;
+        /// <summary>The thumb_800_h property</summary>
+        public double? Thumb800H { get => _explicitNullValueThumb800H; set { _explicitNullValueThumb800H = value; AdditionalData?.Remove("thumb_800_h"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumb_800_h"); else _explicitNullProperties?.Remove("thumb_800_h"); } }
+        private double? _explicitNullValueThumb800H = default!;
+        /// <summary>The thumb_800_w property</summary>
+        public double? Thumb800W { get => _explicitNullValueThumb800W; set { _explicitNullValueThumb800W = value; AdditionalData?.Remove("thumb_800_w"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumb_800_w"); else _explicitNullProperties?.Remove("thumb_800_w"); } }
+        private double? _explicitNullValueThumb800W = default!;
+        /// <summary>The thumb_960 property</summary>
+        public bool? Thumb960 { get => _explicitNullValueThumb960; set { _explicitNullValueThumb960 = value; AdditionalData?.Remove("thumb_960"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumb_960"); else _explicitNullProperties?.Remove("thumb_960"); } }
+        private bool? _explicitNullValueThumb960 = default!;
+        /// <summary>The thumb_960_h property</summary>
+        public double? Thumb960H { get => _explicitNullValueThumb960H; set { _explicitNullValueThumb960H = value; AdditionalData?.Remove("thumb_960_h"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumb_960_h"); else _explicitNullProperties?.Remove("thumb_960_h"); } }
+        private double? _explicitNullValueThumb960H = default!;
+        /// <summary>The thumb_960_w property</summary>
+        public double? Thumb960W { get => _explicitNullValueThumb960W; set { _explicitNullValueThumb960W = value; AdditionalData?.Remove("thumb_960_w"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumb_960_w"); else _explicitNullProperties?.Remove("thumb_960_w"); } }
+        private double? _explicitNullValueThumb960W = default!;
         /// <summary>The thumb_tiny property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -120,18 +200,34 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(11)
+            return new Dictionary<string, Action<IParseNode>>(27)
             {
                 { "extension", n => { Extension = n.GetStringValue(); } },
                 { "format", n => { Format = n.GetStringValue(); } },
                 { "original_h", n => { OriginalH = n.GetDoubleValue(); } },
                 { "original_w", n => { OriginalW = n.GetDoubleValue(); } },
                 { "rotation", n => { Rotation = n.GetDoubleValue(); } },
+                { "thumb_1024", n => { Thumb1024 = n.GetBoolValue(); } },
+                { "thumb_1024_h", n => { Thumb1024H = n.GetDoubleValue(); } },
+                { "thumb_1024_w", n => { Thumb1024W = n.GetDoubleValue(); } },
                 { "thumb_160", n => { Thumb160 = n.GetBoolValue(); } },
+                { "thumb_360", n => { Thumb360 = n.GetBoolValue(); } },
                 { "thumb_360_h", n => { Thumb360H = n.GetDoubleValue(); } },
                 { "thumb_360_w", n => { Thumb360W = n.GetDoubleValue(); } },
+                { "thumb_480", n => { Thumb480 = n.GetBoolValue(); } },
+                { "thumb_480_h", n => { Thumb480H = n.GetDoubleValue(); } },
+                { "thumb_480_w", n => { Thumb480W = n.GetDoubleValue(); } },
                 { "thumb_64", n => { Thumb64 = n.GetBoolValue(); } },
+                { "thumb_720", n => { Thumb720 = n.GetBoolValue(); } },
+                { "thumb_720_h", n => { Thumb720H = n.GetDoubleValue(); } },
+                { "thumb_720_w", n => { Thumb720W = n.GetDoubleValue(); } },
                 { "thumb_80", n => { Thumb80 = n.GetBoolValue(); } },
+                { "thumb_800", n => { Thumb800 = n.GetBoolValue(); } },
+                { "thumb_800_h", n => { Thumb800H = n.GetDoubleValue(); } },
+                { "thumb_800_w", n => { Thumb800W = n.GetDoubleValue(); } },
+                { "thumb_960", n => { Thumb960 = n.GetBoolValue(); } },
+                { "thumb_960_h", n => { Thumb960H = n.GetDoubleValue(); } },
+                { "thumb_960_w", n => { Thumb960W = n.GetDoubleValue(); } },
                 { "thumb_tiny", n => { ThumbTiny = n.GetStringValue(); } },
             };
         }
@@ -147,11 +243,27 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("original_h", OriginalH);
             writer.WriteDoubleValue("original_w", OriginalW);
             writer.WriteDoubleValue("rotation", Rotation);
+            writer.WriteBoolValue("thumb_1024", Thumb1024);
+            writer.WriteDoubleValue("thumb_1024_h", Thumb1024H);
+            writer.WriteDoubleValue("thumb_1024_w", Thumb1024W);
             writer.WriteBoolValue("thumb_160", Thumb160);
+            writer.WriteBoolValue("thumb_360", Thumb360);
             writer.WriteDoubleValue("thumb_360_h", Thumb360H);
             writer.WriteDoubleValue("thumb_360_w", Thumb360W);
+            writer.WriteBoolValue("thumb_480", Thumb480);
+            writer.WriteDoubleValue("thumb_480_h", Thumb480H);
+            writer.WriteDoubleValue("thumb_480_w", Thumb480W);
             writer.WriteBoolValue("thumb_64", Thumb64);
+            writer.WriteBoolValue("thumb_720", Thumb720);
+            writer.WriteDoubleValue("thumb_720_h", Thumb720H);
+            writer.WriteDoubleValue("thumb_720_w", Thumb720W);
             writer.WriteBoolValue("thumb_80", Thumb80);
+            writer.WriteBoolValue("thumb_800", Thumb800);
+            writer.WriteDoubleValue("thumb_800_h", Thumb800H);
+            writer.WriteDoubleValue("thumb_800_w", Thumb800W);
+            writer.WriteBoolValue("thumb_960", Thumb960);
+            writer.WriteDoubleValue("thumb_960_h", Thumb960H);
+            writer.WriteDoubleValue("thumb_960_w", Thumb960W);
             writer.WriteStringValue("thumb_tiny", ThumbTiny);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

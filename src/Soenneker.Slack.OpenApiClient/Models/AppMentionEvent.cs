@@ -98,12 +98,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The bot_profile property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.BotProfile4? BotProfile { get => _explicitNullValueBotProfile; set { _explicitNullValueBotProfile = value; AdditionalData?.Remove("bot_profile"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_profile"); else _explicitNullProperties?.Remove("bot_profile"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.BotProfile4? _explicitNullValueBotProfile = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.BotProfile5? BotProfile { get => _explicitNullValueBotProfile; set { _explicitNullValueBotProfile = value; AdditionalData?.Remove("bot_profile"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_profile"); else _explicitNullProperties?.Remove("bot_profile"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.BotProfile5? _explicitNullValueBotProfile = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.BotProfile4 BotProfile { get => _explicitNullValueBotProfile; set { _explicitNullValueBotProfile = value; AdditionalData?.Remove("bot_profile"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_profile"); else _explicitNullProperties?.Remove("bot_profile"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.BotProfile4 _explicitNullValueBotProfile = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.BotProfile5 BotProfile { get => _explicitNullValueBotProfile; set { _explicitNullValueBotProfile = value; AdditionalData?.Remove("bot_profile"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_profile"); else _explicitNullProperties?.Remove("bot_profile"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.BotProfile5 _explicitNullValueBotProfile = default!;
 #endif
         /// <summary>The channel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -292,7 +292,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageAttachment>(global::Soenneker.Slack.OpenApiClient.Models.MessageAttachment.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "blocks", n => { Blocks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AppMentionEventBlocksItem>(global::Soenneker.Slack.OpenApiClient.Models.AppMentionEventBlocksItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "bot_id", n => { BotId = n.GetStringValue(); } },
-                { "bot_profile", n => { BotProfile = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotProfile4>(global::Soenneker.Slack.OpenApiClient.Models.BotProfile4.CreateFromDiscriminatorValue); } },
+                { "bot_profile", n => { BotProfile = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotProfile5>(global::Soenneker.Slack.OpenApiClient.Models.BotProfile5.CreateFromDiscriminatorValue); } },
                 { "channel", n => { Channel = n.GetStringValue(); } },
                 { "client_msg_id", n => { ClientMsgId = n.GetStringValue(); } },
                 { "display_as_bot", n => { DisplayAsBot = n.GetBoolValue(); } },
@@ -323,7 +323,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageAttachment>("attachments", Attachments);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AppMentionEventBlocksItem>("blocks", Blocks);
             writer.WriteStringValue("bot_id", BotId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotProfile4>("bot_profile", BotProfile);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotProfile5>("bot_profile", BotProfile);
             writer.WriteStringValue("channel", Channel);
             writer.WriteStringValue("client_msg_id", ClientMsgId);
             writer.WriteBoolValue("display_as_bot", DisplayAsBot);

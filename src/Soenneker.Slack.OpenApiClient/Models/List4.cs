@@ -119,12 +119,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The dm_mpdm_users_with_file_access property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.DmMpdmUsersWithFileAccess2>? DmMpdmUsersWithFileAccess { get => _explicitNullValueDmMpdmUsersWithFileAccess; set { _explicitNullValueDmMpdmUsersWithFileAccess = value; AdditionalData?.Remove("dm_mpdm_users_with_file_access"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dm_mpdm_users_with_file_access"); else _explicitNullProperties?.Remove("dm_mpdm_users_with_file_access"); } }
-        private List<global::Soenneker.Slack.OpenApiClient.Models.DmMpdmUsersWithFileAccess2>? _explicitNullValueDmMpdmUsersWithFileAccess = default!;
+        public List<global::Soenneker.Slack.OpenApiClient.Models.DmMpdmUsersWithFileAccess>? DmMpdmUsersWithFileAccess { get => _explicitNullValueDmMpdmUsersWithFileAccess; set { _explicitNullValueDmMpdmUsersWithFileAccess = value; AdditionalData?.Remove("dm_mpdm_users_with_file_access"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dm_mpdm_users_with_file_access"); else _explicitNullProperties?.Remove("dm_mpdm_users_with_file_access"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.DmMpdmUsersWithFileAccess>? _explicitNullValueDmMpdmUsersWithFileAccess = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.DmMpdmUsersWithFileAccess2> DmMpdmUsersWithFileAccess { get => _explicitNullValueDmMpdmUsersWithFileAccess; set { _explicitNullValueDmMpdmUsersWithFileAccess = value; AdditionalData?.Remove("dm_mpdm_users_with_file_access"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dm_mpdm_users_with_file_access"); else _explicitNullProperties?.Remove("dm_mpdm_users_with_file_access"); } }
-        private List<global::Soenneker.Slack.OpenApiClient.Models.DmMpdmUsersWithFileAccess2> _explicitNullValueDmMpdmUsersWithFileAccess = default!;
+        public List<global::Soenneker.Slack.OpenApiClient.Models.DmMpdmUsersWithFileAccess> DmMpdmUsersWithFileAccess { get => _explicitNullValueDmMpdmUsersWithFileAccess; set { _explicitNullValueDmMpdmUsersWithFileAccess = value; AdditionalData?.Remove("dm_mpdm_users_with_file_access"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dm_mpdm_users_with_file_access"); else _explicitNullProperties?.Remove("dm_mpdm_users_with_file_access"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.DmMpdmUsersWithFileAccess> _explicitNullValueDmMpdmUsersWithFileAccess = default!;
 #endif
         /// <summary>The editable property</summary>
         public bool? Editable { get => _explicitNullValueEditable; set { _explicitNullValueEditable = value; AdditionalData?.Remove("editable"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("editable"); else _explicitNullProperties?.Remove("editable"); } }
@@ -408,7 +408,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "comments_count", n => { CommentsCount = n.GetDoubleValue(); } },
                 { "created", n => { Created = n.GetDoubleValue(); } },
                 { "display_as_bot", n => { DisplayAsBot = n.GetBoolValue(); } },
-                { "dm_mpdm_users_with_file_access", n => { DmMpdmUsersWithFileAccess = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.DmMpdmUsersWithFileAccess2>(global::Soenneker.Slack.OpenApiClient.Models.DmMpdmUsersWithFileAccess2.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "dm_mpdm_users_with_file_access", n => { DmMpdmUsersWithFileAccess = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.DmMpdmUsersWithFileAccess>(global::Soenneker.Slack.OpenApiClient.Models.DmMpdmUsersWithFileAccess.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "editable", n => { Editable = n.GetBoolValue(); } },
                 { "external_type", n => { ExternalType = n.GetStringValue(); } },
                 { "file_access", n => { FileAccess = n.GetStringValue(); } },
@@ -455,7 +455,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteDoubleValue("comments_count", CommentsCount);
             writer.WriteDoubleValue("created", Created);
             writer.WriteBoolValue("display_as_bot", DisplayAsBot);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.DmMpdmUsersWithFileAccess2>("dm_mpdm_users_with_file_access", DmMpdmUsersWithFileAccess);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.DmMpdmUsersWithFileAccess>("dm_mpdm_users_with_file_access", DmMpdmUsersWithFileAccess);
             writer.WriteBoolValue("editable", Editable);
             writer.WriteStringValue("external_type", ExternalType);
             writer.WriteStringValue("file_access", FileAccess);

@@ -23,6 +23,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
             else if (parseNode.GetChildNode("agent_statuses") is { } nullNodeAgentStatuses && nullNodeAgentStatuses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentStatuses = null;
             if (parseNode.GetChildNode("date_status_processing_expire") is null) { _explicitNullValueDateStatusProcessingExpire = default!; _explicitNullProperties?.Remove("date_status_processing_expire"); }
             else if (parseNode.GetChildNode("date_status_processing_expire") is { } nullNodeDateStatusProcessingExpire && nullNodeDateStatusProcessingExpire.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateStatusProcessingExpire = null;
+            if (parseNode.GetChildNode("encoded_initiator_user_id") is null) { _explicitNullValueEncodedInitiatorUserId = default!; _explicitNullProperties?.Remove("encoded_initiator_user_id"); }
+            else if (parseNode.GetChildNode("encoded_initiator_user_id") is { } nullNodeEncodedInitiatorUserId && nullNodeEncodedInitiatorUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EncodedInitiatorUserId = null;
             if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
             else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
             if (parseNode.GetChildNode("title") is null) { _explicitNullValueTitle = default!; _explicitNullProperties?.Remove("title"); }
@@ -54,6 +56,16 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The date_status_processing_expire property</summary>
         public double? DateStatusProcessingExpire { get => _explicitNullValueDateStatusProcessingExpire; set { _explicitNullValueDateStatusProcessingExpire = value; AdditionalData?.Remove("date_status_processing_expire"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_status_processing_expire"); else _explicitNullProperties?.Remove("date_status_processing_expire"); } }
         private double? _explicitNullValueDateStatusProcessingExpire = default!;
+        /// <summary>The encoded_initiator_user_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? EncodedInitiatorUserId { get => _explicitNullValueEncodedInitiatorUserId; set { _explicitNullValueEncodedInitiatorUserId = value; AdditionalData?.Remove("encoded_initiator_user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("encoded_initiator_user_id"); else _explicitNullProperties?.Remove("encoded_initiator_user_id"); } }
+        private string? _explicitNullValueEncodedInitiatorUserId = default!;
+#nullable restore
+#else
+        public string EncodedInitiatorUserId { get => _explicitNullValueEncodedInitiatorUserId; set { _explicitNullValueEncodedInitiatorUserId = value; AdditionalData?.Remove("encoded_initiator_user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("encoded_initiator_user_id"); else _explicitNullProperties?.Remove("encoded_initiator_user_id"); } }
+        private string _explicitNullValueEncodedInitiatorUserId = default!;
+#endif
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -97,11 +109,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(5)
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "agent_bot_user_ids", n => { AgentBotUserIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "agent_statuses", n => { AgentStatuses = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AgentStatus>(global::Soenneker.Slack.OpenApiClient.Models.AgentStatus.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "date_status_processing_expire", n => { DateStatusProcessingExpire = n.GetDoubleValue(); } },
+                { "encoded_initiator_user_id", n => { EncodedInitiatorUserId = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
             };
@@ -116,6 +129,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("agent_bot_user_ids", AgentBotUserIds);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AgentStatus>("agent_statuses", AgentStatuses);
             writer.WriteDoubleValue("date_status_processing_expire", DateStatusProcessingExpire);
+            writer.WriteStringValue("encoded_initiator_user_id", EncodedInitiatorUserId);
             writer.WriteStringValue("status", Status);
             writer.WriteStringValue("title", Title);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

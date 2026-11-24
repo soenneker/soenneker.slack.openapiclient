@@ -21,6 +21,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
             else if (parseNode.GetChildNode("agent_bot_user_ids") is { } nullNodeAgentBotUserIds && nullNodeAgentBotUserIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentBotUserIds = null;
             if (parseNode.GetChildNode("encoded_agent_bot_user_ids") is null) { _explicitNullValueEncodedAgentBotUserIds = default!; _explicitNullProperties?.Remove("encoded_agent_bot_user_ids"); }
             else if (parseNode.GetChildNode("encoded_agent_bot_user_ids") is { } nullNodeEncodedAgentBotUserIds && nullNodeEncodedAgentBotUserIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EncodedAgentBotUserIds = null;
+            if (parseNode.GetChildNode("encoded_initiator_user_id") is null) { _explicitNullValueEncodedInitiatorUserId = default!; _explicitNullProperties?.Remove("encoded_initiator_user_id"); }
+            else if (parseNode.GetChildNode("encoded_initiator_user_id") is { } nullNodeEncodedInitiatorUserId && nullNodeEncodedInitiatorUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EncodedInitiatorUserId = null;
             if (parseNode.GetChildNode("origin_link") is null) { _explicitNullValueOriginLink = default!; _explicitNullProperties?.Remove("origin_link"); }
             else if (parseNode.GetChildNode("origin_link") is { } nullNodeOriginLink && nullNodeOriginLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginLink = null;
             if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
@@ -50,6 +52,16 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #else
         public List<string> EncodedAgentBotUserIds { get => _explicitNullValueEncodedAgentBotUserIds; set { _explicitNullValueEncodedAgentBotUserIds = value; AdditionalData?.Remove("encoded_agent_bot_user_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("encoded_agent_bot_user_ids"); else _explicitNullProperties?.Remove("encoded_agent_bot_user_ids"); } }
         private List<string> _explicitNullValueEncodedAgentBotUserIds = default!;
+#endif
+        /// <summary>The encoded_initiator_user_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? EncodedInitiatorUserId { get => _explicitNullValueEncodedInitiatorUserId; set { _explicitNullValueEncodedInitiatorUserId = value; AdditionalData?.Remove("encoded_initiator_user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("encoded_initiator_user_id"); else _explicitNullProperties?.Remove("encoded_initiator_user_id"); } }
+        private string? _explicitNullValueEncodedInitiatorUserId = default!;
+#nullable restore
+#else
+        public string EncodedInitiatorUserId { get => _explicitNullValueEncodedInitiatorUserId; set { _explicitNullValueEncodedInitiatorUserId = value; AdditionalData?.Remove("encoded_initiator_user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("encoded_initiator_user_id"); else _explicitNullProperties?.Remove("encoded_initiator_user_id"); } }
+        private string _explicitNullValueEncodedInitiatorUserId = default!;
 #endif
         /// <summary>The origin_link property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -104,10 +116,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(5)
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "agent_bot_user_ids", n => { AgentBotUserIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "encoded_agent_bot_user_ids", n => { EncodedAgentBotUserIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "encoded_initiator_user_id", n => { EncodedInitiatorUserId = n.GetStringValue(); } },
                 { "origin_link", n => { OriginLink = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.OriginLink>(global::Soenneker.Slack.OpenApiClient.Models.OriginLink.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
@@ -122,6 +135,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("agent_bot_user_ids", AgentBotUserIds);
             writer.WriteCollectionOfPrimitiveValues<string>("encoded_agent_bot_user_ids", EncodedAgentBotUserIds);
+            writer.WriteStringValue("encoded_initiator_user_id", EncodedInitiatorUserId);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.OriginLink>("origin_link", OriginLink);
             writer.WriteStringValue("status", Status);
             writer.WriteStringValue("title", Title);

@@ -42,12 +42,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The channel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel11? Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; AdditionalData?.Remove("channel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel"); else _explicitNullProperties?.Remove("channel"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.Channel11? _explicitNullValueChannel = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.Channel12? Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; AdditionalData?.Remove("channel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel"); else _explicitNullProperties?.Remove("channel"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Channel12? _explicitNullValueChannel = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel11 Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; AdditionalData?.Remove("channel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel"); else _explicitNullProperties?.Remove("channel"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.Channel11 _explicitNullValueChannel = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.Channel12 Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; AdditionalData?.Remove("channel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel"); else _explicitNullProperties?.Remove("channel"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Channel12 _explicitNullValueChannel = default!;
 #endif
         /// <summary>The date_created property</summary>
         public double? DateCreated { get => _explicitNullValueDateCreated; set { _explicitNullValueDateCreated = value; AdditionalData?.Remove("date_created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_created"); else _explicitNullProperties?.Remove("date_created"); } }
@@ -126,7 +126,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>(9)
             {
-                { "channel", n => { Channel = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel11>(global::Soenneker.Slack.OpenApiClient.Models.Channel11.CreateFromDiscriminatorValue); } },
+                { "channel", n => { Channel = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel12>(global::Soenneker.Slack.OpenApiClient.Models.Channel12.CreateFromDiscriminatorValue); } },
                 { "date_created", n => { DateCreated = n.GetDoubleValue(); } },
                 { "date_last_updated", n => { DateLastUpdated = n.GetDoubleValue(); } },
                 { "expires_at", n => { ExpiresAt = n.GetDoubleValue(); } },
@@ -144,7 +144,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel11>("channel", Channel);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel12>("channel", Channel);
             writer.WriteDoubleValue("date_created", DateCreated);
             writer.WriteDoubleValue("date_last_updated", DateLastUpdated);
             writer.WriteDoubleValue("expires_at", ExpiresAt);

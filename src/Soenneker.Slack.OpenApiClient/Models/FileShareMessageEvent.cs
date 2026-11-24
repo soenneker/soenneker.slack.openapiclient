@@ -102,12 +102,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The files property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.File8>? Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; AdditionalData?.Remove("files"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
-        private List<global::Soenneker.Slack.OpenApiClient.Models.File8>? _explicitNullValueFiles = default!;
+        public List<global::Soenneker.Slack.OpenApiClient.Models.File9>? Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; AdditionalData?.Remove("files"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.File9>? _explicitNullValueFiles = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.File8> Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; AdditionalData?.Remove("files"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
-        private List<global::Soenneker.Slack.OpenApiClient.Models.File8> _explicitNullValueFiles = default!;
+        public List<global::Soenneker.Slack.OpenApiClient.Models.File9> Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; AdditionalData?.Remove("files"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.File9> _explicitNullValueFiles = default!;
 #endif
         /// <summary>The parent_user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -209,7 +209,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "channel_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ChannelTypes>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueChannelType = default; _explicitNullProperties?.Remove("channel_type"); AdditionalData["channel_type"] = unknown; } else { ChannelType = parsed; AdditionalData.Remove("channel_type"); } } },
                 { "display_as_bot", n => { DisplayAsBot = n.GetBoolValue(); } },
                 { "event_ts", n => { EventTs = n.GetStringValue(); } },
-                { "files", n => { Files = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.File8>(global::Soenneker.Slack.OpenApiClient.Models.File8.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "files", n => { Files = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.File9>(global::Soenneker.Slack.OpenApiClient.Models.File9.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "parent_user_id", n => { ParentUserId = n.GetStringValue(); } },
                 { "subtype", n => { var parsed = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.FileShareSubtype>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSubtype = default; _explicitNullProperties?.Remove("subtype"); AdditionalData["subtype"] = unknown; } else { Subtype = parsed; AdditionalData.Remove("subtype"); } } },
                 { "text", n => { Text = n.GetStringValue(); } },
@@ -234,7 +234,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ChannelTypes>("channel_type", ChannelType);
             writer.WriteBoolValue("display_as_bot", DisplayAsBot);
             writer.WriteStringValue("event_ts", EventTs);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.File8>("files", Files);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.File9>("files", Files);
             writer.WriteStringValue("parent_user_id", ParentUserId);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.FileShareSubtype>("subtype", Subtype);
             writer.WriteStringValue("text", Text);

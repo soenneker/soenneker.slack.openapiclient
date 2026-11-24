@@ -12,13 +12,13 @@ namespace Soenneker.Slack.OpenApiClient.Models
         #pragma warning disable CS1591
         Channels,
         #pragma warning restore CS1591
-        [EnumMember(Value = "conversations")]
-        #pragma warning disable CS1591
-        Conversations,
-        #pragma warning restore CS1591
         [EnumMember(Value = "users")]
         #pragma warning disable CS1591
         Users,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "conversations")]
+        #pragma warning disable CS1591
+        Conversations,
         #pragma warning restore CS1591
         [EnumMember(Value = "external")]
         #pragma warning disable CS1591

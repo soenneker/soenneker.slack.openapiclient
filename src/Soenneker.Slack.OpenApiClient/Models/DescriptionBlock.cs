@@ -40,12 +40,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The elements property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.DescriptionBlockElement4>? Elements { get => _explicitNullValueElements; set { _explicitNullValueElements = value; AdditionalData?.Remove("elements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elements"); else _explicitNullProperties?.Remove("elements"); } }
-        private List<global::Soenneker.Slack.OpenApiClient.Models.DescriptionBlockElement4>? _explicitNullValueElements = default!;
+        public List<global::Soenneker.Slack.OpenApiClient.Models.DescriptionBlockElement5>? Elements { get => _explicitNullValueElements; set { _explicitNullValueElements = value; AdditionalData?.Remove("elements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elements"); else _explicitNullProperties?.Remove("elements"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.DescriptionBlockElement5>? _explicitNullValueElements = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.DescriptionBlockElement4> Elements { get => _explicitNullValueElements; set { _explicitNullValueElements = value; AdditionalData?.Remove("elements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elements"); else _explicitNullProperties?.Remove("elements"); } }
-        private List<global::Soenneker.Slack.OpenApiClient.Models.DescriptionBlockElement4> _explicitNullValueElements = default!;
+        public List<global::Soenneker.Slack.OpenApiClient.Models.DescriptionBlockElement5> Elements { get => _explicitNullValueElements; set { _explicitNullValueElements = value; AdditionalData?.Remove("elements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elements"); else _explicitNullProperties?.Remove("elements"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.DescriptionBlockElement5> _explicitNullValueElements = default!;
 #endif
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -83,7 +83,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "block_id", n => { BlockId = n.GetStringValue(); } },
-                { "elements", n => { Elements = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.DescriptionBlockElement4>(global::Soenneker.Slack.OpenApiClient.Models.DescriptionBlockElement4.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "elements", n => { Elements = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.DescriptionBlockElement5>(global::Soenneker.Slack.OpenApiClient.Models.DescriptionBlockElement5.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
         }
@@ -95,7 +95,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("block_id", BlockId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.DescriptionBlockElement4>("elements", Elements);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.DescriptionBlockElement5>("elements", Elements);
             writer.WriteStringValue("type", Type);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

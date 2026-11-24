@@ -21,6 +21,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
             else if (parseNode.GetChildNode("attachments") is { } nullNodeAttachments && nullNodeAttachments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attachments = null;
             if (parseNode.GetChildNode("blocks") is null) { _explicitNullValueBlocks = default!; _explicitNullProperties?.Remove("blocks"); }
             else if (parseNode.GetChildNode("blocks") is { } nullNodeBlocks && nullNodeBlocks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Blocks = null;
+            if (parseNode.GetChildNode("bot_id") is null) { _explicitNullValueBotId = default!; _explicitNullProperties?.Remove("bot_id"); }
+            else if (parseNode.GetChildNode("bot_id") is { } nullNodeBotId && nullNodeBotId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotId = null;
+            if (parseNode.GetChildNode("bot_profile") is null) { _explicitNullValueBotProfile = default!; _explicitNullProperties?.Remove("bot_profile"); }
+            else if (parseNode.GetChildNode("bot_profile") is { } nullNodeBotProfile && nullNodeBotProfile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotProfile = null;
             if (parseNode.GetChildNode("channel") is null) { _explicitNullValueChannel = default!; _explicitNullProperties?.Remove("channel"); }
             else if (parseNode.GetChildNode("channel") is { } nullNodeChannel && nullNodeChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Channel = null;
             if (parseNode.GetChildNode("channel_type") is null) { _explicitNullValueChannelType = default!; _explicitNullProperties?.Remove("channel_type"); }
@@ -79,6 +83,26 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public List<global::Soenneker.Slack.OpenApiClient.Models.ThreadBroadcastMessageEventBlocksItem> Blocks { get => _explicitNullValueBlocks; set { _explicitNullValueBlocks = value; AdditionalData?.Remove("blocks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blocks"); else _explicitNullProperties?.Remove("blocks"); } }
         private List<global::Soenneker.Slack.OpenApiClient.Models.ThreadBroadcastMessageEventBlocksItem> _explicitNullValueBlocks = default!;
 #endif
+        /// <summary>The bot_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? BotId { get => _explicitNullValueBotId; set { _explicitNullValueBotId = value; AdditionalData?.Remove("bot_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_id"); else _explicitNullProperties?.Remove("bot_id"); } }
+        private string? _explicitNullValueBotId = default!;
+#nullable restore
+#else
+        public string BotId { get => _explicitNullValueBotId; set { _explicitNullValueBotId = value; AdditionalData?.Remove("bot_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_id"); else _explicitNullProperties?.Remove("bot_id"); } }
+        private string _explicitNullValueBotId = default!;
+#endif
+        /// <summary>The bot_profile property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.BotProfile5? BotProfile { get => _explicitNullValueBotProfile; set { _explicitNullValueBotProfile = value; AdditionalData?.Remove("bot_profile"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_profile"); else _explicitNullProperties?.Remove("bot_profile"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.BotProfile5? _explicitNullValueBotProfile = default!;
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.BotProfile5 BotProfile { get => _explicitNullValueBotProfile; set { _explicitNullValueBotProfile = value; AdditionalData?.Remove("bot_profile"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_profile"); else _explicitNullProperties?.Remove("bot_profile"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.BotProfile5 _explicitNullValueBotProfile = default!;
+#endif
         /// <summary>The channel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -118,12 +142,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The files property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.File8>? Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; AdditionalData?.Remove("files"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
-        private List<global::Soenneker.Slack.OpenApiClient.Models.File8>? _explicitNullValueFiles = default!;
+        public List<global::Soenneker.Slack.OpenApiClient.Models.File9>? Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; AdditionalData?.Remove("files"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.File9>? _explicitNullValueFiles = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.File8> Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; AdditionalData?.Remove("files"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
-        private List<global::Soenneker.Slack.OpenApiClient.Models.File8> _explicitNullValueFiles = default!;
+        public List<global::Soenneker.Slack.OpenApiClient.Models.File9> Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; AdditionalData?.Remove("files"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.File9> _explicitNullValueFiles = default!;
 #endif
         /// <summary>The parent_user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -230,16 +254,18 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(19)
+            return new Dictionary<string, Action<IParseNode>>(21)
             {
                 { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageAttachment>(global::Soenneker.Slack.OpenApiClient.Models.MessageAttachment.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "blocks", n => { Blocks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ThreadBroadcastMessageEventBlocksItem>(global::Soenneker.Slack.OpenApiClient.Models.ThreadBroadcastMessageEventBlocksItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "bot_id", n => { BotId = n.GetStringValue(); } },
+                { "bot_profile", n => { BotProfile = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotProfile5>(global::Soenneker.Slack.OpenApiClient.Models.BotProfile5.CreateFromDiscriminatorValue); } },
                 { "channel", n => { Channel = n.GetStringValue(); } },
                 { "channel_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ChannelTypes>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueChannelType = default; _explicitNullProperties?.Remove("channel_type"); AdditionalData["channel_type"] = unknown; } else { ChannelType = parsed; AdditionalData.Remove("channel_type"); } } },
                 { "client_msg_id", n => { ClientMsgId = n.GetStringValue(); } },
                 { "display_as_bot", n => { DisplayAsBot = n.GetBoolValue(); } },
                 { "event_ts", n => { EventTs = n.GetStringValue(); } },
-                { "files", n => { Files = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.File8>(global::Soenneker.Slack.OpenApiClient.Models.File8.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "files", n => { Files = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.File9>(global::Soenneker.Slack.OpenApiClient.Models.File9.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "parent_user_id", n => { ParentUserId = n.GetStringValue(); } },
                 { "replies", n => { Replies = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AllMessageEvents>(global::Soenneker.Slack.OpenApiClient.Models.AllMessageEvents.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "reply_count", n => { ReplyCount = n.GetDoubleValue(); } },
@@ -262,12 +288,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.MessageAttachment>("attachments", Attachments);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.ThreadBroadcastMessageEventBlocksItem>("blocks", Blocks);
+            writer.WriteStringValue("bot_id", BotId);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotProfile5>("bot_profile", BotProfile);
             writer.WriteStringValue("channel", Channel);
             writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.ChannelTypes>("channel_type", ChannelType);
             writer.WriteStringValue("client_msg_id", ClientMsgId);
             writer.WriteBoolValue("display_as_bot", DisplayAsBot);
             writer.WriteStringValue("event_ts", EventTs);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.File8>("files", Files);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.File9>("files", Files);
             writer.WriteStringValue("parent_user_id", ParentUserId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AllMessageEvents>("replies", Replies);
             writer.WriteDoubleValue("reply_count", ReplyCount);

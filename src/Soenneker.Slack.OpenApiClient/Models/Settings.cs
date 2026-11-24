@@ -19,6 +19,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if (parseNode.GetChildNode("allowed_ip_address_ranges") is null) { _explicitNullValueAllowedIpAddressRanges = default!; _explicitNullProperties?.Remove("allowed_ip_address_ranges"); }
             else if (parseNode.GetChildNode("allowed_ip_address_ranges") is { } nullNodeAllowedIpAddressRanges && nullNodeAllowedIpAddressRanges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedIpAddressRanges = null;
+            if (parseNode.GetChildNode("app_level_token_rotation_enabled") is null) { _explicitNullValueAppLevelTokenRotationEnabled = default!; _explicitNullProperties?.Remove("app_level_token_rotation_enabled"); }
+            else if (parseNode.GetChildNode("app_level_token_rotation_enabled") is { } nullNodeAppLevelTokenRotationEnabled && nullNodeAppLevelTokenRotationEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppLevelTokenRotationEnabled = null;
             if (parseNode.GetChildNode("background_color") is null) { _explicitNullValueBackgroundColor = default!; _explicitNullProperties?.Remove("background_color"); }
             else if (parseNode.GetChildNode("background_color") is { } nullNodeBackgroundColor && nullNodeBackgroundColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BackgroundColor = null;
             if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
@@ -55,6 +57,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public List<string> AllowedIpAddressRanges { get => _explicitNullValueAllowedIpAddressRanges; set { _explicitNullValueAllowedIpAddressRanges = value; AdditionalData?.Remove("allowed_ip_address_ranges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_ip_address_ranges"); else _explicitNullProperties?.Remove("allowed_ip_address_ranges"); } }
         private List<string> _explicitNullValueAllowedIpAddressRanges = default!;
 #endif
+        /// <summary>The app_level_token_rotation_enabled property</summary>
+        public bool? AppLevelTokenRotationEnabled { get => _explicitNullValueAppLevelTokenRotationEnabled; set { _explicitNullValueAppLevelTokenRotationEnabled = value; AdditionalData?.Remove("app_level_token_rotation_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_level_token_rotation_enabled"); else _explicitNullProperties?.Remove("app_level_token_rotation_enabled"); } }
+        private bool? _explicitNullValueAppLevelTokenRotationEnabled = default!;
         /// <summary>The background_color property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -160,9 +165,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(12)
+            return new Dictionary<string, Action<IParseNode>>(13)
             {
                 { "allowed_ip_address_ranges", n => { AllowedIpAddressRanges = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "app_level_token_rotation_enabled", n => { AppLevelTokenRotationEnabled = n.GetBoolValue(); } },
                 { "background_color", n => { BackgroundColor = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "event_subscriptions", n => { EventSubscriptions = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EventSubscriptions>(global::Soenneker.Slack.OpenApiClient.Models.EventSubscriptions.CreateFromDiscriminatorValue); } },
@@ -184,6 +190,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("allowed_ip_address_ranges", AllowedIpAddressRanges);
+            writer.WriteBoolValue("app_level_token_rotation_enabled", AppLevelTokenRotationEnabled);
             writer.WriteStringValue("background_color", BackgroundColor);
             writer.WriteStringValue("description", Description);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.EventSubscriptions>("event_subscriptions", EventSubscriptions);

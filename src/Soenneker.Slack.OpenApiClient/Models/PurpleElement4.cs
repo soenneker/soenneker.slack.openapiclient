@@ -111,12 +111,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The style property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Style2? Style { get => _explicitNullValueStyle; set { _explicitNullValueStyle = value; AdditionalData?.Remove("style"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("style"); else _explicitNullProperties?.Remove("style"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.Style2? _explicitNullValueStyle = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.Style? Style { get => _explicitNullValueStyle; set { _explicitNullValueStyle = value; AdditionalData?.Remove("style"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("style"); else _explicitNullProperties?.Remove("style"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Style? _explicitNullValueStyle = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Style2 Style { get => _explicitNullValueStyle; set { _explicitNullValueStyle = value; AdditionalData?.Remove("style"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("style"); else _explicitNullProperties?.Remove("style"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.Style2 _explicitNullValueStyle = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.Style Style { get => _explicitNullValueStyle; set { _explicitNullValueStyle = value; AdditionalData?.Remove("style"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("style"); else _explicitNullProperties?.Remove("style"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Style _explicitNullValueStyle = default!;
 #endif
         /// <summary>The team_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -144,12 +144,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.PurpleElement3Type? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.PurpleElement3Type? _explicitNullValueType = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.PurpleElement4Type? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.PurpleElement4Type? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.PurpleElement3Type Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.PurpleElement3Type _explicitNullValueType = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.PurpleElement4Type Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.PurpleElement4Type _explicitNullValueType = default!;
 #endif
         /// <summary>The unicode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -235,11 +235,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "range", n => { Range = n.GetStringValue(); } },
                 { "skin_tone", n => { SkinTone = n.GetDoubleValue(); } },
-                { "style", n => { Style = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Style2>(global::Soenneker.Slack.OpenApiClient.Models.Style2.CreateFromDiscriminatorValue); } },
+                { "style", n => { Style = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Style>(global::Soenneker.Slack.OpenApiClient.Models.Style.CreateFromDiscriminatorValue); } },
                 { "team_id", n => { TeamId = n.GetStringValue(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
                 { "timestamp", n => { Timestamp = n.GetDoubleValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement3Type>(global::Soenneker.Slack.OpenApiClient.Models.PurpleElement3Type.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement4Type>(global::Soenneker.Slack.OpenApiClient.Models.PurpleElement4Type.CreateFromDiscriminatorValue); } },
                 { "unicode", n => { Unicode = n.GetStringValue(); } },
                 { "unsafe", n => { Unsafe = n.GetBoolValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -261,11 +261,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("range", Range);
             writer.WriteDoubleValue("skin_tone", SkinTone);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Style2>("style", Style);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Style>("style", Style);
             writer.WriteStringValue("team_id", TeamId);
             writer.WriteStringValue("text", Text);
             writer.WriteDoubleValue("timestamp", Timestamp);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement3Type>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement4Type>("type", Type);
             writer.WriteStringValue("unicode", Unicode);
             writer.WriteBoolValue("unsafe", Unsafe);
             writer.WriteStringValue("url", Url);

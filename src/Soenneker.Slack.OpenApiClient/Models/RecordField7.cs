@@ -135,12 +135,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Message6? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.Message6? _explicitNullValueMessage = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.Message7? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Message7? _explicitNullValueMessage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Message6 Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.Message6 _explicitNullValueMessage = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.Message7 Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Message7 _explicitNullValueMessage = default!;
 #endif
         /// <summary>The number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -275,7 +275,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "email", n => { Email = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "key", n => { Key = n.GetStringValue(); } },
                 { "link", n => { Link = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "message", n => { Message = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Message6>(global::Soenneker.Slack.OpenApiClient.Models.Message6.CreateFromDiscriminatorValue); } },
+                { "message", n => { Message = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Message7>(global::Soenneker.Slack.OpenApiClient.Models.Message7.CreateFromDiscriminatorValue); } },
                 { "number", n => { Number = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "phone", n => { Phone = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "rating", n => { Rating = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
@@ -303,7 +303,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<UntypedNode>("email", Email);
             writer.WriteStringValue("key", Key);
             writer.WriteObjectValue<UntypedNode>("link", Link);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Message6>("message", Message);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Message7>("message", Message);
             writer.WriteObjectValue<UntypedNode>("number", Number);
             writer.WriteObjectValue<UntypedNode>("phone", Phone);
             writer.WriteObjectValue<UntypedNode>("rating", Rating);

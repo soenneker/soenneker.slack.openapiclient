@@ -71,12 +71,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The file property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.FileElement2? File { get => _explicitNullValueFile; set { _explicitNullValueFile = value; AdditionalData?.Remove("file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file"); else _explicitNullProperties?.Remove("file"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.FileElement2? _explicitNullValueFile = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.FileElement3? File { get => _explicitNullValueFile; set { _explicitNullValueFile = value; AdditionalData?.Remove("file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file"); else _explicitNullProperties?.Remove("file"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.FileElement3? _explicitNullValueFile = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.FileElement2 File { get => _explicitNullValueFile; set { _explicitNullValueFile = value; AdditionalData?.Remove("file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file"); else _explicitNullProperties?.Remove("file"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.FileElement2 _explicitNullValueFile = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.FileElement3 File { get => _explicitNullValueFile; set { _explicitNullValueFile = value; AdditionalData?.Remove("file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file"); else _explicitNullProperties?.Remove("file"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.FileElement3 _explicitNullValueFile = default!;
 #endif
         /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -127,7 +127,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "comment", n => { Comment = n.GetStringValue(); } },
                 { "created", n => { Created = n.GetDoubleValue(); } },
                 { "created_by", n => { CreatedBy = n.GetStringValue(); } },
-                { "file", n => { File = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FileElement2>(global::Soenneker.Slack.OpenApiClient.Models.FileElement2.CreateFromDiscriminatorValue); } },
+                { "file", n => { File = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FileElement3>(global::Soenneker.Slack.OpenApiClient.Models.FileElement3.CreateFromDiscriminatorValue); } },
                 { "message", n => { Message = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ItemMessage>(global::Soenneker.Slack.OpenApiClient.Models.ItemMessage.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
@@ -143,7 +143,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("comment", Comment);
             writer.WriteDoubleValue("created", Created);
             writer.WriteStringValue("created_by", CreatedBy);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FileElement2>("file", File);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FileElement3>("file", File);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ItemMessage>("message", Message);
             writer.WriteStringValue("type", Type);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

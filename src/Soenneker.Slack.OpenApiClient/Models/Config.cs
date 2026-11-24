@@ -21,10 +21,16 @@ namespace Soenneker.Slack.OpenApiClient.Models
             else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
             if (parseNode.GetChildNode("event_type") is null) { _explicitNullValueEventType = default!; _explicitNullProperties?.Remove("event_type"); }
             else if (parseNode.GetChildNode("event_type") is { } nullNodeEventType && nullNodeEventType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventType = null;
+            if (parseNode.GetChildNode("function_inputs") is null) { _explicitNullValueFunctionInputs = default!; _explicitNullProperties?.Remove("function_inputs"); }
+            else if (parseNode.GetChildNode("function_inputs") is { } nullNodeFunctionInputs && nullNodeFunctionInputs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FunctionInputs = null;
             if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
             else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
             if (parseNode.GetChildNode("schema") is null) { _explicitNullValueSchema = default!; _explicitNullProperties?.Remove("schema"); }
             else if (parseNode.GetChildNode("schema") is { } nullNodeSchema && nullNodeSchema.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Schema = null;
+            if (parseNode.GetChildNode("trigger_type_app_id") is null) { _explicitNullValueTriggerTypeAppId = default!; _explicitNullProperties?.Remove("trigger_type_app_id"); }
+            else if (parseNode.GetChildNode("trigger_type_app_id") is { } nullNodeTriggerTypeAppId && nullNodeTriggerTypeAppId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerTypeAppId = null;
+            if (parseNode.GetChildNode("trigger_type_id") is null) { _explicitNullValueTriggerTypeId = default!; _explicitNullProperties?.Remove("trigger_type_id"); }
+            else if (parseNode.GetChildNode("trigger_type_id") is { } nullNodeTriggerTypeId && nullNodeTriggerTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerTypeId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -49,6 +55,16 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string EventType { get => _explicitNullValueEventType; set { _explicitNullValueEventType = value; AdditionalData?.Remove("event_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_type"); else _explicitNullProperties?.Remove("event_type"); } }
         private string _explicitNullValueEventType = default!;
 #endif
+        /// <summary>The function_inputs property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.ConfigFunctionInputsProperty? FunctionInputs { get => _explicitNullValueFunctionInputs; set { _explicitNullValueFunctionInputs = value; AdditionalData?.Remove("function_inputs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("function_inputs"); else _explicitNullProperties?.Remove("function_inputs"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ConfigFunctionInputsProperty? _explicitNullValueFunctionInputs = default!;
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.ConfigFunctionInputsProperty FunctionInputs { get => _explicitNullValueFunctionInputs; set { _explicitNullValueFunctionInputs = value; AdditionalData?.Remove("function_inputs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("function_inputs"); else _explicitNullProperties?.Remove("function_inputs"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ConfigFunctionInputsProperty _explicitNullValueFunctionInputs = default!;
+#endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -69,6 +85,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.ConfigSchema Schema { get => _explicitNullValueSchema; set { _explicitNullValueSchema = value; AdditionalData?.Remove("schema"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schema"); else _explicitNullProperties?.Remove("schema"); } }
         private global::Soenneker.Slack.OpenApiClient.Models.ConfigSchema _explicitNullValueSchema = default!;
 #endif
+        /// <summary>The trigger_type_app_id property</summary>
+        public double? TriggerTypeAppId { get => _explicitNullValueTriggerTypeAppId; set { _explicitNullValueTriggerTypeAppId = value; AdditionalData?.Remove("trigger_type_app_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trigger_type_app_id"); else _explicitNullProperties?.Remove("trigger_type_app_id"); } }
+        private double? _explicitNullValueTriggerTypeAppId = default!;
+        /// <summary>The trigger_type_id property</summary>
+        public double? TriggerTypeId { get => _explicitNullValueTriggerTypeId; set { _explicitNullValueTriggerTypeId = value; AdditionalData?.Remove("trigger_type_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trigger_type_id"); else _explicitNullProperties?.Remove("trigger_type_id"); } }
+        private double? _explicitNullValueTriggerTypeId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Config"/> and sets the default values.
         /// </summary>
@@ -92,12 +114,15 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(4)
+            return new Dictionary<string, Action<IParseNode>>(7)
             {
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "event_type", n => { EventType = n.GetStringValue(); } },
+                { "function_inputs", n => { FunctionInputs = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConfigFunctionInputsProperty>(global::Soenneker.Slack.OpenApiClient.Models.ConfigFunctionInputsProperty.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "schema", n => { Schema = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConfigSchema>(global::Soenneker.Slack.OpenApiClient.Models.ConfigSchema.CreateFromDiscriminatorValue); } },
+                { "trigger_type_app_id", n => { TriggerTypeAppId = n.GetDoubleValue(); } },
+                { "trigger_type_id", n => { TriggerTypeId = n.GetDoubleValue(); } },
             };
         }
         /// <summary>
@@ -109,8 +134,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("event_type", EventType);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConfigFunctionInputsProperty>("function_inputs", FunctionInputs);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ConfigSchema>("schema", Schema);
+            writer.WriteDoubleValue("trigger_type_app_id", TriggerTypeAppId);
+            writer.WriteDoubleValue("trigger_type_id", TriggerTypeId);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

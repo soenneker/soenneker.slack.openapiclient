@@ -50,12 +50,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The title_blocks property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? TitleBlocks { get => _explicitNullValueTitleBlocks; set { _explicitNullValueTitleBlocks = value; AdditionalData?.Remove("title_blocks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title_blocks"); else _explicitNullProperties?.Remove("title_blocks"); } }
-        private UntypedNode? _explicitNullValueTitleBlocks = default!;
+        public List<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock4>? TitleBlocks { get => _explicitNullValueTitleBlocks; set { _explicitNullValueTitleBlocks = value; AdditionalData?.Remove("title_blocks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title_blocks"); else _explicitNullProperties?.Remove("title_blocks"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock4>? _explicitNullValueTitleBlocks = default!;
 #nullable restore
 #else
-        public UntypedNode TitleBlocks { get => _explicitNullValueTitleBlocks; set { _explicitNullValueTitleBlocks = value; AdditionalData?.Remove("title_blocks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title_blocks"); else _explicitNullProperties?.Remove("title_blocks"); } }
-        private UntypedNode _explicitNullValueTitleBlocks = default!;
+        public List<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock4> TitleBlocks { get => _explicitNullValueTitleBlocks; set { _explicitNullValueTitleBlocks = value; AdditionalData?.Remove("title_blocks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title_blocks"); else _explicitNullProperties?.Remove("title_blocks"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock4> _explicitNullValueTitleBlocks = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThread4"/> and sets the default values.
@@ -84,7 +84,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "first_user_thread_reply", n => { FirstUserThreadReply = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
-                { "title_blocks", n => { TitleBlocks = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "title_blocks", n => { TitleBlocks = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock4>(global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock4.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -96,7 +96,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("first_user_thread_reply", FirstUserThreadReply);
             writer.WriteStringValue("title", Title);
-            writer.WriteObjectValue<UntypedNode>("title_blocks", TitleBlocks);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.AssistantAppThreadBlock4>("title_blocks", TitleBlocks);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

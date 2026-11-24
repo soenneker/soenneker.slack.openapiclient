@@ -21,6 +21,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
             else if (parseNode.GetChildNode("accessibility_label") is { } nullNodeAccessibilityLabel && nullNodeAccessibilityLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessibilityLabel = null;
             if (parseNode.GetChildNode("action_id") is null) { _explicitNullValueActionId = default!; _explicitNullProperties?.Remove("action_id"); }
             else if (parseNode.GetChildNode("action_id") is { } nullNodeActionId && nullNodeActionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionId = null;
+            if (parseNode.GetChildNode("agent_prompt") is null) { _explicitNullValueAgentPrompt = default!; _explicitNullProperties?.Remove("agent_prompt"); }
+            else if (parseNode.GetChildNode("agent_prompt") is { } nullNodeAgentPrompt && nullNodeAgentPrompt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentPrompt = null;
+            if (parseNode.GetChildNode("agent_prompt_display") is null) { _explicitNullValueAgentPromptDisplay = default!; _explicitNullProperties?.Remove("agent_prompt_display"); }
+            else if (parseNode.GetChildNode("agent_prompt_display") is { } nullNodeAgentPromptDisplay && nullNodeAgentPromptDisplay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentPromptDisplay = null;
             if (parseNode.GetChildNode("alt_text") is null) { _explicitNullValueAltText = default!; _explicitNullProperties?.Remove("alt_text"); }
             else if (parseNode.GetChildNode("alt_text") is { } nullNodeAltText && nullNodeAltText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AltText = null;
             if (parseNode.GetChildNode("border") is null) { _explicitNullValueBorder = default!; _explicitNullProperties?.Remove("border"); }
@@ -97,6 +101,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
             else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
             if (parseNode.GetChildNode("value") is null) { _explicitNullValueValue = default!; _explicitNullProperties?.Remove("value"); }
             else if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
+            if (parseNode.GetChildNode("visible_to_user_ids") is null) { _explicitNullValueVisibleToUserIds = default!; _explicitNullProperties?.Remove("visible_to_user_ids"); }
+            else if (parseNode.GetChildNode("visible_to_user_ids") is { } nullNodeVisibleToUserIds && nullNodeVisibleToUserIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisibleToUserIds = null;
             if (parseNode.GetChildNode("workflow") is null) { _explicitNullValueWorkflow = default!; _explicitNullProperties?.Remove("workflow"); }
             else if (parseNode.GetChildNode("workflow") is { } nullNodeWorkflow && nullNodeWorkflow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Workflow = null;
         }
@@ -123,6 +129,26 @@ namespace Soenneker.Slack.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The agent_prompt property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AgentPrompt { get => _explicitNullValueAgentPrompt; set { _explicitNullValueAgentPrompt = value; AdditionalData?.Remove("agent_prompt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_prompt"); else _explicitNullProperties?.Remove("agent_prompt"); } }
+        private string? _explicitNullValueAgentPrompt = default!;
+#nullable restore
+#else
+        public string AgentPrompt { get => _explicitNullValueAgentPrompt; set { _explicitNullValueAgentPrompt = value; AdditionalData?.Remove("agent_prompt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_prompt"); else _explicitNullProperties?.Remove("agent_prompt"); } }
+        private string _explicitNullValueAgentPrompt = default!;
+#endif
+        /// <summary>The agent_prompt_display property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AgentPromptDisplay { get => _explicitNullValueAgentPromptDisplay; set { _explicitNullValueAgentPromptDisplay = value; AdditionalData?.Remove("agent_prompt_display"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_prompt_display"); else _explicitNullProperties?.Remove("agent_prompt_display"); } }
+        private string? _explicitNullValueAgentPromptDisplay = default!;
+#nullable restore
+#else
+        public string AgentPromptDisplay { get => _explicitNullValueAgentPromptDisplay; set { _explicitNullValueAgentPromptDisplay = value; AdditionalData?.Remove("agent_prompt_display"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_prompt_display"); else _explicitNullProperties?.Remove("agent_prompt_display"); } }
+        private string _explicitNullValueAgentPromptDisplay = default!;
+#endif
         /// <summary>The alt_text property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -419,6 +445,16 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public string Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; AdditionalData?.Remove("value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
         private string _explicitNullValueValue = default!;
 #endif
+        /// <summary>The visible_to_user_ids property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public UntypedNode? VisibleToUserIds { get => _explicitNullValueVisibleToUserIds; set { _explicitNullValueVisibleToUserIds = value; AdditionalData?.Remove("visible_to_user_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visible_to_user_ids"); else _explicitNullProperties?.Remove("visible_to_user_ids"); } }
+        private UntypedNode? _explicitNullValueVisibleToUserIds = default!;
+#nullable restore
+#else
+        public UntypedNode VisibleToUserIds { get => _explicitNullValueVisibleToUserIds; set { _explicitNullValueVisibleToUserIds = value; AdditionalData?.Remove("visible_to_user_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visible_to_user_ids"); else _explicitNullProperties?.Remove("visible_to_user_ids"); } }
+        private UntypedNode _explicitNullValueVisibleToUserIds = default!;
+#endif
         /// <summary>The workflow property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -452,10 +488,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(41)
+            return new Dictionary<string, Action<IParseNode>>(44)
             {
                 { "accessibility_label", n => { AccessibilityLabel = n.GetStringValue(); } },
                 { "action_id", n => { ActionId = n.GetStringValue(); } },
+                { "agent_prompt", n => { AgentPrompt = n.GetStringValue(); } },
+                { "agent_prompt_display", n => { AgentPromptDisplay = n.GetStringValue(); } },
                 { "alt_text", n => { AltText = n.GetStringValue(); } },
                 { "border", n => { Border = n.GetDoubleValue(); } },
                 { "confirm", n => { Confirm = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Confirm2>(global::Soenneker.Slack.OpenApiClient.Models.Confirm2.CreateFromDiscriminatorValue); } },
@@ -494,6 +532,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "type", n => { Type = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "value", n => { Value = n.GetStringValue(); } },
+                { "visible_to_user_ids", n => { VisibleToUserIds = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "workflow", n => { Workflow = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Workflow2>(global::Soenneker.Slack.OpenApiClient.Models.Workflow2.CreateFromDiscriminatorValue); } },
             };
         }
@@ -506,6 +545,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("accessibility_label", AccessibilityLabel);
             writer.WriteStringValue("action_id", ActionId);
+            writer.WriteStringValue("agent_prompt", AgentPrompt);
+            writer.WriteStringValue("agent_prompt_display", AgentPromptDisplay);
             writer.WriteStringValue("alt_text", AltText);
             writer.WriteDoubleValue("border", Border);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Confirm2>("confirm", Confirm);
@@ -544,6 +585,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("type", Type);
             writer.WriteStringValue("url", Url);
             writer.WriteStringValue("value", Value);
+            writer.WriteObjectValue<UntypedNode>("visible_to_user_ids", VisibleToUserIds);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Workflow2>("workflow", Workflow);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

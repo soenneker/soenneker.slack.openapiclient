@@ -301,12 +301,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The file property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.FileElement5? File { get => _explicitNullValueFile; set { _explicitNullValueFile = value; AdditionalData?.Remove("file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file"); else _explicitNullProperties?.Remove("file"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.FileElement5? _explicitNullValueFile = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.FileElement6? File { get => _explicitNullValueFile; set { _explicitNullValueFile = value; AdditionalData?.Remove("file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file"); else _explicitNullProperties?.Remove("file"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.FileElement6? _explicitNullValueFile = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.FileElement5 File { get => _explicitNullValueFile; set { _explicitNullValueFile = value; AdditionalData?.Remove("file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file"); else _explicitNullProperties?.Remove("file"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.FileElement5 _explicitNullValueFile = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.FileElement6 File { get => _explicitNullValueFile; set { _explicitNullValueFile = value; AdditionalData?.Remove("file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file"); else _explicitNullProperties?.Remove("file"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.FileElement6 _explicitNullValueFile = default!;
 #endif
         /// <summary>The file_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -577,7 +577,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "external_id", n => { ExternalId = n.GetStringValue(); } },
                 { "fallback", n => { Fallback = n.GetStringValue(); } },
                 { "fields", n => { Fields = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement>(global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "file", n => { File = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FileElement5>(global::Soenneker.Slack.OpenApiClient.Models.FileElement5.CreateFromDiscriminatorValue); } },
+                { "file", n => { File = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FileElement6>(global::Soenneker.Slack.OpenApiClient.Models.FileElement6.CreateFromDiscriminatorValue); } },
                 { "file_id", n => { FileId = n.GetStringValue(); } },
                 { "function_trigger_id", n => { FunctionTriggerId = n.GetStringValue(); } },
                 { "hint", n => { Hint = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement>(global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement.CreateFromDiscriminatorValue); } },
@@ -635,7 +635,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("external_id", ExternalId);
             writer.WriteStringValue("fallback", Fallback);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement>("fields", Fields);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FileElement5>("file", File);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.FileElement6>("file", File);
             writer.WriteStringValue("file_id", FileId);
             writer.WriteStringValue("function_trigger_id", FunctionTriggerId);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.DescriptionElement>("hint", Hint);

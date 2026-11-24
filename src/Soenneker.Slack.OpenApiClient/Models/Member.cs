@@ -43,6 +43,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
             else if (parseNode.GetChildNode("is_primary_owner") is { } nullNodeIsPrimaryOwner && nullNodeIsPrimaryOwner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPrimaryOwner = null;
             if (parseNode.GetChildNode("is_restricted") is null) { _explicitNullValueIsRestricted = default!; _explicitNullProperties?.Remove("is_restricted"); }
             else if (parseNode.GetChildNode("is_restricted") is { } nullNodeIsRestricted && nullNodeIsRestricted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsRestricted = null;
+            if (parseNode.GetChildNode("is_seamless_enabled_app_bot") is null) { _explicitNullValueIsSeamlessEnabledAppBot = default!; _explicitNullProperties?.Remove("is_seamless_enabled_app_bot"); }
+            else if (parseNode.GetChildNode("is_seamless_enabled_app_bot") is { } nullNodeIsSeamlessEnabledAppBot && nullNodeIsSeamlessEnabledAppBot.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsSeamlessEnabledAppBot = null;
             if (parseNode.GetChildNode("is_ultra_restricted") is null) { _explicitNullValueIsUltraRestricted = default!; _explicitNullProperties?.Remove("is_ultra_restricted"); }
             else if (parseNode.GetChildNode("is_ultra_restricted") is { } nullNodeIsUltraRestricted && nullNodeIsUltraRestricted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsUltraRestricted = null;
             if (parseNode.GetChildNode("is_workflow_bot") is null) { _explicitNullValueIsWorkflowBot = default!; _explicitNullProperties?.Remove("is_workflow_bot"); }
@@ -133,6 +135,9 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The is_restricted property</summary>
         public bool? IsRestricted { get => _explicitNullValueIsRestricted; set { _explicitNullValueIsRestricted = value; AdditionalData?.Remove("is_restricted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_restricted"); else _explicitNullProperties?.Remove("is_restricted"); } }
         private bool? _explicitNullValueIsRestricted = default!;
+        /// <summary>The is_seamless_enabled_app_bot property</summary>
+        public bool? IsSeamlessEnabledAppBot { get => _explicitNullValueIsSeamlessEnabledAppBot; set { _explicitNullValueIsSeamlessEnabledAppBot = value; AdditionalData?.Remove("is_seamless_enabled_app_bot"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_seamless_enabled_app_bot"); else _explicitNullProperties?.Remove("is_seamless_enabled_app_bot"); } }
+        private bool? _explicitNullValueIsSeamlessEnabledAppBot = default!;
         /// <summary>The is_ultra_restricted property</summary>
         public bool? IsUltraRestricted { get => _explicitNullValueIsUltraRestricted; set { _explicitNullValueIsUltraRestricted = value; AdditionalData?.Remove("is_ultra_restricted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_ultra_restricted"); else _explicitNullProperties?.Remove("is_ultra_restricted"); } }
         private bool? _explicitNullValueIsUltraRestricted = default!;
@@ -258,7 +263,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(26)
+            return new Dictionary<string, Action<IParseNode>>(27)
             {
                 { "color", n => { Color = n.GetStringValue(); } },
                 { "deleted", n => { Deleted = n.GetBoolValue(); } },
@@ -273,6 +278,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "is_owner", n => { IsOwner = n.GetBoolValue(); } },
                 { "is_primary_owner", n => { IsPrimaryOwner = n.GetBoolValue(); } },
                 { "is_restricted", n => { IsRestricted = n.GetBoolValue(); } },
+                { "is_seamless_enabled_app_bot", n => { IsSeamlessEnabledAppBot = n.GetBoolValue(); } },
                 { "is_ultra_restricted", n => { IsUltraRestricted = n.GetBoolValue(); } },
                 { "is_workflow_bot", n => { IsWorkflowBot = n.GetBoolValue(); } },
                 { "locale", n => { Locale = n.GetStringValue(); } },
@@ -308,6 +314,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteBoolValue("is_owner", IsOwner);
             writer.WriteBoolValue("is_primary_owner", IsPrimaryOwner);
             writer.WriteBoolValue("is_restricted", IsRestricted);
+            writer.WriteBoolValue("is_seamless_enabled_app_bot", IsSeamlessEnabledAppBot);
             writer.WriteBoolValue("is_ultra_restricted", IsUltraRestricted);
             writer.WriteBoolValue("is_workflow_bot", IsWorkflowBot);
             writer.WriteStringValue("locale", Locale);

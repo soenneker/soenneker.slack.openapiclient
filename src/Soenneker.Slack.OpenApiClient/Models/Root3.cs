@@ -102,12 +102,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The icons property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.RootIcons? Icons { get => _explicitNullValueIcons; set { _explicitNullValueIcons = value; AdditionalData?.Remove("icons"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icons"); else _explicitNullProperties?.Remove("icons"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.RootIcons? _explicitNullValueIcons = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.MessageIcons? Icons { get => _explicitNullValueIcons; set { _explicitNullValueIcons = value; AdditionalData?.Remove("icons"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icons"); else _explicitNullProperties?.Remove("icons"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.MessageIcons? _explicitNullValueIcons = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.RootIcons Icons { get => _explicitNullValueIcons; set { _explicitNullValueIcons = value; AdditionalData?.Remove("icons"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icons"); else _explicitNullProperties?.Remove("icons"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.RootIcons _explicitNullValueIcons = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.MessageIcons Icons { get => _explicitNullValueIcons; set { _explicitNullValueIcons = value; AdditionalData?.Remove("icons"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icons"); else _explicitNullProperties?.Remove("icons"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.MessageIcons _explicitNullValueIcons = default!;
 #endif
         /// <summary>The last_read property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -295,7 +295,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "bot_id", n => { BotId = n.GetStringValue(); } },
                 { "bot_profile", n => { BotProfile = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotProfile>(global::Soenneker.Slack.OpenApiClient.Models.BotProfile.CreateFromDiscriminatorValue); } },
                 { "edited", n => { Edited = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Edited>(global::Soenneker.Slack.OpenApiClient.Models.Edited.CreateFromDiscriminatorValue); } },
-                { "icons", n => { Icons = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RootIcons>(global::Soenneker.Slack.OpenApiClient.Models.RootIcons.CreateFromDiscriminatorValue); } },
+                { "icons", n => { Icons = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageIcons>(global::Soenneker.Slack.OpenApiClient.Models.MessageIcons.CreateFromDiscriminatorValue); } },
                 { "last_read", n => { LastRead = n.GetStringValue(); } },
                 { "latest_reply", n => { LatestReply = n.GetStringValue(); } },
                 { "mrkdwn", n => { Mrkdwn = n.GetBoolValue(); } },
@@ -328,7 +328,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("bot_id", BotId);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotProfile>("bot_profile", BotProfile);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Edited>("edited", Edited);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.RootIcons>("icons", Icons);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageIcons>("icons", Icons);
             writer.WriteStringValue("last_read", LastRead);
             writer.WriteStringValue("latest_reply", LatestReply);
             writer.WriteBoolValue("mrkdwn", Mrkdwn);

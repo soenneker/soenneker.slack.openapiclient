@@ -120,12 +120,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The users property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.User4>? Users { get => _explicitNullValueUsers; set { _explicitNullValueUsers = value; AdditionalData?.Remove("users"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users"); else _explicitNullProperties?.Remove("users"); } }
-        private List<global::Soenneker.Slack.OpenApiClient.Models.User4>? _explicitNullValueUsers = default!;
+        public List<global::Soenneker.Slack.OpenApiClient.Models.User5>? Users { get => _explicitNullValueUsers; set { _explicitNullValueUsers = value; AdditionalData?.Remove("users"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users"); else _explicitNullProperties?.Remove("users"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.User5>? _explicitNullValueUsers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.User4> Users { get => _explicitNullValueUsers; set { _explicitNullValueUsers = value; AdditionalData?.Remove("users"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users"); else _explicitNullProperties?.Remove("users"); } }
-        private List<global::Soenneker.Slack.OpenApiClient.Models.User4> _explicitNullValueUsers = default!;
+        public List<global::Soenneker.Slack.OpenApiClient.Models.User5> Users { get => _explicitNullValueUsers; set { _explicitNullValueUsers = value; AdditionalData?.Remove("users"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users"); else _explicitNullProperties?.Remove("users"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.User5> _explicitNullValueUsers = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Call2"/> and sets the default values.
@@ -161,7 +161,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "join_url", n => { JoinUrl = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
-                { "users", n => { Users = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.User4>(global::Soenneker.Slack.OpenApiClient.Models.User4.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "users", n => { Users = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.User5>(global::Soenneker.Slack.OpenApiClient.Models.User5.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -180,7 +180,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("join_url", JoinUrl);
             writer.WriteStringValue("title", Title);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.User4>("users", Users);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.User5>("users", Users);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

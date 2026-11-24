@@ -27,6 +27,8 @@ namespace Soenneker.Slack.OpenApiClient.Models
             else if (parseNode.GetChildNode("slash_commands") is { } nullNodeSlashCommands && nullNodeSlashCommands.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SlashCommands = null;
             if (parseNode.GetChildNode("unfurl_domains") is null) { _explicitNullValueUnfurlDomains = default!; _explicitNullProperties?.Remove("unfurl_domains"); }
             else if (parseNode.GetChildNode("unfurl_domains") is { } nullNodeUnfurlDomains && nullNodeUnfurlDomains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnfurlDomains = null;
+            if (parseNode.GetChildNode("user_connections") is null) { _explicitNullValueUserConnections = default!; _explicitNullProperties?.Remove("user_connections"); }
+            else if (parseNode.GetChildNode("user_connections") is { } nullNodeUserConnections && nullNodeUserConnections.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserConnections = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -81,6 +83,16 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public List<string> UnfurlDomains { get => _explicitNullValueUnfurlDomains; set { _explicitNullValueUnfurlDomains = value; AdditionalData?.Remove("unfurl_domains"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unfurl_domains"); else _explicitNullProperties?.Remove("unfurl_domains"); } }
         private List<string> _explicitNullValueUnfurlDomains = default!;
 #endif
+        /// <summary>The user_connections property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.UserConnections? UserConnections { get => _explicitNullValueUserConnections; set { _explicitNullValueUserConnections = value; AdditionalData?.Remove("user_connections"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_connections"); else _explicitNullProperties?.Remove("user_connections"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.UserConnections? _explicitNullValueUserConnections = default!;
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.UserConnections UserConnections { get => _explicitNullValueUserConnections; set { _explicitNullValueUserConnections = value; AdditionalData?.Remove("user_connections"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_connections"); else _explicitNullProperties?.Remove("user_connections"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.UserConnections _explicitNullValueUserConnections = default!;
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Slack.OpenApiClient.Models.Features"/> and sets the default values.
         /// </summary>
@@ -104,13 +116,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(5)
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "app_home", n => { AppHome = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.AppHome>(global::Soenneker.Slack.OpenApiClient.Models.AppHome.CreateFromDiscriminatorValue); } },
                 { "bot_user", n => { BotUser = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotUser>(global::Soenneker.Slack.OpenApiClient.Models.BotUser.CreateFromDiscriminatorValue); } },
                 { "shortcuts", n => { Shortcuts = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Shortcut>(global::Soenneker.Slack.OpenApiClient.Models.Shortcut.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "slash_commands", n => { SlashCommands = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SlashCommand>(global::Soenneker.Slack.OpenApiClient.Models.SlashCommand.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "unfurl_domains", n => { UnfurlDomains = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "user_connections", n => { UserConnections = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UserConnections>(global::Soenneker.Slack.OpenApiClient.Models.UserConnections.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -125,6 +138,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Shortcut>("shortcuts", Shortcuts);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.SlashCommand>("slash_commands", SlashCommands);
             writer.WriteCollectionOfPrimitiveValues<string>("unfurl_domains", UnfurlDomains);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.UserConnections>("user_connections", UserConnections);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

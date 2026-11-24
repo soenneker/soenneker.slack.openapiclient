@@ -51,12 +51,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The icons property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.BotProfile4IconsProperty? Icons { get => _explicitNullValueIcons; set { _explicitNullValueIcons = value; AdditionalData?.Remove("icons"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icons"); else _explicitNullProperties?.Remove("icons"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.BotProfile4IconsProperty? _explicitNullValueIcons = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.Icons2? Icons { get => _explicitNullValueIcons; set { _explicitNullValueIcons = value; AdditionalData?.Remove("icons"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icons"); else _explicitNullProperties?.Remove("icons"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Icons2? _explicitNullValueIcons = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.BotProfile4IconsProperty Icons { get => _explicitNullValueIcons; set { _explicitNullValueIcons = value; AdditionalData?.Remove("icons"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icons"); else _explicitNullProperties?.Remove("icons"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.BotProfile4IconsProperty _explicitNullValueIcons = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.Icons2 Icons { get => _explicitNullValueIcons; set { _explicitNullValueIcons = value; AdditionalData?.Remove("icons"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icons"); else _explicitNullProperties?.Remove("icons"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Icons2 _explicitNullValueIcons = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -118,7 +118,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "app_id", n => { AppId = n.GetStringValue(); } },
                 { "deleted", n => { Deleted = n.GetBoolValue(); } },
-                { "icons", n => { Icons = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotProfile4IconsProperty>(global::Soenneker.Slack.OpenApiClient.Models.BotProfile4IconsProperty.CreateFromDiscriminatorValue); } },
+                { "icons", n => { Icons = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Icons2>(global::Soenneker.Slack.OpenApiClient.Models.Icons2.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "team_id", n => { TeamId = n.GetStringValue(); } },
@@ -134,7 +134,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("app_id", AppId);
             writer.WriteBoolValue("deleted", Deleted);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotProfile4IconsProperty>("icons", Icons);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Icons2>("icons", Icons);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("team_id", TeamId);

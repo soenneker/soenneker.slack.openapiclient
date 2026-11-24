@@ -119,6 +119,8 @@ using Soenneker.Slack.OpenApiClient.Api.AgentsSessionsSetStatus;
 using Soenneker.Slack.OpenApiClient.Api.ApiTest;
 using Soenneker.Slack.OpenApiClient.Api.AppsConnectionsOpen;
 using Soenneker.Slack.OpenApiClient.Api.AppsEventAuthorizationsList;
+using Soenneker.Slack.OpenApiClient.Api.AppsIconSet;
+using Soenneker.Slack.OpenApiClient.Api.AppsManagedPermissionsSet;
 using Soenneker.Slack.OpenApiClient.Api.AppsManifestCreate;
 using Soenneker.Slack.OpenApiClient.Api.AppsManifestDelete;
 using Soenneker.Slack.OpenApiClient.Api.AppsManifestExport;
@@ -128,6 +130,8 @@ using Soenneker.Slack.OpenApiClient.Api.AppsUninstall;
 using Soenneker.Slack.OpenApiClient.Api.AppsUserConnectionBulkUpdate;
 using Soenneker.Slack.OpenApiClient.Api.AppsUserConnectionRequestAuth;
 using Soenneker.Slack.OpenApiClient.Api.AppsUserConnectionUpdate;
+using Soenneker.Slack.OpenApiClient.Api.AssistantSearchContext;
+using Soenneker.Slack.OpenApiClient.Api.AssistantSearchInfo;
 using Soenneker.Slack.OpenApiClient.Api.AssistantThreadsSetStatus;
 using Soenneker.Slack.OpenApiClient.Api.AssistantThreadsSetSuggestedPrompts;
 using Soenneker.Slack.OpenApiClient.Api.AssistantThreadsSetTitle;
@@ -896,6 +900,16 @@ namespace Soenneker.Slack.OpenApiClient.Api
         {
             get => new global::Soenneker.Slack.OpenApiClient.Api.AppsEventAuthorizationsList.AppsEventAuthorizationsListRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The appsIconSet property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.AppsIconSet.AppsIconSetRequestBuilder AppsIconSet
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.AppsIconSet.AppsIconSetRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The appsManagedPermissionsSet property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.AppsManagedPermissionsSet.AppsManagedPermissionsSetRequestBuilder AppsManagedPermissionsSet
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.AppsManagedPermissionsSet.AppsManagedPermissionsSetRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The appsManifestCreate property</summary>
         public global::Soenneker.Slack.OpenApiClient.Api.AppsManifestCreate.AppsManifestCreateRequestBuilder AppsManifestCreate
         {
@@ -940,6 +954,16 @@ namespace Soenneker.Slack.OpenApiClient.Api
         public global::Soenneker.Slack.OpenApiClient.Api.AppsUserConnectionUpdate.AppsUserConnectionUpdateRequestBuilder AppsUserConnectionUpdate
         {
             get => new global::Soenneker.Slack.OpenApiClient.Api.AppsUserConnectionUpdate.AppsUserConnectionUpdateRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The assistantSearchContext property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.AssistantSearchContext.AssistantSearchContextRequestBuilder AssistantSearchContext
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.AssistantSearchContext.AssistantSearchContextRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The assistantSearchInfo property</summary>
+        public global::Soenneker.Slack.OpenApiClient.Api.AssistantSearchInfo.AssistantSearchInfoRequestBuilder AssistantSearchInfo
+        {
+            get => new global::Soenneker.Slack.OpenApiClient.Api.AssistantSearchInfo.AssistantSearchInfoRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The assistantThreadsSetStatus property</summary>
         public global::Soenneker.Slack.OpenApiClient.Api.AssistantThreadsSetStatus.AssistantThreadsSetStatusRequestBuilder AssistantThreadsSetStatus

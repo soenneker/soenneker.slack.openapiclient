@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Slack.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.Broadcast"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.Channel2"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.Color"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.DateObject"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.Emoji2"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.Link"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.Team5"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.Text2"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.User5"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.Usergroup2"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Slack.OpenApiClient.Models.Broadcast"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.Channel11"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.Color"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.DateObject"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.Emoji2"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.Link"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.Team5"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.Text"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.User6"/>, <see cref="global::Soenneker.Slack.OpenApiClient.Models.Usergroup2"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PurpleElement3Type : IComposedTypeWrapper, IParsable
@@ -20,8 +20,14 @@ namespace Soenneker.Slack.OpenApiClient.Models
 
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.Broadcast"/></summary>
         public global::Soenneker.Slack.OpenApiClient.Models.Broadcast? Broadcast { get; set; }
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.Channel2"/></summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel2? Channel2 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.Channel11"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Slack.OpenApiClient.Models.Channel11? Channel11 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Slack.OpenApiClient.Models.Channel11 Channel11 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.Color"/></summary>
         public global::Soenneker.Slack.OpenApiClient.Models.Color? Color { get; set; }
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.DateObject"/></summary>
@@ -32,16 +38,10 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public global::Soenneker.Slack.OpenApiClient.Models.Link? Link { get; set; }
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.Team5"/></summary>
         public global::Soenneker.Slack.OpenApiClient.Models.Team5? Team5 { get; set; }
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.Text2"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Text2? Text2 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Slack.OpenApiClient.Models.Text2 Text2 { get; set; }
-#endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.User5"/></summary>
-        public global::Soenneker.Slack.OpenApiClient.Models.User5? User5 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.Text"/></summary>
+        public global::Soenneker.Slack.OpenApiClient.Models.Text? Text { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.User6"/></summary>
+        public global::Soenneker.Slack.OpenApiClient.Models.User6? User6 { get; set; }
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Slack.OpenApiClient.Models.Usergroup2"/></summary>
         public global::Soenneker.Slack.OpenApiClient.Models.Usergroup2? Usergroup2 { get; set; }
         /// <summary>
@@ -57,11 +57,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 result.Broadcast = broadcastValue;
             }
-            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue1 && ("channel".Equals(unionEnumValue1.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.Channel2>() is global::Soenneker.Slack.OpenApiClient.Models.Channel2 channel2Value)
-            {
-                result.Channel2 = channel2Value;
-            }
-            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue2 && ("color".Equals(unionEnumValue2.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.Color>() is global::Soenneker.Slack.OpenApiClient.Models.Color colorValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue1 && ("color".Equals(unionEnumValue1.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.Color>() is global::Soenneker.Slack.OpenApiClient.Models.Color colorValue)
             {
                 result.Color = colorValue;
             }
@@ -69,21 +65,25 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 result.Date = dateValue;
             }
-            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue3 && ("emoji".Equals(unionEnumValue3.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.Emoji2>() is global::Soenneker.Slack.OpenApiClient.Models.Emoji2 emoji2Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue2 && ("emoji".Equals(unionEnumValue2.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.Emoji2>() is global::Soenneker.Slack.OpenApiClient.Models.Emoji2 emoji2Value)
             {
                 result.Emoji2 = emoji2Value;
             }
-            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue4 && ("link".Equals(unionEnumValue4.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.Link>() is global::Soenneker.Slack.OpenApiClient.Models.Link linkValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue3 && ("link".Equals(unionEnumValue3.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.Link>() is global::Soenneker.Slack.OpenApiClient.Models.Link linkValue)
             {
                 result.Link = linkValue;
             }
-            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue5 && ("team".Equals(unionEnumValue5.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.Team5>() is global::Soenneker.Slack.OpenApiClient.Models.Team5 team5Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue4 && ("team".Equals(unionEnumValue4.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.Team5>() is global::Soenneker.Slack.OpenApiClient.Models.Team5 team5Value)
             {
                 result.Team5 = team5Value;
             }
-            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue6 && ("user".Equals(unionEnumValue6.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.User5>() is global::Soenneker.Slack.OpenApiClient.Models.User5 user5Value)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue5 && ("text".Equals(unionEnumValue5.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.Text>() is global::Soenneker.Slack.OpenApiClient.Models.Text textValue)
             {
-                result.User5 = user5Value;
+                result.Text = textValue;
+            }
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue6 && ("user".Equals(unionEnumValue6.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.User6>() is global::Soenneker.Slack.OpenApiClient.Models.User6 user6Value)
+            {
+                result.User6 = user6Value;
             }
             else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue7 && ("usergroup".Equals(unionEnumValue7.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Slack.OpenApiClient.Models.Usergroup2>() is global::Soenneker.Slack.OpenApiClient.Models.Usergroup2 usergroup2Value)
             {
@@ -94,13 +94,13 @@ namespace Soenneker.Slack.OpenApiClient.Models
             }
             
             var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
-            var unionBranchMatches = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject ? new bool?[] { global::Soenneker.OpenApi.Generated.OpenApiUnionMatchers.MatchSchema26123(unionPayload) } : null;
+            var unionBranchMatches = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject ? new bool?[] { global::Soenneker.OpenApi.Generated.OpenApiUnionMatchers.MatchSchema7925(unionPayload) } : null;
             bool? matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject ? unionBranchMatches![0] : (bool?)false;
             int matchingUnionBranches = 0;
             if (matchesUnionBranch0 != false) matchingUnionBranches++;
-            bool noSelectedUnionBranch = result.Broadcast == null && result.Channel2 == null && result.Color == null && result.Date == null && result.Emoji2 == null && result.Link == null && result.Team5 == null && result.Text2 == null && result.User5 == null && result.Usergroup2 == null;
-            if (noSelectedUnionBranch && matchesUnionBranch0 == true && matchingUnionBranches == 1) result.Text2 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.Text2(), parseNode);
-            if (result.Broadcast == null && result.Channel2 == null && result.Color == null && result.Date == null && result.Emoji2 == null && result.Link == null && result.Team5 == null && result.Text2 == null && result.User5 == null && result.Usergroup2 == null) result.UnrecognizedValue = unionPayload;
+            bool noSelectedUnionBranch = result.Broadcast == null && result.Channel11 == null && result.Color == null && result.Date == null && result.Emoji2 == null && result.Link == null && result.Team5 == null && result.Text == null && result.User6 == null && result.Usergroup2 == null;
+            if (noSelectedUnionBranch && matchesUnionBranch0 == true && matchingUnionBranches == 1) result.Channel11 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Slack.OpenApiClient.Models.Channel11(), parseNode);
+            if (result.Broadcast == null && result.Channel11 == null && result.Color == null && result.Date == null && result.Emoji2 == null && result.Link == null && result.Team5 == null && result.Text == null && result.User6 == null && result.Usergroup2 == null) result.UnrecognizedValue = unionPayload;
 return result;
         }
         /// <summary>
@@ -111,9 +111,9 @@ return result;
         {
             if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawFields) { var fields = new global::System.Collections.Generic.Dictionary<string, global::System.Action<IParseNode>>(); foreach (var entry in rawFields.GetValue()) fields[entry.Key] = _ => { }; return fields; }
 
-            if(Text2 != null)
+            if(Channel11 != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Text2);
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Channel11);
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -124,28 +124,24 @@ return result;
         public virtual void Serialize(ISerializationWriter writer)
         {
             if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
-            if (Broadcast == null && Channel2 == null && Color == null && Date == null && Emoji2 == null && Link == null && Team5 == null && Text2 == null && User5 == null && Usergroup2 == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (Broadcast == null && Channel11 == null && Color == null && Date == null && Emoji2 == null && Link == null && Team5 == null && Text == null && User6 == null && Usergroup2 == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
             int selectedUnionBranches = 0;
             if (Broadcast != null) selectedUnionBranches++;
-            if (Channel2 != null) selectedUnionBranches++;
+            if (Channel11 != null) selectedUnionBranches++;
             if (Color != null) selectedUnionBranches++;
             if (Date != null) selectedUnionBranches++;
             if (Emoji2 != null) selectedUnionBranches++;
             if (Link != null) selectedUnionBranches++;
             if (Team5 != null) selectedUnionBranches++;
-            if (Text2 != null) selectedUnionBranches++;
-            if (User5 != null) selectedUnionBranches++;
+            if (Text != null) selectedUnionBranches++;
+            if (User6 != null) selectedUnionBranches++;
             if (Usergroup2 != null) selectedUnionBranches++;
-            if (Text2 != null && selectedUnionBranches == 1) { if (Text2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, Text2); return; }
+            if (Channel11 != null && selectedUnionBranches == 1) { if (Channel11 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, Channel11); return; }
 
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(Broadcast != null)
             {
                 writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.Broadcast>(null, Broadcast);
-            }
-            else if(Channel2 != null)
-            {
-                writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.Channel2>(null, Channel2);
             }
             else if(Color != null)
             {
@@ -167,17 +163,21 @@ return result;
             {
                 writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.Team5>(null, Team5);
             }
-            else if(User5 != null)
+            else if(Text != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.User5>(null, User5);
+                writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.Text>(null, Text);
+            }
+            else if(User6 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.User6>(null, User6);
             }
             else if(Usergroup2 != null)
             {
                 writer.WriteEnumValue<global::Soenneker.Slack.OpenApiClient.Models.Usergroup2>(null, Usergroup2);
             }
             else {
-                if (Text2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
-                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Text2>(null, Text2);
+                if (Channel11 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
+                writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel11>(null, Channel11);
             }
         }
     }

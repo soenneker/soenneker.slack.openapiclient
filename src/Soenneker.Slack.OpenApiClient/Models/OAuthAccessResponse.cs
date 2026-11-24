@@ -70,12 +70,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The authorizing_user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.User7? AuthorizingUser { get => _explicitNullValueAuthorizingUser; set { _explicitNullValueAuthorizingUser = value; AdditionalData?.Remove("authorizing_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorizing_user"); else _explicitNullProperties?.Remove("authorizing_user"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.User7? _explicitNullValueAuthorizingUser = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.User8? AuthorizingUser { get => _explicitNullValueAuthorizingUser; set { _explicitNullValueAuthorizingUser = value; AdditionalData?.Remove("authorizing_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorizing_user"); else _explicitNullProperties?.Remove("authorizing_user"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.User8? _explicitNullValueAuthorizingUser = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.User7 AuthorizingUser { get => _explicitNullValueAuthorizingUser; set { _explicitNullValueAuthorizingUser = value; AdditionalData?.Remove("authorizing_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorizing_user"); else _explicitNullProperties?.Remove("authorizing_user"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.User7 _explicitNullValueAuthorizingUser = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.User8 AuthorizingUser { get => _explicitNullValueAuthorizingUser; set { _explicitNullValueAuthorizingUser = value; AdditionalData?.Remove("authorizing_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorizing_user"); else _explicitNullProperties?.Remove("authorizing_user"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.User8 _explicitNullValueAuthorizingUser = default!;
 #endif
         /// <summary>The bot property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -120,12 +120,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The installer_user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.User7? InstallerUser { get => _explicitNullValueInstallerUser; set { _explicitNullValueInstallerUser = value; AdditionalData?.Remove("installer_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("installer_user"); else _explicitNullProperties?.Remove("installer_user"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.User7? _explicitNullValueInstallerUser = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.User8? InstallerUser { get => _explicitNullValueInstallerUser; set { _explicitNullValueInstallerUser = value; AdditionalData?.Remove("installer_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("installer_user"); else _explicitNullProperties?.Remove("installer_user"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.User8? _explicitNullValueInstallerUser = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.User7 InstallerUser { get => _explicitNullValueInstallerUser; set { _explicitNullValueInstallerUser = value; AdditionalData?.Remove("installer_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("installer_user"); else _explicitNullProperties?.Remove("installer_user"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.User7 _explicitNullValueInstallerUser = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.User8 InstallerUser { get => _explicitNullValueInstallerUser; set { _explicitNullValueInstallerUser = value; AdditionalData?.Remove("installer_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("installer_user"); else _explicitNullProperties?.Remove("installer_user"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.User8 _explicitNullValueInstallerUser = default!;
 #endif
         /// <summary>The needed property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -256,12 +256,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>(18)
             {
                 { "access_token", n => { AccessToken = n.GetStringValue(); } },
-                { "authorizing_user", n => { AuthorizingUser = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User7>(global::Soenneker.Slack.OpenApiClient.Models.User7.CreateFromDiscriminatorValue); } },
+                { "authorizing_user", n => { AuthorizingUser = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8>(global::Soenneker.Slack.OpenApiClient.Models.User8.CreateFromDiscriminatorValue); } },
                 { "bot", n => { Bot = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Bot2>(global::Soenneker.Slack.OpenApiClient.Models.Bot2.CreateFromDiscriminatorValue); } },
                 { "enterprise_id", n => { EnterpriseId = n.GetStringValue(); } },
                 { "error", n => { Error = n.GetStringValue(); } },
                 { "incoming_webhook", n => { IncomingWebhook = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.IncomingWebhook>(global::Soenneker.Slack.OpenApiClient.Models.IncomingWebhook.CreateFromDiscriminatorValue); } },
-                { "installer_user", n => { InstallerUser = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User7>(global::Soenneker.Slack.OpenApiClient.Models.User7.CreateFromDiscriminatorValue); } },
+                { "installer_user", n => { InstallerUser = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8>(global::Soenneker.Slack.OpenApiClient.Models.User8.CreateFromDiscriminatorValue); } },
                 { "needed", n => { Needed = n.GetStringValue(); } },
                 { "ok", n => { Ok = n.GetBoolValue(); } },
                 { "provided", n => { Provided = n.GetStringValue(); } },
@@ -283,12 +283,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("access_token", AccessToken);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User7>("authorizing_user", AuthorizingUser);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8>("authorizing_user", AuthorizingUser);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Bot2>("bot", Bot);
             writer.WriteStringValue("enterprise_id", EnterpriseId);
             writer.WriteStringValue("error", Error);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.IncomingWebhook>("incoming_webhook", IncomingWebhook);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User7>("installer_user", InstallerUser);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.User8>("installer_user", InstallerUser);
             writer.WriteStringValue("needed", Needed);
             writer.WriteBoolValue("ok", Ok);
             writer.WriteStringValue("provided", Provided);

@@ -60,12 +60,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The list_metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ListMetadata10? ListMetadata { get => _explicitNullValueListMetadata; set { _explicitNullValueListMetadata = value; AdditionalData?.Remove("list_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("list_metadata"); else _explicitNullProperties?.Remove("list_metadata"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.ListMetadata10? _explicitNullValueListMetadata = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.ListMetadata11? ListMetadata { get => _explicitNullValueListMetadata; set { _explicitNullValueListMetadata = value; AdditionalData?.Remove("list_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("list_metadata"); else _explicitNullProperties?.Remove("list_metadata"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ListMetadata11? _explicitNullValueListMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ListMetadata10 ListMetadata { get => _explicitNullValueListMetadata; set { _explicitNullValueListMetadata = value; AdditionalData?.Remove("list_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("list_metadata"); else _explicitNullProperties?.Remove("list_metadata"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.ListMetadata10 _explicitNullValueListMetadata = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.ListMetadata11 ListMetadata { get => _explicitNullValueListMetadata; set { _explicitNullValueListMetadata = value; AdditionalData?.Remove("list_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("list_metadata"); else _explicitNullProperties?.Remove("list_metadata"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ListMetadata11 _explicitNullValueListMetadata = default!;
 #endif
         /// <summary>The needed property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -137,7 +137,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             {
                 { "error", n => { Error = n.GetStringValue(); } },
                 { "list_id", n => { ListId = n.GetStringValue(); } },
-                { "list_metadata", n => { ListMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata10>(global::Soenneker.Slack.OpenApiClient.Models.ListMetadata10.CreateFromDiscriminatorValue); } },
+                { "list_metadata", n => { ListMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata11>(global::Soenneker.Slack.OpenApiClient.Models.ListMetadata11.CreateFromDiscriminatorValue); } },
                 { "needed", n => { Needed = n.GetStringValue(); } },
                 { "ok", n => { Ok = n.GetBoolValue(); } },
                 { "provided", n => { Provided = n.GetStringValue(); } },
@@ -154,7 +154,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("error", Error);
             writer.WriteStringValue("list_id", ListId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata10>("list_metadata", ListMetadata);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata11>("list_metadata", ListMetadata);
             writer.WriteStringValue("needed", Needed);
             writer.WriteBoolValue("ok", Ok);
             writer.WriteStringValue("provided", Provided);

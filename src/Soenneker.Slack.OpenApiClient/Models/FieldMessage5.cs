@@ -463,12 +463,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The root property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Root3? Root { get => _explicitNullValueRoot; set { _explicitNullValueRoot = value; AdditionalData?.Remove("root"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("root"); else _explicitNullProperties?.Remove("root"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.Root3? _explicitNullValueRoot = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.Root4? Root { get => _explicitNullValueRoot; set { _explicitNullValueRoot = value; AdditionalData?.Remove("root"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("root"); else _explicitNullProperties?.Remove("root"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Root4? _explicitNullValueRoot = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Root3 Root { get => _explicitNullValueRoot; set { _explicitNullValueRoot = value; AdditionalData?.Remove("root"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("root"); else _explicitNullProperties?.Remove("root"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.Root3 _explicitNullValueRoot = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.Root4 Root { get => _explicitNullValueRoot; set { _explicitNullValueRoot = value; AdditionalData?.Remove("root"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("root"); else _explicitNullProperties?.Remove("root"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Root4 _explicitNullValueRoot = default!;
 #endif
         /// <summary>The streaming_state property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -659,7 +659,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "reply_users", n => { ReplyUsers = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "reply_users_count", n => { ReplyUsersCount = n.GetDoubleValue(); } },
                 { "room", n => { Room = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Room2>(global::Soenneker.Slack.OpenApiClient.Models.Room2.CreateFromDiscriminatorValue); } },
-                { "root", n => { Root = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Root3>(global::Soenneker.Slack.OpenApiClient.Models.Root3.CreateFromDiscriminatorValue); } },
+                { "root", n => { Root = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Root4>(global::Soenneker.Slack.OpenApiClient.Models.Root4.CreateFromDiscriminatorValue); } },
                 { "streaming_state", n => { StreamingState = n.GetStringValue(); } },
                 { "subscribed", n => { Subscribed = n.GetBoolValue(); } },
                 { "subtype", n => { Subtype = n.GetStringValue(); } },
@@ -724,7 +724,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<UntypedNode>("reply_users", ReplyUsers);
             writer.WriteDoubleValue("reply_users_count", ReplyUsersCount);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Room2>("room", Room);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Root3>("root", Root);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Root4>("root", Root);
             writer.WriteStringValue("streaming_state", StreamingState);
             writer.WriteBoolValue("subscribed", Subscribed);
             writer.WriteStringValue("subtype", Subtype);

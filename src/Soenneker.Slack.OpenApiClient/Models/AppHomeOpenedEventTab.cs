@@ -8,13 +8,13 @@ namespace Soenneker.Slack.OpenApiClient.Models
     public enum AppHomeOpenedEventTab
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "home")]
-        #pragma warning disable CS1591
-        Home,
-        #pragma warning restore CS1591
         [EnumMember(Value = "messages")]
         #pragma warning disable CS1591
         Messages,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "home")]
+        #pragma warning disable CS1591
+        Home,
         #pragma warning restore CS1591
     }
 }

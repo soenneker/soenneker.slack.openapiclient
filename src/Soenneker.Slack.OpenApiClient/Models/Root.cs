@@ -82,12 +82,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The bot_profile property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.BotProfile? BotProfile { get => _explicitNullValueBotProfile; set { _explicitNullValueBotProfile = value; AdditionalData?.Remove("bot_profile"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_profile"); else _explicitNullProperties?.Remove("bot_profile"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.BotProfile? _explicitNullValueBotProfile = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.BotProfile3? BotProfile { get => _explicitNullValueBotProfile; set { _explicitNullValueBotProfile = value; AdditionalData?.Remove("bot_profile"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_profile"); else _explicitNullProperties?.Remove("bot_profile"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.BotProfile3? _explicitNullValueBotProfile = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.BotProfile BotProfile { get => _explicitNullValueBotProfile; set { _explicitNullValueBotProfile = value; AdditionalData?.Remove("bot_profile"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_profile"); else _explicitNullProperties?.Remove("bot_profile"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.BotProfile _explicitNullValueBotProfile = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.BotProfile3 BotProfile { get => _explicitNullValueBotProfile; set { _explicitNullValueBotProfile = value; AdditionalData?.Remove("bot_profile"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_profile"); else _explicitNullProperties?.Remove("bot_profile"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.BotProfile3 _explicitNullValueBotProfile = default!;
 #endif
         /// <summary>The edited property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -148,12 +148,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The replies property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Replies { get => _explicitNullValueReplies; set { _explicitNullValueReplies = value; AdditionalData?.Remove("replies"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("replies"); else _explicitNullProperties?.Remove("replies"); } }
-        private UntypedNode? _explicitNullValueReplies = default!;
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Edited>? Replies { get => _explicitNullValueReplies; set { _explicitNullValueReplies = value; AdditionalData?.Remove("replies"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("replies"); else _explicitNullProperties?.Remove("replies"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.Edited>? _explicitNullValueReplies = default!;
 #nullable restore
 #else
-        public UntypedNode Replies { get => _explicitNullValueReplies; set { _explicitNullValueReplies = value; AdditionalData?.Remove("replies"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("replies"); else _explicitNullProperties?.Remove("replies"); } }
-        private UntypedNode _explicitNullValueReplies = default!;
+        public List<global::Soenneker.Slack.OpenApiClient.Models.Edited> Replies { get => _explicitNullValueReplies; set { _explicitNullValueReplies = value; AdditionalData?.Remove("replies"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("replies"); else _explicitNullProperties?.Remove("replies"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.Edited> _explicitNullValueReplies = default!;
 #endif
         /// <summary>The reply_count property</summary>
         public double? ReplyCount { get => _explicitNullValueReplyCount; set { _explicitNullValueReplyCount = value; AdditionalData?.Remove("reply_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reply_count"); else _explicitNullProperties?.Remove("reply_count"); } }
@@ -161,12 +161,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The reply_users property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ReplyUsers { get => _explicitNullValueReplyUsers; set { _explicitNullValueReplyUsers = value; AdditionalData?.Remove("reply_users"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reply_users"); else _explicitNullProperties?.Remove("reply_users"); } }
-        private UntypedNode? _explicitNullValueReplyUsers = default!;
+        public List<string>? ReplyUsers { get => _explicitNullValueReplyUsers; set { _explicitNullValueReplyUsers = value; AdditionalData?.Remove("reply_users"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reply_users"); else _explicitNullProperties?.Remove("reply_users"); } }
+        private List<string>? _explicitNullValueReplyUsers = default!;
 #nullable restore
 #else
-        public UntypedNode ReplyUsers { get => _explicitNullValueReplyUsers; set { _explicitNullValueReplyUsers = value; AdditionalData?.Remove("reply_users"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reply_users"); else _explicitNullProperties?.Remove("reply_users"); } }
-        private UntypedNode _explicitNullValueReplyUsers = default!;
+        public List<string> ReplyUsers { get => _explicitNullValueReplyUsers; set { _explicitNullValueReplyUsers = value; AdditionalData?.Remove("reply_users"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reply_users"); else _explicitNullProperties?.Remove("reply_users"); } }
+        private List<string> _explicitNullValueReplyUsers = default!;
 #endif
         /// <summary>The reply_users_count property</summary>
         public double? ReplyUsersCount { get => _explicitNullValueReplyUsersCount; set { _explicitNullValueReplyUsersCount = value; AdditionalData?.Remove("reply_users_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reply_users_count"); else _explicitNullProperties?.Remove("reply_users_count"); } }
@@ -174,12 +174,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The room property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Room3? Room { get => _explicitNullValueRoom; set { _explicitNullValueRoom = value; AdditionalData?.Remove("room"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("room"); else _explicitNullProperties?.Remove("room"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.Room3? _explicitNullValueRoom = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.Room2? Room { get => _explicitNullValueRoom; set { _explicitNullValueRoom = value; AdditionalData?.Remove("room"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("room"); else _explicitNullProperties?.Remove("room"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Room2? _explicitNullValueRoom = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Room3 Room { get => _explicitNullValueRoom; set { _explicitNullValueRoom = value; AdditionalData?.Remove("room"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("room"); else _explicitNullProperties?.Remove("room"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.Room3 _explicitNullValueRoom = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.Room2 Room { get => _explicitNullValueRoom; set { _explicitNullValueRoom = value; AdditionalData?.Remove("room"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("room"); else _explicitNullProperties?.Remove("room"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Room2 _explicitNullValueRoom = default!;
 #endif
         /// <summary>The subscribed property</summary>
         public bool? Subscribed { get => _explicitNullValueSubscribed; set { _explicitNullValueSubscribed = value; AdditionalData?.Remove("subscribed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscribed"); else _explicitNullProperties?.Remove("subscribed"); } }
@@ -293,7 +293,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>(24)
             {
                 { "bot_id", n => { BotId = n.GetStringValue(); } },
-                { "bot_profile", n => { BotProfile = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotProfile>(global::Soenneker.Slack.OpenApiClient.Models.BotProfile.CreateFromDiscriminatorValue); } },
+                { "bot_profile", n => { BotProfile = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotProfile3>(global::Soenneker.Slack.OpenApiClient.Models.BotProfile3.CreateFromDiscriminatorValue); } },
                 { "edited", n => { Edited = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Edited>(global::Soenneker.Slack.OpenApiClient.Models.Edited.CreateFromDiscriminatorValue); } },
                 { "icons", n => { Icons = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageIcons>(global::Soenneker.Slack.OpenApiClient.Models.MessageIcons.CreateFromDiscriminatorValue); } },
                 { "last_read", n => { LastRead = n.GetStringValue(); } },
@@ -301,11 +301,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "mrkdwn", n => { Mrkdwn = n.GetBoolValue(); } },
                 { "no_notifications", n => { NoNotifications = n.GetBoolValue(); } },
                 { "parent_user_id", n => { ParentUserId = n.GetStringValue(); } },
-                { "replies", n => { Replies = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "replies", n => { Replies = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Edited>(global::Soenneker.Slack.OpenApiClient.Models.Edited.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "reply_count", n => { ReplyCount = n.GetDoubleValue(); } },
-                { "reply_users", n => { ReplyUsers = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "reply_users", n => { ReplyUsers = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "reply_users_count", n => { ReplyUsersCount = n.GetDoubleValue(); } },
-                { "room", n => { Room = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Room3>(global::Soenneker.Slack.OpenApiClient.Models.Room3.CreateFromDiscriminatorValue); } },
+                { "room", n => { Room = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Room2>(global::Soenneker.Slack.OpenApiClient.Models.Room2.CreateFromDiscriminatorValue); } },
                 { "subscribed", n => { Subscribed = n.GetBoolValue(); } },
                 { "subtype", n => { Subtype = n.GetStringValue(); } },
                 { "team", n => { Team = n.GetStringValue(); } },
@@ -326,7 +326,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("bot_id", BotId);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotProfile>("bot_profile", BotProfile);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.BotProfile3>("bot_profile", BotProfile);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Edited>("edited", Edited);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.MessageIcons>("icons", Icons);
             writer.WriteStringValue("last_read", LastRead);
@@ -334,11 +334,11 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteBoolValue("mrkdwn", Mrkdwn);
             writer.WriteBoolValue("no_notifications", NoNotifications);
             writer.WriteStringValue("parent_user_id", ParentUserId);
-            writer.WriteObjectValue<UntypedNode>("replies", Replies);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.Edited>("replies", Replies);
             writer.WriteDoubleValue("reply_count", ReplyCount);
-            writer.WriteObjectValue<UntypedNode>("reply_users", ReplyUsers);
+            writer.WriteCollectionOfPrimitiveValues<string>("reply_users", ReplyUsers);
             writer.WriteDoubleValue("reply_users_count", ReplyUsersCount);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Room3>("room", Room);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Room2>("room", Room);
             writer.WriteBoolValue("subscribed", Subscribed);
             writer.WriteStringValue("subtype", Subtype);
             writer.WriteStringValue("team", Team);

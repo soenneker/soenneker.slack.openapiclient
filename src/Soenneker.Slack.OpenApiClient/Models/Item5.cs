@@ -69,12 +69,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Message8? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.Message8? _explicitNullValueMessage = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.Message10? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Message10? _explicitNullValueMessage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Message8 Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.Message8 _explicitNullValueMessage = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.Message10 Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Message10 _explicitNullValueMessage = default!;
 #endif
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -115,7 +115,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "comment", n => { Comment = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment4>(global::Soenneker.Slack.OpenApiClient.Models.Comment4.CreateFromDiscriminatorValue); } },
                 { "date_create", n => { DateCreate = n.GetDoubleValue(); } },
                 { "file", n => { File = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ItemFile>(global::Soenneker.Slack.OpenApiClient.Models.ItemFile.CreateFromDiscriminatorValue); } },
-                { "message", n => { Message = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Message8>(global::Soenneker.Slack.OpenApiClient.Models.Message8.CreateFromDiscriminatorValue); } },
+                { "message", n => { Message = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Message10>(global::Soenneker.Slack.OpenApiClient.Models.Message10.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
         }
@@ -130,7 +130,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Comment4>("comment", Comment);
             writer.WriteDoubleValue("date_create", DateCreate);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ItemFile>("file", File);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Message8>("message", Message);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Message10>("message", Message);
             writer.WriteStringValue("type", Type);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

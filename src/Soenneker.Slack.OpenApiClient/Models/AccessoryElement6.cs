@@ -39,12 +39,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The elements property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement3>? Elements { get => _explicitNullValueElements; set { _explicitNullValueElements = value; AdditionalData?.Remove("elements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elements"); else _explicitNullProperties?.Remove("elements"); } }
-        private List<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement3>? _explicitNullValueElements = default!;
+        public List<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement5>? Elements { get => _explicitNullValueElements; set { _explicitNullValueElements = value; AdditionalData?.Remove("elements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elements"); else _explicitNullProperties?.Remove("elements"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement5>? _explicitNullValueElements = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement3> Elements { get => _explicitNullValueElements; set { _explicitNullValueElements = value; AdditionalData?.Remove("elements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elements"); else _explicitNullProperties?.Remove("elements"); } }
-        private List<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement3> _explicitNullValueElements = default!;
+        public List<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement5> Elements { get => _explicitNullValueElements; set { _explicitNullValueElements = value; AdditionalData?.Remove("elements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elements"); else _explicitNullProperties?.Remove("elements"); } }
+        private List<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement5> _explicitNullValueElements = default!;
 #endif
         /// <summary>The indent property</summary>
         public double? Indent { get => _explicitNullValueIndent; set { _explicitNullValueIndent = value; AdditionalData?.Remove("indent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("indent"); else _explicitNullProperties?.Remove("indent"); } }
@@ -91,7 +91,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "border", n => { Border = n.GetDoubleValue(); } },
-                { "elements", n => { Elements = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement3>(global::Soenneker.Slack.OpenApiClient.Models.PurpleElement3.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "elements", n => { Elements = n.GetCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement5>(global::Soenneker.Slack.OpenApiClient.Models.PurpleElement5.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "indent", n => { Indent = n.GetDoubleValue(); } },
                 { "offset", n => { Offset = n.GetDoubleValue(); } },
                 { "style", n => { Style = n.GetStringValue(); } },
@@ -106,7 +106,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("border", Border);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement3>("elements", Elements);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Slack.OpenApiClient.Models.PurpleElement5>("elements", Elements);
             writer.WriteDoubleValue("indent", Indent);
             writer.WriteDoubleValue("offset", Offset);
             writer.WriteStringValue("style", Style);

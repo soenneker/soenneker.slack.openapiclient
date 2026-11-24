@@ -32,12 +32,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The channel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel9? Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; AdditionalData?.Remove("channel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel"); else _explicitNullProperties?.Remove("channel"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.Channel9? _explicitNullValueChannel = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.Channel10? Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; AdditionalData?.Remove("channel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel"); else _explicitNullProperties?.Remove("channel"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Channel10? _explicitNullValueChannel = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.Channel9 Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; AdditionalData?.Remove("channel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel"); else _explicitNullProperties?.Remove("channel"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.Channel9 _explicitNullValueChannel = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.Channel10 Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; AdditionalData?.Remove("channel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel"); else _explicitNullProperties?.Remove("channel"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.Channel10 _explicitNullValueChannel = default!;
 #endif
         /// <summary>The invite_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -80,7 +80,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>(4)
             {
-                { "channel", n => { Channel = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel9>(global::Soenneker.Slack.OpenApiClient.Models.Channel9.CreateFromDiscriminatorValue); } },
+                { "channel", n => { Channel = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel10>(global::Soenneker.Slack.OpenApiClient.Models.Channel10.CreateFromDiscriminatorValue); } },
                 { "invite_type", n => { InviteType = n.GetStringValue(); } },
                 { "is_external_limited", n => { IsExternalLimited = n.GetBoolValue(); } },
                 { "is_sponsored", n => { IsSponsored = n.GetBoolValue(); } },
@@ -93,7 +93,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel9>("channel", Channel);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.Channel10>("channel", Channel);
             writer.WriteStringValue("invite_type", InviteType);
             writer.WriteBoolValue("is_external_limited", IsExternalLimited);
             writer.WriteBoolValue("is_sponsored", IsSponsored);

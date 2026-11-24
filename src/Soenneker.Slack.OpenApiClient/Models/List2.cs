@@ -224,12 +224,12 @@ namespace Soenneker.Slack.OpenApiClient.Models
         /// <summary>The list_metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Slack.OpenApiClient.Models.ListMetadata7? ListMetadata { get => _explicitNullValueListMetadata; set { _explicitNullValueListMetadata = value; AdditionalData?.Remove("list_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("list_metadata"); else _explicitNullProperties?.Remove("list_metadata"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.ListMetadata7? _explicitNullValueListMetadata = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.ListMetadata4? ListMetadata { get => _explicitNullValueListMetadata; set { _explicitNullValueListMetadata = value; AdditionalData?.Remove("list_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("list_metadata"); else _explicitNullProperties?.Remove("list_metadata"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ListMetadata4? _explicitNullValueListMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Slack.OpenApiClient.Models.ListMetadata7 ListMetadata { get => _explicitNullValueListMetadata; set { _explicitNullValueListMetadata = value; AdditionalData?.Remove("list_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("list_metadata"); else _explicitNullProperties?.Remove("list_metadata"); } }
-        private global::Soenneker.Slack.OpenApiClient.Models.ListMetadata7 _explicitNullValueListMetadata = default!;
+        public global::Soenneker.Slack.OpenApiClient.Models.ListMetadata4 ListMetadata { get => _explicitNullValueListMetadata; set { _explicitNullValueListMetadata = value; AdditionalData?.Remove("list_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("list_metadata"); else _explicitNullProperties?.Remove("list_metadata"); } }
+        private global::Soenneker.Slack.OpenApiClient.Models.ListMetadata4 _explicitNullValueListMetadata = default!;
 #endif
         /// <summary>The mimetype property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -422,7 +422,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
                 { "is_public", n => { IsPublic = n.GetBoolValue(); } },
                 { "last_editor", n => { LastEditor = n.GetStringValue(); } },
                 { "list_limits", n => { ListLimits = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListLimits>(global::Soenneker.Slack.OpenApiClient.Models.ListLimits.CreateFromDiscriminatorValue); } },
-                { "list_metadata", n => { ListMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata7>(global::Soenneker.Slack.OpenApiClient.Models.ListMetadata7.CreateFromDiscriminatorValue); } },
+                { "list_metadata", n => { ListMetadata = n.GetObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata4>(global::Soenneker.Slack.OpenApiClient.Models.ListMetadata4.CreateFromDiscriminatorValue); } },
                 { "mimetype", n => { Mimetype = n.GetStringValue(); } },
                 { "mode", n => { Mode = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -469,7 +469,7 @@ namespace Soenneker.Slack.OpenApiClient.Models
             writer.WriteBoolValue("is_public", IsPublic);
             writer.WriteStringValue("last_editor", LastEditor);
             writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListLimits>("list_limits", ListLimits);
-            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata7>("list_metadata", ListMetadata);
+            writer.WriteObjectValue<global::Soenneker.Slack.OpenApiClient.Models.ListMetadata4>("list_metadata", ListMetadata);
             writer.WriteStringValue("mimetype", Mimetype);
             writer.WriteStringValue("mode", Mode);
             writer.WriteStringValue("name", Name);
