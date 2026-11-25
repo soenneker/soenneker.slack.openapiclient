@@ -3,7 +3,7 @@
   "info": {
     "title": "Slack Web API \u0026 Events API (Strict SDK Generation)",
     "description": "Generated 100% offline directly from the TypeScript AST of the official Node SDK. See the generator repo for details: https://github.com/connectstrata/slack-openapi-generator",
-    "version": "2026-11-23"
+    "version": "2026-11-25"
   },
   "servers": [
     {
@@ -122880,6 +122880,152 @@
   "security": [
     {
       "slackAuth": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "admin",
+      "description": "Web API methods under \u0060admin.*\u0060 (\u0060/api/admin.*\u0060)"
+    },
+    {
+      "name": "agents",
+      "description": "Web API methods under \u0060agents.*\u0060 (\u0060/api/agents.*\u0060)"
+    },
+    {
+      "name": "api",
+      "description": "Web API methods under \u0060api.*\u0060 (\u0060/api/api.*\u0060)"
+    },
+    {
+      "name": "apps",
+      "description": "Web API methods under \u0060apps.*\u0060 (\u0060/api/apps.*\u0060)"
+    },
+    {
+      "name": "assistant",
+      "description": "Web API methods under \u0060assistant.*\u0060 (\u0060/api/assistant.*\u0060)"
+    },
+    {
+      "name": "auth",
+      "description": "Web API methods under \u0060auth.*\u0060 (\u0060/api/auth.*\u0060)"
+    },
+    {
+      "name": "blocks",
+      "description": "Web API methods under \u0060blocks.*\u0060 (\u0060/api/blocks.*\u0060)"
+    },
+    {
+      "name": "bookmarks",
+      "description": "Web API methods under \u0060bookmarks.*\u0060 (\u0060/api/bookmarks.*\u0060)"
+    },
+    {
+      "name": "bots",
+      "description": "Web API methods under \u0060bots.*\u0060 (\u0060/api/bots.*\u0060)"
+    },
+    {
+      "name": "calls",
+      "description": "Web API methods under \u0060calls.*\u0060 (\u0060/api/calls.*\u0060)"
+    },
+    {
+      "name": "canvases",
+      "description": "Web API methods under \u0060canvases.*\u0060 (\u0060/api/canvases.*\u0060)"
+    },
+    {
+      "name": "chat",
+      "description": "Web API methods under \u0060chat.*\u0060 (\u0060/api/chat.*\u0060)"
+    },
+    {
+      "name": "conversations",
+      "description": "Web API methods under \u0060conversations.*\u0060 (\u0060/api/conversations.*\u0060)"
+    },
+    {
+      "name": "dialog",
+      "description": "Web API methods under \u0060dialog.*\u0060 (\u0060/api/dialog.*\u0060)"
+    },
+    {
+      "name": "dnd",
+      "description": "Web API methods under \u0060dnd.*\u0060 (\u0060/api/dnd.*\u0060)"
+    },
+    {
+      "name": "emoji",
+      "description": "Web API methods under \u0060emoji.*\u0060 (\u0060/api/emoji.*\u0060)"
+    },
+    {
+      "name": "entity",
+      "description": "Web API methods under \u0060entity.*\u0060 (\u0060/api/entity.*\u0060)"
+    },
+    {
+      "name": "files",
+      "description": "Web API methods under \u0060files.*\u0060 (\u0060/api/files.*\u0060)"
+    },
+    {
+      "name": "functions",
+      "description": "Web API methods under \u0060functions.*\u0060 (\u0060/api/functions.*\u0060)"
+    },
+    {
+      "name": "migration",
+      "description": "Web API methods under \u0060migration.*\u0060 (\u0060/api/migration.*\u0060)"
+    },
+    {
+      "name": "oauth",
+      "description": "Web API methods under \u0060oauth.*\u0060 (\u0060/api/oauth.*\u0060)"
+    },
+    {
+      "name": "openid",
+      "description": "Web API methods under \u0060openid.*\u0060 (\u0060/api/openid.*\u0060)"
+    },
+    {
+      "name": "pins",
+      "description": "Web API methods under \u0060pins.*\u0060 (\u0060/api/pins.*\u0060)"
+    },
+    {
+      "name": "reactions",
+      "description": "Web API methods under \u0060reactions.*\u0060 (\u0060/api/reactions.*\u0060)"
+    },
+    {
+      "name": "reminders",
+      "description": "Web API methods under \u0060reminders.*\u0060 (\u0060/api/reminders.*\u0060)"
+    },
+    {
+      "name": "rtm",
+      "description": "Web API methods under \u0060rtm.*\u0060 (\u0060/api/rtm.*\u0060)"
+    },
+    {
+      "name": "search",
+      "description": "Web API methods under \u0060search.*\u0060 (\u0060/api/search.*\u0060)"
+    },
+    {
+      "name": "slackbot",
+      "description": "Web API methods under \u0060slackbot.*\u0060 (\u0060/api/slackbot.*\u0060)"
+    },
+    {
+      "name": "slackLists",
+      "description": "Web API methods under \u0060slackLists.*\u0060 (\u0060/api/slackLists.*\u0060)"
+    },
+    {
+      "name": "stars",
+      "description": "Web API methods under \u0060stars.*\u0060 (\u0060/api/stars.*\u0060)"
+    },
+    {
+      "name": "team",
+      "description": "Web API methods under \u0060team.*\u0060 (\u0060/api/team.*\u0060)"
+    },
+    {
+      "name": "tooling",
+      "description": "Web API methods under \u0060tooling.*\u0060 (\u0060/api/tooling.*\u0060)"
+    },
+    {
+      "name": "usergroups",
+      "description": "Web API methods under \u0060usergroups.*\u0060 (\u0060/api/usergroups.*\u0060)"
+    },
+    {
+      "name": "users",
+      "description": "Web API methods under \u0060users.*\u0060 (\u0060/api/users.*\u0060)"
+    },
+    {
+      "name": "views",
+      "description": "Web API methods under \u0060views.*\u0060 (\u0060/api/views.*\u0060)"
+    },
+    {
+      "name": "workflows",
+      "description": "Web API methods under \u0060workflows.*\u0060 (\u0060/api/workflows.*\u0060)"
     }
   ],
   "externalDocs": {
